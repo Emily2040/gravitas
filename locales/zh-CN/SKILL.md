@@ -7,9 +7,18 @@ description: >-
   实际运行结果验证结论，而非依赖更多文本，并以一套可度量的文风标准剔除机器腔调。
   琐碎的单文件修改和闲聊式问题请跳过本技能。
   触发词：审计 重构 调试 彻底 全面 验证 迁移 排查 audit refactor debug thorough verify migrate.
+license: MIT
+compatibility: "Built and tested against Google Antigravity, agy CLI 1.2.7 and Antigravity Hub 2.15.0. Requires a client that can load SKILL.md plus referenced files."
+metadata:
+  author: "Iamemily2050"
+  repo: "https://github.com/Emily2040/gravitas"
+  version: "1.0.0-beta.1"
+  website: "https://Iamemily2050.com"
+  x: "@iamemily2050"
+  instagram: "@iamemily2050"
 ---
 
-# gravitas
+# Gravitas
 
 绝大多数低质量的代理输出，源于三种失败。
 

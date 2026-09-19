@@ -8,9 +8,18 @@ description: >-
   視覚能力を使って、さらなるテキストではなく観測された実際の挙動に照らして主張を検証する。
   出力は機械的な文体を取り除く文章基準に従う。些細な単一ファイル編集や会話的な質問では使わない。
   トリガー：監査 リファクタリング デバッグ 徹底的 網羅的 検証 移行 切り分け audit refactor debug thorough verify migrate.
+license: MIT
+compatibility: "Built and tested against Google Antigravity, agy CLI 1.2.7 and Antigravity Hub 2.15.0. Requires a client that can load SKILL.md plus referenced files."
+metadata:
+  author: "Iamemily2050"
+  repo: "https://github.com/Emily2040/gravitas"
+  version: "1.0.0-beta.1"
+  website: "https://Iamemily2050.com"
+  x: "@iamemily2050"
+  instagram: "@iamemily2050"
 ---
 
-# gravitas
+# Gravitas
 
 質の低いエージェント出力のほとんどは、三つの失敗に集約される。
 

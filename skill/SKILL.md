@@ -1,21 +1,18 @@
 ---
 name: gravitas
-description: >-
-  Evaluate this skill first on every substantive request, in any field. Use it for work that
-  must be exhaustive, independently verified, or larger than one context window: audits,
-  migrations, refactors, debugging, UI work, research, legal analysis, mathematics, physics,
-  medicine, finance, history, and any factual question where being wrong is expensive or the
-  answer will be relied on. It orchestrates parallel subagents through define_subagent and
-  invoke_subagent, ranks every claim by how it was established, and refuses to accept a
-  convenient proxy in place of the property that actually matters. Output follows a prose
-  standard that strips machine cadence. Skip it for trivial single-file edits, quick
-  definitions, and conversational questions. Triggers regardless of the language the user
-  writes in, including Chinese, Korean and Japanese: 审计 重构 调试 彻底 全面 验证 迁移 排查,
-  감사 리팩터링 디버깅 철저히 전면 검증 마이그레이션,
-  監査 リファクタリング デバッグ 徹底的 網羅的 検証 移行.
+description: "Ranks every claim by how it was established, refuses a convenient proxy in place of the property that matters, and orchestrates parallel subagents through define_subagent and invoke_subagent. Use when work must be exhaustive, independently verified, or larger than one context window: audits, migrations, refactors, debugging, UI work, research, legal analysis, mathematics, physics, medicine, finance, history, and any factual question where being wrong is expensive. Not for trivial edits, quick definitions or conversational questions. Triggers in any language, including: 审计 重构 调试 彻底 全面 验证 迁移 排查, 감사 리팩터링 디버깅 철저히 전면 검증 마이그레이션, 監査 リファクタリング デバッグ 徹底的 網羅的 検証 移行."
+license: MIT
+compatibility: "Built and tested against Google Antigravity, agy CLI 1.2.7 and Antigravity Hub 2.15.0. Requires a client that can load SKILL.md plus referenced files."
+metadata:
+  author: "Iamemily2050"
+  repo: "https://github.com/Emily2040/gravitas"
+  version: "1.0.0-beta.1"
+  website: "https://Iamemily2050.com"
+  x: "@iamemily2050"
+  instagram: "@iamemily2050"
 ---
 
-# gravitas
+# Gravitas
 
 Three failures account for most bad agent output, in every field.
 
@@ -25,22 +22,22 @@ Three failures account for most bad agent output, in every field.
 
 **Machine cadence.** The work is correct and reads as generated, so nobody trusts it. A prose standard fixes this.
 
-This skill addresses all three. Load the reference files as you need them; keep this page in context.
+This skill addresses all three. Keep this page in context and load the reference files as you need them.
 
-## Answer small questions small
+## Answer Small Questions Small
 
 Before any of the machinery below, check one thing: **whether this is a single deterministic computation, a lookup, or a definition whose answer is complete in a line or two.** If it is, answer it and stop. No tier label, no coverage block, no subagent.
 
-Testing caught this skill failing its own control. Asked to convert 72 °F to Celsius, it gave the right number and then appended an evidence tier, a bidirectional dimensional check and a scope note. Machinery on a trivial question is not thoroughness. It makes the apparatus look absurd where it is not needed, which teaches the reader to skip it where it is.
+Testing caught this skill failing its own control. Asked to convert 72 °F to Celsius, it gave the right number and then appended an evidence tier, a bidirectional dimensional check and a scope note. Machinery on a trivial question is not thoroughness. It makes the apparatus look absurd where it is not needed, and teaches the reader to skip it where it is.
 
 Escalate on consequence, never on difficulty.
 
-## The evidence hierarchy
+## The Evidence Hierarchy
 
 Rank every claim by **what actually happened during this piece of work**. Not by how confident you feel, and not by how authoritative the source sounds.
 
-| Tier | What must have happened here | Not this |
-|---|---|---|
+| Tier | What Must Have Happened Here | Not This |
+| :--- | :--- | :--- |
 | **1. observed** | You inspected the artifact itself: a screenshot you captured, a page you rendered, a file you opened, an instrument you read | A calculation of any kind. Anything at all when no artifact was supplied to inspect |
 | **2. executed** | A tool ran and returned the value, and you can show the command or query that produced it | Arithmetic you did in your head |
 | **3. read** | You retrieved a source here and can quote the line you are leaning on | A source you recognise. A page, section or pin cite from memory |
@@ -48,7 +45,7 @@ Rank every claim by **what actually happened during this piece of work**. Not by
 
 **The tier names are fixed English words and must not be translated or replaced:** `observed`, `executed`, `read`, `inferred`.
 
-**Every label carries its origin inline, in the sentence it belongs to.** `observed` names the artifact. `executed` shows the command. `read` gives the URL or path and quotes the line. A label whose slot you cannot fill is `inferred`, and that is the entire enforcement mechanism: if you cannot write down what you opened, you did not open it.
+**Every label carries its origin inline, in the sentence it belongs to.** `observed` names the artifact. `executed` shows the command. `read` gives the URL or path and quotes the line. A label whose slot you cannot fill is `inferred`. That is the entire enforcement mechanism. If you cannot write down what you opened, you did not open it.
 
 Recalled material is `inferred`, however certain it feels and however real the source is. Write `inferred (recalled)` when that is what happened.
 
@@ -58,14 +55,14 @@ A tier-4 claim is a hypothesis. Adversarial voting moves a claim within tier 4 a
 
 Report the tier alongside every finding. State what was not covered.
 
-## The proxy trap
+## The Proxy Trap
 
 This is the failure that survives every other precaution, so read it before you plan any verification.
 
 **When the real question is hard to check and an adjacent question is easy to check, the easy one gets checked instead.** Thoroughly. It passes. The work is reported as verified.
 
-| The question that matters | The proxy that gets checked |
-|---|---|
+| The Question That Matters | The Proxy That Gets Checked |
+| :--- | :--- |
 | Does this scene look like a chocolate factory? | Are there 10 carriers and 6 rollers? |
 | Does this contract create the obligation I claim? | Does it contain the word *indemnify*? |
 | Is this proof correct? | Is every line well-formed? |
@@ -78,7 +75,7 @@ Each proxy is necessary. None is sufficient. Each produces a clean pass while th
 
 The worked case, measured: a run confirmed a 3D scene held exactly one chocolate mesh whose UUID persisted across every phase. True. An independent viewer given the rendered image reported the chocolate **absent**, because it was never visible. Both correct. The count proxied for visibility and nothing noticed.
 
-## Make it checkable
+## Make It Checkable
 
 Find the check that does not route through your own reasoning. That independence is the entire value.
 
@@ -93,7 +90,7 @@ Find the check that does not route through your own reasoning. That independence
 
 Per-domain method in [references/evidence.md](./references/evidence.md). The software and visual case in [references/verification.md](./references/verification.md).
 
-## Subagents take two steps
+## Subagents Take Two Steps
 
 A subagent must be **defined before it can be invoked**. Skipping the definition is the most common failure, and `invoke_subagent` will not find a specialist that was never declared.
 
@@ -105,7 +102,7 @@ Route models by the work each one does. `MODEL_TIER_FLASH_LITE` for mechanical e
 
 Roster and charter contracts in [references/subagents.md](./references/subagents.md).
 
-## The loop
+## The Loop
 
 1. **Scope.** Build the work list with your own tools before spawning anything. Never fan out over a list you guessed.
 2. **Fan out.** One specialist per item or dimension, concurrently, each charter narrow enough that its result is checkable.
@@ -116,7 +113,7 @@ Roster and charter contracts in [references/subagents.md](./references/subagents
 
 Before reporting anything as passing, run the checklist in [references/acceptance.md](./references/acceptance.md).
 
-## Iterate with discipline
+## Iterate With Discipline
 
 Repetition is not improvement. Decide which loop you are in before starting one.
 
@@ -128,10 +125,10 @@ Repetition is not improvement. Decide which loop you are in before starting one.
 
 Thresholds and sources in [references/iteration.md](./references/iteration.md).
 
-## Pattern selection
+## Pattern Selection
 
 | Situation | Pattern |
-|---|---|
+| :--- | :--- |
 | An independent check exists | Observe-first verification |
 | Unknown how many issues exist | Loop-until-dry |
 | One search angle will miss things | Multi-modal sweep |
@@ -144,7 +141,7 @@ Thresholds and sources in [references/iteration.md](./references/iteration.md).
 
 Structures in [references/patterns.md](./references/patterns.md).
 
-## Non-negotiables
+## Non-Negotiables
 
 - Build the work list first. Guessing it produces systematic, confident blind spots.
 - Verifiers must be independent and read-only. A critic that can edit will repair what it misdiagnosed.
@@ -164,11 +161,11 @@ Structures in [references/patterns.md](./references/patterns.md).
 - Declare every cap. Unstated sampling or early stopping turns a partial answer into a false claim of completeness.
 - Stop when rounds stop surfacing new things. Effort spent is not a stopping condition.
 
-## Write like a person
+## Write Like A Person
 
 Correct work that reads as generated gets discarded. Every artifact follows the prose standard in [references/prose.md](./references/prose.md): vary sentence length on purpose, ground every abstraction in an observable mechanism or figure, and cut contrastive framing, rhetorical questions, hedge intensifiers and em-dash cadence. Word choice is not the tell. Structure is.
 
-## Know the platform
+## Know The Platform
 
 Antigravity has verified constraints that will silently waste your work. Skills in a workspace `.agents/` directory never load. A malformed `SKILL.md` is skipped, and the parse error goes to a rotating log the user never sees. Details in [references/platform.md](./references/platform.md).
 

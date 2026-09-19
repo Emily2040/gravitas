@@ -1,9 +1,13 @@
-# gravitas
+# Gravitas
 
 [English](./README.md) · **简体中文** · [日本語](./README.ja.md) · [한국어](./README.ko.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-private_beta-purple.svg)](#)
+[![Platform](https://img.shields.io/badge/Antigravity-1.2.7-blueviolet.svg)](https://antigravity.google/)
+
 <p align="center">
-  <img src="assets/gravitas.jpg" width="640" alt="本项目的吉祥物 Gravitas：两头身，戴着土星环发夹，穿着月亮与星星卫衣，站在马卡龙上">
+  <img src="docs/assets/gravitas-hero.jpg" width="640" alt="本项目的吉祥物 Gravitas：两头身，戴着土星环发夹，穿着月亮与星星卫衣，站在马卡龙上">
 </p>
 
 > **私有测试版。** 核心原则已稳定，平台问题均已复现，但本技能仍在针对新领域持续测试，
@@ -38,12 +42,14 @@
 
 本技能要求给每一条结论标注它是怎么被确立的。
 
-| 层级 | 依据 | 具体例子 |
-|---|---|---|
-| **1. observed 已观察** | 你亲眼看了正在运行的东西 | 截图、控制台日志、网络请求的真实负载、渲染后的 DOM |
-| **2. executed 已执行** | 它跑过了，并且结果被检查过 | 测试通过、命令退出码为 0、查询真的返回了行 |
-| **3. read 已读取** | 源码这么写的 | "这个处理函数校验了输入" |
-| **4. inferred 已推断** | 某个代理推理出来的 | "这里大概是竞态条件" |
+| 层级 | 这里必须真的发生过什么 | 不算 |
+| :--- | :--- | :--- |
+| `observed` | 你亲自查看了产物本身：你截的图、你渲染的页面、你打开的文件、你读的仪表 | 任何计算。在没有任何产物可供查看时，一律不算 |
+| `executed` | 某个工具运行并返回了值，而且你能给出产生它的命令 | 你在脑子里做的算术 |
+| `read` | 你在这里检索了来源，并且能引用你所依据的那一行 | 你认得的来源。凭记忆写出的页码或条文号 |
+| `inferred` | 你自己的推理，以及一切凭记忆得来的内容 | |
+
+**每个标签都要在同一句话里写明它的来源。** `observed` 要写明产物，`executed` 要给出命令，`read` 要给出 URL 或路径并引用原句。填不出这个位置的标签就是 `inferred`。这就是全部的强制机制：如果你写不出自己打开了什么，那就是没打开过。
 
 关键的一条规则是：**第 4 层的主张是假设，不是结论。**
 

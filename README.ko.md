@@ -1,9 +1,13 @@
-# gravitas
+# Gravitas
 
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · **한국어**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-private_beta-purple.svg)](#)
+[![Platform](https://img.shields.io/badge/Antigravity-1.2.7-blueviolet.svg)](https://antigravity.google/)
+
 <p align="center">
-  <img src="assets/gravitas.jpg" width="640" alt="이 프로젝트의 마스코트 Gravitas. 2등신, 토성 고리 머리핀, 달과 별 후드티, 마카롱 위에 서 있다">
+  <img src="docs/assets/gravitas-hero.jpg" width="640" alt="이 프로젝트의 마스코트 Gravitas. 2등신, 토성 고리 머리핀, 달과 별 후드티, 마카롱 위에 서 있다">
 </p>
 
 > **비공개 베타.** 핵심 원칙은 안정적이고 플랫폼 결함도 재현되었지만, 이 스킬은 새로운 영역에서
@@ -38,12 +42,14 @@ AI 코딩 에이전트로 조금이라도 큰 작업을 해 봤다면 아래 세
 
 이 스킬은 모든 결론에 "어떻게 확립되었는가"를 표기하도록 요구한다.
 
-| 계층 | 근거 | 구체적인 예 |
-|---|---|---|
-| **1. observed 관찰됨** | 실행 중인 것을 직접 보았다 | 스크린샷, 콘솔 로그, 실제 네트워크 페이로드, 렌더링된 DOM |
-| **2. executed 실행됨** | 실행했고 그 결과를 확인했다 | 테스트 통과, 종료 코드 0, 쿼리가 실제로 행을 반환 |
-| **3. read 읽음** | 소스에 그렇게 쓰여 있다 | "이 핸들러는 입력을 검증한다" |
-| **4. inferred 추론됨** | 어떤 에이전트가 그렇게 추론했다 | "아마 경쟁 상태일 것이다" |
+| 계층 | 여기서 실제로 일어난 일 | 해당하지 않음 |
+| :--- | :--- | :--- |
+| `observed` | 산출물 자체를 직접 확인했다. 직접 찍은 스크린샷, 직접 렌더링한 페이지, 직접 연 파일, 직접 읽은 계기 | 모든 종류의 계산. 확인할 산출물이 전혀 제공되지 않았다면 어떤 경우에도 해당하지 않음 |
+| `executed` | 도구가 실행되어 값을 반환했고, 그 값을 만든 명령을 제시할 수 있다 | 머릿속으로 한 산술 |
+| `read` | 여기서 실제로 출처를 가져왔고, 근거로 삼는 그 줄을 인용할 수 있다 | 눈에 익은 출처. 기억으로 쓴 쪽수나 조항 번호 |
+| `inferred` | 당신 자신의 추론, 그리고 기억에서 나온 모든 것 | |
+
+**모든 라벨은 그것이 속한 문장 안에서 출처를 밝힌다.** `observed` 는 산출물을, `executed` 는 명령을, `read` 는 URL 또는 경로와 인용한 줄을 밝힌다. 이 자리를 채울 수 없는 라벨은 `inferred` 다. 이것이 강제 장치의 전부다. 무엇을 열었는지 적을 수 없다면 열지 않은 것이다.
 
 결정적인 규칙이 하나 있다. **4계층 주장은 결론이 아니라 가설이다.**
 

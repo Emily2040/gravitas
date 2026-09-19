@@ -8,9 +8,18 @@ description: >-
   더 많은 텍스트가 아니라 관찰된 실제 동작에 비추어 주장을 검증하며, 기계적인 문체를 걷어내는
   문장 기준에 따라 결과물을 다듬는다. 사소한 단일 파일 수정과 대화형 질문에는 쓰지 않는다.
   트리거: 감사 리팩터링 디버깅 철저히 전면 검증 마이그레이션 원인분석 audit refactor debug thorough verify migrate.
+license: MIT
+compatibility: "Built and tested against Google Antigravity, agy CLI 1.2.7 and Antigravity Hub 2.15.0. Requires a client that can load SKILL.md plus referenced files."
+metadata:
+  author: "Iamemily2050"
+  repo: "https://github.com/Emily2040/gravitas"
+  version: "1.0.0-beta.1"
+  website: "https://Iamemily2050.com"
+  x: "@iamemily2050"
+  instagram: "@iamemily2050"
 ---
 
-# gravitas
+# Gravitas
 
 품질이 낮은 에이전트 결과물은 대부분 세 가지 실패로 설명된다.
 
