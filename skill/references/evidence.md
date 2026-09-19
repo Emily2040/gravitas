@@ -49,6 +49,18 @@ Tier 1 of the evidence hierarchy is *you looked at the thing itself*. What "the 
 
 **Finance and quantitative work.** Recompute the arithmetic by a second route. Confirm the statements reconcile. Sanity-check growth rates against history, since a model that compounds a plausible rate for thirty years produces implausible numbers.
 
+**Craft and taste work: colour, editing, writing, design.** These have no single right answer, so the loop rules differ and the proxy trap changes shape. Every craft has a **checkable layer** and a **judgeable layer**, and conflating them is how work ships looking wrong.
+
+The checkable layer is real and often objectively violable in ways a measurement settles: broadcast-legal levels and gamut, clipped highlights or crushed shadows, colour space and transfer tags, audio sync across the full duration rather than at the head, frame rate conform, aspect ratio, continuity of names and facts inside a narrative, word count against a spec. These are tier 1 and 2. Measure them.
+
+The judgeable layer is whether it reads, whether it lands, whether it looks like the thing it claims to be. **No metric reaches it.** A grade can sit perfectly inside legal range and still read as muddy. A cut can land on every beat and still have no rhythm. A paragraph can hit its word count in clean active voice with no adverbs and say nothing at all.
+
+The craft-specific danger is that the checkable layer is necessary, which makes passing it feel like verification. Legal scopes are required. Sync is required. Neither is evidence that the work is good, and a report that lists only the measurable results has answered a different question.
+
+For the judgeable layer, use a fresh critic twice. **First without the brief:** what does this read as, what is it about, what mood does it carry. A viewer who has not been told the intent describes what is actually there. **Then with the brief:** does it deliver that intent, and where specifically does it fall short. Running only the second pass invites the critic to confirm the intent it was just handed.
+
+Taste judgments are tier 3 at best and usually tier 4. Label them. A strong opinion from a competent critic is still an opinion, and the honest report says so while still giving the opinion, because refusing to judge is its own failure.
+
 **History and interpretation.** Go to the document, not the account of it. Establish provenance and date. Note who benefited from the account surviving. Much of this domain sits at tier 3, and saying so is the honest move.
 
 ---

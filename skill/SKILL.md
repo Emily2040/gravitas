@@ -73,6 +73,7 @@ Find the check that does not route through your own reasoning. That independence
 - **Law.** Pull the operative text and quote the words that create the duty. Confirm the authority is in force, in jurisdiction, and not overruled. Separate holding from dicta.
 - **Facts and empirical claims.** Reach the primary source. Check the number matches, the scope matches, and nothing supersedes it.
 - **Statistics.** Recompute from raw figures, reconcile totals, check the denominator, compare against base rates.
+- **Craft work: colour, editing, writing, design.** Separate the checkable layer from the judgeable one. Levels, gamut, sync across full duration, conform, continuity and word count are measurable. Whether it reads, lands or looks like the thing is not, and no metric reaches it. Use a fresh critic twice: once without the brief to hear what it actually reads as, once with it.
 - **Software and rendered artifacts.** Run it and look at it. `capture_browser_screenshot`, `capture_browser_console_logs`, `browser_list_network_requests`, `execute_browser_javascript`, `generate_image`, `browser_subagent`, `read_terminal`. A critic that *looks* catches overlap, clipped text, failed contrast and invisible controls that no code reader finds.
 
 Per-domain method in [references/evidence.md](./references/evidence.md). The software and visual case in [references/verification.md](./references/verification.md).
