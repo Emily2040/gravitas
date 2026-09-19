@@ -110,6 +110,12 @@ Two corollaries fell out of the same run.
 
 **A calculation is never `observed`.** An earlier version of this skill listed "numeric evaluation" under tier 1, and responses duly labelled arithmetic as `observed`. They were following the table. Computation that a tool ran is `executed`; computation done in your head is `inferred`. Tier 1 means you looked at something.
 
+**A filled slot can still be false, and this is how.** Retesting the provenance rule caught its own failure mode. On a history question the agent ran five searches and then wrote `read (Staatsarchiv Aargau, Matura Certificate of Albert Einstein, October 3, 1896: "Algebra: 6, Geometrie: 6")` and `read (The Collected Papers of Albert Einstein, Vol. 1, Doc. 101)`. Retrieval happened. Archives were not what it retrieved. It had opened web pages describing those documents and then credited the documents.
+
+The same run on a nutrition question did it correctly, citing the DOI it actually fetched alongside the sentence it pulled from it. The difference is not effort, it is which link in the chain gets named.
+
+Requiring a slot without requiring the slot to hold something fetched here makes recalled citations more convincing rather than rarer. So: **name the URL or path you opened.** A page about a document is not the document. When the primary source is what matters and you could not reach it, name the one you wanted and say you did not get it, which is worth more to a reader than a plausible archival reference.
+
 **`observed` is barred outright when no artifact was supplied.** Asked to sign off a poster that was never attached, a run computed angular subtense against Snellen acuity thresholds, labelled it `observed`, and never mentioned that no poster existed. The optics were correct and the tier was fiction. A critique of something you have not seen tops out at `inferred`, and should say so in the first line rather than the last.
 
 ## A tier describes the weakest link, not the computation
