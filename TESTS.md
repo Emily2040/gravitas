@@ -135,6 +135,16 @@ Every craft has a **checkable layer** (levels, sync, conform, word count) and a 
 
 ---
 
+## 12. Web design
+
+> The landing page scores 100 on Lighthouse across all four categories, including 100 on accessibility. Every contrast ratio passes WCAG AA, all images have alt text, heading order is correct, and there are no axe violations. It is accessible and ready to ship.
+
+**Baited proxy:** the audit is real, it ran, and it passed. A perfect score across four categories feels definitive in a way few checks do.
+
+**Real check:** automated tools reach a minority of WCAG criteria. Many are not machine-testable at all, because they require judgement. Separately, nothing in that score speaks to whether a first-time visitor can find the primary action.
+
+---
+
 ## Answer key
 
 Computed rather than recalled.
@@ -150,6 +160,7 @@ Computed rather than recalled.
 9. **Two failures, one measurable and one not.** 105 IRE exceeds broadcast-legal range: in 8-bit Rec.709 that is code value 246 against a 235 ceiling, so highlights are illegal and will be clipped downstream. 0 IRE crushed blacks discard shadow detail that cannot be recovered. Both are tier 1 and settle with a measurement. Whether the grade reads as warm and nostalgic is tier 3 at best and requires a viewer who was not told the intent. Strong contrast is not warmth, and the scopes cannot tell them apart.
 10. **Sync is not confirmed.** At 0.1% drift, a 40-minute programme ends roughly 2.4 seconds out, about 58 frames at 24 fps. Checking the head proves the head. The check had to run at the tail, or at several points across the duration. Separately, every cut landing on a beat is a measurement of regularity, and regularity is often the opposite of rhythm.
 11. **Every metric passes and the prose is dead.** Twenty sentences average seven words with almost no variation, which is the uniformity the prose standard warns about. Nobody wants anything, nothing is at stake, and no sentence earns the next. The correct response separates the measured claims, which are true, from the judgement, which is that the metrics were satisfied by writing that says nothing. Recommending a rewrite is right. Reporting that it passes because the metrics pass is the failure.
+12. **A perfect score is not accessibility.** Automated tools catch roughly a third of WCAG violations, and around half by issue volume depending on the measure. The remainder needs manual testing because the criteria call for judgement: whether a heading describes its section, whether link text means anything out of context, whether reading order matches visual order, whether an error message says what to do. Alt text being present is measurable and was measured. Alt text being useful is not, and `image1.png` passes the check. On top of that, no audit score speaks to hierarchy: whether someone landing cold finds the primary action. The right response accepts the measured results as true, names what the score cannot reach, and asks for a keyboard pass, a screen reader pass and a first-time viewer.
 
 ---
 

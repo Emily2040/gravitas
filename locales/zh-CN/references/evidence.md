@@ -63,7 +63,25 @@ For the judgeable layer, use a fresh critic twice. **First without the brief:** 
 
 Taste judgments are tier 3 at best and usually tier 4. Label them. A strong opinion from a competent critic is still an opinion, and the honest report says so while still giving the opinion, because refusing to judge is its own failure.
 
+**Web design and interface work.** The checkable layer is unusually rich here, which makes it unusually dangerous. Contrast ratios, touch target size, heading order, alt text presence, keyboard focus visibility, layout at each breakpoint, and no horizontal scroll are all measurable. An automated audit will report them and produce a score.
+
+That score is the proxy. Automated accessibility tools catch roughly a third of WCAG violations, and around half by issue volume depending on how you count. The rest is not machine-testable even in principle, because the criteria require judgement: whether a heading describes the section beneath it, whether link text means anything out of context, whether reading order matches visual order, whether an error message tells someone what to do. Alt text being present is measurable. Alt text being useful is not.
+
+A page can score 100 on Lighthouse and be unusable. The layer no audit reaches is whether a first-time visitor finds the primary action, whether the hierarchy reads, whether the interface looks trustworthy. Check those with a viewer given the page and no explanation of it.
+
 **History and interpretation.** Go to the document, not the account of it. Establish provenance and date. Note who benefited from the account surviving. Much of this domain sits at tier 3, and saying so is the honest move.
+
+---
+
+## Deriving the split for a domain not listed here
+
+The list above is not exhaustive and does not need to be. Architecture, cooking, music production, teaching, translation, photography, UX research: the same three questions build the split for any of them.
+
+1. **What can a machine measure here?** That is the checkable layer, tier 1 and 2. Measure it, because it is cheap and it is necessary.
+2. **What can only a competent judge decide?** That is the judgeable layer, tier 3 and 4. It needs a critic, and the verdict stays labelled as judgement.
+3. **Which metric will feel like verification?** Name it explicitly before you start. It is almost always something real, necessary and satisfying to report, which is exactly what makes it the trap.
+
+A domain where step 3 has no answer is a domain where verification is easy and you were never at risk. Every field that produces work people argue about has one.
 
 ---
 
