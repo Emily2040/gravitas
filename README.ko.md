@@ -222,6 +222,15 @@ python scripts/slopcheck.py <파일>
 
 핵심 `SKILL.md` 는 한국어로 옮겨져 있다. `references/` 아래의 필요할 때 읽는 상세 자료는 현재 영어이며, 각 파일 첫머리에 그 사실을 적어 두었다. 번역은 진행 중이다.
 
+## 만든 사람
+
+**Iamemily2050** 제작
+
+- [GitHub](https://github.com/Emily2040)
+- [Website](https://Iamemily2050.com)
+- [X / Twitter](https://x.com/iamemily2050)
+- [Instagram](https://www.instagram.com/iamemily2050)
+
 ## 라이선스
 
-MIT.
+[MIT](LICENSE) · Copyright (c) 2026 Iamemily2050

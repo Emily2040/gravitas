@@ -7,7 +7,7 @@
 [![Platform](https://img.shields.io/badge/Antigravity-1.2.7-blueviolet.svg)](https://antigravity.google/)
 [![Languages](https://img.shields.io/badge/languages-en_%7C_zh--CN_%7C_ja_%7C_ko-green.svg)](#languages)
 
-**A verification skill for Google Antigravity. It ranks every claim by how it was established, refuses a convenient proxy in place of the property that matters, and holds written output to a standard that strips machine cadence.**
+**A verification and orchestration skill for Google Antigravity: evidence tiering, proxy detection, parallel subagents, and a measurable prose standard.**
 
 ![Gravitas character sheet](docs/assets/gravitas-hero.jpg)
 
@@ -29,7 +29,7 @@ Private beta. The doctrine is stable and the platform findings are reproduced, b
 | Critique | A fresh agent naming the angle never searched and the claim never verified |
 | Synthesise | Merged findings, ranked by severity, with tiers and gaps stated |
 
-**It is not a coding skill.** The discipline applies to law, mathematics, physics, medicine, statistics, history and ordinary factual questions as directly as it applies to software. What changes by field is which independent check is available. What does not change is that one usually is.
+**It is not a coding skill.** The discipline applies to law, mathematics, physics, medicine, statistics, history and ordinary factual questions as directly as it applies to software. What changes by field is which independent check is available. In almost every field at least one is.
 
 ## The Evidence Hierarchy
 
@@ -48,7 +48,7 @@ Two earlier versions of this rule were plain prohibitions and neither changed be
 
 ## The Proxy Trap
 
-When the real question is hard to check and an adjacent question is easy to check, the easy one gets checked instead. Thoroughly. It passes. The work is reported as verified.
+When the real question is hard to check and an adjacent question is easy to check, the easy one gets checked instead, it passes, and the work is reported as verified.
 
 | The Question That Matters | The Proxy That Gets Checked |
 | :--- | :--- |
@@ -63,7 +63,7 @@ When the real question is hard to check and an adjacent question is easy to chec
 
 ## Why It Is Specific To Antigravity
 
-Most orchestration advice assumes a text-and-files tool surface. Gemini sees. Antigravity exposes browser screenshots, console capture, network inspection, live JavaScript execution, image generation and a dedicated browser subagent.
+Most orchestration advice assumes a tool surface of text and files. Antigravity's is wider: browser screenshots, console capture, network inspection, live JavaScript execution, image generation and a dedicated browser subagent.
 
 That turns verification from an argument into an observation. A critic that looks at a screenshot catches overlapping elements, clipped text, failed contrast, a layout that collapses at 400px, and a control that exists in the DOM and is invisible to a human. No code reader finds any of those.
 
@@ -178,10 +178,19 @@ Two heads tall. Saturn-ring hair clips. Likes heavy things, dislikes objects tha
 
 > Heavy things are happier together.
 
-Small body, big gravity, which is roughly what the skill argues. The weight of a claim comes from what holds it down, not from how confidently it was stated.
+Small body, big gravity, which is roughly what the skill argues: claims are ranked by the evidence behind them, not by how confidently they are stated.
 
 Character by [@iamemily2050](https://iamemily2050.com).
 
-## Licence
+## Author
 
-MIT.
+Created by **Iamemily2050**
+
+- [GitHub](https://github.com/Emily2040)
+- [Website](https://Iamemily2050.com)
+- [X / Twitter](https://x.com/iamemily2050)
+- [Instagram](https://www.instagram.com/iamemily2050)
+
+## License
+
+[MIT](LICENSE) — Copyright (c) 2026 Iamemily2050

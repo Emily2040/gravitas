@@ -222,6 +222,15 @@ python scripts/slopcheck.py <ファイル>
 
 中核の `SKILL.md` は日本語化済みである。`references/` 配下の、必要に応じて読み込む詳細資料は現時点では英語で、各ファイルの冒頭にその旨を記してある。翻訳は進行中。
 
+## 作者
+
+**Iamemily2050** が制作
+
+- [GitHub](https://github.com/Emily2040)
+- [Website](https://Iamemily2050.com)
+- [X / Twitter](https://x.com/iamemily2050)
+- [Instagram](https://www.instagram.com/iamemily2050)
+
 ## ライセンス
 
-MIT。
+[MIT](LICENSE) · Copyright (c) 2026 Iamemily2050

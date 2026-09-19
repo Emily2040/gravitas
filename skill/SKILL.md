@@ -28,7 +28,7 @@ This skill addresses all three. Keep this page in context and load the reference
 
 Before any of the machinery below, check one thing: **whether this is a single deterministic computation, a lookup, or a definition whose answer is complete in a line or two.** If it is, answer it and stop. No tier label, no coverage block, no subagent.
 
-Testing caught this skill failing its own control. Asked to convert 72 °F to Celsius, it gave the right number and then appended an evidence tier, a bidirectional dimensional check and a scope note. Machinery on a trivial question is not thoroughness. It makes the apparatus look absurd where it is not needed, and teaches the reader to skip it where it is.
+Testing caught this skill failing its own control. Asked to convert 72 °F to Celsius, it gave the right number and then appended an evidence tier, a bidirectional dimensional check and a scope note. Running the machinery on a trivial question is not thoroughness. It makes the apparatus look absurd on questions that do not need it, and readers who see that start skipping it on questions that do.
 
 Escalate on consequence, never on difficulty.
 
@@ -49,7 +49,7 @@ Rank every claim by **what actually happened during this piece of work**. Not by
 
 Recalled material is `inferred`, however certain it feels and however real the source is. Write `inferred (recalled)` when that is what happened.
 
-This is the failure mode that survives being told not to do it. Across twenty-two domains, a `read` or `observed` label on something nobody retrieved was the single most common defect, appearing in most cases even with a rule against it already in context. A prohibition did not move it. Requiring the label to carry its own provenance is a structural fix rather than another instruction, which is why it is written as a formatting rule.
+This is the failure mode that survives being told not to do it. Across twenty-two cases, a `read` or `observed` label on something nobody retrieved was the single most common defect, appearing in most cases even with a rule against it already in context. A prohibition did not move it. Requiring the label to carry its own provenance is a structural fix rather than another instruction, which is why it is written as a formatting rule.
 
 A tier-4 claim is a hypothesis. Adversarial voting moves a claim within tier 4 and never promotes it. Promotion requires an independent check, and in almost every field one is available.
 
@@ -59,7 +59,7 @@ Report the tier alongside every finding. State what was not covered.
 
 This is the failure that survives every other precaution, so read it before you plan any verification.
 
-**When the real question is hard to check and an adjacent question is easy to check, the easy one gets checked instead.** Thoroughly. It passes. The work is reported as verified.
+**When the real question is hard to check and an adjacent question is easy to check, the easy one gets checked instead.** It passes, and the work is reported as verified.
 
 | The Question That Matters | The Proxy That Gets Checked |
 | :--- | :--- |
@@ -115,7 +115,7 @@ Before reporting anything as passing, run the checklist in [references/acceptanc
 
 ## Iterate With Discipline
 
-Repetition is not improvement. Decide which loop you are in before starting one.
+Repeating a pass does not on its own improve the result. Decide which loop you are in before starting one.
 
 **Convergent loops** chase correctness. Every pass must consume a new external signal that *localises* the error: a failing assertion, a stack trace, a numeric disagreement, a source that contradicts the claim. A model can usually fix an error once told where it is and cannot reliably find it in its own work. No new signal means stop.
 
@@ -163,7 +163,7 @@ Structures in [references/patterns.md](./references/patterns.md).
 
 ## Write Like A Person
 
-Correct work that reads as generated gets discarded. Every artifact follows the prose standard in [references/prose.md](./references/prose.md): vary sentence length on purpose, ground every abstraction in an observable mechanism or figure, and cut contrastive framing, rhetorical questions, hedge intensifiers and em-dash cadence. Word choice is not the tell. Structure is.
+Correct work that reads as generated gets discarded. Every artifact follows the prose standard in [references/prose.md](./references/prose.md): vary sentence length on purpose, ground every abstraction in an observable mechanism or figure, and cut contrastive framing, rhetorical questions, hedge intensifiers and em-dash cadence. The tell is structural rather than lexical, which is what `slopcheck.py` measures.
 
 ## Know The Platform
 
@@ -171,6 +171,6 @@ Antigravity has verified constraints that will silently waste your work. Skills 
 
 ## Calibrate
 
-The gate at the top screens out the trivial. Between that and a full pass lies most real work, and the scale is set by consequence rather than by difficulty.
+The gate at the top screens out the trivial. Most real work sits between that gate and a full pass, and the scale is set by consequence rather than by difficulty.
 
-An easy question headed somewhere permanent outranks a hard one asked in passing. A simple factual claim bound for a filing, a diagnosis, a paper or a contract earns the primary source. A hard theoretical question asked out of curiosity does not need a five-agent adversarial pass. Pick the scale before you start, and say which one you picked.
+An easy question whose answer lands in a permanent artifact needs more verification than a hard one asked in passing. A simple factual claim bound for a filing, a diagnosis, a paper or a contract earns the primary source. A hard theoretical question asked out of curiosity does not need a five-agent adversarial pass. Pick the scale before you start, and say which one you picked.

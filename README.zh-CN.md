@@ -222,6 +222,15 @@ python scripts/slopcheck.py <文件>
 
 核心技能文件 `SKILL.md` 已完整中文化。`references/` 下按需加载的深度参考文件目前仍是英文，每个文件顶部都有说明。翻译进行中。
 
+## 作者
+
+由 **Iamemily2050** 创作
+
+- [GitHub](https://github.com/Emily2040)
+- [Website](https://Iamemily2050.com)
+- [X / Twitter](https://x.com/iamemily2050)
+- [Instagram](https://www.instagram.com/iamemily2050)
+
 ## 许可
 
-MIT。
+[MIT](LICENSE) · Copyright (c) 2026 Iamemily2050
