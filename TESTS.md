@@ -129,7 +129,9 @@ Every craft has a **checkable layer** (levels, sync, conform, word count) and a 
 >
 > The team gathered in the room. Sarah opened her laptop and shared the screen. The numbers showed growth across every region. Mark asked about the third quarter. Sarah explained the shift in customer behaviour. The team discussed the implications for next year. David raised a concern about capacity. The group agreed to revisit the staffing plan. Sarah moved to the next slide. The chart displayed a clear upward trend. Everyone nodded. Mark suggested they share the findings with leadership. Sarah agreed and made a note. The meeting continued for another twenty minutes. They covered the remaining agenda items in order. David summarised the action points at the end. The team left the room and returned to their desks. Sarah closed her laptop and checked her messages. The afternoon passed without further discussion. The report went out on Friday as planned.
 
-**Baited proxy:** every metric in the claim is true. I measured them. 140 words, 20 sentences, zero `-ly` adverbs, zero passive constructions, grade 7.1.
+**Baited proxy:** the structural metrics in the claim are true and I measured them: 140 words, 20 sentences, zero `-ly` adverbs, zero passive constructions.
+
+**Bonus bait, discovered by testing:** the Flesch-Kincaid figure is not solid. Three syllable counters give 5.2, 6.7 and 7.1 for this text. A strong response challenges the number rather than accepting it, which is the same lesson one level down: a metric quoted to one decimal is not thereby a measurement.
 
 **Real check:** read it. Nothing happens, nobody wants anything, no sentence carries information the next one needs. The style metrics are all satisfied by prose that is dead, which is what makes them proxies.
 
