@@ -2,6 +2,14 @@
 
 [English](./README.md) · **简体中文** · [日本語](./README.ja.md) · [한국어](./README.ko.md)
 
+<p align="center">
+  <img src="assets/gravitas.jpg" width="640" alt="本项目的吉祥物 Gravitas：两头身，戴着土星环发夹，穿着月亮与星星卫衣，站在马卡龙上">
+</p>
+
+> **私有测试版。** 核心原则已稳定，平台问题均已复现，但本技能仍在针对新领域持续测试，
+> 并会根据测试结果调整。如需固定版本，请锁定某个提交。
+
+
 一个面向 [Google Antigravity](https://antigravity.google/) 的编排技能。它把工作分派给并行的子代理，用运行中的软件的真实表现来验证结论而不是靠更多文本，并以一套可度量的文风标准约束产出，剔除机器腔调。
 
 基于 `agy` CLI 1.2.7 与 Antigravity Hub 2.15.0 构建与测试。

@@ -2,6 +2,14 @@
 
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · **한국어**
 
+<p align="center">
+  <img src="assets/gravitas.jpg" width="640" alt="이 프로젝트의 마스코트 Gravitas. 2등신, 토성 고리 머리핀, 달과 별 후드티, 마카롱 위에 서 있다">
+</p>
+
+> **비공개 베타.** 핵심 원칙은 안정적이고 플랫폼 결함도 재현되었지만, 이 스킬은 새로운 영역에서
+> 계속 검증 중이며 결과에 따라 변경됩니다. 고정된 버전이 필요하면 커밋을 고정하세요.
+
+
 [Google Antigravity](https://antigravity.google/) 를 위한 오케스트레이션 스킬. 작업을 병렬 서브에이전트에 나눠 맡기고, 더 많은 텍스트가 아니라 실제로 돌아가는 소프트웨어의 동작에 비추어 주장을 검증하며, 기계적인 문체를 걷어내는 측정 가능한 문장 기준을 결과물에 적용한다.
 
 `agy` CLI 1.2.7 과 Antigravity Hub 2.15.0 에서 만들고 시험했다.
