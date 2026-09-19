@@ -1,5 +1,7 @@
 # gravitas
 
+**English** · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · [한국어](./README.ko.md)
+
 An orchestration skill for [Google Antigravity](https://antigravity.google/). It runs work across parallel subagents, verifies claims against what the running software actually does rather than against more text, and holds written output to a standard that strips machine cadence.
 
 Built and tested against `agy` CLI 1.2.7 and Antigravity Hub 2.15.0.
@@ -35,12 +37,12 @@ Antigravity never scans a workspace `.agents/` directory, so the global skills d
 
 ```bash
 git clone <this repo> && cd <this repo>
-bash scripts/install.sh
+bash scripts/install.sh            # en, or: zh-CN / ja / ko
 ```
 
 ```powershell
 git clone <this repo>; cd <this repo>
-pwsh scripts/install.ps1
+pwsh scripts/install.ps1           # en, or: zh-CN / ja / ko
 ```
 
 Both copy `skill/` to `~/.gemini/config/skills/<name>/` and then validate it. Restart Antigravity afterwards.

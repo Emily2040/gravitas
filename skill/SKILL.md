@@ -8,7 +8,10 @@ description: >-
   define_subagent and invoke_subagent, verifies claims against observed reality using
   Gemini's native vision rather than against more text, and holds output to a prose standard
   that strips machine cadence. Skip it for trivial single-file edits and conversational
-  questions.
+  questions. Triggers regardless of the language the user writes in, including Chinese,
+  Korean and Japanese: 审计 重构 调试 彻底 全面 验证 迁移 排查,
+  감사 리팩터링 디버깅 철저히 전면 검증 마이그레이션,
+  監査 リファクタリング デバッグ 徹底的 網羅的 検証 移行.
 ---
 
 # Deep Work

@@ -26,7 +26,7 @@ The real markers, in rough order of how loudly they announce themselves:
 
 **Identical scaffolding.** Six documents with the same section headers in the same order reads as generated, because no human writes six of anything to one template.
 
-**Rhetorical questions.** "So what went wrong?" followed by the answer. Ask a question only when you want one answered.
+**Rhetorical questions.** A question like `So what went wrong` followed immediately by its own answer. Ask a question only when you want one answered.
 
 ---
 
