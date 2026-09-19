@@ -1,4 +1,4 @@
-> **语言说明：** 本参考文件目前仅有英文版。核心技能文件 `SKILL.md` 已完整中文化，这里是按需加载的深度细节。翻译进行中。
+> **语言说明：** 本参考文件目前仅有英文版。核心技能文件 `SKILL.md` 已完整中文化。翻译进行中。
 
 # Acceptance
 
@@ -127,3 +127,37 @@ So: check your toolset before planning verification. If `capture_browser_screens
 - The report states what was not covered.
 
 A report of all-green with no gate ever demonstrated red is not evidence of correctness. It is evidence that a report was generated.
+
+---
+
+## A worked example that goes red
+
+[examples/gates.example.js](../examples/gates.example.js) is a Playwright gate suite written to these rules and run against the scene described above. It scores 4 of 6 and exits 1.
+
+```
+PASS  G1  Zero console errors
+FAIL  G2  No deprecation warning for an API this code calls
+          THREE.WebGLShadowMap: PCFSoftShadowMap has been removed. Using PCFShadowMap instead.
+FAIL  G3  Shadow map enabled and not the hard fallback (type !== 1)
+          enabled=true type=1
+PASS  G4  Under 90% of materials are untextured
+          153/193 materials have no map (79.3%)
+PASS  G5  Component counts match the brief
+PASS  G6  SELF-TEST: an injected wrong value is detected by G5 logic
+```
+
+G6 is the self-test the rules demand. It injects a wrong value and confirms the comparison catches it, so the suite has demonstrated it can go red.
+
+The same scene, under the original suite, reported `ALL TEST GATES PASSED SUCCESSFULLY`.
+
+Then the perceptual gate was run separately, by a fresh agent given the screenshot and no source. Its verdict on a chocolate factory:
+
+> **Chocolate: Absent.** The mold cavities are completely white and empty; there is no liquid chocolate, bar, or brown confectionery substance visible anywhere on the line.
+>
+> **Lighting: Flat.** No directional cast shadows, no specular hot spots.
+>
+> **What it looks like it is made of:** injection-molded matte toy plastic and raw CAD primitives.
+
+The original suite's gate on that same object read: *"Hero Chocolate Identity Persistence — PASS. Exactly 1 mesh throughout; UUID persists across all phases."*
+
+The mesh exists in the scene graph. It is not visible in the render. **No geometric gate can close that gap**, which is the entire reason perceptual gates exist.
