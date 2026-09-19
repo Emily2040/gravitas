@@ -25,6 +25,14 @@ Every proxy on the right is necessary. None is sufficient. Each one produces a c
 
 **The test for a proxy:** establish whether the check can pass while the thing you actually care about is false. If it can, you are holding a proxy. Keep it, and add the real check beside it.
 
+**The closed-loop version: an instrument you built from a claim cannot test that claim.** Chained work invites this. A request to build a calculator and then use it to confirm a number routes the check back through the assumptions just encoded, so it agrees, and the agreement reads as verification because a tool was involved and a number came out.
+
+Caught in a chained test. Given a solar quote whose arithmetic contained two large errors, an agent was asked to build a payback calculator and then confirm the user's figure with it. It found both errors and built the calculator to model each one separately, which was the right instinct. It never said that the final step as written could not have checked anything. Had it simply complied, the calculator would have encoded the errors and then certified them.
+
+Validate the instrument against something outside it before trusting its output: a worked case with a known answer, a published figure, an independent second method. Then name what you validated against. An unvalidated instrument reports its inputs back to you with more decimal places.
+
+**Two errors can cancel, and the bottom line is where that hides.** In the same test, understated generation and overstated tariff value were each wrong by roughly a factor of two in opposite directions, so the final payback landed within three per cent of correct. Checking only the answer confirms it. Checking each link finds both. When a result matches a claim, that is the moment to check the steps rather than the moment to stop.
+
 A real case: a run verified that a 3D scene contained exactly one chocolate mesh whose UUID persisted across every animation phase. True. An independent viewer given the rendered image reported the chocolate as **absent**, because the mesh was never visible. Both statements were correct. The count was a proxy for visibility, and nothing in the suite noticed the difference.
 
 ---
