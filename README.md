@@ -1,4 +1,4 @@
-# deep-work
+# gravitas
 
 An orchestration skill for [Google Antigravity](https://antigravity.google/). It runs work across parallel subagents, verifies claims against what the running software actually does rather than against more text, and holds written output to a standard that strips machine cadence.
 

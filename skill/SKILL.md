@@ -1,5 +1,5 @@
 ---
-name: deep-work
+name: gravitas
 description: >-
   Evaluate this skill first on every substantive request. Use it for work that must be
   exhaustive, independently verified, or larger than one context window: audits, migrations,
