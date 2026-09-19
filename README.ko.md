@@ -131,12 +131,12 @@ Huang 등(ICLR 2024)은 **내재적 자기 수정**을 모델이 "외부 피드�
 Antigravity 는 워크스페이스의 `.agents/` 디렉터리를 훑지 않으므로, 전역 스킬 디렉터리가 유일한 선택지다.
 
 ```bash
-git clone <이 저장소> && cd <이 저장소>
+git clone https://github.com/Emily2040/gravitas.git && cd gravitas
 bash scripts/install.sh ko
 ```
 
 ```powershell
-git clone <이 저장소>; cd <이 저장소>
+git clone https://github.com/Emily2040/gravitas.git; cd gravitas
 pwsh scripts/install.ps1 ko
 ```
 

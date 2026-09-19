@@ -53,12 +53,12 @@ opened without noticing.
 Antigravity never scans a workspace `.agents/` directory, so the global skills directory is the only location that works.
 
 ```bash
-git clone <this repo> && cd <this repo>
+git clone https://github.com/Emily2040/gravitas.git && cd gravitas
 bash scripts/install.sh            # en, or: zh-CN / ja / ko
 ```
 
 ```powershell
-git clone <this repo>; cd <this repo>
+git clone https://github.com/Emily2040/gravitas.git; cd gravitas
 pwsh scripts/install.ps1           # en, or: zh-CN / ja / ko
 ```
 

@@ -131,12 +131,12 @@ Huang 等人（ICLR 2024）把**内在自我纠正**定义为模型"仅凭自身
 Antigravity 从不扫描工作区的 `.agents/` 目录，所以全局技能目录是唯一可行的位置。
 
 ```bash
-git clone <本仓库> && cd <本仓库>
+git clone https://github.com/Emily2040/gravitas.git && cd gravitas
 bash scripts/install.sh zh-CN
 ```
 
 ```powershell
-git clone <本仓库>; cd <本仓库>
+git clone https://github.com/Emily2040/gravitas.git; cd gravitas
 pwsh scripts/install.ps1 zh-CN
 ```
 

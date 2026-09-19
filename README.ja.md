@@ -131,12 +131,12 @@ Huang ら（ICLR 2024）は**内在的自己修正**を、モデルが「外部�
 Antigravity はワークスペースの `.agents/` ディレクトリを走査しないため、グローバルなスキルディレクトリが唯一の選択肢になる。
 
 ```bash
-git clone <このリポジトリ> && cd <このリポジトリ>
+git clone https://github.com/Emily2040/gravitas.git && cd gravitas
 bash scripts/install.sh ja
 ```
 
 ```powershell
-git clone <このリポジトリ>; cd <このリポジトリ>
+git clone https://github.com/Emily2040/gravitas.git; cd gravitas
 pwsh scripts/install.ps1 ja
 ```
 
