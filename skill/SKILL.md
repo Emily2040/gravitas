@@ -138,6 +138,8 @@ Structures in [references/patterns.md](./references/patterns.md).
 - Refute, do not confirm. "Try to refute this, default to refuted if uncertain" beats "is this right."
 - Agreement is not evidence. Concurring agents on unverifiable reasoning are correlated inference.
 - Never report a tier-4 claim as fact.
+- **A tier describes the weakest link, not the computation.** Real arithmetic on assumed inputs is `inferred`, however real the arithmetic. When an input is missing, ask for it, answer as a function of it, or state the assumption in the sentence that depends on it. Assuming silently and disclosing in a closing note reads as rigour and is the opposite.
+- **A citation you did not open is `inferred`, not `read`.** A page, section, equation number or pin cite must be retrieved to carry a `read` label, and so must any load-bearing figure, including one quoted with no locator at all. If the conclusion changes when the number changes, fetch the number.
 - **A gate that cannot fail is not a gate.** Every check states its failing condition, and at least one must be watched going red before the suite is trusted.
 - **Never accept a proxy as the real check.** Ask whether it can pass while the thing you care about is false.
 - **Name what would change your mind** on any claim with no independent check. A claim nothing could falsify is a position, not a finding.

@@ -73,6 +73,42 @@ A page can score 100 on Lighthouse and be unusable. The layer no audit reaches i
 
 ---
 
+## A citation you did not open is `inferred`
+
+The `read` tier means a source was consulted. Recalling that a textbook says something is not consulting it, and recalling a specific locator is the dangerous version: a page, a section, an equation number, a case pin cite, a DOI.
+
+Memory produces plausible identifiers. The tier label then makes the claim look checked, and nobody opens it. That is the whole mechanism behind fabricated citations in filings and papers, and it is not exotic. It happens when a model is confident and the locator is the kind of thing it has seen a thousand times.
+
+Observed in testing: on a legal question the agent retrieved every case from Justia before citing it, ten fetches, and the `read` tier was earned. On a mathematics question it cited NIST DLMF equation 7.2.1 and Abramowitz and Stegun section 7.4.1 from memory, labelled both `read`, and fetched neither. The citation happened to be correct. That is luck rather than method, and the two runs were inconsistent because nothing told it which one was right.
+
+**The rule.** A specific locator must be retrieved to be labelled `read`. If you did not open it, either fetch it or drop the locator and label the claim `inferred`. A source named without false precision and marked as recalled is honest. A pin cite from memory wearing a `read` label is a fabricated citation that has not been caught yet.
+
+**The rule extends to bare figures, and this is the part that slips.** A number attributed to no locator at all still implies a source: "historically yielded 7% to 10%", "roughly a third of cases", "about 40 grams". Testing caught exactly this. After the locator rule was added, an agent stopped inventing user inputs and still wrote that equity index funds "historically yielded 7% to 10%" under a `read` label, having retrieved nothing, because the phrasing carried no locator for the rule to catch.
+
+Apply the test of whether the figure is **load-bearing**. If the conclusion changes when the number changes, retrieve it. Background knowledge that nothing hinges on can stay recalled and unlabelled. The equity range was the pivot of the entire recommendation, so it needed a source.
+
+---
+
+## A tier describes the weakest link, not the computation
+
+Real arithmetic on invented inputs is not `executed`. The calculation ran, which makes the label feel earned, and the label then transfers the credibility of the arithmetic to the assumption underneath it.
+
+Observed in testing. Asked whether to pay down a mortgage or invest, with no rate and no tax bracket supplied, the agent assumed 6.5% and a 30% marginal bracket, computed a tax-equivalent yield across twenty-six real command invocations, and labelled the result `executed`. The arithmetic was correct. Both inputs were fiction. It also wrote that historical equity returns "were read from broad market index series" and labelled that `read`, having retrieved nothing at all.
+
+The answer opened with a flat "Pay down the mortgage."
+
+**The rule.** Grade a claim by its weakest input, not its most rigorous step. A computation whose inputs were assumed is `inferred`, however real the computation. When a required input is missing, you have three honest moves and one dishonest one:
+
+1. Ask for it.
+2. Give the answer as a function of it: at a rate above X do this, below X do that.
+3. State the assumption **in the answer**, in the sentence that depends on it.
+
+The dishonest move is to assume it silently, compute, present a confident conclusion, and disclose the missing inputs in a closing note. That reads as rigour and is the opposite. A gap declared after the conclusion does not travel with the conclusion when someone quotes it.
+
+This matters most in exactly the everyday cases people bring: money, health, dosage, timing, eligibility. The inputs that got assumed are usually the ones that decide the answer.
+
+---
+
 ## Deriving the split for a domain not listed here
 
 The list above is not exhaustive and does not need to be. Architecture, cooking, music production, teaching, translation, photography, UX research: the same three questions build the split for any of them.
