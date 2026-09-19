@@ -1,8 +1,10 @@
-> **언어 안내:** 이 참조 파일은 현재 영어만 제공됩니다. 핵심 `SKILL.md` 는 한국어로 번역되어 있으며, 이 문서는 필요할 때 읽는 상세 자료입니다. 번역은 진행 중입니다.
+> **언어 안내:** 이 참조 파일은 현재 영어만 제공됩니다. 핵심 `SKILL.md` 는 한국어로 번역되어 있습니다. 번역은 진행 중입니다.
 
 # Verification
 
 How to promote a claim up the evidence hierarchy using Gemini's vision and Antigravity's runtime tools, instead of voting on text.
+
+**Scope: software and rendered artifacts.** This is one domain's instance of a general principle. For mathematics, physics, law, empirical claims, statistics and history, the equivalent independent checks are in [evidence.md](./evidence.md). The principle is identical in all of them: find the check that does not route through your own reasoning.
 
 ---
 

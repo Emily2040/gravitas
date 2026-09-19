@@ -1,4 +1,4 @@
-> **言語について：** この参照ファイルは現在英語のみです。中核の `SKILL.md` は日本語化済みで、ここは必要に応じて読み込む詳細部分です。翻訳は進行中です。
+> **言語について：** この参照ファイルは現在英語のみです。中核の `SKILL.md` は日本語化済みです。翻訳は進行中です。
 
 # Subagents
 
@@ -33,7 +33,7 @@ A subagent must be declared before it can be dispatched. The runtime is explicit
 | `MODEL_TIER_PRO` | Judges, refuters, visual critics, final synthesis |
 | `MODEL_TIER_INHERIT` | Implementation, so work follows the model the user selected |
 
-Paying PRO rates for file triage is waste. Running a visual critic on FLASH_LITE is false economy. `INHERIT` is the correct default for anything that writes code, because silently downgrading the user's chosen model is a decision they did not make.
+Paying PRO rates for file triage is waste. Running a visual critic on FLASH_LITE is false economy, since the whole point of that role is the judgement you just economised away. `INHERIT` is the correct default for anything that writes code, because silently downgrading the user's chosen model is a decision they did not make.
 
 ---
 
@@ -62,7 +62,7 @@ A menu, not a mandate. Define only what a task needs. The two columns that matte
 
 Two rules hold this together. Only `implementer` writes, which is what makes every observation and judgment role worth trusting. And `INHERIT` is the implementation default.
 
-`scout → implement → verify` is the smallest useful composition and covers most single-defect work.
+`scout → implement → verify` is the smallest useful composition. It covers most single-defect work.
 
 ---
 
@@ -82,6 +82,6 @@ Name the evidence requirement. "Every claim must carry its tier, and anything at
 
 ## Independence
 
-A critic that can write is not a critic. It will repair what it misdiagnosed and report success.
+A critic that can write is not a critic. It repairs what it misdiagnosed, then reports success, and the repair is now part of the evidence.
 
 Define every observation and judgment role with no write access. Hand critics the artifact as third-party output rather than as "your previous attempt", because error detection measurably improves when the work is not framed as the agent's own. And never route a verification back to the agent that produced the claim.

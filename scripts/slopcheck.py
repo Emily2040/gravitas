@@ -26,7 +26,11 @@ HEDGE = r"\b(genuinely|precisely|deliberately|notably|arguably|effectively|essen
 
 def strip_code(t):
     t = re.sub(r"```.*?```", " ", t, flags=re.S)
-    return re.sub(r"`[^`]*`", " ", t)
+    t = re.sub(r"`[^`]*`", " ", t)
+    # Markdown table rows are tabular data. A question in a cell is a column
+    # heading or an example, rather than the ask-and-answer-yourself pattern.
+    keep = [l for l in t.splitlines() if not l.lstrip().startswith("|")]
+    return chr(10).join(keep)
 
 
 CJK = re.compile(r"[぀-ヿ㐀-䶿一-鿿가-힯]")

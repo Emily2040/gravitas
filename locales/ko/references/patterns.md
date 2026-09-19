@@ -1,8 +1,10 @@
-> **언어 안내:** 이 참조 파일은 현재 영어만 제공됩니다. 핵심 `SKILL.md` 는 한국어로 번역되어 있으며, 이 문서는 필요할 때 읽는 상세 자료입니다. 번역은 진행 중입니다.
+> **언어 안내:** 이 참조 파일은 현재 영어만 제공됩니다. 핵심 `SKILL.md` 는 한국어로 번역되어 있습니다. 번역은 진행 중입니다.
 
 # Patterns
 
 Each pattern states the problem it solves, the structure, and the failure it prevents. Compose them freely.
+
+**These are domain-neutral.** A "finder" hunts one dimension of defect across a work list, and the work list is files, or statutes, or papers, or ledger lines. A "multi-modal sweep" searches by several angles at once, which in a codebase means by directory and by call graph and by rendered output, and in a literature review means by citation graph, by keyword, by author and by the studies that failed to replicate. Where an example below is drawn from software, the structure carries over unchanged.
 
 ---
 
@@ -20,7 +22,7 @@ Prevents correctness theatre, where several agents agree about code none of them
 
 Use it when you do not know how many issues exist. Bugs, security findings, dead code, edge cases.
 
-Spawn a round of finders. Dedupe against everything seen so far. If the round surfaced nothing new, increment a dry counter, otherwise reset it. Stop after two consecutive dry rounds.
+Spawn a round of finders. Then dedupe against everything seen so far, including findings from rounds that the verifiers later threw out. If the round surfaced nothing new, increment a dry counter, otherwise reset it. Stop after two consecutive dry rounds.
 
 Dedupe against everything seen. Not against what survived verification. Otherwise findings the verifiers already rejected resurface every round and the loop never converges.
 
@@ -32,7 +34,7 @@ Prevents fixed-count loops that stop mid-tail, reporting the easy findings and m
 
 One search angle cannot see everything, and which things it misses depends entirely on the angle, so run several at once.
 
-Run finders concurrently, each searching differently: by directory, by symbol, by call graph, by recent churn, by test coverage, by error string, by rendered output. Each is blind to what the others surface.
+Run finders concurrently. Each searches differently: by directory, by symbol, by call graph, by recent churn, by test coverage, by error string, by rendered output. Each is blind to what the others surface.
 
 The last one is the differentiator here. A visual sweep of every route finds defects that no text search can express a query for, because the defect is a rendering outcome rather than a string.
 

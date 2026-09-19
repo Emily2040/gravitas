@@ -2,7 +2,9 @@
 
 **English** · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · [한국어](./README.ko.md)
 
-An orchestration skill for [Google Antigravity](https://antigravity.google/). It runs work across parallel subagents, verifies claims against what the running software actually does rather than against more text, and holds written output to a standard that strips machine cadence.
+An orchestration skill for [Google Antigravity](https://antigravity.google/). It runs work across parallel subagents, ranks every claim by how it was established, refuses to accept a convenient proxy in place of the property that matters, and holds written output to a standard that strips machine cadence.
+
+**It is not a coding skill.** The verification discipline applies to law, mathematics, physics, medicine, statistics, history and ordinary factual questions as directly as it applies to software. What changes by field is which independent check is available. What does not change is that one usually is, and that skipping it is how careful-looking work turns out wrong.
 
 Built and tested against `agy` CLI 1.2.7 and Antigravity Hub 2.15.0.
 
@@ -53,7 +55,8 @@ Both copy `skill/` to `~/.gemini/config/skills/<name>/` and then validate it. Re
 skill/
 ├── SKILL.md                      doctrine, loaded when the skill triggers
 └── references/
-    ├── verification.md           observe-first, contract, state-exercise, target-diff
+    ├── evidence.md               what observation means in law, maths, physics, medicine, history
+    ├── verification.md           observe-first, contract, state-exercise, target-diff (software)
     ├── subagents.md              the two-step API, model tiers, roster, charters
     ├── iteration.md              convergent vs gradient loops, with the research
     ├── patterns.md               orchestration patterns and anti-patterns

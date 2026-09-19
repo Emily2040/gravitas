@@ -6,6 +6,16 @@ How to write a check that can actually fail, and why a screenshot is not verific
 
 This file exists because of a real failure. An agent built a Three.js scene, captured eight screenshots, wrote a `VERIFICATION.md` with eight gates, and reported `ALL TEST GATES PASSED SUCCESSFULLY`. The scene looked wrong to the user on first glance. Every finding below is drawn from that run.
 
+**The examples are software because that is where the failure was recorded. The rules are not.** A gate is any check with a stated failing condition, and the failures below have exact analogues everywhere:
+
+| Rule | Software | Law | Mathematics | Empirical claim |
+|---|---|---|---|---|
+| Gate must be able to fail | Hardcoded `PASS` in a template | "Citations verified" meaning they are formatted | "Checked the algebra" meaning it was reread | "Sources confirmed" meaning they exist |
+| Assert, do not collect | Console errors pushed to an unread array | Authority pulled and never read | Numeric check run and not compared | Primary source opened and not quoted |
+| Judge the artifact, not a proxy | Count meshes instead of viewing the render | Count citations instead of reading the holding | Verify each line instead of testing the result | Verify the paper exists instead of checking the number |
+
+Read the software specifics as worked examples of rules that apply to your field.
+
 ---
 
 ## A gate that cannot fail is not a gate
@@ -33,6 +43,7 @@ page.on('console', msg => { if (msg.type() === 'error') consoleErrors.push(msg.t
 2. **Prove the gate can fail before trusting it.** Break the thing on purpose, run the suite, watch it go red, put it back. A suite that has never failed has never been tested.
 3. The process exits non-zero when any gate fails. A suite that always exits 0 reports nothing.
 4. Anything captured is either asserted on or deleted. Collecting console errors into an array nobody reads is worse than not collecting them, because the code looks like it checks.
+5. **A check that crashes reports success.** Confirm the check actually ran before reading its output. An empty result and a broken script look identical when you are grepping for failures. Verify by exit status, or by a line count, or by a marker the check emits when it completes.
 
 ---
 
@@ -119,6 +130,7 @@ So: check your toolset before planning verification. If `capture_browser_screens
 
 ## Before reporting
 
+- The check verifiably ran. An empty result and a crashed script look identical.
 - Every gate has a stated failing condition.
 - At least one gate has been watched failing.
 - Console output is asserted on. Nothing is merely collected.

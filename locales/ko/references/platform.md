@@ -1,4 +1,4 @@
-> **언어 안내:** 이 참조 파일은 현재 영어만 제공됩니다. 핵심 `SKILL.md` 는 한국어로 번역되어 있으며, 이 문서는 필요할 때 읽는 상세 자료입니다. 번역은 진행 중입니다.
+> **언어 안내:** 이 참조 파일은 현재 영어만 제공됩니다. 핵심 `SKILL.md` 는 한국어로 번역되어 있습니다. 번역은 진행 중입니다.
 
 # Platform
 
@@ -20,7 +20,7 @@ Install to `~/.gemini/config/skills/<name>/` and nowhere else. Project-scoped cu
 
 An unparseable `SKILL.md` is skipped. The error goes to `~/.gemini/antigravity-cli/log/cli-*.log` as `skills.go:201] Failed to parse skill file ...` and reaches the user nowhere. The skill simply is not there.
 
-A UTF-8 BOM is enough to trigger it, and Windows PowerShell 5.1 `Set-Content` and `Out-File` add one by default.
+A UTF-8 BOM is enough to trigger it. Windows PowerShell 5.1 `Set-Content` and `Out-File` add one by default, so a perfectly valid skill can be rejected over a byte nobody can see in an editor.
 
 Validate after every edit. `scripts/check_skills.py` checks frontmatter parsing, `name` present and matching its directory, `description` present, BOM, dead relative links and a missing `SKILL.md`.
 
@@ -32,7 +32,7 @@ One thing that does work correctly: a broken skill does not break discovery for 
 
 A `PostInvocation` hook returning `{"terminationBehavior": "force_continue"}` drives the loop with no upper bound. Measured across three runs: 3, 8 and 12 continuations, where 12 was a self-imposed test limit rather than a platform one.
 
-The forced turns produce filler, because the task is already finished.
+The forced turns produce filler. The task is already done, so the model pads.
 
 If you build a hook that blocks termination while tests are red, bound it yourself with a hard pass ceiling. The defensive hook pattern of swallowing exceptions and emitting a default response turns into an infinite loop if that default includes `force_continue`.
 
@@ -47,7 +47,7 @@ Under `agy -p`:
 - A `PreToolUse` hook returning `{"decision": "deny"}` **does** block, even a command with an explicit grant.
 - `overwrite` from a hook response is applied, and announced to the agent as *"A pre-tool hook changed the arguments of this tool call before it ran."*
 
-Hooks can restrict and cannot permit in headless. Permission is evaluated against the post-`overwrite` arguments, so a hook cannot launder an unapproved command through an approved one.
+Hooks restrict. They cannot permit, at least not in headless. Permission is evaluated against the post-`overwrite` arguments, so a hook cannot launder an unapproved command through an approved one.
 
 Plan headless runs around explicit grants. Policy settings and hook approvals will not carry you.
 
@@ -55,7 +55,7 @@ Plan headless runs around explicit grants. Policy settings and hook approvals wi
 
 ## Permission grants accumulate and rarely re-match
 
-Grants are stored as literal command text, sometimes only the first token. `command(if)`, `command($lines)`, `command(&)`, and occasionally an entire multi-kilobyte script. A grant re-matches only on a byte-identical command, which almost never recurs, so the prompt returns and another dead grant is appended.
+Grants are stored as literal command text, sometimes only the first token, which produces entries like `command(if)`, `command($lines)` and `command(&)` alongside the occasional entire multi-kilobyte script saved verbatim as a single grant. A grant re-matches only on a byte-identical command, which almost never recurs, so the prompt returns and another dead grant is appended.
 
 `~/.gemini/config/config.json` reached 301 KB on one machine, 97.5% of it dead grants, with a single entry of 36,331 characters.
 

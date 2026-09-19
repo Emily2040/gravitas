@@ -1,4 +1,4 @@
-> **언어 안내:** 이 참조 파일은 현재 영어만 제공됩니다. 핵심 `SKILL.md` 는 한국어로 번역되어 있으며, 이 문서는 필요할 때 읽는 상세 자료입니다. 번역은 진행 중입니다.
+> **언어 안내:** 이 참조 파일은 현재 영어만 제공됩니다. 핵심 `SKILL.md` 는 한국어로 번역되어 있습니다. 번역은 진행 중입니다.
 
 # Subagents
 
@@ -33,7 +33,7 @@ A subagent must be declared before it can be dispatched. The runtime is explicit
 | `MODEL_TIER_PRO` | Judges, refuters, visual critics, final synthesis |
 | `MODEL_TIER_INHERIT` | Implementation, so work follows the model the user selected |
 
-Paying PRO rates for file triage is waste. Running a visual critic on FLASH_LITE is false economy. `INHERIT` is the correct default for anything that writes code, because silently downgrading the user's chosen model is a decision they did not make.
+Paying PRO rates for file triage is waste. Running a visual critic on FLASH_LITE is false economy, since the whole point of that role is the judgement you just economised away. `INHERIT` is the correct default for anything that writes code, because silently downgrading the user's chosen model is a decision they did not make.
 
 ---
 
@@ -62,7 +62,7 @@ A menu, not a mandate. Define only what a task needs. The two columns that matte
 
 Two rules hold this together. Only `implementer` writes, which is what makes every observation and judgment role worth trusting. And `INHERIT` is the implementation default.
 
-`scout → implement → verify` is the smallest useful composition and covers most single-defect work.
+`scout → implement → verify` is the smallest useful composition. It covers most single-defect work.
 
 ---
 
@@ -82,6 +82,6 @@ Name the evidence requirement. "Every claim must carry its tier, and anything at
 
 ## Independence
 
-A critic that can write is not a critic. It will repair what it misdiagnosed and report success.
+A critic that can write is not a critic. It repairs what it misdiagnosed, then reports success, and the repair is now part of the evidence.
 
 Define every observation and judgment role with no write access. Hand critics the artifact as third-party output rather than as "your previous attempt", because error detection measurably improves when the work is not framed as the agent's own. And never route a verification back to the agent that produced the claim.
