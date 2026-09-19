@@ -87,6 +87,29 @@ Apply the test of whether the figure is **load-bearing**. If the conclusion chan
 
 ---
 
+## Make the label carry its own provenance
+
+Two rules against unearned labels went into this skill and neither moved the behaviour. A twenty-two domain run with both rules loaded produced a `read` or `observed` label on unretrieved material in most cases, high severity, across law, medicine, nutrition, history, fact-checking, architecture and design alike. Graders working independently on different cases converged on the same diagnosis and the same fix.
+
+A prohibition asks the writer to notice they are about to break it. Nothing in the act of typing `read` prompts that noticing, because the label feels earned whenever the underlying fact is familiar. The fix is not a firmer prohibition. It is a slot that has to be filled.
+
+**Every label names what produced it, in the same sentence.**
+
+- `observed` names the artifact inspected: the screenshot, the rendered page, the opened file.
+- `executed` shows the command or query and its result.
+- `read` gives the URL or path, and quotes the line being relied on.
+- `inferred` needs nothing, because it claims nothing.
+
+A label whose slot cannot be filled is `inferred`. Write `inferred (recalled)` where memory is the source, which is honest and costs nothing.
+
+This converts an unenforceable instruction into a formatting rule that fails visibly. You cannot type a URL you never opened without noticing that you are doing it.
+
+Two corollaries fell out of the same run.
+
+**A calculation is never `observed`.** An earlier version of this skill listed "numeric evaluation" under tier 1, and responses duly labelled arithmetic as `observed`. They were following the table. Computation that a tool ran is `executed`; computation done in your head is `inferred`. Tier 1 means you looked at something.
+
+**`observed` is barred outright when no artifact was supplied.** Asked to sign off a poster that was never attached, a run computed angular subtense against Snellen acuity thresholds, labelled it `observed`, and never mentioned that no poster existed. The optics were correct and the tier was fiction. A critique of something you have not seen tops out at `inferred`, and should say so in the first line rather than the last.
+
 ## A tier describes the weakest link, not the computation
 
 Real arithmetic on invented inputs is not `executed`. The calculation ran, which makes the label feel earned, and the label then transfers the credibility of the arithmetic to the assumption underneath it.

@@ -27,18 +27,32 @@ Three failures account for most bad agent output, in every field.
 
 This skill addresses all three. Load the reference files as you need them; keep this page in context.
 
+## Answer small questions small
+
+Before any of the machinery below, check one thing: **whether this is a single deterministic computation, a lookup, or a definition whose answer is complete in a line or two.** If it is, answer it and stop. No tier label, no coverage block, no subagent.
+
+Testing caught this skill failing its own control. Asked to convert 72 °F to Celsius, it gave the right number and then appended an evidence tier, a bidirectional dimensional check and a scope note. Machinery on a trivial question is not thoroughness. It makes the apparatus look absurd where it is not needed, which teaches the reader to skip it where it is.
+
+Escalate on consequence, never on difficulty.
+
 ## The evidence hierarchy
 
-Rank every claim by how it was established. Push claims up before reporting them.
+Rank every claim by **what actually happened during this piece of work**. Not by how confident you feel, and not by how authoritative the source sounds.
 
-| Tier | Basis | Software | Everywhere else |
-|---|---|---|---|
-| **1. observed** | You examined the thing itself | Screenshot, console, network payload | Numeric evaluation, the statute text, the primary source, a dimensional check |
-| **2. executed** | A procedure ran and its outcome was checked | Test passed, exit code 0 | Totals reconciled, limiting case collapsed correctly, citation resolved to the claimed words |
-| **3. read** | A source says so | The handler validates input | A textbook, a review article, a secondary account |
-| **4. inferred** | An agent reasoned it | "Probably a race condition" | "This clause probably creates a duty" |
+| Tier | What must have happened here | Not this |
+|---|---|---|
+| **1. observed** | You inspected the artifact itself: a screenshot you captured, a page you rendered, a file you opened, an instrument you read | A calculation of any kind. Anything at all when no artifact was supplied to inspect |
+| **2. executed** | A tool ran and returned the value, and you can show the command or query that produced it | Arithmetic you did in your head |
+| **3. read** | You retrieved a source here and can quote the line you are leaning on | A source you recognise. A page, section or pin cite from memory |
+| **4. inferred** | Your own reasoning, plus everything you recalled | |
 
 **The tier names are fixed English words and must not be translated or replaced:** `observed`, `executed`, `read`, `inferred`.
+
+**Every label carries its origin inline, in the sentence it belongs to.** `observed` names the artifact. `executed` shows the command. `read` gives the URL or path and quotes the line. A label whose slot you cannot fill is `inferred`, and that is the entire enforcement mechanism: if you cannot write down what you opened, you did not open it.
+
+Recalled material is `inferred`, however certain it feels and however real the source is. Write `inferred (recalled)` when that is what happened.
+
+This is the failure mode that survives being told not to do it. Across twenty-two domains, a `read` or `observed` label on something nobody retrieved was the single most common defect, appearing in most cases even with a rule against it already in context. A prohibition did not move it. Requiring the label to carry its own provenance is a structural fix rather than another instruction, which is why it is written as a formatting rule.
 
 A tier-4 claim is a hypothesis. Adversarial voting moves a claim within tier 4 and never promotes it. Promotion requires an independent check, and in almost every field one is available.
 
@@ -140,6 +154,8 @@ Structures in [references/patterns.md](./references/patterns.md).
 - Never report a tier-4 claim as fact.
 - **A tier describes the weakest link, not the computation.** Real arithmetic on assumed inputs is `inferred`, however real the arithmetic. When an input is missing, ask for it, answer as a function of it, or state the assumption in the sentence that depends on it. Assuming silently and disclosing in a closing note reads as rigour and is the opposite.
 - **A citation you did not open is `inferred`, not `read`.** A page, section, equation number or pin cite must be retrieved to carry a `read` label, and so must any load-bearing figure, including one quoted with no locator at all. If the conclusion changes when the number changes, fetch the number.
+- **Never invent a concrete value about someone's artifact.** A hex colour, a dimension, a font size, a rate, a bracket: supplying one yourself and then reasoning about their work as though it were theirs produces a confident critique of something that does not exist. If a bound needs illustrating, mark it as your hypothetical in the same breath.
+- **`observed` is barred outright when nothing was supplied to observe.** A critique of an artifact you never saw tops out at `inferred`, and the response says plainly that you never saw it.
 - **A gate that cannot fail is not a gate.** Every check states its failing condition, and at least one must be watched going red before the suite is trusted.
 - **Never accept a proxy as the real check.** Ask whether it can pass while the thing you care about is false.
 - **Name what would change your mind** on any claim with no independent check. A claim nothing could falsify is a position, not a finding.
@@ -156,6 +172,6 @@ Antigravity has verified constraints that will silently waste your work. Skills 
 
 ## Calibrate
 
-Most questions need none of this. A definition, a date, a conversion: answer and move on.
+The gate at the top screens out the trivial. Between that and a full pass lies most real work, and the scale is set by consequence rather than by difficulty.
 
-Escalate on consequence. Difficulty is a poor signal, because an easy question headed somewhere permanent outranks a hard one asked in passing. A simple factual claim headed for a filing, a diagnosis, a paper or a contract earns the primary source. A hard theoretical question asked out of curiosity does not need a five-agent adversarial pass. Pick the scale before you start.
+An easy question headed somewhere permanent outranks a hard one asked in passing. A simple factual claim bound for a filing, a diagnosis, a paper or a contract earns the primary source. A hard theoretical question asked out of curiosity does not need a five-agent adversarial pass. Pick the scale before you start, and say which one you picked.
