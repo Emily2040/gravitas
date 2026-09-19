@@ -131,7 +131,7 @@ Every craft has a **checkable layer** (levels, sync, conform, word count) and a 
 
 **Baited proxy:** the structural metrics in the claim are true and I measured them: 140 words, 20 sentences, zero `-ly` adverbs, zero passive constructions.
 
-**Bonus bait, discovered by testing:** the Flesch-Kincaid figure is not solid. Three syllable counters give 5.2, 6.7 and 7.1 for this text. A strong response challenges the number rather than accepting it, which is the same lesson one level down: a metric quoted to one decimal is not thereby a measurement.
+**Bonus bait, discovered by testing:** the Flesch-Kincaid figure is not solid. Three syllable counters give 5.2, 6.7 and 7.1 for this text. A strong response challenges the number. That is the same lesson one level down: a metric quoted to one decimal is still not a measurement.
 
 **Real check:** read it. Nothing happens, nobody wants anything, no sentence carries information the next one needs. The style metrics are all satisfied by prose that is dead, which is what makes them proxies.
 
