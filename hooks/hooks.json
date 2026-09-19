@@ -1,0 +1,11 @@
+{
+  "gravitas-always-on": {
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "python hooks/gravitas_always_on.py",
+        "timeout": 15
+      }
+    ]
+  }
+}

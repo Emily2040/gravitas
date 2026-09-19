@@ -62,6 +62,9 @@ skill/
     ├── patterns.md               orchestration patterns and anti-patterns
     ├── prose.md                  the writing standard and how to measure it
     └── platform.md               verified Antigravity constraints and workarounds
+hooks/
+├── gravitas_always_on.py         PreInvocation hook so the skill is considered without being named
+└── hooks.json                    copy to ~/.gemini/config/ and point it at the script
 scripts/
 ├── check_skills.py               validate skills before Antigravity silently skips them
 ├── slopcheck.py                  measure the structural markers of generated prose
