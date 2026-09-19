@@ -27,9 +27,11 @@ HEDGE = r"\b(genuinely|precisely|deliberately|notably|arguably|effectively|essen
 def strip_code(t):
     t = re.sub(r"```.*?```", " ", t, flags=re.S)
     t = re.sub(r"`[^`]*`", " ", t)
-    # Markdown table rows are tabular data. A question in a cell is a column
-    # heading or an example, rather than the ask-and-answer-yourself pattern.
-    keep = [l for l in t.splitlines() if not l.lstrip().startswith("|")]
+    # Table rows and blockquotes are tabular or quoted material. A question
+    # inside either is data or someone else's words, so it says nothing about
+    # this text's own cadence.
+    keep = [l for l in t.splitlines()
+            if not l.lstrip().startswith("|") and not l.lstrip().startswith(">")]
     return chr(10).join(keep)
 
 
