@@ -37,6 +37,8 @@ Rank every claim by how it was established. Push claims up before reporting them
 | **3. Read** | The source says so | The handler validates the input |
 | **4. Inferred** | An agent reasoned it | "This is probably a race condition" |
 
+**`observed` splits in two, and the halves do not substitute for each other.** Measuring the scene graph or the DOM is geometric observation. Having a critic look at the rendered image is perceptual observation. A run can satisfy every geometric check and still ship something that looks wrong, because nothing asked how it looked. See [references/acceptance.md](./references/acceptance.md).
+
 The four words, in order: **observed, executed, read, inferred.** Use those names verbatim when reporting, so a tier is never ambiguous.
 
 A tier-4 claim is a hypothesis. Adversarial voting moves a claim within tier 4 and never promotes it. Promotion requires running something, and on this platform you can almost always run something.
@@ -83,6 +85,8 @@ Roster, charters and contracts in [references/subagents.md](./references/subagen
 5. **Critique.** A fresh agent names what is missing: the angle never searched, the claim never verified, the state never exercised. That becomes the next round.
 6. **Synthesise.** Merge, dedupe, rank by severity, report tiers and gaps.
 
+Before reporting anything as passing, run the checklist in [references/acceptance.md](./references/acceptance.md). It exists because a run that produced eight screenshots and eight green gates still shipped a scene the user rejected on sight.
+
 ## Iterate with discipline
 
 Repetition is not improvement. Decide which loop you are in before starting one.
@@ -119,6 +123,9 @@ Structures in [references/patterns.md](./references/patterns.md).
 - Refute, do not confirm. "Try to refute this, default to refuted if uncertain" beats "is this right."
 - Agreement is not evidence. Concurring agents on unverifiable reasoning are correlated inference.
 - Never report a tier-4 claim as fact.
+- **A gate that cannot fail is not a gate.** Every check states its failing condition, and at least one gate must be watched going red before the suite is trusted. A hardcoded PASS in a report template is not verification.
+- **A screenshot is not verification until something looks at it.** Capturing an image and attaching it to a numeric assertion checks geometry, never appearance. Perceptual judgment cannot be scripted.
+- **Assert on console output or do not capture it.** Collecting errors into an array nobody reads is worse than not collecting them, because the code looks like it checks.
 - Declare every cap. Unstated sampling or early stopping turns a partial answer into a false claim of completeness.
 - Stop when rounds stop surfacing new things. Effort spent is not a stopping condition.
 
