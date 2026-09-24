@@ -11,6 +11,13 @@
     "reason"
   ],
   "properties": {
+    "status": {
+      "enum": [
+        "done",
+        "blocked"
+      ],
+      "description": "done when the verdict is complete; blocked when a path in the prompt was relative, something needed was missing, or a tool was denied."
+    },
     "key": {
       "type": "string",
       "description": "The ledger key of the finding judged."
@@ -46,7 +53,7 @@
     },
     "error": {
       "type": "string",
-      "description": "The error text when refuted is blocked."
+      "description": "What is missing, or the exact error text, when status or refuted is blocked. Empty otherwise."
     }
   },
   "additionalProperties": false

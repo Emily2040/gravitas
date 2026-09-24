@@ -51,7 +51,7 @@ List in `not_searched` every part of the territory you did not reach, so the gap
 Return one JSON object:
 
 ```json
-{"status": "done", "answers": [{"question": "...", "answer": "...", "tier": "read", "source": "src/config.ts:41, \\"timeoutMs: 30000\\""}], "unanswered": ["..."], "error": ""}
+{"status": "done", "answers": [{"question": "...", "answer": "...", "tier": "read", "source": "src/config.ts:41, \\"const timeoutMs = 30000;\\""}], "unanswered": ["..."], "error": ""}
 ```
 
 A question the sources do not answer goes in `unanswered`. Do not answer it from memory.""",
@@ -66,7 +66,7 @@ A question the sources do not answer goes in `unanswered`. Do not answer it from
 Return one JSON object with exactly these fields. The example is the whole schema; there is no schema file to look for.
 
 ```json
-{"status": "done", "findings": [{"claim": "logout() does not revoke the refresh token", "location": "src/auth/session.ts:97", "tier": "read", "source": "src/auth/session.ts:97, \\"revokeAccess(token)\\"", "severity": "high", "dimension": "session handling", "falsifier": "a revocation call for the refresh token elsewhere in the logout path"}], "covered": ["src/auth/"], "not_covered": ["src/legacy/"], "error": ""}
+{"status": "done", "findings": [{"claim": "logout() does not revoke the refresh token", "location": "src/auth/session.ts:97", "tier": "read", "source": "src/auth/session.ts:97, \\"await revokeAccess(session.accessToken);\\"", "severity": "high", "dimension": "session handling", "falsifier": "a revocation call for the refresh token elsewhere in the logout path"}], "covered": ["src/auth/"], "not_covered": ["src/legacy/"], "error": ""}
 ```
 
 Each `claim` is one falsifiable sentence. `falsifier` says what observation would prove it wrong. List what you did not cover in `not_covered`.""",
@@ -100,10 +100,10 @@ Look for the evidence that would refute it, through the lens the prompt names if
 Return one JSON object with exactly these fields. The example is the whole schema; there is no schema file to look for.
 
 ```json
-{"key": "<the finding key from the prompt>", "refuted": "yes", "lens": "correctness", "tier": "read", "source": "...", "reason": "one to three sentences with the evidence", "error": ""}
+{"status": "done", "key": "<the finding key from the prompt>", "refuted": "yes", "lens": "correctness", "tier": "read", "source": "...", "reason": "one to three sentences with the evidence", "error": ""}
 ```
 
-Use `"refuted": "blocked"` with the error text when a tool was denied or the evidence was unreachable.""",
+Use `"status": "blocked"` and `"refuted": "blocked"` with the error text in `error` when a tool was denied or the evidence was unreachable.""",
     ),
     dict(
         name="gravitas-visual-critic",

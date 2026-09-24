@@ -23,7 +23,7 @@ The suite contained this line:
 | **T12-R1** | Hero Chocolate Identity Persistence | **PASS** | Exactly 1 mesh; UUID ${uuids[0]} persists. |
 ```
 
-`PASS` is a string literal in a template. The measured value is interpolated and the verdict is typed. There is no comparison, no threshold and no branch. The suite had 9 gates, 9 hardcoded passes and no conditional logic, and its only `process.exit(1)` was in a crash handler.
+`PASS` is a string literal in a template. The measured value is interpolated and the verdict is typed. There is no comparison, no threshold and no branch. The suite had 8 gates, 8 hardcoded passes and no conditional logic, and its only `process.exit(1)` was in a crash handler.
 
 It also collected console errors and never read them:
 

@@ -43,6 +43,7 @@ python scripts/ledger.py init  run.ledger.json --scale full
 python scripts/ledger.py add   run.ledger.json finder-security.json --round 1 --by gravitas-finder
 python scripts/ledger.py verdict run.ledger.json <key> --by gravitas-refuter --refuted no \
     --tier executed --source "pytest tests/test_session.py::test_logout -> 1 failed"
+python scripts/ledger.py verdicts run.ledger.json refuter-verdicts.json --by gravitas-refuter
 python scripts/ledger.py child run.ledger.json --id <conversation-id> --agent gravitas-finder --status denied \
     --note "read_file denied on src/auth"
 python scripts/ledger.py close-round run.ledger.json --round 1
@@ -51,12 +52,12 @@ python scripts/ledger.py report run.ledger.json
 
 What it enforces:
 
-- A record whose tier is `observed`, `executed` or `read` and whose `source` is empty is demoted to `inferred`, and a `read` record whose source quotes nothing is demoted as well. The provenance rule in `01-evidence.md` becomes a check the ledger runs on every record.
+- A record whose tier is `observed`, `executed` or `read` and whose `source` is empty is demoted to `inferred`, and so is a `read` record whose source quotes no content: it needs a quotation of three words or twelve characters, and a quoted path is not one. Records are checked against the finding and verdict schemas, and a malformed one is rejected with the reason. The provenance rule in `01-evidence.md` becomes a check the ledger runs on every record.
 - New records are deduplicated against every record ever added, including ones the refuters rejected. Deduplicating only against survivors lets rejected findings return every round, and the loop never converges.
-- Two records at the same location merge automatically when their claims share at least 0.25 of their words, and are flagged as possible duplicates from 0.10. On one real audit, true duplicates scored 0.13 to 0.69 and distinct defects on the same line 0.02 to 0.15; the automatic merge took 22 records to 15 with no wrong merge. Decide the flagged ones with `ledger.py merge KEEP DUP`, which moves the votes across.
-- A finding survives only with a majority of non-blocked votes that did not refute it, and the number of votes required follows the scale: 1 at standard, 3 at full and exhaustive.
+- Two records at the same location merge automatically when their claims share at least 0.25 of their words, and are flagged as possible duplicates from 0.10. Records in the same file within 5 lines of each other merge only when their wording is near-identical (0.8), and are otherwise flagged, because distinct defects a few lines apart are often described alike. On one real audit, true duplicates scored 0.13 to 0.69 and distinct defects on the same line 0.02 to 0.15; the automatic merge took 22 records to 15 with no wrong merge. Decide the flagged ones with `ledger.py merge KEEP DUP`, which moves the votes across.
+- A finding survives only with a majority of counted votes that did not refute it, and the number required follows the scale: 1 at standard, 3 at full and exhaustive. Votes are held to the same provenance rule as findings; a demoted vote or one with status `blocked` is recorded but not counted. Quick scale takes no votes, so its report lists findings as unverified.
 - `close-round` counts the fresh findings, advances the dry counter, and prints `CONTINUE` or `STOP` with the reason: dry rounds reached, or the round ceiling reached.
-- `report` lists survivors by severity with tier and source, then refuted, pending and demoted records, then every child whose status is not `done`, then the caps.
+- `report` lists survivors by severity with tier and source, then refuted, pending and demoted records, then every child whose status is not `done` and every finder that returned `blocked`, then the caps.
 
 The ledger file also survives a lost final turn, so keep it where the user can find it. If Python is not available, keep the same fields in a table in the plan artifact, apply the same rules by hand, and say in the report that the ledger was kept manually.
 

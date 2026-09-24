@@ -76,7 +76,7 @@ inferred (recalled): Miranda warnings attach to custodial interrogation, not to 
 
 搜索摘要同样不是页面。`search_web` 返回的是一段带编号引用的生成摘要，而 `read` 标签需要用 `read_url_content` 打开页面本身。2026 年 9 月 24 日测试这个版本时，一个代理做了一次搜索，得到的摘要说 Damodaran 的数据显示 “an annualized nominal return of approximately 9.94%”，于是写下 `read (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/data.html, "annualized nominal return of approximately 9.94% for 1928-2024")`。它从未打开过那个页面，所谓“引文”是对摘要的转述。只在搜索摘要里见过的数字属于 `inferred`；如果你依赖的正是摘要本身，就写 `read (search summary for "<query>")`。
 
-报告之前，用机器核查标签。`scripts/provenance_check.py <answer file> --conversation <id>` 会把每个 `read`、`observed` 和 `executed` 标签与会话的转录记录比对：打开过的 URL、查看过的文件、运行过的命令，以及引文是否出现在获取到的内容中。在本版本测试产生的答案上，它让一份来源都打开过的法律答案的 6 个标签全部通过，并判定一份金融答案中只来自搜索的引用、以及一份历史答案中三个指向从未打开的页面或没有任何定位信息的 `read` 标签不合格。
+报告之前，用机器核查标签。`scripts/provenance_check.py <answer file> --conversation <id>` 会把每个 `read`、`observed` 和 `executed` 标签与会话的转录记录比对。每次工具调用都与它自己的结果配对，所以获取失败的页面或被拒绝的命令算作从未打开、从未运行。`read` 标签中的引文必须出现在该标签所引用的来源里，而不只是出现在会话的某处；引用比任何打开过的页面更深一层的页面不合格，引用父页面给出警告，命令除引号和空格外必须与实际运行的一致。在本版本测试产生的答案上，它让一份来源都打开过的法律答案的 6 个标签全部通过，并判定一份金融答案中只来自搜索的引用、以及一份历史答案中三个指向从未打开的页面或没有任何定位信息的 `read` 标签不合格。
 
 ## 没有提供，就没有观察
 

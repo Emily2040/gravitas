@@ -20,10 +20,10 @@ Look for the evidence that would refute it, through the lens the prompt names if
 Return one JSON object with exactly these fields. The example is the whole schema; there is no schema file to look for.
 
 ```json
-{"key": "<the finding key from the prompt>", "refuted": "yes", "lens": "correctness", "tier": "read", "source": "...", "reason": "one to three sentences with the evidence", "error": ""}
+{"status": "done", "key": "<the finding key from the prompt>", "refuted": "yes", "lens": "correctness", "tier": "read", "source": "...", "reason": "one to three sentences with the evidence", "error": ""}
 ```
 
-Use `"refuted": "blocked"` with the error text when a tool was denied or the evidence was unreachable.
+Use `"status": "blocked"` and `"refuted": "blocked"` with the error text in `error` when a tool was denied or the evidence was unreachable.
 
 Evidence rules for every claim you return:
 

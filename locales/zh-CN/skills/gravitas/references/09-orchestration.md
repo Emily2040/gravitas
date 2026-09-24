@@ -43,6 +43,7 @@ python scripts/ledger.py init  run.ledger.json --scale full
 python scripts/ledger.py add   run.ledger.json finder-security.json --round 1 --by gravitas-finder
 python scripts/ledger.py verdict run.ledger.json <key> --by gravitas-refuter --refuted no \
     --tier executed --source "pytest tests/test_session.py::test_logout -> 1 failed"
+python scripts/ledger.py verdicts run.ledger.json refuter-verdicts.json --by gravitas-refuter
 python scripts/ledger.py child run.ledger.json --id <conversation-id> --agent gravitas-finder --status denied \
     --note "read_file denied on src/auth"
 python scripts/ledger.py close-round run.ledger.json --round 1
@@ -51,12 +52,12 @@ python scripts/ledger.py report run.ledger.json
 
 它强制执行的规则：
 
-- 层级为 `observed`、`executed` 或 `read` 而 `source` 为空的记录会被降为 `inferred`，`source` 中没有任何引文的 `read` 记录也会被降级。`01-evidence.md` 中的来源规则，由此成为台账对每条记录都执行的检查。
+- 层级为 `observed`、`executed` 或 `read` 而 `source` 为空的记录会被降为 `inferred`，`source` 中没有引用任何内容的 `read` 记录也会被降级：它需要一段至少三个词或十二个字符的引文，而加了引号的路径不算引文。记录会按发现和裁决的 schema 检查，格式错误的记录会被拒绝并给出原因。`01-evidence.md` 中的来源规则，由此成为台账对每条记录都执行的检查。
 - 新记录要与曾经加入过的每一条记录去重，包括被反驳者否决的记录。只与幸存记录去重，会让被否决的发现每一轮都卷土重来，循环永远无法收敛。
-- 同一位置的两条记录，当它们的结论有至少 0.25 的词重叠时自动合并，从 0.10 起标记为可能重复。在一次真实审计中，真正的重复得分为 0.13 到 0.69，同一行上的不同缺陷为 0.02 到 0.15；自动合并把 22 条记录减为 15 条，没有一次合并错误。被标记的记录用 `ledger.py merge KEEP DUP` 决定，它会把票数一并转移。
-- 一个发现只有在未被拒绝的票中获得多数“未反驳”时才幸存，所需票数随规模而定：标准规模 1 票，完整和穷尽规模 3 票。
+- 同一位置的两条记录，当它们的结论有至少 0.25 的词重叠时自动合并，从 0.10 起标记为可能重复。同一文件中相距 5 行以内的记录，只有措辞几乎相同（0.8）时才自动合并，否则只做标记，因为相隔几行的不同缺陷往往描述得很像。在一次真实审计中，真正的重复得分为 0.13 到 0.69，同一行上的不同缺陷为 0.02 到 0.15；自动合并把 22 条记录减为 15 条，没有一次合并错误。被标记的记录用 `ledger.py merge KEEP DUP` 决定，它会把票数一并转移。
+- 一个发现只有在计入的票中获得多数“未反驳”时才幸存，所需票数随规模而定：标准规模 1 票，完整和穷尽规模 3 票。票与发现遵守同样的来源规则；被降级的票或状态为 `blocked` 的票会被记录，但不计入。快速规模不投票，所以其报告把发现列为未验证。
 - `close-round` 统计新发现，推进“干涸”计数，并打印 `CONTINUE` 或 `STOP` 及原因：达到干涸轮数，或达到轮数上限。
-- `report` 按严重程度列出幸存的发现及其层级和来源，然后是被反驳、待定和被降级的记录，然后是每一个状态不是 `done` 的子代理，最后是各项上限。
+- `report` 按严重程度列出幸存的发现及其层级和来源，然后是被反驳、待定和被降级的记录，然后是每一个状态不是 `done` 的子代理和每一个返回 `blocked` 的查找者，最后是各项上限。
 
 台账文件在最后一轮丢失时也能保留下来，所以把它放在用户找得到的地方。如果没有 Python，就在计划产物中用表格记录同样的字段，手工执行同样的规则，并在报告中说明台账是手工维护的。
 

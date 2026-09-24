@@ -43,6 +43,7 @@ python scripts/ledger.py init  run.ledger.json --scale full
 python scripts/ledger.py add   run.ledger.json finder-security.json --round 1 --by gravitas-finder
 python scripts/ledger.py verdict run.ledger.json <key> --by gravitas-refuter --refuted no \
     --tier executed --source "pytest tests/test_session.py::test_logout -> 1 failed"
+python scripts/ledger.py verdicts run.ledger.json refuter-verdicts.json --by gravitas-refuter
 python scripts/ledger.py child run.ledger.json --id <conversation-id> --agent gravitas-finder --status denied \
     --note "read_file denied on src/auth"
 python scripts/ledger.py close-round run.ledger.json --round 1
@@ -51,12 +52,12 @@ python scripts/ledger.py report run.ledger.json
 
 台帳が強制すること：
 
-- 層が `observed`、`executed`、`read` で `source` が空のレコードは `inferred` に格下げされ、何も引用していない `source` を持つ `read` レコードも格下げされます。`01-evidence.md` の出所の規則が、台帳がすべてのレコードに対して行う検査になります。
+- 層が `observed`、`executed`、`read` で `source` が空のレコードは `inferred` に格下げされ、内容を何も引用していない `source` を持つ `read` レコードも格下げされます。三語以上か十二文字以上の引用が必要で、引用符で囲んだパスは引用に数えません。レコードは発見と判定のスキーマで検査され、形の崩れたものは理由を添えて退けられます。`01-evidence.md` の出所の規則が、台帳がすべてのレコードに対して行う検査になります。
 - 新しいレコードは、反証役が退けたものも含め、これまでに加えたすべてのレコードと重複を照合します。生き残ったものとだけ照合すると、退けた発見が毎ラウンド戻ってきて、ループは収束しません。
-- 同じ場所にある二つのレコードは、主張の語の少なくとも 0.25 が重なれば自動的に統合され、0.10 以上で重複の可能性として示されます。ある実際の監査では、本当の重複は 0.13〜0.69、同じ行の別の欠陥は 0.02〜0.15 で、自動統合は 22 件のレコードを 15 件にし、誤った統合はありませんでした。示されたものは `ledger.py merge KEEP DUP` で決め、票も移します。
-- 発見が生き残るのは、拒否されなかった票のうち反証しなかった票が過半数のときだけで、必要な票数は規模で決まります。標準は 1、フルと網羅は 3 です。
+- 同じ場所にある二つのレコードは、主張の語の少なくとも 0.25 が重なれば自動的に統合され、0.10 以上で重複の可能性として示されます。同じファイルで 5 行以内にあるレコードは、言い回しがほぼ同じ（0.8）ときだけ自動的に統合され、それ以外は示されるだけです。数行離れた別の欠陥は、よく似た言葉で書かれがちだからです。ある実際の監査では、本当の重複は 0.13〜0.69、同じ行の別の欠陥は 0.02〜0.15 で、自動統合は 22 件のレコードを 15 件にし、誤った統合はありませんでした。示されたものは `ledger.py merge KEEP DUP` で決め、票も移します。
+- 発見が生き残るのは、数えられた票のうち反証しなかった票が過半数のときだけで、必要な票数は規模で決まります。標準は 1、フルと網羅は 3 です。票にも発見と同じ出所の規則が適用され、格下げされた票や状態が `blocked` の票は記録されますが数えられません。クイックの規模では票を取らないので、報告は発見を未検証として挙げます。
 - `close-round` は新しい発見を数え、枯渇のカウンターを進め、`CONTINUE` か `STOP` を理由とともに出します。枯渇ラウンド数に達したか、ラウンドの上限に達したかです。
-- `report` は生き残った発見を深刻度順に層と出所を添えて並べ、次に反証済み、保留、格下げのレコード、次に状態が `done` でないすべての子、最後に上限を挙げます。
+- `report` は生き残った発見を深刻度順に層と出所を添えて並べ、次に反証済み、保留、格下げのレコード、次に状態が `done` でないすべての子と `blocked` を返したすべての探索役、最後に上限を挙げます。
 
 台帳ファイルは最後のターンが失われても残るので、ユーザーが見つけられる場所に置きます。Python がなければ、同じ項目を計画の成果物の表に保ち、同じ規則を手で適用し、台帳を手作業で付けたことを報告に書きます。
 

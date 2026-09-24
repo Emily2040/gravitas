@@ -76,7 +76,7 @@ inferred (recalled): Miranda warnings attach to custodial interrogation, not to 
 
 検索の要約もページではありません。`search_web` が返すのは番号付きの引用を伴う生成された要約であり、`read` ラベルには `read_url_content` でページそのものを開くことが必要です。2026 年 9 月 24 日、このバージョンのテスト中に、あるエージェントは一度検索し、Damodaran のデータが "an annualized nominal return of approximately 9.94%" を示すという要約を得て、`read (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/data.html, "annualized nominal return of approximately 9.94% for 1928-2024")` と書きました。そのページは一度も開いておらず、「引用」は要約の言い換えでした。検索の要約でしか見ていない数字は `inferred` です。要約そのものに依拠しているなら `read (search summary for "<query>")` と書きます。
 
-報告の前に、ラベルを機械的に確かめます。`scripts/provenance_check.py <answer file> --conversation <id>` は、すべての `read`、`observed`、`executed` ラベルを会話のトランスクリプトと突き合わせます。開いた URL、見たファイル、走らせたコマンド、そして引用が取得した内容の中にあるかどうかです。このリリースのテストで得た回答に対して、出典をすべて開いていた法律の回答では 6 つのラベルすべてを通し、金融の回答の検索だけに基づく引用と、歴史の回答で一度も開いていないページを指すか所在を持たない三つの `read` ラベルを不合格にしました。
+報告の前に、ラベルを機械的に確かめます。`scripts/provenance_check.py <answer file> --conversation <id>` は、すべての `read`、`observed`、`executed` ラベルを会話のトランスクリプトと突き合わせます。ツールの呼び出しはそれぞれ自分の結果と対にされるので、取得に失敗したページや拒否されたコマンドは、一度も開いていない、一度も走っていないものとして扱われます。`read` ラベルの引用は、会話のどこかではなく、そのラベルが挙げる出典の中になければなりません。開いたどのページより深いページは不合格、親ページは警告で、コマンドは引用符と空白を除いて実際に走ったものと一致しなければなりません。このリリースのテストで得た回答に対して、出典をすべて開いていた法律の回答では 6 つのラベルすべてを通し、金融の回答の検索だけに基づく引用と、歴史の回答で一度も開いていないページを指すか所在を持たない三つの `read` ラベルを不合格にしました。
 
 ## 提供されていなければ、観察もない
 

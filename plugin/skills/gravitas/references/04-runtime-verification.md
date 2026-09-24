@@ -21,7 +21,7 @@ A recorded run in the desktop app had no browser tools at all. Its whole toolset
 
 This is the default for anything with a rendered or running surface. Text review answers whether the code looks correct. The question that matters is whether the thing does the right thing, and that can be looked at directly.
 
-1. Get it running: `restart_dev_server` then `open_browser_url`, or start the server with `run_command` and open it from the harness.
+1. Get it running: start the server with `run_command`, or with `restart_dev_server` where the surface offers it (it is in the desktop binary but in no recorded tool list), then open it with `open_browser_url` or from the harness.
 2. Capture the baseline before the change: a screenshot and the console log.
 3. Make the change.
 4. Capture the same surfaces, at the same viewport, after.

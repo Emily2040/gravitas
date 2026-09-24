@@ -63,6 +63,12 @@ AGENT_KEYS = {
     "enabledTools", "disabledTools",
 }
 AGENT_MODELS = {"inherit", "flash", "pro"}
+# Tools that change files. A verifier holding one can edit the work it judges.
+WRITE_TOOLS = {"write_to_file", "replace_file_content", "multi_replace_file_content"}
+COMMAND_TOOLS = {"run_command"}   # critics may not hold these either; gravitas-checker may
+# Name fragments that mark an agent as a verifier, which must hold no WRITE_TOOLS.
+VERIFIER_ROLES = ("critic", "refuter", "reader", "finder", "scout", "reviewer", "verifier", "checker")
+READ_ONLY_RE = re.compile(r"(?<!not )\bread[-‐‑_ ]?only\b")
 RULE_FILE_LIMIT = 24000      # bytes, per docs/rules.md
 VIEW_WINDOW = 100            # lines view_file returns per call (observed, agy 1.2.9)
 LONG_DESCRIPTION = 800       # characters; three 1,000+ character descriptions were dropped
@@ -194,9 +200,7 @@ def check_agent(path, rep, label=None):
     model = data.get("model")
     if model and str(model) not in AGENT_MODELS:
         rep.note(where, "model %r is not one of %s" % (model, ", ".join(sorted(AGENT_MODELS))))
-    tools = data.get("tools") or []
-    if isinstance(tools, str):
-        tools = [tools]
+    tools = as_list(data.get("tools"), "tools", where, rep)
     for t in tools:
         t = str(t)
         if t in CONFIRMED_TOOLS:
@@ -208,9 +212,32 @@ def check_agent(path, rep, label=None):
                             "test the agent before relying on it" % t)
         else:
             rep.bad(where, "unknown tool %r; an unmapped tool name may make the agent hang" % t)
-    if {"write_to_file", "replace_file_content", "run_command"} & set(map(str, tools)) and \
-            "critic" in expected:
+    # A verifier's independence rests on its tool list, not on its instructions.
+    held = set(map(str, tools)) | set(map(str, as_list(data.get("enabledTools"), "enabledTools", where, rep)))
+    writes = sorted(held & WRITE_TOOLS)
+    name_parts = set(re.split(r"[-_.\s]+", expected.lower()))
+    desc_l = str(data.get("description") or "").lower()
+    read_only = bool(READ_ONLY_RE.search(desc_l))
+    if "critic" in name_parts and (writes or held & COMMAND_TOOLS):
         rep.bad(where, "a critic with write or command tools is not independent")
+    elif writes and (name_parts & set(VERIFIER_ROLES) or read_only):
+        rep.bad(where, "a read-only or verifier agent holds file-writing tool(s) %s and is not independent"
+                % ", ".join(writes))
+    elif read_only and held & COMMAND_TOOLS:
+        rep.note(where, "described as read-only but holds %s, so read-only is an instruction, not a tool limit"
+                 % ", ".join(sorted(held & COMMAND_TOOLS)))
+
+
+def as_list(value, key, where, rep):
+    """A frontmatter tool field as a list of names; anything else is reported, not crashed on."""
+    if value is None or value == []:
+        return []
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, (list, tuple)):
+        return list(value)
+    rep.bad(where, "%s must be a list of tool names, not %r" % (key, value))
+    return []
 
 
 def check_rules(path, rep, where):
@@ -280,6 +307,8 @@ def main(argv):
             print("--repo must be run from inside a Gravitas repository checkout")
             return 2
         check_plugin(os.path.join(repo, "plugin"), rep)
+        if not os.path.exists(os.path.join(repo, "plugin", "README.md")):
+            rep.bad("plugin", "README.md is missing; it is what a user finds in the installed folder")
         locales = os.path.join(repo, "locales")
         only = argv[argv.index("--locales") + 1] if "--locales" in argv else "all"
         if os.path.isdir(locales) and only != "none":
@@ -293,6 +322,16 @@ def main(argv):
                 rules = os.path.join(locales, lang, "rules", "AGENTS.md")
                 if os.path.exists(rules):
                     check_rules(rules, rep, "locales/%s/rules/AGENTS.md" % lang)
+                # the installer copies these two into the installed plugin
+                if not os.path.exists(os.path.join(locales, lang, "README.md")):
+                    rep.bad("locales/%s" % lang, "README.md is missing")
+                overlay = os.path.join(locales, lang, "plugin.json")
+                try:
+                    data = json.load(open(overlay, encoding="utf-8"))
+                    if not isinstance(data.get("description"), str) or not data["description"].strip():
+                        rep.bad("locales/%s/plugin.json" % lang, "needs a non-empty description")
+                except Exception as exc:
+                    rep.bad("locales/%s/plugin.json" % lang, "missing or does not parse: %s" % exc)
         targets = []
     else:
         targets = [os.path.join(CONFIG, "skills"), os.path.join(CONFIG, "plugins")] + argv

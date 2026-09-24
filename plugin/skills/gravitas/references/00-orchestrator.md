@@ -19,7 +19,7 @@ Gravitas turns a request into work whose claims are ranked by how they were esta
 
 ## Triage Gate
 
-Check one thing before building anything: whether the request is a single deterministic computation, a lookup or a definition whose answer is complete in a line or two. If it is, answer it and stop, with no tier label, coverage block or subagent. Testing caught the skill failing its own control: asked to convert 72 °F to Celsius, it gave the right number and then appended an evidence tier, a bidirectional dimensional check and a scope note. Readers who see machinery on a question that does not need it start skipping it on questions that do.
+Check one thing before building anything: whether the request is a single deterministic computation, a lookup or a definition whose answer is complete in a line or two. If it is, answer it and stop, with no tier label, coverage block or subagent. Testing caught the skill failing its own control: asked to convert 72 °F to Celsius, it gave the right number and then appended an evidence tier, a bidirectional dimensional check and a scope note. After the rule was tightened, the retest answered in one line of 25 words with no tools. Readers who see machinery on a question that does not need it start skipping it on questions that do.
 
 Set the depth by consequence rather than difficulty. An easy question whose answer lands in a filing, a diagnosis, a paper or a contract needs the primary source. A hard theoretical question asked out of curiosity does not need a five-agent adversarial pass.
 

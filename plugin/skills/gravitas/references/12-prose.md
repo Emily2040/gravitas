@@ -55,13 +55,13 @@ Leave out anything that reveals an assistant: "I have drafted", "as requested", 
 
 ## Measure, Do Not Trust Your Ear
 
-Structural tells are invisible from the inside. `scripts/slopcheck.py`, shipped with this skill, reports em-dash density per 1,000 words, sentence-length mean and standard deviation, short sentences, bold lead-ins, contrastive patterns, hedge intensifiers, rhetorical questions and banned vocabulary.
+Structural tells are invisible from the inside. `scripts/slopcheck.py`, shipped with this skill, reports every em-dash and its rate per 1,000 words, sentence-length mean and standard deviation, short sentences, bold lead-ins, contrastive patterns, hedge intensifiers, conclusion crutches, rhetorical questions, banned vocabulary and any unclosed code fence.
 
 ```bash
-python scripts/slopcheck.py <files>
+python scripts/slopcheck.py <files>            # --strict exits 1 when anything is flagged
 ```
 
-Targets: zero em-dashes, zero bold-lead bullets, a standard deviation above 6, a real count of sentences at 8 words or fewer, and no contrastive or hedge flags. Quoted prompts and example questions can trip the rhetorical-question check; read each flag before acting on it. A draft that passes the ear and fails the measurement is the normal case.
+Targets: zero em-dashes, zero bold-lead bullets, a standard deviation above 6, a real count of sentences at 8 words or fewer, and no contrastive or hedge flags. Questions inside quotation marks, blockquotes and code are skipped, but read each flag before acting on it. A draft that passes the ear and fails the measurement is the normal case.
 
 `slopcheck.py` measures lines and sentences, so it cannot see repeated paragraph shapes or the constructions in the table above. `gravitas-prose-editor` reads for those, and a second reader who knows the author's work reads for the rest.
 

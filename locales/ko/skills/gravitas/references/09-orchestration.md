@@ -43,6 +43,7 @@ python scripts/ledger.py init  run.ledger.json --scale full
 python scripts/ledger.py add   run.ledger.json finder-security.json --round 1 --by gravitas-finder
 python scripts/ledger.py verdict run.ledger.json <key> --by gravitas-refuter --refuted no \
     --tier executed --source "pytest tests/test_session.py::test_logout -> 1 failed"
+python scripts/ledger.py verdicts run.ledger.json refuter-verdicts.json --by gravitas-refuter
 python scripts/ledger.py child run.ledger.json --id <conversation-id> --agent gravitas-finder --status denied \
     --note "read_file denied on src/auth"
 python scripts/ledger.py close-round run.ledger.json --round 1
@@ -51,12 +52,12 @@ python scripts/ledger.py report run.ledger.json
 
 원장이 강제하는 것:
 
-- 등급이 `observed`, `executed`, `read`인데 `source`가 비어 있는 기록은 `inferred`로 강등되고, 아무것도 인용하지 않은 `source`를 가진 `read` 기록도 강등됩니다. `01-evidence.md`의 출처 규칙이 원장이 모든 기록에 대해 실행하는 검사가 됩니다.
+- 등급이 `observed`, `executed`, `read`인데 `source`가 비어 있는 기록은 `inferred`로 강등되고, 내용을 전혀 인용하지 않은 `source`를 가진 `read` 기록도 강등됩니다. 세 단어 이상이나 열두 글자 이상의 인용이 필요하며, 따옴표로 감싼 경로는 인용이 아닙니다. 기록은 발견과 판정 스키마로 검사되고, 형식이 잘못된 기록은 이유와 함께 거부됩니다. `01-evidence.md`의 출처 규칙이 원장이 모든 기록에 대해 실행하는 검사가 됩니다.
 - 새 기록은 반박자가 기각한 것까지 포함해 지금까지 추가된 모든 기록과 중복을 대조합니다. 살아남은 것하고만 대조하면 기각된 발견이 매 라운드 돌아와 루프가 수렴하지 않습니다.
-- 같은 위치의 두 기록은 주장의 단어가 0.25 이상 겹치면 자동으로 합쳐지고, 0.10부터는 중복 가능성으로 표시됩니다. 한 실제 감사에서 진짜 중복은 0.13~0.69, 같은 줄의 서로 다른 결함은 0.02~0.15였고, 자동 병합은 기록 22개를 15개로 줄이면서 잘못 합친 것이 없었습니다. 표시된 것은 `ledger.py merge KEEP DUP`로 정하며, 표도 함께 옮겨집니다.
-- 발견은 거부되지 않은 표 가운데 반박하지 않은 표가 과반일 때만 살아남으며, 필요한 표 수는 규모를 따릅니다. 표준은 1표, 전체와 망라는 3표입니다.
+- 같은 위치의 두 기록은 주장의 단어가 0.25 이상 겹치면 자동으로 합쳐지고, 0.10부터는 중복 가능성으로 표시됩니다. 같은 파일에서 5줄 이내에 있는 기록은 표현이 거의 같을 때(0.8)만 자동으로 합쳐지고, 그렇지 않으면 표시만 됩니다. 몇 줄 떨어진 서로 다른 결함은 비슷한 말로 적히기 쉽기 때문입니다. 한 실제 감사에서 진짜 중복은 0.13~0.69, 같은 줄의 서로 다른 결함은 0.02~0.15였고, 자동 병합은 기록 22개를 15개로 줄이면서 잘못 합친 것이 없었습니다. 표시된 것은 `ledger.py merge KEEP DUP`로 정하며, 표도 함께 옮겨집니다.
+- 발견은 집계된 표 가운데 반박하지 않은 표가 과반일 때만 살아남으며, 필요한 표 수는 규모를 따릅니다. 표준은 1표, 전체와 망라는 3표입니다. 표에도 발견과 같은 출처 규칙이 적용되어, 강등된 표나 상태가 `blocked`인 표는 기록되지만 집계되지 않습니다. 빠른 규모에서는 표를 받지 않으므로 보고서는 발견을 검증되지 않은 것으로 나열합니다.
 - `close-round`는 새 발견을 세고, 마른 라운드 카운터를 올리고, `CONTINUE` 또는 `STOP`을 이유와 함께 출력합니다. 마른 라운드 수에 도달했는지, 라운드 상한에 도달했는지입니다.
-- `report`는 살아남은 발견을 심각도순으로 등급과 출처와 함께 나열하고, 이어서 반박된 기록, 보류 기록, 강등된 기록, 상태가 `done`이 아닌 모든 하위 에이전트, 마지막으로 상한을 나열합니다.
+- `report`는 살아남은 발견을 심각도순으로 등급과 출처와 함께 나열하고, 이어서 반박된 기록, 보류 기록, 강등된 기록, 상태가 `done`이 아닌 모든 하위 에이전트와 `blocked`를 반환한 모든 탐색자, 마지막으로 상한을 나열합니다.
 
 원장 파일은 마지막 턴을 잃어도 남으므로 사용자가 찾을 수 있는 곳에 둡니다. Python이 없다면 같은 항목을 계획 결과물의 표로 관리하고, 같은 규칙을 손으로 적용하고, 보고서에 원장을 수작업으로 관리했다고 밝힙니다.
 

@@ -87,6 +87,15 @@ def install(lang_arg):
                                 os.path.join(skill, name),
                                 ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
         shutil.copy2(os.path.join(src, "rules", "AGENTS.md"), os.path.join(DEST, "rules", "AGENTS.md"))
+        # what Antigravity lists for the plugin, and the README beside it, in the installed language
+        shutil.copy2(os.path.join(src, "README.md"), os.path.join(DEST, "README.md"))
+        with open(os.path.join(DEST, "plugin.json"), encoding="utf-8") as fh:
+            manifest = json.load(fh)
+        with open(os.path.join(src, "plugin.json"), encoding="utf-8") as fh:
+            manifest.update(json.load(fh))
+        with open(os.path.join(DEST, "plugin.json"), "w", encoding="utf-8", newline="\n") as fh:
+            json.dump(manifest, fh, indent=2, ensure_ascii=False)
+            fh.write("\n")
     print("installed Gravitas (%s) to %s" % (locale or "en", DEST))
 
     migrate_legacy(backup)

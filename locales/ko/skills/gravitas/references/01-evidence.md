@@ -76,7 +76,7 @@ inferred (recalled): Miranda warnings attach to custodial interrogation, not to 
 
 검색 요약도 페이지가 아닙니다. `search_web`이 돌려주는 것은 번호가 붙은 인용이 달린 생성된 요약이며, `read` 표시에는 `read_url_content`로 페이지 자체를 여는 것이 필요합니다. 2026년 9월 24일 이 버전을 시험하던 중, 한 에이전트는 검색을 한 번 하고 Damodaran의 데이터가 "an annualized nominal return of approximately 9.94%"를 보인다는 요약을 얻은 뒤 `read (https://pages.stern.nyu.edu/~adamodar/New_Home_Page/data.html, "annualized nominal return of approximately 9.94% for 1928-2024")`라고 썼습니다. 그 페이지는 한 번도 열지 않았고, “인용”은 요약을 바꿔 쓴 것이었습니다. 검색 요약에서만 본 숫자는 `inferred`이며, 요약 자체에 기대고 있다면 `read (search summary for "<query>")`라고 씁니다.
 
-보고하기 전에 표시를 기계적으로 확인합니다. `scripts/provenance_check.py <answer file> --conversation <id>`는 모든 `read`, `observed`, `executed` 표시를 대화의 트랜스크립트와 대조합니다. 연 URL, 본 파일, 실행한 명령, 그리고 인용이 가져온 내용 안에 있는지입니다. 이 릴리스의 시험에서 나온 답변들에 대해, 출처를 모두 연 법률 답변의 표시 6개는 모두 통과시켰고, 금융 답변의 검색에만 근거한 인용과, 역사 답변에서 한 번도 열지 않은 페이지를 가리키거나 위치 정보가 없는 `read` 표시 세 개는 불합격시켰습니다.
+보고하기 전에 표시를 기계적으로 확인합니다. `scripts/provenance_check.py <answer file> --conversation <id>`는 모든 `read`, `observed`, `executed` 표시를 대화의 트랜스크립트와 대조합니다. 도구 호출은 각각 자기 결과와 짝지어지므로, 가져오기에 실패한 페이지나 거부된 명령은 한 번도 열지 않은 것, 한 번도 실행하지 않은 것으로 칩니다. `read` 표시의 인용은 대화 어딘가가 아니라 그 표시가 든 출처 안에 있어야 합니다. 연 어떤 페이지보다 깊은 페이지는 불합격, 상위 페이지는 경고이며, 명령은 따옴표와 공백을 빼면 실제로 실행한 것과 같아야 합니다. 이 릴리스의 시험에서 나온 답변들에 대해, 출처를 모두 연 법률 답변의 표시 6개는 모두 통과시켰고, 금융 답변의 검색에만 근거한 인용과, 역사 답변에서 한 번도 열지 않은 페이지를 가리키거나 위치 정보가 없는 `read` 표시 세 개는 불합격시켰습니다.
 
 ## 제공되지 않았다면 관찰도 없다
 
