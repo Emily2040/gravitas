@@ -102,7 +102,7 @@ def install(lang_arg):
     if not os.listdir(backup):
         os.rmdir(backup)
     subprocess.call([sys.executable, os.path.join(DEST, "skills", "gravitas", "scripts", "check_skills.py")])
-    print("Restart Antigravity, or run /skills reload in the CLI, to pick up the change.")
+    print("Restart Antigravity, or start a new agy session, to pick up the change.")
 
 
 def uninstall():
