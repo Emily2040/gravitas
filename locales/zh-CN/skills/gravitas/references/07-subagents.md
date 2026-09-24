@@ -67,7 +67,7 @@ You are a refuter. ...
 
 `tools` 列表并不是完整的工具集。在 agy 1.2.9 上，一个只列出 `view_file`、并设置了 `inheritCustomizations: false` 的代理，按它自己对声明的陈述，还拥有 `send_message`、`call_mcp_tool`、`list_resources`、`read_resource` 和 `manage_task`。`call_mcp_tool` 可以触及每一个已连接的 MCP 服务器，只有当它们全部只读时，评审者才是只读的。加上 `inheritMcp: false` 去掉了 `call_mcp_tool`；再加 `excludeDefaultComponents: true` 没有任何变化。每个附带的代理都把两个继承开关设为 false。
 
-自定义代理从 `~/.gemini/config/agents/` 和插件内的 `agents/` 中被发现。2026-09-24 在 agy 1.2.9 上，`agy agents` 列出了全局代理，却没有列出插件内的代理，而模型能看到并说出两者的名字。工作区 `.agents/agents/` 中的代理完全没有被 CLI 发现。
+自定义代理从 `~/.gemini/config/agents/` 和插件内的 `agents/` 中被发现。2026-09-24 在 agy 1.2.9 上，`agy agents` 列出了全局代理，却没有列出插件内的代理，而模型能看到并说出两者的名字。工作区 `.agents/agents/` 中的代理只有在用 `--add-dir` 传入仓库时才会被发现。
 
 两点提醒。文档警告，`tools` 中未映射或拼错的工具名可能导致子代理挂起，所以 `scripts/check_skills.py` 会用一份已知列表核对每个名字。另外，自 agy 1.2.7 起，`find_by_name`、`grep_search` 和 `list_dir` 不再属于默认工具集；自定义代理只有列出它们才能获得。
 

@@ -12,11 +12,11 @@
 | :--- | :--- | :--- | :--- | :--- |
 | `~/.gemini/config/skills/`、`agents/`、`AGENTS.md` | 加载 | 加载，`agy agents` 会列出 | 加载 | 已观察 |
 | `~/.gemini/config/plugins/<name>/` | 加载 | 加载，`agy agents` 不列出 | 从 `rules/AGENTS.md` 加载 | 用测试插件观察：模型说出了它的技能和代理的名字，并遵守了它的规则 |
-| `<repo>/.agents/` | 不加载 | 不加载 | 未测试 | 已观察；open issue #1052 |
+| `<repo>/.agents/` | 仅通过 `--add-dir` 加载 | 仅通过 `--add-dir` 加载 | `rules/` 两种情况下都不加载 | 已观察；open issue #1036、#1052 |
 
 Gravitas 以插件形式安装正是这个原因：一个文件夹承载技能、验证代理和常驻规则，`agy plugin disable gravitas` 能把它们一起关掉。`agy plugin list` 只显示从市场导入的插件，所以复制进去的插件即使已被加载，也不会出现在那里。
 
-工作区这一行与文档相矛盾。内置的自定义指南和技能页面都描述了从 `<repo>/.agents/` 发现，IDE 指南也说 IDE 会“automatically discovers and respects”那个文件夹。在 CLI 上，`.agents/skills/` 中的技能和 `.agents/agents/` 中的代理都没有被发现，而日志中的 `workspaceDirs` 正确地写出了该文件夹。2026 年 9 月 19 日更早的一次核查显示，`.agents/` 中的钩子同样没有加载：日志报告 `loaded 0 named hooks from 0 hooks.json file(s)`。桌面应用和 IDE 未经测试。
+工作区这一行与文档相矛盾。内置的自定义指南和技能页面都描述了从 `<repo>/.agents/` 发现，IDE 指南也说 IDE 会“automatically discovers and respects”那个文件夹。在 CLI 上，只要用 `--add-dir` 传入该仓库，`.agents/` 中的技能、代理和钩子都会加载，即使它同时也是工作目录。不加这个参数、直接在仓库里启动时，它们都不加载，尽管日志中的 `workspaceDirs` 写出了该文件夹，日志也报告 `loaded 0 named hooks`。`.agents/rules/` 中的规则在两种情况下都没有加载。当仓库自带的自定义内容很重要时，运行 `agy -p "..." --add-dir <repo>`。桌面应用和 IDE 未经测试。
 
 ## 会丢弃自定义项的预算
 
@@ -34,7 +34,7 @@ Gravitas 以插件形式安装正是这个原因：一个文件夹承载技能�
 
 | 行为 | 证据 |
 | :--- | :--- |
-| 对主代理和子代理而言，`view_file` 都把相对路径解析到 `~/.gemini/antigravity-cli/scratch/`，而不是工作区。这个文件夹由所有 CLI 会话共用，里面还留着五天前测试的 33 个文件，所以相对路径可能在没有任何报错的情况下打开一个同名的陈旧文件 | 在 1.2.9 上观察到 |
+| `view_file` 会拒绝相对路径，但在无头运行中，代理把 `~/.gemini/antigravity-cli/scratch/` 当作自己的工作目录。主代理在被拒绝后去那里搜索，而被要求使用“当前工作区中”的 `draft.md` 的子代理直接拼出了指向那里的路径。这个文件夹由所有 CLI 会话共用，里面还留着五天前测试的 33 个文件，两者都在毫无提示的情况下打开了一个同名的陈旧文件 | 在 1.2.9 上观察到 |
 | `view_file` 每次调用返回 100 行。在一次运行中，代理读了一个 114 行文件的前 100 行就继续往下做了 | 在 1.2.9 上观察到 |
 | 已安装插件内的文件，在无头运行中无需授权即可读取 | 在 1.2.9 上观察到 |
 | 持有通配授权、而提示词看起来不完整时，代理为了找到剩余部分，读取了用户的 PowerShell 历史、其他会话的转录记录以及正在运行的进程的命令行 | 在 1.2.9 上用 `gemini-3.8-flash-high` 观察到 |
@@ -51,26 +51,26 @@ Gravitas 以插件形式安装正是这个原因：一个文件夹承载技能�
 
 | 行为 | 证据 |
 | :--- | :--- |
-| 在 `agy -p` 下 `autoExecutionPolicy: AUTO` 不起作用；没有精确匹配授权的工具会被自动拒绝 | 于 2026 年 9 月 19 日和 24 日观察到；open issue #1054 |
-| 返回 `allow` 的 `PreToolUse` 钩子并不会放行调用 | 于 2026 年 9 月 19 日观察到 |
-| 返回 `deny` 的 `PreToolUse` 钩子会阻止调用，即使该调用有明确授权 | 于 2026 年 9 月 19 日观察到 |
-| 钩子返回的 `overwrite` 会被应用并告知代理，权限按改写后的参数检查 | 于 2026 年 9 月 19 日观察到 |
+| CLI 的策略来自 `~/.gemini/antigravity-cli/settings.json` 中的 `toolPermission`，默认是 `request-review`，所以桌面设置里的 `autoExecutionPolicy: AUTO` 在 `agy -p` 下不起作用。`toolPermission: "always-proceed"` 能在无头模式下运行未授权的命令，同时仍然遵守 `deny` 规则 | 在 1.2.9 上观察到；issue #1054 |
+| 返回 `allow` 的 `PreToolUse` 钩子，或返回带 `permissionOverrides` 的 `ask`，都不会放行未授权的调用。`deny` 连已授权的调用也会阻止 | 于 2026 年 9 月 19 日和 24 日观察到；open issue #1053 |
+| 与 `decision: "allow"` 一起返回的 `overwrite` 会被应用并告知代理，权限按改写后的参数检查。没有 `decision` 的 `overwrite` 等于拒绝 | 于 2026 年 9 月 19 日和 24 日观察到 |
+| 钩子拒绝一条命令后，最终回复仍可能写出这条命令本该打印的输出。在 11 次这样的运行中有 6 次，回复正是提示词要求的那个标记，而记录显示命令从未运行 | 在 1.2.9 上观察到 |
 | 一个工具被拒绝会丢弃这一轮，而运行报告 `"status": "SUCCESS"`，退出码为 0。测得的最大损失是 48 个已完成步骤和 20,595 个输出 token | 在 1.2.7 上观察到，在 1.2.9 上再次观察到；open issue #794 |
 | 从无头运行启动的子代理，除非授予了 `read_file`，否则读取工作区文件时会被拒绝 | 在 1.2.9 上观察到 |
-| 当子代理仍在运行时，以文字回复结束这一轮的父代理，可能在结果到达之前被关闭，状态为 `SUCCESS` | 在 1.2.9 上观察到两次：一次是在子代理被拒绝 `read_file` 后 5.4 秒，一次是在一次审计进行 357 秒后，随后日志记录了 “Failed to wake idle agent on message: run state not found”。持续轮询的运行最多等待了 338 秒，并收到了每一个结果 |
+| 如果父代理在子代理仍在运行时结束了这一轮，它永远收不到结果。运行会等子代理结束，然后关闭，日志记录 “Failed to wake idle agent on message: run state not found”，并以父代理的最后一条回复报告 `SUCCESS` | 在 1.2.9 上的 2 次受控运行中 2 次观察到，另有一次审计；issue #1044。持续轮询的运行最多等待了 338 秒，并收到了每一个结果 |
 | 代理和模型 API 失败时会在 stderr 打印 `AGY_ERROR: {...}` 并以 3 退出 | read：1.2.6 更新日志 |
-| `--json-schema` 会把一个既不是可读文件也不是 JSON 对象的参数变成字符串 schema，而根节点不是对象的 schema 总是返回 HTTP 400 | 在 1.2.7 上的 42 次运行中观察到；open issue #1064 |
+| `--json-schema` 会把一个既不是可读文件也不是 JSON 对象的参数变成字符串 schema，而根节点不是对象的 schema 总是返回 HTTP 400 | 在 1.2.7 上的 42 次运行中观察到，在 1.2.9 上再次观察到；open issue #1064 |
 
-一次安全审计在进行了 13 分钟、启动了 7 个子代理之后，最终回复被替换成了 “This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries.”（在 1.2.9 上用 `gemini-3.8-flash-high` 观察到）。围绕明确的授权来规划无头运行。策略设置和钩子的放行都靠不住，而 `SUCCESS` 状态也不能证明这一轮的工作保住了。
+一次安全审计在进行了 13 分钟、启动了 7 个子代理之后，最终回复被替换成了 “This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries.”（在 1.2.9 上用 `gemini-3.8-flash-high` 观察到）。围绕明确的授权或 `toolPermission` 来规划无头运行。钩子的放行靠不住，而 `SUCCESS` 状态也不能证明这一轮的工作保住了。
 
 ## 钩子
 
 - `invocationNum` 从零开始计数，所以第一轮报告的是 0。文档中的示例写的是 3，却没有说明这一点。
-- 不要在 `hooks.json` 中给命令加引号。在 Windows 上，执行器会先转义引号再把字符串交给 `cmd /c`，命令会因无法识别而失败。使用不带空格、不加引号的路径。
+- `hooks.json` 的命令里不要加任何引号。在 Windows 上引号会原样传给程序：加了引号的可执行文件会“not recognized”，加了引号的脚本路径会被拼接到钩子所在的文件夹后面（issue #222）。使用不带空格、不加引号的路径。
 - 用 JSON 序列化器写 `hooks.json`。bash heredoc 会把 Windows 路径中成对的反斜杠合并，产生无效的转义。
 - 钩子的工作目录是包含 `hooks.json` 的那个文件夹。
-- 钩子失败时放行：无效的 JSON、空输出、非零退出和超时都被容忍了，超时也确实生效。自桌面版 2.4.3 起，无法运行的配置会在加载时被拒绝并报错。
-- `terminationBehavior: "force_continue"` 没有上限（open issue #1055）。`Stop` 钩子可以用 `decision: "continue"` 阻止终止，并会收到可用于设限的 `executionNum`。见 `10-iteration.md`。
+- 失败的 `PreInvocation` 钩子会被跳过：无效的 JSON、空输出、非零退出和超时都被容忍了（2026 年 9 月 19 日）。`PreToolUse` 钩子失败时则拒绝：无效的 JSON、`{}`、缺少 `decision` 和非零退出都会拒绝这次调用，只有空输出会放行（1.2.9）。超时确实生效。自桌面版 2.4.3 起，无法运行的配置会在加载时被拒绝并报错。
+- `terminationBehavior: "force_continue"` 没有上限（open issue #1055）：在 1.2.9 上它强制了 12 轮空话，其中两轮去调用了没人要求的工具。`Stop` 钩子可以用 `decision: "continue"` 阻止终止，并会收到可用于设限的 `executionNum`。见 `10-iteration.md`。
 
 要验证一个钩子，让它的脚本向一个哨兵文件追加内容，并注入一个唯一随机数、要求代理复述它，然后两者都检查。文件合法、日志安静，都不能证明钩子运行过。
 
@@ -78,7 +78,9 @@ Gravitas 以插件形式安装正是这个原因：一个文件夹承载技能�
 
 授权以命令原文保存，有时只保存第一个词，于是出现 `command(if)`、`command(&)` 这样的条目，旁边还有被整段保存为一条授权的数 KB 脚本。授权只会与逐字节相同的命令再次匹配，所以提示会再次出现，又追加一条无用的授权。有一台机器上的 `~/.gemini/config/config.json` 达到了 301 KB，其中 97.5% 是无用的授权，最长的一条有 36,331 个字符。不时检查一下它的大小。真正值得保留的是针对域名的 `read_url` 授权。
 
-项目设置覆盖全局设置。`~/.gemini/config/projects/*.json` 中的每个文件都可以带有自己的执行策略，只要某个项目另有设置，在界面上修改全局设置就不起作用。桌面应用的策略取值为 `always-proceed`、`request-review`、`strict` 和 `proceed-in-sandbox`，自桌面版 2.15.1 起 Windows 上支持文件和网络沙箱（read：内置 `antigravity-guide` 技能及其 `app.md` 参考，以及更新日志）。
+项目设置覆盖全局设置。`~/.gemini/config/projects/*.json` 中的每个文件都可以带有自己的执行策略，只要某个项目另有设置，在界面上修改全局设置就不起作用。策略取值为 `always-proceed`、`request-review`、`strict` 和 `proceed-in-sandbox`，自桌面版 2.15.1 起 Windows 上支持文件和网络沙箱（read：内置 `antigravity-guide` 技能及其 `app.md` 参考，以及更新日志）。
+
+CLI 从它自己的 `settings.json` 中的 `permissions.allow` 和 `~/.gemini/config/config.json` 中的 `globalPermissionGrants.allow` 读取授权；日志行 `stored shared config permissions` 显示的是后者。在 Windows 上，`command()` 规则只匹配完全相同的命令行、`command(*)`，或覆盖整行的 `regex:` 规则，例如 `command(regex:git .*)`。`command(git)` 和 `command(git *)` 匹配不到任何带参数的调用（在 1.2.9 上观察到；issue #619、#955）。
 
 一条告诉模型永远不要请求权限的规则是行不通的，因为策略在咨询模型之前就已经执行了。
 

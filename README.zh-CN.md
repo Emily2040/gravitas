@@ -112,7 +112,7 @@ pwsh scripts/install.ps1 zh-CN
 
 两者都会运行 `scripts/install.py`：先校验仓库，再把 `plugin/` 复制到 `~/.gemini/config/plugins/gravitas/` 并校验结果。之前以单独技能方式安装在 `~/.gemini/config/skills/gravitas` 的旧版本及其 `gravitas-always-on` 钩子，会被移到一个带时间戳的备份文件夹。之后重启 Antigravity，或在 CLI 中运行 `/skills reload`。需要 Python 3.8 或更高版本。
 
-请全局安装。无论文档怎么说，CLI 都不会读取工作区的 `.agents/` 文件夹（open issue #1052）。
+请全局安装。无论文档怎么说，CLI 只有在用 `--add-dir` 传入仓库时才会读取工作区的 `.agents/` 文件夹（open issue #1036 和 #1052）。
 
 ## 仓库结构
 
@@ -152,7 +152,7 @@ python plugin/skills/gravitas/scripts/provenance_check.py <answer> --conversatio
 测试版 2 于 2026 年 9 月 24 日在桌面版 2.17.0 和 agy 1.2.9 上以无头方式测试，使用了事后已恢复的临时权限授权。改变了设计的结果：
 
 - 八个代理全部启动并返回。反驳者无法创建被要求创建的文件；视觉评审者通过 `view_file` 读取了一张 PNG，正确报告了一个红色方块、一个蓝色圆形，并且没有三角形。
-- 子代理把相对路径解析到一个所有 CLI 会话共用的临时文件夹。被要求编辑“当前工作区中”的 `draft.md` 的文风编辑，编辑的是五天前测试留下的陈旧 `draft.md`，而且没有报错。现在每个提示词和每个代理都使用绝对路径。
+- 无头运行中的代理把一个所有 CLI 会话共用的临时文件夹当作自己的工作区。被要求编辑“当前工作区中”的 `draft.md` 的文风编辑，打开的是五天前测试留下的陈旧 `draft.md`，而且没有报错。现在每个提示词和每个代理都使用绝对路径。
 - 没有 `inheritCustomizations: false` 时，一个三步就找到答案的阅读者又花了 35 秒加载本技能。加上之后，同一任务用时从 63 秒降到 40 秒。
 - `view_file` 每次返回 100 行，有一次运行中代理读了一个 114 行模块的前 100 行就继续了。现在每个模块都在 100 行以内。
 - CLI 在测试进行到一半时自行从 1.2.7 更新到 1.2.9，所以 `13-platform.md` 中的每个戳记都取自运行自身的日志。
@@ -163,12 +163,12 @@ python plugin/skills/gravitas/scripts/provenance_check.py <answer> --conversatio
 
 | 约束 | 细节 |
 | :--- | :--- |
-| CLI 不读取工作区 `.agents/` | 技能、代理和钩子都是如此。open issue #1052 |
-| 相对路径解析到共用的临时文件夹 | 同名的陈旧文件会在不报错的情况下被打开 |
+| 工作区 `.agents/` 只通过 `--add-dir` 读取 | 技能、代理和钩子都是如此。open issue #1036 和 #1052 |
+| 无头代理在共用的临时文件夹里工作 | 同名的陈旧文件会在不报错的情况下被打开 |
 | 过长的技能描述会被丢弃 | 133 个技能中有 3 个被自定义项预算排除，都在最长的 5 个之列 |
 | 一个被拒绝的工具会丢弃整轮无头工作 | `status: SUCCESS`，退出码 0。测得最大损失：48 步和 20,595 个输出 token。open issue #794 |
-| 无头模式下忽略 `autoExecutionPolicy: AUTO` | 返回 `allow` 的 `PreToolUse` 钩子同样不放行。open issue #1054 |
-| `force_continue` 没有上限 | 测得 3、8 和 12 次继续。open issue #1055 |
+| 无头模式的权限来自 CLI 自己的设置 | `autoExecutionPolicy: AUTO` 被忽略，返回 `allow` 的 `PreToolUse` 钩子也不放行。请使用授权或 `toolPermission`。issue #1053 和 #1054 |
+| `force_continue` 没有上限 | 测得 3、8 和 12 次继续，在 1.2.9 上又是 12 次。open issue #1055 |
 | 授权以命令原文保存 | 它们不断累积，几乎不会再被匹配。有一个配置达到 301 KB，其中 97.5% 无用 |
 
 细节、版本和日期见 `plugin/skills/gravitas/references/13-platform.md`。

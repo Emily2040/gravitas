@@ -27,6 +27,10 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) an
 - The skill description is under 500 characters, because the longest descriptions were the ones Antigravity dropped from its customization budget.
 - The installer is one Python script behind `install.sh` and `install.ps1`, and it moves a previous bare-skill install and its hook into a timestamped backup.
 
+### Fixed
+- Re-tested on agy 1.2.9 on 24 September 2026, which corrected four platform claims. A workspace `.agents/` folder does load when the repo is passed with `--add-dir`. "Hooks fail open" held only for `PreInvocation`; a failing `PreToolUse` hook denies the call. `view_file` rejects relative paths, and the stale-file hazard comes from agents treating the shared scratch folder as their workspace. The CLI's headless policy comes from `toolPermission` and grants in its own `settings.json` as well as `config.json`, and on Windows a `command()` rule needs the exact line or `regex:`.
+- `13-platform.md` records three more behaviours from the same testing: a subagent's result never reaches a parent that has already ended its turn, a hook refusal can be followed by a reply stating output that was never produced, and `overwrite` needs a `decision`.
+
 ### Removed
 - The `PreInvocation` hook and `hooks/`. The plugin's `rules/AGENTS.md` replaces it without needing Python on the path.
 - `scripts/rename.py`, which only served the rename from `ultracode`.

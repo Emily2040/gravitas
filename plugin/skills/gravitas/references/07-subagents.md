@@ -67,7 +67,7 @@ The key names were confirmed as YAML tags in `language_server.exe` from desktop 
 
 The `tools` list is not the whole toolset. On agy 1.2.9, an agent listing only `view_file` and setting `inheritCustomizations: false` also had `send_message`, `call_mcp_tool`, `list_resources`, `read_resource` and `manage_task`, by its own account of its declarations. `call_mcp_tool` reaches every connected MCP server, and a critic is read-only only if all of them are. Adding `inheritMcp: false` removed `call_mcp_tool`; adding `excludeDefaultComponents: true` on top changed nothing. Every shipped agent sets both inheritance flags to false.
 
-Custom agents are discovered from `~/.gemini/config/agents/` and from `agents/` inside a plugin. On agy 1.2.9 on 2026-09-24, `agy agents` listed a global agent and did not list one inside a plugin, while the model could see and name both. Agents in a workspace `.agents/agents/` were not discovered by the CLI at all.
+Custom agents are discovered from `~/.gemini/config/agents/` and from `agents/` inside a plugin. On agy 1.2.9 on 2026-09-24, `agy agents` listed a global agent and did not list one inside a plugin, while the model could see and name both. Agents in a workspace `.agents/agents/` were discovered only when the repo was passed with `--add-dir`.
 
 Two cautions. The documentation warns that an unmapped or misspelled tool name in `tools` may cause the subagent to hang, so `scripts/check_skills.py` checks every name against a known list. And since agy 1.2.7, `find_by_name`, `grep_search` and `list_dir` are no longer in the default toolset; a custom agent gets them only by listing them.
 

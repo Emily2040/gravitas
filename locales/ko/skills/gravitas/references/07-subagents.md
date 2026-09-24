@@ -67,7 +67,7 @@ You are a refuter. ...
 
 `tools` 목록이 도구 세트의 전부는 아닙니다. agy 1.2.9에서 `view_file`만 나열하고 `inheritCustomizations: false`로 둔 에이전트도, 자기 선언에 대한 스스로의 설명에 따르면 `send_message`, `call_mcp_tool`, `list_resources`, `read_resource`, `manage_task`를 가지고 있었습니다. `call_mcp_tool`은 연결된 모든 MCP 서버에 닿으므로, 비평가가 읽기 전용인 것은 그 서버들이 모두 읽기 전용일 때뿐입니다. `inheritMcp: false`를 더하자 `call_mcp_tool`이 사라졌고, 거기에 `excludeDefaultComponents: true`를 더해도 달라진 것이 없었습니다. 포함된 모든 에이전트는 두 상속 플래그를 모두 false로 둡니다.
 
-사용자 지정 에이전트는 `~/.gemini/config/agents/`와 플러그인 안의 `agents/`에서 발견됩니다. 2026-09-24 agy 1.2.9에서 `agy agents`는 전역 에이전트는 보여 주었지만 플러그인 안의 것은 보여 주지 않았고, 모델은 둘 다 보고 이름을 댈 수 있었습니다. 워크스페이스 `.agents/agents/`의 에이전트는 CLI가 전혀 발견하지 못했습니다.
+사용자 지정 에이전트는 `~/.gemini/config/agents/`와 플러그인 안의 `agents/`에서 발견됩니다. 2026-09-24 agy 1.2.9에서 `agy agents`는 전역 에이전트는 보여 주었지만 플러그인 안의 것은 보여 주지 않았고, 모델은 둘 다 보고 이름을 댈 수 있었습니다. 워크스페이스 `.agents/agents/`의 에이전트는 저장소를 `--add-dir`로 넘겼을 때만 발견되었습니다.
 
 주의할 점이 두 가지 있습니다. 문서는 `tools`에 매핑되지 않았거나 철자가 틀린 도구 이름이 있으면 서브에이전트가 멈출 수 있다고 경고하므로, `scripts/check_skills.py`가 모든 이름을 알려진 목록과 대조합니다. 또 agy 1.2.7부터 `find_by_name`, `grep_search`, `list_dir`는 기본 도구 세트에서 빠졌으며, 사용자 지정 에이전트는 목록에 적었을 때만 쓸 수 있습니다.
 

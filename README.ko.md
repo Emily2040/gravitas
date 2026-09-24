@@ -112,7 +112,7 @@ pwsh scripts/install.ps1 ko
 
 둘 다 `scripts/install.py`를 실행합니다. 저장소를 검증하고, `plugin/`을 `~/.gemini/config/plugins/gravitas/`로 복사하고, 결과를 검증합니다. 예전에 스킬 단독으로 `~/.gemini/config/skills/gravitas`에 설치한 버전과 그 `gravitas-always-on` 훅은 날짜가 붙은 백업 폴더로 옮겨집니다. 그다음 Antigravity를 다시 시작하거나 CLI에서 `/skills reload`를 실행합니다. Python 3.8 이상이 필요합니다.
 
-전역으로 설치하십시오. 문서가 뭐라고 하든 CLI는 워크스페이스의 `.agents/` 폴더를 읽지 않습니다(open issue #1052).
+전역으로 설치하십시오. 문서가 뭐라고 하든 CLI는 저장소를 `--add-dir`로 넘겼을 때만 워크스페이스의 `.agents/` 폴더를 읽습니다(open issue #1036, #1052).
 
 ## 저장소 구성
 
@@ -152,7 +152,7 @@ python plugin/skills/gravitas/scripts/provenance_check.py <answer> --conversatio
 베타 2는 2026년 9월 24일 데스크톱 2.17.0과 agy 1.2.9에서 헤드리스로 시험했으며, 임시 권한 부여를 쓰고 나중에 되돌렸습니다. 설계를 바꾼 결과는 다음과 같습니다.
 
 - 에이전트 여덟 개가 모두 시작해 결과를 돌려주었습니다. 반박자는 만들라는 파일을 만들지 못했고, 시각 비평가는 `view_file`로 PNG를 읽고 빨간 사각형, 파란 원, 그리고 삼각형은 없다고 정확히 보고했습니다.
-- 서브에이전트는 상대 경로를 모든 CLI 대화가 함께 쓰는 임시 폴더를 기준으로 해석합니다. “현재 워크스페이스의” `draft.md`를 편집하라는 말을 들은 문체 편집자는 닷새 전 시험의 오래된 `draft.md`를 편집했고, 오류도 내지 않았습니다. 이제 모든 프롬프트와 모든 에이전트는 절대 경로를 씁니다.
+- 헤드리스 실행의 에이전트는 모든 CLI 대화가 함께 쓰는 임시 폴더를 자기 워크스페이스로 여깁니다. “현재 워크스페이스의” `draft.md`를 편집하라는 말을 들은 문체 편집자는 닷새 전 시험의 오래된 `draft.md`를 열었고, 오류도 보고하지 않았습니다. 이제 모든 프롬프트와 모든 에이전트는 절대 경로를 씁니다.
 - `inheritCustomizations: false`가 없으면, 3단계 만에 답을 찾은 읽기 담당이 35초를 더 들여 이 스킬을 불러왔습니다. 넣자 같은 작업이 63초에서 40초로 줄었습니다.
 - `view_file`은 호출 한 번에 100줄을 돌려주며, 한 실행에서 에이전트는 114줄 모듈의 처음 100줄을 읽고 넘어갔습니다. 이제 모든 모듈은 100줄 미만입니다.
 - 시험 도중 CLI가 1.2.7에서 1.2.9로 스스로 업데이트되었습니다. 그래서 `13-platform.md`의 날인은 모두 해당 실행 자체의 로그에서 가져왔습니다.
@@ -163,12 +163,12 @@ python plugin/skills/gravitas/scripts/provenance_check.py <answer> --conversatio
 
 | 제약 | 세부 |
 | :--- | :--- |
-| CLI는 워크스페이스 `.agents/`를 읽지 않는다 | 스킬, 에이전트, 훅 모두. open issue #1052 |
-| 상대 경로가 공유 임시 폴더를 기준으로 해석된다 | 같은 이름의 오래된 파일이 오류 없이 열린다 |
+| CLI는 워크스페이스 `.agents/`를 `--add-dir`로만 읽는다 | 스킬, 에이전트, 훅 모두. open issue #1036, #1052 |
+| 헤드리스 에이전트는 공유 임시 폴더에서 일한다 | 같은 이름의 오래된 파일이 오류 없이 열린다 |
 | 긴 스킬 설명은 빠진다 | 스킬 133개 중 3개가 사용자 지정 예산에서 제외되었고, 모두 가장 긴 5개에 들었다 |
 | 거부된 도구 하나가 헤드리스 턴 전체를 버린다 | `status: SUCCESS`, 종료 코드 0. 측정한 최대 손실: 48단계와 출력 토큰 20,595개. open issue #794 |
-| 헤드리스에서는 `autoExecutionPolicy: AUTO`가 무시된다 | `allow`를 반환하는 `PreToolUse` 훅도 허용하지 않는다. open issue #1054 |
-| `force_continue`에 상한이 없다 | 3회, 8회, 12회의 계속을 측정. open issue #1055 |
+| 헤드리스 권한은 CLI 자체 설정에서 온다 | `autoExecutionPolicy: AUTO`는 무시되고, `allow`를 반환하는 `PreToolUse` 훅도 허용하지 않는다. 권한이나 `toolPermission`을 쓴다. issue #1053, #1054 |
+| `force_continue`에 상한이 없다 | 3회, 8회, 12회의 계속을 측정했고 1.2.9에서도 12회. open issue #1055 |
 | 권한이 명령 문자열 그대로 저장된다 | 쌓여 가고 거의 다시 일치하지 않는다. 한 설정은 301 KB에 이르렀고 97.5%가 쓸모없었다 |
 
 세부, 버전, 날짜는 `plugin/skills/gravitas/references/13-platform.md`에 있습니다.

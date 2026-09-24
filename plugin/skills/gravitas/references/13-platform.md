@@ -12,11 +12,11 @@ Every entry carries the version and date it was checked against, because the pla
 | :--- | :--- | :--- | :--- | :--- |
 | `~/.gemini/config/skills/`, `agents/`, `AGENTS.md` | Loaded | Loaded, listed by `agy agents` | Loaded | Observed |
 | `~/.gemini/config/plugins/<name>/` | Loaded | Loaded, not listed by `agy agents` | Loaded from `rules/AGENTS.md` | Observed with a test plugin: the model named its skill and agent, and obeyed its rule |
-| `<repo>/.agents/` | Not loaded | Not loaded | Not tested | Observed; open issue #1052 |
+| `<repo>/.agents/` | Loaded only through `--add-dir` | Loaded only through `--add-dir` | `rules/` not loaded either way | Observed; open issues #1036, #1052 |
 
 Gravitas installs as a plugin for this reason: one folder carries the skill, the verifier agents and the always-on rule, and `agy plugin disable gravitas` turns all of it off together. `agy plugin list` shows only plugins imported from a marketplace, so a copied plugin does not appear there even when it is loaded.
 
-The workspace row contradicts the documentation. The built-in customization guide and the skills page describe discovery from `<repo>/.agents/`, and the IDE guide says the IDE "automatically discovers and respects" that folder. On the CLI, a skill in `.agents/skills/` and an agent in `.agents/agents/` were not discovered, while `workspaceDirs` in the log named the folder correctly. An earlier check on 19 September 2026 showed hooks in `.agents/` were not loaded either: the log reported `loaded 0 named hooks from 0 hooks.json file(s)`. The desktop app and the IDE were not tested.
+The workspace row contradicts the documentation. The built-in customization guide and the skills page describe discovery from `<repo>/.agents/`, and the IDE guide says the IDE "automatically discovers and respects" that folder. On the CLI, a skill, an agent and a hook in `.agents/` loaded when the repo was passed with `--add-dir`, including when it was also the working directory. Launched from inside the repo without the flag, none of them loaded, although `workspaceDirs` in the log named the folder and the log reported `loaded 0 named hooks`. A rule in `.agents/rules/` did not load either way. When a repo's own customizations matter, run `agy -p "..." --add-dir <repo>`. The desktop app and the IDE were not tested.
 
 ## Budgets That Drop Customizations
 
@@ -34,7 +34,7 @@ Run `scripts/check_skills.py` after every edit. It checks frontmatter parsing, d
 
 | Behaviour | Evidence |
 | :--- | :--- |
-| `view_file` resolves a relative path against `~/.gemini/antigravity-cli/scratch/`, not the workspace, for the main agent and for subagents. The folder is shared by every CLI conversation and still held 33 files from tests five days earlier, so a relative path can open a stale file of the same name without any error | Observed on 1.2.9 |
+| `view_file` rejects a relative path, but agents in a headless run treat `~/.gemini/antigravity-cli/scratch/` as their working directory. The main agent searched it after the rejection, and a subagent told to use `draft.md` "in the current workspace" built a path into it directly. The folder is shared by every CLI conversation and held 33 files from tests five days earlier, and both opened a stale file of the same name without comment | Observed on 1.2.9 |
 | `view_file` returns 100 lines per call. In one run the agent read the first 100 lines of a 114-line file and moved on | Observed on 1.2.9 |
 | Files inside an installed plugin can be read in a headless run without a grant | Observed on 1.2.9 |
 | Holding wildcard grants, with a prompt that looked incomplete, the agent read the user's PowerShell history, other conversations' transcripts and running processes' command lines to find the rest | Observed on 1.2.9 with `gemini-3.8-flash-high` |
@@ -51,26 +51,26 @@ Concurrent subagents share the account's model capacity: while two other runs we
 
 | Behaviour | Evidence |
 | :--- | :--- |
-| `autoExecutionPolicy: AUTO` has no effect under `agy -p`; a tool without an exact-match grant is auto-denied | Observed on 19 and 24 September 2026; open issue #1054 |
-| A `PreToolUse` hook returning `allow` does not allow the call | Observed on 19 September 2026 |
-| A `PreToolUse` hook returning `deny` blocks the call, even one with an explicit grant | Observed on 19 September 2026 |
-| `overwrite` from a hook is applied and announced to the agent, and permission is checked against the rewritten arguments | Observed on 19 September 2026 |
+| The CLI takes its policy from `toolPermission` in `~/.gemini/antigravity-cli/settings.json`, `request-review` by default, so `autoExecutionPolicy: AUTO` in the desktop settings has no effect under `agy -p`. `toolPermission: "always-proceed"` runs ungranted commands headless and still honours `deny` rules | Observed on 1.2.9; issue #1054 |
+| A `PreToolUse` hook returning `allow`, or `ask` with `permissionOverrides`, does not allow an ungranted call. `deny` blocks even a granted call | Observed on 19 and 24 September 2026; open issue #1053 |
+| `overwrite` with `decision: "allow"` is applied and announced to the agent, and permission is checked against the rewritten arguments. `overwrite` without a `decision` is a denial | Observed on 19 and 24 September 2026 |
+| When a hook refuses a command, the final reply can state the output the command would have printed. In 6 of 11 such runs the reply was the exact marker the prompt asked for, and the transcript showed the command never ran | Observed on 1.2.9 |
 | A denied tool discards the turn and the run reports `"status": "SUCCESS"` with exit code 0. The largest loss measured was 48 completed steps and 20,595 output tokens | Observed on 1.2.7, and again on 1.2.9; open issue #794 |
 | A subagent started from a headless run is denied `read_file` on a workspace file unless `read_file` is granted | Observed on 1.2.9 |
-| A parent whose turn ends with a text reply while a subagent is still running can be shut down before the result arrives, with `SUCCESS` | Observed twice on 1.2.9: 5.4 s after a child was denied `read_file`, and after 357 s of an audit, when the log then recorded "Failed to wake idle agent on message: run state not found". Runs that kept polling waited up to 338 s and received every result |
+| A parent whose turn ends while a subagent is running never receives the result. The run waits for the child, shuts down, logs "Failed to wake idle agent on message: run state not found" and reports `SUCCESS` with the parent's last reply | Observed on 1.2.9 in 2 of 2 controlled runs and one audit; issue #1044. Runs that kept polling waited up to 338 s and received every result |
 | Agent and model API failures print `AGY_ERROR: {...}` on stderr and exit 3 | Read: 1.2.6 changelog |
-| `--json-schema` turns an argument that is neither a readable file nor a JSON object into a string schema, and a non-object root schema always returns HTTP 400 | Observed on 1.2.7 in 42 runs; open issue #1064 |
+| `--json-schema` turns an argument that is neither a readable file nor a JSON object into a string schema, and a non-object root schema always returns HTTP 400 | Observed on 1.2.7 in 42 runs, and again on 1.2.9; open issue #1064 |
 
-A security audit's final reply was replaced by "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries." after 13 minutes and 7 subagents (observed on 1.2.9 with `gemini-3.8-flash-high`). Plan headless runs around explicit grants. Policy settings and hook approvals will not carry you, and a `SUCCESS` status is not evidence that the turn's work survived.
+A security audit's final reply was replaced by "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries." after 13 minutes and 7 subagents (observed on 1.2.9 with `gemini-3.8-flash-high`). Plan headless runs around explicit grants or `toolPermission`. Hook approvals will not carry you, and a `SUCCESS` status is not evidence that the turn's work survived.
 
 ## Hooks
 
 - `invocationNum` is zero-indexed, so the opening turn reports 0. The documentation's example shows 3 and does not say.
-- Do not quote the command in `hooks.json`. On Windows the executor escapes the quotes before handing the string to `cmd /c`, and the command fails as not recognised. Use unquoted paths without spaces.
+- Do not quote anything in a `hooks.json` command. On Windows the quotes reach the program intact: a quoted executable is "not recognized", and a quoted script path is joined onto the hook's folder (issue #222). Use unquoted paths without spaces.
 - Write `hooks.json` with a JSON serializer. A bash heredoc collapses doubled backslashes in Windows paths and produces invalid escapes.
 - The working directory for a hook is the folder that contains `hooks.json`.
-- Hooks fail open: invalid JSON, empty output, a non-zero exit and a timeout were each tolerated, and the timeout was enforced. Since desktop 2.4.3, configurations that cannot run are rejected at load time with an error.
-- `terminationBehavior: "force_continue"` has no ceiling (open issue #1055). A `Stop` hook can block termination with `decision: "continue"` and receives `executionNum` to bound it. See `10-iteration.md`.
+- A failing `PreInvocation` hook is skipped: invalid JSON, empty output, a non-zero exit and a timeout were each tolerated (19 September 2026). A `PreToolUse` hook fails closed: invalid JSON, `{}`, a missing `decision` and a non-zero exit each deny the call, and only empty output lets it through (1.2.9). Timeouts are enforced. Since desktop 2.4.3, configurations that cannot run are rejected at load time with an error.
+- `terminationBehavior: "force_continue"` has no ceiling (open issue #1055): on 1.2.9 it forced 12 turns of filler, two of them reaching for tools nobody asked for. A `Stop` hook can block termination with `decision: "continue"` and receives `executionNum` to bound it. See `10-iteration.md`.
 
 To verify a hook, have its script append to a sentinel file and inject a unique nonce with an instruction to repeat it, then check both. A valid file and a quiet log are not evidence that the hook ran.
 
@@ -78,7 +78,9 @@ To verify a hook, have its script append to a sentinel file and inject a unique 
 
 Grants are stored as literal command text, sometimes only the first token, which produces entries such as `command(if)` and `command(&)` next to whole multi-kilobyte scripts saved as a single grant. A grant re-matches only a byte-identical command, so the prompt returns and another dead grant is appended. One `~/.gemini/config/config.json` reached 301 KB, 97.5% of it dead grants, with one entry of 36,331 characters. Check its size now and then. `read_url` grants for domains are the ones that earn their place.
 
-Project settings override global ones. Every file in `~/.gemini/config/projects/*.json` can carry its own execution policy, and while a project says otherwise, changing the global setting in the interface has no effect. The desktop app's policy values are `always-proceed`, `request-review`, `strict` and `proceed-in-sandbox`, and file and network sandboxing has been available on Windows since desktop 2.15.1 (read: the built-in `antigravity-guide` skill, its `app.md` reference, and the changelog).
+Project settings override global ones. Every file in `~/.gemini/config/projects/*.json` can carry its own execution policy, and while a project says otherwise, changing the global setting in the interface has no effect. The policy values are `always-proceed`, `request-review`, `strict` and `proceed-in-sandbox`, and file and network sandboxing has been available on Windows since desktop 2.15.1 (read: the built-in `antigravity-guide` skill, its `app.md` reference, and the changelog).
+
+The CLI reads grants from `permissions.allow` in its own `settings.json` and from `globalPermissionGrants.allow` in `~/.gemini/config/config.json`; the log line `stored shared config permissions` shows the second. On Windows a `command()` rule matches only the exact command line, `command(*)`, or a `regex:` rule that covers the whole line, such as `command(regex:git .*)`. `command(git)` and `command(git *)` match no call that has arguments (observed on 1.2.9; issues #619, #955).
 
 A rule telling the model never to ask for permission cannot work, because the policy is enforced before the model is consulted.
 

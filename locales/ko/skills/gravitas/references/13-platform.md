@@ -12,11 +12,11 @@
 | :--- | :--- | :--- | :--- | :--- |
 | `~/.gemini/config/skills/`, `agents/`, `AGENTS.md` | 로드됨 | 로드되고 `agy agents`에 표시됨 | 로드됨 | 관찰함 |
 | `~/.gemini/config/plugins/<name>/` | 로드됨 | 로드되지만 `agy agents`에는 표시되지 않음 | `rules/AGENTS.md`에서 로드됨 | 시험용 플러그인으로 관찰: 모델이 스킬과 에이전트 이름을 댔고 규칙을 따랐음 |
-| `<repo>/.agents/` | 로드되지 않음 | 로드되지 않음 | 시험하지 않음 | 관찰함, open issue #1052 |
+| `<repo>/.agents/` | `--add-dir`로만 로드됨 | `--add-dir`로만 로드됨 | `rules/`는 어느 쪽에서도 로드되지 않음 | 관찰함, open issue #1036, #1052 |
 
 Gravitas가 플러그인으로 설치되는 이유가 이것입니다. 한 폴더에 스킬, 검증 에이전트, 상시 규칙이 모두 담기고, `agy plugin disable gravitas` 하나로 전부 함께 끌 수 있습니다. `agy plugin list`는 마켓플레이스에서 가져온 플러그인만 보여 주므로, 복사해 넣은 플러그인은 로드되어 있어도 거기 나타나지 않습니다.
 
-워크스페이스 행은 문서와 모순됩니다. 내장 사용자 지정 가이드와 스킬 페이지는 `<repo>/.agents/`에서의 탐색을 설명하고, IDE 가이드는 IDE가 그 폴더를 "automatically discovers and respects"한다고 씁니다. CLI에서는 `.agents/skills/`의 스킬도 `.agents/agents/`의 에이전트도 발견되지 않았고, 로그의 `workspaceDirs`는 그 폴더를 정확히 가리키고 있었습니다. 2026년 9월 19일의 이전 확인에서는 `.agents/`의 훅도 로드되지 않았고, 로그는 `loaded 0 named hooks from 0 hooks.json file(s)`라고 보고했습니다. 데스크톱 앱과 IDE는 시험하지 않았습니다.
+워크스페이스 행은 문서와 모순됩니다. 내장 사용자 지정 가이드와 스킬 페이지는 `<repo>/.agents/`에서의 탐색을 설명하고, IDE 가이드는 IDE가 그 폴더를 "automatically discovers and respects"한다고 씁니다. CLI에서는 저장소를 `--add-dir`로 넘기면 `.agents/`의 스킬, 에이전트, 훅이 로드되었고, 그 저장소가 작업 디렉터리이기도 한 경우에도 마찬가지였습니다. 이 플래그 없이 저장소 안에서 실행하면 아무것도 로드되지 않았고, 로그의 `workspaceDirs`는 그 폴더를 가리키면서도 `loaded 0 named hooks`라고 보고했습니다. `.agents/rules/`의 규칙은 어느 경우에도 로드되지 않았습니다. 저장소 자체의 사용자 지정이 중요할 때는 `agy -p "..." --add-dir <repo>`로 실행합니다. 데스크톱 앱과 IDE는 시험하지 않았습니다.
 
 ## 사용자 지정 항목을 떨어뜨리는 예산
 
@@ -34,7 +34,7 @@ Gravitas가 플러그인으로 설치되는 이유가 이것입니다. 한 폴�
 
 | 동작 | 증거 |
 | :--- | :--- |
-| `view_file`은 메인 에이전트든 서브에이전트든 상대 경로를 워크스페이스가 아니라 `~/.gemini/antigravity-cli/scratch/`를 기준으로 해석한다. 이 폴더는 모든 CLI 대화가 함께 쓰며 닷새 전 시험의 파일 33개가 남아 있었으므로, 상대 경로는 같은 이름의 오래된 파일을 오류 없이 열 수 있다 | 1.2.9에서 관찰 |
+| `view_file`은 상대 경로를 거부하지만, 헤드리스 실행의 에이전트는 `~/.gemini/antigravity-cli/scratch/`를 자기 작업 디렉터리로 여긴다. 메인 에이전트는 거부당한 뒤 그곳을 뒤졌고, “현재 워크스페이스의” `draft.md`를 쓰라는 말을 들은 서브에이전트는 그곳으로 가는 경로를 직접 만들었다. 이 폴더는 모든 CLI 대화가 함께 쓰며 닷새 전 시험의 파일 33개가 남아 있었고, 둘 다 같은 이름의 오래된 파일을 아무 말 없이 열었다 | 1.2.9에서 관찰 |
 | `view_file`은 호출 한 번에 100줄을 돌려준다. 한 실행에서 에이전트는 114줄 파일의 처음 100줄을 읽고 넘어갔다 | 1.2.9에서 관찰 |
 | 설치된 플러그인 안의 파일은 헤드리스 실행에서도 권한 없이 읽을 수 있다 | 1.2.9에서 관찰 |
 | 와일드카드 권한을 가진 상태에서 프롬프트가 불완전해 보이자, 에이전트는 나머지를 찾으려고 사용자의 PowerShell 기록, 다른 대화의 트랜스크립트, 실행 중인 프로세스의 명령줄을 읽었다 | 1.2.9에서 `gemini-3.8-flash-high`로 관찰 |
@@ -51,26 +51,26 @@ Gravitas가 플러그인으로 설치되는 이유가 이것입니다. 한 폴�
 
 | 동작 | 증거 |
 | :--- | :--- |
-| `agy -p`에서는 `autoExecutionPolicy: AUTO`가 효과가 없고, 정확히 일치하는 권한이 없는 도구는 자동으로 거부된다 | 2026년 9월 19일과 24일에 관찰, open issue #1054 |
-| `allow`를 반환하는 `PreToolUse` 훅은 호출을 허용하지 않는다 | 2026년 9월 19일에 관찰 |
-| `deny`를 반환하는 `PreToolUse` 훅은 명시적 권한이 있는 호출도 막는다 | 2026년 9월 19일에 관찰 |
-| 훅의 `overwrite`는 적용되고 에이전트에게 알려지며, 권한은 바뀐 인수로 확인된다 | 2026년 9월 19일에 관찰 |
+| CLI의 정책은 `~/.gemini/antigravity-cli/settings.json`의 `toolPermission`(기본값 `request-review`)에서 오므로, 데스크톱 설정의 `autoExecutionPolicy: AUTO`는 `agy -p`에서 효과가 없다. `toolPermission: "always-proceed"`는 헤드리스에서 권한 없는 명령을 실행하면서도 `deny` 규칙은 지킨다 | 1.2.9에서 관찰, issue #1054 |
+| `allow`를 반환하는 `PreToolUse` 훅도, `permissionOverrides`를 단 `ask`도 권한 없는 호출을 허용하지 않는다. `deny`는 권한 있는 호출도 막는다 | 2026년 9월 19일과 24일에 관찰, open issue #1053 |
+| `decision: "allow"`와 함께 반환한 `overwrite`는 적용되고 에이전트에게 알려지며, 권한은 바뀐 인수로 확인된다. `decision` 없는 `overwrite`는 거부가 된다 | 2026년 9월 19일과 24일에 관찰 |
+| 훅이 명령을 거부한 뒤에도 최종 답이 그 명령이 출력했을 내용을 말할 수 있다. 그런 실행 11번 중 6번은 답이 프롬프트가 요구한 표식 그대로였지만, 기록상 명령은 한 번도 실행되지 않았다 | 1.2.9에서 관찰 |
 | 도구가 거부되면 그 턴은 버려지고, 실행은 `"status": "SUCCESS"`와 종료 코드 0을 보고한다. 측정한 최대 손실은 완료된 단계 48개와 출력 토큰 20,595개였다 | 1.2.7에서 관찰, 1.2.9에서 다시 관찰, open issue #794 |
 | 헤드리스 실행에서 시작한 서브에이전트는 `read_file`을 허용하지 않으면 워크스페이스 파일 읽기를 거부당한다 | 1.2.9에서 관찰 |
-| 서브에이전트가 아직 실행 중일 때 텍스트 답으로 턴을 끝낸 부모는, 결과가 도착하기 전에 `SUCCESS`로 종료될 수 있다 | 1.2.9에서 두 번 관찰: 하위 에이전트가 `read_file`을 거부당한 5.4초 뒤, 그리고 감사 357초 뒤. 후자에서는 이후 로그에 "Failed to wake idle agent on message: run state not found"가 기록됨. 폴링을 계속한 실행은 최대 338초를 기다려 모든 결과를 받았음 |
+| 서브에이전트가 실행 중일 때 턴을 끝낸 부모는 그 결과를 받지 못한다. 실행은 하위 에이전트가 끝나기를 기다린 뒤 종료되고, 로그에 "Failed to wake idle agent on message: run state not found"를 남기며, 부모의 마지막 답으로 `SUCCESS`를 보고한다 | 1.2.9에서 통제된 실행 2번 중 2번과 감사 한 번에서 관찰, issue #1044. 폴링을 계속한 실행은 최대 338초를 기다려 모든 결과를 받았음 |
 | 에이전트와 모델 API 실패는 stderr에 `AGY_ERROR: {...}`를 출력하고 종료 코드 3으로 끝난다 | read: 1.2.6 변경 기록 |
-| `--json-schema`는 읽을 수 있는 파일도 JSON 객체도 아닌 인수를 문자열 스키마로 바꾸며, 루트가 객체가 아닌 스키마는 항상 HTTP 400을 반환한다 | 1.2.7에서 42번 실행으로 관찰, open issue #1064 |
+| `--json-schema`는 읽을 수 있는 파일도 JSON 객체도 아닌 인수를 문자열 스키마로 바꾸며, 루트가 객체가 아닌 스키마는 항상 HTTP 400을 반환한다 | 1.2.7에서 42번 실행으로 관찰, 1.2.9에서 다시 관찰, open issue #1064 |
 
-한 보안 감사는 13분 동안 서브에이전트 7개를 돌린 뒤, 최종 답이 "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries."로 바뀌었습니다(1.2.9에서 `gemini-3.8-flash-high`로 관찰). 헤드리스 실행은 명시적 권한을 기준으로 계획합니다. 정책 설정도 훅의 허용도 믿을 수 없으며, `SUCCESS` 상태는 그 턴의 작업이 살아남았다는 증거가 아닙니다.
+한 보안 감사는 13분 동안 서브에이전트 7개를 돌린 뒤, 최종 답이 "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries."로 바뀌었습니다(1.2.9에서 `gemini-3.8-flash-high`로 관찰). 헤드리스 실행은 명시적 권한이나 `toolPermission`을 기준으로 계획합니다. 훅의 허용은 믿을 수 없으며, `SUCCESS` 상태는 그 턴의 작업이 살아남았다는 증거가 아닙니다.
 
 ## 훅
 
 - `invocationNum`은 0부터 세므로 첫 턴은 0을 보고합니다. 문서의 예시는 3을 보여 주며 이 점을 말하지 않습니다.
-- `hooks.json`의 명령을 따옴표로 감싸지 마십시오. Windows에서는 실행기가 문자열을 `cmd /c`에 넘기기 전에 따옴표를 이스케이프하므로, 명령이 인식되지 않는다며 실패합니다. 공백 없는 경로를 따옴표 없이 씁니다.
+- `hooks.json`의 명령에서는 무엇도 따옴표로 감싸지 마십시오. Windows에서는 따옴표가 그대로 프로그램에 전달됩니다. 따옴표로 감싼 실행 파일은 "not recognized"가 되고, 따옴표로 감싼 스크립트 경로는 훅 폴더 뒤에 이어 붙습니다(issue #222). 공백 없는 경로를 따옴표 없이 씁니다.
 - `hooks.json`은 JSON 직렬화 도구로 씁니다. bash heredoc은 Windows 경로의 이중 백슬래시를 하나로 합쳐 잘못된 이스케이프를 만듭니다.
 - 훅의 작업 디렉터리는 `hooks.json`이 있는 폴더입니다.
-- 훅은 실패해도 통과시킵니다. 잘못된 JSON, 빈 출력, 0이 아닌 종료, 시간 초과가 모두 허용되었고 시간 초과는 실제로 적용되었습니다. 데스크톱 2.4.3부터는 실행할 수 없는 설정이 로드 시점에 오류와 함께 거부됩니다.
-- `terminationBehavior: "force_continue"`에는 상한이 없습니다(open issue #1055). `Stop` 훅은 `decision: "continue"`로 종료를 막을 수 있으며, 상한을 두는 데 쓸 `executionNum`을 받습니다. `10-iteration.md`를 보십시오.
+- 실패한 `PreInvocation` 훅은 건너뜁니다. 잘못된 JSON, 빈 출력, 0이 아닌 종료, 시간 초과가 모두 허용되었습니다(2026년 9월 19일). `PreToolUse` 훅은 실패하면 거부합니다. 잘못된 JSON, `{}`, `decision` 누락, 0이 아닌 종료는 모두 호출을 거부하고, 빈 출력만 통과시킵니다(1.2.9). 시간 초과는 실제로 적용됩니다. 데스크톱 2.4.3부터는 실행할 수 없는 설정이 로드 시점에 오류와 함께 거부됩니다.
+- `terminationBehavior: "force_continue"`에는 상한이 없습니다(open issue #1055). 1.2.9에서는 내용 없는 턴 12번을 강제했고, 그중 두 번은 아무도 요청하지 않은 도구를 쓰려 했습니다. `Stop` 훅은 `decision: "continue"`로 종료를 막을 수 있으며, 상한을 두는 데 쓸 `executionNum`을 받습니다. `10-iteration.md`를 보십시오.
 
 훅을 검증하려면 스크립트가 감시용 파일에 내용을 덧붙이게 하고, 고유한 값을 주입해 따라 말하도록 지시한 뒤 둘 다 확인합니다. 올바른 파일과 조용한 로그는 훅이 실행되었다는 증거가 아닙니다.
 
@@ -78,7 +78,9 @@ Gravitas가 플러그인으로 설치되는 이유가 이것입니다. 한 폴�
 
 권한은 명령 문자열 그대로, 때로는 첫 단어만 저장되므로 `command(if)`, `command(&)` 같은 항목이 권한 하나로 통째로 저장된 수 KB짜리 스크립트와 나란히 생깁니다. 권한은 바이트 단위로 똑같은 명령에만 다시 일치하므로, 확인 창은 다시 뜨고 쓸모없는 권한이 또 추가됩니다. 한 컴퓨터의 `~/.gemini/config/config.json`은 301 KB에 이르렀고, 그중 97.5%가 쓸모없는 권한이었으며 가장 긴 항목은 36,331자였습니다. 가끔 크기를 확인합니다. 제 몫을 하는 것은 도메인에 대한 `read_url` 권한입니다.
 
-프로젝트 설정이 전역 설정보다 우선합니다. `~/.gemini/config/projects/*.json`의 각 파일은 자체 실행 정책을 가질 수 있고, 프로젝트가 다른 값을 가지고 있는 동안에는 화면에서 전역 설정을 바꿔도 효과가 없습니다. 데스크톱 앱의 정책 값은 `always-proceed`, `request-review`, `strict`, `proceed-in-sandbox`이며, Windows에서는 데스크톱 2.15.1부터 파일 및 네트워크 샌드박스를 쓸 수 있습니다(read: 내장 `antigravity-guide` 스킬과 그 `app.md` 참조, 변경 기록).
+프로젝트 설정이 전역 설정보다 우선합니다. `~/.gemini/config/projects/*.json`의 각 파일은 자체 실행 정책을 가질 수 있고, 프로젝트가 다른 값을 가지고 있는 동안에는 화면에서 전역 설정을 바꿔도 효과가 없습니다. 정책 값은 `always-proceed`, `request-review`, `strict`, `proceed-in-sandbox`이며, Windows에서는 데스크톱 2.15.1부터 파일 및 네트워크 샌드박스를 쓸 수 있습니다(read: 내장 `antigravity-guide` 스킬과 그 `app.md` 참조, 변경 기록).
+
+CLI는 자체 `settings.json`의 `permissions.allow`와 `~/.gemini/config/config.json`의 `globalPermissionGrants.allow` 양쪽에서 권한을 읽습니다. 후자는 로그의 `stored shared config permissions` 줄에서 확인됩니다. Windows에서 `command()` 규칙이 일치하는 것은 똑같은 명령 줄, `command(*)`, 또는 줄 전체를 덮는 `regex:` 규칙(예: `command(regex:git .*)`)뿐입니다. `command(git)`과 `command(git *)`는 인수가 있는 호출에 하나도 일치하지 않습니다(1.2.9에서 관찰, issue #619, #955).
 
 모델에게 절대 권한을 묻지 말라고 지시하는 규칙은 작동할 수 없습니다. 정책은 모델에게 묻기 전에 적용되기 때문입니다.
 

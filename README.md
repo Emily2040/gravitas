@@ -112,7 +112,7 @@ pwsh scripts/install.ps1           # en, or: zh-CN / ja / ko
 
 Both run `scripts/install.py`, which validates the repository, copies `plugin/` to `~/.gemini/config/plugins/gravitas/`, and validates the result. An earlier bare-skill install at `~/.gemini/config/skills/gravitas` and its `gravitas-always-on` hook are moved into a timestamped backup folder. Restart Antigravity, or run `/skills reload` in the CLI. Python 3.8 or later is required.
 
-Install globally. The CLI does not read a workspace `.agents/` folder (open issue #1052), whatever the documentation says.
+Install globally. The CLI reads a workspace `.agents/` folder only when the repo is passed with `--add-dir` (open issues #1036 and #1052), whatever the documentation says.
 
 ## Repository Map
 
@@ -167,7 +167,7 @@ Beta 1 was tested on 22 cases across knowledge work and craft on `gemini-3.8-fla
 Beta 2 was tested on desktop 2.17.0 and agy 1.2.9 on 24 September 2026, headless, with temporary permission grants that were restored afterwards. The results that changed the design:
 
 - All eight agents started and returned. The refuter could not create a file it was told to create, and the visual critic read a PNG through `view_file` and correctly reported a red square, a blue circle and no triangle.
-- A subagent resolves a relative path against a scratch folder shared by every CLI conversation. The prose editor, told to edit `draft.md` "in the current workspace", edited a stale `draft.md` from a test five days earlier and returned no error. Every prompt and every agent now uses absolute paths.
+- Agents in a headless run treat a scratch folder shared by every CLI conversation as their workspace. The prose editor, told to edit `draft.md` "in the current workspace", opened a stale `draft.md` from a test five days earlier and reported no error. Every prompt and every agent now uses absolute paths.
 - Without `inheritCustomizations: false`, a reader that found its answer in three steps spent 35 more seconds loading this skill. With it, the same task took 40 seconds instead of 63.
 - `view_file` shows 100 lines per call, and in one run the agent read the first 100 lines of a 114-line module and moved on. Every module is now under 100 lines.
 - The CLI updated itself from 1.2.7 to 1.2.9 in the middle of testing, which is why every stamp in `13-platform.md` comes from the run's own log.
@@ -178,12 +178,12 @@ Beta 2 was tested on desktop 2.17.0 and agy 1.2.9 on 24 September 2026, headless
 
 | Constraint | Detail |
 | :--- | :--- |
-| Workspace `.agents/` is not read by the CLI | Skills, agents and hooks alike. Open issue #1052 |
-| Relative paths resolve to a shared scratch folder | A stale file of the same name opens without error |
+| Workspace `.agents/` is read only through `--add-dir` | Skills, agents and hooks alike. Open issues #1036 and #1052 |
+| Headless agents work in a shared scratch folder | A stale file of the same name opens without error |
 | Long skill descriptions get dropped | 3 of 133 skills were excluded by the customization budget, all among the 5 longest |
 | A denied tool discards the whole headless turn | `status: SUCCESS`, exit 0. Largest loss measured: 48 steps and 20,595 output tokens. Open issue #794 |
-| `autoExecutionPolicy: AUTO` is ignored headless | A `PreToolUse` hook returning `allow` does not allow either. Open issue #1054 |
-| `force_continue` has no ceiling | Measured at 3, 8 and 12 continuations. Open issue #1055 |
+| Headless permissions come from the CLI's own settings | `autoExecutionPolicy: AUTO` is ignored and a `PreToolUse` hook returning `allow` does not allow. Use grants or `toolPermission`. Issues #1053 and #1054 |
+| `force_continue` has no ceiling | Measured at 3, 8 and 12 continuations, and 12 again on 1.2.9. Open issue #1055 |
 | Grants store literal command text | They accumulate and rarely re-match. One config reached 301 KB, 97.5% dead |
 
 Details, versions and dates in `plugin/skills/gravitas/references/13-platform.md`.

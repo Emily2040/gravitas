@@ -67,7 +67,7 @@ You are a refuter. ...
 
 `tools` リストがツールセットのすべてではありません。agy 1.2.9 では、`view_file` だけを挙げて `inheritCustomizations: false` にしたエージェントも、自分の宣言についての本人の説明によれば `send_message`、`call_mcp_tool`、`list_resources`、`read_resource`、`manage_task` を持っていました。`call_mcp_tool` は接続中のすべての MCP サーバーに届くので、批評役が読み取り専用なのは、それらがすべて読み取り専用である場合だけです。`inheritMcp: false` を加えると `call_mcp_tool` が消え、さらに `excludeDefaultComponents: true` を加えても何も変わりませんでした。同梱のエージェントはすべて、二つの継承フラグを false にしています。
 
-カスタムエージェントは `~/.gemini/config/agents/` と、プラグイン内の `agents/` から検出されます。2026-09-24 の agy 1.2.9 では、`agy agents` はグローバルのエージェントを表示し、プラグイン内のものは表示しませんでしたが、モデルはどちらも見て名前を挙げられました。ワークスペースの `.agents/agents/` のエージェントは、CLI にはまったく検出されませんでした。
+カスタムエージェントは `~/.gemini/config/agents/` と、プラグイン内の `agents/` から検出されます。2026-09-24 の agy 1.2.9 では、`agy agents` はグローバルのエージェントを表示し、プラグイン内のものは表示しませんでしたが、モデルはどちらも見て名前を挙げられました。ワークスペースの `.agents/agents/` のエージェントは、リポジトリを `--add-dir` で渡したときだけ検出されました。
 
 注意が二つあります。ドキュメントは、`tools` の未対応や綴り違いのツール名がサブエージェントを停止させるおそれがあると警告しているので、`scripts/check_skills.py` がすべての名前を既知の一覧と照合します。また agy 1.2.7 以降、`find_by_name`、`grep_search`、`list_dir` は既定のツールセットから外れており、カスタムエージェントはそれらを挙げたときだけ使えます。
 
