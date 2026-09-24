@@ -1,11 +1,19 @@
 {
   "name": "gravitas",
   "version": "1.0.0-beta.2",
-  "description": "Evidence tiers, proxy detection, read-only verifier agents and a prose standard for Google Antigravity.",
+  "description": "Makes your Antigravity agent prove its work before it says it is done: it says how it knows each claim, checks the real thing instead of an easy stand-in, and has separate inspectors look for mistakes.",
   "author": {
     "name": "Iamemily2050",
     "url": "https://github.com/Emily2040"
   },
   "license": "MIT",
-  "keywords": ["verification", "evidence", "subagents", "orchestration", "prose"]
+  "keywords": [
+    "verification",
+    "evidence",
+    "subagents",
+    "orchestration",
+    "prose"
+  ],
+  "displayName": "Gravitas",
+  "repository": "https://github.com/Emily2040/gravitas"
 }
