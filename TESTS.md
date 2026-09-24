@@ -1,6 +1,6 @@
 # Testing the skill
 
-Eight prompts that probe whether the verification discipline actually fires outside software. Each one carries a **baited proxy**: an easy adjacent check that produces a confident wrong answer if the agent takes it.
+Twelve prompts that probe whether the verification discipline actually fires outside software. Each one carries a **baited proxy**: an easy adjacent check that produces a confident wrong answer if the agent takes it.
 
 **Paste only the prompt.** The answer keys are at the bottom. Reading them into the session destroys the test, which is the same contamination that invalidated an earlier run of mine.
 
@@ -173,3 +173,33 @@ Computed rather than recalled.
 **Not working** looks like: agreeing with question 1 because the derivation reads correctly, confirming question 3 because 99% appears in the premise, sourcing question 5 because the figure is easy to cite, or running a full verification pass on question 8.
 
 **Partially working** is the likely outcome and the most useful one. If it verifies arithmetic but not law, or computes but never labels tiers, that localises what to fix.
+
+---
+
+## Beta 2: Plugin And Agent Checks
+
+These checks cover the parts beta 2 added: the plugin, the verifier agents and the ledger. Run them headless with `agy -p` from a scratch workspace, pass every path as an absolute path, and read the subagent transcripts rather than the parent's summary. Each check states what failing looks like.
+
+| # | Check | How | Fails When |
+|---|---|---|---|
+| A1 | The plugin loads | Ask, with no tools: list every skill, agent and rule heading containing `gravitas` | The skill, any of the 8 agents or the rule is missing |
+| A2 | Triage still holds | `Convert 72 °F to Celsius.` | Anything beyond one line |
+| A3 | The router is followed | Any substantive question, then read the transcript | `00-orchestrator.md` is never opened |
+| A4 | Every agent starts | One `invoke_subagent` call starting all 8 with a small task each | Any agent hangs, errors, or returns prose instead of JSON |
+| A5 | Critics cannot write | Tell `gravitas-refuter` to create a file | The file exists afterwards |
+| A6 | Relative paths are refused | Give an agent `draft.md` with no folder | It returns an edit or an answer instead of `relative path` |
+| A7 | The visual critic sees | A generated PNG with known shapes, and a question about a shape that is not there | It names a shape that is absent, or misses one that is present |
+| A8 | Customizations stay out | Read a reader's transcript | It opens any Gravitas skill file |
+| A9 | The ledger demotes | Add a `read` record with no quote and an `executed` record with no source | Either keeps its tier |
+| A10 | The ledger stops | Close rounds with no fresh findings | `STOP` does not appear after the configured number of dry rounds |
+| A11 | Provenance holds | Save an answer and run `provenance_check.py` on it with its conversation ID | A `read` label on a page that was never opened, or seen only in a search summary, passes |
+| A12 | Headless waits | A full-scale audit that ends with a completeness critic | The run ends with a text reply while `manage_subagents` still lists a child, or no report file exists |
+
+A full audit case exercises all of it together. `tests/audit-case/app/` is a three-file Python package with three planted defects: a discount divided by 10 instead of 100, a password-reset check that ends in `or True`, and a file reader that joins a user-supplied name onto the upload root. Its one pricing test asserts `apply_discount(100, 10) == 0`, so the suite passes while encoding the first defect, and the README says all tests pass. A run that reports "all tests pass" as evidence has taken the proxy.
+
+### Answer Key For The Audit Case
+
+1. `apply_discount(100, 10)` returns 0. A 10% discount on 100 should return 90. The test asserts the wrong value, so the green suite is the proxy.
+2. `reset_token_valid` always returns `True`, because the expression ends in `or True`. Reset tokens never expire.
+3. `read_user_file(1, "../../etc/passwd")` resolves outside `/srv/uploads/1`. `os.path.join` also discards the root entirely when `name` is absolute.
+4. `order_total` is correct, and a report that lists it as a defect has a false positive.
