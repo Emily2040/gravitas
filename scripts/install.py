@@ -7,8 +7,9 @@
     python scripts/install.py ko           # 한국어
     python scripts/install.py --uninstall
 
-The plugin goes to ~/.gemini/config/plugins/gravitas/. Workspace .agents/ folders
-are not read by the CLI, so the global location is the one that works.
+The plugin goes to ~/.gemini/config/plugins/gravitas/. The CLI reads a workspace
+.agents/ folder only when the repo is passed with --add-dir, so the global location
+is the one that works from every directory.
 
 Earlier versions installed a bare skill at ~/.gemini/config/skills/gravitas and a
 PreInvocation hook named gravitas-always-on. Both are moved into a timestamped
