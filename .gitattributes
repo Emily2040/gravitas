@@ -1,0 +1,7 @@
+# Antigravity parses these files; keep them LF on every platform.
+*.md    text eol=lf
+*.py    text eol=lf
+*.json  text eol=lf
+*.js    text eol=lf
+*.sh    text eol=lf
+*.ps1   text eol=lf
