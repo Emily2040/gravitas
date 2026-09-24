@@ -70,7 +70,7 @@ Gravitas 以插件形式安装正是这个原因：一个文件夹承载技能�
 - 用 JSON 序列化器写 `hooks.json`。bash heredoc 会把 Windows 路径中成对的反斜杠合并，产生无效的转义。
 - 钩子的工作目录是包含 `hooks.json` 的那个文件夹。
 - 失败的 `PreInvocation` 钩子会被跳过：无效的 JSON、空输出、非零退出和超时都被容忍了（2026 年 9 月 19 日）。`PreToolUse` 钩子失败时则拒绝：无效的 JSON、`{}`、缺少 `decision` 和非零退出都会拒绝这次调用，只有空输出会放行（1.2.9）。超时确实生效。自桌面版 2.4.3 起，无法运行的配置会在加载时被拒绝并报错。
-- `terminationBehavior: "force_continue"` 没有上限（open issue #1055）：在 1.2.9 上它强制了 12 轮空话，其中两轮去调用了没人要求的工具。`Stop` 钩子可以用 `decision: "continue"` 阻止终止，并会收到可用于设限的 `executionNum`。见 `10-iteration.md`。
+- `terminationBehavior: "force_continue"` 没有上限（open issue #1055）：在 1.2.9 上钩子运行了 12 次，强制多出 11 次模型调用，其中九次是空话，两次去调用了没人要求的工具。`Stop` 钩子可以用 `decision: "continue"` 阻止终止，并会收到可用于设限的 `executionNum`。见 `10-iteration.md`。
 
 要验证一个钩子，让它的脚本向一个哨兵文件追加内容，并注入一个唯一随机数、要求代理复述它，然后两者都检查。文件合法、日志安静，都不能证明钩子运行过。
 

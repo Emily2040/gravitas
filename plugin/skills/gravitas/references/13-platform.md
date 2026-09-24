@@ -70,7 +70,7 @@ A security audit's final reply was replaced by "This request was blocked by Gemi
 - Write `hooks.json` with a JSON serializer. A bash heredoc collapses doubled backslashes in Windows paths and produces invalid escapes.
 - The working directory for a hook is the folder that contains `hooks.json`.
 - A failing `PreInvocation` hook is skipped: invalid JSON, empty output, a non-zero exit and a timeout were each tolerated (19 September 2026). A `PreToolUse` hook fails closed: invalid JSON, `{}`, a missing `decision` and a non-zero exit each deny the call, and only empty output lets it through (1.2.9). Timeouts are enforced. Since desktop 2.4.3, configurations that cannot run are rejected at load time with an error.
-- `terminationBehavior: "force_continue"` has no ceiling (open issue #1055): on 1.2.9 it forced 12 turns of filler, two of them reaching for tools nobody asked for. A `Stop` hook can block termination with `decision: "continue"` and receives `executionNum` to bound it. See `10-iteration.md`.
+- `terminationBehavior: "force_continue"` has no ceiling (open issue #1055): on 1.2.9 the hook ran 12 times and forced 11 more model calls, nine of filler and two calling tools nobody asked for. A `Stop` hook can block termination with `decision: "continue"` and receives `executionNum` to bound it. See `10-iteration.md`.
 
 To verify a hook, have its script append to a sentinel file and inject a unique nonce with an instruction to repeat it, then check both. A valid file and a quiet log are not evidence that the hook ran.
 
