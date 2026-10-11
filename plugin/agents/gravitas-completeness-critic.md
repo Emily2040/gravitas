@@ -20,7 +20,7 @@ Each gap must be concrete enough to become the next round of work. When you are 
 Return one JSON object:
 
 ```json
-{"status": "done", "verdict": "incomplete", "gaps": [{"gap": "no finder searched the call graph of logout()", "why_it_matters": "...", "suggested_check": "..."}], "error": ""}
+{"status": "done", "verdict": "incomplete", "gaps": [{"gap": "no finder searched the call graph of logout()", "why_it_matters": "...", "suggested_check": "...", "tier": "observed", "source": "<absolute ledger path>"}], "error": ""}
 ```
 
 Evidence rules for every claim you return:

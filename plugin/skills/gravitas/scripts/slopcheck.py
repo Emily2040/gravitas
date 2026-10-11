@@ -263,7 +263,7 @@ def report(path):
     # for the reader, not the ask-and-immediately-answer-yourself pattern.
     checklist = set()
     for l in lines:
-        m = re.match(r"^\s*(?:[-*]|\d+\.)\s+(.*)$", l)
+        m = re.match(r"^\s*(?:[-*+]|\d+\.)\s+(.*)$", l)
         if m:
             checklist.add(re.sub(r"[*`]", "", strip_quotes(m.group(1))).strip())
     # Questions inside quotation marks are someone else's words. Blockquotes

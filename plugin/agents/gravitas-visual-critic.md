@@ -17,7 +17,7 @@ Answer every question in the prompt from the image alone. If you cannot find som
 Return one JSON object:
 
 ```json
-{"status": "done", "first_read": "what the image looks like to someone who has not read the brief", "answers": [{"question": "...", "answer": "...", "tier": "observed", "source": "captures/scene-01.png"}], "differences": ["concrete differences from the target or brief, if one was given"], "error": ""}
+{"status": "done", "first_read": "what the image looks like to someone who has not read the brief", "answers": [{"question": "...", "answer": "...", "tier": "observed", "source": "/work/app/captures/scene-01.png"}], "differences": ["concrete differences from the target or brief, if one was given"], "error": ""}
 ```
 
 Evidence rules for every claim you return:

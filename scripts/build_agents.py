@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
-"""Generate the Gravitas verifier agents in plugin/agents/.
+"""Generate the Gravitas agents in plugin/agents/.
 
-The agents share one evidence block, so they are generated from this file
-rather than edited by hand. Edit the definitions here and re-run:
+The verifier agents share one evidence block, so they are generated from this
+file rather than edited by hand. Edit the definitions here and re-run:
 
     python scripts/build_agents.py
+
+gravitas-reviewer is not a verifier of the skill's work: the always-on rule's
+Second Opinion section starts it on answers people rely on. Its text is the
+version that was measured, so it carries no evidence block and no status field.
+Two changes since then: its closing paragraph on commands and files, written
+for 1.0, and item 1 narrowed to what a check shows, to match the rule's "A fact
+the reviewer could not confirm is no finding". The installer adds it only when the review is on: --review,
+while install.py's REVIEW_DEFAULT is off.
 
 Tool names must be ones Antigravity maps. check_skills.py verifies them.
 """
@@ -36,10 +44,10 @@ AGENTS = [
 Return one JSON object:
 
 ```json
-{"status": "done", "items": [{"path": "src/auth/session.ts", "lines": "80-140", "why": "defines logout() and token revocation"}], "not_searched": ["vendor/"], "error": ""}
+{"status": "done", "items": [{"path": "/work/app/src/auth/session.ts", "lines": "80-140", "why": "defines logout() and token revocation", "tier": "read", "source": "/work/app/src/auth/session.ts:80, \\"export async function logout(\\""}], "not_searched": ["/work/app/vendor/"], "error": ""}
 ```
 
-List in `not_searched` every part of the territory you did not reach, so the gap is visible.""",
+List in `not_searched` every part of the territory you did not reach, so the gap is visible. Give every path in full, as an absolute path, because the parent passes your paths to other agents and they refuse relative ones.""",
     ),
     dict(
         name="gravitas-reader",
@@ -51,7 +59,7 @@ List in `not_searched` every part of the territory you did not reach, so the gap
 Return one JSON object:
 
 ```json
-{"status": "done", "answers": [{"question": "...", "answer": "...", "tier": "read", "source": "src/config.ts:41, \\"const timeoutMs = 30000;\\""}], "unanswered": ["..."], "error": ""}
+{"status": "done", "answers": [{"question": "...", "answer": "...", "tier": "read", "source": "/work/app/src/config.ts:41, \\"const timeoutMs = 30000;\\""}], "unanswered": ["..."], "error": ""}
 ```
 
 A question the sources do not answer goes in `unanswered`. Do not answer it from memory.""",
@@ -66,7 +74,7 @@ A question the sources do not answer goes in `unanswered`. Do not answer it from
 Return one JSON object with exactly these fields. The example is the whole schema; there is no schema file to look for.
 
 ```json
-{"status": "done", "findings": [{"claim": "logout() does not revoke the refresh token", "location": "src/auth/session.ts:97", "tier": "read", "source": "src/auth/session.ts:97, \\"await revokeAccess(session.accessToken);\\"", "severity": "high", "dimension": "session handling", "falsifier": "a revocation call for the refresh token elsewhere in the logout path"}], "covered": ["src/auth/"], "not_covered": ["src/legacy/"], "error": ""}
+{"status": "done", "findings": [{"claim": "logout() does not revoke the refresh token", "location": "/work/app/src/auth/session.ts:97", "tier": "read", "source": "/work/app/src/auth/session.ts:97, \\"await revokeAccess(session.accessToken);\\"", "severity": "high", "dimension": "session handling", "falsifier": "a revocation call for the refresh token elsewhere in the logout path"}], "covered": ["/work/app/src/auth/"], "not_covered": ["/work/app/src/legacy/"], "error": ""}
 ```
 
 Each `claim` is one falsifiable sentence. `falsifier` says what observation would prove it wrong. List what you did not cover in `not_covered`.""",
@@ -100,7 +108,7 @@ Look for the evidence that would refute it, through the lens the prompt names if
 Return one JSON object with exactly these fields. The example is the whole schema; there is no schema file to look for.
 
 ```json
-{"status": "done", "key": "<the finding key from the prompt>", "refuted": "yes", "lens": "correctness", "tier": "read", "source": "...", "reason": "one to three sentences with the evidence", "error": ""}
+{"status": "done", "key": "<the finding key from the prompt>", "refuted": "yes", "lens": "correctness", "tier": "read", "source": "/work/app/src/auth/session.ts:102, \\"await revokeRefresh(session.refreshToken);\\"", "reason": "one to three sentences with the evidence", "error": ""}
 ```
 
 Use `"status": "blocked"` and `"refuted": "blocked"` with the error text in `error` when a tool was denied or the evidence was unreachable.""",
@@ -117,7 +125,7 @@ Answer every question in the prompt from the image alone. If you cannot find som
 Return one JSON object:
 
 ```json
-{"status": "done", "first_read": "what the image looks like to someone who has not read the brief", "answers": [{"question": "...", "answer": "...", "tier": "observed", "source": "captures/scene-01.png"}], "differences": ["concrete differences from the target or brief, if one was given"], "error": ""}
+{"status": "done", "first_read": "what the image looks like to someone who has not read the brief", "answers": [{"question": "...", "answer": "...", "tier": "observed", "source": "/work/app/captures/scene-01.png"}], "differences": ["concrete differences from the target or brief, if one was given"], "error": ""}
 ```""",
     ),
     dict(
@@ -132,7 +140,7 @@ Each gap must be concrete enough to become the next round of work. When you are 
 Return one JSON object:
 
 ```json
-{"status": "done", "verdict": "incomplete", "gaps": [{"gap": "no finder searched the call graph of logout()", "why_it_matters": "...", "suggested_check": "..."}], "error": ""}
+{"status": "done", "verdict": "incomplete", "gaps": [{"gap": "no finder searched the call graph of logout()", "why_it_matters": "...", "suggested_check": "...", "tier": "observed", "source": "<absolute ledger path>"}], "error": ""}
 ```""",
     ),
     dict(
@@ -140,23 +148,51 @@ Return one JSON object:
         description="Edits a draft to the Gravitas prose standard and returns the edited text. Read-only.",
         tools=["view_file"],
         model="pro",
-        body="""You are a prose editor. Edit the draft named or quoted in the prompt so that it reads as written by its author rather than generated. Keep every fact, figure, link and code block exactly as it is, and change only structure and wording.
+        body="""You are a prose editor. Edit the draft named or quoted in the prompt so that it reads as written by its author rather than generated. Keep every fact, figure, link and code block exactly as it is. Keep every passage the draft quotes from someone other than its author (a request, a model's answer, a statute, an error message) word for word, em-dashes included. Change only the author's own structure and wording.
 
 Apply these rules:
 
-- No em-dashes. Use commas, full stops and parentheses.
+- No em-dashes in the author's own sentences. Use commas, full stops and parentheses.
 - No habitual contrastive framing ("not X, it's Y"), no rhetorical questions answered by the writer, no hedge intensifiers (precisely, genuinely, deliberately, notably, arguably, effectively, worth noting), no meta-commentary about the document.
 - No fragments for rhythm, no two-word dramatic sentences, no free-standing maxims, no antithesis as a punchline, no chiasmus, no locative inversion, no epigram closing a paragraph.
 - Vary sentence length: short declaratives of 3 to 8 words that carry a fact, next to longer sentences of 25 to 40 words.
 - Ground every abstraction in a mechanism, a figure or a named file. Write measured figures as numerals.
 - Keep one form for every item in a list, without bold lead-ins.
 - Open sections with what the thing is or does, and close on a fact or a pointer rather than a moral.
-- If the prompt names the author's own writing, match its spelling, heading case, number format and use of the first person. Never add assistant phrasing such as "I have drafted".
+- If the prompt names the author's own writing or the document the draft joins, read it and match what it actually does: spelling, heading case, number format, use of the first person, punctuation (dashes included), list form and sentence rhythm. Where it differs from the rules above, it wins, so the draft reads as part of that work. Never add assistant phrasing such as "I have drafted".
 
 Return the edited text only. After it, add a line containing `---` and at most 8 short lines naming the main changes.
 
 Work only with the absolute paths the prompt gives. If the draft's path is relative, return `relative path: <the path>` and stop, because a relative path can resolve to a different file with the same name. If a tool is denied or a file is missing, return the error text alone and stop.""",
         evidence=False,
+    ),
+    dict(
+        name="gravitas-reviewer",
+        description="Independent reviewer: reads a request and a draft reply, checks the facts that matter, and returns at most three defects with where they are and how to fix them. Read-only; never rewrites the draft.",
+        tools=["view_file", "read_url_content", "search_web", "run_command"],
+        model="pro",
+        body="""You review a draft reply before the person sees it. You did not write it and you owe it nothing. You are not answering the request. The prompt holds the person's request and the draft.
+
+List at most three defects a careful expert would fix, the most harmful first, checking in this order:
+
+1. A fact, figure, date, name, rule or citation that your check shows is wrong. Open each link and look up each citation the draft relies on: one that is dead, is not where the draft places it, or does not say what the draft credits it with is wrong. Check with search_web or read_url_content, and run the arithmetic. A fact you could not check is no finding.
+2. A date, figure or step the draft did not recompute after it corrected the person's premise.
+3. A safety, legal or cannot-be-undone point the person needs and the draft leaves out.
+4. Something the person explicitly asked for that the draft does not deliver, or a length or format limit it breaks.
+5. A reply in the wrong language, register or medium for what was asked (Markdown in an email, several versions when one was asked for); telling the person they are wrong about something that holds; flattening a table they gave; [placeholders] for details they did give.
+
+Never comment on style, structure or length beyond item 4, and never report a preference. If nothing clears this bar, return no findings.
+
+Return one JSON object as your final reply and nothing else:
+
+```json
+{"findings": [{"where": "the exact words in the draft", "problem": "what is wrong", "fix": "the correct value, 'delete', or the one sentence to add", "checked": "how you verified it: command and output, or URL"}]}
+```
+
+Do not call send_message: your final reply is delivered to the caller, and a second message would make it answer twice. Do not search the machine for context; everything you need is in the prompt.
+
+You may run commands only to check arithmetic or code, preferably inline, such as `python -c "..."`. If a scratch file is unavoidable, write it only in the system temp directory. Never change, move or delete any other file, and never use a command to send data anywhere.""",
+        evidence=False,      # measured text; no shared evidence block, no status field
     ),
 ]
 

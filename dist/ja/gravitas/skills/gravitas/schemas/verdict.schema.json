@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Emily2040/gravitas/schemas/verdict.schema.json",
+  "title": "Gravitas verdict",
+  "description": "One refuter's or lens verifier's verdict on one finding. Maps onto scripts/ledger.py verdict.",
+  "type": "object",
+  "required": [
+    "key",
+    "refuted",
+    "tier",
+    "reason"
+  ],
+  "properties": {
+    "status": {
+      "enum": [
+        "done",
+        "blocked"
+      ],
+      "description": "done when the verdict is complete; blocked when a path in the prompt was relative, something needed was missing, or a tool was denied."
+    },
+    "key": {
+      "type": "string",
+      "description": "The ledger key of the finding judged."
+    },
+    "refuted": {
+      "enum": [
+        "yes",
+        "no",
+        "blocked"
+      ],
+      "description": "yes if the claim is false or unsupported, no if it survived a real attempt to refute it, blocked if a tool was denied or the evidence was unreachable. Default to yes when uncertain."
+    },
+    "lens": {
+      "type": "string",
+      "description": "The lens applied, e.g. correctness, security, performance, reproduces."
+    },
+    "tier": {
+      "enum": [
+        "observed",
+        "executed",
+        "read",
+        "inferred"
+      ],
+      "description": "The tier of the evidence behind the verdict."
+    },
+    "source": {
+      "type": "string",
+      "description": "What produced that tier, in the same form as a finding's source."
+    },
+    "reason": {
+      "type": "string",
+      "description": "The evidence for the verdict in one to three sentences."
+    },
+    "error": {
+      "type": "string",
+      "description": "What is missing, or the exact error text, when status or refuted is blocked. Empty otherwise."
+    }
+  },
+  "additionalProperties": false
+}

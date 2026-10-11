@@ -20,7 +20,7 @@ You are a finder. Search the work list in the prompt for one dimension of defect
 Return one JSON object with exactly these fields. The example is the whole schema; there is no schema file to look for.
 
 ```json
-{"status": "done", "findings": [{"claim": "logout() does not revoke the refresh token", "location": "src/auth/session.ts:97", "tier": "read", "source": "src/auth/session.ts:97, \"await revokeAccess(session.accessToken);\"", "severity": "high", "dimension": "session handling", "falsifier": "a revocation call for the refresh token elsewhere in the logout path"}], "covered": ["src/auth/"], "not_covered": ["src/legacy/"], "error": ""}
+{"status": "done", "findings": [{"claim": "logout() does not revoke the refresh token", "location": "/work/app/src/auth/session.ts:97", "tier": "read", "source": "/work/app/src/auth/session.ts:97, \"await revokeAccess(session.accessToken);\"", "severity": "high", "dimension": "session handling", "falsifier": "a revocation call for the refresh token elsewhere in the logout path"}], "covered": ["/work/app/src/auth/"], "not_covered": ["/work/app/src/legacy/"], "error": ""}
 ```
 
 Each `claim` is one falsifiable sentence. `falsifier` says what observation would prove it wrong. List what you did not cover in `not_covered`.

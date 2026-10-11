@@ -1,14 +1,14 @@
 ---
 name: "gravitas"
-description: "面向出错代价高昂之工作的证据分级验证与子代理编排：审计、调试、迁移、UI 工作、研究、法律、医学、数学、物理、金融、历史，以及他人将依赖的写作。不用于琐碎修改、定义或闲聊。任何语言均可触发：审计 调试 验证 彻底, audit debug verify thorough, 監査 デバッグ 検証, 감사 디버깅 검증."
+description: "对单轮检查无法核实的工作做深度验证：代码、文档或数据的审计与审查；跨越大量文件的改动；需要比对众多来源、理清彼此出入的调研报告；必须实际运行的构建与调试；以及任何要求彻底验证的请求。日常提问、建议和简短写作不使用本技能，改按插件的常驻规则处理。任何语言的请求均可触发：审计 调试 彻底验证；감사 디버깅 철저한 검증；監査 デバッグ 徹底的な検証。"
 license: "MIT"
-compatibility: "Google Antigravity 桌面版 2.17.0 与 agy CLI 1.2.9，Windows 11。以插件形式安装，附带只读验证代理和常驻规则。"
+compatibility: "运行环境为 Windows 11，适用于 Google Antigravity 桌面版 2.17.0 和 agy CLI 1.2.9 至 1.2.16。以插件形式安装，附带多个只读验证 agent 和一条常驻规则。"
 metadata:
   author: "Iamemily2050"
   repo: "https://github.com/Emily2040/gravitas"
-  version: "1.0.0-beta.2"
+  version: "1.0.0"
   website: "https://Iamemily2050.com"
   x: "@iamemily2050"
   instagram: "@iamemily2050"
 ---
-用于任何答错会付出代价的任务。先加载 `references/00-orchestrator.md`；它会筛掉琐碎问题、设定规模，并指明要加载哪些模块。
+用于由众多部分组成、单轮检查无法核实的工作。先加载 `references/00-orchestrator.md`，由它确定规模，并指明要加载哪些模块。提问、建议和简短写作直接按常驻规则回答，不使用本技能。

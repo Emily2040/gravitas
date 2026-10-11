@@ -63,7 +63,7 @@ Change one thing at a time, keep every run in a saved script rather than as an a
 - At least one gate was watched failing.
 - Every pass that matters names the evidence that the tested path ran.
 - Console output is asserted on, and nothing is merely collected.
-- A fresh critic looked at the rendered result and answered material, lighting and recognition questions.
+- When the result is rendered, a fresh critic looked at it and answered material, lighting and recognition questions.
 - Everything the plan specified about appearance has a gate that asks whether it reads that way.
 - The report states what was not covered.
 

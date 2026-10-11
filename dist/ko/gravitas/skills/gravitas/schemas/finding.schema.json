@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Emily2040/gravitas/schemas/finding.schema.json",
+  "title": "Gravitas finding record",
+  "description": "One claim returned by a finder, reader or scout. A list of these is what scripts/ledger.py add expects.",
+  "type": "object",
+  "required": [
+    "claim",
+    "location",
+    "tier"
+  ],
+  "properties": {
+    "claim": {
+      "type": "string",
+      "description": "One falsifiable statement, in a full sentence."
+    },
+    "location": {
+      "type": "string",
+      "description": "Where it applies: file:line, URL, statute section, spreadsheet cell, page, slide or timestamp."
+    },
+    "tier": {
+      "enum": [
+        "observed",
+        "executed",
+        "read",
+        "inferred"
+      ],
+      "description": "What happened during this work to establish the claim."
+    },
+    "source": {
+      "type": "string",
+      "description": "What produced the tier: the artifact inspected, the command and its result, or the URL or path with the quoted line. Empty only for inferred."
+    },
+    "severity": {
+      "enum": [
+        "critical",
+        "high",
+        "medium",
+        "low",
+        "info"
+      ],
+      "default": "medium"
+    },
+    "dimension": {
+      "type": "string",
+      "description": "The angle or lens that found it, e.g. security, contract, rendering, citation."
+    },
+    "hypothesis": {
+      "type": "boolean",
+      "description": "True when the claim is inferred and has no independent check yet."
+    },
+    "falsifier": {
+      "type": "string",
+      "description": "What observation would show the claim is wrong."
+    },
+    "key": {
+      "type": "string",
+      "description": "Optional stable deduplication key. The ledger computes one from location and claim when absent."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "tier": {
+            "enum": [
+              "observed",
+              "executed",
+              "read"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "source"
+        ],
+        "properties": {
+          "source": {
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

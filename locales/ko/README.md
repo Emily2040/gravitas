@@ -2,72 +2,86 @@
 
 [English](https://github.com/Emily2040/gravitas/blob/main/README.md) · [简体中文](https://github.com/Emily2040/gravitas/blob/main/README.zh-CN.md) · [日本語](https://github.com/Emily2040/gravitas/blob/main/README.ja.md) · **한국어**
 
-이 파일은 설치 프로그램이 플러그인 안에 넣어 둔 README 사본입니다. 시험 결과와 다른 스킬과의 비교까지 담은 전체 버전은 [GitHub](https://github.com/Emily2040/gravitas)에 있으며, 베타 기간에는 비공개입니다.
+이 파일은 설치 프로그램이 플러그인 폴더 안에 넣어 둔 README 사본입니다. 여러 언어의 실제 사례, 모든 시험 결과, 다른 도구와의 비교까지 담은 전체 버전은 [GitHub](https://github.com/Emily2040/gravitas)에 있습니다.
 
 ## 1부: 방금 설치한 것
 
-Gravitas는 Antigravity 에이전트가 끝났다고 말하기 전에 먼저 자기 작업을 증명하게 합니다.
+Gravitas는 Antigravity 에이전트에게 여러분의 요청을 가장 잘 해낼 사람처럼 답하고, 그 답이 기대는 것을 확인하고, 여러분이 잘못 알고 있는 것이 있으면 친절하게 알려 주라고 요청합니다.
 
-AI 에이전트는 일의 쉬운 부분만 확인하고, 거기에 문제가 없으니 일 전체가 괜찮다고 보고할 수 있습니다. 시험에서 가장 흔한 실수는 에이전트가 열어 보지도 않은 자료를 읽었다고 말하는 것이었습니다. Gravitas는 에이전트에게 세 가지 습관을 줍니다.
+Gravitas는 모든 대화에 짧은 규칙을 하나 더합니다. 규칙은 에이전트에게 여러분의 말을 뜻한 대로 읽고, 이 요청에 가장 맞는 사람이라면 줄 답을 주라고 합니다. 메일이라면 노련한 편집자, 버그라면 엔지니어, 약 용량 질문이라면 임상의입니다. 가장 먼저 필요한 것을 앞에 둡니다. 여러분이 믿고 쓸 것은 실제로 쓸 방식대로 시험합니다. 단계는 끝까지 따라가 보고, 코드는 돌려 보고, 자주 바뀌는 규정은 공식 페이지를 열어 보고, 개수가 중요하면 스크립트로 셉니다. 주장마다 근거만큼만 확실하게 말하고, 규정이 기대는 장소와 날짜를 밝히며, 정확히 말할 수 없을 때는 범위와 그 이유를 줍니다. 여러분이 잘못 알고 있는 것이 있으면 친절하게 말하고, 오류가 미친 곳까지만 바로잡은 뒤, 그래도 원래 원하던 것을 줍니다. 글은 그 글을 읽을 사람에게 맞춰, 여러분의 언어와 관례로 씁니다. 이 폴더에 든 한국어 규칙은 누군가 읽고 그대로 따라 할 기술 문서를 쉬운 우리말로 쓰게 합니다.
 
-1. 어떻게 아는지 말하기. 모든 주장에 표시가 붙습니다. 직접 봤다, 직접 실행했다, 읽었고 해당 줄은 이것이다, 또는 추론했거나 기억해 냈다.
-2. 옆에 있는 쉬운 것 말고 진짜를 확인하기.
-3. 다른 누군가가 깨뜨려 보게 하기. 별도의 검사 에이전트가 실수와 빈틈을 찾으며, 이들에게는 파일을 편집하는 도구가 없습니다.
+그 모든 것 밑에는 최소 기준이 있습니다. 평범한 답보다 못하지 않게 한다는 것입니다. 잘 쓴 평범한 답이 주는 것은 모두 지키고, 답에는 진행 상황 문구나 표시, 지금 확인하고 있다는 메모를 넣지 않습니다. 위험 신호와 상담 전화는 임상의라면 아직 지나가지 않은 위험으로 읽을 자리에만 붙이고, 위험에 처했을 수 있는 사람에게는 훈련받은 위기 상담사처럼 답합니다.
 
-예를 들어, 10,000명 중 1명꼴로 생기는 질환을 “정확도 99%”인 검사로 검사해 양성이 나오면 그 질환이 있을 확률이 99%라고 말하고 맞는지 확인해 달라고 했을 때, Gravitas는 아니라고 답했습니다. 실제 수치는 약 102명 중 1명입니다. 계산 과정을 보여 주었고, 계산한 숫자마다 여러분이 직접 실행해 볼 수 있는 명령을 붙였습니다.
+예를 들어 시험에서 누군가 부모님 결혼 30주년 축사를 부탁하면서, 30주년이 은혼식이니 '은빛'을 키워드로 써 달라고 했습니다. 은혼식은 25주년이고 30주년은 진주혼식입니다. Gemini 3.1 Pro에서 기본 Antigravity는 이 착각을 그대로 따라갔고, Gravitas는 축사를 쓰기 전에 이름부터 바로잡은 뒤 '은빛'은 부모님 머리에 내려앉은 은빛으로, 은수저 선물은 선물 이야기로 살려 냈습니다. Gemini 3.8 Flash에서는 Gravitas 규칙만으로는 놓쳤고, 아래의 두 번째 의견을 켰을 때 잡아냈습니다.
 
-틀리면 대가가 따르는 작업에서는 저절로 켜집니다. 감사, 디버깅, 여러 파일에 걸친 변경, 디자인 작업, 리서치, 법률, 의학, 수학, 금전, 역사입니다. 빠른 질문에는 빠르게 답합니다.
+이 사례와 아래의 모든 수치는 이전 규칙(v4)으로 잰 것입니다. 이번 릴리스의 규칙은 v4가 기본 Antigravity나 `/boost`에 분명하게 진 비교 118건을 하나하나 처음부터 다시 따져 보고 새로 만들었습니다. 그중 실제로 진 109건을 열 가지 원인으로 나누었고, 초안 네 개를 차례로 공격자의 시험에 부쳤습니다. 새 규칙은 실제로 설치한 환경에서 사례 17개로 돌린 출시 점검을 통과했습니다. 잡담과 역할극은 네 언어 모두 문제가 없었고, 최소 기준을 두 차례 고친 뒤에는 언어마다 하나씩 둔 위기 사례가 모두 같은 모델의 기본 Antigravity보다 낫다는 판정을 받았습니다. 전체 벤치마크는 아직 거치지 않았습니다. v4가 이기지 못한 곳은 에지 세트(역사, 깊은 지식, 말장난, 창작)와 일부 모델(Codex의 GPT-6 Astra, Grok 4.5)이었고, 이번에 새로 만든 규칙이 겨냥하는 곳도 바로 거기입니다.
 
-확인을 거친 답은 빠른 답보다 오래 걸리고 요금제 사용량도 더 씁니다. 위의 예는 약 100초, 작은 프로젝트의 전체 감사는 약 6분이 걸렸습니다. 모델을 더 똑똑하게 만들 수는 없고, 아무도 확인할 수 없는 것을 확인할 수도 없습니다. 대조할 것이 없으면 그 주장을 추론으로 표시합니다. 비공개 베타이며, Windows 11에서 Google의 Gemini 모델로 시험했습니다.
+감사, 검토, 여러 파일에 걸친 변경, 리서치 보고서, 빌드처럼 한 번에 확인할 수 없는 일에서는 에이전트가 심층 작업 스킬을 불러옵니다. 거기서 에이전트는 주장마다 어떻게 아는지 밝히고, 파일을 고치는 도구가 없는 별도의 검사 에이전트들이 실수와 빈틈을 찾습니다.
 
-끄려면 Antigravity가 플러그인용으로 문서화한 명령인 `agy plugin disable gravitas`를 실행하고, 다시 켜려면 `agy plugin enable gravitas`를 실행하세요. 문제를 알리려면 작성자의 [GitHub 프로필](https://github.com/Emily2040)에 있는 링크를 쓰세요.
+`--review`로 설치했다면 두 번째 의견이 켜져 있습니다. 여러분이 믿고 쓰거나 행동에 옮기거나 보낼 답은 Gemini 3.1 Pro로 도는 독립된 검토자에게 가고, 검토자는 실수를 많아야 세 개 짚으며, 에이전트는 여러분이 답을 보기 전에 그것만 고칩니다. 기다리는 동안에는 답을 한 번 더 확인하고 있다는 한 줄짜리 메시지가 나옵니다. 더블클릭 설치 프로그램은 이 기능을 설치하지 않고, 터미널에서 `--review`를 붙여 설치해야 들어갑니다.
+
+드는 비용은 이렇습니다. Gemini 3.8 Flash로 일상 요청 60개를 돌렸을 때, 답 하나에 걸린 시간의 중앙값은 v4 규칙이 있으면 35-36초, 없으면 22-23초였고, 두 번째 의견까지 쓰면 80-81초였습니다. Gemini 3.1 Pro에서는 규칙 때문에 몇 초가 늘었습니다. 이번 릴리스의 규칙은 v4보다 길고(809단어에 비해 1,216단어), 그 비용은 아직 벤치마크로 재지 않았습니다. 심층 작업은 몇 분이 걸리고 여러 에이전트를 동시에 돌립니다.
+
+할 수 없는 것도 있습니다. 모델이 아는 것보다 더 많이 알게 만들 수는 없습니다. 규칙은 지시문이라서, 모델이 놓칠 수도 있고 맞지 않는 곳에 적용할 수도 있습니다. 모든 벤치마크 실행은 Windows 11에서 `agy` 명령줄 도구로 했고, 데스크톱 앱은 벤치마크하지 않았으며, Mac 설치 프로그램은 실제 Mac에서 돌려 본 적이 없습니다.
+
+지우려면 설치 프로그램을 다시 더블클릭하고 Gravitas 제거를 고르거나, 내려받은 폴더에서 `python scripts/install.py --uninstall`을 실행하세요. 어느 쪽이든 플러그인은 홈 폴더의 `.gemini/gravitas-backups` 안에, 그때의 날짜와 시각으로 이름 붙인 폴더로 옮겨집니다. 지우지 않고 끄기만 하려면 `agy plugin disable gravitas`를, 다시 켜려면 `agy plugin enable gravitas`를 실행하세요. 두 명령 모두 성공하면 아무것도 출력하지 않고, 다시 설치해도 다시 켜지지 않습니다. 두 번째 의견을 넣거나 빼려면 `install.py`를 `--review`나 `--no-review`와 함께 다시 실행하고, 언어 코드를 붙여 설치했다면(한국어는 `ko`) 그 코드도 함께 붙이세요. 문제를 알리려면 제 [GitHub 프로필](https://github.com/Emily2040)에 있는 링크를 쓰세요.
 
 ## 2부: 이 폴더에 든 것
 
 ```text
-plugin.json                  manifest: the name and description Antigravity lists
-rules/AGENTS.md              always-on rule: when to load the skill, and three rules that hold while it is in use
-agents/                      eight agents with fixed tool lists
-skills/gravitas/SKILL.md     the router; it loads references/00-orchestrator.md
-skills/gravitas/references/  fourteen modules, each 100 lines or fewer so one view_file call reads it whole
-skills/gravitas/schemas/     the finding and verdict records subagents return
+plugin.json                  매니페스트: Antigravity가 목록에 보여 주는 이름과 설명
+rules/AGENTS.md              상시 규칙: 이 사람에게 가장 좋은 답, 최소 기준, 설치했다면 두 번째 의견, 스킬을 불러올 때
+agents/                      도구 목록이 정해진 에이전트 여덟 개, --review로 설치했다면 gravitas-reviewer 추가
+skills/gravitas/SKILL.md     심층 작업 라우터. references/00-orchestrator.md를 불러옴
+skills/gravitas/references/  모듈 열다섯 개. view_file 한 번에 다 읽히도록 각각 100줄 이하
+skills/gravitas/schemas/     서브에이전트가 돌려주는 발견 사항과 판정 기록
 skills/gravitas/scripts/     ledger.py, provenance_check.py, check_skills.py, slopcheck.py
-skills/gravitas/examples/    a gate suite that goes red on the scene it was built from
+skills/gravitas/scripts/checks/  운문, 숫자, 날짜를 세는 검사 여섯 개와 그 데이터
+skills/gravitas/examples/    자기가 만들어진 장면에서 빨간불이 켜지는 게이트 모음
 ```
 
-실행은 이렇게 진행됩니다. 규칙은 항상 로드되어 있습니다. 해당하는 작업이면 에이전트가 스킬을 열고, 스킬은 오케스트레이터로 안내합니다. 오케스트레이터는 사소한 질문에는 바로 답합니다. 그렇지 않으면 작업 기록을 쓰고, 팬아웃, 투표, 멈춤 조건의 수치가 정해진 규모(quick, standard, full, exhaustive) 하나를 고르고, 불러올 모듈을 지정합니다. 작업 목록은 실제 도구로 만듭니다. 전문 에이전트는 절대 경로와 반환 스키마를 받아 팬아웃하고, 결론을 떠받치는 주장은 독립 검증으로 가며, 완결성 비평가는 한 번도 확인하지 않은 것을 지목합니다. 마지막으로 보고서가 발견을 등급, 빈틈과 함께 순위대로 정리합니다.
+규칙이 작동하는 방식. 규칙은 모든 줄을 다스리는 읽기 원칙 하나로 시작합니다. 사용자의 말을 사용자가 정한 틀 안에서 뜻한 대로 읽고, 답의 모든 부분은 사용자가 바라고 온 것에 무엇을 해 주는지로 크기를 정한다는 것입니다. 이어지는 일곱 줄이 가장 좋은 답이 무엇을 하는지 말합니다. 그 메시지가 찾는 최고의 적임자라면 줄 것을 주고, 가장 먼저 필요한 것을 앞에 둡니다. 믿고 쓸 것은 실제로 쓸 방식대로 시험하고, 주장마다 근거가 허락하는 만큼 정확하고 확실하게 말합니다. 뜻은 틀로, 행동은 현실로 판단하므로, 바로잡을 때는 오류가 퍼진 곳을 모두 다시 따지되 그 밖은 건드리지 않습니다. 글마다 그 글의 독자에게 맞추고, 그 분야의 기준에 맞춰 씁니다. 최소 기준 "평범한 답보다 못하지 않게"는 잘 쓴 평범한 답이 주는 것을 모두 지키고, 군더더기, 쓸모없는 과정 설명, 하지 않은 확인을 했다는 주장만 덜어 냅니다.
 
-| 등급 | 반드시 일어났어야 하는 일 |
+규칙을 만든 과정. 벤치마크에서 v4가 분명하게 진 비교를 모두 살펴보았습니다. 채점자 과반(적어도 둘)이 v4가 졌다고 보고, 채점자 절반 이상이 그 차이가 분명하다고 본 비교입니다. 하나하나 따져 본 이 패배 118건 가운데 9건은 우연한 흔들림이었고, 109건은 66개 사례에서 나온 실제 패배였습니다. 78건은 v4의 어떤 줄이 모델을 패배 쪽으로 밀었는데, 대개 그 사람에게 어떤 효과가 있든 위치를 정해 버리거나, 주제가 나오면 절을 붙이거나, 문장 형태만 보고 잘라 내는 고정된 형태의 줄이었습니다. 28건은 그 실수를 잡아 줄 줄이 v4에 없었고, 3건은 시험 하네스의 결함이었습니다. 새 규칙은 초안 네 개를 거쳤습니다. 초안마다 공격자가 그 초안을 깨뜨리려고 만든 요청으로 시험했습니다. 앞의 세 초안은 18개, 20개, 19개 요청에서 깨졌고, 다음 초안은 매번 그 깨진 곳을 없앴습니다. 그 뒤 설계를 바깥에서 한 번 더 검토받고 저장소도 한 번 더 교정했으며, 지적은 하나하나 실제 파일과 맞춰 본 뒤에야 반영했습니다. 설계에 관한 주장 132개 가운데 43개가 맞았습니다. 그에 따라 위기 상황의 답은 그 사람이 한 말의 무게에 맞추게 했고, 말씨와 호칭은 읽는 사람을 따르게 했으며, 규칙 세 줄을 더 분명하게 다듬고 검사 스크립트를 고쳤습니다. 교정에서 나온 지적 178개 가운데서는 87개를 고쳤습니다.
+
+실행이 진행되는 방식. 규칙은 늘 불러와져 있고, 평범한 요청에는 스킬 없이 대화 안에서 규칙에 따라 답합니다. 두 번째 의견이 설치되어 있으면, 에이전트는 초안 전체를 쓰고, 요청과 초안을 넘겨 `gravitas-reviewer`를 시작하고, `TimerCondition: "any"`로 180초짜리 `schedule` 타이머를 건 뒤, 대기 안내 한 줄을 남기고 턴을 끝냅니다. 검토자의 메시지가 오면 짚은 것만 고칩니다. 심층 작업에서는 스킬을 열고, 스킬은 오케스트레이터로 보냅니다. 오케스트레이터는 작업 기록을 쓰고, 팬아웃, 투표, 멈추는 조건의 수치가 정해진 규모(quick, standard, full, exhaustive) 하나를 고르고, 불러올 모듈을 정합니다. 작업 목록은 실제 도구로 만듭니다. 전문 에이전트는 절대 경로와 반환 스키마를 받아 팬아웃하고, 결론을 떠받치는 주장은 독립 검증으로 가며, 완결성 비평 에이전트가 한 번도 확인하지 않은 것을 짚고, 등급과 빈틈을 담은 보고서는 파일로 갑니다. 답에서는 판정과 발견 사항을 쉬운 말로 전합니다.
+
+| 등급 | 반드시 있었어야 하는 일 |
 | :--- | :--- |
-| `observed` | 결과물 자체를 살펴보았고, 표시가 그 결과물을 밝힌다 |
-| `executed` | 도구가 실행되어 값을 반환했고, 표시가 명령이나 쿼리와 그 반환값을 보여 준다 |
-| `read` | 출처를 가져왔고, 표시가 URL이나 경로를 적고 해당 줄을 인용한다 |
+| `observed` | 결과물 자체를 살펴보았고, 표시가 그 결과물을 밝힘 |
+| `executed` | 도구가 실행되어 값을 돌려주었고, 표시가 명령이나 쿼리와 돌려받은 값을 보여 줌 |
+| `read` | 출처를 가져왔고, 표시가 URL이나 경로를 적고 해당 줄을 인용함 |
 | `inferred` | 추론이나 기억. 칸을 채울 수 없는 모든 것 |
 
-어떤 에이전트에도 파일 편집 도구는 없습니다. checker 에이전트는 명령을 실행할 수 있지만 검토 중인 작업을 절대 수정하지 말라는 지시를 받고, 문체 편집 에이전트는 고친 글을 파일에 쓰지 않고 돌려줍니다.
+등급은 심층 작업 보고서에 쓰는 것입니다. 대화 속의 답에는 붙지 않습니다.
 
-| 에이전트 | 역할 | 도구 |
+어떤 에이전트에도 파일 편집 도구는 없습니다. checker와 reviewer는 명령을 돌릴 수 있지만 자기가 검사하는 작업을 절대 바꾸지 말라는 지시를 받고, 문체 편집 에이전트는 고친 글을 파일에 쓰지 않고 돌려줍니다.
+
+| 에이전트 | 하는 일 | 도구 |
 | :--- | :--- | :--- |
-| `gravitas-scout` | 파일, 경로, 심볼, 출처를 찾는다 | `list_dir`, `find_by_name`, `grep_search`, `view_file` |
-| `gravitas-reader` | 이름을 댄 파일이나 URL에 관한 질문에 답하고 해당 줄을 인용한다 | `view_file`, `grep_search`, `find_by_name`, `list_dir`, `read_url_content` |
-| `gravitas-finder` | 작업 목록 전체에서 한 종류의 결함을 찾는다 | 읽기 담당의 도구와 `search_web` |
-| `gravitas-checker` | 독립 검증 하나를 실행한다 | `view_file`, `run_command` |
-| `gravitas-refuter` | 주장 하나의 반박을 시도하며, 기본 판정은 반박됨 | `view_file`, `grep_search`, `read_url_content`, `search_web` |
-| `gravitas-visual-critic` | 소스를 보지 않은 관찰자로서 스크린샷을 판단한다 | `view_file` |
-| `gravitas-completeness-critic` | 한 번도 탐색, 열람, 실행, 검증되지 않은 것을 지목한다 | `view_file`, `list_dir`, `grep_search`, `find_by_name` |
-| `gravitas-prose-editor` | 초안을 문체 기준에 맞게 고친다 | `view_file` |
+| `gravitas-scout` | 파일, 경로, 심볼, 출처를 찾음 | `list_dir`, `find_by_name`, `grep_search`, `view_file` |
+| `gravitas-reader` | 지정한 파일이나 URL에 관한 질문에 답하고 해당 줄을 인용함 | `view_file`, `grep_search`, `find_by_name`, `list_dir`, `read_url_content` |
+| `gravitas-finder` | 작업 목록 전체에서 한 종류의 결함을 찾음 | `gravitas-reader`의 도구와 `search_web` |
+| `gravitas-checker` | 독립 검증 하나를 돌림 | `view_file`, `run_command` |
+| `gravitas-refuter` | 주장 하나를 반박하려 하며, 기본 판정은 반박됨 | `view_file`, `grep_search`, `read_url_content`, `search_web` |
+| `gravitas-visual-critic` | 소스를 본 적 없는 관찰자로서 스크린샷을 판단함 | `view_file` |
+| `gravitas-completeness-critic` | 한 번도 찾아보거나 열거나 돌리거나 검증하지 않은 것을 짚음 | `view_file`, `list_dir`, `grep_search`, `find_by_name` |
+| `gravitas-prose-editor` | 초안을 문체 기준에 맞게 고침 | `view_file` |
+| `gravitas-reviewer`(`--review`일 때) | 답 초안에서 틀린 사실부터 틀린 형식까지, 결함을 많아야 세 개 돌려줌 | `view_file`, `read_url_content`, `search_web`, `run_command` |
 
 스크립트는 이 폴더에서 실행합니다. `--latest`는 가장 최근 대화를 기준으로 확인합니다. 대화 ID는 `~/.gemini/antigravity-cli/brain/` 아래의 폴더 이름이거나, `agy -p --output-format json` 출력의 `conversation_id`입니다.
 
 ```bash
-python skills/gravitas/scripts/check_skills.py          # validate every skill, agent, rule and plugin under ~/.gemini/config
-python skills/gravitas/scripts/provenance_check.py <answer> --latest   # check evidence labels against the transcript
-python skills/gravitas/scripts/ledger.py --help         # bookkeeping for fan-outs: dedupe, votes, dry rounds
-python skills/gravitas/scripts/slopcheck.py <files>     # structural markers of generated prose; --strict fails on any flag
+python skills/gravitas/scripts/check_skills.py          # ~/.gemini/config 아래의 모든 스킬, 에이전트, 규칙, 플러그인 검증
+python skills/gravitas/scripts/provenance_check.py <답변> --latest   # 증거 표시를 대화 기록과 대조
+python skills/gravitas/scripts/ledger.py --help         # 팬아웃 기록 관리: 중복 제거, 표 집계, 새로 나온 것 없는 라운드
+python skills/gravitas/scripts/slopcheck.py <파일>      # 기계가 쓴 글의 구조적 흔적. --strict면 하나라도 걸리면 실패
 ```
 
-지금까지의 시험 결과는 이렇습니다. 베타 2 시험에서 나온 답변에 대해, 출처 검사기는 출처를 연 법률 답변의 표시 6개를 모두 통과시켰고 한 번도 열지 않은 인용은 불합격시켰습니다. 전체 감사 시험 사례는 심어 둔 결함 3개를 모두 찾았습니다. Antigravity 단독과의 깔끔한 비교는 아직 없으며, 그 벤치마크가 다음 작업입니다.
+`skills/gravitas/scripts/checks/`의 검사 여섯 개는 모델이 자신 있게 말하면서도 틀리게 세는 것을 셉니다. 绝句와 律诗는 `pingze_check.py`, 对联은 `couplet_check.py`, 하이쿠, 단카, 센류는 `mora_count.py`, 평시조는 `sijo_check.py`, 万, 亿, 億, 만, 억, lakh, crore, million을 오가는 금액은 `num_units.py`, 중국, 일본, 한국 독자를 위한 날짜는 `locale_dates.py`가 맡습니다. 모두 첫 줄에 `PASS`, `FAIL`, `ERROR` 가운데 하나를 찍고, 종료 코드 0, 1, 2로 끝납니다. 언제 어느 검사를 돌릴지는 `skills/gravitas/references/14-checks.md`에 있습니다. 검사는 `run_command`로만 도는데, 헤드리스 실행의 기본 설정은 이것을 거부하므로, 그때는 같은 규칙을 손으로 적용합니다.
 
-한계도 있습니다. 방법의 대부분은 모델에게 따르라고 요구하는 지시입니다. 도구 목록과 스크립트 4개가 기계적인 부분이고, 스크립트는 에이전트가 실행하라는 지시를 받을 때 실행됩니다. Windows 11의 agy 1.2.9에서 시험했습니다. 사용 방식에 영향을 주는 플랫폼 동작은 `skills/gravitas/references/13-platform.md`에 있습니다. 가장 중요한 것은 두 가지입니다. 헤드리스 `agy -p` 실행에는 명시적인 권한 부여나 `~/.gemini/antigravity-cli/settings.json`의 `toolPermission` 설정이 필요합니다. 그리고 CLI는 저장소를 `--add-dir`로 넘겼을 때만 저장소 자체의 `.agents/` 폴더를 읽는데, 이 플러그인이 전역으로 설치되는 것도 그 때문입니다.
+시험에서 나온 것. 답은 미리 써 둔 정답 기준표에 비추어 두 개씩 블라인드로 채점했고, 채점자는 Gemini 3.1 Pro와 Gemini 3.8 Flash, 그리고 일부 비교에서는 Claude Opus 5.5와 GPT-6 Sol이었습니다. 승률은 이기면 1, 비기면 0.5로 세므로 0.50은 차이가 없다는 뜻이고, 이겼다고 말하는 것은 표 100개 이상에서 0.55 이상일 때뿐입니다. Gemini 3.8 Flash에서 v4 규칙은 일상 요청 60개에서 기본 Antigravity를 0.57과 0.61로(각 120표), 10개 언어 요청 50개에서 0.65로(150표) 이겼고, `/boost`는 0.84로(180표) 이겼습니다. Gemini 3.1 Pro에서는 일상 요청에서 0.58과 0.55(각 120표, 두 실행 모두 신뢰구간에 0.50이 들어 있음), 10개 언어 요청에서 0.71(150표), `/boost` 상대로 0.77(120표)이었습니다. 에지 요청 50개에서는 두 Gemini 채점자가 기본 Antigravity 쪽을 더 좋게 보았습니다. Flash에서 100표 0.45, Pro에서 100표 0.42였고, GPT-6 Sol은 Gravitas 쪽으로 각 50표에서 0.76과 0.64를 주었습니다. Antigravity 전용 부분을 뺀 v4 규칙의 이식판은 GPT-6 Sol 혼자 모델마다 60표씩 채점했는데, Codex에서 GPT-6 Sol 0.66, GPT-6.1 Sol 0.57, GPT-6 Luna 0.57, GPT-6 Astra 0.47이었고, Grok에서 Grok 4.6 0.59, Grok 4.7 build fast 0.54, Grok 4.7 0.52, Grok 4.5 0.42였습니다. 두 번째 의견은 출력 그대로 채점하면 규칙만 쓴 쪽에 졌고(각 180표에서 0.23과 0.28), 최종 메시지로 채점하면 비겼습니다(168표에서 0.50, 120표에서 0.47). 기본값이 꺼짐인 것은 그 때문입니다. 훅 기반 판은 기본 Antigravity를 상대로 180표에서 0.57로, 같은 채점자들이 규칙만 쓴 쪽에 준 0.63과 0.61보다 낮았고, 내놓지 않았습니다.
 
-버전 1.0.0-beta.2 · MIT · 만든 사람 [Iamemily2050](https://github.com/Emily2040)
+한계도 있습니다. 방법의 대부분은 모델에게 따르라고 하는 지시문입니다. 기계적인 부분은 도구 목록, 설치 프로그램, 스크립트이고, 스크립트도 에이전트가 돌리라는 지시를 받아야 돕니다. Windows 11의 agy 1.2.9부터 1.2.16까지에서 시험했습니다. 쓰는 방식에 영향을 주는 플랫폼 동작은 `skills/gravitas/references/13-platform.md`에 있습니다. 가장 중요한 것은 두 가지입니다. 헤드리스 `agy -p` 실행에는 권한을 명시적으로 주거나 `~/.gemini/antigravity-cli/settings.json`에 `toolPermission` 설정이 있어야 합니다. 그리고 CLI는 저장소를 `--add-dir`로 넘겼을 때만 저장소 자체의 `.agents/` 폴더를 읽는데, 이 플러그인이 전역으로 설치되는 것도 그 때문입니다. 또 일본어와 한국어에서는 위기 상황의 답이 편하게 쓴 사람에게도 정중한 말투(한국어는 합쇼체)로 나올 수 있고, 기본 Antigravity도 마찬가지입니다.
+
+버전 1.0.0 · MIT · 만든 사람 [Iamemily2050](https://github.com/Emily2040)

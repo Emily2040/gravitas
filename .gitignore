@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .pytest_cache/
+# Left only by an interrupted scripts/build_dist.py
+/dist.new/
+/dist.old/

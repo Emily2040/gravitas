@@ -103,8 +103,11 @@ def fail(msg):
 def load(path):
     if not os.path.exists(path):
         fail("no ledger at %s; run init first" % path)
-    with open(path, encoding="utf-8-sig") as fh:
-        return json.load(fh)
+    try:
+        with open(path, encoding="utf-8-sig") as fh:
+            return json.load(fh)
+    except (OSError, ValueError) as e:
+        fail("cannot read ledger %s: %s" % (path, e))
 
 
 def load_json(path, what):
@@ -494,10 +497,16 @@ def cmd_merge(a):
     keep = L["findings"].get(a.keep)
     if keep is None:
         fail("no finding with key %s" % a.keep)
+    # A merged finding is left out of the report, so only a live finding can take another in,
+    # and a finding is merged once: merging A into B and then B into A would drop both.
+    if keep.get("merged_into"):
+        fail("%s is already merged into %s; merge into that one" % (a.keep, keep["merged_into"]))
     for d in a.dups:
         f = L["findings"].get(d)
         if f is None or d == a.keep:
             fail("cannot merge %s" % d)
+        if f.get("merged_into"):
+            fail("%s is already merged into %s" % (d, f["merged_into"]))
         keep["votes"].extend(f["votes"])
         f["votes"], f["merged_into"] = [], a.keep
         print("merged %s into %s" % (d, a.keep))
@@ -617,6 +626,11 @@ def cmd_report(a):
 
 
 def main():
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError, OSError):
+            pass
     p = argparse.ArgumentParser(description="Gravitas fan-out ledger")
     sub = p.add_subparsers(dest="cmd", required=True)
 

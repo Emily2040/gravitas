@@ -1,6 +1,8 @@
 # How Gravitas Compares: The Evidence
 
-This is the record behind the comparison in the [README](../README.md#compare). On 24 September 2026, research agents searched GitHub from six angles, read 18 projects in depth against the fifteen features below, and then tried to refute every claim of novelty. Each cell below was written by an agent that opened the project's files, and its evidence is quoted or paraphrased from those files. Star counts were read from GitHub the same day. Projects change; if a cell here is out of date, the project's current files win.
+This is the record behind the comparison in the [README](../README.md#compare). On 24 September 2026 I had research agents search GitHub from six angles, read 18 projects in depth against the fifteen features below, and then try to refute every claim of novelty. Every cell rests on files opened in the project it describes, and its evidence is quoted or paraphrased from those files. Star counts were read from GitHub the same day. Projects change; if a cell here is out of date, the project's current files win.
+
+**Update, 4 October 2026.** I re-read every project's star count and last push from the GitHub API, and read the commit log since 24 September of the twelve projects that had pushed since then. Where a commit touched one of the fifteen features, I opened the changed files. Two cells changed: gstack's proxy test (✗ to ◐) and `pedrohcgs/claude-code-my-workflow`'s transcript audit (✗ to ◐). The other cells were not re-audited, so they still describe the files as they were on 24 September. Of the twelve projects, eight have a note under "Since 24 September" saying what changed; obra/superpowers, socialpranker/deepdive, aiimagined/godmode and edgebuildlabs/evidence-contracts have none. The list of 63 candidates at the end is unchanged and keeps its 24 September star counts.
 
 ✓ implemented as Gravitas defines it, ◐ partial or close, ✗ not found.
 
@@ -28,21 +30,21 @@ This is the record behind the comparison in the [README](../README.md#compare). 
 
 | Project | Stars | F1 | F2 | F3 | F4 | F5 | F6 | F7 | F8 | F9 | F10 | F11 | F12 | F13 | F14 | F15 |
 | :--- | ---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [obra/superpowers](https://github.com/obra/superpowers) | 290959 | ◐ | ✗ | ◐ | ✗ | ◐ | ✗ | ◐ | ✗ | ◐ | ✗ | ◐ | ✗ | ✗ | ◐ | ◐ |
-| [nousresearch/hermes-agent](https://github.com/nousresearch/hermes-agent) | 248564 | ◐ | ◐ | ✗ | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ✗ | ✗ | ◐ |
-| [garrytan/gstack](https://github.com/garrytan/gstack) | 134064 | ◐ | ✗ | ✗ | ✗ | ✗ | ◐ | ◐ | ◐ | ◐ | ◐ | ✗ | ◐ | ✗ | ◐ | ◐ |
-| [blader/humanizer](https://github.com/blader/humanizer) | 51757 | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ✗ | ✗ | ✗ | ◐ | ✗ |
-| [imbad0202/academic-research-skills](https://github.com/imbad0202/academic-research-skills) | 49352 | ◐ | ◐ | ✗ | ◐ | ✗ | ◐ | ✗ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ✓ |
-| [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | 36678 | ✗ | ✗ | ◐ | ✗ | ◐ | ◐ | ◐ | ✗ | ◐ | ✗ | ✗ | ◐ | ✗ | ✗ | ◐ |
-| [everyinc/compound-engineering-plugin](https://github.com/everyinc/compound-engineering-plugin) | 25243 | ◐ | ✗ | ◐ | ✗ | ◐ | ◐ | ◐ | ✗ | ✗ | ✗ | ◐ | ✓ | ✗ | ◐ | ◐ |
-| [conorbronsdon/avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) | 4703 | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ✗ | ◐ | ✓ | ✗ | ◐ | ✗ | ◐ | ◐ |
-| [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow) | 1598 | ◐ | ✗ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ✗ | ◐ | ◐ |
-| [vibeeval/vibecosystem](https://github.com/vibeeval/vibecosystem) | 535 | ◐ | ✗ | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ✗ | ◐ | ✗ |
+| [obra/superpowers](https://github.com/obra/superpowers) | 295108 | ◐ | ✗ | ◐ | ✗ | ◐ | ✗ | ◐ | ✗ | ◐ | ✗ | ◐ | ✗ | ✗ | ◐ | ◐ |
+| [nousresearch/hermes-agent](https://github.com/nousresearch/hermes-agent) | 251088 | ◐ | ◐ | ✗ | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ✗ | ✗ | ◐ |
+| [garrytan/gstack](https://github.com/garrytan/gstack) | 135002 | ◐ | ✗ | ◐ | ✗ | ✗ | ◐ | ◐ | ◐ | ◐ | ◐ | ✗ | ◐ | ✗ | ◐ | ◐ |
+| [blader/humanizer](https://github.com/blader/humanizer) | 53875 | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ✗ | ✗ | ✗ | ◐ | ✗ |
+| [imbad0202/academic-research-skills](https://github.com/imbad0202/academic-research-skills) | 50347 | ◐ | ◐ | ✗ | ◐ | ✗ | ◐ | ✗ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ✓ |
+| [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | 37369 | ✗ | ✗ | ◐ | ✗ | ◐ | ◐ | ◐ | ✗ | ◐ | ✗ | ✗ | ◐ | ✗ | ✗ | ◐ |
+| [everyinc/compound-engineering-plugin](https://github.com/everyinc/compound-engineering-plugin) | 25387 | ◐ | ✗ | ◐ | ✗ | ◐ | ◐ | ◐ | ✗ | ✗ | ✗ | ◐ | ✓ | ✗ | ◐ | ◐ |
+| [conorbronsdon/avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) | 4844 | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ✗ | ◐ | ✓ | ✗ | ◐ | ✗ | ◐ | ◐ |
+| [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow) | 1610 | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ | ✗ | ◐ | ◐ |
+| [vibeeval/vibecosystem](https://github.com/vibeeval/vibecosystem) | 531 | ◐ | ✗ | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ✗ | ◐ | ✗ |
 | [dsifry/metaswarm](https://github.com/dsifry/metaswarm) | 419 | ◐ | ✗ | ✗ | ✗ | ◐ | ◐ | ◐ | ◐ | ◐ | ✗ | ✗ | ◐ | ✗ | ◐ | ◐ |
-| [socialpranker/deepdive](https://github.com/socialpranker/deepdive) | 377 | ◐ | ◐ | ◐ | ◐ | ✗ | ◐ | ◐ | ✗ | ◐ | ✗ | ✗ | ◐ | ✗ | ◐ | ◐ |
+| [socialpranker/deepdive](https://github.com/socialpranker/deepdive) | 372 | ◐ | ◐ | ◐ | ◐ | ✗ | ◐ | ◐ | ✗ | ◐ | ✗ | ✗ | ◐ | ✗ | ◐ | ◐ |
 | [udaysharmadev/gravitas](https://github.com/udaysharmadev/gravitas) | 9 | ◐ | ◐ | ✗ | ✗ | ◐ | ✗ | ✗ | ✗ | ◐ | ✗ | ◐ | ◐ | ✗ | ◐ | ◐ |
-| [vnmoorthy/groundtruth](https://github.com/vnmoorthy/groundtruth) | 7 | ✗ | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ◐ | ✗ | ✗ | ◐ |
-| [aiimagined/godmode](https://github.com/aiimagined/godmode) | 6 | ◐ | ◐ | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ◐ | ◐ | ✗ | ◐ | ✓ |
+| [vnmoorthy/groundtruth](https://github.com/vnmoorthy/groundtruth) | 8 | ✗ | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ◐ | ✗ | ✗ | ◐ |
+| [aiimagined/godmode](https://github.com/aiimagined/godmode) | 7 | ◐ | ◐ | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ◐ | ◐ | ✗ | ◐ | ✓ |
 | [mizcausevic-dev/evidence-labeling-protocol](https://github.com/mizcausevic-dev/evidence-labeling-protocol) | 0 | ◐ | ✗ | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ |
 | [edgebuildlabs/evidence-contracts](https://github.com/edgebuildlabs/evidence-contracts) | 0 | ◐ | ✗ | ◐ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ◐ | ✗ | ✗ | ✗ |
 | [aliradid/citation-needed](https://github.com/aliradid/citation-needed) | 0 | ◐ | ✗ | ✗ | ◐ | ✗ | ✗ | ◐ | ✗ | ✗ | ✗ | ✗ | ◐ | ✗ | ◐ | ◐ |
@@ -51,7 +53,7 @@ This is the record behind the comparison in the [README](../README.md#compare). 
 
 ### [obra/superpowers](https://github.com/obra/superpowers)
 
-Stars 290959. License MIT. Last push 2026-09-22. Platform: Claude Code (primary), plus Codex, Gemini CLI, OpenCode, Kimi, Pi, Hermes, Devin, Muse, Antigravity.
+Stars 295108 on 4 October 2026 (290959 on 24 September). License MIT. Last push 2026-09-27. Platform: Claude Code (primary), plus Codex, Gemini CLI, OpenCode, Kimi, Pi, Hermes, Devin, Muse, Antigravity.
 
 A multi-harness skills pack for Claude Code and other agents (Codex, Gemini, OpenCode, Antigravity, and more). It covers a software-development workflow: brainstorming, then worktrees, plans, subagent-driven development with task reviewers and a capped fix loop, TDD, systematic debugging, and verification-before-completion. A SessionStart hook injects the using-superpowers bootstrap.
 
@@ -92,7 +94,7 @@ What it does better than Gravitas:
 
 ### [nousresearch/hermes-agent](https://github.com/nousresearch/hermes-agent)
 
-Stars 248564. License MIT. Last push 2026-09-24. Platform: Hermes Agent (NousResearch), Python skill for linux/macos/windows.
+Stars 251088 on 4 October 2026 (248564 on 24 September). License MIT. Last push 2026-10-04. Platform: Hermes Agent (NousResearch), Python skill for linux/macos/windows.
 
 A research skill bundled with Hermes Agent. A stdlib Python ledger script (sources.py) owns the url-to-[n] citation mapping. It registers sources at retrieval time, renders the Sources block, and verifies drafts: unknown ids, a Sources block that disagrees with the ledger, a minimum coverage level, and an evidence gate. An optional fact-checking mode only accepts a quote that appears verbatim in the saved page text.
 
@@ -132,9 +134,11 @@ What it does better than Gravitas:
 - Rendering to several output formats (markdown, footnotes, bibtex, evidence block), with idempotent --replace-in for a draft file
 - The verify and quote logic has fairly thorough pytest unit coverage
 
+Since 24 September: the commits are mostly to Hermes Agent's plugin catalog. Hermes gained pluggable language packs for its core, desktop app and terminal interface (28 September); they translate the interface, not the research skill, so F13 stays ✗. Nothing I found changed the research skill's ledger or quote checks.
+
 ### [garrytan/gstack](https://github.com/garrytan/gstack)
 
-Stars 134064. License MIT. Last push 2026-09-24. Platform: .
+Stars 135002 on 4 October 2026 (134064 on 24 September). License MIT. Last push 2026-10-04. Platform: Claude Code, plus Codex and other hosts through `./setup --host`.
 
 Garry Tan's Claude Code skill pack: about 40 slash-command skills written as Markdown templates (office-hours, plan reviews, /review, /qa, /design-review, /ship, /cso and others). They are generated by scripts/gen-skill-docs.ts, drive a real browser (Aside or a bundled one) for QA and screenshots, and ship with a large Bun test and eval suite plus CI workflows.
 
@@ -142,7 +146,7 @@ Garry Tan's Claude Code skill pack: about 40 slash-command skills written as Mar
 | :--- | :---: | :--- |
 | F1 Evidence labels | ◐ | review/SKILL.md.tmpl 'Verification of claims' says never write 'likely handled': verify it or flag it as unknown, and a finding must 'cite evidence it IS fine, or flag it as unverified'. Findings carry evidence_paths. There is no tier taxonomy and no provenance slot per label. |
 | F2 Transcript audit | ✗ | Nothing in the files I opened compares evidence labels with a tool-call transcript. lib/review-evidence.ts fingerprints evidence_paths so they can be re-read later. It does not audit whether they were read. |
-| F3 Proxy test | ✗ | There is no proxy-trap doctrine. The closest thing is the review 'Rationalization prevention' line. |
+| F3 Proxy test | ◐ | Changed on 29 September (v1.91.9.0). test-audit/SKILL.md asks of every test what observable behaviour it protects and when it fails, flags assertion-free coverage probes and test-only exports, and requires a regression test to fail at HEAD before the repair and pass at base as the control. That is the proxy test applied to tests; it is not stated as one rule across fields. On 24 September there was no proxy-trap doctrine, and the closest thing was the review 'Rationalization prevention' line. |
 | F4 Non-code fields | ✗ | All skills are about software, product and design. None covers law, mathematics, medicine or similar fields. |
 | F5 Read-only verifiers | ✗ | review/SKILL.md.tmpl allowed-tools includes Edit, Write and Agent. Specialists such as review/specialists/red-team.md are prompt files, not agents with a restricted tool list. agents/ holds only openai.yaml. |
 | F6 Vote ledger | ◐ | review/sections/adversarial.md.tmpl runs an adversarial pass (a red-team specialist, plus codex challenge-mode) and persists findings as fingerprint path:line:category records. There are no refuters that default to refuted, no majority vote and no vote-tallying ledger script. |
@@ -174,9 +178,11 @@ What it does better than Gravitas:
 - A far larger automated test and eval suite, with CI workflows for Windows and cross-platform
 - End-to-end shipping workflow coverage (plan reviews, ship, land-and-deploy, canary, retro) that goes beyond verification
 
+Since 24 September: nineteen releases, v1.89.0.0 to v1.91.18.0. The ones that touch these features are `/test-audit` and a "test value bar" in plan review, review, QA and ship (29 September, F3 above); functional QA and pre-publication documentation checks (29 September); behaviour-level skill tests and evals for safety rules (3 and 4 October); and "checkpoint provenance" (3 October). F15 stays ◐: I still found no planted-defect audit case with an answer key.
+
 ### [blader/humanizer](https://github.com/blader/humanizer)
 
-Stars 51757. License MIT. Last push 2026-09-06. Platform: Agent-agnostic Markdown skill (skills.sh CLI, Claude Code plugin, Claude Desktop, OpenAI/Codex agents via agents/open....
+Stars 53875 on 4 October 2026 (51757 on 24 September). License MIT. Last push 2026-09-28. Platform: Agent-agnostic Markdown skill (skills.sh CLI, Claude Code plugin, Claude Desktop, OpenAI/Codex agents via agents/openai.yaml).
 
 A single Markdown skill (SKILL.md v3.0.0, max 400 lines) that tells an agent how to rewrite AI-sounding prose. It uses a numbered catalogue of structural and lexical tells based on Wikipedia's "Signs of AI writing", a mark/draft/check/final workflow, voice matching and a no-fabrication rule. It ships as a skills.sh package and a Claude Code plugin, with a package-consistency validator script and a CI workflow.
 
@@ -216,15 +222,17 @@ What it does better than Gravitas:
 - Has distinct output modes (pasted, file, embedded). File mode edits only prose and leaves code, paths, YAML and link targets unchanged.
 - Very wide adoption and simple distribution: about 51.8k stars, one portable Markdown file, installed via skills.sh or the Claude plugin marketplace.
 
+Since 24 September: README and packaging changes on 28 September, including dropping Cursor and OpenCode from the README and stating that defeating AI detectors is not a goal. That follows an outside blind study posted as issue #229 on 19 August: judges preferred Humanizer's rewrite over the raw model text 16 times out of 16, while detection rates barely moved. No cell changes.
+
 ### [imbad0202/academic-research-skills](https://github.com/imbad0202/academic-research-skills)
 
-Stars 49352. License CC BY-NC 4.0 per the README badge (gh licenseInfo reports "Other" / NOASSERTION). Last push 2026-09-24. Platform: Claude Code (plugin marketplace; symlink install also supported).
+Stars 50347 on 4 October 2026 (49352 on 24 September). License CC BY-NC 4.0 per the README badge (gh licenseInfo reports "Other" / NOASSERTION). Last push 2026-10-03. Platform: Claude Code (plugin marketplace; symlink install also supported).
 
 Claude Code plugin (v3.22.1) with four skills (deep-research, academic-paper, academic-paper-reviewer, academic-pipeline), about 40 agent prompts and a large Python lint/CI layer. It runs a staged pipeline from research to publication, with integrity gates at Stages 2.5 and 4.5, citation-anchor provenance markers, and an opt-in claim-to-source faithfulness audit (ARS_CLAIM_AUDIT=1) that judges each cited claim against the retrieved reference text.
 
 | Feature | Status | Evidence |
 | :--- | :---: | :--- |
-| F1 Evidence labels | ◐ | The labels cover citations, not every claim. Each in-text citation must carry <!--ref:slug--> plus <!--anchor:<kind>:<value>-->, and anchor_kind=none is gate-refused. The audit gives each claim SUPPORTED/UNSUPPORTED/AMBIGUOUS/RETRIEVAL_FAILED and requires 'cite the retrieved excerpt by section/page/quote' (academic-... |
+| F1 Evidence labels | ◐ | The labels cover citations, not every claim. Each in-text citation must carry `<!--ref:slug-->` plus `<!--anchor:<kind>:<value>-->`, and anchor_kind=none is gate-refused. The audit gives each claim SUPPORTED/UNSUPPORTED/AMBIGUOUS/RETRIEVAL_FAILED and requires 'cite the retrieved excerpt by section/page/quote' (academic-... |
 | F2 Transcript audit | ◐ | scripts/claim_audit_pipeline.py runs the audit with dependency-injected retrieve_fn/judge_fn, and RETRIEVAL_FAILED is emitted when retrieval returned nothing ('DO NOT claim to have read a paper the retrieval layer did not actually return'). This checks claims against the retrieved source text. It never checks eviden... |
 | F3 Proxy test | ✗ | The only hits for 'proxy trap' or 'Goodhart' are deep-research/references/logical_fallacies.md and eval run logs. There is no cross-domain proxy-trap doctrine. |
 | F4 Non-code fields | ◐ | academic-paper/references/domain_evidence_profiles.md, statistical_reporting_standards.md, equator_reporting_guidelines.md, risk_of_bias_agent and a GRIMMER statistical-consistency case cover academic fields, especially medicine and statistics. I found no per-field map of which independent check exists for law, math... |
@@ -244,7 +252,7 @@ Enforced by code rather than instructions:
 
 - PreToolUse hook on Write\|Edit\|MultiEdit\|Bash (hooks/hooks.json -> hooks/run_guard.sh -> scripts/ars_write_scope_guard.py + ars_phase_scope_manifest.json) limits writes to each phase's scope. It fails open to a pass-through when Python is missing.
 - Claim audit pipeline and finalizer as executable, tested Python (scripts/claim_audit_pipeline.py, claim_audit_finalizer.py, check_claim_audit_consistency.py), with calibration against a gold set (claim_audit_calibration.py).
-- About 100 CI lint scripts run through .github/workflows (spec-consistency, pytest, command-invariants, test-count-monotonic, changelog-covers-merges, tag-version-match, freshness-check). They cover skill description length, frontmatter vocabularies, command...
+- About 100 CI lint scripts run through .github/workflows (spec-consistency, pytest, command-invariants, test-count-monotonic, changelog-covers-merges, tag-version-match, freshness-check). They cover skill description length, frontmatter vocabularies, command dispatch, agent mirror sync and pattern-protection literals.
 - Bibliographic integrity signals script (scripts/bibliographic_integrity_signals.py) and API clients (arxiv_client.py, plus Crossref, OpenAlex and Semantic Scholar protocols) for checking that a reference exists.
 - Eval threshold gate (scripts/_eval_threshold_gate.py) and the eval-harness workflow.
 
@@ -257,9 +265,11 @@ What it does better than Gravitas:
 - Writes during a phase are limited by a runtime PreToolUse hook, not only by instructions.
 - Domain depth for academic work: PRISMA and systematic-review protocols, EQUATOR reporting guidelines, risk of bias, IRB decision tree, and scholarly API protocols (Crossref, OpenAlex, Semantic Scholar, arXiv, Chinese literature).
 
+Since 24 September: v3.22.2 and v3.23.0. The new fifth skill, SR-Screener (3 October), screens studies for systematic reviews with two blinded AI reviewers and a third that adjudicates, and reports kappa and PABAK agreement. The reading skill now lists each source's method weaknesses with provenance labels (30 September), and held-out cases were added where an abstract claims more than its tables (30 September). On 25 September the README's front-page and showcase claims were corrected to match the evidence. No cell changes: F1 stays ◐ and F15 stays ✓.
+
 ### [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
 
-Stars 36678. License Apache-2.0. Last push 2026-09-24. Platform: Claude Code (plugins: skills, commands, agents, Workflow JS scripts).
+Stars 37369 on 4 October 2026 (36678 on 24 September). License Apache-2.0. Last push 2026-10-04. Platform: Claude Code (plugins: skills, commands, agents, Workflow JS scripts).
 
 Anthropic's official Claude Code plugin marketplace. The three plugins examined are: math-olympiad, a skill that runs parallel solvers, strips their reasoning before fresh-context adversarial verifiers see the proof, holds an asymmetric vote with early exit, and abstains when unsure; code-modernization, with agents and Workflow JS scripts such as harden-scan.js, which uses per-class finders, a code-level dedup, one refuter per finding and a second judge for Critical/High; and code-review, a slash command that runs 5 parallel reviewers, has a Haiku agent score each issue for confidence and filters out anything below 80.
 
@@ -299,9 +309,11 @@ What it does better than Gravitas:
 - Explicit prompt-injection defences: untrusted-content fencing in code, and a rule that instruction-shaped text in the code under review is reported as a finding.
 - Mandatory credential masking in findings output.
 
+Since 24 September: a new plugin, math-proof (30 September), with two skills for research-level mathematics. In its multi-agent skill, `siege`, a judge sets self-contained questions each round, fresh workers answer them in parallel, and a script, `scripts/ledger.py`, keeps the ledger of claims marked proved, refuted or open and decides the mechanical steps, such as whether the run may conclude early. When a worker's answer holds a complete proof, two more workers check that text line by line before the judge concludes. Its README warns that any result `proof.md` cites from the literature is quoted from memory. The code-modernization plugin reached version 1.0.0 (25 September), with an independent proof step that gives one verdict per module, and rules such as "a rule is tested only if a test that ran backs it". F6 and F7 stay ◐: the math-proof ledger records claims, not refuter votes, and there is no loop-until-dry rule.
+
 ### [everyinc/compound-engineering-plugin](https://github.com/everyinc/compound-engineering-plugin)
 
-Stars 25243. License MIT. Last push 2026-09-23. Platform: Claude Code plus 13 other hosts (Cursor, Codex, Antigravity, and others).
+Stars 25387 on 4 October 2026 (25243 on 24 September). License MIT. Last push 2026-10-02. Platform: Claude Code plus 13 other hosts (Cursor, Codex, Antigravity, and others).
 
 A plugin of 36 skills (README) for 14 agent hosts, including Claude Code, Cursor, Codex and Antigravity (.agy/). It runs an engineering loop: brainstorm, plan, work, review, then write the learnings down (ce-compound). Its main verification piece is ce-code-review. That skill sends persona reviewers out in parallel (correctness, security, adversarial, and others), can add a cross-model adversarial peer, runs a script that merges findings deterministically, and ends with an independent validator subagent. It is aimed at code only.
 
@@ -340,9 +352,11 @@ What it does better than Gravitas:
 - The size and risk depth gate is mostly deterministic: review-scope.py floors that cannot be argued down, with many unit tests.
 - It saves what was learned from each change as reusable docs (ce-compound), which grows project knowledge over time. Gravitas has no equivalent.
 
+Since 24 September: 38 commits. Relevant here: the testing guidance flags tests that cannot fail and test-only production seams (24 September); conversation evals can be run and graded with one command (29 September); and skills dispatch subagents only when they pay off (1 October). F3 and F15 stay ◐.
+
 ### [conorbronsdon/avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing)
 
-Stars 4703. License MIT. Last push 2026-09-24. Platform: Cross-agent (agentskills.io SKILL.md): Claude Code/Cowork plugin, Codex/ChatGPT plugin, Cursor rule, OpenClaw, Hermes....
+Stars 4844 on 4 October 2026 (4703 on 24 September). License MIT. Last push 2026-10-04. Platform: Cross-agent (agentskills.io SKILL.md): Claude Code/Cowork plugin, Codex/ChatGPT plugin, Cursor rule, OpenClaw, Hermes; Node CLI/npm, GitHub Action, pre-commit, MCP.
 
 A portable agentskills.io skill (Claude Code, Cowork plugin, Codex/OpenAI plugin, Cursor rule, Hermes) that audits and rewrites prose to remove AI-writing patterns. It has three modes (rewrite, detect, edit), a two-pass editing ceiling, a 74-category pattern catalogue with a tiered word table, and a dependency-free JS detector with CLI, CI gate, pre-commit hook and GitHub Action. It also ships a preservation validator, a quote normaliser, a house-style checker, a skill router with a graph validator, and a rewrite eval harness.
 
@@ -382,16 +396,18 @@ What it does better than Gravitas:
 - Single-source-of-truth drift controls (.ssot.yaml, sync scripts, promo-drift workflow) keep the plugin, the dist file and the Cursor copies identical to the canonical skill.
 - Much larger adoption: about 4.7k stars.
 
+Since 24 September: documentation and test changes to the Tier 3 density threshold, version checks on every sub-skill (3 October), and sourced paste-size limits in the README. No cell changes.
+
 ### [pedrohcgs/claude-code-my-workflow](https://github.com/pedrohcgs/claude-code-my-workflow)
 
-Stars 1598. License MIT. Last push 2026-08-24. Platform: Claude Code (.claude/ skills, agents, rules, hooks in settings.json).
+Stars 1610 on 4 October 2026 (1598 on 24 September). License MIT. Last push 2026-09-27. Platform: Claude Code (.claude/ skills, agents, rules, hooks in settings.json).
 
 A large Claude Code project template for academic researchers in economics and statistics (slides, papers, R/Stata, replication). It ships about 60 skills, 19 agents, 8 hooks and about 20 Python and shell check scripts. Its core loop is to fan out forked reviewers, reduce their JSON findings through a deterministic gate, have a judge check for hallucinated findings, and repeat until two rounds find nothing new. A fresh-context claim-verifier handles Chain-of-Verification.
 
 | Feature | Status | Evidence |
 | :--- | :---: | :--- |
 | F1 Evidence labels | ◐ | .claude/skills/verify-claims/SKILL.md sorts each claim into verdict tiers (supported, contradicted, unverifiable), and every finding must carry `rule`, `evidence` and `failing_case` fields (.claude/references/finding-schema.json, enforced by scripts/validate-findings.py). It has no observed/executed/read/inferred la... |
-| F2 Transcript audit | ✗ | No script compares claims against a tool-call transcript. .claude/hooks/claim-reconcile.py only counts passport claims whose source_file mentions a changed file ("The hook only counts declarations by path ,  it never reads a value"). |
+| F2 Transcript audit | ◐ | Changed on 27 September (v2.6.0, commit 6535de7). scripts/validate-findings.py --check-quotes drops a review finding whose quotation is not in its source file, which checks quotes against the source as Hermes Agent does. It still does not compare labels with a tool-call transcript. On 24 September no script compared claims with a transcript, and .claude/hooks/claim-reconcile.py only counted passport claims whose source_file mentions a changed file ("The hook only counts declarations by path — it never reads a value"). |
 | F3 Proxy test | ◐ | .claude/references/research-agent-laws.md law 4: "A green gate is scoped. Capability loss is invisible to output-equality tests." .claude/references/model-versions.md records a case where a claim became false "while the gate stayed green". The vaccinate skill asks "does it pass for the right reason". The idea is the... |
 | F4 Non-code fields | ◐ | .claude/references/discipline-cards.md covers social-science disciplines (economics, political science and others) with paper types and journals. .claude/references/theory-proving.md exists. There is no cross-field map of independent checks for law, medicine, history or physics. |
 | F5 Read-only verifiers | ◐ | Some agents are read-only by tool list: humanize-auditor.md has `tools: Read, Grep, Glob`; verifier.md has `tools: Read, Grep, Glob, Bash`; claim-verifier.md has `Read, Grep, Glob, WebFetch, WebSearch, Bash`. Bash is a write path, so those two are not strictly read-only. Context isolation comes from `context: fork`... |
@@ -401,7 +417,7 @@ A large Claude Code project template for academic researchers in economics and s
 | F9 Iteration research | ◐ | claim-verifier.md cites Dhuliawala et al. 2023 (CoVe). Rounds are capped, and "Stop when a confirmation pass returns no new confirmed defect" (adjudicate-review). No self-correction research on external signals is cited. |
 | F10 Prose script | ◐ | .claude/skills/humanize/SKILL.md and agents/humanize-auditor.md audit 10 AI-voice categories, including symmetric paragraph shapes and tricolons. The audit is an LLM agent, not a scoring script. The skill itself notes that surface de-AI-ing failed a detector (Pangram). |
 | F11 Platform findings | ◐ | .claude/references/model-versions.md is stamped ("verified 2026-08-21"), and run-skill-eval.sh has "verified behaviorally 2026-08-21". No platform bugs are filed upstream. |
-| F12 Triage gate | ◐ | orchestrator-protocol.md has a 'Proportionality ,  match the process to the stakes' section. vaccinate/evals/cases/nottrigger-simple-question.md is a control case (fixed vs random effects) that asserts the skill's output does not appear. run-skill-eval.sh itself says nottrigger cases measure content leakage, not tri... |
+| F12 Triage gate | ◐ | orchestrator-protocol.md has a 'Proportionality — match the process to the stakes' section. vaccinate/evals/cases/nottrigger-simple-question.md is a control case (fixed vs random effects) that asserts the skill's output does not appear. run-skill-eval.sh itself says nottrigger cases measure content leakage, not tri... |
 | F13 Translations | ✗ | No translated skill files appear in the tree. |
 | F14 Validator | ◐ | scripts/check-skill-integrity.py checks frontmatter against body tool parity, argument-hint flag parity, anchor resolution and rule-keyword registry completeness. It does not check byte-order marks, description length, tool names that can hang an agent, or critics with write tools. |
 | F15 Baited tests | ◐ | .claude/skills/vaccinate seeds known defects into a copy of a real artifact plus a clean control and reports recall and false-positive rate. It has references/defect-library.md and eval cases such as detects-stale-gate.md and requires-clean-control.md. scripts/run-skill-eval.sh compares with-skill and without-skill... |
@@ -424,9 +440,11 @@ What it does better than Gravitas:
 - Research-reproducibility machinery: numeric-claim passports plus a hook that flags stale manuscript numbers the moment an analysis script or output changes.
 - Deep domain tooling for quantitative social science (specification-curve /challenge, replication packages, preregistration, referee simulation) and a model-version staleness checker with expiry dates.
 
+Since 24 September: v2.6.0 and v2.6.1 (27 September). Besides the quote check (F2 above), slides are now measured in headless Chrome for overflow, clipped content and broken assets (scripts/slide-qa.py, used by /visual-audit), and research logs are append-only, enforced at pre-commit and in CI. F8 stays ◐: the slide check is measured by a script, not judged by a critic who has not seen the source.
+
 ### [vibeeval/vibecosystem](https://github.com/vibeeval/vibecosystem)
 
-Stars 535. License MIT. Last push 2026-08-08. Platform: Claude Code (README also claims Cursor, Codex CLI, OpenCode).
+Stars 531 on 4 October 2026 (535 on 24 September). License MIT. Last push 2026-08-08. Platform: Claude Code (README also claims Cursor, Codex CLI, OpenCode).
 
 A large Claude Code plugin bundle: the README claims 138 agents, 296 skills and 74 hooks. The assessed skill, skills/factcheck-guard/SKILL.md (the README's v2.1.1 note says it was imported from oh-my-claudecode), requires every factual claim about a codebase to carry a [VERIFIED] (must cite file:line), [INFERRED] (grep or filename only) or [UNCERTAIN] marker. It also sets out a protocol for existence, absence and behaviour claims and a two-pass audit (hypothesise, then read to verify). It is backed by rules/claim-verification.md and a PostToolUse hook, hooks/src/epistemic-reminder.ts, that adds a "grep results are not proof" reminder after Grep and Read calls.
 
@@ -450,7 +468,7 @@ A large Claude Code plugin bundle: the README claims 138 agents, 296 skills and 
 
 Enforced by code rather than instructions:
 
-- hooks/src/epistemic-reminder.ts (PostToolUse:Grep\|Read) injects a reminder after every Grep or Read. It has a stronger 'GREP RESULTS ARE NOT PROOF' variant for existence-style patterns or files_with_matches mode. The hook only adds a reminder: it never blo...
+- hooks/src/epistemic-reminder.ts (PostToolUse:Grep\|Read) injects a reminder after every Grep or Read. It has a stronger 'GREP RESULTS ARE NOT PROOF' variant for existence-style patterns or files_with_matches mode. The hook only adds a reminder: it never blocks and always returns result 'continue'.
 - The marker requirement, the file:line citation and the ban on showing [UNCERTAIN] to the user are all written instructions in SKILL.md and rules/claim-verification.md. No code checks them.
 
 What it does better than Gravitas:
@@ -461,7 +479,7 @@ What it does better than Gravitas:
 
 ### [dsifry/metaswarm](https://github.com/dsifry/metaswarm)
 
-Stars 419. License MIT. Last push 2026-06-19. Platform: Claude Code plugin (also Codex, Gemini CLI, Cursor, OpenCode adapters).
+Stars 419 on 4 October 2026 (419 on 24 September). License MIT. Last push 2026-06-19. Platform: Claude Code plugin (also Codex, Gemini CLI, Cursor, OpenCode adapters).
 
 A software-delivery orchestration framework: 18 agent personas (markdown), a 9-phase workflow (research to PR shepherd), and a 4-phase per-work-unit loop IMPLEMENT, VALIDATE, ADVERSARIAL REVIEW, COMMIT, with parallel plan/design review gates, a BEADS knowledge base and coverage-threshold enforcement. Scoped to code, not general verification.
 
@@ -502,7 +520,7 @@ What it does better than Gravitas:
 
 ### [socialpranker/deepdive](https://github.com/socialpranker/deepdive)
 
-Stars 377. License MIT. Last push 2026-09-20. Platform: Claude Code skill (portable methodology for other LLMs).
+Stars 372 on 4 October 2026 (377 on 24 September). License MIT. Last push 2026-10-04. Platform: Claude Code skill (portable methodology for other LLMs).
 
 A Claude Code research skill (SKILL.md is in Russian, README in English). It runs a 13-phase pipeline defined in phases.yaml: reframing, plan, search by parallel general-purpose subagents, a claims ledger, an evidence filter, a red team, a four-axis verify phase, report export and a decision walkthrough. Each source is saved as sources/NN_slug.md with verbatim quotes, and a large set of Python scripts gate the finished run folder (finish.py, validate_phases.py, check_number_provenance.py, check_number_arithmetic.py, check_citations.py).
 
@@ -537,14 +555,14 @@ What it does better than Gravitas:
 
 - Provenance for numbers: origin_kind, chain_len and data_as_of are checked by script, and it detects one figure being passed off as independent sources, which Gravitas lacks.
 - Deterministic arithmetic re-check of derived numbers against formula and inputs in numbers.csv.
-- URL liveness check for cited sources that expects paywalled access rather than penalising it.
+- URL liveness check for cited sources that treats paywalled access as expected, with no penalty.
 - A phase-completeness gate that fails a run when a mandatory phase left no artifact.
 - A cross-run claims wiki that flags conflicts with earlier research before synthesis.
 - Large domain source catalogues (29 channels, 460+ stat sources) with weekly automated endpoint validation.
 
 ### [udaysharmadev/gravitas](https://github.com/udaysharmadev/gravitas)
 
-Stars 9. License MIT. Last push 2026-09-12. Platform: Google Antigravity (Agent Skills via skills.sh; Native plugin via agy).
+Stars 9 on 4 October 2026 (9 on 24 September). License MIT. Last push 2026-09-12. Platform: Google Antigravity (Agent Skills via skills.sh; Native plugin via agy).
 
 A coding-only engineering-discipline Agent Skill ("Core") for Gemini in Google Antigravity, plus an optional Antigravity plugin ("Native"). The plugin's PreToolUse, PostToolUse, PostInvocation and Stop hooks enforce a task contract, action locks, write scope, read-before-write, a hash-chained evidence ledger and a completion gate. The README calls it a "research preview" and says comparative performance has not been measured.
 
@@ -569,7 +587,7 @@ A coding-only engineering-discipline Agent Skill ("Core") for Gemini in Google A
 Enforced by code rather than instructions:
 
 - pre_tool.py (PreToolUse hook): action lock denies write tools and mutating shell regex in read-only modes (answer, research, plan-only, review-only, security-review)
-- pre_tool.py: allowed_write_scope path-boundary check, read-before-write from the evidence ledger, blocking retries of an already-failed action by fingerprint, force_ask on destructive commands (rm, git reset/clean, drop table) that a model-supplied confirma...
+- pre_tool.py: allowed_write_scope path-boundary check, read-before-write from the evidence ledger, blocking retries of an already-failed action by fingerprint, force_ask on destructive commands (rm, git reset/clean, drop table) that a model-supplied confirmation cannot bypass; fails closed on invalid payloads
 - post_tool.py (PostToolUse hook): logs every tool call to evidence.jsonl with secret redaction; logs failures to failures.jsonl
 - evidence_chain.py: SHA-256 hash-linked, append-only evidence ledger with verify_chain tamper detection
 - stop_gate.py (Stop hook): blocks completion until every acceptance criterion has a Gravitas-owned validator PASS with exit_code 0, required validators pass, background tasks are idle and known failures are resolved; the 3-cycle circuit breaker never fails open
@@ -586,9 +604,9 @@ What it does better than Gravitas:
 
 ### [vnmoorthy/groundtruth](https://github.com/vnmoorthy/groundtruth)
 
-Stars 7. License MIT. Last push 2026-07-20. Platform: Claude Code (Stop hook + skill), Node >=18.
+Stars 8 on 4 October 2026 (7 on 24 September). License MIT. Last push 2026-07-20. Platform: Claude Code (Stop hook + skill), Node >=18.
 
-A Node.js Stop hook for Claude Code, with a CLI and a companion skill. On every Stop it parses the session JSONL transcript and regex-detects completion claims in the last assistant turn ("Done.", "fixed", "all tests pass"; 8 frames, 21 exclusions). It then checks whether tool observations in the same turn include a verification artifact, such as a test, typecheck, build or lint command with success output, a curl returning 2xx, or a Read/Grep of a file written in that turn. If a claim in a code-context turn has no such artifact, it returns {"decision":"block","reason":...}. It also includes a retroactive audit CLI (text/JSON/SARIF output) and a memory-file write gate. It is scoped to cod...
+A Node.js Stop hook for Claude Code, with a CLI and a companion skill. On every Stop it parses the session JSONL transcript and regex-detects completion claims in the last assistant turn ("Done.", "fixed", "all tests pass"; 8 frames, 21 exclusions). It then checks whether tool observations in the same turn include a verification artifact, such as a test, typecheck, build or lint command with success output, a curl returning 2xx, or a Read/Grep of a file written in that turn. If a claim in a code-context turn has no such artifact, it returns {"decision":"block","reason":...}. It also includes a retroactive audit CLI (text/JSON/SARIF output) and a memory-file write gate. It is scoped to code work only.
 
 | Feature | Status | Evidence |
 | :--- | :---: | :--- |
@@ -619,7 +637,7 @@ Enforced by code rather than instructions:
 
 What it does better than Gravitas:
 
-- It enforces live at runtime through a host Stop hook that can actually refuse the end of a turn, rather than auditing labels after an answer is written.
+- It enforces at runtime, through a host Stop hook that can refuse the end of a turn. Gravitas audits labels only after an answer is written.
 - Its detector was calibrated against a real corpus (1,272 turns across 50 sessions, per the README), and the false-positive counts are published per release.
 - It audits past sessions retroactively across all transcripts, with SARIF output and a CI fail-on threshold.
 - It has a memory-file write gate that blocks carrying unverified completion claims into persistent memory.
@@ -627,7 +645,7 @@ What it does better than Gravitas:
 
 ### [aiimagined/godmode](https://github.com/aiimagined/godmode)
 
-Stars 6. License Apache-2.0. Last push 2026-09-23. Platform: Claude Code, Grok, Codex, Antigravity, OpenCode, Copilot, Kiro, Cursor, Gemini CLI, GitHub Action (Python 3.11+).
+Stars 7 on 4 October 2026 (6 on 24 September). License Apache-2.0. Last push 2026-10-04. Platform: Claude Code, Grok, Codex, Antigravity, OpenCode, Copilot, Kiro, Cursor, Gemini CLI, GitHub Action (Python 3.11+).
 
 A zero-dependency Python plugin and CLI for coding agents: Claude Code, Grok, Codex, Antigravity, OpenCode and others. It keeps a local hash-chained archive of the commands the agent ran, what it changed, what it refused and what it claimed. Pre-tool hooks stop risky commands. Claims are graded against cited, re-run evidence. A Stop-gate "done bar" blocks a "complete" while obligations are still open. Thirteen or more integrity monitors look for dishonest green-suite diffs. It ships 19 workflow skills.
 
@@ -669,7 +687,7 @@ What it does better than Gravitas:
 
 ### [mizcausevic-dev/evidence-labeling-protocol](https://github.com/mizcausevic-dev/evidence-labeling-protocol)
 
-Stars 0. License MIT. Last push 2026-08-22. Platform: Claude Code / Claude.ai skill.
+Stars 0 on 4 October 2026 (0 on 24 September). License MIT. Last push 2026-08-22. Platform: Claude Code / Claude.ai skill.
 
 A single instruction-only Claude skill (SKILL.md plus README, banner and diagram). It defines five evidence labels (Observed, Executed, Verified, Predicted, Blocked), five hard rules, an output template and a pre-send self-check. It has no scripts, hooks, agents or tests.
 
@@ -694,20 +712,20 @@ A single instruction-only Claude skill (SKILL.md plus README, banner and diagram
 What it does better than Gravitas:
 
 - It has a separate Blocked label for 'cannot proceed with current access', and Hard rule 4 requires stating what was not run separately from what passed ('3 of 5 checks executed, 2 blocked'). This makes not-run distinct from failed and from passed.
-- It has a Predicted label for results that are expected but not yet run, so a speculative claim still carries a label rather than being left out.
+- It has a Predicted label for results that are expected but not yet run, so a speculative claim still carries a label.
 - Hard rule 5: numbers get a source and a date.
 - It is a single small file with no dependencies that can be pasted into Claude.ai custom instructions, so it is simpler to adopt than a plugin.
 - A BLUF-first output template with a fixed Item / Label / Evidence / Notes table.
 
 ### [edgebuildlabs/evidence-contracts](https://github.com/edgebuildlabs/evidence-contracts)
 
-Stars 0. License CC0-1.0. Last push 2026-09-19. Platform: Any agent that reads AGENTS.md/CLAUDE.md/.cursorrules (Claude Code, Codex, Cursor, Gemini CLI).
+Stars 0 on 4 October 2026 (0 on 24 September). License CC0-1.0. Last push 2026-09-29. Platform: Any agent that reads AGENTS.md/CLAUDE.md/.cursorrules (Claude Code, Codex, Cursor, Gemini CLI).
 
 Instruction-only CC0 contract kit: AGENTS.md (a fixed rule saying every claim of state carries a source and a date or NOT VERIFIED, plus observed/inferred/hypothesis/recommendation labels, the STARTED != COMPLETED != VALIDATED != PASS ladder, a failure-layer classification, doc rules and authorization), with STATE.md and DECISIONS.md templates. The repo holds 5 files (AGENTS.md, DECISIONS.md, LICENSE, README.md, STATE.md). There are no scripts, hooks, agents or tests.
 
 | Feature | Status | Evidence |
 | :--- | :---: | :--- |
-| F1 Evidence labels | ◐ | AGENTS.md: the mark 'travels attached to the claim ,  `path:line (date)` · `command (now)` · `URL (date)` ,  or NOT VERIFIED'. It has observed/inferred/hypothesis/recommendation labels, and an unmarked claim falls to NOT VERIFIED. It has no read/executed split and no quoted-line requirement for URLs. |
+| F1 Evidence labels | ◐ | AGENTS.md: the mark 'travels attached to the claim — `path:line (date)` · `command (now)` · `URL (date)` — or NOT VERIFIED'. It has observed/inferred/hypothesis/recommendation labels, and an unmarked claim falls to NOT VERIFIED. It has no read/executed split and no quoted-line requirement for URLs. |
 | F2 Transcript audit | ✗ | The repo tree holds only 5 markdown/licence files, so no audit script exists. AGENTS.md itself says 'If a script can prove it, write the script', but it ships none. |
 | F3 Proxy test | ◐ | AGENTS.md: 'Exit code 0 ... do not prove the mission succeeded'; 'Tests passing is not validation.' This is close to the proxy idea, but it is not named as a doctrine and it covers code only. |
 | F4 Non-code fields | ✗ | Coding-agent scope only. No law, medicine or maths guidance in AGENTS.md or README.md. |
@@ -734,7 +752,7 @@ What it does better than Gravitas:
 
 ### [aliradid/citation-needed](https://github.com/aliradid/citation-needed)
 
-Stars 0. License MIT. Last push 2026-09-16. Platform: Cross-harness single SKILL.md: Claude Code (plugin + SessionStart hook), Codex, Cursor, Gemini CLI, OpenCode, Kimi, Q....
+Stars 0 on 4 October 2026 (0 on 24 September). License MIT. Last push 2026-09-16. Platform: Cross-harness single SKILL.md: Claude Code (plugin + SessionStart hook), Codex, Cursor, Gemini CLI, OpenCode, Kimi, Qwen and others.
 
 A fact-checking skill. It pulls atomic factual claims out of a draft, verifies each against live web sources with source tiers (A primary to D not-evidence), and returns a fixed-format evidence ledger with 10 statuses plus an annotated copy. It has Audit and Guard modes, a report linter script (validate_report.py) and a deterministic eval runner with planted-error fixtures.
 
@@ -758,7 +776,7 @@ A fact-checking skill. It pulls atomic factual claims out of a draft, verifies e
 
 Enforced by code rather than instructions:
 
-- scripts/validate_report.py: ledger format; each status has the evidence it needs (VERIFIED needs 2 URLs or 1 plus a 'primary' note; UNVERIFIED needs 'searched'; SKIPPED/UNCHECKED need allowed reasons; problem statuses need a fix); summary counts match the r...
+- scripts/validate_report.py: ledger format; each status has the evidence it needs (VERIFIED needs 2 URLs or 1 plus a 'primary' note; UNVERIFIED needs 'searched'; SKIPPED/UNCHECKED need allowed reasons; problem statuses need a fix); summary counts match the rows; verdict matches the row statuses; inline CN markers match ledger statuses. Exit 1 on failure, so it can be used as a CI gate.
 - scripts/run_evals.py: deterministic scoring of runs against the truth.json answer keys (no judge model)
 - hooks/always-on.mjs: SessionStart injection of the full SKILL.md when a flag file exists (fail-open)
 - tests/test_manifests.py: manifest parse, name and version sync, and the Cursor mirror kept byte-identical
@@ -776,13 +794,13 @@ What it does better than Gravitas:
 
 Each refuter was told to find prior art for one claim, to open every candidate before citing it, and to default to finding prior art.
 
-### N1, search 0
+### N1, first search
 
-Claim tested: 
+Claim tested: No other public agent skill or plugin audits per-claim evidence labels (read / executed / observed, or equivalents) in a finished answer against the host agent's actual tool-call transcript, failing a "read" label whose page was never opened or was seen only in a search result summary, and an "executed" label whose command never ran.
 
 Prior art found: yes.
 
-Verdict: The claim as written is refuted in its core. frizfealer/grounding-attribution (GroundCheck) is a public Claude Code plugin that makes the agent label each claim with a tool-typed citation or 'unverified'. At Stop it audits those labels in the finished answer against the session transcript. It flags a Read citation to a file the session never opened, and a Bash citation whose command never ran ('command-not-found', warn-only by default). That is the read/executed label audit under other names. What it lacks is the web part. Its taxonomy lists WebFetch and WebSearch, but its README says those citations are not auto-checked. So it neither fails a web source that was never fetched nor tells a fetched page from a search-result snippet, and it has no 'observed' label. sudhanshu1402/receipts, claimcheck and groundtruth check free-text claims ('tests pass', 'I read the whole file', 'pushed')...
+Verdict: The claim as written is refuted in its core. frizfealer/grounding-attribution (GroundCheck) is a public Claude Code plugin that makes the agent label each claim with a tool-typed citation or 'unverified'. At Stop it audits those labels in the finished answer against the session transcript. It flags a Read citation to a file the session never opened, and a Bash citation whose command never ran ('command-not-found', warn-only by default). That is the read/executed label audit under other names. What it lacks is the web part. Its taxonomy lists WebFetch and WebSearch, but its README says those citations are not auto-checked. So it neither fails a web source that was never fetched nor tells a fetched page from a search-result snippet, and it has no 'observed' label. sudhanshu1402/receipts, claimcheck and groundtruth check free-text claims ('tests pass', 'I read the whole file', 'pushed') against the transcript, again without labels or web-source handling.
 
 Strongest claim the search supports: Tools already exist that check per-claim labels and completion claims against the host agent's transcript for local files and shell commands (for example GroundCheck and receipts). As far as a search on 2026-09-24 found, no public agent skill or plugin does the same for web sources: failing a 'read' label whose page was never fetched, or was seen only as a search-result snippet, in the same audit that fails an 'executed' label whose command never ran.
 
@@ -792,15 +810,17 @@ Strongest claim the search supports: Tools already exist that check per-claim la
 | https://github.com/sudhanshu1402/receipts | close | A Claude Code plugin (installed as 'claimcheck') and a CLI (MIT, 0 stars, pushed 2026-09-24). Its README says it 'verifies what an AI coding agent claimed against the tool calls in its own session transcript', from a Stop hook. Opened: README and docs/CHECK... |
 | https://github.com/ablanchard-dev/claimcheck | loose | A Claude Code Stop hook (GPL-3.0, 0 stars, pushed 2026-09-23). Opened: README. It reads the final message and tests recognised claims (test counts, 'fixed' after a code edit, pushes, commit SHAs) against tool output from the same turn. Each claim is verifie... |
 | https://github.com/vnmoorthy/groundtruth | loose | A Claude Code Stop hook (MIT, 7 stars, pushed 2026-07-20). Opened: README. It blocks a completion claim ('Done.', 'all tests pass') when the same turn has no verifying tool observation, such as a passing test command or a Read/Grep confirming a symbol. It g... |
-| https://github.com/EdbertChan/catstack/pull/870 | loose | A PR adding a 'claimed-search-not-run' advisory Stop-time check. Opened with WebFetch, so this description rests on a summary of the PR page. It reads the final message for a backticked code-search command (git log -S/-G/--grep, git blame, gh search) report... |
+| https://github.com/EdbertChan/catstack/pull/870 | loose | A PR adding a 'claimed-search-not-run' advisory Stop-time check. I saw only a summary of the PR page, so this description rests on that summary. It reads the final message for a backticked code-search command (git log -S/-G/--grep, git blame, gh search) report... |
 | https://github.com/mr-ubik/deeper-research | loose | A Claude Code deep-research plugin (Apache-2.0, pushed 2026-09-15). Opened: README and file tree. It archives the full text of every fetched page, grounds claim votes in the archived page, runs a quote-presence gate (skills/run/scripts/check-quotes.py) and... |
 | https://github.com/udaysharmadev/gravitas | loose | An Antigravity skill and plugin (9 stars, pushed 2026-09-12). Opened: README. It describes a runtime evidence ledger ('Enforced runtime record') and a completion gate that uses host hooks. It gates completion on a record of evidence. I found no audit of per... |
 
-### N1, search 1
+### N1, second search
+
+Claim tested: No other public agent skill or plugin audits per-claim evidence labels (read / executed / observed, or equivalents) in a finished answer against the host agent's actual tool-call transcript, failing a "read" label whose page was never opened or was seen only in a search result summary, and an "executed" label whose command never ran.
 
 Prior art found: yes.
 
-Verdict: The claim as written does not hold, because its core mechanism already exists. Two public Claude Code Stop hooks, VectorInstitute/backcheck and ablanchard-dev/claimcheck, check claims in the agent's finished answer against the host's own transcript without an LLM, and flag or block a claim that a command ran when no matching tool call or result exists. That is the "executed never ran" half. The "read" half is partly covered by nousresearch/hermes-agent's grounded-citations skill, which rejects quotes that do not appear in fetched page text. Its ledger is filled by the agent, though, not taken from the host transcript. I found nothing that does all of the following together: parse explicit per-claim evidence labels (read/executed/observed); check each label against the host tool-call transcript; and fail a 'read' label whose page was never opened, or was seen only as a search-result su...
+Verdict: The claim as written does not hold, because its core mechanism already exists. Two public Claude Code Stop hooks, VectorInstitute/backcheck and ablanchard-dev/claimcheck, check claims in the agent's finished answer against the host's own transcript without an LLM, and flag or block a claim that a command ran when no matching tool call or result exists. That is the "executed never ran" half. The "read" half is partly covered by nousresearch/hermes-agent's grounded-citations skill, which rejects quotes that do not appear in fetched page text. Its ledger is filled by the agent, though, not taken from the host transcript. I found nothing that does all of the following together: parse explicit per-claim evidence labels (read/executed/observed); check each label against the host tool-call transcript; and fail a 'read' label whose page was never opened, or was seen only as a search-result summary.
 
 Strongest claim the search supports: "Tools such as backcheck and claimcheck already check whether a claim that a command ran is backed by the session transcript. As far as I could find, this is the first public agent skill that audits explicit per-claim evidence labels (read / executed / observed) against the host's actual tool-call transcript. It is also the first I found that fails a 'read' label when the page was never opened or was seen only as a search-result summary."
 
@@ -816,20 +836,20 @@ Strongest claim the search supports: "Tools such as backcheck and claimcheck alr
 | https://github.com/pandysp/claude-plugins | loose | The verify-claims skill has the model scan its own response for causal, state, historical, attribution and hedged claims and find proof for each. It works by instruction only, with no mechanical check against the transcript. |
 | https://github.com/jimmandas/behavior-evidence | loose | Claude Code plugin whose gate_check.py rejects any claimed run whose trace ID the trace store does not hold ('Every claimed run must have a trace'). That applies to eval runs, not to evidence labels on claims in an answer. |
 
-### N2, search 0
+### N2
 
-Claim tested: 
+Claim tested: No other public skill, plugin or agent pack combines in one package: evidence labels with provenance slots, a transcript-based audit of those labels, read-only verifier agents enforced by tool lists, a vote-counting deduplication ledger script, a completeness critic with fixed stopping numbers, perceptual gates judged by a fresh critic, and a script-measured prose standard.
 
 Prior art found: yes.
 
-Verdict: No single public package I found combines all seven components, so the combination claim survives. Every individual component has prior art, though, and two packages come close. pedrohcgs/claude-code-my-workflow has a forked claim verifier with a tool list, loop-until-dry critics with a round cap, visual auditors, AI-voice detection and per-claim provenance status in passport.yaml. It lacks a vote-counting deduplication script, a transcript audit of labels and a script-measured prose score. cloudflare/security-audit-skill has fresh adversarial verifiers, coverage critics, deduplicated candidates, a validated ledger and verdict labels, but no prose standard or perceptual gates. The remaining components each appear separately: dinosn/raptor-loop-hunt has a ledger script, deduplication and a fixed K=2 dry-round stop. TheMizeGuy/anti-slop has a script-scored prose standard. vnmoorthy/grou...
+Verdict: No single public package I found combines all seven components, so the combination claim survives. Every individual component has prior art, though, and two packages come close. pedrohcgs/claude-code-my-workflow has a forked claim verifier with a tool list, loop-until-dry critics with a round cap, visual auditors, AI-voice detection and per-claim provenance status in passport.yaml. It lacks a vote-counting deduplication script, a transcript audit of labels and a script-measured prose score. cloudflare/security-audit-skill has fresh adversarial verifiers, coverage critics, deduplicated candidates, a validated ledger and verdict labels, but no prose standard or perceptual gates. The remaining components each appear separately: dinosn/raptor-loop-hunt has a ledger script, deduplication and a fixed K=2 dry-round stop. TheMizeGuy/anti-slop has a script-scored prose standard. vnmoorthy/groundtruth has a transcript-based claim gate.
 
 Strongest claim the search supports: Each of these practices already exists in public agent skills and plugins, and some packages combine several of them (for example pedrohcgs/claude-code-my-workflow and cloudflare/security-audit-skill), but I have not found a public skill, plugin or agent pack that combines all seven in one package: evidence labels with provenance slots, a transcript audit of those labels, read-only verifiers enforced by tool lists, a vote-counting deduplication ledger script, a completeness critic with fixed stopping numbers, perceptual gates judged by a fresh critic, and a script-measured prose standard.
 
 | Project | Closeness | Evidence |
 | :--- | :---: | :--- |
 | https://github.com/pedrohcgs/claude-code-my-workflow | close | Opened README and agent files (1598 stars, pushed 2026-08-24). It has a claim-verifier agent with context: fork and an explicit tool list (Read, Grep, Glob, WebFetch, WebSearch, Bash). That list includes Bash, so the tool list alone does not make it read-on... |
-| https://github.com/cloudflare/security-audit-skill | close | Opened README (21107 stars, MIT, pushed 2026-09-14). The skill has a coverage-ledger.json with a validator script (validate-coverage-ledger.cjs), 'coverage critics to find gaps', and 'every unique candidate' sent to 'a fresh verifier that tries to disprove... |
+| https://github.com/cloudflare/security-audit-skill | close | Opened README (21107 stars, MIT, pushed 2026-09-14). The skill has a coverage-ledger.json with a validator script (validate-coverage-ledger.cjs), 'coverage critics to find gaps', and 'every unique candidate' sent to 'a fresh verifier that tries to disprove it'. |
 | https://github.com/dinosn/raptor-loop-hunt | loose | Opened SKILL.md and the file tree (217 stars). It has a persistent ledger script (scripts/raptor-loop-ledger) whose 'add' refuses invalid executions, and it deduplicates candidates against FINDINGS.md and the judge-rejected set. It has a fixed stopping numb... |
 | https://github.com/TheMizeGuy/anti-slop | loose | Opened README. A Claude Code plugin whose zero-dependency Node scanner (slop-scanner.mjs) scores prose for banned words, phrases and patterns deterministically ('Scan score: N/50'). A slop-detector agent adds a second review. This is precedent for a script-... |
 | https://github.com/B143KC47/deep-research-skill | loose | Opened README (2 stars). A research skill with an evidence ledger CLI (scripts/research_ledger.py with add-evidence and lint), claim and evidence IDs, confidence labels, and an adaptive stop rule. Precedent for evidence labels with provenance slots plus a l... |
@@ -837,43 +857,43 @@ Strongest claim the search supports: Each of these practices already exists in p
 | https://github.com/vnmoorthy/groundtruth | loose | Confirmed the repo exists: 'A completion-claim gate for Claude Code. Refuses to let the agent say done without evidence.' This is the known precedent for a transcript-based audit of claims. It has none of the other components. |
 | https://github.com/anthropics/claude-plugins-official | loose | Confirmed files plugins/claude-security/agents/scan-verifier.md, patch-verifier.md, code-modernization/agents/architecture-critic.md and the code-review plugin. These are verifier and critic agents spread across separate plugins, not one package. |
 
-### N3, search 0
+### N3
 
-Claim tested: 
+Claim tested: No other public skill or plugin for Google Antigravity provides adversarial multi-agent verification with read-only verifier agents and voting.
 
 Prior art found: yes.
 
-Verdict: The claim as worded is refuted. Suraj1235/open-dynamic-workflows (ODW, 38 stars, MIT) is public and ships an Antigravity plugin bundle and skill through `odw-daemon integrate antigravity`. It also appears in the antigravity-awesome-skills catalogue as an Antigravity skill. Its `verify` primitive runs a panel of adversarial critic agents, and only findings that pass a quorum survive (consensusThreshold, plus a weighted-vote consensus topology). That is adversarial multi-agent verification with voting, available for Antigravity. The author's skill still differs in two ways: - **Read-only verifiers:** ODW's README does not explicitly say its critics are read-only (worker agents get restricted tool lists such as read_file). - **Where the agents run:** on Antigravity, ODW runs its agents in its own external daemon with a separate model key or local Ollama, not as native Antigravity subagen...
+Verdict: The claim as worded is refuted. Suraj1235/open-dynamic-workflows (ODW, 38 stars, MIT) is public and ships an Antigravity plugin bundle and skill through `odw-daemon integrate antigravity`. It also appears in the antigravity-awesome-skills catalogue as an Antigravity skill. Its `verify` primitive runs a panel of adversarial critic agents, and only findings that pass a quorum survive (consensusThreshold, plus a weighted-vote consensus topology). That is adversarial multi-agent verification with voting, available for Antigravity. Gravitas still differs in two ways: - **Read-only verifiers:** ODW's README does not explicitly say its critics are read-only (worker agents get restricted tool lists such as read_file). - **Where the agents run:** on Antigravity, ODW runs its agents in its own external daemon with a separate model key or local Ollama, not as native Antigravity subagents.
 
-Strongest claim the search supports: We found no other public Antigravity skill or plugin that uses Antigravity's own native subagents, restricted to read-only tools, as adversarial verifiers whose verdicts are combined by vote. The closest are Open Dynamic Workflows, which gives Antigravity quorum-voted adversarial critics but runs them in its own external daemon, and Google's built-in /teamwork-preview, which has independent Critic, Challenger and Auditor agents but no voting.
+Strongest claim the search supports: I found no other public Antigravity skill or plugin that uses Antigravity's own native subagents, restricted to read-only tools, as adversarial verifiers whose verdicts are combined by vote. The closest is Open Dynamic Workflows, which gives Antigravity quorum-voted adversarial critics but runs them in its own external daemon. Antigravity's built-in /teamwork-preview is a slash command, not a skill or plugin, so it falls outside this claim; its public documentation describes independent Critic, Challenger and Auditor agents but no voting.
 
 | Project | Closeness | Evidence |
 | :--- | :---: | :--- |
 | https://github.com/Suraj1235/open-dynamic-workflows | close | I read the raw README (38 stars, created 2026-06-05, last pushed 2026-07-09). It says `odw-daemon integrate antigravity` "installs official-layout Antigravity plugin bundles" at ~/.gemini/config/plugins/odw, ~/.gemini/antigravity-cli/plugins/odw and .agents... |
-| https://antigravity.google/docs/teamwork/ | close | This is Google's own built-in /teamwork-preview feature. According to the docs page as I fetched it (through a WebFetch summary), it defines read-only Explorers ("without modifying any source files") plus separate verifier roles: Critic (independent code re... |
-| https://antigravity.google/docs/subagents/ | loose | Google's built-in /boost is a "three-tier multi-agent reasoning hierarchy" with "independent verification loops". Custom subagents can be limited to read tools through a `tools` frontmatter list (e.g. view_file, grep_search). The docs describe no voting mec... |
+| https://antigravity.google/docs/teamwork/ | close | This is Google's own built-in /teamwork-preview feature. The docs page defines read-only Explorers ("without modifying any source files") and separate verifier roles: a Critic that does independent code reviews, a Challenger that builds adversarial tests, and an Auditor that "checks test evidence against real command output". It describes no voting. |
+| https://antigravity.google/docs/subagents/ | loose | Google's built-in /boost "launches a three-tier multi-agent reasoning hierarchy" with "independent verification loops". Custom subagents can be limited to read tools through a `tools` frontmatter list (e.g. view_file, grep_search). The docs describe no voting mec... |
 | https://github.com/jm2/OpenCode-Team | loose | I read the README. It describes itself as "A community replica of Google Antigravity's `/teamwork-preview`". It has team/verifier ×N subagents that cannot edit ("permission.edit: deny" plus a runtime guard that refuses write tools for read-only sessions), a... |
 | https://github.com/udaysharmadev/Gravitas | loose | I read the README. It is an Antigravity skill plus an agy plugin ("Gravitas Native") with task-contract, evidence and completion-gate hooks, and it scales verification with risk ("A read-only question should not trigger a committee"). It is single-agent evi... |
 | https://github.com/kleinric/antigravity-plugin | loose | This is a multi-host plugin that installs in agy itself (`agy plugin install antigravity@sakibsadmanshajib`) and offers code review of uncommitted changes. The README as fetched says nothing about adversarial or multi-reviewer voting. Related Claude-Code-si... |
 
-### N4, search 0
+### N4
 
-Claim tested: 
+Claim tested: No other public agent skill states, as a general rule applied across fields (code, law, medicine, design, research), the test "could this check pass while the property that matters is false?", with the rule "if so it is a proxy: keep it and add the real check" and worked examples per field.
 
 Prior art found: yes.
 
-Verdict: The claim as worded does not hold up. Its core test already exists in public agent skills as a general rule. randommonicle/claude-skills (verify-the-effect plus the NORMS.md norm) states almost exactly the same thing: \"A success indicator that can be true while the effect is absent proves nothing\", and \"Never report success from a proxy signal ... assert the actual effect or artifact.\" Its sibling skill prove-it-can-fail asks of every check \"what does this output if the thing it guards is broken?\" rstest's \"Verify Behavior, Not Proxies\" skill and Invoker's prove-it skill say the same for code. What none of these do is apply the test across fields: every one uses only software, CI or ops examples. None gives worked examples for law, medicine, design or research, and none explicitly says to keep the proxy alongside the real check (verify-the-effect says to assert the real effect...
+Verdict: The claim as worded does not hold up. Its core test already exists in public agent skills as a general rule. randommonicle/claude-skills (verify-the-effect plus the NORMS.md norm) states almost exactly the same thing: "A success indicator that can be true while the effect is absent proves nothing", and "Never report success from a proxy signal ... assert the actual effect or artifact." Its sibling skill prove-it-can-fail asks of every check "what does this output if the thing it guards is broken?" rstest's "Verify Behavior, Not Proxies" skill and Invoker's prove-it skill say the same for code. What none of these do is apply the test across fields: every one uses only software, CI or ops examples. None gives worked examples for law, medicine, design or research, and none explicitly says to keep the proxy alongside the real check (verify-the-effect says to assert the real effect instead).
 
-Strongest claim the search supports: Other public agent skills already use the proxy test for code (for example randommonicle/claude-skills: \"a success indicator that can be true while the effect is absent proves nothing\"). As far as a search limited by GitHub rate limits could find, this is the first to state it as one rule across code, law, medicine, design and research, with worked examples in each field and an explicit instruction to keep the proxy and add the real check.
+Strongest claim the search supports: Other public agent skills already use the proxy test for code (for example randommonicle/claude-skills: "a success indicator that can be true while the effect is absent proves nothing"). As far as a search limited by GitHub rate limits could find, this is the first to state it as one rule across code, law, medicine, design and research, with worked examples in each field and an explicit instruction to keep the proxy and add the real check.
 
 | Project | Closeness | Evidence |
 | :--- | :---: | :--- |
 | https://github.com/randommonicle/claude-skills/blob/HEAD/verify-the-effect/SKILL.md | close | Opened. Its rule section reads: "A success indicator that can be true while the effect is absent proves nothing. Identify the real intended effect ... and assert that." NORMS.md turns this into an always-on norm: "Never report success from a proxy signal (g... |
 | https://github.com/randommonicle/claude-skills/blob/HEAD/prove-it-can-fail/SKILL.md | close | Opened. It asks of every check: "what does this output if the thing it guards is broken?" If the answer is still green, "the check is theatre." It adds rules such as "A check whose two operands share a source is theatre." This is the same question from the... |
 | https://github.com/web-infra-dev/rstest/blob/HEAD/.agents/skills/verify/SKILL.md | close | Opened. Its heading is "Verify Behavior, Not Proxies" and it keeps a list of "Forbidden proxies" (typecheck or lint green, build succeeded, a tool accepted your config). A change counts as verified only when the real behavior change has been observed. It is... |
-| https://github.com/Neko-Catpital-Labs/Invoker/blob/HEAD/skills/prove-it/SKILL.md | close | Opened. It says: "Never trust a proxy signal ... as evidence for a different claim ,  check the literal thing that was reported broken", and a repro must exercise the reported behavior itself, "not a proxy such as 'a related test passed'". Its example is la... |
-| https://github.com/m0n0x41d/haft/blob/HEAD/internal/cli/skill/h-verify/SKILL.md | loose | Opened. The h-verify skill asks: "the measured proxy improved ,  what got worse?" and calls a reflexive answer "the Goodhart failure mode". The h-compare skill says: "Name what each target is a proxy for." Both are about Goodhart in decisions over measured... |
-| https://github.com/mohitagw15856/pm-claude-skills/blob/HEAD/skills/metric-gaslighting-detector/SKILL.md | loose | Opened. Its list of metric distortions includes "The vanity proxy ,  measuring what moves instead of what matters" and "Goodhart's ghost". It applies only to business dashboards and KPIs. |
+| https://github.com/Neko-Catpital-Labs/Invoker/blob/HEAD/skills/prove-it/SKILL.md | close | Opened. It says: "Never trust a proxy signal ... as evidence for a different claim — check the literal thing that was reported broken", and a repro must exercise the reported behavior itself, "not a proxy such as 'a related test passed'". Its example is la... |
+| https://github.com/m0n0x41d/haft/blob/HEAD/internal/cli/skill/h-verify/SKILL.md | loose | Opened. The h-verify skill asks: "the measured proxy improved — what got worse?" and calls a reflexive answer "the Goodhart failure mode". The h-compare skill says: "Name what each target is a proxy for." Both are about Goodhart in decisions over measured... |
+| https://github.com/mohitagw15856/pm-claude-skills/blob/HEAD/skills/metric-gaslighting-detector/SKILL.md | loose | Opened. Its list of metric distortions includes "The vanity proxy — measuring what moves instead of what matters" and "Goodhart's ghost". It applies only to business dashboards and KPIs. |
 | https://github.com/anthropics/claude-plugins-official/blob/HEAD/plugins/skill-creator/skills/skill-creator/agents/grader.md | loose | Opened. The grader fails evidence that is superficial ("correct filename but empty/wrong content") and asks for discriminating assertions: "it passes when the skill genuinely succeeds and fails when it doesn't." This is the proxy idea applied to eval assert... |
 
 ## All 63 Candidates
@@ -944,5 +964,5 @@ Found by six searches: Claude Code and Anthropic skills, Antigravity and Gemini 
 | [j-withmission/design-director](https://github.com/j-withmission/design-director) | 0 | visual-verification | A design-process skill that runs a separate critic which sees only a screenshot and never the code, so the agent is not grading its own work. It has three cost tiers: a Sonnet pairwise spot check that produces no score, a Review loop wit... |
 | [classified-ai-core/skill-library](https://github.com/Classified-AI-Core/skill-library/blob/main/skills/design-and-image/screenshot-critique/SKILL.md) | 0 | visual-verification | screenshot-critique spawns one fresh, 'unprimed' sub-agent with fork_context false. It receives only the full screenshots plus 2x-4x crops and a neutral task, never the thread history, implementation details or the defect the main agent... |
 | [mr-ubik/deeper-research](https://github.com/mr-ubik/deeper-research) | 0 | multi-agent-review | Extends Claude Code's /deep-research. It archives full page text verbatim, and claims are verified by independent votes grounded in the archived page, with a mechanical check that the quote is present. Every run plants known-false decoy... |
-| [edgebuildlabs/evidence-contracts](https://github.com/edgebuildlabs/evidence-contracts) | 0 | gemini-antigravity | A drop-in AGENTS.md contract: 'Every claim of state carries a source and a date ,  or the words NOT VERIFIED.' Marks take the form file:line (date), 'command (now)' or 'URL (date)'. It includes a STARTED ≠ COMPLETED ≠ VALIDATED ≠ PASS la... |
+| [edgebuildlabs/evidence-contracts](https://github.com/edgebuildlabs/evidence-contracts) | 0 | gemini-antigravity | A drop-in AGENTS.md contract: 'Every claim of state carries a source and a date — or the words NOT VERIFIED.' Marks take the form file:line (date), 'command (now)' or 'URL (date)'. It includes a STARTED ≠ COMPLETED ≠ VALIDATED ≠ PASS la... |
 

@@ -1,7 +1,7 @@
 {
   "name": "gravitas",
-  "version": "1.0.0-beta.2",
-  "description": "Makes your Antigravity agent prove its work before it says it is done: it says how it knows each claim, checks the real thing instead of an easy stand-in, and has separate inspectors look for mistakes.",
+  "version": "1.0.0",
+  "description": "Adds an always-on rule that makes your Antigravity agent check what your answer depends on, tell you kindly when something you assumed is wrong, and still give you what you came for. For audits and other deep work, separate inspector agents with no file-editing tool look for mistakes and gaps.",
   "author": {
     "name": "Iamemily2050",
     "url": "https://github.com/Emily2040"

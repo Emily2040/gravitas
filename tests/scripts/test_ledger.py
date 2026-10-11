@@ -497,6 +497,31 @@ def f8_bom_input_is_read(t):
     expect(p.returncode == 0 and len(L.keys()) == 1, p.stdout + p.stderr)
 
 
+@case
+def f9_cjk_claim_prints_through_a_pipe(t):
+    # Ledger.run() forces PYTHONIOENCODING, which hides the Windows code page; drop it here.
+    L = Ledger(t, "quick")
+    env = {k: v for k, v in os.environ.items() if k not in ("PYTHONIOENCODING", "PYTHONUTF8")}
+    path = L.write([rec(claim="ログアウトがリフレッシュトークンを失効させない")])
+    for args in (("add", L.path, path, "--round", "1", "--by", "finder"), ("report", L.path)):
+        p = subprocess.run([sys.executable, SCRIPT] + list(args), capture_output=True, env=env)
+        out = p.stdout.decode("utf-8", "replace")
+        expect(p.returncode == 0, "%s exited %d: %s" % (args[0], p.returncode, p.stderr.decode("utf-8", "replace")))
+        if args[0] == "add":
+            expect("fresh" in out, "no fresh line: %s" % out)
+            expect(len(L.keys()) == 1, "the CJK finding was not saved")
+
+
+@case
+def f10_unreadable_ledger_exits_2(t):
+    path = os.path.join(t, "broken.ledger.json")
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write('{"findings": ')
+    p = subprocess.run([sys.executable, SCRIPT, "report", path], capture_output=True,
+                       text=True, encoding="utf-8")
+    expect(p.returncode == 2 and "cannot read ledger" in p.stderr, "exit %d: %s" % (p.returncode, p.stderr))
+
+
 def main():
     failed = 0
     for fn in CASES:

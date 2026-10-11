@@ -71,12 +71,21 @@ def find_transcript(a):
 
 
 def label_spans(text):
-    """Yield (tier, inside) for each label, matching parentheses so nested ones survive."""
+    """Yield (tier, inside) for each label, matching parentheses so nested ones survive. A
+    parenthesis inside a quoted line, as in "export async function logout(", is not counted,
+    unless the label's quote marks never pair up; then every parenthesis counts."""
     for m in LABEL.finditer(text):
-        depth, i = 1, m.end()
-        while i < len(text) and depth:
-            depth += {"(": 1, ")": -1}.get(text[i], 0)
-            i += 1
+        for skip_quoted in (True, False):
+            depth, i, quoted = 1, m.end(), False
+            while i < len(text) and depth:
+                ch = text[i]
+                if skip_quoted and ch in ("\"”" if quoted else "\"“”"):
+                    quoted = not quoted
+                elif not quoted:
+                    depth += {"(": 1, ")": -1}.get(ch, 0)
+                i += 1
+            if not depth:
+                break
         yield m.group(1), text[m.end():i - 1]
 
 
@@ -191,7 +200,7 @@ def canon_command(c):
     c = re.sub(r"[\"'`]", "", c)
     c = re.sub(r"\s+", " ", c).strip()
     # spaces beside punctuation carry no meaning (1 + 1, f(a, b)); spaces between words do
-    return re.sub(r"\s*([^\w\s])\s*", r"", c)
+    return re.sub(r"\s*([^\w\s])\s*", r"\1", c)
 
 
 def clean_row(r):
@@ -471,14 +480,14 @@ def main():
     g.add_argument("--conversation")
     g.add_argument("--latest", action="store_true")
     a = ap.parse_args()
-    if a.answer == "-":
-        text = sys.stdin.read()
-    else:
-        try:
-            with open(a.answer, encoding="utf-8") as f:
+    try:
+        if a.answer == "-":
+            text = sys.stdin.buffer.read().decode("utf-8-sig")
+        else:
+            with open(a.answer, encoding="utf-8-sig") as f:
                 text = f.read()
-        except OSError as e:
-            fail("cannot read answer: %s" % e)
+    except (OSError, UnicodeDecodeError) as e:
+        fail("cannot read answer (it must be UTF-8 text): %s" % e)
     transcript = find_transcript(a)
     results = check(text, transcript)
     bad = [r for r in results if r[0] is False]

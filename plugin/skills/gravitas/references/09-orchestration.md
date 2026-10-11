@@ -24,7 +24,7 @@ The patterns are field-neutral. A finder hunts one dimension of defect across a 
 
 ## Scout First, Then One Fan-Out Per Phase
 
-Discover the work list with your own tools first: list the files, run the search, pull the index of the statute, read the table of contents. Then fan out over what you found. Multi-phase work runs as a sequence of fan-outs, one per phase (understand, design, implement, review), with the parent reading each result before planning the next. One enormous fan-out planned at the start commits to a work list written before anything was learned.
+Discover the work list first, inside what the request names: list the files, run the search, pull the index of the statute, read the table of contents. For files, use `list_dir`, `find_by_name` and `grep_search` where your toolset has them. The main agent on the agy CLI has had none of them since 1.2.7 (`13-platform.md`), so there send `gravitas-scout` with the folder's absolute path. A shell listing is no substitute: the always-on rule bars it when it looks for context, and at default headless settings the command is refused and the turn is lost. Then fan out over what you found. Multi-phase work runs as a sequence of fan-outs, one per phase (understand, design, implement, review), with the parent reading each result before planning the next. One enormous fan-out planned at the start commits to a work list written before anything was learned.
 
 ## Pipeline By Default
 

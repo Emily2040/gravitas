@@ -2,7 +2,7 @@
 
 ## Mission
 
-Gravitas turns a request into work whose claims are ranked by how they were established, checked by something other than the reasoning that produced them, and reported with their gaps. This file is the router. It screens out trivial questions, builds a task record, sets the scale and names the modules to load. Every module fits in one 100-line `view_file` window; read each one you load to its last line.
+Gravitas turns a request into work whose claims are ranked by how they were established, checked by something other than the reasoning that produced them, and reported with their gaps. This file is the router. It builds a task record, sets the scale and names the modules to load. Every module fits in one 100-line `view_file` window; read each one you load to its last line.
 
 ## First-Principles Rules
 
@@ -19,9 +19,9 @@ Gravitas turns a request into work whose claims are ranked by how they were esta
 
 ## Triage Gate
 
-Check one thing before building anything: whether the request is a single deterministic computation, a lookup or a definition whose answer is complete in a line or two. If it is, answer it and stop, with no tier label, coverage block or subagent. Testing caught the skill failing its own control: asked to convert 72 °F to Celsius, it gave the right number and then appended an evidence tier, a bidirectional dimensional check and a scope note. After the rule was tightened, the retest answered in one line of 25 words with no tools. Readers who see machinery on a question that does not need it start skipping it on questions that do.
+Questions, advice, calculations, recommendations and short writing are answered under the always-on rule, in the main conversation (its In this conversation section), and never reach this file. If one did, answer it under the rule. This file is for work with many parts: an audit, a review, a change across many files, a research report, a build. On 26 September 2026, seven single questions run through this machinery took a median of 494 seconds against 19 without the plugin, and blind graders preferred the plain answer in five of them: labels, bookkeeping and progress notes buried the substance, and one reply held no answer at all.
 
-Set the depth by consequence rather than difficulty. An easy question whose answer lands in a filing, a diagnosis, a paper or a contract needs the primary source. A hard theoretical question asked out of curiosity does not need a five-agent adversarial pass.
+Consequence sets how strong each check must be: anything bound for a filing, a diagnosis, a paper or a contract needs the primary source. The amount of work sets the scale: fan out only when there are more items than one agent can check well.
 
 ## Task Record
 
@@ -38,16 +38,16 @@ tools_available: []    # browser tools, run_command, search_web, subagents: conf
 scale: quick | standard | full | exhaustive
 ```
 
-Missing inputs have three honest treatments: ask with `ask_question` when the session is interactive, give the answer as a function of the input, or state the assumption in the sentence that depends on it. When the request itself looks truncated or incomplete, ask or stop and say what is missing; never search shell history, other conversations or running processes for it. Confirm `tools_available` before planning verification. The agy CLI has no browser tools, and in a headless run a denied command discards the whole turn while reporting success, so a check that needs `run_command` there needs a grant first (`13-platform.md`).
+A missing input that decides the answer is handled in the order the always-on rule's item 6 sets (`01-evidence.md`): inferred where the request shows it, and said so in the sentence that depends on it; otherwise what holds whatever its value, and the answer for each value when the values are few, come before the deciding question, asked with `ask_question` when the session is interactive. A question alone is right only when nothing useful holds without the input, such as a review of a document never attached or a build failure with no log. When the request itself looks truncated or incomplete, ask or stop and say what is missing; never search shell history, other conversations or running processes for it. Fill `artifacts_present` from the request: look inside the workspace only when the request names files, a folder or a project, and never outside it unless the person names the path. On 26 September 2026 two runs given a self-contained question walked up from an empty workspace and read a benchmark's answer keys. Confirm `tools_available` before planning verification. The agy CLI has no browser tools, and in a headless run a denied command discards the whole turn while reporting success, so a check that needs `run_command` there needs a grant first (`13-platform.md`).
 
 ## Scale
 
-Pick the scale from `consequence`, state it in the first lines of the work with the reason, and change it only when a check fails in a way the plan did not expect. The report states any departure from these defaults.
+Pick the scale from `consequence`, state it, with the reason, in the report's Coverage section, and change it only when a check fails in a way the plan did not expect. The report states any departure from these defaults.
 
 | Scale | Use When | Fan-Out | Verification | Critic | Stop Rule |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| quick | The answer stays in the conversation | None | One independent check, if it costs under a minute | None | After the check |
-| standard | Someone will rely on the answer | 2 to 4 finders or readers | 1 refuter per load-bearing claim, plus any runnable check | One pass before the report | 1 dry round |
+| quick | The deep task turns out to be one or two claims | None | Items 3 and 4 of the always-on rule's opening list | None | After the check |
+| standard | Someone will rely on a deliverable with several parts | 2 to 4 finders or readers | 1 refuter per load-bearing claim, plus any runnable check | One pass before the report | 1 dry round |
 | full | Audits, migrations, and anything bound for a filing, diagnosis, paper, contract or public tracker | 4 to 8 finders, each on a different search angle | 3 refuters or 3 lens verifiers per finding, majority to survive | Every round | 2 dry rounds, 5 rounds maximum |
 | exhaustive | The user asks for everything, or the work is safety-relevant | One finder per item of the discovered work list | Lens panel plus every runnable check | Every round, plus a final judge | 2 dry rounds, ceiling declared up front |
 
@@ -67,12 +67,13 @@ Pick the scale from `consequence`, state it in the first lines of the work with 
 | `11-findings.md` | The deliverable is a bug report, audit, review or anything published under a person's name |
 | `12-prose.md` | Every artifact a person will read |
 | `13-platform.md` | The task depends on Antigravity behaviour, or a tool, hook, skill or permission does something unexpected |
+| `14-checks.md` | The work holds Chinese regulated verse or couplets, a haiku, tanka, senryu or sijo, amounts converted across 万, 億, 만, lakh or crore, or dates for zh-CN, ja or ko readers |
 
 ## Phases
 
 Run multi-phase work as separate fan-outs and read each result before planning the next phase, because the scout results usually change the work list.
 
-1. Discover the work list with your own tools: files, routes, statutes, papers, ledger lines, claims.
+1. Discover the work list with real tools, inside what the request names: files, routes, statutes, papers, ledger lines, claims. For files on the agy CLI, send `gravitas-scout` (`09-orchestration.md`).
 2. When the territory is large, send readers over its parts and merge their answers into a map.
 3. Get the independent check ready before it is needed: the app running, the source pulled, the data loaded, the harness validated against a known answer.
 4. Fan out one specialist per item or dimension, with a charter narrow enough that its result can be checked.
@@ -82,7 +83,9 @@ Run multi-phase work as separate fan-outs and read each result before planning t
 
 ## Output Assembly
 
-Map the result to these sections, in this order, and drop any that are empty. For machine-readable output, emit records that match `schemas/finding.schema.json`. At standard scale and above, run `scripts/provenance_check.py` on the draft and fix every `FAIL` before replying (`01-evidence.md`), and write the report to a file in the workspace or artifact folder before the final reply and before waiting on the last subagent, because a final turn can be lost after the work is done: a 13-minute audit with 7 subagents ended in a safety-filter block instead of its report, and only its ledger file survived.
+The always-on rule's limits on a reply hold here too. The reply never contains raw subagent output, progress or status lines, tier labels, coverage or scale sections, agent names, transcript or cache paths, or search-redirect links; the one status line allowed is the single holding line a wait needs (`08-delegation.md`). Never end a turn while a subagent is running unless a `schedule` timer is pending. At standard scale and above, the refuters and the critic take the place of the rule's Second Opinion, so do not also start `gravitas-reviewer` on the report. At quick scale the reply follows the always-on rule alone.
+
+At standard scale and above, write the report to a file in the workspace or artifact folder, mapped to these sections in this order, dropping any that are empty. The reply gives the verdict and the findings that matter in plain words and names that file. For machine-readable output, emit records that match `schemas/finding.schema.json`. Run `scripts/provenance_check.py` on the report and fix every `FAIL` before replying (`01-evidence.md`). Write the report before the final reply and before waiting on the last subagent, because a final turn can be lost after the work is done: a 13-minute audit with 7 subagents ended in a safety-filter block instead of its report, and only its ledger file survived.
 
 1. The answer or verdict in one or two sentences, with its tier.
 2. Findings ranked by severity, each with its tier and provenance in the same sentence.

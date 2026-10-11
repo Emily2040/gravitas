@@ -1,4 +1,4 @@
-// Acceptance gates written to the rules in gravitas/references/04-acceptance.md.
+// Acceptance gates written to the rules in gravitas/references/05-acceptance.md.
 // Every gate states a failing condition and is evaluated, not asserted in prose.
 // Exits non-zero if any gate fails. Run: node scripts/gates.js
 import { chromium } from 'playwright';

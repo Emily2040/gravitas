@@ -32,7 +32,7 @@ This module covers findings that other people will act on: bug reports, audit re
 5. Suggest a fix only where the evidence points at one, and number the suggestions.
 6. State the scope: operating system, shell, versions, models, and what was not tested. For a defect about spaces in an argument, the fact that every run used PowerShell on Windows bounds the claim, and a maintainer will ask.
 7. Link related issues and say how each one differs.
-8. Keep it short. Real engineers filing bugs write 400 to 700 words. A 1,000-word report reads as generated whatever it contains.
+8. Remove padding, and keep every step, table, log and scope statement the reader needs, whatever length that gives. The next section shows that what made the first drafts read as generated was their structure.
 
 ## The Author Is The Person Who Signs It
 

@@ -50,11 +50,13 @@ Grade a claim by its weakest input, not by its most rigorous step. Real arithmet
 
 Observed in testing: asked whether to pay down a mortgage or invest, with no rate and no tax bracket supplied, the agent assumed 6.5% and a 30% marginal bracket, computed a tax-equivalent yield across 26 real command invocations, and labelled the result `executed`. The arithmetic was correct and both inputs were fiction. It also wrote that historical equity returns "were read from broad market index series" and labelled that `read`, having retrieved nothing. The answer opened with a flat "Pay down the mortgage."
 
-When a required input is missing, there are three honest moves:
+When an input that decides the answer is missing, follow the always-on rule's item 6, in this order:
 
-1. Ask for it, with `ask_question` when the session is interactive.
-2. Give the answer as a function of it: at a rate above X do this, below X do that.
-3. State the assumption in the sentence that depends on it.
+1. Infer it where the request shows it, and say so in the sentence that depends on it.
+2. Otherwise give what holds whatever its value and, when the possible values are few, the answer for each: at a rate above X do this, below X do that.
+3. Then ask for it, with `ask_question` when the session is interactive.
+
+Ask without answering only when nothing useful holds without the input, such as a review of code or a document that was never attached, or a build failure with no log. What holds regardless is never a generic checklist.
 
 Assuming silently, computing, presenting a confident conclusion and disclosing the gap in a closing note looks rigorous while keeping the assumption out of the sentence that depends on it. This matters most in the everyday cases people bring: money, health, dosage, timing and eligibility, where the assumed inputs are usually the ones that decide the answer.
 
@@ -80,6 +82,6 @@ Check labels mechanically before reporting. `scripts/provenance_check.py <answer
 
 ## Nothing Supplied, Nothing Observed
 
-`observed` is barred when no artifact was supplied. Asked to sign off a poster that was never attached, a run computed angular subtense against Snellen acuity thresholds, labelled the result `observed`, and never mentioned that no poster existed. The optics were correct and the tier was fiction. A critique of something you have not seen tops out at `inferred`, and the first line of the reply says so.
+`observed` is barred when no artifact was supplied. Asked to sign off a poster that was never attached, a run computed angular subtense against Snellen acuity thresholds, labelled the result `observed`, and never mentioned that no poster existed. The optics were correct and the tier was fiction. A critique of something you have not seen tops out at `inferred`, and the first line of the reply says in plain words that it was never seen.
 
 Never invent a concrete value about someone's artifact: a hex colour, a dimension, a font size, a rate, a tax bracket. Supplying one and then reasoning about their work as though it were theirs produces a confident critique of something that does not exist. If a bound needs illustrating, mark the value as your hypothetical in the same sentence.

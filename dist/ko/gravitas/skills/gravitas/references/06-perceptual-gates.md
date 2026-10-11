@@ -1,0 +1,78 @@
+# 모듈 06 - 지각 게이트(Perceptual Gates)
+
+## 목적
+
+이 모듈은 직접 눈으로 봐야만 답할 수 있는 검증을 다룹니다. 대상은 사람이 보게 될 모든 결과물, 즉 장면, 페이지, 차트, 생성 이미지, 조판한 문서입니다. 작업에 시각적인 결과물이 있으면 언제나 `05-acceptance.md`와 함께 불러옵니다. 이 모듈은 그 파일에서 설명한 초콜릿 공장 사례를 바탕으로 합니다.
+
+## 스크린샷은 검증이 아니다
+
+초콜릿 공장 실행에서는 보고서에 PNG 8장이 첨부되어 있었습니다. 그런데 이 스크린샷이 근거로 쓰인 게이트는 하나같이 기하(geometry)를 재는 것이었습니다. 검사 항목은 UUID 유지 여부, 메시 개수, `Y = 1.084 m` 지점의 그리퍼 여유 간격, 0.1 mm 미만인 사이클 경계 오차였습니다. 전부 사실이었습니다. 그런데도 장면은 눈으로 보면 이상했습니다. 이미지가 제대로 보이는지는 어디에서도 묻지 않았습니다. 스크린샷은 판정할 이미지가 아니라, 스크립트가 돌았다는 증빙으로 첨부됐을 뿐입니다.
+
+이런 실패에 빠지기 쉬운 이유가 있습니다. 숫자와 PASS로 빽빽한 문서가 나오고, 그 문서가 직접 눈으로 보는 것보다 더 엄밀하게 느껴지기 때문입니다. 하지만 그 문서가 답하는 것은 다른 질문입니다.
+
+| | 기하 검증 | 지각 검증 |
+| :--- | :--- | :--- |
+| 묻는 것 | 요소가 있는가, 위치와 크기가 맞는가 | 제대로 보이는가 |
+| 방법 | 스크립트 assertion으로 씬 그래프나 DOM을 검사 | 모델이 이미지를 직접 보고 판정 |
+| 잡아내는 것 | 빠진 노드, 잘못된 transform, 개수 어긋남 | 밋밋한 조명, 플라스틱 같은 재질, 알아볼 수 없는 형태 |
+| 못 잡는 것 | 겉모습에 관한 모든 것 | 정확한 수치에 관한 모든 것 |
+
+지각 검증은 스크립트로 짤 수 없습니다. 새로 띄운 비평가 앞에 이미지를 놓고, 그게 어떻게 읽히는지 물어야 합니다.
+
+## 지각 게이트
+
+사람이 보게 될 결과물이라면, 직접 보는 사람만 답할 수 있는 게이트를 추가합니다. `gravitas-visual-critic`에게 캡처와 의도를 함께 넘기고, 답은 반드시 구체적으로 받습니다.
+
+“보기 괜찮나요?”라고 물으면 동의하는 답을 유도하게 됩니다. 다음 질문들은 맞는지 틀린지 가릴 수 있는 답을 끌어냅니다.
+
+- 주요 표면마다 어떤 재질로 보이는지 말해 주세요. 브리프에는 구리, 에나멜 코팅 강철, 황동이라고 되어 있습니다. 실제로는 무엇이 보이나요?
+- 초콜릿이 어디 있는지 짚어 주세요. 이 이미지에서 찾을 수 없다면 없다고 말해 주세요.
+- 빛이 어느 방향에서 오는지 보이나요? 그 방향을 말해 주세요. 조명이 밋밋해 보인다면 밋밋하다고 말해 주세요.
+- 텍스처도, 마모도, 변화도 없는 표면을 모두 나열해 주세요.
+- 브리프를 한 번도 읽지 않은 사람이 이걸 초콜릿 공장으로 알아볼까요? 그 사람 눈에는 대신 무엇이 보일까요?
+
+비평가는 보는 사람의 입장에서 답하며, 소스는 읽지 않습니다. 코드를 읽은 비평가는 이미지가 아니라 의도를 설명하게 되기 때문입니다. 질문을 딱 하나만 고른다면 가장 쓸모 있는 것은 “이건 무엇으로 만든 것처럼 보이나요?”입니다. 플랫 셰이딩된 프리미티브로 이루어진 장면이라면, 재질 설정에 뭐라고 적혀 있든 돌아오는 답은 “플라스틱 블록”입니다.
+
+## 만들기 전에 목표부터 못 박기
+
+이 실행의 계획은 구체적이었습니다. 거칠기 0.20, 클리어코트 0.85의 `#941c33` 라즈베리색 에나멜, 강도 2.8의 3500 K 할로겐 키 라이트, 프로시저럴 타일 줄눈까지 정해 두었습니다. 모두 진짜 인수 기준(acceptance criteria)인데, 그중 어느 것도 게이트가 되지 못했습니다. 계획은 겉모습을 이야기했고, 테스트 스위트는 위치를 쟀습니다.
+
+계획에 적힌 재질·조명 사양은 하나하나가 앞으로 작성해야 할 지각 게이트입니다. 계획에 클리어코트 0.85라고 적혀 있다면, 표면이 래커를 칠한 것처럼 보이는지 묻는 게이트를 둡니다. 특정 위치에 3500 K 키 라이트를 둔다고 했다면, 보는 사람이 빛의 방향과 그 따뜻한 색감을 알아볼 수 있는지 묻는 게이트를 둡니다.
+
+## 콘솔 출력도 게이트다
+
+같은 장면에서는 `THREE.PCFSoftShadowMap`을 지정했는데, 이 상수는 r186에서 제거되었습니다. 렌더러는 하드 섀도로 폴백했고, 그 사실을 콘솔에 그대로 남겼습니다.
+
+```text
+THREE.WebGLShadowMap: PCFSoftShadowMap has been removed. Using PCFShadowMap instead.
+```
+
+실패한 것도, 크래시가 난 것도 없었습니다. 다만 그림자는 계획이 요구한 것과 달랐고, 이 실행은 콘솔 캡처를 연결해 두고도 정작 읽지 않았습니다. Deprecation 경고만큼 싸게 얻을 수 있는 결함 신호는 없습니다. 코드가 호출하는 API가 언급된 경고는 누군가 트리아지하기 전까지 실패로 취급합니다.
+
+## 실제로 빨간불이 들어오는 예제
+
+`examples/gates.example.js`는 이 규칙대로 작성한 Playwright 게이트 스위트로, 앞에서 설명한 장면을 대상으로 실행했습니다. 결과는 6개 중 4개 통과이고, 종료 코드 1로 끝납니다.
+
+```text
+PASS  G1  Zero console errors
+FAIL  G2  No deprecation warning for an API this code calls
+          THREE.WebGLShadowMap: PCFSoftShadowMap has been removed. Using PCFShadowMap instead.
+FAIL  G3  Shadow map enabled and not the hard fallback (type !== 1)
+          enabled=true type=1
+PASS  G4  Under 90% of materials are untextured
+          153/193 materials have no map (79.3%)
+PASS  G5  Component counts match the brief
+PASS  G6  SELF-TEST: an injected wrong value is detected by G5 logic
+```
+
+G6는 규칙이 요구하는 셀프 테스트입니다. 일부러 틀린 값을 주입하고 비교 로직이 그걸 잡아내는지 확인하므로, 이 스위트는 빨간불이 들어올 수 있다는 것을 스스로 증명한 셈입니다. 원래 스위트는 똑같은 장면을 두고 `ALL TEST GATES PASSED SUCCESSFULLY`라고 보고했습니다.
+
+지각 게이트는 그다음에 따로 돌렸습니다. 스크린샷만 받고 소스는 받지 않은 새 에이전트가 맡았고, 답변은 다음과 같습니다.
+
+> **Chocolate: Absent.** The mold cavities are completely white and empty; there is no liquid chocolate, bar, or brown confectionery substance visible anywhere on the line.
+>
+> **Lighting: Flat.** No directional cast shadows, no specular hot spots.
+>
+> **What it looks like it is made of:** injection-molded matte toy plastic and raw CAD primitives.
+
+원래 스위트에서 그 초콜릿 오브젝트를 검사한 게이트에는 이렇게 적혀 있었습니다. “Hero Chocolate Identity Persistence - PASS. Exactly 1 mesh throughout; UUID persists across all phases.” 메시는 씬 그래프에는 존재하지만 렌더링 결과에서는 보이지 않습니다. 이 간극은 어떤 기하 게이트로도 메울 수 없습니다. 지각 게이트가 필요한 이유가 바로 여기에 있습니다.

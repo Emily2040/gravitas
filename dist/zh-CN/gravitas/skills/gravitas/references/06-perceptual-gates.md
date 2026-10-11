@@ -1,0 +1,80 @@
+# 模块 06：感知关卡
+
+## 用途
+
+有些检查只有看画面的一方才能回答，本模块讲的就是这一类。凡是最终要给人看的东西都适用：场景、页面、图表、生成的图片、排好版的文档。只要工作产出带有视觉结果，就把本模块和 `05-acceptance.md` 一起加载。本模块正是从那份文件里讲过的巧克力工厂案例总结出来的。
+
+## 截图不等于验证
+
+巧克力工厂那次运行，在报告里附了 8 张 PNG。靠这些截图撑起来的关卡，测的全是几何属性：UUID 是否保持不变、网格数量、夹爪在 `Y = 1.084 m` 处的间隙、循环边界误差是否小于 0.1 mm。这些结论都成立，可场景看上去还是不对。整个流程没有一处问过“这张图看着对不对”。截图被当作“脚本跑过了”的凭证存了档，没人把它们当成需要评判的画面。
+
+这种失败很有迷惑性：它能产出一份满是数字和“通过”的文档，感觉比用眼睛看更严谨。可它回答的是另一个问题。
+
+| | 几何检查 | 感知检查 |
+| :--- | :--- | :--- |
+| 回答的问题 | 元素在不在，位置和尺寸对不对 | 看起来对不对 |
+| 做法 | 用脚本对场景图或 DOM 做断言 | 让模型看图，给出判断 |
+| 能抓到 | 节点缺失、变换错误、数量漂移 | 光照平淡、材质有塑料感、形体辨认不出 |
+| 抓不到 | 一切跟外观有关的问题 | 一切跟精确数值有关的问题 |
+
+感知检查没法写成脚本。必须把图像摆到一个没有任何上下文的评审者面前，问它这张图看上去像什么。
+
+## 感知关卡
+
+凡是要给人看的东西，都要加上只有看画面的一方才答得出的关卡。把采集到的画面和设计意图交给 `gravitas-visual-critic`，并要求它给出具体回答。
+
+问“这看起来好不好”，得到的往往只是附和。下面这些问题则不同，给出的回答有可能是错的：
+
+- 说出每个主要表面看上去是什么材质。需求说明里写的是铜、搪瓷钢和黄铜，你看到的是什么？
+- 指出巧克力在哪里。如果在这张图里找不到，就直说找不到。
+- 能看出光从哪个方向来吗？说出方向。如果光照看着很平，就回答“平”。
+- 列出所有没有纹理、磨损或变化的表面。
+- 一个从没读过需求说明的人，能认出这是一座巧克力工厂吗？他实际看到的是什么？
+
+评审者以观看者的身份作答，不读源码，因为读过代码的评审者描述的是设计意图，而不是图像本身。所有提问里，单拿出来最管用的一句是：“这看起来是用什么做的？”一个由平面着色的基础几何体拼成的场景，不管材质配置里写了什么，得到的回答都是“塑料积木”。
+
+## 先把目标说清楚，再动手构建
+
+那次运行的计划写得很具体：`#941c33` 覆盆子红搪瓷，粗糙度 0.20，清漆（clearcoat）0.85；3500 K 卤素主光，强度 2.8；程序化生成的瓷砖填缝。这些都是货真价实的验收标准，却没有一条变成关卡。计划描述的是外观，测试套件量的却是位置。
+
+计划里的每一条材质和光照规格，都是一个等着写出来的感知关卡。计划写了清漆 0.85，就要有一个关卡问：表面看上去像不像上过漆？计划在某个位置放了一盏 3500 K 主光，就要有一个关卡问：看的人能不能说出光的方向和冷暖？
+
+## 控制台输出也是关卡
+
+同一个场景指定了 `THREE.PCFSoftShadowMap`，而它在 r186 中已被移除。渲染器退回到硬阴影，并在控制台里明确说了这一点：
+
+```text
+THREE.WebGLShadowMap: PCFSoftShadowMap has been removed. Using PCFShadowMap instead.
+```
+
+没有任何环节失败，程序也没有崩溃。但阴影并不是计划要的效果；而且这次运行明明接好了控制台采集，输出却没人读。弃用警告是成本最低的缺陷信号。警告里点名的 API 只要是代码在调用的，在有人排查定性之前，一律按失败处理。
+
+## 一个会变红的完整示例
+
+`examples/gates.example.js` 是按上述规则写的一套 Playwright 关卡测试套件，测的就是上面那个场景。结果是 6 项中通过 4 项，退出码为 1。
+
+```text
+PASS  G1  Zero console errors
+FAIL  G2  No deprecation warning for an API this code calls
+          THREE.WebGLShadowMap: PCFSoftShadowMap has been removed. Using PCFShadowMap instead.
+FAIL  G3  Shadow map enabled and not the hard fallback (type !== 1)
+          enabled=true type=1
+PASS  G4  Under 90% of materials are untextured
+          153/193 materials have no map (79.3%)
+PASS  G5  Component counts match the brief
+PASS  G6  SELF-TEST: an injected wrong value is detected by G5 logic
+```
+
+G6 就是规则要求的自检：故意注入一个错误值，确认比较逻辑能把它抓出来，由此证明这套测试套件确实能变红。同一个场景换成原来那套测试套件，报告的是 `ALL TEST GATES PASSED SUCCESSFULLY`。
+
+随后又单独跑了一次感知关卡：交给一个没有任何上下文的新 agent，只给截图，不给源码。它的回答如下：
+
+> **Chocolate: Absent.** The mold cavities are completely white and empty; there is no liquid chocolate, bar, or brown confectionery substance visible anywhere on the line.
+>
+> **Lighting: Flat.** No directional cast shadows, no specular hot spots.
+>
+> **What it looks like it is made of:** injection-molded matte toy plastic and raw CAD primitives.
+
+（大意：巧克力：没有。模具型腔全是白的、空的，整条产线上看不到任何液态巧克力、巧克力块或棕色糖果类物质。光照：平。没有方向性的投影，也没有高光点。看上去是什么做的：注塑成型的哑光玩具塑料，外加原始的 CAD 基础几何体。）
+
+原来那套测试套件针对这个物体的关卡写的是：“Hero Chocolate Identity Persistence - PASS. Exactly 1 mesh throughout; UUID persists across all phases.”（大意：主角巧克力的身份持续性：通过。全程恰好 1 个网格，UUID 在所有阶段保持不变。）这个网格在场景图里确实存在，渲染结果里却看不见。这道缺口，任何几何关卡都补不上，感知关卡正是为此而设。

@@ -33,7 +33,7 @@ Tier 1 is looking at the thing itself, and what the thing itself is changes by f
 
 ### Mathematics
 
-A proof read line by line is tier 3. Tier 1 is evaluating the statement numerically at random points, testing boundary cases (zero, one, empty, negative, infinite), checking limits and asymptotics, verifying by a second independent method, and trying to build a counterexample. A closed form that disagrees with a numeric evaluation at a single point is dead, however clean the derivation reads.
+Reading a proof line by line leaves its correctness `inferred`, because that check is still reasoning. The independent checks are evaluating the statement numerically at random points, testing boundary cases (zero, one, empty, negative, infinite), checking limits and asymptotics, verifying by a second independent method, and trying to build a counterexample. A check a tool ran is `executed`; one worked in your head stays `inferred`. A closed form that disagrees with a numeric evaluation at a single point is dead, however clean the derivation reads.
 
 ### Physics And Engineering
 
@@ -53,7 +53,7 @@ Recompute from the raw figures. Reconcile totals. Compare against base rates bef
 
 ### Medicine And Applied Evidence
 
-Check that the study population resembles the case at hand, that the effect size is clinically meaningful and not merely significant, and that the finding has replicated. Prefer a systematic review to a single trial, and the trial to a press release about the trial. Dosage, interaction and eligibility answers depend on inputs such as weight, renal function and current medication; when those are missing, the answer is given as a function of them or not given.
+Check that the study population resembles the case at hand, that the effect size is clinically meaningful and not merely significant, and that the finding has replicated. Prefer a systematic review to a single trial, and the trial to a press release about the trial. Dosage, interaction and eligibility answers depend on inputs such as weight, renal function and current medication; when those are missing, give what holds regardless of them and the answer as a function of them (a dose per kilogram, or the answer for each value where the values are few, such as weight bands), then ask for the deciding input.
 
 ### Finance And Quantitative Work
 
@@ -73,7 +73,7 @@ The judgeable layer is whether the work reads, whether it lands, and whether it 
 
 The checkable layer is necessary, which makes passing it feel like verification. For the judgeable layer, use a fresh critic twice. First without the brief: what does this read as, what is it about, what mood does it carry. Then with the brief: does it deliver the intent, and where does it fall short. Running only the second pass invites the critic to confirm the intent it was just handed.
 
-Taste judgements are tier 3 at best and usually tier 4. Label them and still give them, because refusing to judge is its own failure.
+Taste judgements are `inferred`. Label them and still give them, because refusing to judge is its own failure.
 
 ### Web Design And Interfaces
 
@@ -90,7 +90,7 @@ Go to the document rather than an account of it. Establish provenance and date, 
 The list above is not exhaustive. Architecture, cooking, music production, teaching, photography and UX research all yield to the same three questions.
 
 1. What can a machine measure here? That is the checkable layer, tiers 1 and 2. Measure it, because it is cheap and necessary.
-2. What can only a competent judge decide? That is the judgeable layer, tiers 3 and 4. It needs a critic, and the verdict stays labelled as judgement.
+2. What can only a competent judge decide? That is the judgeable layer, and its verdicts are `inferred`. It needs a critic, and the verdict stays labelled as judgement.
 3. Which metric will feel like verification? Name it before you start. It is almost always something real, necessary and satisfying to report, which is what makes it the trap.
 
 If the third question has no answer, verification in that field is easy and the proxy trap does not apply.

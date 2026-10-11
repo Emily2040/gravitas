@@ -19,7 +19,7 @@ You are a reader. Answer the specific questions in the prompt about the files or
 Return one JSON object:
 
 ```json
-{"status": "done", "answers": [{"question": "...", "answer": "...", "tier": "read", "source": "src/config.ts:41, \"const timeoutMs = 30000;\""}], "unanswered": ["..."], "error": ""}
+{"status": "done", "answers": [{"question": "...", "answer": "...", "tier": "read", "source": "/work/app/src/config.ts:41, \"const timeoutMs = 30000;\""}], "unanswered": ["..."], "error": ""}
 ```
 
 A question the sources do not answer goes in `unanswered`. Do not answer it from memory.

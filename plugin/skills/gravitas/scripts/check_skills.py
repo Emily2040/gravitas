@@ -102,8 +102,16 @@ def parse_frontmatter(text):
                 data[key].append(line.split("-", 1)[1].strip().strip('"').strip("'"))
         elif ":" in line and not line.startswith((" ", "\t")):
             key, v = line.split(":", 1)
-            key, v = key.strip(), v.strip().strip('"').strip("'")
-            data[key] = v if v else []
+            key, v = key.strip(), v.strip()
+            # as YAML reads them: [] is an empty list, true and false are booleans, digits a number
+            if v in ("", "[]"):
+                data[key] = []
+            elif v in ("true", "false"):
+                data[key] = v == "true"
+            elif re.match(r"^-?[0-9]+$", v):
+                data[key] = int(v)
+            else:
+                data[key] = v.strip('"').strip("'")
     return data, None
 
 
@@ -300,6 +308,11 @@ def check_path(path, rep):
 
 
 def main(argv):
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError, OSError):
+            pass
     repo = find_repo() if argv[:1] == ["--repo"] else None
     rep = Report(strict=repo is not None)
     if argv[:1] == ["--repo"]:
@@ -310,8 +323,14 @@ def main(argv):
         if not os.path.exists(os.path.join(repo, "plugin", "README.md")):
             rep.bad("plugin", "README.md is missing; it is what a user finds in the installed folder")
         locales = os.path.join(repo, "locales")
-        only = argv[argv.index("--locales") + 1] if "--locales" in argv else "all"
-        if os.path.isdir(locales) and only != "none":
+        i = argv.index("--locales") if "--locales" in argv else -1
+        if i >= 0 and i + 1 >= len(argv):
+            print("--locales needs a value: a locale code, none or all")
+            return 2
+        only = argv[i + 1] if i >= 0 else "all"
+        if only not in ("none", "all") and not os.path.isdir(os.path.join(locales, only)):
+            rep.bad("locales/%s" % only, "folder does not exist")
+        elif os.path.isdir(locales) and only != "none":
             for lang in sorted(os.listdir(locales)):
                 if only != "all" and lang != only:
                     continue

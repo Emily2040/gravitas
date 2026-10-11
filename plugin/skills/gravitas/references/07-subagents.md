@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This module covers how to get a specialist, what the subagent tools take as of September 2026, which agents this plugin ships, and which model each role runs on. Load it before the first `invoke_subagent` or `define_subagent` call, together with `08-delegation.md`.
+This module covers how to get a specialist, what the subagent tools take as of October 2026, which agents this plugin ships, and which model each role runs on. Load it before the first `invoke_subagent` or `define_subagent` call, together with `08-delegation.md`.
 
 ## Three Ways To Get A Specialist
 
@@ -16,7 +16,7 @@ Prefer the shipped agents for any role that must not write. Their read-only stat
 
 ## The Tool Declarations
 
-Read out from the model's own tool declarations on agy 1.2.9 on 2026-09-24, and cross-checked against strings in `language_server.exe` from desktop 2.17.0. Re-check them after an update, because an earlier version of this skill documented fields that the declarations do not contain.
+Read out from the model's own tool declarations on agy 1.2.9 on 2026-09-24, and cross-checked against strings in `language_server.exe` from desktop 2.17.0. All but `define_subagent` were read again on 2026-10-03, the day the CLI moved from 1.2.15 to 1.2.16, and matched. Re-check them after an update, because an earlier version of this skill documented fields that the declarations do not contain.
 
 | Tool | Parameters |
 | :--- | :--- |
@@ -24,8 +24,9 @@ Read out from the model's own tool declarations on agy 1.2.9 on 2026-09-24, and 
 | `define_subagent` | `name`, `description`, `system_prompt`, `enable_write_tools` (file edits and commands), `enable_mcp_tools`, `enable_subagent_tools` |
 | `manage_subagents` | `Action`: `list`, `kill` or `kill_all`, with `ConversationIds` for `kill` |
 | `send_message` | `Recipient` (a subagent conversation ID) and `Message` |
+| `schedule` | `DurationSeconds` for a one-shot timer or `CronExpression` for a cron, and `Prompt`. `TimerCondition`: `never` (default), `any`, or a sender ID whose message cancels the timer. `IsDaemon` and `MaxIterations` apply to crons. Returns at once; `manage_task` with `kill` and the task ID cancels it |
 
-Concurrency comes from putting several entries in one `Subagents` array. Each started subagent gets its own conversation ID and a `logAbsoluteUri` pointing at its transcript, and each sends a message back when it finishes. In an interactive session there is no need to poll; in a headless run, keep making tool calls until every child has finished (`08-delegation.md`).
+Concurrency comes from putting several entries in one `Subagents` array. Each started subagent gets its own conversation ID and a `logAbsoluteUri` pointing at its transcript, and when it finishes without calling `send_message`, a message from sender `system` carries its last reply. To wait for it, set a `schedule` timer with `TimerCondition: "any"` and end the turn: a timer keyed to the subagent's ID is not cancelled by that `system` message, and without a timer a headless run ends with the turn and the result is lost. `08-delegation.md` has the verified pattern.
 
 The `invoke_subagent` declaration tells the model to default `Model` to `inherit` unless the user asks for a different model. Installing this plugin is that request for the roles in the routing table below.
 
@@ -83,10 +84,9 @@ Two cautions. The documentation warns that an unmapped or misspelled tool name i
 | `gravitas-visual-critic` | Judge captures as a viewer who has not seen the source | `view_file` | pro | No |
 | `gravitas-completeness-critic` | Read the ledger and name what was never searched, opened, run or verified | `view_file`, `list_dir`, `grep_search`, `find_by_name` | pro | No |
 | `gravitas-prose-editor` | Apply the prose standard to a draft and return the edited text | `view_file` | pro | No |
+| `gravitas-reviewer` | Review a draft reply for the always-on rule's Second Opinion and return at most three defects | `view_file`, `read_url_content`, `search_web`, `run_command` | pro | No, by charter |
 
-`gravitas-checker` is the one verifier with a command line, so its read-only status is a charter rule rather than a tool restriction. Keep its territory narrow and read its transcript when its result is load-bearing.
-
-Implementation goes to the parent or to `self` with `Model: "inherit"`, which keeps the user's chosen model on the work that changes files.
+`gravitas-checker` and `gravitas-reviewer` hold a command line, so their read-only status is a charter rule rather than a tool restriction. Keep the checker's territory narrow and read its transcript when its result is load-bearing. The reviewer serves the rule's Second Opinion, not this skill's fan-outs, and is installed only with a rule that has that section, which takes `--review` at install. Implementation goes to the parent or to `self` with `Model: "inherit"`, which keeps the user's chosen model on the work that changes files.
 
 ## Model Routing
 
