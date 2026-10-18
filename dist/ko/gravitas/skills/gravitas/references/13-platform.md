@@ -64,7 +64,7 @@ Gravitas를 플러그인으로 설치하는 것도 이 때문입니다. 스킬, 
 | `send_message`를 호출하지 않고 끝난 서브에이전트는 자신의 마지막 답변을 발신자 `system` 명의의 메시지에 실어 부모를 깨웁니다. 그래서 그 서브에이전트의 ID를 지정한 `TimerCondition`은 취소되지 않습니다. 240초 타이머가 7번 중 7번 모두 끝까지 돌았고, 부모는 답변을 두 번 했습니다. 반면 자식 에이전트가 직접 보낸 `send_message`에는 자기 ID가 담기며, 이런 타이머를 3번 중 3번 모두 취소했습니다. `"any"`로 지정한 타이머는 8번 중 8번 모두 취소되었습니다 | Observed (1.2.16, 2026년 10월 3일, `--sandbox --dangerously-skip-permissions` 사용) |
 | 텍스트도 도구 호출도 없는 턴은 거부되므로("model output must contain either output text or tool calls, these cannot both be empty"), 기다리기만 하는 턴이라도 짧게 한 줄은 말해야 합니다. 헤드리스 실행은 이 한 줄을 출력하고, 도구 호출과 함께 쓴 텍스트도 출력합니다 | Observed (1.2.16, Gemini 3.8 Flash): 턴을 조용히 끝내라고 지시한 실행 3번 중 2번에서 이 오류가 나옴 |
 | 에이전트나 모델 API에서 실패가 나면 stderr에 `AGY_ERROR: {...}`를 출력하고 종료 코드 3으로 끝납니다 | Read: 1.2.6 변경 로그 |
-| `--json-schema`에 읽을 수 있는 파일도 JSON 객체도 아닌 값을 넘기면 문자열 스키마로 바뀌어 버렸고, 루트가 객체가 아닌 스키마는 항상 HTTP 400을 돌려줬습니다 | Observed (1.2.7에서 42번 실행, 1.2.9에서 재확인). 1.2.14에서 고쳐짐(이슈 #1064 닫힘): 이제 이런 인수는 종료 코드 1로 끝나며, 2026년 10월 5일 1.2.17에서 확인 |
+| 헤드리스 `agy -p` 턴이 약 한 시간 시점에 `UNAUTHENTICATED (code 401)`로 끝났다. 긴 실행 2회 가운데 2회(28분, 61분)였고, 서브에이전트의 작업과 써 둔 파일은 온전했다. `agy -c`로 대화를 이어 갈 수 있었다 | Observed on 1.4.0, 2026년 10월 18일, `--sandbox` 사용. 출력과 보고서는 그 전에 쓰고, 이어 가기를 계획해 둔다 |
 
 13분 동안 서브에이전트 7개를 돌린 어떤 보안 감사에서는 최종 답변이 "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries."라는 문구로 통째로 바뀌었습니다(observed: 1.2.9, `gemini-3.8-flash-high`). 헤드리스 실행은 명시적인 허용이나 `toolPermission`을 전제로 계획합니다. 훅의 승인에 기대서는 통과할 수 없고, `SUCCESS` 상태가 떴다고 해서 그 턴의 작업이 살아남았다는 증거가 되지는 않습니다.
 

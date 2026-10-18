@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [1.1.2] - 2026-10-19
+
+### Added
+- `05-acceptance.md`, rules 6 and 7 for a gate, in all four languages, from a Three.js previz build run headless on Gemini 4 Argon High and then put through a quality round. A threshold has two bounds and names what must remain: a gate of "under 2% clipped pixels" passed once the agent darkened the whole frame, and the lamps, the flash and the facades went with the highlights; so every number gets a range, a "must still be visible" clause, and, where possible, a lift between two states, which darkness cannot meet. The subject is in frame before anything is measured: three of six hero shots drifted to a car roof, a column and the back of the car, and every pixel metric still passed. `06-perceptual-gates.md` points to both from the sampled-view method.
+- `13-platform.md`: a headless `agy -p` turn ended with `UNAUTHENTICATED (code 401)` at about the hour mark in 2 of 2 long runs on 1.4.0 (28 and 61 minutes), with the subagents' work and the written files intact; `agy -c` resumed the conversation. The orchestrator says to write the report before then and to resume. The row replaces the `--json-schema` entry, a defect fixed in 1.2.14, to keep the module at 100 lines.
+
 ## [1.1.1] - 2026-10-18
 
 ### Changed

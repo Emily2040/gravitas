@@ -64,7 +64,7 @@ Gravitas 做成插件，就是这个原因：技能、验证 agent 和常驻规�
 | subagent 如果没调用 `send_message` 就结束，唤醒父 agent 的是一条发送者为 `system`、内容为它最后一条回复的消息，所以设为这个 subagent ID 的 `TimerCondition` 不会被取消：7 次运行里，240 秒的定时器 7 次都走满了全程，父 agent 回复了两次。subagent 自己调用 `send_message` 时，消息带着它的 ID，3 次运行里 3 次都取消了这类定时器。设为 `"any"` 的，8 次里 8 次都被取消 | Observed（1.2.16，2026 年 10 月 3 日，使用 `--sandbox --dangerously-skip-permissions`） |
 | 既没有文本、也没有工具调用的一轮会被拒绝（“model output must contain either output text or tool calls, these cannot both be empty”），所以哪怕这一轮只是在等待，也必须说一句简短的话。headless 运行会把这句话打印出来，和工具调用写在一起的文本也会打印 | Observed（1.2.16，Gemini 3.8 Flash）：在 3 次被要求静默结束本轮的运行中，有 2 次出现了这个错误 |
 | agent 或模型 API 出错时，会在 stderr 打印 `AGY_ERROR: {...}`，并以退出码 3 退出 | Read：1.2.6 更新日志 |
-| 传给 `--json-schema` 的参数如果既不是可读取的文件，也不是 JSON 对象，曾被转成一个字符串 schema；根节点不是对象的 schema 曾一律返回 HTTP 400 | Observed（1.2.7，42 次运行；1.2.9 上再次出现）；1.2.14 已修复（issue #1064 已关闭）：这类参数现在以退出码 1 结束，2026 年 10 月 5 日在 1.2.17 上确认 |
+| 无头运行的 `agy -p` 一轮在大约一小时时以 `UNAUTHENTICATED (code 401)` 结束，2 次长时间运行里 2 次都如此（28 分钟和 61 分钟），subagent 的工作和已写入的文件完好；`agy -c` 可以接着这次会话继续 | Observed on 1.4.0，2026 年 10 月 18 日，带 `--sandbox`。要在那之前写好输出和报告，并准备好续跑 |
 
 有一次安全审计跑了 13 分钟、启动了 7 个 subagent，最终回复却被替换成“This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries.”（observed，1.2.9，`gemini-3.8-flash-high`）。规划 headless 运行时，要以明确的授权或 `toolPermission` 为准，hook 的放行指望不上；状态显示 `SUCCESS`，也不能说明这一轮的工作成果还在。
 

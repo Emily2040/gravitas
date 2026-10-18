@@ -64,7 +64,7 @@ Gravitas をプラグインとしてインストールする形にしている�
 | `send_message` を呼ばずに終わったサブエージェントは、送信者 `system` のメッセージに自分の最後の返答を載せて親を起こす。そのため、その子の ID を指定した `TimerCondition` は取り消されない。240 秒のタイマーが 7 回中 7 回とも最後まで動き、親は二度返答した。子が自分で呼んだ `send_message` にはその ID が付いており、3 回中 3 回でこのタイマーを取り消した。`"any"` を指定したタイマーは 8 回中 8 回とも取り消された | Observed（1.2.16、2026 年 10 月 3 日、`--sandbox --dangerously-skip-permissions` 使用） |
 | テキストもツール呼び出しもないターンは拒否される（"model output must contain either output text or tool calls, these cannot both be empty"）。そのため、待つだけのターンでも短い一行を書く必要がある。ヘッドレス実行はその一行を出力し、ツール呼び出しと並べて書いたテキストも出力する | Observed（1.2.16、Gemini 3.8 Flash）。ターンを無言で終えるよう指示した 3 回のうち 2 回で、このエラーが出た |
 | エージェントやモデル API でエラーが起きると、stderr に `AGY_ERROR: {...}` を出力し、終了コード 3 で終了する | Read（1.2.6 の変更履歴） |
-| `--json-schema` は、読めるファイルでも JSON オブジェクトでもない引数を、文字列のスキーマに変えていた。また、ルートがオブジェクトでないスキーマでは、常に HTTP 400 が返っていた | Observed（1.2.7 で 42 回、1.2.9 でも再現）。1.2.14 で修正済み（issue #1064 はクローズ）。こうした引数は終了コード 1 で止まるようになったことを、2026年10月5日に 1.2.17 で確認 |
+| ヘッドレスの `agy -p` のターンが、約 1 時間の時点で `UNAUTHENTICATED (code 401)` で終わった。長い実行 2 回のうち 2 回（28 分と 61 分）で、サブエージェントの作業と書き出したファイルは無事だった。`agy -c` で会話を再開できた | Observed on 1.4.0、2026 年 10 月 18 日、`--sandbox` 付き。出力と報告はその前に書き、再開を計画しておく |
 
 あるセキュリティ監査では、13 分かけて 7 つのサブエージェントを動かしたあと、最終返答が "This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries." に差し替えられました（observed：1.2.9、`gemini-3.8-flash-high`）。ヘッドレス実行は、明示的な権限付与か `toolPermission` を前提に組み立ててください。フックによる承認には頼れません。また、ステータスが `SUCCESS` だからといって、そのターンの作業が残っている証拠にはなりません。
 

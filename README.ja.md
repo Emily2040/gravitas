@@ -3,7 +3,7 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · **日本語** · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.1.1-purple.svg)](#status)
+[![Release](https://img.shields.io/badge/release-v1.1.2-purple.svg)](#status)
 [![Platform](https://img.shields.io/badge/Antigravity-agy_1.2.16-blueviolet.svg)](https://antigravity.google/)
 [![Languages](https://img.shields.io/badge/languages-en_%7C_zh--CN_%7C_ja_%7C_ko-green.svg)](#languages)
 
@@ -11,7 +11,7 @@ Gravitas は、Google の AI エージェントアプリ「Google Antigravity」
 
 [インストール](#install) · [実際の例](#real-examples) · [ほかの言語の例](#other-languages) · [なぜ Gravitas か](#why-gravitas) · [結果](#results) · [仕組み](#part-2)
 
-`v1.1.1` · 2026年10月 · [MIT](LICENSE) · [変更履歴](CHANGELOG.md) · 作者 [Iamemily2050](https://github.com/Emily2040)
+`v1.1.2` · 2026年10月 · [MIT](LICENSE) · [変更履歴](CHANGELOG.md) · 作者 [Iamemily2050](https://github.com/Emily2040)
 
 ![Gravitas のキャラクターシート](docs/assets/gravitas-hero.jpg)
 
@@ -27,9 +27,9 @@ Gravitas は、Google の AI エージェントアプリ「Google Antigravity」
 
 ### Windows の場合
 
-1. **ダウンロード。** [Gravitas 1.1.1 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.1.zip) をクリックします。`gravitas-1.1.1.zip` というファイルが「ダウンロード」フォルダーに保存されます。これは [Releases ページ](https://github.com/Emily2040/gravitas/releases) の v1.1.1 にある **Source code (zip)** と同じファイルです。Releases ページでは、**Assets** をクリックしないと **Source code (zip)** が表示されないことがあります。GitHub の画面は日本語にならないので、ボタン名も英語のままです。
+1. **ダウンロード。** [Gravitas 1.1.2 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.2.zip) をクリックします。`gravitas-1.1.2.zip` というファイルが「ダウンロード」フォルダーに保存されます。これは [Releases ページ](https://github.com/Emily2040/gravitas/releases) の v1.1.2 にある **Source code (zip)** と同じファイルです。Releases ページでは、**Assets** をクリックしないと **Source code (zip)** が表示されないことがあります。GitHub の画面は日本語にならないので、ボタン名も英語のままです。
 2. **ブロックの解除。** Windows キーを押しながら E キーを押してエクスプローラーを開き、左側の「ダウンロード」をクリックします。ZIP ファイルを右クリックして「プロパティ」を選び、「全般」タブのいちばん下にある「許可する」にチェックを入れて「OK」をクリックします。この手順をしないと、Windows がインストーラーを実行させないことがあります。「許可する」が見当たらなければ、この手順は要りません。
-3. **展開。** ZIP ファイルを右クリックして「すべて展開」（英語表示の Windows では Extract All）を選び、「展開」をクリックします。展開が終わると `gravitas-1.1.1` というフォルダーが開き、その中に同じ名前のフォルダーがもう一つあるので、それを開きます。右クリックしても「すべて展開」が見当たらないときは、Lhaplus や 7-Zip などの解凍ソフトが ZIP を開く設定になっていることがあります。その場合は、そのソフトで展開してください。
+3. **展開。** ZIP ファイルを右クリックして「すべて展開」（英語表示の Windows では Extract All）を選び、「展開」をクリックします。展開が終わると `gravitas-1.1.2` というフォルダーが開き、その中に同じ名前のフォルダーがもう一つあるので、それを開きます。右クリックしても「すべて展開」が見当たらないときは、Lhaplus や 7-Zip などの解凍ソフトが ZIP を開く設定になっていることがあります。その場合は、そのソフトで展開してください。
 4. **「Install Gravitas (Windows)」をダブルクリック。** 歯車のアイコンが目印です。完全なファイル名は `Install Gravitas (Windows).cmd` ですが、Windows はふつう末尾の `.cmd` を表示しません。隣にある `Install Gravitas (Mac).command` と `Install Gravitas (Linux).sh` は Mac 用と Linux 用なので使いません。ダブルクリックすると、ウィンドウが開く前に Windows が警告を出すことがあります。そのときは次のようにします。
    - 発行元を確認できないという「セキュリティの警告」が出たら、「実行」をクリックします。
    - 青い画面に「Windows によって PC が保護されました」と出たら、「詳細情報」をクリックし、現れた「実行」をクリックします。
@@ -38,8 +38,8 @@ Gravitas は、Google の AI エージェントアプリ「Google Antigravity」
 
 ### Mac の場合
 
-1. **ダウンロード。** [Gravitas 1.1.1 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.1.zip) をクリックします。Safari なら、たいてい「ダウンロード」フォルダーの中に `gravitas-1.1.1` というフォルダーとして自動で展開されます。`gravitas-1.1.1.zip` しか見当たらないときは、それをダブルクリックします。
-2. **展開したフォルダーの中の Install Gravitas (Mac).command をダブルクリック。** Finder のサイドバーで「ダウンロード」をクリックし、`gravitas-1.1.1` を開きます。その中にフォルダーが一つしかなければ、それも開きます。隣にある Windows 用のファイルは使いません。
+1. **ダウンロード。** [Gravitas 1.1.2 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.2.zip) をクリックします。Safari なら、たいてい「ダウンロード」フォルダーの中に `gravitas-1.1.2` というフォルダーとして自動で展開されます。`gravitas-1.1.2.zip` しか見当たらないときは、それをダブルクリックします。
+2. **展開したフォルダーの中の Install Gravitas (Mac).command をダブルクリック。** Finder のサイドバーで「ダウンロード」をクリックし、`gravitas-1.1.2` を開きます。その中にフォルダーが一つしかなければ、それも開きます。隣にある Windows 用のファイルは使いません。
 3. **最初の一回だけ、開くのを許可。** Gravitas は無料のソフトウェアで、開発元を確認するための署名が付いていません。そのため初回は、macOS が開くのを止めることがあります。
    - macOS 14 以前：「OK」をクリックし、ファイルを Control キーを押しながらクリックして「開く」を選び、確認が出たらもう一度「開く」をクリックします。
    - macOS 15 以降：上の方法は使えません。警告の画面で「完了」をクリックし、画面左上のアップルメニューから「システム設定」を開いて「プライバシーとセキュリティ」を選びます。下までスクロールし、Install Gravitas (Mac).command についての表示の横にある「このまま開く」をクリックします。確認が出たらもう一度「このまま開く」をクリックし、Mac のパスワードを入力します。
@@ -51,8 +51,8 @@ Mac 用のインストーラーは、Windows のパソコンの上でしか試�
 
 ### Linux の場合
 
-1. **ダウンロード。** [Gravitas 1.1.1 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.1.zip) をクリックします。ブラウザーが「ダウンロード」フォルダーに `gravitas-1.1.1.zip` を保存します。
-2. **展開。** ファイルマネージャーで「ダウンロード」を開き、ZIP を右クリックして「ここに展開」（または「展開」）を選びます。`gravitas-1.1.1` というフォルダーが現れます。その中にフォルダーが一つしかなければ、それも開きます。中の `.cmd` と `.command` は Windows 用と Mac 用なので使いません。
+1. **ダウンロード。** [Gravitas 1.1.2 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.2.zip) をクリックします。ブラウザーが「ダウンロード」フォルダーに `gravitas-1.1.2.zip` を保存します。
+2. **展開。** ファイルマネージャーで「ダウンロード」を開き、ZIP を右クリックして「ここに展開」（または「展開」）を選びます。`gravitas-1.1.2` というフォルダーが現れます。その中にフォルダーが一つしかなければ、それも開きます。中の `.cmd` と `.command` は Windows 用と Mac 用なので使いません。
 3. **そのフォルダーで端末を開く。** たいていのファイルマネージャーでは、フォルダーの何もないところを右クリックして「端末で開く」を選びます。それがなければ、端末を開いて `cd` と半角スペースを入力し、フォルダーを端末のウィンドウにドラッグして Enter キーを押します。
 4. **Install Gravitas (Linux).sh を実行。** 次の 1 行を貼り付けて Enter キーを押します。ファイルをダブルクリックすると、たいていはテキストエディターで開いてしまうので、端末から実行します。
 

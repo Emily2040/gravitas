@@ -60,7 +60,7 @@ For a sampled view:
 3. Write what the view cannot show as not assessed, in the sentence that would have claimed it and in the field that asks for it. A required field is answered with the limit, never with a guess shaped to fill it.
 4. Keep the records apart: rendered, technically checked, perceptually reviewed, not assessed, blocked. One verdict that spans them hides which of them happened.
 
-Give `gravitas-visual-critic` the instrument record with the image, and ask the boundary question first: which of these questions can this image answer at all?
+Give `gravitas-visual-critic` the instrument record with the image, and ask the boundary question first: which of these questions can this image answer at all? Write the thresholds for a still as `05-acceptance.md` rules 6 and 7 require: a range with what must remain visible, and the subject in frame first.
 
 ## A Worked Example That Goes Red
 

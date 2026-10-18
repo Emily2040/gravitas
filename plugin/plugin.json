@@ -1,6 +1,6 @@
 {
   "name": "gravitas",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Adds an always-on rule that makes your Antigravity agent check what your answer depends on, tell you kindly when something you assumed is wrong, and still give you what you came for. For audits and other deep work, separate inspector agents with no file-editing tool look for mistakes and gaps.",
   "author": {
     "name": "Iamemily2050",

@@ -39,6 +39,8 @@ page.on('console', msg => { if (msg.type() === 'error') consoleErrors.push(msg.t
 3. The process exits non-zero when any gate fails. A suite that always exits 0 reports nothing.
 4. Anything captured is asserted on or deleted. Collecting console errors into an array nobody reads is worse than not collecting them, because the code looks like it checks.
 5. Confirm the check ran before reading its output. An empty result and a crashed script look identical when you are searching for failures, so verify by exit status, by a line count, or by a marker the check prints when it completes.
+6. A threshold has two bounds and names what must remain. A ceiling alone is met by removing the thing: in a previz render, a gate of "under 2% clipped pixels" passed once the agent darkened the whole frame, and the lamps, the flash and the facades went with the highlights. Give every number a range, pair it with what must still be visible, and measure a change as a lift between two states where you can (the strike frame against ten frames earlier), because a lift cannot be met by darkness.
+7. The subject is in frame before anything is measured. A pixel metric on a capture that misses its subject passes trivially: three of six hero shots in the same run drifted to a car roof, a column and the back of the car, and every number still passed. The first gate on any still names what must be visible in it.
 
 ## A Pass Needs A Reason
 
