@@ -4,6 +4,13 @@ All notable changes to this project are documented in this file.
 
 This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] - 2026-10-18
+
+### Changed
+- The three module sections added in 1.1.0 (`01-evidence.md`: `observed` reaches as far as the view, and narrated verification; `05-acceptance.md`: the measure is not the goal; `06-perceptual-gates.md`: sampled views) are now written for zh-CN, ja and ko readers, with the `observed` table row and the orchestrator's `narration_check.py` line. The 1.1.0 known limit that they were English-only no longer holds.
+- The zh-CN, ja and ko READMEs say, as the English one does, that the five core scripts include `narration_check.py`, that on Windows and a Mac no command is typed and on Linux one line is, and that the `.command` and `.sh` files beside the Windows installer are for Macs and Linux.
+- The agent files are English in every language, as they were in 1.0; nothing changed there.
+
 ## [1.1.0] - 2026-10-18
 
 Changes drawn from an audit of real Antigravity conversations on this machine in October 2026: of 95 reasoning defects found across the audited runs, 37 came from 15 runs with this plugin loaded. The native support for Linux that people asked for is here too.

@@ -3,7 +3,7 @@
 **English** · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.1.0-purple.svg)](#status)
+[![Release](https://img.shields.io/badge/release-v1.1.1-purple.svg)](#status)
 [![Platform](https://img.shields.io/badge/Antigravity-agy_1.2.16-blueviolet.svg)](https://antigravity.google/)
 [![Languages](https://img.shields.io/badge/languages-en_%7C_zh--CN_%7C_ja_%7C_ko-green.svg)](#languages)
 
@@ -11,7 +11,7 @@ Gravitas is a free add-on for Google Antigravity that makes its AI agent check w
 
 [Install](#install) · [Real examples](#real-examples) · [Other languages](#other-languages-we-tested) · [Why Gravitas](#why-gravitas) · [Results](#results) · [How it works](#part-2)
 
-`v1.1.0` · October 2026 · [MIT](LICENSE) · [Changelog](CHANGELOG.md) · by [Iamemily2050](https://github.com/Emily2040)
+`v1.1.1` · October 2026 · [MIT](LICENSE) · [Changelog](CHANGELOG.md) · by [Iamemily2050](https://github.com/Emily2040)
 
 ![Gravitas character sheet](docs/assets/gravitas-hero.jpg)
 
@@ -25,17 +25,17 @@ The installer asks you to pick a language. Choose the one you read most easily: 
 
 ### On Windows
 
-1. **Download.** Click [Download Gravitas 1.1.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip). Your browser saves `gravitas-1.1.0.zip` in your Downloads folder. It is the same file as **Source code (zip)** under that release on the [Releases page](https://github.com/Emily2040/gravitas/releases), where you may have to click **Assets** to see it.
+1. **Download.** Click [Download Gravitas 1.1.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.1.zip). Your browser saves `gravitas-1.1.1.zip` in your Downloads folder. It is the same file as **Source code (zip)** under that release on the [Releases page](https://github.com/Emily2040/gravitas/releases), where you may have to click **Assets** to see it.
 2. **Unblock.** Open File Explorer (press the Windows key and E together) and click **Downloads** on the left. Right-click the ZIP, choose **Properties**, tick **Unblock** at the bottom of the **General** tab and click **OK**. If there is no Unblock box, skip this step. Without it, Windows may warn you about the installer, or refuse to run it.
-3. **Extract.** Right-click the ZIP, choose **Extract All** and click **Extract**. A folder named `gravitas-1.1.0` opens, with one folder of the same name inside it: open that one. If **Extract All** is not in the menu, another program, such as 7-Zip or WinRAR, opens your ZIP files; use its own extract command instead.
+3. **Extract.** Right-click the ZIP, choose **Extract All** and click **Extract**. A folder named `gravitas-1.1.1` opens, with one folder of the same name inside it: open that one. If **Extract All** is not in the menu, another program, such as 7-Zip or WinRAR, opens your ZIP files; use its own extract command instead.
 4. **Double-click Install Gravitas (Windows).** It has a gear icon. Its full name is `Install Gravitas (Windows).cmd`, and Windows usually hides the `.cmd`. `Install Gravitas (Mac).command` and `Install Gravitas (Linux).sh`, next to it, are for Macs and Linux; leave them alone. If Windows warns you before anything else opens, click **Run** on **Open File - Security Warning**, or **More info** and then **Run anyway** on a blue **Windows protected your PC** screen.
 5. **Choose a language.** A window titled Gravitas opens with a short menu. Type 1 for English, 2 for Chinese, 3 for Japanese or 4 for Korean, and press **Enter**. Enter on its own picks the language Windows is set to. When the window says **Done**, press any key to close it.
 6. **Restart Antigravity.** If Antigravity is open, find its icon near the clock at the bottom right of the screen (click the small **^** arrow if you do not see it), right-click it and choose **Quit**. Then open Antigravity again from the Start menu. If you use `agy`, start a new session instead.
 
 ### On a Mac
 
-1. **Download.** Click [Download Gravitas 1.1.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip). Safari usually unzips it for you into a folder named `gravitas-1.1.0` in Downloads. If you see only `gravitas-1.1.0.zip`, double-click it.
-2. **Open the folder.** In Finder, click **Downloads** in the sidebar and open `gravitas-1.1.0`. If it holds a single folder, open that one too. `Install Gravitas (Windows).cmd` is for Windows; leave it alone.
+1. **Download.** Click [Download Gravitas 1.1.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.1.zip). Safari usually unzips it for you into a folder named `gravitas-1.1.1` in Downloads. If you see only `gravitas-1.1.1.zip`, double-click it.
+2. **Open the folder.** In Finder, click **Downloads** in the sidebar and open `gravitas-1.1.1`. If it holds a single folder, open that one too. `Install Gravitas (Windows).cmd` is for Windows; leave it alone.
 3. **Double-click Install Gravitas (Mac).command.** The first time, macOS may refuse to open it, because Gravitas is free and no company has signed it.
    - On macOS 14 or earlier: click OK, then Control-click the file, choose Open and click Open.
    - On macOS 15 or later that no longer works: click Done, open System Settings, then Privacy & Security, scroll down to the message about Install Gravitas (Mac).command, click Open Anyway, click Open Anyway again and enter your Mac password.
@@ -47,8 +47,8 @@ I have run the Mac installer only under bash on Windows, never on a real Mac. If
 
 ### On Linux
 
-1. **Download.** Click [Download Gravitas 1.1.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip). Your browser saves `gravitas-1.1.0.zip` in your Downloads folder.
-2. **Extract.** In your file manager, open Downloads, right-click the ZIP and choose **Extract Here** or **Extract**. A folder named `gravitas-1.1.0` appears; if it holds a single folder, open that one too. The `.cmd` and `.command` files in it are for Windows and Macs; leave them alone.
+1. **Download.** Click [Download Gravitas 1.1.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.1.zip). Your browser saves `gravitas-1.1.1.zip` in your Downloads folder.
+2. **Extract.** In your file manager, open Downloads, right-click the ZIP and choose **Extract Here** or **Extract**. A folder named `gravitas-1.1.1` appears; if it holds a single folder, open that one too. The `.cmd` and `.command` files in it are for Windows and Macs; leave them alone.
 3. **Open a terminal in that folder.** In most file managers, right-click an empty space in the folder and choose **Open in Terminal**. Otherwise open a terminal, type `cd` and a space, drag the folder into the terminal window and press Enter.
 4. **Run Install Gravitas (Linux).sh** by pasting this line and pressing Enter. Double-clicking the file usually opens it in a text editor instead, which is why the terminal is used.
 
