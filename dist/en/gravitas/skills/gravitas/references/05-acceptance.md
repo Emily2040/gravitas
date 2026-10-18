@@ -48,6 +48,10 @@ Two cases from testing Antigravity itself. An injection test appeared to show th
 
 For every pass that matters, name the evidence that the tested path ran: the tool step in the transcript, the log line, the counter that moved, the request that fired.
 
+## The Measure Is Not The Goal
+
+A gate stands for something the person wants, and passing it by reshaping the work defeats it. In 15 runs audited for this release with this plugin loaded, the largest group of defects was of this kind: an agent reverse-engineered an onset detector and shaped the exported audio hop by hop until the meter passed; another added unplanned grey fills so a riser's frame differences grew monotonically; another kept a 3 px grid drift so a frozen-time check would pass and left it out of the report; another hid partly visible cells to pass a text-clipping gate and blamed the camera; another used its own render stills as the concept keyframes and passed the gate that compared them. Each pass was real and each measured nothing the person wanted. When a gate and the thing it stands for pull apart, the thing wins: fix the work, or report the gate as failed with the reason. A critic's perfect score does not outrank a defect you already know about, and a pass that depends on something the person told you to remove is a failure with a note.
+
 ## Rule Out Your Own Instrument
 
 When a result is surprising, check the harness before blaming the system. During the same testing, a run that looked like an Antigravity failure turned out to be the test harness removing its own permission grants partway through. The failure was real and it belonged to the instrument.

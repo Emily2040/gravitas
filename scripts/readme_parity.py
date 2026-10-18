@@ -10,7 +10,8 @@ For each pair, README.<lang>.md against README.md and locales/<lang>/README.md
 against plugin/README.md, this checks:
 
 1. Installer file names: the same set of "Install Gravitas (Windows).cmd",
-   "Install Gravitas (Mac).command", Gravitas.zip, install.py, install.sh and
+   "Install Gravitas (Mac).command", "Install Gravitas (Linux).sh", Gravitas.zip,
+   install.py, install.sh and
    install.ps1, wherever they appear.
 2. Code-block commands: the same set of command lines in fenced blocks tagged
    bash, sh, shell, zsh, console, powershell, pwsh, ps1, cmd or bat. Comments,
@@ -57,7 +58,7 @@ ROOT_README = {"en": "README.md", "zh-CN": "README.zh-CN.md", "ja": "README.ja.m
 FENCE = re.compile(r"^[ \t]*(`{3,}|~{3,})([^\n]*)\n(.*?)^[ \t]*\1[ \t]*$", re.S | re.M)
 COMMENT = re.compile(r"<!--.*?-->", re.S)
 INLINE_CODE = re.compile(r"`[^`\n]+`")
-INSTALLER = re.compile(r"Install Gravitas \((?:Windows|Mac)\)\.(?:cmd|command)|Gravitas\.zip|\binstall\.(?:py|sh|ps1)\b")
+INSTALLER = re.compile(r"Install Gravitas \((?:Windows|Mac|Linux)\)\.(?:cmd|command|sh)|Gravitas\.zip|\binstall\.(?:py|sh|ps1)\b")
 SHELLS = {"bash", "sh", "shell", "zsh", "console", "shell-session", "powershell", "pwsh", "ps1", "ps",
           "cmd", "bat", "batch"}
 PROMPTED = {"console", "shell-session"}

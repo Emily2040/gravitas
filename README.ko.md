@@ -3,7 +3,7 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · **한국어**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.0.0-purple.svg)](#status)
+[![Release](https://img.shields.io/badge/release-v1.1.0-purple.svg)](#status)
 [![Platform](https://img.shields.io/badge/Antigravity-agy_1.2.16-blueviolet.svg)](https://antigravity.google/)
 [![Languages](https://img.shields.io/badge/languages-en_%7C_zh--CN_%7C_ja_%7C_ko-green.svg)](#languages)
 
@@ -11,7 +11,7 @@ Gravitas는 Google Antigravity에 더하는 무료 부가 기능입니다. Antig
 
 [설치](#install) · [실제 사례](#real-examples) · [다른 언어 사례](#other-languages-we-tested) · [왜 Gravitas인가](#why-gravitas) · [결과](#results) · [작동 방식](#part-2)
 
-`v1.0.0` · 2026년 10월 · [MIT](LICENSE) · [변경 기록](CHANGELOG.md) · 만든 사람 [Iamemily2050](https://github.com/Emily2040)
+`v1.1.0` · 2026년 10월 · [MIT](LICENSE) · [변경 기록](CHANGELOG.md) · 만든 사람 [Iamemily2050](https://github.com/Emily2040)
 
 ![Gravitas 캐릭터 시트](docs/assets/gravitas-hero.jpg)
 
@@ -27,16 +27,16 @@ GitHub 화면의 버튼 이름은 영어로 나옵니다.
 
 ### Windows에서
 
-1. **내려받기.** [Gravitas 1.0.0 내려받기](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.0.0.zip)를 클릭합니다. 브라우저가 `gravitas-1.0.0.zip` 파일을 다운로드 폴더에 저장합니다. [Releases 페이지](https://github.com/Emily2040/gravitas/releases)의 1.0.0 버전 아래에 있는 **Source code (zip)**과 같은 파일입니다. 그 페이지에서 이 파일이 보이지 않으면 **Assets**를 클릭해 펼칩니다.
+1. **내려받기.** [Gravitas 1.1.0 내려받기](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip)를 클릭합니다. 브라우저가 `gravitas-1.1.0.zip` 파일을 다운로드 폴더에 저장합니다. [Releases 페이지](https://github.com/Emily2040/gravitas/releases)의 1.1.0 버전 아래에 있는 **Source code (zip)**과 같은 파일입니다. 그 페이지에서 이 파일이 보이지 않으면 **Assets**를 클릭해 펼칩니다.
 2. **차단 해제.** 파일 탐색기를 열고(Windows 키와 E 키를 함께 누릅니다) 왼쪽에서 **다운로드**를 클릭합니다. ZIP 파일을 마우스 오른쪽 버튼으로 클릭하고 **속성**을 고릅니다. **일반** 탭 아래쪽의 **차단 해제**에 체크한 뒤 **확인**을 클릭합니다. **차단 해제** 칸이 없으면 이 단계는 건너뜁니다. 이 단계를 빼먹으면 Windows가 설치 프로그램을 막을 수 있습니다.
-3. **압축 풀기.** ZIP 파일을 마우스 오른쪽 버튼으로 클릭하고 **모두 압축 풀기**를 고릅니다. Microsoft의 한국어 도움말은 이 메뉴를 **모두 추출**이라고 부르고, 영어판 Windows에서는 **Extract All**입니다. 저는 한국어판 Windows 화면에서 직접 확인하지 못했으니, 이름이 조금 달라도 압축을 한꺼번에 모두 푸는 항목을 고르면 됩니다. 이어서 나오는 창에서 **압축 풀기** 버튼(영어판에서는 **Extract**)을 클릭합니다. 새로 열린 `gravitas-1.0.0` 폴더 안에 같은 이름의 폴더가 하나 더 있으면 그 폴더를 엽니다. 오른쪽 클릭 메뉴에 **모두 압축 풀기** 같은 항목이 아예 없으면, 반디집이나 알집 같은 압축 프로그램이 ZIP 파일을 열도록 설정되어 있는 것입니다. 그때는 그 프로그램의 압축 풀기 메뉴로 풀면 됩니다.
+3. **압축 풀기.** ZIP 파일을 마우스 오른쪽 버튼으로 클릭하고 **모두 압축 풀기**를 고릅니다. Microsoft의 한국어 도움말은 이 메뉴를 **모두 추출**이라고 부르고, 영어판 Windows에서는 **Extract All**입니다. 저는 한국어판 Windows 화면에서 직접 확인하지 못했으니, 이름이 조금 달라도 압축을 한꺼번에 모두 푸는 항목을 고르면 됩니다. 이어서 나오는 창에서 **압축 풀기** 버튼(영어판에서는 **Extract**)을 클릭합니다. 새로 열린 `gravitas-1.1.0` 폴더 안에 같은 이름의 폴더가 하나 더 있으면 그 폴더를 엽니다. 오른쪽 클릭 메뉴에 **모두 압축 풀기** 같은 항목이 아예 없으면, 반디집이나 알집 같은 압축 프로그램이 ZIP 파일을 열도록 설정되어 있는 것입니다. 그때는 그 프로그램의 압축 풀기 메뉴로 풀면 됩니다.
 4. **Install Gravitas (Windows) 더블클릭.** 아이콘은 톱니바퀴 모양입니다. 파일의 전체 이름은 `Install Gravitas (Windows).cmd`인데, Windows는 보통 끝의 `.cmd`를 숨깁니다. 옆에 있는 `Install Gravitas (Mac).command`는 Mac용이니 건드리지 마세요. 창이 열리기 전에 Windows가 경고를 띄울 수 있습니다. '파일 열기 - 보안 경고' 창이면 **실행**을 클릭하고, 파란색 'Windows의 PC 보호' 화면이면 **추가 정보**를 클릭한 다음 **실행**을 클릭합니다. 그러면 제목이 Gravitas인 창이 열리고 번호 목록이 나옵니다. 한국어판을 설치하려면 **4**(한국어판 Gravitas 설치)를 입력하고 **Enter** 키를 누릅니다. Windows를 한국어로 쓰고 있다면 Enter 키만 눌러도 4번이 선택됩니다. 다른 언어로 설치하려면 영어는 **1**, 중국어는 **2**, 일본어는 **3**을 입력합니다.
 5. **Antigravity 다시 시작.** 설치가 끝나면 창에 "완료되었습니다."로 시작하는 줄이 나옵니다. 아무 키나 눌러 창을 닫습니다. Antigravity가 켜져 있다면 화면 오른쪽 아래 시계 근처에서 Antigravity 아이콘을 찾습니다(보이지 않으면 그곳의 작은 **^** 화살표를 클릭합니다). 아이콘을 마우스 오른쪽 버튼으로 클릭하고 **Quit**을 고릅니다. 이 메뉴는 영어로만 나옵니다. 그다음 시작 메뉴에서 Antigravity를 엽니다. `agy`를 쓴다면 다시 시작하는 대신 새 세션을 시작하면 됩니다.
 
 ### Mac에서
 
-1. **내려받기.** [Gravitas 1.0.0 내려받기](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.0.0.zip)를 클릭합니다. Safari는 보통 압축을 알아서 풀어 다운로드 폴더에 `gravitas-1.0.0` 폴더를 만들어 줍니다. 다운로드 폴더에 `gravitas-1.0.0.zip` 파일만 있으면 그 파일을 더블클릭합니다.
-2. **Install Gravitas (Mac).command 더블클릭.** Finder 사이드바에서 **다운로드**를 클릭하고 `gravitas-1.0.0` 폴더를 엽니다. 그 안에 폴더가 하나만 들어 있으면 그 폴더도 엽니다. 거기 있는 Install Gravitas (Mac).command를 더블클릭합니다. Mac에서는 끝의 `.command`가 보이지 않을 수 있습니다. 옆에 있는 `Install Gravitas (Windows).cmd`는 Windows용이니 건드리지 마세요.
+1. **내려받기.** [Gravitas 1.1.0 내려받기](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip)를 클릭합니다. Safari는 보통 압축을 알아서 풀어 다운로드 폴더에 `gravitas-1.1.0` 폴더를 만들어 줍니다. 다운로드 폴더에 `gravitas-1.1.0.zip` 파일만 있으면 그 파일을 더블클릭합니다.
+2. **Install Gravitas (Mac).command 더블클릭.** Finder 사이드바에서 **다운로드**를 클릭하고 `gravitas-1.1.0` 폴더를 엽니다. 그 안에 폴더가 하나만 들어 있으면 그 폴더도 엽니다. 거기 있는 Install Gravitas (Mac).command를 더블클릭합니다. Mac에서는 끝의 `.command`가 보이지 않을 수 있습니다. 옆에 있는 `Install Gravitas (Windows).cmd`는 Windows용이니 건드리지 마세요.
 3. **처음 한 번은 열도록 허용.** Gravitas는 어느 회사도 서명하지 않은 무료 프로그램이라서, 처음에는 macOS의 보안 기능(Gatekeeper)이 설치 프로그램을 열지 않을 수 있습니다.
    - macOS 14 이하: 경고 창에서 **확인**을 클릭한 다음, Control 키를 누른 채 파일을 클릭하고 **열기**를 고른 뒤, 다시 나오는 창에서 **열기**를 클릭합니다.
    - macOS 15 이상: 이 방법이 더는 통하지 않습니다. 경고 창에서 휴지통으로 옮기는 버튼은 누르지 말고, 창을 닫는 **완료** 버튼(영어판에서는 Done)을 클릭합니다. Apple 메뉴 > **시스템 설정**을 열고 사이드바에서 **개인정보 보호 및 보안**을 클릭합니다. 아래로 내려 Install Gravitas (Mac).command에 관한 메시지 옆의 **그래도 열기**를 클릭하고, 한 번 더 **그래도 열기**를 클릭한 다음 Mac 로그인 암호를 입력합니다.
@@ -45,6 +45,22 @@ GitHub 화면의 버튼 이름은 영어로 나옵니다.
 5. **Antigravity 다시 시작.** Antigravity가 켜져 있다면 화면 오른쪽 위 메뉴 막대에서 Antigravity 아이콘을 클릭하고 **Quit**을 고릅니다(Antigravity 창이 맨 앞에 있을 때는 Command-Q도 됩니다). 그다음 응용 프로그램 폴더에서 다시 엽니다.
 
 Mac 설치 프로그램은 실제 Mac에서는 한 번도 돌려 보지 못했고, Windows 컴퓨터의 bash라는 명령 창에서만 시험했습니다. 화면이 여기 적은 것과 다르면 [만든 사람](#author) 아래의 링크로 알려 주세요. 위 단계를 마쳐도 macOS가 설치 프로그램을 열지 않으면 [도움 받기](#getting-help)에 다른 방법이 있습니다.
+
+### Linux에서
+
+1. **내려받기.** [Gravitas 1.1.0 내려받기](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip)를 클릭합니다. 브라우저가 다운로드 폴더에 `gravitas-1.1.0.zip`을 저장합니다.
+2. **압축 풀기.** 파일 관리자에서 다운로드 폴더를 열고, ZIP 파일을 마우스 오른쪽 버튼으로 클릭한 뒤 **여기에 풀기**(또는 **압축 풀기**)를 고릅니다. `gravitas-1.1.0` 폴더가 생깁니다. 그 안에 폴더가 하나만 들어 있으면 그 폴더도 엽니다. 안에 있는 `.cmd`와 `.command` 파일은 Windows용과 Mac용이니 건드리지 마세요.
+3. **그 폴더에서 터미널 열기.** 대부분의 파일 관리자에서는 폴더의 빈 곳을 마우스 오른쪽 버튼으로 클릭하고 **터미널에서 열기**를 고르면 됩니다. 그 메뉴가 없으면 터미널을 열고 `cd`를 입력한 뒤 스페이스 바를 한 번 누르고, 폴더를 터미널 창으로 끌어다 놓은 다음 Enter 키를 누릅니다.
+4. **Install Gravitas (Linux).sh 실행.** 아래 한 줄을 붙여 넣고 Enter 키를 누릅니다. 파일을 더블클릭하면 보통 텍스트 편집기로 열리기 때문에 터미널에서 실행합니다.
+
+   ```bash
+   bash "Install Gravitas (Linux).sh"
+   ```
+
+5. **언어 고르기.** 같은 번호 목록이 나옵니다. 한국어판은 **4**를 입력하고 **Enter** 키를 누릅니다(영어는 1, 중국어는 2, 일본어는 3). 데스크톱을 한국어로 쓰고 있다면 Enter 키만 눌러도 4번이 선택됩니다. 설치가 끝나면 아무 키나 누르고 터미널 창을 닫습니다.
+6. **Antigravity 다시 시작.** 실행 중이라면 메뉴에서 종료하고(시스템 트레이에 아이콘이 있으면 거기서 종료해도 됩니다), 응용 프로그램 메뉴에서 다시 엽니다. `agy`를 쓴다면 새 세션을 시작하면 됩니다.
+
+Linux 설치 프로그램에는 bash만 있으면 됩니다. Gravitas beta 1을 썼다면 Python 3이 있을 때 그것으로 예전 훅을 지우고, 지우지 못하면 훅이 어느 파일에 있는지 알려 줍니다. 이 설치 프로그램도 Windows의 bash에서만 시험했고 실제 Linux 데스크톱에서는 돌려 본 적이 없습니다. 화면이 여기 적은 것과 다르면 [만든 사람](#author) 아래의 링크로 알려 주세요.
 
 ### 잘 설치됐는지 확인하기
 
@@ -1028,7 +1044,7 @@ Antigravity는 빠르게 바뀝니다. 2026년 9월 18일부터 23일 사이에 
 - 측정된 이득은 10개 언어 세트에서 가장 뚜렷합니다. 일상 세트에서는 Flash의 두 실행 가운데 하나에서만 뚜렷하고, Pro의 두 실행은 신뢰구간에 0.50이 들어 있습니다. 에지 세트에서는 Gemini 채점자들이 패배로 보았습니다.
 - 모델이 아는 것보다 더 많이 알게 만들 수는 없습니다. 오늘 기준의 법이나 요율을 확인할 수 없을 때는, 확인되지 않은 것이 그 사람의 행동을 바꾸는 경우 그렇다고 말하고, 수치는 근거가 뒷받침하는 만큼 범위를 넓혀 말하라고 합니다.
 - 채점자는 모델이고, 서로 생각이 갈립니다. 정답 기준표도 모델이 검색을 써서 쓰고 확인했으므로, 기준표가 틀리면 채점도 틀립니다.
-- 모든 벤치마크 실행은 Windows 11의 CLI 샌드박스에서 헤드리스로 했습니다. 데스크톱 앱은 벤치마크하지 않았고, Mac 설치 프로그램은 Mac에서 돌려 본 적이 없습니다.
+- 모든 벤치마크 실행은 Windows 11의 CLI 샌드박스에서 헤드리스로 했습니다. 데스크톱 앱은 벤치마크하지 않았고, Mac과 Linux 설치 프로그램은 실제 Mac이나 Linux에서 돌려 본 적이 없습니다.
 - CLI에는 브라우저 도구가 없으므로, 그곳에서 화면을 확인하려면 `run_command`로 Playwright나 Puppeteer 하네스를 돌려야 합니다.
 - 지각과 취향의 판단은 판단으로 남습니다. 스킬은 그것을 새 비평 에이전트에게 보내고, 판단이라고 표시합니다.
 - 위에 적은 Antigravity 자체의 결함 때문에 작업이 사라질 수 있습니다. 심층 작업은 보고서를 먼저 파일로 쓰고, 모든 서브에이전트가 끝날 때까지 계속 확인합니다.
@@ -1096,6 +1112,7 @@ python plugin/skills/gravitas/scripts/check_skills.py
 python tests/scripts/test_provenance_check.py
 python tests/scripts/test_ledger.py
 python tests/scripts/test_slopcheck.py
+python tests/scripts/test_narration_check.py
 python tests/scripts/test_check_skills.py
 python tests/scripts/test_checks.py
 ```

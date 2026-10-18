@@ -3,7 +3,7 @@
 **English** · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.0.0-purple.svg)](#status)
+[![Release](https://img.shields.io/badge/release-v1.1.0-purple.svg)](#status)
 [![Platform](https://img.shields.io/badge/Antigravity-agy_1.2.16-blueviolet.svg)](https://antigravity.google/)
 [![Languages](https://img.shields.io/badge/languages-en_%7C_zh--CN_%7C_ja_%7C_ko-green.svg)](#languages)
 
@@ -11,7 +11,7 @@ Gravitas is a free add-on for Google Antigravity that makes its AI agent check w
 
 [Install](#install) · [Real examples](#real-examples) · [Other languages](#other-languages-we-tested) · [Why Gravitas](#why-gravitas) · [Results](#results) · [How it works](#part-2)
 
-`v1.0.0` · October 2026 · [MIT](LICENSE) · [Changelog](CHANGELOG.md) · by [Iamemily2050](https://github.com/Emily2040)
+`v1.1.0` · October 2026 · [MIT](LICENSE) · [Changelog](CHANGELOG.md) · by [Iamemily2050](https://github.com/Emily2040)
 
 ![Gravitas character sheet](docs/assets/gravitas-hero.jpg)
 
@@ -19,23 +19,23 @@ Gravitas is a free add-on for Google Antigravity that makes its AI agent check w
 
 ## Install
 
-You need Google Antigravity, the desktop app or the `agy` command-line tool, from [antigravity.google](https://antigravity.google/). You do not need Python, and you do not type any commands.
+You need Google Antigravity, the desktop app or the `agy` command-line tool, from [antigravity.google](https://antigravity.google/). On Windows and on a Mac you do not need Python and you do not type any commands; on Linux you type one line in a terminal.
 
 The installer asks you to pick a language. Choose the one you read most easily: Antigravity keeps answering in whatever language you write to it, and every test on this page used the English version. If something goes wrong on the way, see [Getting help](#getting-help).
 
 ### On Windows
 
-1. **Download.** Click [Download Gravitas 1.0.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.0.0.zip). Your browser saves `gravitas-1.0.0.zip` in your Downloads folder. It is the same file as **Source code (zip)** under that release on the [Releases page](https://github.com/Emily2040/gravitas/releases), where you may have to click **Assets** to see it.
+1. **Download.** Click [Download Gravitas 1.1.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip). Your browser saves `gravitas-1.1.0.zip` in your Downloads folder. It is the same file as **Source code (zip)** under that release on the [Releases page](https://github.com/Emily2040/gravitas/releases), where you may have to click **Assets** to see it.
 2. **Unblock.** Open File Explorer (press the Windows key and E together) and click **Downloads** on the left. Right-click the ZIP, choose **Properties**, tick **Unblock** at the bottom of the **General** tab and click **OK**. If there is no Unblock box, skip this step. Without it, Windows may warn you about the installer, or refuse to run it.
-3. **Extract.** Right-click the ZIP, choose **Extract All** and click **Extract**. A folder named `gravitas-1.0.0` opens, with one folder of the same name inside it: open that one. If **Extract All** is not in the menu, another program, such as 7-Zip or WinRAR, opens your ZIP files; use its own extract command instead.
-4. **Double-click Install Gravitas (Windows).** It has a gear icon. Its full name is `Install Gravitas (Windows).cmd`, and Windows usually hides the `.cmd`. `Install Gravitas (Mac).command`, next to it, is for Macs; leave it alone. If Windows warns you before anything else opens, click **Run** on **Open File - Security Warning**, or **More info** and then **Run anyway** on a blue **Windows protected your PC** screen.
+3. **Extract.** Right-click the ZIP, choose **Extract All** and click **Extract**. A folder named `gravitas-1.1.0` opens, with one folder of the same name inside it: open that one. If **Extract All** is not in the menu, another program, such as 7-Zip or WinRAR, opens your ZIP files; use its own extract command instead.
+4. **Double-click Install Gravitas (Windows).** It has a gear icon. Its full name is `Install Gravitas (Windows).cmd`, and Windows usually hides the `.cmd`. `Install Gravitas (Mac).command` and `Install Gravitas (Linux).sh`, next to it, are for Macs and Linux; leave them alone. If Windows warns you before anything else opens, click **Run** on **Open File - Security Warning**, or **More info** and then **Run anyway** on a blue **Windows protected your PC** screen.
 5. **Choose a language.** A window titled Gravitas opens with a short menu. Type 1 for English, 2 for Chinese, 3 for Japanese or 4 for Korean, and press **Enter**. Enter on its own picks the language Windows is set to. When the window says **Done**, press any key to close it.
 6. **Restart Antigravity.** If Antigravity is open, find its icon near the clock at the bottom right of the screen (click the small **^** arrow if you do not see it), right-click it and choose **Quit**. Then open Antigravity again from the Start menu. If you use `agy`, start a new session instead.
 
 ### On a Mac
 
-1. **Download.** Click [Download Gravitas 1.0.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.0.0.zip). Safari usually unzips it for you into a folder named `gravitas-1.0.0` in Downloads. If you see only `gravitas-1.0.0.zip`, double-click it.
-2. **Open the folder.** In Finder, click **Downloads** in the sidebar and open `gravitas-1.0.0`. If it holds a single folder, open that one too. `Install Gravitas (Windows).cmd` is for Windows; leave it alone.
+1. **Download.** Click [Download Gravitas 1.1.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip). Safari usually unzips it for you into a folder named `gravitas-1.1.0` in Downloads. If you see only `gravitas-1.1.0.zip`, double-click it.
+2. **Open the folder.** In Finder, click **Downloads** in the sidebar and open `gravitas-1.1.0`. If it holds a single folder, open that one too. `Install Gravitas (Windows).cmd` is for Windows; leave it alone.
 3. **Double-click Install Gravitas (Mac).command.** The first time, macOS may refuse to open it, because Gravitas is free and no company has signed it.
    - On macOS 14 or earlier: click OK, then Control-click the file, choose Open and click Open.
    - On macOS 15 or later that no longer works: click Done, open System Settings, then Privacy & Security, scroll down to the message about Install Gravitas (Mac).command, click Open Anyway, click Open Anyway again and enter your Mac password.
@@ -44,6 +44,22 @@ The installer asks you to pick a language. Choose the one you read most easily: 
 5. **Restart Antigravity.** If it is running, click its icon in the menu bar at the top right and choose **Quit** (Command-Q also works while its window is in front). Then open it again from Applications.
 
 I have run the Mac installer only under bash on Windows, never on a real Mac. If a step looks different on yours, please tell me through one of the links under [Author](#author). If macOS still will not open the installer, [Getting help](#getting-help) has a way round it.
+
+### On Linux
+
+1. **Download.** Click [Download Gravitas 1.1.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip). Your browser saves `gravitas-1.1.0.zip` in your Downloads folder.
+2. **Extract.** In your file manager, open Downloads, right-click the ZIP and choose **Extract Here** or **Extract**. A folder named `gravitas-1.1.0` appears; if it holds a single folder, open that one too. The `.cmd` and `.command` files in it are for Windows and Macs; leave them alone.
+3. **Open a terminal in that folder.** In most file managers, right-click an empty space in the folder and choose **Open in Terminal**. Otherwise open a terminal, type `cd` and a space, drag the folder into the terminal window and press Enter.
+4. **Run Install Gravitas (Linux).sh** by pasting this line and pressing Enter. Double-clicking the file usually opens it in a text editor instead, which is why the terminal is used.
+
+   ```bash
+   bash "Install Gravitas (Linux).sh"
+   ```
+
+5. **Choose a language.** The same menu appears. Type 1 for English, 2 for Chinese, 3 for Japanese or 4 for Korean, and press **Enter**. Enter on its own picks the language your desktop is set to. When it says **Done**, press any key, then close the terminal.
+6. **Restart Antigravity.** If it is running, quit it from its menu, or from its tray icon if it has one, then open it again from your applications menu. If you use `agy`, start a new session instead.
+
+The Linux installer needs only bash. If you had Gravitas beta 1, it uses Python 3, when installed, to remove the old hook, and tells you where the hook is when it cannot. I have run it only under bash on Windows, never on a Linux desktop; if a step looks different on yours, please tell me through one of the links under [Author](#author).
 
 ### Check that it worked
 
@@ -814,7 +830,7 @@ This part is for builders. Every result comes from a recorded run, and the files
 
 ### Status
 
-Gravitas 1.0, the first official release, October 2026. The benchmark ran headless on the agy CLI from 26 September 2026, on versions up to 1.2.16, and grading went on until 5 October. The rule in this release was written on 4 and 5 October from that benchmark's losses and revised after a second outside review of the design. It has passed a release check from a real install, but not the full benchmark. The deep-work skill and agents were tested on agy 1.2.9 to 1.2.16 and the desktop app 2.17.0, on Windows 11. The skill still changes when testing says it should, so pin a tagged version from the [Releases page](https://github.com/Emily2040/gravitas/releases) if you need a fixed one, and read [CHANGELOG.md](CHANGELOG.md) before updating.
+Gravitas 1.1, October 2026: the 1.0 release of 11 October plus rule and module changes drawn from an audit of real conversations, a narrated-check script and a Linux installer, listed in [CHANGELOG.md](CHANGELOG.md). The benchmark ran headless on the agy CLI from 26 September 2026, on versions up to 1.2.16, and grading went on until 5 October. The rule in this release was written on 4 and 5 October from that benchmark's losses and revised after a second outside review of the design. It has passed a release check from a real install, but not the full benchmark. The deep-work skill and agents were tested on agy 1.2.9 to 1.2.16 and the desktop app 2.17.0, on Windows 11. The skill still changes when testing says it should, so pin a tagged version from the [Releases page](https://github.com/Emily2040/gravitas/releases) if you need a fixed one, and read [CHANGELOG.md](CHANGELOG.md) before updating.
 
 ### The idea
 
@@ -1054,7 +1070,7 @@ Some forms are counted, and a model miscounts them while sounding sure. `14-chec
 
 I built the form checks first because that is where the stored answers failed. Surface linters for punctuation width, kana width, honorifics and Korean spacing, run over 1,149 stored Chinese, Japanese and Korean answers, almost never fired, and most of their hits were false positives. The real failures were in countable forms and in structure: 5 of 26 opening couplets broke the tone pattern. A check runs only through `run_command`, which a headless run at default settings refuses; the module then says to apply the same rules by hand and record that the script did not run. A count can pass while the piece fails, so the module also says to read the piece as its reader would after the script passes. The 平水韵 data comes from zh.wikisource and the Mandarin readings from pypinyin 0.55.0, with their sources and licences in each file's header.
 
-The four core scripts are `check_skills.py` (validates every skill, agent, rule and plugin), `provenance_check.py`, `ledger.py` and `slopcheck.py`. None of the scripts connects to the internet.
+The five core scripts are `check_skills.py` (validates every skill, agent, rule and plugin), `provenance_check.py`, `narration_check.py` (lists the sentences in an answer that say a check was done and name no command, file, capture or URL; it is English-only), `ledger.py` and `slopcheck.py`. None of the scripts connects to the internet.
 
 ### Native plain-style standards
 
@@ -1116,7 +1132,7 @@ For the other agent apps, the portable rule ran as a workspace `AGENTS.md` under
 - v4's measured gain is clearest on the ten-language set. On the everyday set it is clear on Flash in one run of two, and Pro's two runs have intervals that include 0.50. On the edge set the Gemini graders saw a loss.
 - It cannot make the model know more than it does. When it cannot check a law or a rate as it stands today, it is told to say what stays unconfirmed where that changes what you do, and to widen a figure to what the evidence carries.
 - The graders are models, and they disagree. The answer keys were written and checked by models with search, and a wrong key makes a wrong grade.
-- Every benchmark run was headless, in the CLI's sandbox, on Windows 11. The desktop app was not benchmarked, and the Mac installer has never run on a Mac.
+- Every benchmark run was headless, in the CLI's sandbox, on Windows 11. The desktop app was not benchmarked, and the Mac and Linux installers have never run on a Mac or on Linux.
 - The CLI has no browser tools, so visual checks there need a Playwright or Puppeteer harness run through `run_command`.
 - Perceptual and taste judgements stay judgements. The skill routes them to a fresh critic and labels them as such.
 - Antigravity's own defects, listed above, can still discard work. Deep work writes the report to a file first and keeps polling until every subagent is done.
@@ -1182,6 +1198,7 @@ The scripts are standard-library Python with no dependencies. 173 tests cover th
 python tests/scripts/test_provenance_check.py
 python tests/scripts/test_ledger.py
 python tests/scripts/test_slopcheck.py
+python tests/scripts/test_narration_check.py
 python tests/scripts/test_check_skills.py
 python tests/scripts/test_checks.py
 ```

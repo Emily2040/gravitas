@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Tests for the double-click installers, Install Gravitas (Windows).cmd and Install Gravitas (Mac).command.
+"""Tests for the installers people run without Python: Install Gravitas (Windows).cmd,
+Install Gravitas (Mac).command and Install Gravitas (Linux).sh.
 
 Run with plain `python tests/scripts/test_installers.py`. Each case prints one
 PASS, FAIL or SKIP line; the exit status is 1 if any case fails.
@@ -21,6 +22,9 @@ once. The .cmd cases run on Windows. The .command cases run where bash is found:
 Windows home folder. Git Bash has no osascript, so there the .command reports a
 beta 1 hook instead of removing it, as it does on a Mac where osascript fails;
 the JavaScript it would run is checked with Node instead, when Node is found.
+The .sh cases run under the same bash; its hook edit uses the first Python that
+runs, so under Git Bash it edits hooks.json as it would on Linux, and its Python
+is also run on its own against what install.py writes.
 """
 import ctypes
 import json
@@ -36,8 +40,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
 CMD_NAME = "Install Gravitas (Windows).cmd"
 COMMAND_NAME = "Install Gravitas (Mac).command"
+SH_NAME = "Install Gravitas (Linux).sh"
 CMD = os.path.join(REPO, CMD_NAME)
 COMMAND = os.path.join(REPO, COMMAND_NAME)
+SH = os.path.join(REPO, SH_NAME)
+INSTALLERS = {"cmd": CMD, "command": COMMAND, "sh": SH}
 INSTALL = os.path.join(REPO, "scripts", "install.py")
 DIST = os.path.join(REPO, "dist")
 LANGS = ("en", "zh-CN", "ja", "ko")
@@ -50,7 +57,8 @@ INSTALLED = {"en": "Done. Gravitas is installed in:",
 REMOVED = "Done. Gravitas is removed from Antigravity. Its files were moved to:"
 # How each installer says to quit Antigravity: from the icon by the clock, or in the menu bar.
 QUIT = {"cmd": "Right-click the icon and choose Quit.",
-        "command": "click its icon in the menu bar at the top right of the screen and choose Quit"}
+        "command": "click its icon in the menu bar at the top right of the screen and choose Quit",
+        "sh": "choose Quit from its menu"}
 MENU = ["1  Install Gravitas in English", "2  安装 Gravitas（简体中文版）",
         "3  日本語版の Gravitas をインストール", "4  한국어판 Gravitas 설치"]
 BAD = "Please type a number from 1 to 5."
@@ -175,7 +183,7 @@ class Lab:
         path = os.path.join(self.root, name)
         for lang in langs:
             shutil.copytree(os.path.join(DIST, lang), os.path.join(path, "dist", lang))
-        for f in (CMD, COMMAND):
+        for f in (CMD, COMMAND, SH):
             shutil.copy2(f, path)
         return path
 
@@ -196,7 +204,8 @@ class Lab:
         if kind == "cmd":
             return 'cmd /d /s /c ""%s""' % os.path.join(where, CMD_NAME), env
         env["LANG"] = "en_US.UTF-8"
-        return [BASH, os.path.join(where, COMMAND_NAME)], env
+        env.pop("LANGUAGE", None)
+        return [BASH, os.path.join(where, COMMAND_NAME if kind == "command" else SH_NAME)], env
 
     def run(self, kind, home, answer, ui="en", where=None, raw=False, env=None):
         """Run one installer with the answer piped in. Returns (exit code, output).
@@ -215,7 +224,7 @@ def plugin(home):
 
 def shows(out, path, kind):
     """Whether the output names path. Git Bash prints a Windows path in its own form, /c/Users/...
-    or /tmp/..., so for the .command only the last four parts are compared."""
+    or /tmp/..., so for the .command and the .sh only the last four parts are compared."""
     if kind == "cmd" or os.name != "nt":
         return path in out
     return "/".join(path.replace("\\", "/").split("/")[-4:]) in out
@@ -296,23 +305,34 @@ def static_checks():
         sh = fh.read()
     case("static: %s starts with #!/bin/bash and has LF line endings, no byte order mark" % COMMAND_NAME,
          sh.startswith(b"#!/bin/bash\n") and b"\r" not in sh)
-    cmd_t, sh_t = cmd.decode("utf-8"), sh.decode("utf-8")
+    with open(SH, "rb") as fh:
+        lx = fh.read()
+    case("static: %s starts with #!/bin/bash and has LF line endings, no byte order mark" % SH_NAME,
+         lx.startswith(b"#!/bin/bash\n") and b"\r" not in lx)
+    cmd_t, sh_t, lx_t = cmd.decode("utf-8"), sh.decode("utf-8"), lx.decode("utf-8")
     with open(INSTALL, encoding="utf-8") as fh:
         py = fh.read()
     case("static: install.py and both installers back up into ~/.gemini/gravitas-backups, and name the "
          "old skill skills-gravitas",
          '"gravitas-backups"' in py and "skills-gravitas" in py
          and "\\gravitas-backups" in cmd_t and "skills-gravitas" in cmd_t
-         and "/gravitas-backups" in sh_t and "skills-gravitas" in sh_t)
-    case("static: both installers offer the same four languages",
-         all(m in cmd_t and m in sh_t for m in MENU)
-         and all(('LANGDIR=%s"' % l in cmd_t or l == "en") and "LANGDIR=%s ;;" % l in sh_t for l in LANGS))
+         and "/gravitas-backups" in sh_t and "skills-gravitas" in sh_t
+         and "/gravitas-backups" in lx_t and "skills-gravitas" in lx_t)
+    case("static: all three installers offer the same four languages",
+         all(m in cmd_t and m in sh_t and m in lx_t for m in MENU)
+         and all(('LANGDIR=%s"' % l in cmd_t or l == "en") and "LANGDIR=%s ;;" % l in sh_t
+                 and "LANGDIR=%s ;;" % l in lx_t for l in LANGS))
+    code_only = "\n".join(l for l in lx_t.splitlines() if not l.lstrip().startswith("#"))
+    case("static: the .sh uses no macOS-only command, and the .command still does",
+         not re.search(r"\b(?:osascript|xattr|defaults read)\b", code_only) and "osascript" in sh_t)
     cmd_blocks = {l: re.search(r"^:text_%s\r?\n(.*?)^exit /b 0" % re.escape(l), cmd_t, re.M | re.S)
                   for l in LANGS}
     for name, text, blocks in (
             ("cmd", cmd_t, cmd_blocks),
             ("command", sh_t, {l: re.search(r"^  %s\)\n(.*?)^    ;;" % re.escape(l), sh_t, re.M | re.S)
-                               for l in LANGS})):
+                               for l in LANGS}),
+            ("sh", lx_t, {l: re.search(r"^  %s\)\n(.*?)^    ;;" % re.escape(l), lx_t, re.M | re.S)
+                          for l in LANGS})):
         keys = {l: set(re.findall(r"(M_[A-Z0-9]+)=", m.group(1))) if m else set() for l, m in blocks.items()}
         used = set(re.findall(r"(?:call :say |\$|%|\")(M_[A-Z0-9]+)", text))
         case("static: every language in the %s installer sets the same messages, and every message "
@@ -329,13 +349,16 @@ def static_checks():
                                  stderr=subprocess.DEVNULL).returncode != 0:
         skip("static: git modes and line endings", "not a git checkout")
         return
-    r = subprocess.run([git, "-C", REPO, "ls-files", "-s", "--", COMMAND_NAME], stdout=subprocess.PIPE)
-    case("static: %s is in git with mode 100755, so it unzips executable on a Mac" % COMMAND_NAME,
-         r.stdout.decode().startswith("100755 "), r.stdout.decode().strip() or "not in the index")
-    r = subprocess.run([git, "-C", REPO, "check-attr", "eol", "--", CMD_NAME, COMMAND_NAME], stdout=subprocess.PIPE)
+    for name in (COMMAND_NAME, SH_NAME):
+        r = subprocess.run([git, "-C", REPO, "ls-files", "-s", "--", name], stdout=subprocess.PIPE)
+        case("static: %s is in git with mode 100755, so it unzips executable" % name,
+             r.stdout.decode().startswith("100755 "), r.stdout.decode().strip() or "not in the index")
+    r = subprocess.run([git, "-C", REPO, "check-attr", "eol", "--", CMD_NAME, COMMAND_NAME, SH_NAME],
+                       stdout=subprocess.PIPE)
     attrs = r.stdout.decode("utf-8", "replace")
-    case("static: .gitattributes gives the .cmd CRLF and the .command LF in every checkout and archive",
-         "%s: eol: crlf" % CMD_NAME in attrs and "%s: eol: lf" % COMMAND_NAME in attrs, attrs.strip())
+    case("static: .gitattributes gives the .cmd CRLF and the .command and .sh LF in every checkout and archive",
+         "%s: eol: crlf" % CMD_NAME in attrs and "%s: eol: lf" % COMMAND_NAME in attrs
+         and "%s: eol: lf" % SH_NAME in attrs, attrs.strip())
 
 
 def hook_code_checks(lab):
@@ -369,6 +392,30 @@ def hook_code_checks(lab):
              not bad, brief(bad, 3))
     else:
         skip("hook: the .cmd's PowerShell", "Windows only")
+
+    with open(SH, encoding="utf-8") as fh:
+        py = re.search(r"<<'PY'\n(.*?)\nPY\n", fh.read(), re.S)
+    if not py:
+        case("hook: the .sh holds its Python between <<'PY' and PY", False)
+    else:
+        bad = []
+        for i, (name, raw) in enumerate(list(HOOK_FIXTURES.items()) + [("numbers", NUMBERS)]):
+            path = os.path.join(lab.root, "py hook %d \u00e9&.json" % i)
+            with open(path, "wb") as fh:
+                fh.write(raw)
+            r = subprocess.run([sys.executable, "-I", "-c", py.group(1), path], stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE)
+            with open(path, "rb") as fh:
+                got = fh.read()
+            want = python_hook_edit(raw)
+            said = r.stdout.decode("utf-8", "replace").strip()
+            ok = (said == "removed" and got == want and r.returncode == 0) if want else \
+                (got == raw and said != "removed")
+            ok = ok and not os.path.exists(path + ".gravitas-new")
+            if not ok:
+                bad.append("%s (exit %d): said %r, wrote %r" % (name, r.returncode, said, got[:200]))
+        case("hook: the .sh's Python writes hooks.json byte for byte as install.py does, and leaves a file it "
+             "cannot handle unchanged (%d files)" % (len(HOOK_FIXTURES) + 1), not bad, brief(bad, 3))
 
     node = shutil.which("node")
     if not node:
@@ -412,7 +459,9 @@ def hook_code_checks(lab):
 
 def behaviour(lab, kind):
     p = "%s:" % kind
-    can_edit_hooks = kind == "cmd" or bool(shutil.which("osascript"))
+    can_edit_hooks = (kind == "cmd" or (kind == "command" and bool(shutil.which("osascript")))
+                      or (kind == "sh" and any(shutil.which(p) for p in ("python3", "python", "py"))))
+    no_editor = {"command": "osascript", "sh": "a Python"}.get(kind, "")
 
     # Each language, chosen by number, installs what install.py installs, and nothing else.
     for n, lang in enumerate(LANGS, 1):
@@ -541,7 +590,7 @@ def behaviour(lab, kind):
     # Started away from dist/, as when Explorer runs it straight from the ZIP.
     alone = os.path.join(lab.root, "only the installer %s" % kind)
     os.makedirs(alone, exist_ok=True)
-    shutil.copy2(CMD if kind == "cmd" else COMMAND, alone)
+    shutil.copy2(INSTALLERS[kind], alone)
     home = lab.home()
     code, out = lab.run(kind, home, "1", where=alone)
     case("%s started without dist/ beside it, it exits 1, changes nothing, says how to unzip and where "
@@ -554,7 +603,7 @@ def behaviour(lab, kind):
     source = os.path.join(lab.root, "source only %s" % kind)
     os.makedirs(os.path.join(source, "plugin"), exist_ok=True)
     shutil.copy2(os.path.join(REPO, "plugin", "plugin.json"), os.path.join(source, "plugin"))
-    shutil.copy2(CMD if kind == "cmd" else COMMAND, source)
+    shutil.copy2(INSTALLERS[kind], source)
     home = lab.home()
     code, out = lab.run(kind, home, "1", where=source)
     partial = lab.unzipped("no Korean %s" % kind, LANGS[:3])
@@ -587,8 +636,8 @@ def behaviour(lab, kind):
             same = fh.read() == BETA1_HOOKS
         script = os.path.join(home, ".gemini", "config", "scripts", "gravitas_always_on.py")
         found = backups(home)
-        case("%s over beta 1 without osascript: the skill and old plugin move, the hook entry and its "
-             "script stay, and the note names hooks.json" % p,
+        case("%s over beta 1 without %s: the skill and old plugin move, the hook entry and its "
+             "script stay, and the note names hooks.json" % (p, no_editor),
              code == 0 and same and os.path.isfile(script) and len(found) == 1
              and sorted(os.listdir(found[0])) == ["gravitas", "skills-gravitas"]
              and not differences(plugin(lab.ref["ko"]), plugin(home)) and shows(out, hooks, kind),
@@ -699,7 +748,7 @@ def failures(lab, kind):
              code == 0 and not carrying and not differences(lab.ref["en"], home), brief(carrying))
     else:
         skip("%s files unzipped with the download mark" % p,
-             "the macOS mark is an extended attribute, which only a Mac has")
+             "only the .cmd clears the Windows mark; on a Mac or Linux the ZIP carries none")
 
     # Two windows answering at the same moment, over an existing install.
     bad = []
@@ -793,8 +842,10 @@ def main():
                 skip("cmd: every case", "%s runs on Windows only" % CMD_NAME)
             if BASH:
                 behaviour(lab, "command")
+                behaviour(lab, "sh")
             else:
                 skip("command: every case", "no bash found")
+                skip("sh: every case", "no bash found")
             shared(lab)
         finally:
             shutil.rmtree(root, ignore_errors=True)

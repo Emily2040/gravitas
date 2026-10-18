@@ -5,13 +5,13 @@
     python scripts/build_release_zip.py OUT.zip REF      # from any commit or tree
 
 The ZIP holds, at its top level and nothing else: Install Gravitas (Windows).cmd,
-Install Gravitas (Mac).command, LICENSE and dist/. Everything comes from REF
+Install Gravitas (Mac).command, Install Gravitas (Linux).sh, LICENSE and dist/. Everything comes from REF
 through git archive, so it is exactly what is committed, with the line endings
-.gitattributes gives: CRLF for the .cmd, LF for the rest. The .command keeps mode
-755 and the ZIP marks its entries as made on Unix, so Archive Utility unzips it
-ready to run. Windows' Extract All and the Mac's Archive Utility both unzip it
+.gitattributes gives: CRLF for the .cmd, LF for the rest. The .command and the
+.sh keep mode 755 and the ZIP marks its entries as made on Unix, so Archive
+Utility and Linux unzippers unpack them ready to run. Windows' Extract All and the Mac's Archive Utility both unzip it
 into one folder named after the ZIP, so the person opens that folder and finds
-the two installers, with no other folder to open first.
+the three installers, with no other folder to open first.
 
 Run scripts/release_check.py first, then attach the file to the GitHub release
 under the name Gravitas.zip. When that release is marked Latest, this link always
@@ -29,7 +29,8 @@ import time
 import zipfile
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CONTENTS = ["Install Gravitas (Windows).cmd", "Install Gravitas (Mac).command", "LICENSE", "dist"]
+CONTENTS = ["Install Gravitas (Windows).cmd", "Install Gravitas (Mac).command", "Install Gravitas (Linux).sh",
+            "LICENSE", "dist"]
 
 
 def entries(ref):

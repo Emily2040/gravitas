@@ -49,6 +49,19 @@ THREE.WebGLShadowMap: PCFSoftShadowMap has been removed. Using PCFShadowMap inst
 
 Nothing failed or crashed. The shadows were not what the plan asked for, and the run had console capture wired up and unread. Deprecation warnings are the cheapest defect signal available. A warning naming an API the code calls is a failure until someone triages it.
 
+## Sampled Views
+
+A contact sheet, a frame strip, a thumbnail or an excerpt is a sample of the artifact, not the artifact. It carries what a viewer can see at the sampled instants and nothing between them, so it cannot establish continuous motion, a seamless cut, flicker, sound or the text in the frames it skipped. A run audited for this release was asked to compare two videos through contact sheets of 24 frames each. It wrote that one had seamless transitions and no flicker, labelled both `observed`, read the sampler's frame-number stamps as text overlays in the video, and never made the one measurement the sheets allowed.
+
+For a sampled view:
+
+1. Record the instrument first: what was sampled, how many samples, at what interval and size, and any mark the sampler added. A frame number stamped on each cell belongs to the sampler, not to the video.
+2. Measure what the samples can show, with a tool: the difference between adjacent cells, a crop at full size, a count. In that run the mean difference between consecutive cells was 4.8 for one video and 1.2 for the other, so the sheets could say which video changed more between samples; they could not say whether any cut was seamless.
+3. Write what the view cannot show as not assessed, in the sentence that would have claimed it and in the field that asks for it. A required field is answered with the limit, never with a guess shaped to fill it.
+4. Keep the records apart: rendered, technically checked, perceptually reviewed, not assessed, blocked. One verdict that spans them hides which of them happened.
+
+Give `gravitas-visual-critic` the instrument record with the image, and ask the boundary question first: which of these questions can this image answer at all?
+
 ## A Worked Example That Goes Red
 
 `examples/gates.example.js` is a Playwright gate suite written to these rules and run against the scene described above. It scores 4 of 6 and exits 1.

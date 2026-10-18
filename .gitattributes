@@ -6,7 +6,7 @@
 *.sh    text eol=lf
 *.ps1   text eol=lf
 *.tsv   text eol=lf
-# The double-click installers: cmd needs CRLF, and bash on macOS needs LF.
+# The installers: cmd needs CRLF, and bash on macOS and Linux needs LF (*.sh is above).
 *.cmd      text eol=crlf
 *.command  text eol=lf
 # Written by scripts/build_dist.py; GitHub folds it in diffs.

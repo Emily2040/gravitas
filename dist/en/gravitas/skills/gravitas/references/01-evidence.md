@@ -10,7 +10,7 @@ Rank a claim by what actually happened during this piece of work. Confidence doe
 
 | Tier | What Must Have Happened Here | The Label Names | Not This |
 | :--- | :--- | :--- | :--- |
-| `observed` | You inspected the artifact itself: a screenshot you captured, a page you rendered, a file or document you opened, an instrument you read | The artifact: its path, URL or capture name | A calculation of any kind. Anything at all when no artifact was supplied |
+| `observed` | You inspected the artifact itself: a screenshot you captured, a page you rendered, a file or document you opened, an instrument you read | The artifact: its path, URL or capture name, and the view you had of it | A calculation of any kind. Anything at all when no artifact was supplied. A property the view could not show, such as motion from sampled frames |
 | `executed` | A tool ran and returned the value | The command or query, and what it returned | Arithmetic done in your head. A real computation on assumed inputs |
 | `read` | You retrieved a source during this work and can quote the line you rely on | The URL or path, and the quoted line | A source you recognise. A page, section or pin cite from memory. A page about the source |
 | `inferred` | Your own reasoning, and everything you recalled | Nothing, or `(recalled)` | |
@@ -39,6 +39,14 @@ This rule exists because a prohibition did not work. Across 22 test cases, a `re
 Recalled material is `inferred`, however certain it feels and however real the source is. Write `inferred (recalled)` when that is what happened.
 
 The command in an `executed` label is the command that ran. On 24 September 2026 two answers showed tidy one-line `python -c` commands in every `executed` label while the transcripts held longer multi-line scripts with different text; the numbers were right and the displayed commands had never run. Show what ran, or run the command you want to show before citing it.
+
+## Observed Reaches As Far As The View
+
+A label is `observed` only for what the view you had could show. Frames sampled from a video show appearance at those instants and nothing between them; a thumbnail shows layout, not text; a contact sheet shows how much a scene changed between samples, not whether a cut was seamless. In a run audited for this release, an agent judging two videos from contact sheets of 24 frames each labelled `observed` that one had seamless transitions and no flicker, properties no sampled view carries, and the one measurement the sheets allowed, the difference between adjacent cells, it never made. Name the view with the artifact (`observed (strip_v1.jpg, 24 frames at 1 s)`), and write what the view cannot show as not assessed, inside the sentence that would have claimed it. `06-perceptual-gates.md` has the method.
+
+## Verification Is Narrated
+
+The commonest defect in the audited runs was not a wrong label but a check that never happened: "I verified the transitions", "I compared both versions frame by frame", "I confirmed the overlay text", each written as a done thing with no tool step behind it. One reasoning step held four such sentences, and the reply stated the conclusion they had never earned. A check is a tool event. A sentence that says something was checked, compared, measured or confirmed names the command, the file or the capture in the same sentence, or it is deleted; what you believe without a check is written as belief. `scripts/narration_check.py <answer file>` lists every such sentence that names no source.
 
 ## A Calculation Is Never Observed
 

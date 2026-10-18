@@ -84,4 +84,4 @@ python skills/gravitas/scripts/slopcheck.py <文件>      # 机器腔调的结�
 
 局限。方法的大部分是要求模型遵守的指令；工具列表、安装程序和各个脚本是机械的部分，而脚本只有在代理被告知要运行时才会运行。它在 Windows 11 上用 agy 1.2.9 到 1.2.16 测过。会影响你使用方式的平台行为，写在 `skills/gravitas/references/13-platform.md` 里。最要紧的有两点：无头的 `agy -p` 运行需要明确授予权限，或者在 `~/.gemini/antigravity-cli/settings.json` 里设置 `toolPermission`；另外，只有用 `--add-dir` 传入仓库时，CLI 才会读取仓库自己的 `.agents/` 文件夹，这也是这个插件采用全局安装的原因。在日文和韩文里，有人可能身处危险、又写得很随意时，回复可能会用礼貌体；原版 Antigravity 也会这样。
 
-版本 1.0.0 · MIT · 作者 [Iamemily2050](https://github.com/Emily2040)
+版本 1.1.0 · MIT · 作者 [Iamemily2050](https://github.com/Emily2040)

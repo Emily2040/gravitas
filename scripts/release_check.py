@@ -10,7 +10,7 @@ working tree. tests/scripts/test_build_dist.py compares dist/ with a fresh build
 in the working tree. This checks the commit:
 
 1. For HEAD, nothing a download ships has uncommitted or untracked changes: dist,
-   plugin, locales, scripts, both double-click installers, .gitattributes,
+   plugin, locales, scripts, the three installers, .gitattributes,
    LICENSE, the READMEs, and what the READMEs link to or tell people to run:
    docs, tests, CHANGELOG.md and TESTS.md. A plugin file committed without a
    rebuilt and committed dist/ would reach people who use install.py and not
@@ -18,8 +18,9 @@ in the working tree. This checks the commit:
    GitHub.
 2. dist/ in the commit is exactly what scripts/build_dist.py builds from the
    commit's own plugin/ and locales/.
-3. In the commit, Install Gravitas (Mac).command has mode 100755 and LF line
-   endings, and Install Gravitas (Windows).cmd comes out with CRLF line endings,
+3. In the commit, Install Gravitas (Mac).command and Install Gravitas (Linux).sh
+   have mode 100755 and LF line endings, and Install Gravitas (Windows).cmd comes
+   out with CRLF line endings,
    as GitHub's own ZIP gives them.
 4. Every download link in the READMEs that names a version names the version in
    plugin/plugin.json.
@@ -39,7 +40,8 @@ import tempfile
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CMD = "Install Gravitas (Windows).cmd"
 COMMAND = "Install Gravitas (Mac).command"
-SHIPPED = ["dist", "plugin", "locales", "scripts", CMD, COMMAND, ".gitattributes", "LICENSE",
+SH = "Install Gravitas (Linux).sh"
+SHIPPED = ["dist", "plugin", "locales", "scripts", CMD, COMMAND, SH, ".gitattributes", "LICENSE",
            "README.md", "README.zh-CN.md", "README.ja.md", "README.ko.md",
            "docs", "tests", "CHANGELOG.md", "TESTS.md"]
 # Links that pin a version: a tag's source archive, a release page, or a release asset.
@@ -127,10 +129,11 @@ def main(argv):
                   r.returncode == 0 and not diff,
                   "; ".join(diff[:8]) or r.stdout.decode("utf-8", "replace")[-400:])
 
-        mode = git("ls-tree", ref, "--", COMMAND).split(" ")[0]
-        sh = files.get(COMMAND, b"")
-        check("%s has mode 100755 and LF line endings" % COMMAND,
-              mode == "100755" and sh.startswith(b"#!/bin/bash\n") and b"\r" not in sh, "mode %r" % mode)
+        for name in (COMMAND, SH):
+            mode = git("ls-tree", ref, "--", name).split(" ")[0]
+            sh = files.get(name, b"")
+            check("%s has mode 100755 and LF line endings" % name,
+                  mode == "100755" and sh.startswith(b"#!/bin/bash\n") and b"\r" not in sh, "mode %r" % mode)
         cmd = files.get(CMD, b"")
         check("%s has CRLF line endings" % CMD,
               bool(cmd) and cmd.count(b"\n") == cmd.count(b"\r\n"), "%d LF, %d CRLF"

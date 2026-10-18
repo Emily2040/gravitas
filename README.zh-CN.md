@@ -3,7 +3,7 @@
 [English](./README.md) · **简体中文** · [日本語](./README.ja.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.0.0-purple.svg)](#status)
+[![Release](https://img.shields.io/badge/release-v1.1.0-purple.svg)](#status)
 [![Platform](https://img.shields.io/badge/Antigravity-agy_1.2.16-blueviolet.svg)](https://antigravity.google/)
 [![Languages](https://img.shields.io/badge/languages-en_%7C_zh--CN_%7C_ja_%7C_ko-green.svg)](#languages)
 
@@ -11,7 +11,7 @@ Gravitas 是 Google Antigravity 的免费插件：它让 Antigravity 里的 AI �
 
 [安装](#install) · [真实例子](#real-examples) · [其他语言](#other-languages-we-tested) · [为什么是 Gravitas](#why-gravitas) · [测试结果](#results) · [工作原理](#part-2)
 
-`v1.0.0` · 2026 年 10 月 · [MIT](LICENSE) · [更新日志](CHANGELOG.md) · 作者 [Iamemily2050](https://github.com/Emily2040)
+`v1.1.0` · 2026 年 10 月 · [MIT](LICENSE) · [更新日志](CHANGELOG.md) · 作者 [Iamemily2050](https://github.com/Emily2040)
 
 ![Gravitas 角色设定图](docs/assets/gravitas-hero.jpg)
 
@@ -27,16 +27,16 @@ GitHub 的按钮都是英文的，下文照原样写出按钮上的英文。
 
 ### Windows
 
-1. **下载。** 单击 [下载 Gravitas 1.0.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.0.0.zip)，浏览器会把 `gravitas-1.0.0.zip` 存进“下载”文件夹。它和 [Releases 页面](https://github.com/Emily2040/gravitas/releases)（版本发布页）上 v1.0.0 这一版 **Assets** 里的 **Source code (zip)** 是同一个文件；Assets 如果是折叠的，单击它就能展开。
+1. **下载。** 单击 [下载 Gravitas 1.1.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip)，浏览器会把 `gravitas-1.1.0.zip` 存进“下载”文件夹。它和 [Releases 页面](https://github.com/Emily2040/gravitas/releases)（版本发布页）上 v1.1.0 这一版 **Assets** 里的 **Source code (zip)** 是同一个文件；Assets 如果是折叠的，单击它就能展开。
 2. **解除锁定。** 按 Windows 徽标键 + E 打开“文件资源管理器”，单击左侧的 **下载**。右键单击刚下载的 ZIP 文件，选择 **属性**，在“常规”选项卡最下面勾选 **解除锁定**，再单击 **确定**。这一步是为了让 Windows 放行安装程序，不做的话，Windows 可能不让它运行。如果找不到这个复选框，说明不需要，直接跳过。
-3. **解压。** 右键单击 ZIP 文件，选择 **全部解压缩**（英文系统里叫 Extract All），再单击 **提取**。打开的 `gravitas-1.0.0` 文件夹里还有一个同名文件夹，打开它。如果右键菜单里没有“全部解压缩”，多半是 360压缩、WinRAR 或 7-Zip 接管了 ZIP 文件，用它们自带的解压功能也一样。
+3. **解压。** 右键单击 ZIP 文件，选择 **全部解压缩**（英文系统里叫 Extract All），再单击 **提取**。打开的 `gravitas-1.1.0` 文件夹里还有一个同名文件夹，打开它。如果右键菜单里没有“全部解压缩”，多半是 360压缩、WinRAR 或 7-Zip 接管了 ZIP 文件，用它们自带的解压功能也一样。
 4. **双击 Install Gravitas (Windows)。** 它的图标是一个齿轮，文件全名是 `Install Gravitas (Windows).cmd`，Windows 一般会把末尾的 `.cmd` 隐藏起来。旁边的 `Install Gravitas (Mac).command` 是给 Mac 用的，不用管它。双击之后，Windows 可能先弹出警告：如果是提示无法验证发布者的安全警告，单击 **运行**；如果是蓝色的“Windows 已保护你的电脑”，先单击 **更多信息**，再单击 **仍要运行**。接着会打开一个标题为 Gravitas 的窗口：输入 1 选英文，2 选简体中文，3 选日语，4 选韩语，然后按 **回车键**。什么都不输、直接按回车，选的是 Windows 当前的显示语言，中文 Windows 上就是 2。窗口里出现“完成”后，按任意键关闭窗口。
 5. **重启 Antigravity。** 如果 Antigravity 开着，就在屏幕右下角时钟附近找到它的图标（看不到就单击那里的小箭头 **^**），右键单击它，选择 **Quit**（这个菜单只有英文）。然后从“开始”菜单重新打开 Antigravity。如果你用的是 `agy` 命令行工具，不用重启，新开一个会话就行。
 
 ### Mac
 
-1. **下载。** 点按 [下载 Gravitas 1.0.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.0.0.zip)。Safari 一般会自动把它解压到“下载”文件夹里，得到一个 `gravitas-1.0.0` 文件夹；如果那里只有 `gravitas-1.0.0.zip`，连按它就能解压。
-2. **连按 Install Gravitas (Mac).command。** 它在解压出来的文件夹里：在“访达”边栏里点按 **下载**，打开 `gravitas-1.0.0`；如果里面只有一个文件夹，再打开那一个。旁边的 `.cmd` 文件是 Windows 用的，不用管。
+1. **下载。** 点按 [下载 Gravitas 1.1.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip)。Safari 一般会自动把它解压到“下载”文件夹里，得到一个 `gravitas-1.1.0` 文件夹；如果那里只有 `gravitas-1.1.0.zip`，连按它就能解压。
+2. **连按 Install Gravitas (Mac).command。** 它在解压出来的文件夹里：在“访达”边栏里点按 **下载**，打开 `gravitas-1.1.0`；如果里面只有一个文件夹，再打开那一个。旁边的 `.cmd` 文件是 Windows 用的，不用管。
 3. **第一次要手动放行。** Gravitas 是免费软件，没有任何公司为它做过苹果认可的开发者签名，所以 macOS 第一次可能会拦住它。
    - macOS 14 或更早：先点按 **好** 关掉提示框，再按住 Control 键点按这个文件，选择 **打开**，在弹出的对话框里再点按 **打开**。
    - macOS 15 或更新：上面的办法不管用了。先点按 **完成** 关掉提示框（别点 **移到废纸篓**）。然后点按屏幕左上角的苹果菜单，打开 **系统设置**，进入 **隐私与安全性**，往下滚，找到提到 Install Gravitas (Mac).command 的那条提示，点按旁边的 **仍要打开**，在弹出的对话框里再点按一次 **仍要打开**，然后输入 Mac 的登录密码。
@@ -45,6 +45,22 @@ GitHub 的按钮都是英文的，下文照原样写出按钮上的英文。
 5. **重启 Antigravity。** 如果 Antigravity 正在运行，点按屏幕右上角菜单栏里的 Antigravity 图标，选择 **Quit**（菜单只有英文）；它的窗口在最前面时，按 Command-Q 也行。然后从“应用程序”文件夹重新打开。
 
 Mac 安装程序我只在 Windows 上的 bash 命令行里跑过，还没在真正的 Mac 上跑过。如果你在 Mac 上看到的和这里写的不一样，请通过 [作者](#author) 下面的任一链接告诉我。如果照上面的步骤做了，macOS 还是打不开安装程序，[遇到问题](#getting-help) 里有个绕过去的办法。
+
+### Linux
+
+1. **下载。** 点按 [下载 Gravitas 1.1.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.1.0.zip)。浏览器会把 `gravitas-1.1.0.zip` 存到“下载”文件夹。
+2. **解压。** 在文件管理器里打开“下载”，右键单击这个 ZIP，选择 **提取到此处**（或 **解压**）。会出现一个 `gravitas-1.1.0` 文件夹；如果里面只有一个文件夹，再打开那一个。里面的 `.cmd` 和 `.command` 文件分别是 Windows 和 Mac 用的，不用管。
+3. **在这个文件夹里打开终端。** 大多数文件管理器里，在文件夹的空白处右键单击，选择 **在终端中打开**。不行的话，先打开终端，输入 `cd` 和一个空格，把文件夹拖进终端窗口，再按 Enter 键。
+4. **运行 Install Gravitas (Linux).sh。** 把下面这一行粘贴进去，按 Enter 键。直接连按这个文件，多半只会用文本编辑器打开它，所以要走终端。
+
+   ```bash
+   bash "Install Gravitas (Linux).sh"
+   ```
+
+5. **选语言。** 会出现同样的菜单。输入编号（1 英文，2 简体中文，3 日语，4 韩语），按 Enter 键。什么都不输、直接按 Enter，选的是桌面当前的语言。出现“完成”后按任意键，再关掉终端窗口。
+6. **重启 Antigravity。** 如果它正在运行，从它的菜单里退出（系统托盘里有图标的话，从那里退出也行），再从应用程序菜单重新打开。用 `agy` 的话，新开一个会话即可。
+
+Linux 安装程序只需要 bash。如果你装过 Gravitas beta 1，它会在装有 Python 3 时用 Python 清除旧钩子，清不掉时会告诉你钩子在哪个文件里。它我也只在 Windows 上的 bash 里跑过，还没在真正的 Linux 桌面上跑过；如果你看到的和这里写的不一样，请通过 [作者](#author) 下面的任一链接告诉我。
 
 <a id="check-it-worked"></a>
 
@@ -1095,7 +1111,7 @@ Antigravity 变得很快。2026 年 9 月 18 日到 23 日之间，它发布了�
 - 测得的提升在十种语言集上最清楚。日常集上，Flash 两次运行里有一次清楚；Pro 的两次运行，区间都包含 0.50。边缘集上，两个 Gemini 评分模型判的是负。
 - 它不能让模型知道得比本来更多。没法核实一条法律或一个费率今天的状态时，它被要求在会影响你做法的地方，说明哪些还没确认，并把数字放宽到证据撑得住的程度。
 - 评分的是模型，而且它们意见不一。标准答案是带搜索的模型写的、核的，标准答案错了，评分也会错。
-- 所有基准测试都是无头运行，在 CLI 的沙盒里，在 Windows 11 上。桌面应用没有做基准测试，Mac 安装程序也从没在 Mac 上跑过。
+- 所有基准测试都是无头运行，在 CLI 的沙盒里，在 Windows 11 上。桌面应用没有做基准测试，Mac 和 Linux 的安装程序也从没在真正的 Mac 或 Linux 上跑过。
 - CLI 没有浏览器工具，所以在那里做视觉检查，需要通过 `run_command` 跑一个 Playwright 或 Puppeteer 验证脚本。
 - 感知和审美上的判断，仍然只是判断。技能会把它们交给一个新的评审者，并如实标明是判断。
 - 上面列出的 Antigravity 自身缺陷，仍可能让工作丢失。深度工作会先把报告写进文件，并一直轮询，直到每个子代理都结束。
@@ -1163,6 +1179,7 @@ python plugin/skills/gravitas/scripts/check_skills.py          # 检查 ~/.gemin
 python tests/scripts/test_provenance_check.py
 python tests/scripts/test_ledger.py
 python tests/scripts/test_slopcheck.py
+python tests/scripts/test_narration_check.py
 python tests/scripts/test_check_skills.py
 python tests/scripts/test_checks.py
 ```

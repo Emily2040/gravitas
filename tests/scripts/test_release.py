@@ -30,7 +30,8 @@ ZIPPER = os.path.join(REPO, "scripts", "build_release_zip.py")
 INSTALL = os.path.join(REPO, "scripts", "install.py")
 CMD = "Install Gravitas (Windows).cmd"
 COMMAND = "Install Gravitas (Mac).command"
-SHIPPED = ["dist", "plugin", "locales", "scripts", CMD, COMMAND, ".gitattributes", "LICENSE",
+SH = "Install Gravitas (Linux).sh"
+SHIPPED = ["dist", "plugin", "locales", "scripts", CMD, COMMAND, SH, ".gitattributes", "LICENSE",
            "README.md", "README.zh-CN.md", "README.ja.md", "README.ko.md",
            "docs", "tests", "CHANGELOG.md", "TESTS.md"]
 
@@ -67,7 +68,7 @@ class Scratch:
     def tree_of_worktree(self):
         self.git("read-tree", "HEAD")
         self.git("add", "-A", "--", *[p for p in SHIPPED if os.path.exists(os.path.join(REPO, p))])
-        self.git("update-index", "--chmod=+x", "--", COMMAND)
+        self.git("update-index", "--chmod=+x", "--", COMMAND, SH)
         return self.git("write-tree")
 
     def with_file(self, path, data):
@@ -145,15 +146,16 @@ def main():
         with zipfile.ZipFile(zpath) as z:
             infos = {i.filename: i for i in z.infolist()}
             top = sorted({n.split("/")[0] for n in infos})
-            sh, cmd = z.read(COMMAND), z.read(CMD)
+            sh, lx, cmd = z.read(COMMAND), z.read(SH), z.read(CMD)
             dist = {n[len("dist/"):]: z.read(n) for n in infos if n.startswith("dist/") and not n.endswith("/")}
-        case("build_release_zip: the ZIP holds the two installers, LICENSE and dist/ at its top level, "
-             "and nothing else", top == sorted([CMD, COMMAND, "LICENSE", "dist"]), repr(top))
-        mode = infos[COMMAND].external_attr >> 16
-        case("build_release_zip: the .command is marked as a Unix file with mode 755, LF only; the .cmd is "
-             "CRLF only",
-             infos[COMMAND].create_system == 3 and stat.S_ISREG(mode) and mode & 0o777 == 0o755
-             and b"\r" not in sh and cmd.count(b"\n") == cmd.count(b"\r\n"), "mode %o" % mode)
+        case("build_release_zip: the ZIP holds the three installers, LICENSE and dist/ at its top level, "
+             "and nothing else", top == sorted([CMD, COMMAND, SH, "LICENSE", "dist"]), repr(top))
+        modes = {n: infos[n].external_attr >> 16 for n in (COMMAND, SH)}
+        case("build_release_zip: the .command and the .sh are marked as Unix files with mode 755, LF only; "
+             "the .cmd is CRLF only",
+             all(infos[n].create_system == 3 and stat.S_ISREG(m) and m & 0o777 == 0o755 for n, m in modes.items())
+             and b"\r" not in sh and b"\r" not in lx and cmd.count(b"\n") == cmd.count(b"\r\n"),
+             "modes %s" % {n: "%o" % m for n, m in modes.items()})
         want = {k: v for k, v in files(os.path.join(REPO, "dist")).items() if v is not None}
         case("build_release_zip: dist/ in the ZIP is byte for byte the dist/ in the working tree",
              dist == want, "%d in the ZIP, %d in dist/" % (len(dist), len(want)))
