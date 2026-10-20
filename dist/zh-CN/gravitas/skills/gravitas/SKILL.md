@@ -6,7 +6,7 @@ compatibility: "运行环境为 Windows 11，适用于 Google Antigravity 桌面
 metadata:
   author: "Iamemily2050"
   repo: "https://github.com/Emily2040/gravitas"
-  version: "1.2.0"
+  version: "1.2.1"
   website: "https://Iamemily2050.com"
   x: "@iamemily2050"
   instagram: "@iamemily2050"

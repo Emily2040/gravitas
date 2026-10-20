@@ -69,6 +69,7 @@ scale: quick | standard | full | exhaustive
 | `13-platform.md` | 任务依赖 Antigravity 的行为，或者某个工具、hook、skill、权限的表现出乎意料时 |
 | `14-checks.md` | 工作里有绝句、律诗、对联，有俳句、短歌、川柳、时调，有在万、億、만、lakh、crore 之间换算的金额，或者有写给中日韩读者的日期 |
 | `15-harness-probing.md` | `standard` 及以上规模，从第二轮起每轮开始前；以及任何时候，一份简报、一道门槛、一张检查单或一套 subagent 配置有两种都说得通的写法 |
+| `16-gate-gaming.md` | 与 `05-acceptance.md` 一起，在编写任何门禁、上限、类别规则或验证器时；以及在用同一套配方批量生成许多条目的扇出之前 |
 
 ## 分阶段推进
 

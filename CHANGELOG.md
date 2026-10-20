@@ -4,6 +4,15 @@ All notable changes to this project are documented in this file.
 
 This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [1.2.1] - 2026-10-21
+
+### Added
+- `16-gate-gaming.md`, in all four languages: the three ways a verifier passed while the work did not change (fallback defaults, declared labels, gates that describe a shape), the cheapest-pass review, one before many, distinctness beside consistency, and where the right verifier comes from (the reference's measurements, a viewer question per gate calibrated against a blind critic, an independent instrument, a frozen suite owned by nobody who builds, a gate library). Built from two rounds of a 25-scene SVG film built headless on Gemini 4 Argon on 2026-10-20 that passed sixteen gates, a screener, three critics and a seeded audit with the same picture twenty-five times, twice.
+
+### Changed
+- `00-orchestrator.md` module table lists module 16.
+- READMEs count seventeen modules.
+
 ## [1.2.0] - 2026-10-20
 
 ### Added

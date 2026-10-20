@@ -3,7 +3,7 @@
 [English](./README.md) · **简体中文** · [日本語](./README.ja.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.2.0-purple.svg)](#status)
+[![Release](https://img.shields.io/badge/release-v1.2.1-purple.svg)](#status)
 [![Platform](https://img.shields.io/badge/Antigravity-agy_1.2.16-blueviolet.svg)](https://antigravity.google/)
 [![Languages](https://img.shields.io/badge/languages-en_%7C_zh--CN_%7C_ja_%7C_ko-green.svg)](#languages)
 
@@ -11,7 +11,7 @@ Gravitas 是 Google Antigravity 的免费插件：它让 Antigravity 里的 AI �
 
 [安装](#install) · [真实例子](#real-examples) · [其他语言](#other-languages-we-tested) · [为什么是 Gravitas](#why-gravitas) · [测试结果](#results) · [工作原理](#part-2)
 
-`v1.2.0` · 2026 年 10 月 · [MIT](LICENSE) · [更新日志](CHANGELOG.md) · 作者 [Iamemily2050](https://github.com/Emily2040)
+`v1.2.1` · 2026 年 10 月 · [MIT](LICENSE) · [更新日志](CHANGELOG.md) · 作者 [Iamemily2050](https://github.com/Emily2040)
 
 ![Gravitas 角色设定图](docs/assets/gravitas-hero.jpg)
 
@@ -27,16 +27,16 @@ GitHub 的按钮都是英文的，下文照原样写出按钮上的英文。
 
 ### Windows
 
-1. **下载。** 单击 [下载 Gravitas 1.2.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.0.zip)，浏览器会把 `gravitas-1.2.0.zip` 存进“下载”文件夹。它和 [Releases 页面](https://github.com/Emily2040/gravitas/releases)（版本发布页）上 v1.2.0 这一版 **Assets** 里的 **Source code (zip)** 是同一个文件；Assets 如果是折叠的，单击它就能展开。
+1. **下载。** 单击 [下载 Gravitas 1.2.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip)，浏览器会把 `gravitas-1.2.1.zip` 存进“下载”文件夹。它和 [Releases 页面](https://github.com/Emily2040/gravitas/releases)（版本发布页）上 v1.2.1 这一版 **Assets** 里的 **Source code (zip)** 是同一个文件；Assets 如果是折叠的，单击它就能展开。
 2. **解除锁定。** 按 Windows 徽标键 + E 打开“文件资源管理器”，单击左侧的 **下载**。右键单击刚下载的 ZIP 文件，选择 **属性**，在“常规”选项卡最下面勾选 **解除锁定**，再单击 **确定**。这一步是为了让 Windows 放行安装程序，不做的话，Windows 可能不让它运行。如果找不到这个复选框，说明不需要，直接跳过。
-3. **解压。** 右键单击 ZIP 文件，选择 **全部解压缩**（英文系统里叫 Extract All），再单击 **提取**。打开的 `gravitas-1.2.0` 文件夹里还有一个同名文件夹，打开它。如果右键菜单里没有“全部解压缩”，多半是 360压缩、WinRAR 或 7-Zip 接管了 ZIP 文件，用它们自带的解压功能也一样。
+3. **解压。** 右键单击 ZIP 文件，选择 **全部解压缩**（英文系统里叫 Extract All），再单击 **提取**。打开的 `gravitas-1.2.1` 文件夹里还有一个同名文件夹，打开它。如果右键菜单里没有“全部解压缩”，多半是 360压缩、WinRAR 或 7-Zip 接管了 ZIP 文件，用它们自带的解压功能也一样。
 4. **双击 Install Gravitas (Windows)。** 它的图标是一个齿轮，文件全名是 `Install Gravitas (Windows).cmd`，Windows 一般会把末尾的 `.cmd` 隐藏起来。旁边的 `Install Gravitas (Mac).command` 和 `Install Gravitas (Linux).sh` 分别是给 Mac 和 Linux 用的，不用管它们。双击之后，Windows 可能先弹出警告：如果是提示无法验证发布者的安全警告，单击 **运行**；如果是蓝色的“Windows 已保护你的电脑”，先单击 **更多信息**，再单击 **仍要运行**。接着会打开一个标题为 Gravitas 的窗口：输入 1 选英文，2 选简体中文，3 选日语，4 选韩语，然后按 **回车键**。什么都不输、直接按回车，选的是 Windows 当前的显示语言，中文 Windows 上就是 2。窗口里出现“完成”后，按任意键关闭窗口。
 5. **重启 Antigravity。** 如果 Antigravity 开着，就在屏幕右下角时钟附近找到它的图标（看不到就单击那里的小箭头 **^**），右键单击它，选择 **Quit**（这个菜单只有英文）。然后从“开始”菜单重新打开 Antigravity。如果你用的是 `agy` 命令行工具，不用重启，新开一个会话就行。
 
 ### Mac
 
-1. **下载。** 点按 [下载 Gravitas 1.2.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.0.zip)。Safari 一般会自动把它解压到“下载”文件夹里，得到一个 `gravitas-1.2.0` 文件夹；如果那里只有 `gravitas-1.2.0.zip`，连按它就能解压。
-2. **连按 Install Gravitas (Mac).command。** 它在解压出来的文件夹里：在“访达”边栏里点按 **下载**，打开 `gravitas-1.2.0`；如果里面只有一个文件夹，再打开那一个。旁边的 `.cmd` 文件是 Windows 用的，不用管。
+1. **下载。** 点按 [下载 Gravitas 1.2.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip)。Safari 一般会自动把它解压到“下载”文件夹里，得到一个 `gravitas-1.2.1` 文件夹；如果那里只有 `gravitas-1.2.1.zip`，连按它就能解压。
+2. **连按 Install Gravitas (Mac).command。** 它在解压出来的文件夹里：在“访达”边栏里点按 **下载**，打开 `gravitas-1.2.1`；如果里面只有一个文件夹，再打开那一个。旁边的 `.cmd` 文件是 Windows 用的，不用管。
 3. **第一次要手动放行。** Gravitas 是免费软件，没有任何公司为它做过苹果认可的开发者签名，所以 macOS 第一次可能会拦住它。
    - macOS 14 或更早：先点按 **好** 关掉提示框，再按住 Control 键点按这个文件，选择 **打开**，在弹出的对话框里再点按 **打开**。
    - macOS 15 或更新：上面的办法不管用了。先点按 **完成** 关掉提示框（别点 **移到废纸篓**）。然后点按屏幕左上角的苹果菜单，打开 **系统设置**，进入 **隐私与安全性**，往下滚，找到提到 Install Gravitas (Mac).command 的那条提示，点按旁边的 **仍要打开**，在弹出的对话框里再点按一次 **仍要打开**，然后输入 Mac 的登录密码。
@@ -48,8 +48,8 @@ Mac 安装程序我只在 Windows 上的 bash 命令行里跑过，还没在真�
 
 ### Linux
 
-1. **下载。** 点按 [下载 Gravitas 1.2.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.0.zip)。浏览器会把 `gravitas-1.2.0.zip` 存到“下载”文件夹。
-2. **解压。** 在文件管理器里打开“下载”，右键单击这个 ZIP，选择 **提取到此处**（或 **解压**）。会出现一个 `gravitas-1.2.0` 文件夹；如果里面只有一个文件夹，再打开那一个。里面的 `.cmd` 和 `.command` 文件分别是 Windows 和 Mac 用的，不用管。
+1. **下载。** 点按 [下载 Gravitas 1.2.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip)。浏览器会把 `gravitas-1.2.1.zip` 存到“下载”文件夹。
+2. **解压。** 在文件管理器里打开“下载”，右键单击这个 ZIP，选择 **提取到此处**（或 **解压**）。会出现一个 `gravitas-1.2.1` 文件夹；如果里面只有一个文件夹，再打开那一个。里面的 `.cmd` 和 `.command` 文件分别是 Windows 和 Mac 用的，不用管。
 3. **在这个文件夹里打开终端。** 大多数文件管理器里，在文件夹的空白处右键单击，选择 **在终端中打开**。不行的话，先打开终端，输入 `cd` 和一个空格，把文件夹拖进终端窗口，再按 Enter 键。
 4. **运行 Install Gravitas (Linux).sh。** 把下面这一行粘贴进去，按 Enter 键。直接连按这个文件，多半只会用文本编辑器打开它，所以要走终端。
 
@@ -919,7 +919,7 @@ plugin/                                  安装到 ~/.gemini/config/plugins/grav
 ├── agents/                              八个验证代理；加 --review 时再加 gravitas-reviewer
 └── skills/gravitas/
     ├── SKILL.md                         深度工作的路由，描述 401 个字符，负责加载编排器
-    ├── references/00-15                 十六个模块，每个不超过 100 行
+    ├── references/00-16                 十七个模块，每个不超过 100 行
     ├── schemas/                         发现和裁决的记录格式
     ├── scripts/                         ledger.py、provenance_check.py、check_skills.py、slopcheck.py
     ├── scripts/checks/                  六个计数检查：诗律、数字和日期，连同所需数据

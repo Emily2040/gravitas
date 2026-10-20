@@ -33,7 +33,7 @@ plugin.json                  Antigravity が一覧に出す名前と説明
 rules/AGENTS.md              常時ルール：この人にとって最良の答え、下限、入れていればセカンドオピニオン、スキルを読み込む条件
 agents/                      使えるツールを固定した8つのエージェントと、--review 付きのときの gravitas-reviewer
 skills/gravitas/SKILL.md     本格作業の振り分け役。references/00-orchestrator.md を読み込む
-skills/gravitas/references/  16のモジュール。view_file の1回で全体を読めるよう、どれも100行以内
+skills/gravitas/references/  17のモジュール。view_file の1回で全体を読めるよう、どれも100行以内
 skills/gravitas/schemas/     サブエージェントが返す発見と判定の記録の形式
 skills/gravitas/scripts/     ledger.py, provenance_check.py, check_skills.py, slopcheck.py
 skills/gravitas/scripts/checks/  詩歌、数、日付を数える6つのチェックと、そのデータ
@@ -94,4 +94,4 @@ v4 のルールの中核をほかのエージェントアプリでも使える�
 
 限界について。方法の大半は、モデルに従うよう求める指示です。機械的な部分はツールのリスト、インストーラー、スクリプトで、スクリプトはエージェントが実行するよう指示されたときに動きます。テストは Windows 11 上の agy 1.2.9〜1.2.16 で行いました。使い方に影響するプラットフォームの挙動は `skills/gravitas/references/13-platform.md` にあります。特に大事なのは二点です。ヘッドレスの `agy -p` の実行には、明示的な権限の付与か、`~/.gemini/antigravity-cli/settings.json` の `toolPermission` の設定が必要です。そして CLI は、リポジトリ自身の `.agents/` フォルダーを、そのリポジトリを `--add-dir` で渡したときしか読みません。このプラグインがグローバルにインストールされるのは、そのためです。日本語と韓国語では、危険な状態かもしれない人への返答が、相手がくだけた書き方をしていても、丁寧な言葉づかいになることがあります。素の Antigravity でも同じことが起きます。
 
-バージョン 1.2.0 · MIT · 作者 [Iamemily2050](https://github.com/Emily2040)
+バージョン 1.2.1 · MIT · 作者 [Iamemily2050](https://github.com/Emily2040)

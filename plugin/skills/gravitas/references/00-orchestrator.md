@@ -69,6 +69,7 @@ Pick the scale from `consequence`, state it, with the reason, in the report's Co
 | `13-platform.md` | The task depends on Antigravity behaviour, or a tool, hook, skill or permission does something unexpected |
 | `14-checks.md` | The work holds Chinese regulated verse or couplets, a haiku, tanka, senryu or sijo, amounts converted across 万, 億, 만, lakh or crore, or dates for zh-CN, ja or ko readers |
 | `15-harness-probing.md` | Standard scale and above, before each round after the first, and whenever a brief, gate, checklist or subagent setup could be written two plausible ways |
+| `16-gate-gaming.md` | With `05-acceptance.md` whenever you write a gate, a cap, a class rule or a verifier, and before any fan-out that builds many items from one recipe |
 
 ## Phases
 
