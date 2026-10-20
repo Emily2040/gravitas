@@ -87,7 +87,7 @@ Run it before every report. `gravitas-completeness-critic` reads the ledger and 
 
 ## Staged Escalation
 
-When most items are cheap and a few are expensive, paying the expensive price everywhere wastes most of the budget. Run a `flash_lite` pass over everything and promote only what trips a signal. Log both counts, because a promotion rate near zero or near one means the signal is miscalibrated rather than the work being uniform.
+When most items are cheap and a few are expensive, paying the expensive price everywhere wastes most of the budget. Run a `flash_lite` pass over everything and promote only what trips a signal. Log both counts, because a promotion rate near zero or near one means the signal is miscalibrated rather than the work being uniform. When the question is how to brief rather than how much to spend, run two briefs on one item and let an agent that ran neither compose the better one (`15-harness-probing.md`).
 
 ## Anti-Patterns
 

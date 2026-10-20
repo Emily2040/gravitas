@@ -6,7 +6,7 @@ compatibility: "Google Antigravity desktop 2.17.0 and agy CLI 1.2.9 to 1.2.16 on
 metadata:
   author: "Iamemily2050"
   repo: "https://github.com/Emily2040/gravitas"
-  version: "1.1.2"
+  version: "1.2.0"
   website: "https://Iamemily2050.com"
   x: "@iamemily2050"
   instagram: "@iamemily2050"

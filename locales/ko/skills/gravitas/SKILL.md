@@ -6,7 +6,7 @@ compatibility: "Windows 11에서 Google Antigravity 데스크톱 2.17.0 및 agy 
 metadata:
   author: "Iamemily2050"
   repo: "https://github.com/Emily2040/gravitas"
-  version: "1.1.2"
+  version: "1.2.0"
   website: "https://Iamemily2050.com"
   x: "@iamemily2050"
   instagram: "@iamemily2050"

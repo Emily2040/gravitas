@@ -4,6 +4,15 @@ All notable changes to this project are documented in this file.
 
 This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [1.2.0] - 2026-10-20
+
+### Added
+- `15-harness-probing.md`, in all four languages: how to improve the harness (briefs, gates, checklists, tool rules, model mix, handoff files) while the work runs, adapted from Google Research's Harness² (Apache-2.0, arXiv 2610.14224). Propose two variants of one brief that differ in one dimension, probe both on the same item with the same seed, gates, screener and critic, and let an agent that ran neither compose the better brief with the evidence that decided. Lessons persist in `HARNESS_LESSONS.md` at the workspace root, one entry per probe with the evidence, the adopted rule and where it now lives; a lesson is retired with the evidence that retired it, never deleted. One probe pair per round by default, on the item that failed worst; guardrails against probing the gates themselves, against letting a probe agent judge its own pair, and against adopting on narration. The orchestrator's loading matrix names it for standard scale and above, before each round after the first, and `09-orchestration.md` points to it from staged escalation.
+
+### Changed
+- `13-platform.md`: the headless `401` row no longer says "about the hour mark". In 12 logged runs on 1.4.0 to 1.4.2 the cut came at 18, 28, 42, 53, 58, 61, 138, 208, 265 and 486 minutes, two runs of 60 and 383 minutes finished clean, and one turn ended instead with `NOT_FOUND (code 404): models/barium-b-agy is not found`; the files and subagent work survived every time. The sandbox row records that on Windows the sandbox runs commands as an AppContainer identity, so a workspace on an exFAT drive exits with code 2 at the first `run_command` with no result event (issue #1296). The orchestrator's report sentence says the same: a cut can come at any time, so every output and the report are written before the final reply.
+- READMEs count sixteen modules.
+
 ## [1.1.2] - 2026-10-19
 
 ### Added

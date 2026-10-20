@@ -57,14 +57,14 @@ Gravitas 做成插件，就是这个原因：技能、验证 agent 和常驻规�
 | hook 拒绝了某条命令，最终回复里却可能写着这条命令本该打印的输出。这类运行共 11 次，其中 6 次的回复正好是 prompt 要求的那个标记，而对话记录显示命令根本没运行过 | Observed（1.2.9） |
 | 一个工具被拒，这一轮就整个作废，运行却报告 `"status": "SUCCESS"`，退出码为 0。实测损失最大的一次，丢掉了 48 个已完成的步骤和 20,595 个输出 token | Observed（1.2.7，1.2.9 上再次出现）；issue #794（未关闭） |
 | 默认设置下，headless 运行不需要授权就允许 `view_file` 和 `search_web`，但会拒绝 `run_command` 和 `read_url_content`。在空文件夹里问一个不需要别的信息就能回答的问题，第一个调用就是用 shell 列出这个文件夹：装了本插件时 34 次里有 30 次如此，不装时 34 次里有 21 次；凡是第一个调用是列目录的运行，回复全都丢了。`PreToolUse` hook 的 deny 发生在这道权限检查之前，所以被 hook 拒掉的 `dir` 没有让回复丢失 | Observed（1.2.11，2026 年 9 月 26 日、27 日） |
-| `--sandbox --dangerously-skip-permissions` 下，命令在工作区里运行，工作区外的写入会被拒绝，但任何位置都能读，也能联网。有两次运行读到了工作区往上两级目录里的文件 | Observed（1.2.11，2026 年 9 月 26 日） |
+| `--sandbox --dangerously-skip-permissions` 下，命令在工作区里运行，工作区外的写入会被拒绝，但任何位置都能读，也能联网。有两次运行读到了工作区往上两级目录里的文件。在 Windows 上，沙箱以 AppContainer 身份运行命令：工作区放在 exFAT 盘上时，这种盘存不了它需要的 ACL，进程在第一次 `run_command` 时就以退出码 2 结束，也不发出 result 事件；把工作区放在用户目录下的 NTFS 盘上 | Observed（1.2.11，2026 年 9 月 26 日）；exFAT 退出见 1.4.2，2026 年 10 月 20 日，issue #1296 |
 | 从 headless 运行里启动的 subagent，如果没有授予 `read_file`，读工作区文件时 `read_file` 会被拒绝 | Observed（1.2.9） |
 | subagent 还在运行、又没有待触发的定时器时，父 agent 一旦结束这一轮，就再也收不到结果。运行会等 subagent 结束，然后关闭，在日志里记下“Failed to wake idle agent on message: run state not found”，并以父 agent 的最后一条回复报告 `SUCCESS` | Observed（1.2.9，2 次受控运行 2 次都出现，另有一次审计）；issue #1044。1.2.16 上 1 次运行再次出现：回复只剩那句等待提示，日志里没有“Failed to wake”这一行，消息留在了会话的 `messages/undelivered` 文件夹里 |
 | `schedule` 调用后立即返回。一次性定时器还没触发时，headless 运行会一直保持存活（stderr：`root agent idle; waiting up to 30m0s for 1 background task(s)`），直到定时器触发或被取消 | Observed（1.2.16，2026 年 10 月 3 日，使用 `--sandbox --dangerously-skip-permissions`）；等待模式的写法见 `08-delegation.md`，该模式在默认设置下尚未测试 |
 | subagent 如果没调用 `send_message` 就结束，唤醒父 agent 的是一条发送者为 `system`、内容为它最后一条回复的消息，所以设为这个 subagent ID 的 `TimerCondition` 不会被取消：7 次运行里，240 秒的定时器 7 次都走满了全程，父 agent 回复了两次。subagent 自己调用 `send_message` 时，消息带着它的 ID，3 次运行里 3 次都取消了这类定时器。设为 `"any"` 的，8 次里 8 次都被取消 | Observed（1.2.16，2026 年 10 月 3 日，使用 `--sandbox --dangerously-skip-permissions`） |
 | 既没有文本、也没有工具调用的一轮会被拒绝（“model output must contain either output text or tool calls, these cannot both be empty”），所以哪怕这一轮只是在等待，也必须说一句简短的话。headless 运行会把这句话打印出来，和工具调用写在一起的文本也会打印 | Observed（1.2.16，Gemini 3.8 Flash）：在 3 次被要求静默结束本轮的运行中，有 2 次出现了这个错误 |
 | agent 或模型 API 出错时，会在 stderr 打印 `AGY_ERROR: {...}`，并以退出码 3 退出 | Read：1.2.6 更新日志 |
-| 无头运行的 `agy -p` 一轮在大约一小时时以 `UNAUTHENTICATED (code 401)` 结束，2 次长时间运行里 2 次都如此（28 分钟和 61 分钟），subagent 的工作和已写入的文件完好；`agy -c` 可以接着这次会话继续 | Observed on 1.4.0，2026 年 10 月 18 日，带 `--sandbox`。要在那之前写好输出和报告，并准备好续跑 |
+| 无头运行的 `agy -p` 一轮会在无法预测的时间以 `UNAUTHENTICATED (code 401)` 结束：记录到的 12 次运行里，中断发生在第 18、28、42、53、58、61、138、208、265 和 486 分钟，另有 60 分钟和 383 分钟的两次运行正常结束；有一次则以 `NOT_FOUND (code 404): models/barium-b-agy is not found` 结束。每一次 subagent 的工作和已写入的文件都完好；`agy -c` 可以接着这次会话继续 | Observed on 1.4.0 到 1.4.2，2026 年 10 月 18 到 20 日，带 `--sandbox`。每个输出和报告都要在最终回复之前写好，每批提交一次，并准备好续跑 |
 
 有一次安全审计跑了 13 分钟、启动了 7 个 subagent，最终回复却被替换成“This request was blocked by Gemini's filters. They can occasionally trigger by mistake on safe coding, security, or biology-related queries.”（observed，1.2.9，`gemini-3.8-flash-high`）。规划 headless 运行时，要以明确的授权或 `toolPermission` 为准，hook 的放行指望不上；状态显示 `SUCCESS`，也不能说明这一轮的工作成果还在。
 

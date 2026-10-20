@@ -68,6 +68,7 @@ scale: quick | standard | full | exhaustive
 | `12-prose.md` | 所有给人读的产出 |
 | `13-platform.md` | 任务依赖 Antigravity 的行为，或者某个工具、hook、skill、权限的表现出乎意料时 |
 | `14-checks.md` | 工作里有绝句、律诗、对联，有俳句、短歌、川柳、时调，有在万、億、만、lakh、crore 之间换算的金额，或者有写给中日韩读者的日期 |
+| `15-harness-probing.md` | `standard` 及以上规模，从第二轮起每轮开始前；以及任何时候，一份简报、一道门槛、一张检查单或一套 subagent 配置有两种都说得通的写法 |
 
 ## 分阶段推进
 
@@ -85,7 +86,7 @@ scale: quick | standard | full | exhaustive
 
 常驻规则对回复的那些限制，在这里照样适用。回复里绝不出现：subagent 的原始输出、进度或状态行、层级标签、说明覆盖范围或规模的段落、agent 名称、运行记录或缓存路径、搜索跳转链接。唯一允许出现的状态行，是等待期间必需的那一行等待提示（见 `08-delegation.md`）。只要还有 subagent 在跑，就不要结束本轮，除非有一个 `schedule` 定时器还在等着触发。`standard` 及以上规模，反驳者和评审者已经起到了常驻规则里“第二意见”的作用，所以不要再对报告启动 `gravitas-reviewer`。`quick` 规模下，回复只按常驻规则来写。
 
-`standard` 及以上规模，报告要写进工作区或 artifact 目录下的一个文件，内容按下列各部分依次组织，没有内容的部分直接删掉。回复里用平实的话讲清判定和要紧的发现，并说明报告在哪个文件。需要机器可读的输出时，产出的记录要符合 `schemas/finding.schema.json`。回复之前，先对报告跑一遍 `scripts/provenance_check.py` 和 `scripts/narration_check.py`，把每一个 `FAIL` 都修掉（见 `01-evidence.md`）。无头运行的一轮可能在大约一小时时因认证错误而中断（`13-platform.md`）：报告要在那之前写好，中断了就用 `agy -c` 接着跑。报告要在最终回复之前、也在等最后一个 subagent 之前写好，因为活儿干完了，最后一轮仍可能丢失：有一次审计用了 7 个 subagent、跑了 13 分钟，最后等来的不是报告，而是安全过滤器的拦截，只有台账文件留了下来。
+`standard` 及以上规模，报告要写进工作区或 artifact 目录下的一个文件，内容按下列各部分依次组织，没有内容的部分直接删掉。回复里用平实的话讲清判定和要紧的发现，并说明报告在哪个文件。需要机器可读的输出时，产出的记录要符合 `schemas/finding.schema.json`。回复之前，先对报告跑一遍 `scripts/provenance_check.py` 和 `scripts/narration_check.py`，把每一个 `FAIL` 都修掉（见 `01-evidence.md`）。无头运行的一轮随时可能因认证错误而中断，记录到的运行里从 18 分钟到 8 小时都有（`13-platform.md`）：报告要在那之前写好，中断了就用 `agy -c` 接着跑。报告要在最终回复之前、也在等最后一个 subagent 之前写好，因为活儿干完了，最后一轮仍可能丢失：有一次审计用了 7 个 subagent、跑了 13 分钟，最后等来的不是报告，而是安全过滤器的拦截，只有台账文件留了下来。
 
 1. 用一两句话给出答案或判定，并标明层级。
 2. 按严重程度排列的发现，每条都在同一句话里写明层级和出处。
