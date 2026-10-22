@@ -3,15 +3,15 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · **한국어**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.2.1-purple.svg)](#status)
+[![Release](https://img.shields.io/badge/release-v1.3.0-purple.svg)](#status)
 [![Platform](https://img.shields.io/badge/Antigravity-agy_1.2.16-blueviolet.svg)](https://antigravity.google/)
 [![Languages](https://img.shields.io/badge/languages-en_%7C_zh--CN_%7C_ja_%7C_ko-green.svg)](#languages)
 
 Gravitas는 Google Antigravity에 더하는 무료 부가 기능입니다. Antigravity의 AI 에이전트가 답을 쓰기 전에 답의 바탕이 되는 사실부터 확인하고, 잘못 알고 계신 것이 있으면 친절하게 알려 드린 뒤, 원래 부탁하신 것도 그대로 해 드리게 합니다.
 
-[설치](#install) · [실제 사례](#real-examples) · [다른 언어 사례](#other-languages-we-tested) · [왜 Gravitas인가](#why-gravitas) · [결과](#results) · [작동 방식](#part-2)
+[설치](#install) · [DeepSeek Harness](#deepseek-harness) · [실제 사례](#real-examples) · [다른 언어 사례](#other-languages-we-tested) · [왜 Gravitas인가](#why-gravitas) · [결과](#results) · [작동 방식](#part-2)
 
-`v1.2.1` · 2026년 10월 · [MIT](LICENSE) · [변경 기록](CHANGELOG.md) · 만든 사람 [Iamemily2050](https://github.com/Emily2040)
+`v1.3.0` · 2026년 10월 · [MIT](LICENSE) · [변경 기록](CHANGELOG.md) · 만든 사람 [Iamemily2050](https://github.com/Emily2040)
 
 ![Gravitas 캐릭터 시트](docs/assets/gravitas-hero.jpg)
 
@@ -27,16 +27,16 @@ GitHub 화면의 버튼 이름은 영어로 나옵니다.
 
 ### Windows에서
 
-1. **내려받기.** [Gravitas 1.2.1 내려받기](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip)를 클릭합니다. 브라우저가 `gravitas-1.2.1.zip` 파일을 다운로드 폴더에 저장합니다. [Releases 페이지](https://github.com/Emily2040/gravitas/releases)의 1.2.1 버전 아래에 있는 **Source code (zip)**과 같은 파일입니다. 그 페이지에서 이 파일이 보이지 않으면 **Assets**를 클릭해 펼칩니다.
+1. **내려받기.** [Gravitas 1.3.0 내려받기](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip)를 클릭합니다. 브라우저가 `gravitas-1.3.0.zip` 파일을 다운로드 폴더에 저장합니다. [Releases 페이지](https://github.com/Emily2040/gravitas/releases)의 1.3.0 버전 아래에 있는 **Source code (zip)**과 같은 파일입니다. 그 페이지에서 이 파일이 보이지 않으면 **Assets**를 클릭해 펼칩니다.
 2. **차단 해제.** 파일 탐색기를 열고(Windows 키와 E 키를 함께 누릅니다) 왼쪽에서 **다운로드**를 클릭합니다. ZIP 파일을 마우스 오른쪽 버튼으로 클릭하고 **속성**을 고릅니다. **일반** 탭 아래쪽의 **차단 해제**에 체크한 뒤 **확인**을 클릭합니다. **차단 해제** 칸이 없으면 이 단계는 건너뜁니다. 이 단계를 빼먹으면 Windows가 설치 프로그램을 막을 수 있습니다.
-3. **압축 풀기.** ZIP 파일을 마우스 오른쪽 버튼으로 클릭하고 **모두 압축 풀기**를 고릅니다. Microsoft의 한국어 도움말은 이 메뉴를 **모두 추출**이라고 부르고, 영어판 Windows에서는 **Extract All**입니다. 저는 한국어판 Windows 화면에서 직접 확인하지 못했으니, 이름이 조금 달라도 압축을 한꺼번에 모두 푸는 항목을 고르면 됩니다. 이어서 나오는 창에서 **압축 풀기** 버튼(영어판에서는 **Extract**)을 클릭합니다. 새로 열린 `gravitas-1.2.1` 폴더 안에 같은 이름의 폴더가 하나 더 있으면 그 폴더를 엽니다. 오른쪽 클릭 메뉴에 **모두 압축 풀기** 같은 항목이 아예 없으면, 반디집이나 알집 같은 압축 프로그램이 ZIP 파일을 열도록 설정되어 있는 것입니다. 그때는 그 프로그램의 압축 풀기 메뉴로 풀면 됩니다.
+3. **압축 풀기.** ZIP 파일을 마우스 오른쪽 버튼으로 클릭하고 **모두 압축 풀기**를 고릅니다. Microsoft의 한국어 도움말은 이 메뉴를 **모두 추출**이라고 부르고, 영어판 Windows에서는 **Extract All**입니다. 저는 한국어판 Windows 화면에서 직접 확인하지 못했으니, 이름이 조금 달라도 압축을 한꺼번에 모두 푸는 항목을 고르면 됩니다. 이어서 나오는 창에서 **압축 풀기** 버튼(영어판에서는 **Extract**)을 클릭합니다. 새로 열린 `gravitas-1.3.0` 폴더 안에 같은 이름의 폴더가 하나 더 있으면 그 폴더를 엽니다. 오른쪽 클릭 메뉴에 **모두 압축 풀기** 같은 항목이 아예 없으면, 반디집이나 알집 같은 압축 프로그램이 ZIP 파일을 열도록 설정되어 있는 것입니다. 그때는 그 프로그램의 압축 풀기 메뉴로 풀면 됩니다.
 4. **Install Gravitas (Windows) 더블클릭.** 아이콘은 톱니바퀴 모양입니다. 파일의 전체 이름은 `Install Gravitas (Windows).cmd`인데, Windows는 보통 끝의 `.cmd`를 숨깁니다. 옆에 있는 `Install Gravitas (Mac).command`와 `Install Gravitas (Linux).sh`는 Mac용과 Linux용이니 건드리지 마세요. 창이 열리기 전에 Windows가 경고를 띄울 수 있습니다. '파일 열기 - 보안 경고' 창이면 **실행**을 클릭하고, 파란색 'Windows의 PC 보호' 화면이면 **추가 정보**를 클릭한 다음 **실행**을 클릭합니다. 그러면 제목이 Gravitas인 창이 열리고 번호 목록이 나옵니다. 한국어판을 설치하려면 **4**(한국어판 Gravitas 설치)를 입력하고 **Enter** 키를 누릅니다. Windows를 한국어로 쓰고 있다면 Enter 키만 눌러도 4번이 선택됩니다. 다른 언어로 설치하려면 영어는 **1**, 중국어는 **2**, 일본어는 **3**을 입력합니다.
 5. **Antigravity 다시 시작.** 설치가 끝나면 창에 "완료되었습니다."로 시작하는 줄이 나옵니다. 아무 키나 눌러 창을 닫습니다. Antigravity가 켜져 있다면 화면 오른쪽 아래 시계 근처에서 Antigravity 아이콘을 찾습니다(보이지 않으면 그곳의 작은 **^** 화살표를 클릭합니다). 아이콘을 마우스 오른쪽 버튼으로 클릭하고 **Quit**을 고릅니다. 이 메뉴는 영어로만 나옵니다. 그다음 시작 메뉴에서 Antigravity를 엽니다. `agy`를 쓴다면 다시 시작하는 대신 새 세션을 시작하면 됩니다.
 
 ### Mac에서
 
-1. **내려받기.** [Gravitas 1.2.1 내려받기](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip)를 클릭합니다. Safari는 보통 압축을 알아서 풀어 다운로드 폴더에 `gravitas-1.2.1` 폴더를 만들어 줍니다. 다운로드 폴더에 `gravitas-1.2.1.zip` 파일만 있으면 그 파일을 더블클릭합니다.
-2. **Install Gravitas (Mac).command 더블클릭.** Finder 사이드바에서 **다운로드**를 클릭하고 `gravitas-1.2.1` 폴더를 엽니다. 그 안에 폴더가 하나만 들어 있으면 그 폴더도 엽니다. 거기 있는 Install Gravitas (Mac).command를 더블클릭합니다. Mac에서는 끝의 `.command`가 보이지 않을 수 있습니다. 옆에 있는 `Install Gravitas (Windows).cmd`는 Windows용이니 건드리지 마세요.
+1. **내려받기.** [Gravitas 1.3.0 내려받기](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip)를 클릭합니다. Safari는 보통 압축을 알아서 풀어 다운로드 폴더에 `gravitas-1.3.0` 폴더를 만들어 줍니다. 다운로드 폴더에 `gravitas-1.3.0.zip` 파일만 있으면 그 파일을 더블클릭합니다.
+2. **Install Gravitas (Mac).command 더블클릭.** Finder 사이드바에서 **다운로드**를 클릭하고 `gravitas-1.3.0` 폴더를 엽니다. 그 안에 폴더가 하나만 들어 있으면 그 폴더도 엽니다. 거기 있는 Install Gravitas (Mac).command를 더블클릭합니다. Mac에서는 끝의 `.command`가 보이지 않을 수 있습니다. 옆에 있는 `Install Gravitas (Windows).cmd`는 Windows용이니 건드리지 마세요.
 3. **처음 한 번은 열도록 허용.** Gravitas는 어느 회사도 서명하지 않은 무료 프로그램이라서, 처음에는 macOS의 보안 기능(Gatekeeper)이 설치 프로그램을 열지 않을 수 있습니다.
    - macOS 14 이하: 경고 창에서 **확인**을 클릭한 다음, Control 키를 누른 채 파일을 클릭하고 **열기**를 고른 뒤, 다시 나오는 창에서 **열기**를 클릭합니다.
    - macOS 15 이상: 이 방법이 더는 통하지 않습니다. 경고 창에서 휴지통으로 옮기는 버튼은 누르지 말고, 창을 닫는 **완료** 버튼(영어판에서는 Done)을 클릭합니다. Apple 메뉴 > **시스템 설정**을 열고 사이드바에서 **개인정보 보호 및 보안**을 클릭합니다. 아래로 내려 Install Gravitas (Mac).command에 관한 메시지 옆의 **그래도 열기**를 클릭하고, 한 번 더 **그래도 열기**를 클릭한 다음 Mac 로그인 암호를 입력합니다.
@@ -48,8 +48,8 @@ Mac 설치 프로그램은 실제 Mac에서는 한 번도 돌려 보지 못했�
 
 ### Linux에서
 
-1. **내려받기.** [Gravitas 1.2.1 내려받기](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip)를 클릭합니다. 브라우저가 다운로드 폴더에 `gravitas-1.2.1.zip`을 저장합니다.
-2. **압축 풀기.** 파일 관리자에서 다운로드 폴더를 열고, ZIP 파일을 마우스 오른쪽 버튼으로 클릭한 뒤 **여기에 풀기**(또는 **압축 풀기**)를 고릅니다. `gravitas-1.2.1` 폴더가 생깁니다. 그 안에 폴더가 하나만 들어 있으면 그 폴더도 엽니다. 안에 있는 `.cmd`와 `.command` 파일은 Windows용과 Mac용이니 건드리지 마세요.
+1. **내려받기.** [Gravitas 1.3.0 내려받기](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip)를 클릭합니다. 브라우저가 다운로드 폴더에 `gravitas-1.3.0.zip`을 저장합니다.
+2. **압축 풀기.** 파일 관리자에서 다운로드 폴더를 열고, ZIP 파일을 마우스 오른쪽 버튼으로 클릭한 뒤 **여기에 풀기**(또는 **압축 풀기**)를 고릅니다. `gravitas-1.3.0` 폴더가 생깁니다. 그 안에 폴더가 하나만 들어 있으면 그 폴더도 엽니다. 안에 있는 `.cmd`와 `.command` 파일은 Windows용과 Mac용이니 건드리지 마세요.
 3. **그 폴더에서 터미널 열기.** 대부분의 파일 관리자에서는 폴더의 빈 곳을 마우스 오른쪽 버튼으로 클릭하고 **터미널에서 열기**를 고르면 됩니다. 그 메뉴가 없으면 터미널을 열고 `cd`를 입력한 뒤 스페이스 바를 한 번 누르고, 폴더를 터미널 창으로 끌어다 놓은 다음 Enter 키를 누릅니다.
 4. **Install Gravitas (Linux).sh 실행.** 아래 한 줄을 붙여 넣고 Enter 키를 누릅니다. 파일을 더블클릭하면 보통 텍스트 편집기로 열리기 때문에 터미널에서 실행합니다.
 
@@ -77,6 +77,57 @@ Antigravity에서 새 대화를 열고 아래 문장을 붙여 넣어 보냅니�
 설치 프로그램을 다시 더블클릭하고 **5**(Gravitas 제거)를 입력한 다음 Enter 키(Mac에서는 Return 키)를 누릅니다. 그다음 설치할 때와 같은 방법으로 Antigravity를 다시 시작합니다. Gravitas는 홈 폴더의 `.gemini/gravitas-backups` 안에 있는, 제거한 날짜와 시각이 이름인 폴더로 옮겨집니다. 설치 프로그램이 이 폴더의 전체 경로를 보여 주며, 이 폴더는 언제 지워도 괜찮습니다. Mac에서는 이 폴더가 Finder에 보이지 않으므로, Finder에서 **이동 > 폴더로 이동**을 고르고 그 경로를 붙여 넣습니다.
 
 설치 프로그램은 Gravitas에 속한 것만 바꿉니다. Antigravity의 플러그인 폴더(홈 폴더의 `.gemini/config/plugins/gravitas`)와 이 백업 폴더, 그리고 beta 1을 설치한 적이 있다면 beta 1의 스킬과 훅 스크립트, `.gemini/config/hooks.json` 안의 `gravitas-always-on` 항목입니다. 예전에 설치한 Gravitas를 포함해 바꾸거나 빼는 것은 모두 백업 폴더로 옮기고, `hooks.json`을 고치기 전에는 그 사본도 남겨 두므로 아무것도 지우지 않습니다. Python과 터미널은 두 번째 의견 검토자 같은 선택 기능을 넣는 [터미널 설치](#install-from-a-terminal)에만 필요합니다.
+
+<a id="deepseek-harness"></a>
+
+### DeepSeek Harness에서 쓰기
+
+Gravitas는 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)(DSH) 0.2.x(0.2.1-rc.2 이상의 0.2 버전)에서도 `dsh-gravitas` 플러그인으로 돌아갑니다. DSH 0.3은 아직 지원하지 않습니다. 플러그인이 선언한 DSH 버전 범위는 `>=0.2.1-rc.2 <0.3.0-0`이고, 범위 밖의 버전에서는 DSH가 설치를 거부합니다. 대상은 `web` 프로필과 데스크톱 앱입니다. 상시 적용 규칙과 `gravitas` 스킬은 Antigravity 버전과 같은 파일로 만들어지며, 한국어·영어·중국어·일본어 네 가지 언어가 있습니다.
+
+| Antigravity에서는 | DeepSeek Harness에서는 |
+| --- | --- |
+| 상시 적용 규칙 | 모든 에이전트의 시스템 프롬프트에 들어가는 한 절 |
+| `gravitas` 스킬 | 같은 스킬에, Antigravity 도구 이름을 DSH 도구 이름으로 옮기는 짧은 설명을 더함 |
+| 읽기 전용 `gravitas-*` 에이전트 여덟 개 | `gravitas_inspect` 도구로 시작하는 프리셋 두 개. `gravitas-inspector`(읽기·검색·웹만 되고, 파일을 쓰거나 고치는 도구는 없음)가 일곱 가지 역할을, `gravitas-checker`(셸 포함)가 체커를 맡습니다 |
+| 두 번째 의견 | DSH에서는 아직 쓸 수 없습니다 |
+
+설치하려면 터미널에 다음을 입력합니다.
+
+```bash
+dsh plugin --profile web add github:Emily2040/gravitas#v1.3.0
+```
+
+`dsh plugin`은 pnpm을 씁니다. pnpm을 찾을 수 없다고 나오면 다음 줄을 한 번 실행한 뒤 위의 줄을 다시 실행합니다.
+
+```bash
+corepack enable pnpm
+```
+
+그다음 DSH를 다시 시작합니다. 데스크톱 앱은 자체 프로필을 쓰기 때문에 npm으로 설치한 `dsh` 명령으로는 바꿀 수 없습니다. 앱의 **플러그인** 페이지에서 추가하세요.
+
+확인하려면 다음 명령의 출력 끝부분에 `dsh-gravitas`가 있는지 봅니다.
+
+```bash
+dsh --profile web --dump-config
+```
+
+언어는 시스템 설정을 따릅니다. 시스템이 한국어·중국어·일본어면 그 언어를, 그 밖에는 영어를 씁니다. 언어를 고정하거나 상시 적용 규칙 없이 스킬만 쓰려면 프로필 폴더(홈 폴더의 `.dsh/profiles/web`)에 있는 `cordis.patch.yml`에 다음을 넣습니다.
+
+```yaml
+- id: dsh-gravitas
+  config:
+    language: ko        # auto, en, zh-CN, ja, ko 중 하나
+    alwaysOnRule: true  # false로 바꾸면 스킬만 남습니다
+```
+
+지우려면 `dsh plugin --profile web remove dsh-gravitas`를 실행합니다.
+
+해 볼 만한 요청 두 가지입니다. 테스트 기록은 아닙니다.
+
+- "이 저장소의 로그인 코드를 감사해서 권한 검사를 우회할 수 있는 곳을 파일과 줄 번호까지 모두 찾아 줘." 스킬은 읽기 전용 검사 에이전트가 코드를 살피고, 찾은 문제는 체커가 재현한 뒤에 보고하도록 지시합니다.
+- "이 시장 조사 보고서의 숫자를 하나하나 원래 출처와 맞춰 봐 줘." 스킬은 검사 에이전트가 출처를 찾고, 반박 역할이 각 대응을 깨 보려 하며, 출처를 못 찾은 숫자는 확인되지 않은 것으로 표시하도록 지시합니다.
+
+DSH 버전은 Windows 11에서 DSH 0.2.1-rc.2를 시작하고, 네 가지 언어 모두에서 스킬 목록·시스템 프롬프트·도구를 읽어 확인했습니다. 이 페이지의 평가 결과는 모두 Antigravity에서 잰 것이고, DSH에서의 평가는 아직 하지 않았습니다.
 
 ---
 

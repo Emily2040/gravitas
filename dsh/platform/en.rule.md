@@ -1,0 +1,1 @@
+On DeepSeek Harness, `view_file` above means the `read` tool for text and `read_image` for images (which works only on a model route that accepts image input); listing and searching are `glob` and `grep`; the shell is `pwsh` on Windows and `bash` elsewhere.

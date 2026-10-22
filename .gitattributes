@@ -6,6 +6,8 @@
 *.sh    text eol=lf
 *.ps1   text eol=lf
 *.tsv   text eol=lf
+*.yml   text eol=lf
+*.svg   text eol=lf
 # The installers: cmd needs CRLF, and bash on macOS and Linux needs LF (*.sh is above).
 *.cmd      text eol=crlf
 *.command  text eol=lf

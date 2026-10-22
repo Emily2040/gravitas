@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Gravitas",
+    "description": "Checks what your answer depends on and tells you kindly when something you assumed is wrong, while still giving you what you came for. For audits and other deep work, read-only inspector agents look for mistakes and gaps."
+  }
+}

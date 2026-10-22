@@ -3,15 +3,15 @@
 [English](./README.md) · [简体中文](./README.zh-CN.md) · **日本語** · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.2.1-purple.svg)](#status)
+[![Release](https://img.shields.io/badge/release-v1.3.0-purple.svg)](#status)
 [![Platform](https://img.shields.io/badge/Antigravity-agy_1.2.16-blueviolet.svg)](https://antigravity.google/)
 [![Languages](https://img.shields.io/badge/languages-en_%7C_zh--CN_%7C_ja_%7C_ko-green.svg)](#languages)
 
 Gravitas は、Google の AI エージェントアプリ「Google Antigravity」に入れて使う、無料の追加機能です。入れると AI エージェントが、答えの拠り所を確かめ、あなたの思い違いはやさしく指摘し、そのうえで頼まれたものをきちんと渡すようになります。
 
-[インストール](#install) · [実際の例](#real-examples) · [ほかの言語の例](#other-languages) · [なぜ Gravitas か](#why-gravitas) · [結果](#results) · [仕組み](#part-2)
+[インストール](#install) · [DeepSeek Harness](#deepseek-harness) · [実際の例](#real-examples) · [ほかの言語の例](#other-languages) · [なぜ Gravitas か](#why-gravitas) · [結果](#results) · [仕組み](#part-2)
 
-`v1.2.1` · 2026年10月 · [MIT](LICENSE) · [変更履歴](CHANGELOG.md) · 作者 [Iamemily2050](https://github.com/Emily2040)
+`v1.3.0` · 2026年10月 · [MIT](LICENSE) · [変更履歴](CHANGELOG.md) · 作者 [Iamemily2050](https://github.com/Emily2040)
 
 ![Gravitas のキャラクターシート](docs/assets/gravitas-hero.jpg)
 
@@ -27,9 +27,9 @@ Gravitas は、Google の AI エージェントアプリ「Google Antigravity」
 
 ### Windows の場合
 
-1. **ダウンロード。** [Gravitas 1.2.1 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip) をクリックします。`gravitas-1.2.1.zip` というファイルが「ダウンロード」フォルダーに保存されます。これは [Releases ページ](https://github.com/Emily2040/gravitas/releases) の v1.2.1 にある **Source code (zip)** と同じファイルです。Releases ページでは、**Assets** をクリックしないと **Source code (zip)** が表示されないことがあります。GitHub の画面は日本語にならないので、ボタン名も英語のままです。
+1. **ダウンロード。** [Gravitas 1.3.0 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip) をクリックします。`gravitas-1.3.0.zip` というファイルが「ダウンロード」フォルダーに保存されます。これは [Releases ページ](https://github.com/Emily2040/gravitas/releases) の v1.3.0 にある **Source code (zip)** と同じファイルです。Releases ページでは、**Assets** をクリックしないと **Source code (zip)** が表示されないことがあります。GitHub の画面は日本語にならないので、ボタン名も英語のままです。
 2. **ブロックの解除。** Windows キーを押しながら E キーを押してエクスプローラーを開き、左側の「ダウンロード」をクリックします。ZIP ファイルを右クリックして「プロパティ」を選び、「全般」タブのいちばん下にある「許可する」にチェックを入れて「OK」をクリックします。この手順をしないと、Windows がインストーラーを実行させないことがあります。「許可する」が見当たらなければ、この手順は要りません。
-3. **展開。** ZIP ファイルを右クリックして「すべて展開」（英語表示の Windows では Extract All）を選び、「展開」をクリックします。展開が終わると `gravitas-1.2.1` というフォルダーが開き、その中に同じ名前のフォルダーがもう一つあるので、それを開きます。右クリックしても「すべて展開」が見当たらないときは、Lhaplus や 7-Zip などの解凍ソフトが ZIP を開く設定になっていることがあります。その場合は、そのソフトで展開してください。
+3. **展開。** ZIP ファイルを右クリックして「すべて展開」（英語表示の Windows では Extract All）を選び、「展開」をクリックします。展開が終わると `gravitas-1.3.0` というフォルダーが開き、その中に同じ名前のフォルダーがもう一つあるので、それを開きます。右クリックしても「すべて展開」が見当たらないときは、Lhaplus や 7-Zip などの解凍ソフトが ZIP を開く設定になっていることがあります。その場合は、そのソフトで展開してください。
 4. **「Install Gravitas (Windows)」をダブルクリック。** 歯車のアイコンが目印です。完全なファイル名は `Install Gravitas (Windows).cmd` ですが、Windows はふつう末尾の `.cmd` を表示しません。隣にある `Install Gravitas (Mac).command` と `Install Gravitas (Linux).sh` は Mac 用と Linux 用なので使いません。ダブルクリックすると、ウィンドウが開く前に Windows が警告を出すことがあります。そのときは次のようにします。
    - 発行元を確認できないという「セキュリティの警告」が出たら、「実行」をクリックします。
    - 青い画面に「Windows によって PC が保護されました」と出たら、「詳細情報」をクリックし、現れた「実行」をクリックします。
@@ -38,8 +38,8 @@ Gravitas は、Google の AI エージェントアプリ「Google Antigravity」
 
 ### Mac の場合
 
-1. **ダウンロード。** [Gravitas 1.2.1 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip) をクリックします。Safari なら、たいてい「ダウンロード」フォルダーの中に `gravitas-1.2.1` というフォルダーとして自動で展開されます。`gravitas-1.2.1.zip` しか見当たらないときは、それをダブルクリックします。
-2. **展開したフォルダーの中の Install Gravitas (Mac).command をダブルクリック。** Finder のサイドバーで「ダウンロード」をクリックし、`gravitas-1.2.1` を開きます。その中にフォルダーが一つしかなければ、それも開きます。隣にある Windows 用のファイルは使いません。
+1. **ダウンロード。** [Gravitas 1.3.0 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip) をクリックします。Safari なら、たいてい「ダウンロード」フォルダーの中に `gravitas-1.3.0` というフォルダーとして自動で展開されます。`gravitas-1.3.0.zip` しか見当たらないときは、それをダブルクリックします。
+2. **展開したフォルダーの中の Install Gravitas (Mac).command をダブルクリック。** Finder のサイドバーで「ダウンロード」をクリックし、`gravitas-1.3.0` を開きます。その中にフォルダーが一つしかなければ、それも開きます。隣にある Windows 用のファイルは使いません。
 3. **最初の一回だけ、開くのを許可。** Gravitas は無料のソフトウェアで、開発元を確認するための署名が付いていません。そのため初回は、macOS が開くのを止めることがあります。
    - macOS 14 以前：「OK」をクリックし、ファイルを Control キーを押しながらクリックして「開く」を選び、確認が出たらもう一度「開く」をクリックします。
    - macOS 15 以降：上の方法は使えません。警告の画面で「完了」をクリックし、画面左上のアップルメニューから「システム設定」を開いて「プライバシーとセキュリティ」を選びます。下までスクロールし、Install Gravitas (Mac).command についての表示の横にある「このまま開く」をクリックします。確認が出たらもう一度「このまま開く」をクリックし、Mac のパスワードを入力します。
@@ -51,8 +51,8 @@ Mac 用のインストーラーは、Windows のパソコンの上でしか試�
 
 ### Linux の場合
 
-1. **ダウンロード。** [Gravitas 1.2.1 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip) をクリックします。ブラウザーが「ダウンロード」フォルダーに `gravitas-1.2.1.zip` を保存します。
-2. **展開。** ファイルマネージャーで「ダウンロード」を開き、ZIP を右クリックして「ここに展開」（または「展開」）を選びます。`gravitas-1.2.1` というフォルダーが現れます。その中にフォルダーが一つしかなければ、それも開きます。中の `.cmd` と `.command` は Windows 用と Mac 用なので使いません。
+1. **ダウンロード。** [Gravitas 1.3.0 をダウンロード](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip) をクリックします。ブラウザーが「ダウンロード」フォルダーに `gravitas-1.3.0.zip` を保存します。
+2. **展開。** ファイルマネージャーで「ダウンロード」を開き、ZIP を右クリックして「ここに展開」（または「展開」）を選びます。`gravitas-1.3.0` というフォルダーが現れます。その中にフォルダーが一つしかなければ、それも開きます。中の `.cmd` と `.command` は Windows 用と Mac 用なので使いません。
 3. **そのフォルダーで端末を開く。** たいていのファイルマネージャーでは、フォルダーの何もないところを右クリックして「端末で開く」を選びます。それがなければ、端末を開いて `cd` と半角スペースを入力し、フォルダーを端末のウィンドウにドラッグして Enter キーを押します。
 4. **Install Gravitas (Linux).sh を実行。** 次の 1 行を貼り付けて Enter キーを押します。ファイルをダブルクリックすると、たいていはテキストエディターで開いてしまうので、端末から実行します。
 
@@ -80,6 +80,57 @@ Antigravity で新しい会話を始め、次の文を貼り付けます。
 インストーラーをもう一度ダブルクリックして **5** を選び、インストールのときと同じ手順で Antigravity を再起動します。Gravitas は消されずに、ホームフォルダーの `.gemini/gravitas-backups` の中にある、日時が名前のフォルダーへ移されます。正確な場所は、インストーラーが最後に表示します。このフォルダーは、いつ削除してもかまいません。Mac ではこのフォルダーが Finder に表示されないので、Finder の「移動」メニューから「フォルダへ移動」を選び、インストーラーが表示した場所を貼り付けて開きます。
 
 インストーラーが手を加えるのは Gravitas のものだけです。具体的には、Antigravity のプラグイン用フォルダー（ホームフォルダーの `.gemini/config/plugins/gravitas`）とこのバックアップ用フォルダー、それに beta 1 を入れていた場合は、beta 1 のスキルとフックのスクリプト、`.gemini/config/hooks.json` の中の `gravitas-always-on` の項目です。置き換えたものや取り除いたものは、`hooks.json` のコピーも含めてすべてバックアップ用フォルダーに残すので、何も削除しません。Python とコマンドの入力が必要なのは、[ターミナルからのインストール](#install-from-a-terminal) だけです。こちらでは、セカンドオピニオン（答えを別の AI が見直す機能）などのオプションも選べます。
+
+<a id="deepseek-harness"></a>
+
+### DeepSeek Harness で使う
+
+Gravitas は [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）0.2.x（0.2.1-rc.2 以降の 0.2 系）でも、`dsh-gravitas` というプラグインとして動きます。DSH 0.3 にはまだ対応していません。プラグインが宣言している DSH のバージョン範囲は `>=0.2.1-rc.2 <0.3.0-0` で、範囲外の版では DSH がインストールを拒否します。対象は `web` プロファイルとデスクトップアプリです。常時適用ルールと `gravitas` スキルは Antigravity 版と同じファイルから作られ、日本語・英語・中国語・韓国語の四つの言語があります。
+
+| Antigravity では | DeepSeek Harness では |
+| --- | --- |
+| 常時適用ルール | すべてのエージェントのシステムプロンプトの一節 |
+| `gravitas` スキル | 同じスキルに、Antigravity のツール名を DSH のツール名に対応させる短い説明を追加 |
+| 読み取り専用の `gravitas-*` エージェント八つ | `gravitas_inspect` ツールで起動するプリセット二つ。`gravitas-inspector`（読み取り・検索・ウェブのみで、ファイルを書いたり編集したりするツールはない）が七つの役割を、`gravitas-checker`（シェル付き）がチェッカーを受け持ちます |
+| セカンドオピニオン | DSH ではまだ使えません |
+
+インストールは、ターミナルで次のように入力します。
+
+```bash
+dsh plugin --profile web add github:Emily2040/gravitas#v1.3.0
+```
+
+`dsh plugin` は pnpm を使います。pnpm が見つからないと表示されたら、次の行を一度実行してから、上の行をもう一度実行します。
+
+```bash
+corepack enable pnpm
+```
+
+そのあと DSH を起動し直します。デスクトップアプリは独自のプロファイルを持っていて、npm で入れた `dsh` コマンドからは変更できません。アプリの **プラグイン** ページから追加してください。
+
+確認するには、次のコマンドの出力の終わり近くに `dsh-gravitas` があるかを見ます。
+
+```bash
+dsh --profile web --dump-config
+```
+
+言語はシステムの設定に合わせて選ばれます。システムが日本語・中国語・韓国語ならその言語、それ以外は英語です。言語を固定したいときや、常時適用ルールを外してスキルだけを使いたいときは、プロファイルのフォルダー（ホームフォルダーの `.dsh/profiles/web`）にある `cordis.patch.yml` に次を加えます。
+
+```yaml
+- id: dsh-gravitas
+  config:
+    language: ja        # auto、en、zh-CN、ja、ko のいずれか
+    alwaysOnRule: true  # false にするとスキルだけになります
+```
+
+削除するには `dsh plugin --profile web remove dsh-gravitas` を実行します。
+
+試せる依頼の例を二つ挙げます。テストの記録ではありません。
+
+- 「このリポジトリのログイン処理を監査して、権限チェックを迂回できる箇所をすべて、ファイル名と行番号つきで挙げて」。スキルの指示で、読み取り専用の検査役がコードを調べ、見つかった問題はチェッカーが再現してから報告されます。
+- 「この市場調査レポートの数字を一つずつ、元の出典と照らし合わせて」。スキルの指示で、検査役が出典を探し、反証役がそれぞれの対応を崩そうとし、出典の見つからない数字は未確認として示されます。
+
+DSH 版は、Windows 11 で DSH 0.2.1-rc.2 を起動し、スキル一覧・システムプロンプト・ツールを四つの言語すべてで読み出して確かめました。このページの評価結果はすべて Antigravity で測ったもので、DSH での評価はまだ行っていません。
 
 ---
 

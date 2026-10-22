@@ -1,0 +1,48 @@
+{
+  "name": "dsh-gravitas",
+  "version": "1.3.0",
+  "description": "Gravitas for DeepSeek Harness: an always-on rule that checks what the answer depends on, the gravitas deep-verification skill, and read-only inspector agents, in English, Chinese, Japanese and Korean.",
+  "author": "Iamemily2050 (https://github.com/Emily2040)",
+  "license": "MIT",
+  "homepage": "https://github.com/Emily2040/gravitas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emily2040/gravitas.git"
+  },
+  "type": "module",
+  "main": "./dsh/index.js",
+  "icon": "./dsh/icon.svg",
+  "exports": {
+    ".": "./dsh/index.js",
+    "./locale/*.json": "./dsh/locale/*.json",
+    "./icon": "./dsh/icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dsh/index.js",
+    "dsh/lib/",
+    "dsh/platform/",
+    "dsh/locale/*.json",
+    "dsh/icon.svg",
+    "dsh/cordis.patch.yml",
+    "dist/",
+    "LICENSE",
+    "README.md",
+    "README.zh-CN.md",
+    "README.ja.md",
+    "README.ko.md"
+  ],
+  "keywords": ["dsh-plugin", "deepseek-harness", "dsh", "verification", "evidence", "subagents", "audit", "审计", "验证", "检查"],
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node --test \"dsh/test/*.test.js\""
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./dsh/cordis.patch.yml"
+    }
+  }
+}

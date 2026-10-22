@@ -3,15 +3,15 @@
 **English** · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.2.1-purple.svg)](#status)
+[![Release](https://img.shields.io/badge/release-v1.3.0-purple.svg)](#status)
 [![Platform](https://img.shields.io/badge/Antigravity-agy_1.2.16-blueviolet.svg)](https://antigravity.google/)
 [![Languages](https://img.shields.io/badge/languages-en_%7C_zh--CN_%7C_ja_%7C_ko-green.svg)](#languages)
 
 Gravitas is a free add-on for Google Antigravity that makes its AI agent check what your answer depends on, tell you kindly when something you assumed is wrong, and still give you what you came for.
 
-[Install](#install) · [Real examples](#real-examples) · [Other languages](#other-languages-we-tested) · [Why Gravitas](#why-gravitas) · [Results](#results) · [How it works](#part-2)
+[Install](#install) · [DeepSeek Harness](#deepseek-harness) · [Real examples](#real-examples) · [Other languages](#other-languages-we-tested) · [Why Gravitas](#why-gravitas) · [Results](#results) · [How it works](#part-2)
 
-`v1.2.1` · October 2026 · [MIT](LICENSE) · [Changelog](CHANGELOG.md) · by [Iamemily2050](https://github.com/Emily2040)
+`v1.3.0` · October 2026 · [MIT](LICENSE) · [Changelog](CHANGELOG.md) · by [Iamemily2050](https://github.com/Emily2040)
 
 ![Gravitas character sheet](docs/assets/gravitas-hero.jpg)
 
@@ -25,17 +25,17 @@ The installer asks you to pick a language. Choose the one you read most easily: 
 
 ### On Windows
 
-1. **Download.** Click [Download Gravitas 1.2.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip). Your browser saves `gravitas-1.2.1.zip` in your Downloads folder. It is the same file as **Source code (zip)** under that release on the [Releases page](https://github.com/Emily2040/gravitas/releases), where you may have to click **Assets** to see it.
+1. **Download.** Click [Download Gravitas 1.3.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip). Your browser saves `gravitas-1.3.0.zip` in your Downloads folder. It is the same file as **Source code (zip)** under that release on the [Releases page](https://github.com/Emily2040/gravitas/releases), where you may have to click **Assets** to see it.
 2. **Unblock.** Open File Explorer (press the Windows key and E together) and click **Downloads** on the left. Right-click the ZIP, choose **Properties**, tick **Unblock** at the bottom of the **General** tab and click **OK**. If there is no Unblock box, skip this step. Without it, Windows may warn you about the installer, or refuse to run it.
-3. **Extract.** Right-click the ZIP, choose **Extract All** and click **Extract**. A folder named `gravitas-1.2.1` opens, with one folder of the same name inside it: open that one. If **Extract All** is not in the menu, another program, such as 7-Zip or WinRAR, opens your ZIP files; use its own extract command instead.
+3. **Extract.** Right-click the ZIP, choose **Extract All** and click **Extract**. A folder named `gravitas-1.3.0` opens, with one folder of the same name inside it: open that one. If **Extract All** is not in the menu, another program, such as 7-Zip or WinRAR, opens your ZIP files; use its own extract command instead.
 4. **Double-click Install Gravitas (Windows).** It has a gear icon. Its full name is `Install Gravitas (Windows).cmd`, and Windows usually hides the `.cmd`. `Install Gravitas (Mac).command` and `Install Gravitas (Linux).sh`, next to it, are for Macs and Linux; leave them alone. If Windows warns you before anything else opens, click **Run** on **Open File - Security Warning**, or **More info** and then **Run anyway** on a blue **Windows protected your PC** screen.
 5. **Choose a language.** A window titled Gravitas opens with a short menu. Type 1 for English, 2 for Chinese, 3 for Japanese or 4 for Korean, and press **Enter**. Enter on its own picks the language Windows is set to. When the window says **Done**, press any key to close it.
 6. **Restart Antigravity.** If Antigravity is open, find its icon near the clock at the bottom right of the screen (click the small **^** arrow if you do not see it), right-click it and choose **Quit**. Then open Antigravity again from the Start menu. If you use `agy`, start a new session instead.
 
 ### On a Mac
 
-1. **Download.** Click [Download Gravitas 1.2.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip). Safari usually unzips it for you into a folder named `gravitas-1.2.1` in Downloads. If you see only `gravitas-1.2.1.zip`, double-click it.
-2. **Open the folder.** In Finder, click **Downloads** in the sidebar and open `gravitas-1.2.1`. If it holds a single folder, open that one too. `Install Gravitas (Windows).cmd` is for Windows; leave it alone.
+1. **Download.** Click [Download Gravitas 1.3.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip). Safari usually unzips it for you into a folder named `gravitas-1.3.0` in Downloads. If you see only `gravitas-1.3.0.zip`, double-click it.
+2. **Open the folder.** In Finder, click **Downloads** in the sidebar and open `gravitas-1.3.0`. If it holds a single folder, open that one too. `Install Gravitas (Windows).cmd` is for Windows; leave it alone.
 3. **Double-click Install Gravitas (Mac).command.** The first time, macOS may refuse to open it, because Gravitas is free and no company has signed it.
    - On macOS 14 or earlier: click OK, then Control-click the file, choose Open and click Open.
    - On macOS 15 or later that no longer works: click Done, open System Settings, then Privacy & Security, scroll down to the message about Install Gravitas (Mac).command, click Open Anyway, click Open Anyway again and enter your Mac password.
@@ -47,8 +47,8 @@ I have run the Mac installer only under bash on Windows, never on a real Mac. If
 
 ### On Linux
 
-1. **Download.** Click [Download Gravitas 1.2.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip). Your browser saves `gravitas-1.2.1.zip` in your Downloads folder.
-2. **Extract.** In your file manager, open Downloads, right-click the ZIP and choose **Extract Here** or **Extract**. A folder named `gravitas-1.2.1` appears; if it holds a single folder, open that one too. The `.cmd` and `.command` files in it are for Windows and Macs; leave them alone.
+1. **Download.** Click [Download Gravitas 1.3.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip). Your browser saves `gravitas-1.3.0.zip` in your Downloads folder.
+2. **Extract.** In your file manager, open Downloads, right-click the ZIP and choose **Extract Here** or **Extract**. A folder named `gravitas-1.3.0` appears; if it holds a single folder, open that one too. The `.cmd` and `.command` files in it are for Windows and Macs; leave them alone.
 3. **Open a terminal in that folder.** In most file managers, right-click an empty space in the folder and choose **Open in Terminal**. Otherwise open a terminal, type `cd` and a space, drag the folder into the terminal window and press Enter.
 4. **Run Install Gravitas (Linux).sh** by pasting this line and pressing Enter. Double-clicking the file usually opens it in a text editor instead, which is why the terminal is used.
 
@@ -76,6 +76,57 @@ It worked if the answer names one skill, `gravitas`, and eight agents whose name
 Double-click the installer again, choose **5**, and restart Antigravity the same way. Gravitas moves into a folder named for the date and time inside `.gemini/gravitas-backups` in your home folder. The installer shows its full path, and you can delete that folder whenever you like. On a Mac, Finder hides it: in Finder, choose **Go > Go to Folder** and paste the path.
 
 The installer changes only what belongs to Gravitas: Antigravity's plugin folder, `.gemini/config/plugins/gravitas` in your home folder, and that backup folder, plus beta 1's skill, hook script and `gravitas-always-on` entry in `.gemini/config/hooks.json` if you had beta 1. Everything it replaces or removes goes to the backup folder, including a copy of `hooks.json`, so nothing is deleted. Python and a terminal are needed only for [the technical route](#install-from-a-terminal), which adds options such as the Second Opinion reviewer.
+
+<a id="deepseek-harness"></a>
+
+### On DeepSeek Harness
+
+Gravitas also runs on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH) 0.2.x, from 0.2.1-rc.2 on, as the plugin `dsh-gravitas`, for the `web` profile and the desktop app. DSH 0.3 is not supported yet: the plugin declares DSH `>=0.2.1-rc.2 <0.3.0-0`, and DSH refuses to install a plugin outside the range it declares. It brings the same always-on rule and the same `gravitas` skill, in the same four languages, built from the same files as the Antigravity version.
+
+| In Antigravity | On DeepSeek Harness |
+| --- | --- |
+| The always-on rule | A section of every agent's system prompt |
+| The `gravitas` skill | The same skill, plus a short note that maps Antigravity's tool names to DSH's |
+| Eight read-only `gravitas-*` agents | Two presets started with the `gravitas_inspect` tool: `gravitas-inspector` (read, search and web, with no tool that writes or edits files) for seven roles, and `gravitas-checker` (adds the shell) for the checker |
+| The Second Opinion | Not available on DSH yet |
+
+To install, type this in a terminal:
+
+```bash
+dsh plugin --profile web add github:Emily2040/gravitas#v1.3.0
+```
+
+`dsh plugin` uses pnpm. If the terminal says pnpm is not found, run this once, then the line above again:
+
+```bash
+corepack enable pnpm
+```
+
+Then start DSH again. The desktop app keeps its own profile, which the `dsh` command from npm cannot change: add the plugin from the app's **Plugins** page instead.
+
+To check, look for `dsh-gravitas` near the end of this command's output:
+
+```bash
+dsh --profile web --dump-config
+```
+
+Gravitas takes its language from your system: Chinese, Japanese or Korean when the system uses one of them, English otherwise. To choose one, or to keep the skill without the always-on rule, add this to `cordis.patch.yml` in the profile folder (`.dsh/profiles/web` in your home folder):
+
+```yaml
+- id: dsh-gravitas
+  config:
+    language: en        # auto, en, zh-CN, ja or ko
+    alwaysOnRule: true  # false keeps only the skill
+```
+
+To remove it, run `dsh plugin --profile web remove dsh-gravitas`.
+
+Two requests to try:
+
+- *Audit the login code in this repository for every way to skip the permission check, with the file and line for each.* The skill directs the agent to send read-only inspectors through the code and to have a checker reproduce each finding before it reports.
+- *Check every figure in this market report against its original source.* The skill directs inspectors to find the sources and a refuter to try to break each match, and figures without a source are reported as unconfirmed.
+
+These are examples of requests, not test records. I checked the DSH version by starting DSH 0.2.1-rc.2 on Windows 11 and reading back its skill list, its system prompt and its tools in all four languages. The graded results on this page were all measured on Antigravity; graded runs on DSH have not been done yet.
 
 ---
 
