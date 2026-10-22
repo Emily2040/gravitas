@@ -27,3 +27,8 @@
   gv-grav median chars 1974.5 hedge/1000 0.78
   ratio chars 0.95 (limit 1.24) -> ok; ratio hedges 0.98 (limit 1.35) -> ok
 == regression lengths: branch median 1937.0 round-one Gravitas median 2025.0
+== added-claim notes, relabelled blind (error / unverified / not an error)
+  heldout gv-plain {'error': 23, 'unverified': 42, 'not_error': 18}
+  heldout gv-grav {'error': 30, 'unverified': 43, 'not_error': 15}
+  regression plain-round1 {'error': 28, 'unverified': 29, 'not_error': 9}
+  regression grav-branch {'error': 18, 'unverified': 14, 'not_error': 20}

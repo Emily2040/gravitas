@@ -1,6 +1,9 @@
 """Build blind packets for round two: one pair per case per round (r1 vs r1, r2 vs r2).
 
-    python make_blind.py        -> blind/packets.md, blind/blind-map.json
+    python make_blind.py        -> blind/packets.md, blind/packets-r1.md, blind/packets-r2.md, blind/blind-map.json
+
+Reads prompts/, keys/ and answers/ in this folder. The A/B order is seeded, so the map it writes
+matches the committed blind-map.json; it writes into blind/ and never over the committed map.
 
 A/B order is random per pair (seeded so it can be rebuilt); the map stays out of the packets.
 """
@@ -12,12 +15,14 @@ import random
 B = os.path.dirname(os.path.abspath(__file__))
 rng = random.Random(20261022)
 cases = sorted(os.path.basename(p)[:-4] for p in glob.glob(os.path.join(B, "prompts", "*.txt")))
+if not cases:
+    raise SystemExit("no prompts in %s; nothing written" % os.path.join(B, "prompts"))
 blind_map, parts = {}, []
 for rnd in ("r1", "r2"):
     for case in cases:
         texts = {}
         for side in ("gv-plain", "gv-grav"):
-            p = os.path.join(B, "raw", "%s.%s.%s.txt" % (case, side, rnd))
+            p = os.path.join(B, "answers", "%s.%s.%s.txt" % (case, side, rnd))
             texts[side] = open(p, encoding="utf-8").read().strip()
             if not texts[side]:
                 raise SystemExit("empty answer: " + p)
@@ -43,6 +48,6 @@ for rnd in ("r1", "r2"):
     mine = [p for p in parts if p.split("\n", 1)[0].endswith("." + rnd)]
     with open(os.path.join(B, "blind", "packets-%s.md" % rnd), "w", encoding="utf-8", newline="\n") as fh:
         fh.write(SEP.join(mine) + "\n")
-with open(os.path.join(B, "blind-map.json"), "w", encoding="utf-8", newline="\n") as fh:
+with open(os.path.join(B, "blind", "blind-map.json"), "w", encoding="utf-8", newline="\n") as fh:
     json.dump(blind_map, fh, indent=1)
 print("%d pairs" % len(blind_map))

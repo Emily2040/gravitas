@@ -1,0 +1,33 @@
+**One correction first:** California gives landlords **21 days**, not 30. Under Civil Code § 1950.5(h)(1), your deposit and itemized statement were due by **October 11** — you're already 10 days past due and don't need to wait until the 21st. The draft below cites the correct deadline and works whenever you send it.
+
+One caveat: if they mailed the check and statement within 21 days, they may be compliant even if it arrived late. That's why the letter asks them to confirm the date and method.
+
+---
+
+**Subject:** Security deposit refund — [property address]
+
+Dear [Landlord name],
+
+I moved out of [property address] on September 20. I have not received my $2,400 security deposit or any itemized statement of deductions.
+
+California Civil Code § 1950.5 required you to return the deposit, or send an itemized statement with receipts and photographs for any deductions, within 21 days of my move-out. That deadline was October 11, and it has passed.
+
+Please send the full $2,400 to [forwarding address] within ten days of this email. If you are withholding any amount, send the itemized statement and the supporting documentation § 1950.5(h)(2) requires instead. If you already mailed something, please confirm the date and method, and resend it to the address above.
+
+If I don't hear from you within ten days, I will pursue the remedies available under § 1950.5, including small claims court, where bad-faith retention can carry statutory damages of up to twice the deposit.
+
+I would prefer to resolve this directly.
+
+Sincerely,
+[Your name]
+[Phone] · [Email]
+
+---
+
+A few things that will matter if it goes further:
+
+- **Send it two ways:** email and certified mail, return receipt. Keep the receipt and a copy of the letter.
+- **Document the unit:** photos and video from move-out, plus any move-in inspection or checklist, undercut claimed deductions.
+- **Small claims:** the filing limit is well above $4,800, so your doubled claim fits. [California Courts self-help](https://selfhelp.courts.ca.gov/small-claims-california) has the forms and filing fees.
+
+The statute is [Civil Code § 1950.5](https://california.public.law/codes/civil_code_section_1950.5); the 21-day rule and the twice-the-deposit penalty are in subdivisions (h) and (m).

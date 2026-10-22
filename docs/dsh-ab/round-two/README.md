@@ -8,7 +8,7 @@ So I changed the always-on rule (item 4, all four languages, zh-CN first) and me
 
 > Each number, date, deadline, fee, step or quoted wording it adds beyond what was asked is checked or cut, not hedged; arithmetic is redone a second way; a deadline is given at its safe end.
 
-The same branch adds one clause to the Files section from a PR #1 review: the active skill's own files are part of the task. It does not affect these chat requests.
+The same branch adds an exception to the Files section from a PR #1 review: the ban on reading outside the workspace does not cover the active skill's own files. The runs used an earlier wording of that clause; it does not affect these chat requests.
 
 ## How I tested
 
@@ -28,7 +28,10 @@ One fault on my side: my first split of the held-out packets cut answers at thei
 |---|---|---|
 | Votes (40) | 16 | 19 (ties 5) |
 | Mean score out of 50 | 41.17 | 40.27 |
-| Wrong or unverifiable added claims listed by graders | 83 | 88 |
+| Added-claim notes listed by graders (all) | 83 | 88 |
+| of which wrong, by a blind relabel | 23 | 30 |
+| of which unverified | 42 | 43 |
+| of which not an error | 18 | 15 |
 | Trap scores under 8 | 0 | 3 |
 | Median length (chars) | 2074.5 | 1974.5 |
 | Hedges per 1000 chars | 0.80 | 0.78 |
@@ -53,6 +56,7 @@ What the graders found:
 - Gravitas still adds local detail it did not check: registry addresses and phone numbers in Shenzhen copied from a local guide, a "16-digit ETA reference", court cases it could not have opened. That is exactly what the new sentence tells it to cut.
 - In en-tylenol r1 the Gravitas schedule put 7 caplets in 24 hours, breaking the 6-caplet limit it had just stated. The rule says to redo arithmetic a second way; this answer did not.
 - Plain's added errors were of the same kinds: wrong statute articles, a wrong year in a template, unverified booking rules.
+- The graders' lists of added claims also hold notes that are not errors ("correct", "plausible", a tone remark). A separate grader (Claude Sonnet 5.5) labelled all 289 notes as wrong, unverified or not an error from the note's text alone, with no side shown ([claim-entries-blind.json](claim-entries-blind.json), [claim-entries-labels.json](claim-entries-labels.json), [claim-entries-key.json](claim-entries-key.json)). On the held-out set Gravitas added more wrong claims than plain (30 against 23) and about as many unverified ones (43 against 42).
 
 ### Regression check on the round-one prompts (not new evidence)
 
@@ -60,21 +64,24 @@ What the graders found:
 |---|---|---|
 | Votes (24) | 8 | 13 (ties 3) |
 | Mean score out of 50 | 39.62 | 42.46 |
-| Added-claim errors listed | 66 | 52 |
+| Added-claim notes listed by graders (all) | 66 | 52 |
+| of which wrong, by a blind relabel | 28 | 18 |
+| of which unverified | 29 | 14 |
+| of which not an error | 9 | 20 |
 | Median length (chars) | 1636.5 | 1937 (round-one Gravitas: 2025) |
 
 The four round-one errors, in the two new runs of each prompt:
 - 12306 and 户口簿: avoided in r1 (it adds the child in 12306 with the 户口簿 ID number); repeated in r2, citing a 2023 article.
 - 1.28万: gone. r1 gives no such figure; r2 gives 3200 + 12800 = 16000 owed plus 32000 compensation, about 4.8万, which is right.
-- 11月底: r1 says the notice must reach the employer before November 2026, the safe end. r2 says "最迟 2026 年 11 月", which is not the end-of-November error but is not the safe end either.
+- 11月底 (a deadline not at its safe end): r1 says the notice must reach the employer before November 2026, the safe end. r2 says "最迟 2026 年 11 月", which still leaves the end of November open, so this error came back in one of two runs.
 - 不得以任何理由拒绝: absent in both runs. r2 adds a new loose claim instead: that an ordinary company's approval is not needed, without the state-owned-enterprise caveat.
 
 ## Before and after
 
 - Before (round one, old rule): Gravitas 6, plain 4, ties 2; Gravitas answers longer than plain (median ratio 1.24) and more hedged (ratio 1.35); losses came from added claims.
-- After (round two, new rule): on fresh prompts Gravitas 19, plain 16, ties 5, but a slightly lower mean score and about the same number of bad added claims (88 against 83). Gravitas answers are now shorter than plain (ratio 0.95) and no more hedged (0.98), so the change caused no length or hedging regression. On the round-one prompts, three of the four named errors are gone and the fourth came back in one of two runs.
+- After (round two, new rule): on fresh prompts Gravitas 19, plain 16, ties 5, but a slightly lower mean score and more wrong added claims (30 against 23 by the blind relabel). Gravitas answers are now shorter than plain (ratio 0.95) and no more hedged (0.98), so the change caused no length or hedging regression. On the round-one prompts, two of the four named errors (1.28万 and 不得以任何理由拒绝) are gone in both runs; the other two (12306 and the unsafe deadline) came back in one of two runs each.
 
-My reading: the change fixed the specific failures and made Gravitas answers tighter, but it did not make deepseek-flash check what it adds on new requests. The vote edge on the held-out set is within noise, and the mean score went slightly the other way. I would not call this a win yet. The next thing to try is making the check concrete in the answer's own workflow (for example, before sending, list each added number, date, fee or step and drop any that no tool output in this turn supports), and to test it on a new held-out set, not this one.
+My reading: the change reduced the specific failures and made Gravitas answers tighter, but it did not make deepseek-flash check what it adds on new requests; there it added more wrong claims than plain. The vote edge on the held-out set is within noise, and the mean score and the wrong-claim count went the other way. This is not a win. The next thing to try is making the check concrete in the answer's own workflow (for example, before sending, list each added number, date, fee or step and drop any that no tool output in this turn supports), and to test it on a new held-out set, not this one.
 
 ## Notes
 
@@ -82,4 +89,4 @@ My reading: the change fixed the specific failures and made Gravitas answers tig
 - English prompts ran with the zh-CN rule, as in round one, because gv-grav sets `language: zh-CN`.
 - gv-grav's plugin link pointed at this branch's worktree for the runs and was put back to `C:/Users/emily/antigravity-skill` afterwards; `dsh --profile gv-grav --dump-config` read back the restored plugin.
 - Graders could open official web pages for claims the key does not cover; most judged from their own knowledge and said so. Round one's graders did not have this, so round-one and round-two vote counts are not on the same scale.
-- Files: [prompts](prompts), [keys](keys), [criteria.md](criteria.md), [grader-prompt.md](grader-prompt.md), [blind-map.json](blind-map.json), [grades](grades), [answers](answers), [errors-by-side.md](errors-by-side.md), [tally.txt](tally.txt), and the same for [regression](regression). The scripts ran in `W:\AgentData\logs\gravitas-dsh-ab2`, where `raw/` holds what `answers/` holds here.
+- Files: [prompts](prompts), [keys](keys), [criteria.md](criteria.md), [grader-prompt.md](grader-prompt.md), [blind-map.json](blind-map.json), [grades](grades), [answers](answers), [errors-by-side.md](errors-by-side.md), [tally.txt](tally.txt), and the same for [regression](regression). `tally.py`, `make_blind.py` and `regression/make_blind.py` run from this folder as committed (the round-one inputs the regression check needs are in `regression/prompts`, `regression/keys` and `regression/round-one`); the packet builders write into `blind/` and reproduce the committed maps.

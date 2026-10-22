@@ -7,6 +7,8 @@ def hedges(t): return sum(len(re.findall(p, t, flags=re.I)) for p in H)
 def load(p):
     t = open(p, encoding="utf-8").read(); return json.loads(t[t.find("["):t.rfind("]")+1])
 def tally(mapfile, gradefiles, sides, label):
+    if not gradefiles:
+        raise SystemExit("no grade files for %s; nothing to tally" % label)
     m = json.load(open(mapfile)); votes = {s: 0 for s in sides}; votes["tie"] = 0
     rows = []; errs = {s: 0 for s in sides}; scores = {s: [] for s in sides}
     for gf in gradefiles:
@@ -22,12 +24,12 @@ def tally(mapfile, gradefiles, sides, label):
     print("==", label); print(" votes", votes); print(" added-claim errors listed", errs)
     print(" mean score /50", {s: round(st.mean(v), 2) for s, v in scores.items()})
     return rows
-rows = tally(os.path.join(B,"blind-map.json"), sorted(glob.glob(os.path.join(B,"blind","grades-*-r?.json"))), ["gv-plain","gv-grav"], "held-out (20 pairs x 2 graders)")
+rows = tally(os.path.join(B,"blind-map.json"), sorted(glob.glob(os.path.join(B,"grades","grades-*-r?.json"))), ["gv-plain","gv-grav"], "held-out (20 pairs x 2 graders)")
 bycase = {}
 for pid, g, win, mar in rows:
     bycase.setdefault(pid.rsplit(".",1)[0], []).append("%s:%s/%s(%s)" % (pid.rsplit(".",1)[1], g, win.replace("gv-",""), mar))
 for c in sorted(bycase): print("  ", c, " ".join(sorted(bycase[c])))
-rrows = tally(os.path.join(B,"regress","blind-map.json"), sorted(glob.glob(os.path.join(B,"regress","blind","grades-*.json"))), ["plain-round1","grav-branch"], "regression (12 pairs x 2 graders)")
+rrows = tally(os.path.join(B,"regression","blind-map.json"), sorted(glob.glob(os.path.join(B,"regression","grades","grades-*.json"))), ["plain-round1","grav-branch"], "regression (12 pairs x 2 graders)")
 bycase = {}
 for pid, g, win, mar in rrows:
     bycase.setdefault(pid.rsplit(".",1)[0], []).append("%s:%s/%s(%s)" % (pid.rsplit(".",1)[1], g, win.replace("-round1","").replace("-branch",""), mar))
@@ -36,11 +38,23 @@ print("== length and hedging, held-out")
 res = {}
 for side in ("gv-plain","gv-grav"):
     L = []; R = []
-    for f in sorted(glob.glob(os.path.join(B,"raw","*.%s.r?.txt" % side))):
+    for f in sorted(glob.glob(os.path.join(B,"answers","*.%s.r?.txt" % side))):
         t = open(f, encoding="utf-8").read(); L.append(len(t)); R.append(hedges(t)*1000/len(t))
     res[side] = (st.median(L), st.mean(R)); print(" ", side, "median chars", st.median(L), "hedge/1000", round(st.mean(R),2))
 lr = res["gv-grav"][0]/res["gv-plain"][0]; hr = res["gv-grav"][1]/res["gv-plain"][1]
 print("  ratio chars %.2f (limit 1.24) -> %s; ratio hedges %.2f (limit 1.35) -> %s" % (lr, "REGRESSION" if lr>1.24 else "ok", hr, "REGRESSION" if hr>1.35 else "ok"))
-L = [len(open(f,encoding="utf-8").read()) for f in glob.glob(os.path.join(B,"regress","raw","*.txt"))]
-R1 = [len(open(f,encoding="utf-8").read()) for f in glob.glob(os.path.join(B,"..","gravitas-dsh-ab","raw","*.gv-grav.r1.txt"))]
+L = [len(open(f,encoding="utf-8").read()) for f in glob.glob(os.path.join(B,"regression","answers","*.txt"))]
+P1 = [len(open(f,encoding="utf-8").read()) for f in glob.glob(os.path.join(B,"regression","round-one","*.gv-plain.r1.txt"))]
+R1 = [len(open(f,encoding="utf-8").read()) for f in glob.glob(os.path.join(B,"regression","round-one","*.gv-grav.r1.txt"))]
 print("== regression lengths: branch median", st.median(L), "round-one Gravitas median", st.median(R1))
+# Added-claim entries relabelled blind (claim-entries-blind.json: the notes with no side shown;
+# claim-entries-labels.json: one label per note; claim-entries-key.json: which side each note was about).
+labels = {d["id"]: d["label"] for d in json.load(open(os.path.join(B, "claim-entries-labels.json"), encoding="utf-8"))}
+key = json.load(open(os.path.join(B, "claim-entries-key.json"), encoding="utf-8"))
+if len(labels) != len(key) or not key:
+    raise SystemExit("claim labels and key do not match; no relabelled counts")
+print("== added-claim notes, relabelled blind (error / unverified / not an error)")
+for s, sides in (("heldout", ("gv-plain", "gv-grav")), ("regression", ("plain-round1", "grav-branch"))):
+    for side in sides:
+        n = {x: sum(1 for k in key if k["_set"] == s and k["_side"] == side and labels[k["id"]] == x) for x in ("error", "unverified", "not_error")}
+        print(" ", s, side, n)
