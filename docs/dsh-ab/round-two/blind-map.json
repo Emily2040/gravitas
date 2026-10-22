@@ -1,0 +1,82 @@
+{
+ "en-tips.r1": {
+  "A": "gv-plain",
+  "B": "gv-grav"
+ },
+ "en-tylenol.r1": {
+  "A": "gv-plain",
+  "B": "gv-grav"
+ },
+ "en-uk-trip.r1": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-car-inspection.r1": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-child-deduction.r1": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-custom-return.r1": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-holiday-pay.r1": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-marriage-registration.r1": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-pension-account.r1": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-tax-refile.r1": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "en-tips.r2": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "en-tylenol.r2": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "en-uk-trip.r2": {
+  "A": "gv-plain",
+  "B": "gv-grav"
+ },
+ "zh-car-inspection.r2": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-child-deduction.r2": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-custom-return.r2": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-holiday-pay.r2": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-marriage-registration.r2": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ },
+ "zh-pension-account.r2": {
+  "A": "gv-plain",
+  "B": "gv-grav"
+ },
+ "zh-tax-refile.r2": {
+  "A": "gv-grav",
+  "B": "gv-plain"
+ }
+}

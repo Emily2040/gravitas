@@ -1,0 +1,30 @@
+I made the card — but I changed one thing, and it's the one thing you specifically asked for.
+
+## Don't take the ibuprofen at breakfast with the aspirin
+
+That's the worst possible timing, not the simplest. Ibuprofen competes with aspirin for the same spot on platelet COX-1. If ibuprofen is already there when the aspirin arrives, the aspirin can't do its job — and the antiplatelet effect is the entire reason you're on it after a stent. The FDA's advice for immediate-release aspirin (which is what you have) is to take ibuprofen **at least 30 minutes after** aspirin, or **8 hours before** it. Never at the same time, and never ibuprofen first. ([FDA advisory summary](https://www.pharmacytimes.com/view/2006-10-5930))
+
+The second issue is bigger than the timing. A week of 400 mg three times a day is prescription-strength NSAID exposure in someone with known coronary disease. NSAID labels carry a boxed warning for heart attack and stroke, say to avoid them in patients with recent MI, and flag that combining them with low-dose aspirin raises GI bleeding risk — which is exactly your combination. ([DailyMed ibuprofen labeling](https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=03733e49-7db4-4d98-b363-d0d23686ec72&version=1))
+
+## Your card
+
+Saved as `fridge-schedule.html` in your workspace — open it and print, or print to PDF. It has the warning printed on it so it doesn't read as a green light.
+
+| Time | What | How |
+|---|---|---|
+| 7:00 AM | Aspirin 81 mg | First, on its own, full glass of water. Then breakfast. |
+| 9:00 AM | Ibuprofen 400 mg | At least 2 h after aspirin. With food. |
+| 3:00 PM | Ibuprofen 400 mg | With food. |
+| 9:00 PM | Ibuprofen 400 mg | With food. Last dose of the day. |
+
+Aspirin always first. If you ever take ibuprofen first, wait 8 hours before the aspirin. Cap it at 1,200 mg/day, and don't add any other NSAID — including the ones hidden in cold and flu products.
+
+## Before day one
+
+Call your cardiologist's office or your pharmacist and say: *"I'm on 81 mg aspirin after a stent. Is a week of ibuprofen 400 mg three times a day safe for me, and do I need a stomach protector with it?"* Also tell them if you're on clopidogrel, ticagrelor, or prasugrel — that combination raises the bleeding risk further, and ibuprofen can interfere with clopidogrel too.
+
+While you're waiting on that call, ask about **acetaminophen** (usually the preferred option with coronary disease, within the daily limit) or a **topical diclofenac gel**, which has far less systemic exposure for a localized back problem. Heat and stretching cost nothing and don't interact with anything.
+
+Go to the ER for black or tarry stools, vomiting blood or coffee-ground material, new severe stomach pain, or any chest pain, shortness of breath, or one-sided weakness.
+
+I'm not going to pretend the fridge card is the hard part here — the phone call is. Aspirin for a stent is not something to work around; it's the thing the ibuprofen has to fit around, or not be taken at all.

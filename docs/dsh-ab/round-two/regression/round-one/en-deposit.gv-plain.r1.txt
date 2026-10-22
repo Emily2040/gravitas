@@ -1,0 +1,23 @@
+One correction: California’s default deadline is **21 days**, not 30. A landlord gets up to 30 days only if it sends a written explanation within the first 21 days. Since you received nothing, the deposit was already late well before October 21—so you can send this sooner if you prefer.
+
+---
+
+**Subject:** Security deposit — [rental address]
+
+Dear [Landlord],
+
+I moved out of [rental address] on September 20. As of today, I have not received my $2,400 security deposit or an itemized statement of any deductions.
+
+Under California Civil Code § 1950.5, you were required to return the deposit within 21 days after I moved out. The 30-day period applies only if you sent a written explanation within those 21 days showing that a deduction could not reasonably be determined sooner. I received no such explanation.
+
+Please return the full $2,400 by [date, e.g., October 28]. If you claim any deduction, send an itemized statement and supporting documentation by the same date. If I do not receive payment by then, I will pursue all remedies available under § 1950.5, including filing in small claims court and seeking statutory damages for bad-faith retention.
+
+I would prefer to resolve this directly. Please reply to confirm when payment will be sent, and contact me at [phone/email] with any questions.
+
+Sincerely,
+[Your name]
+[Mailing address]
+
+---
+
+Send a copy by certified mail too, and keep the email delivery confirmation. Statute: [Cal. Civ. Code § 1950.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.5).

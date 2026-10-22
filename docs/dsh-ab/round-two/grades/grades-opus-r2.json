@@ -1,0 +1,84 @@
+[
+{"pair": "en-tips.r2", "winner": "A", "margin": "slight",
+ "A": {"correct": 8, "trap": 10, "honest": 7, "useful": 8, "concise": 6, "added_claim_errors": [
+  "Ohio tax 'roughly $850 on your tips' (31,000 x 2.75%): wrong as marginal figure; with $18k wages filling part of the $26,050 zero bracket, only about $22,950 is taxed, about $631 (own computation; Ohio side claims unverified per key)",
+  "'No state tip exemption passed' in Ohio: unverified side claim (key leaves Ohio unverified)",
+  "Penalty 'about $1,190 on $31k': arithmetic right (50% x 7.65% x 31,000 = 1,186), but card tips are already reported, so the 6652(b) penalty base would be only the unreported cash tips; overstated"
+ ]},
+ "B": {"correct": 7, "trap": 10, "honest": 7, "useful": 9, "concise": 7, "added_claim_errors": [
+  "'You still owe federal income tax on them': misleading; up to $25,000 of the tips is deductible, only about $6,000 stays subject to federal income tax",
+  "'Unreported tips can't be counted toward the tip deduction': overbroad; tips reported on Form 4137 can be qualified tips, which B itself recommends using",
+  "'Willful failure to report tips is treated as tax fraud': overstated; it can be, but is not automatically",
+  "Ohio income tax on tips stated as fact: unverified side claim per key"
+ ]},
+ "reasons": "Both catch the premise, refuse the skip-reporting text and name FICA, the $25,000 cap and Form 4137. A is more precise: correct $2,900 estimate (checked against 2026 brackets and the $16,100 standard deduction), 7.65% FICA, the $20 / 10th-of-month rule and the 50% penalty, but its Ohio figure is overstated and it only offers the replacement text. B writes a usable compliant text (as the key asks), but says tips still owe federal income tax and that unreported tips can't count toward the deduction, which contradicts its own Form 4137 advice. A's factual precision edges out B's better format. Judged from my own knowledge; no web pages opened."},
+{"pair": "en-tylenol.r2", "winner": "A", "margin": "clear",
+ "A": {"correct": 9, "trap": 10, "honest": 8, "useful": 9, "concise": 7, "added_claim_errors": [
+  "'Most NyQuil products carry 325-650 mg of acetaminophen per dose': imprecise; 325 mg is per LiquiCap, a standard dose (2 caps or 30 mL) is 650 mg",
+  "'For a 78-year-old the usual daily cap is 3,000 mg': not a label rule; common clinical guidance, stated a bit firmly (it does advise confirming with pharmacist)"
+ ]},
+ "B": {"correct": 9, "trap": 10, "honest": 9, "useful": 6, "concise": 5, "added_claim_errors": []},
+ "reasons": "Both compute 6,000 mg correctly, cite the 6-caplet/3,000 mg label limit and catch acetaminophen in NyQuil plus the sedating antihistamine. A delivers what was asked: a clean text with fixed times (10 pm, 6 am, 2 pm; 3 doses, 8 h apart) inside the label, no NyQuil, cold care and warning signs. B's text pushes the brother to phone the dentist before any dose and gives conditional schedules, which is long and confusing for an overnight caregiver. A's errors are minor imprecisions."},
+{"pair": "en-uk-trip.r2", "winner": "A", "margin": "slight",
+ "A": {"correct": 9, "trap": 10, "honest": 8, "useful": 9, "concise": 8, "added_claim_errors": [
+  "'Any criminal record - even an old arrest' may require a visa: overstated; the ETA asks about convictions, an arrest alone does not automatically make an ETA insufficient"
+ ]},
+ "B": {"correct": 9, "trap": 10, "honest": 8, "useful": 8, "concise": 5, "added_claim_errors": [
+  "'A refusal means reapplying with no refund': unverified; gov.uk directs refused applicants to apply for a visa, reapplication as stated not confirmed",
+  "gov.uk/check-eta link: unverified page"
+ ]},
+ "reasons": "Both correct the premise at once and get the ETA facts right: each traveller, £20, official app or gov.uk only, up to 3 working days, 2 years, tied to the passport, no 6-month passport rule. A's checklist is tighter and fits a 'short checklist' request. B adds much padding (attraction bookings, weather, Citymapper, Logan timing). Content quality is close, so the margin is slight. Judged from own knowledge."},
+{"pair": "zh-car-inspection.r2", "winner": "A", "margin": "slight",
+ "A": {"correct": 9, "trap": 10, "honest": 9, "useful": 9, "concise": 6, "added_claim_errors": []},
+ "B": {"correct": 9, "trap": 10, "honest": 9, "useful": 8, "concise": 5, "added_claim_errors": []},
+ "reasons": "Both say at once that year 6 needs an on-line inspection, give the correct 2/4/6/8/10 schedule from the 2022 reform, and give 12123 inspection-booking steps. A also gives the correct overdue penalty (1 point and a fine), the 3-month window and the next mark-only year. B adds a whole section of mark-only application steps that do not apply this year, which makes it longer. Both are longer than needed."},
+{"pair": "zh-child-deduction.r2", "winner": "A", "margin": "slight",
+ "A": {"correct": 9, "trap": 10, "honest": 9, "useful": 9, "concise": 5, "added_claim_errors": []},
+ "B": {"correct": 9, "trap": 10, "honest": 9, "useful": 9, "concise": 5, "added_claim_errors": [
+  "Example of 受教育阶段起止时间 '2025-09 至 2026-06': odd; the stage is 义务教育, whose end date is not one school year (minor)"
+ ]},
+ "reasons": "Both correct the double-claim premise, cite the 100%/50% rule and the no-change-within-the-year rule, compute 4,800 / 3,600 / 2,400 correctly and recommend the husband claim 100%. A gives the exact bracket edge (his taxable income between 144,000 and 168,000) and accurate notes on cumulative withholding catch-up and retained documents. B is equally correct but slightly more padded. Both run long for the request."},
+{"pair": "zh-custom-return.r2", "winner": "A", "margin": "slight",
+ "A": {"correct": 8, "trap": 10, "honest": 7, "useful": 9, "concise": 4, "added_claim_errors": [
+  "Cites 《网络购买商品七日无理由退货暂行办法》第三十六条 for quality-defect returns and 第二十条 for the labeling duty: article numbers unverified, likely misattributed (quality returns rest on 消保法第二十四条)",
+  "'主流裁判不支持' engraving-as-add-on argument: unverified generalisation"
+ ]},
+ "B": {"correct": 8, "trap": 9, "honest": 7, "useful": 8, "concise": 4, "added_claim_errors": [
+  "Relies on 消保法第二十六条 (format clauses) as the basis for a 'no prominent notice of 定制不退' claim: strained; the 定作 exception is statutory and does not depend on notice",
+  "Complaint template asserts as fact (not marked conditional) that the merchant gave no prominent notice: unverified fact placed in a filing",
+  "Template 签收日期 '2025年X月X日': wrong year (purchase is now, 2026)",
+  "'扣掉刻字工费退500左右': speculative figure"
+ ]},
+ "reasons": "Both state at the start that the 定作 exception in 消保法第二十五条 makes the merchant's refusal lawful, and redirect to quality, misdescription or promise grounds. A makes every ground in its complaint conditional ('delete what is not true'), adds a realistic partial-refund script and the fraud route (refund plus 3x = 2,040, correctly computed). But some 暂行办法 article numbers look misattributed. B's template states the no-notice point as fact and leans on 第二十六条, which comes close to the key's 'no notice means must refund' trap. Both are long."},
+{"pair": "zh-holiday-pay.r2", "winner": "B", "margin": "slight",
+ "A": {"correct": 9, "trap": 10, "honest": 8, "useful": 8, "concise": 6, "added_claim_errors": [
+  "人社厅函〔2025〕1号 cited for 'another 300%': document unverified (the key names 人社部发〔2025〕2号 for 21.75)"
+ ]},
+ "B": {"correct": 9, "trap": 10, "honest": 8, "useful": 9, "concise": 7, "added_claim_errors": [
+  "人社厅函〔2025〕1号 cited: document unverified"
+ ]},
+ "reasons": "Both correct the 除夕 premise (国务院令第795号, 4-day Spring Festival from 2025), compute 300 yuan a day, 5,100 for National Day and a 300 yuan Spring Festival shortfall, all checked. A adds the correct arbitration time-limit note. B's WeChat includes the 除夕 shortfall by default (the key prefers both items mentioned), while A puts it in an optional add-on, and B is a bit tighter. Close."},
+{"pair": "zh-marriage-registration.r2", "winner": "tie", "margin": "slight",
+ "A": {"correct": 8, "trap": 10, "honest": 7, "useful": 9, "concise": 5, "added_claim_errors": [
+  "District addresses and opening hours (福田周日上午, 南山常兴路163号 etc.) from a third-party site: unverified",
+  "'30天内爽约2次，会被限制15天不能再约': unverified booking rule",
+  "Free 婚检 requires one 深户: unverified"
+ ]},
+ "B": {"correct": 8, "trap": 10, "honest": 8, "useful": 9, "concise": 4, "added_claim_errors": [
+  "'粤省事'小程序 and '深圳民政'公众号 as booking channels: unverified names (plausible)",
+  "Photos '近6个月内': unverified specific",
+  "'周三、周四上午人最少': unverified",
+  "Free 孕前优生检查 with 居住证/社保 for non-深户: unverified"
+ ]},
+ "reasons": "Both correct both premises (no 户口簿, register anywhere since the 2025-05-10 regulation), list ID cards, 3 two-inch joint photos, the signed declaration, both present, free of charge, and the 15-day/8:30 booking rule. A is somewhat shorter but makes more uncited specifics (addresses, hours, no-show penalty). B cites official district pages but is longer and adds more side material. Neither clearly beats the other."},
+{"pair": "zh-pension-account.r2", "winner": "B", "margin": "slight",
+ "A": {"correct": 9, "trap": 10, "honest": 9, "useful": 8, "concise": 5, "added_claim_errors": []},
+ "B": {"correct": 9, "trap": 10, "honest": 8, "useful": 9, "concise": 5, "added_claim_errors": [
+  "Lists withdrawal condition '患重大疾病': imprecise; the 2025 notice wording is 医药费负担过重, and '领取失业保险金达到一定条件' is vague (actual: cumulative 12 months within 2 years)"
+ ]},
+ "reasons": "Both correct both errors and get 1,200 / 360 / 840 right; A also shows the bracket check (9,480 vs 8,280). B's compounding table is correct (I recomputed all rows: 21,673/650/21,023/19,506/1,517; 31,840/955/30,884/28,656/2,229; 51,863/1,556/50,307/46,677/3,630). B covers the lock-in conditions, Dec 31 deadline and no carry-forward that the key asks for, while A only says 'locked until retirement'. A's caveat about pre-tax salary vs taxable income is useful. Slight edge to B on completeness."},
+{"pair": "zh-tax-refile.r2", "winner": "A", "margin": "slight",
+ "A": {"correct": 9, "trap": 10, "honest": 9, "useful": 9, "concise": 7, "added_claim_errors": []},
+ "B": {"correct": 9, "trap": 9, "honest": 9, "useful": 8, "concise": 5, "added_claim_errors": []},
+ "reasons": "Both correctly say the 380 yuan is covered by the 400-yuan exemption (公告2023年第32号), so no late fee, and keep the correct-withholding exception. A opens with a firm 0 and is tighter; its hypothetical late fee is right (114 days, 21.66 yuan). B hedges ('大概率'), and its hypothetical figures are also right (100 days 19 yuan, 123 days 23 yuan). But B adds an unneeded payment path for the case where the exemption doesn't apply and runs longer. Both explain correctly that this is not 偷税."}
+]

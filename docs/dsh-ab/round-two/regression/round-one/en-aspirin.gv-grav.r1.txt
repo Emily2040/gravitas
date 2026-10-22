@@ -1,0 +1,42 @@
+I'll give you the card — but the breakfast part of your plan is the one piece I'd change, and it's worth two minutes of your attention before you start.
+
+## The breakfast problem
+
+Ibuprofen and aspirin compete for the same docking site on platelets. If ibuprofen gets there first, aspirin can't do its job — and the antiplatelet effect is the whole reason you're on it after a stent. Your plan puts ibuprofen in the same meal as aspirin, which is exactly the bad order.
+
+The FDA's own ibuprofen label describes this: the interference is worst when ibuprofen is dosed before aspirin, and it's avoided when **immediate-release** low-dose aspirin is taken **at least 2 hours before** ibuprofen ([ibuprofen prescribing information](https://www.accessdata.fda.gov/spl/data/3f29ab46-9311-caa0-e063-6294a90a8f05/3f29ab46-9311-caa0-e063-6294a90a8f05.xml)). Your 81 mg is the regular, uncoated kind, so that 2-hour rule applies cleanly to you. The label also notes that 400 mg three times a day is the exact regimen studied — your plan, at the dose studied.
+
+Two other things before the card:
+
+- **Make one call first.** Ask your cardiologist's office or pharmacist whether you're on a second antiplatelet — clopidogrel (Plavix), ticagrelor (Brilinta), or prasugrel (Effient). Many stent patients are, and aspirin + that + ibuprofen is a substantially higher bleeding risk. They may prefer something else.
+- **Ask about acetaminophen instead.** It doesn't touch aspirin's antiplatelet effect and skips the stomach, kidney, and blood-pressure risks. Up to 3,000 mg/day. For back pain it may not be enough on its own, but it's the thing to try first.
+- **Don't stop the aspirin on your own** to make room for ibuprofen. Stopping it is the stent-clot risk.
+
+## The card
+
+**BACK PAIN — 1 WEEK**
+**Rule: aspirin first. Then wait at least 2 hours. Then ibuprofen, always with food.**
+
+| Time | What | How |
+|---|---|---|
+| 7:30 AM | Aspirin 81 mg | With breakfast, as usual |
+| 10:00 AM | Ibuprofen 400 mg | With a snack |
+| 4:00 PM | Ibuprofen 400 mg | With food |
+| 10:00 PM | Ibuprofen 400 mg | With food |
+
+**Max 3 ibuprofen a day (1,200 mg). No extra doses, no "topping up."**
+**Never take ibuprofen at the same time as — or before — your morning aspirin.**
+Last dose at bedtime leaves about 9 hours before your next aspirin, which is the safe side.
+
+If 10 AM doesn't fit your morning, take the aspirin the moment you wake and the first ibuprofen with breakfast — just keep 2 full hours between them. If two doses a day control the pain, use 10 AM and 5 PM and skip the bedtime one.
+
+## While you're on it
+
+- **Food every time**, and drink water through the day.
+- **No alcohol** this week — it multiplies the stomach bleeding risk.
+- **No second NSAID** on top: no naproxen, no aleve, and check any cold or flu remedy for ibuprofen/naproxen on the label.
+- **Call the doctor** if you get black or tarry stools, vomit blood or coffee-ground material, or have severe stomach pain.
+- **Also call** if you get new swelling in the legs, unexplained weight gain, or shortness of breath — NSAIDs can cause fluid retention and raise blood pressure, which matters more with a stent.
+- A week is fine for the stomach risk, but don't extend past 10 days without checking in.
+
+If the back pain is bad enough that 1,200 mg of ibuprofen isn't touching it, that's a reason to get it looked at rather than to take more — and it's a good thing to mention when you make that call.

@@ -126,7 +126,7 @@ Two requests to try:
 - *Audit the login code in this repository for every way to skip the permission check, with the file and line for each.* The skill directs the agent to send read-only inspectors through the code and to have a checker reproduce each finding before it reports.
 - *Check every figure in this market report against its original source.* The skill directs inspectors to find the sources and a refuter to try to break each match, and figures without a source are reported as unconfirmed.
 
-These are examples of requests, not test records. I checked the DSH version by starting DSH 0.2.1-rc.2 on Windows 11 and reading back its skill list, its system prompt and its tools in all four languages. The graded results on this page were all measured on Antigravity; graded runs on DSH have not been done yet.
+These are examples of requests, not test records. I checked the DSH version by starting DSH 0.2.1-rc.2 on Windows 11 and reading back its skill list, its system prompt and its tools in all four languages. The graded results on this page were all measured on Antigravity. On DSH I ran two rounds of blind grading on deepseek-flash; the results, losses included, are in [docs/dsh-ab/round-two](docs/dsh-ab/round-two/README.md).
 
 ---
 

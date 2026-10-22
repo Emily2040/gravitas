@@ -1,0 +1,22 @@
+A quick correction before the email: California, including San Diego, gives landlords **21 calendar days**, not 30, under [Civil Code § 1950.5(h)(1)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1950.5). From a September 20 move-out, the 21-day period ended October 11, so October 21 is well past it. You can send this now; if you prefer to wait until the 21st, the draft still works.
+
+```text
+Subject: Security deposit refund — [property address]
+
+Dear [Landlord],
+
+I moved out of [property address] on September 20. I have not received my $2,400 security deposit or an itemized statement of any deductions. My forwarding address is [mailing address].
+
+Under California Civil Code section 1950.5, you were required to return my deposit or the balance after any lawful deductions, and to provide an itemized statement for any deductions, within 21 calendar days after I moved out. That deadline has passed.
+
+Please send the full $2,400 to me at the address above within seven days. If you believe any amount is properly deductible, send an itemized statement and supporting documentation, along with the remaining balance, by the same deadline.
+
+If I do not receive payment or a documented response within that time, I will pursue the remedies available under California law, including small claims court.
+
+I would prefer to resolve this directly. Please contact me at [phone/email] with any questions.
+
+Sincerely,
+[Your name]
+```
+
+Keep a copy, and if you have the landlord’s mailing address, send a printed copy by certified mail too.

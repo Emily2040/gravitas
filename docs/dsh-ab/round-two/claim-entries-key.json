@@ -1,0 +1,1736 @@
+[
+{
+"id": 0,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 1,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 2,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 3,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 4,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 5,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 6,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 7,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 8,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 9,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 10,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 11,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 12,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 13,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 14,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 15,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 16,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 17,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 18,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 19,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 20,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 21,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 22,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 23,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 24,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 25,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 26,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 27,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 28,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 29,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 30,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 31,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 32,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 33,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 34,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 35,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 36,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 37,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 38,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 39,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 40,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 41,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 42,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 43,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 44,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 45,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 46,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 47,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 48,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 49,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 50,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 51,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 52,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 53,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 54,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 55,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 56,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 57,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 58,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 59,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 60,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 61,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 62,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 63,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 64,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 65,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 66,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 67,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 68,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 69,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 70,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 71,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 72,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 73,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 74,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 75,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 76,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 77,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 78,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 79,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 80,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 81,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 82,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 83,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 84,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 85,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 86,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 87,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 88,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 89,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 90,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 91,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 92,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 93,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 94,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 95,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 96,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 97,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 98,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 99,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 100,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 101,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 102,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 103,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 104,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 105,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 106,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 107,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 108,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 109,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 110,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 111,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 112,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 113,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 114,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 115,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 116,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 117,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 118,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 119,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 120,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 121,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 122,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 123,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 124,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 125,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 126,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 127,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 128,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 129,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 130,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 131,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 132,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 133,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 134,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 135,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 136,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 137,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 138,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 139,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 140,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 141,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 142,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 143,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 144,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 145,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 146,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 147,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 148,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 149,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 150,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 151,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 152,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 153,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 154,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 155,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 156,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 157,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 158,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 159,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 160,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 161,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 162,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 163,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 164,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 165,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 166,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 167,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 168,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 169,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 170,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 171,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 172,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 173,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 174,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 175,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 176,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 177,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 178,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 179,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 180,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 181,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 182,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 183,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 184,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 185,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 186,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 187,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 188,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 189,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 190,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 191,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 192,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 193,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 194,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 195,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 196,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 197,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 198,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 199,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 200,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 201,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 202,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 203,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 204,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 205,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 206,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 207,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 208,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 209,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 210,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 211,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 212,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 213,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 214,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 215,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 216,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 217,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 218,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 219,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 220,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 221,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 222,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 223,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 224,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 225,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 226,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 227,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 228,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 229,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 230,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 231,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 232,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 233,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 234,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 235,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 236,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 237,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 238,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 239,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 240,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 241,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 242,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 243,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 244,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 245,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 246,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 247,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 248,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 249,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 250,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 251,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 252,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 253,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 254,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 255,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 256,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 257,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 258,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 259,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 260,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 261,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 262,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 263,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 264,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 265,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 266,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 267,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 268,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 269,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 270,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 271,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 272,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 273,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 274,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 275,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 276,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 277,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 278,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 279,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 280,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 281,
+"_side": "grav-branch",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 282,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 283,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "sonnet"
+},
+{
+"id": 284,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 285,
+"_side": "gv-plain",
+"_set": "heldout",
+"_grader": "opus"
+},
+{
+"id": 286,
+"_side": "plain-round1",
+"_set": "regression",
+"_grader": "opus"
+},
+{
+"id": 287,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+},
+{
+"id": 288,
+"_side": "gv-grav",
+"_set": "heldout",
+"_grader": "sonnet"
+}
+]
