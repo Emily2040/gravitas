@@ -144,6 +144,19 @@ dsh --profile web --dump-config
 <a id="part-1"></a>
 <a id="real-examples"></a>
 
+### 更新
+
+Gravitas 每天最多向 GitHub 问一次有没有新版本：只向 `api.github.com` 发一个请求，不发送任何关于你的信息。有新版本时，智能体会在一次对话的第一条回复末尾提一次，并告诉你怎么更新。Antigravity 和 DSH 都没有给商店以外的插件提供更新按钮，所以更新这一步要你自己做：
+
+- **Antigravity**：从[最新发布页](https://github.com/Emily2040/gravitas/releases/latest)下载 `Gravitas.zip`，解压后再双击一次安装程序，它会替换旧版本。
+- **DSH**：在桌面应用的 **插件** 页面移除 Gravitas，再添加 `github:Emily2040/gravitas#v<版本号>`。用命令行的话：
+
+```bash
+dsh plugin --profile web add github:Emily2040/gravitas#v<version>
+```
+
+**关掉检查**：Antigravity 里，在用户主文件夹的 `.gemini/gravitas` 里建一个名为 `update-check-off` 的空文件，或者设置环境变量 `GRAVITAS_UPDATE_CHECK=off`；DSH 里，在上面 `dsh-gravitas` 的配置里加上 `updateCheck: false`。
+
 ## 真实例子
 
 下面四道题都出自中文测试题。同一个模型把每道题回答两次：一次是原版 Antigravity（只装了 Google 自带的十个插件，没装 Gravitas），一次装了 Gravitas。两个 Gemini 评分模型在不知道哪份答案出自哪一边的情况下，对照事先写好、逐条核实过的标准答案打分。我挑的是两个评分模型都明显偏向 Gravitas 的题，两份回答都从头读完，只留下原版确实漏了什么、你自己就看得出来的那几道。最后一道是 Gravitas 输了的。

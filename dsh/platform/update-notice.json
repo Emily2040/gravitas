@@ -1,0 +1,22 @@
+{
+  "zh-CN": {
+    "notice": "## Gravitas 更新\n\nGravitas {latest} 已发布，这台电脑上装的是 {current}（{url}）。在本次对话的第一条回复里，所有内容写完之后，用用户的语言加一句简短的话告诉用户，并附上更新方法：{step}只说一次：后面的回复不再提，前面的回复已经说过也不再提。不要因此改动或缩短回答，也不要自己去执行更新。\n",
+    "stepPackage": "在 DSH 的“插件”页面移除 Gravitas，再点“添加插件”，填入 `github:Emily2040/gravitas#v{latest}`；用命令行的话，运行 `dsh plugin --profile <你的 profile> add github:Emily2040/gravitas#v{latest}`。",
+    "stepGit": "在 `{root}` 里运行 `git pull`，然后重启 DSH。"
+  },
+  "en": {
+    "notice": "## Gravitas update\n\nGravitas {latest} is out; this computer has {current} ({url}). In your first reply in this conversation, after everything else, add one short line in the user's language saying so, with how to update: {step} Say it once: not in later replies, and not if one of your replies above already said it. Do not change or shorten the answer for it, and do not run the update yourself.\n",
+    "stepPackage": "in DSH, open Plugins, remove Gravitas, then Add plugin with `github:Emily2040/gravitas#v{latest}`; or in a terminal, run `dsh plugin --profile <your profile> add github:Emily2040/gravitas#v{latest}`.",
+    "stepGit": "run `git pull` in `{root}`, then restart DSH."
+  },
+  "ja": {
+    "notice": "## Gravitas の更新\n\nGravitas {latest} が公開されました。このパソコンに入っているのは {current} です（{url}）。この会話の最初の返答で、ほかの内容をすべて書き終えたあとに、相手の言語で短い一文を添えてそのことを伝え、更新の方法を示します：{step}伝えるのは一度だけです。以降の返答では触れず、上の返答ですでに伝えていれば触れません。そのために答えを変えたり短くしたりせず、更新を自分で実行することもしません。\n",
+    "stepPackage": "DSH の Plugins ページで Gravitas を削除し、Add plugin に `github:Emily2040/gravitas#v{latest}` を入力します。ターミナルなら `dsh plugin --profile <プロファイル名> add github:Emily2040/gravitas#v{latest}` を実行します。",
+    "stepGit": "`{root}` で `git pull` を実行し、DSH を再起動します。"
+  },
+  "ko": {
+    "notice": "## Gravitas 업데이트\n\nGravitas {latest}이(가) 나왔습니다. 이 컴퓨터에 설치된 버전은 {current}입니다({url}). 이 대화의 첫 답에서, 다른 내용을 모두 쓴 뒤에 사용자의 언어로 짧은 한 줄을 덧붙여 이 사실과 업데이트 방법을 알립니다: {step} 한 번만 알립니다. 이후 답에서는 다시 말하지 않고, 위의 답에서 이미 말했다면 말하지 않습니다. 이 때문에 답을 바꾸거나 줄이지 않으며, 업데이트를 직접 실행하지도 않습니다.\n",
+    "stepPackage": "DSH의 Plugins 페이지에서 Gravitas를 제거한 뒤 Add plugin에 `github:Emily2040/gravitas#v{latest}`를 입력합니다. 터미널에서는 `dsh plugin --profile <프로필 이름> add github:Emily2040/gravitas#v{latest}`를 실행합니다.",
+    "stepGit": "`{root}`에서 `git pull`을 실행한 뒤 DSH를 다시 시작합니다."
+  }
+}

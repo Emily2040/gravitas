@@ -134,6 +134,19 @@ DSH 버전은 Windows 11에서 DSH 0.2.1-rc.2를 시작하고, 네 가지 언어
 <a id="part-1"></a>
 <a id="real-examples"></a>
 
+### 업데이트
+
+Gravitas는 하루에 한 번까지 새 릴리스가 나왔는지 GitHub에 묻습니다. `api.github.com`에 요청을 한 번 보낼 뿐이고, 사용자에 대한 정보는 아무것도 보내지 않습니다. 새 버전이 있으면 에이전트가 대화의 첫 답 끝에 한 번만 알리고 업데이트 방법을 알려 줍니다. Antigravity와 DSH 모두 자체 스토어 밖의 플러그인에는 업데이트 버튼이 없으므로, 업데이트 자체는 사용자가 한 단계로 직접 합니다.
+
+- **Antigravity**: [최신 릴리스](https://github.com/Emily2040/gravitas/releases/latest)에서 `Gravitas.zip`을 내려받아 압축을 풀고 설치 프로그램을 다시 더블클릭합니다. 이전 버전을 대체합니다.
+- **DSH**: 데스크톱 앱의 **Plugins** 페이지에서 Gravitas를 제거하고 `github:Emily2040/gravitas#v<버전>`을 추가합니다. 터미널에서는 다음과 같습니다.
+
+```bash
+dsh plugin --profile web add github:Emily2040/gravitas#v<version>
+```
+
+확인을 끄려면 Antigravity에서는 홈 폴더의 `.gemini/gravitas`에 `update-check-off`라는 빈 파일을 만들거나 환경 변수 `GRAVITAS_UPDATE_CHECK=off`를 설정합니다. DSH에서는 위의 `dsh-gravitas` 설정에 `updateCheck: false`를 추가합니다.
+
 ## 실제 사례
 
 아래 사례는 시험 실행에서 그대로 가져왔습니다. 같은 요청을 같은 모델에 두 번 보냈습니다. 한 번은 Gravitas 없이, 한 번은 Gravitas를 켜고 보냈습니다. 이 글에서 '기본 Antigravity'는 Gravitas 없이 Google 기본 플러그인 10개만 깔린 Antigravity를 말합니다. 채점은 Gemini 3.1 Pro와 Gemini 3.8 Flash가 맡았습니다. 두 채점자는 어느 쪽이 Gravitas인지 모르는 채로, 미리 검증해 둔 정답 기준표에 비추어 두 답을 비교했습니다. 인용은 실제 답에서 고치지 않고 옮겼고, "…"는 중간을 줄인 자리입니다.
