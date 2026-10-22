@@ -1,0 +1,46 @@
+{
+ "pair": "p059",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "The paper temporary boarding certificate from the station police window is 'free' (免费): the key says there is no official basis for this, and the cited 12306 article does not mention a fee.",
+   "Lists Tianjin among the provinces whose self-service ID machines are not yet open: the cited Huadu page does not include Tianjin, so this is unverifiable.",
+   "Self-service machines need no appointment (免预约) and some are open 24 hours (部分点位24小时开放): the cited Huadu page does not say either, so this is unverifiable.",
+   "The ID photo receipt 'usually costs 20-30 yuan': a specific price the key does not give (the key says it varies by place); it is hedged with 'usually', so this is minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "The paper temporary boarding certificate is free and needs only the ID number (免费，报身份证号即可): the key says there is no official basis for 'free'.",
+   "Postage is 18 yuan within Guangdong and 20 yuan outside it: not on the cited Liwan page and not in the key, so this is unverifiable.",
+   "Gives the 12306 menu item as '乘坐旅客列车临时证明': the official path is 温馨服务 → 临时身份证明, so the label is slightly wrong.",
+   "Hometown processing takes 15 working days 'per the Zhengzhou police guide': I opened the linked Zhengzhou page and it does say this, but it applies to Zhengzhou and the user's hometown in Henan is not stated. This is the kind of time-limit figure the key warns against; it is attributed to a source, so this is minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers correct both false premises at the start: a Henan resident can replace the card in Guangzhou, and the 12306 electronic temporary certificate (24 hours, 6 per month) or the station police window covers the 31 October train. Both give the right fees: 40 yuan for the card and 10 yuan, 3 months' validity and the hometown issuance wait for the temporary card. I opened the Liwan page, and the 40-day Guangzhou limit both give is real; neither mentions the 60-day legal limit. Both wrongly say the paper station certificate is free. A edges ahead: its 12306 steps match the official article exactly (menu path, QR code refreshing every 60 seconds, re-verification after 30 minutes), and it clearly tells the user not to have the household register mailed. B gives a slightly wrong menu label, adds postage fees I could not verify, and suggests bringing a household register the user probably does not have in Guangzhou. B does include the 2017 nationwide date, which A leaves out."
+}

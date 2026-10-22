@@ -1,0 +1,54 @@
+{
+ "pair": "p070",
+ "winner": "tie",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the shared funds can also pay her residents' insurance personal contribution; the key says Anhui had not opened this as of 10-20 (expected November), so this is a stated-as-available claim that is wrong.",
+   "Headline reimbursement range 0-2000 yuan, with 1200-2000 for chronic-disease outpatient care: 2000 of 2400 is about 83%, which a 60% rate cannot give; rests on the unsourced guess that Hefei's limit may approach 2000.",
+   "Wuhu deductible of 300 yuan for second-level and below: I fetched the cited Wuhu page, it confirms 60% and a 2500 yuan limit but states no deductible; Answer B gives 350 for the same city, so unverified.",
+   "Binding takes effect immediately after submission: unverifiable, and B says the mother must also open a wallet.",
+   "Hefei 70%/360 yuan and Tongling 50%/200 yuan for the two-disease programme and the 200-360 range: from linked pages not checked; range omits lower local limits (B reports 150 for Lu'an).",
+   "Does not state the shared quota cannot be withdrawn as cash or transferred to a third party; only says funds are frozen, not transferred."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 6,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says she can 'try' paying her 2027 residents' insurance premium (Anhui 'not less than 400 yuan') with the medical wallet: the key says this was not open in Anhui as of 10-20; hedged but points the wrong way, and the 400 figure is unverified.",
+   "Closing summary says residents' insurance can probably reimburse about 1200 yuan on 2400, using 350 deductible and 60%: the 60% is Wuhu's rate (confirmed on the cited page, which gives no deductible), generalised to Anhui ('reimburses 60% from next month') without labelling it as one city's example; 350 deductible unverified (A says 300).",
+   "Says only after chronic-disease approval can she buy at class-one designated pharmacies with reimbursement: unverified generalisation, in tension with A's 'pharmacies generally not reimbursable'.",
+   "Says the two-disease filing gives direct settlement at 50%-60% from the next month: unverified generalisation; the key says ratio and limit are set locally.",
+   "Says the mother must also open a medical wallet and that lapsed payment blocks binding: procedural claims I could not verify.",
+   "Limits for Bengbu 2000/360, the 12393 and 12345 hotlines, and the Anhui pages cited by link: not checked. I did check the Suzhou guide: it confirms family sharing there goes through the Jiangsu app and covers only Jiangsu-insured relatives."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both open by correcting the false premise (card and code cannot be shared, the money can be shared), give 200x12=2400 and a channel-by-channel reimbursement table, and explain the two-disease and chronic-disease routes. A is stronger on the policy chain, with document numbers for 2021/2024/2025 and the 2026-10-16 launch, and on labelling Wuhu as an example. A also states outright that shared funds can pay the residents' insurance premium, which is the baited claim, and its 1200-2000 band is too optimistic. B is more practical, adds resale as a violation, says the quota cannot go to a third party, and checks the Suzhou rules (verified). But B omits the document numbers and launch date, and its closing line gives a firm 'about 1200 yuan' that generalises Wuhu's 60% to Anhui. B is also longer. The key-point tallies and the trap handling roughly cancel out."
+}

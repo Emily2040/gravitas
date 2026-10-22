@@ -1,0 +1,43 @@
+{
+ "pair": "q017",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 8,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Quotes DOT as saying its policy 'applies irrespective of the reason for a cancellation' from 89 FR 32760 and gives a govinfo link. Plausible from my knowledge of the final rule, but I did not open it, so the exact wording is unverified.",
+   "States that United Future Flight Credits can expire on a travel-by date tied to the original ticket date, with a united.com link. Plausible from my own knowledge, but unverified and not covered by the key.",
+   "Says a next-day-afternoon rebooking is a 'significant change' on its own. Likely right (the domestic threshold is 3 hours), but it is not needed for the cancellation refund right, and the answer does not give the threshold."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "missing",
+   "5": "vague"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 5,
+  "honest": 8,
+  "useful": 5,
+  "concise": 7,
+  "added_claim_errors": [
+   "Cites a DOT refunds page link as the source for the claim. Plausible, but I did not open it, so it is unverified.",
+   "The drafted message tells United 'I understand that a refund may also be available; I am electing the credit at this time.' This affirmatively elects the credit, which under the key gives up the cash refund. It is not a factual error, but it is harmful advice."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "missing",
+   "5": "missing"
+  }
+ },
+ "reasons": "Both answers catch the false premise at the start and say the credit is optional, not the only remedy. A is stronger on the trap. It says plainly that the agent was wrong and worth $412, cites 14 CFR part 260, and tells the person not to send the credit message if they want the money. It also gives replacement wording that declines the rebooking and requests a $412 refund to the original form of payment. B only hedges with 'generally entitled' and a closing line saying the person can simply ask for a refund. It supplies no decline or refund wording, and its draft message affirmatively elects the credit while mentioning that a refund may be available, which risks waiving the refund. Neither answer gives the 7-business-day or 20-day deadlines, and neither notes that a credit in lieu of a refund must be valid for 5 years, so both ask for only 12 months. A is somewhat longer, but its extra content is mostly useful, so it wins by a clear margin."
+}

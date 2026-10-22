@@ -1,0 +1,48 @@
+{
+ "pair": "p018",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says a lost bank card is no obstacle because the bank can look up the account by ID card: unverifiable, no source given.",
+   "Says waiver of inheritance must be signed in person and cannot be delegated: unverifiable, stated flatly.",
+   "Says a 200-yuan minimum fee per case is common at notary offices: plausible, but not confirmed for any specific office."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says a copy of the notarial certificate costs about 10 yuan: unverifiable, no source.",
+   "Cites an August 2026 ce.cn report, a State Council notice for 12378, and a Zhuanglang County notary fee page: I could not open the ce.cn and State Council pages (504 and socket error) and did not open the Zhuanglang page, so these are unverified.",
+   "Says some regions use an undertaking-based (gaozhi chengnuo) system for some certificates: unverifiable.",
+   "Advises both of them to go because the branch may require heirs to attend: unsupported, and it blurs the point that one heir is enough.",
+   "States the 2% rate as the 1998 national standard with a 200-yuan minimum: this checks out on the Guangdong page (Jijiafei 1998 No. 814). But B treats it as a calculation option and never tells the person the bank's 2% is wrong, which conflicts with the key's 'no 2% in the official standard'."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both open by correcting the premise, cite Jin Gui [2024] No. 6, the 5万元 threshold summed per bank, and the four materials. I checked the 5万元 limit (unsettled interest excluded), the 18号文 article 4 materials and article 1 (no notarization rule) against gov.cn, and both match. A is firmer and more accurate on the key points: it says the mother alone can handle it, mentions the old 1万元 threshold, and gives the escalation path of bank customer service then 12378. It also says 2% is not a uniform national fee and lands on 100 to 200 yuan, close to the key's 200 yuan cap. B hedges with 大概率, recommends both go to the bank without saying one heir suffices, and presents 2% as a legitimate old national rate in a long table. It also adds the marital-property split and the 副本费, which makes it longer. B's 1998 2% claim is actually true, so the key's 'no 2%' is a little off, but B still never rejects the bank's 2% figure. A is shorter and cleaner, though both pad with the notary backup list."
+}

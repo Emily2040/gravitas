@@ -1,0 +1,51 @@
+{
+ "pair": "q009",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "States as flat fact that any notice period over 30 days is invalid, citing a 中国法律服务网 reply (link given, not opened by me). It never mentions the Shanghai/Jiangsu confidentiality-notice exception or that Zhejiang has none. Correct for a Hangzhou ordinary employee, but over-absolute.",
+   "Does not cite 人社部发〔2025〕2号 as the basis for 21.75 and does not say the 2008 notice is repealed. The numbers are right but the basis is not stated.",
+   "Tangents on 经济补偿 (about 24,000) and overtime pay add length. The 24,000 figure is correct arithmetic (2 x 12000) and is properly hedged as an Art. 38 route only."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Practical claim that after leaving under Art. 37 it becomes very hard to claim 经济补偿 under Art. 38, and that the Art. 38 notice must come before leaving. Plausible practice, unverifiable as stated, and hedged.",
+   "Lists 《劳动合同法》第46条 in the legal basis but never uses it in the text. Minor padding.",
+   "Does not cite 人社部发〔2025〕2号 as the basis for 21.75. The numbers are right but the basis is not stated.",
+   "Section 7 on overtime and Art. 38 is a tangent beyond the request and adds length. Its overtime multipliers (150%/200%/300%) are correct."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers lead with the two baited-premise corrections: no 60 days, no approval needed. Both give 2026-11-25 (Wednesday), 4 days from 329/365 x 5 = 4.51, 551.72 yuan a day and 4,413.79 extra (200%, with 6,620.69 as the 300% total). I rechecked this arithmetic, including the 5-day alternative of 5,517.24 and 8,275.86. Both write the letter as a notice and give delivery-evidence steps, the EMS next-day shift to 11/26, the Zhejiang 5-day wage settlement, Art. 50 and 12333/arbitration. B edges ahead on calibration. It hedges that special confidentiality posts may have a longer notice period under law or local rules, where A says flatly that any period over 30 days is invalid. B also states the rule that a wage deduction needs proven actual loss (Wage Payment Provisions Art. 16 cap of 20%). A has a slightly better letter, with a receipt block and an arbitration time-limit note. Both are long and carry a tangent, so the margin is slight."
+}

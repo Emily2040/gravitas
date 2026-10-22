@@ -1,0 +1,55 @@
+{
+ "pair": "q006",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says an email into the company mailbox or a WeChat/DingTalk message all count as valid service (送达); stated as settled, but email service is contested in practice, so it is overstated.",
+   "Cites 《工资支付暂行规定》第十六条 as capping deductions at 20% of monthly wages. The article does exist and says that (judged from own knowledge), but it concerns deductions to compensate proven losses, and it sits awkwardly with the answer's own statement that the company can only claim through arbitration.",
+   "Never states plainly that giving the full 30 days' notice is not unlawful termination and owes no compensation. Art. 90 appears only as a warning against leaving early.",
+   "The letter hard-codes 11月25日 as the termination date and also says the notice date is the delivery date. The body of the answer explains that a late delivery shifts the date, but the letter itself has no note telling the user to adjust it.",
+   "Adds that a non-compete unpaid for 3 months lets the worker terminate it. This matches the Supreme People's Court interpretation (own knowledge, not checked online), but it is outside the request and the key."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says that if the company terminates illegally, or the worker resigns under 第38条, 'N is about 2 months (24,000)'. Illegal termination gives 2N (第87条), so this is incomplete or misleading. It does correctly say that resigning after the company refuses the 60-day notice normally gives no compensation.",
+   "Says 浙江省企业工资支付管理办法 第19条 requires wages to be settled within 5 days of completing termination procedures. I opened gov.cn content_5719128 and confirmed this, so it is correct and consistent with the key.",
+   "Cites 浙江 annual-leave guidance for the extra 200% pay. I opened the hrlib.ciic-cloud.cn page (浙劳社劳薪〔2009〕36号 第8条) and it supports the claim, so it is correct.",
+   "Cites a nys.gov.cn page as an 'official policy interpretation' that a notice period over 30 days is invalid. The fetch failed (connection refused), so the page is unverifiable. This is a minor point because the law itself is cited elsewhere.",
+   "Gives 2027年11月25日 as the arbitration deadline (1 year from termination). This is an approximation and the limitation period could run from a slightly different date. Adds an overtime-pay note even though the user said there is none (hedged, off-topic padding).",
+   "The 5-day alternative figures (8,275.86 total, 5,517.24 extra) recompute correctly, so they are not errors."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the premise: the 60-day and approval clause is invalid under 劳动合同法第37条 and 第26条, resignation is a notice, and docking the month's pay is invalid. Both reach 11月25日 as the last working day (11月26日起 free to leave), 329 days giving 4.51 and so 4 days, 551.72 per day, and 4,413.79 as the extra 200%. Both also say 6,620.69 is the 300% total that already includes normal pay, so neither double-counts. Neither mentions the Shanghai/Jiangsu exception, the 劳办发〔1995〕324号 wording, or 人社部发〔2025〕2号. B states more of the key's specifics (第25条 on penalties, 民法典第201条 for the day count, 条例第3条, Zhejiang's 5-day wage settlement, which I verified). B also gives a copy-ready letter with a date-adjustment note, and a rebuttal script and arbitration claim list. A is somewhat shorter and gives a sound letter and delivery advice, but it is looser on the 违约金/第25条 and no-liability point. B is longer and adds a small 2N/N slip plus side topics (overtime, claims list, seven links), so its edge is slight."
+}

@@ -1,0 +1,53 @@
+{
+ "pair": "p028",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "The 12333 hotline is said to be described at a chinajob.mohrss.gov.cn link, which I did not open, so it is unverifiable.",
+   "Says such clauses are 'basically always found invalid in arbitration and litigation', a generalisation with no source.",
+   "'Hangzhou urban-area labour dispute arbitration commission' is vague. The actual body is the Hangzhou or district-level arbitration commission.",
+   "Does not name the Shanghai and Jiangsu exceptions or say that Zhejiang has none. This is an omission, not a wrong claim."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says 'the same article, Article 26' after citing Article 37. Article 26 is a different article, so this is a slip.",
+   "The letter paraphrases the contract wording as 'must give 60 days notice to apply, approved by the company'. The user's actual text reads '员工辞职须提前60天书面申请，经公司批准后方可离职', so the quote in a legal notice is inexact.",
+   "The letter pre-fills the hire date as 'in 2024'. The user said only 'two years', so this assumes a year.",
+   "Says such clauses are 'basically always found invalid in arbitration and litigation', a generalisation with no source.",
+   "Does not name the Shanghai and Jiangsu exceptions or say that Zhejiang has none. This is an omission, not a wrong claim."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the 60-day and approval premises. Both give the notice as a 解除劳动合同通知书 with a delivery log, and both reach 25 November, 4 days and 4,413.79 yuan. I recomputed 329 days, 4.51 days, 551.72 yuan per day and 4,413.79 yuan, and all match the key. Neither names the Shanghai/Jiangsu exceptions, Zhejiang or the 1995 labour ministry document. A cites the right articles, namely Article 26 correctly, Article 25 for the penalty limit, and Articles 10, 11, 12 and 18 of the leave measures. I confirmed those on gov.cn, so A is slightly more precise. B has the small 'same article, Article 26' slip, a paraphrased contract clause in the letter, an assumed 2024 hire year, and a thinner statement of the penalty limit. B is a little shorter and ends with an offer to fill the blanks. A's only extra unverifiable item is the 12333 link."
+}

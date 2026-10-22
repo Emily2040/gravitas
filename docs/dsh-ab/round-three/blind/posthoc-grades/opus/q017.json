@@ -1,0 +1,38 @@
+{
+ "pair": "q017",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 6,
+  "honest": 7,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "United's Future Flight Credits 'can expire on a travel-by date tied to your original ticket date' so the date may be earlier than a year: this states United's own policy and could not be confirmed (the cited United page timed out when I opened it). It is also misleading here, because a credit offered instead of a refund the DOT rule requires must stay valid for at least 5 years."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "missing",
+   "5": "vague"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 5,
+  "honest": 8,
+  "useful": 4,
+  "concise": 7,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "missing",
+   "5": "missing"
+  }
+ },
+ "reasons": "Both answers say at the start that the agent was wrong: weather does not take away the right to a refund. Both still make their main draft a message accepting the credit and asking for 12 months, and neither gives the 5-year credit minimum or the 7-business-day refund deadline. A is stronger. It opens with 'Before you send anything', cites 89 FR 32760, and quotes 'applies irrespective of the reason for a cancellation'; I opened the govinfo page and that wording is in the rule. It also gives a ready sentence asking for the full $412 back to the original payment method under 14 CFR part 260. B only says 'you can simply ask United for a refund', and its draft says outright that the sender is choosing the credit even though a refund may be available, which gives up the $412. A loses some points for an unchecked claim about United's credit expiry and for being a little long."
+}

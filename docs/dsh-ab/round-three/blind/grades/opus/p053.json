@@ -1,0 +1,46 @@
+{
+ "pair": "p053",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'由公司安排，不是你来挑' overstates the employer's power: 条例第五条 says the employer arranges leave while taking the employee's wishes into account (judged from my own knowledge)",
+   "'邮件进入公司邮箱…都算送达' is stated flatly; whether email counts as delivery depends on proof that the company received it (judged from my own knowledge)",
+   "'离职当天拿到…社保和公积金转移确认' conflicts with the 15-day period in 第五十条, which B's own letter cites"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 60-day and approval premises at the top. Both give 11月25日 as the last day and 11月26日 as the start date. Both reach 4 days of leave and an extra 4,413.79 yuan, with the 300%-includes-normal-pay point explained, and both recommend a notice instead of an application plus 12333 or arbitration. A is slightly stronger. It grounds the illegal wage deduction in 第二十五条 (违约金 only for 服务期 and 竞业限制), cites 民法典第二百零一条 for the date count, and writes the delivery date into the letter. It also describes leave scheduling more accurately: the employer arranges it but must consider the employee's wishes. B never cites 第二十五条 for the deduction. Its 20% cap under 工资支付暂行规定第十六条 is accurate but can read as if a partial deduction were allowed, and it overstates the employer's sole control over leave. Neither answer mentions the Shanghai/Jiangsu 6-month exception, and both are rather long."
+}

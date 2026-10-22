@@ -1,0 +1,52 @@
+{
+ "pair": "p046",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Cites the notarization fee guideline as '1058号文'. The linked page is the NDRC/Ministry of Justice price guideline, whose number is 发改价格〔2021〕1081号, so the document number is wrong.",
+   "Uses a Gansu county (Zhuanglang) fee table as the worked example. The table and the 10 yuan per copy fee were confirmed on that page, but it is an unrepresentative locality (key's Beijing figure is 0.9%).",
+   "'Many notary offices set a minimum fee of about 200 yuan' and 'prepare 200-250 yuan': the Zhuanglang page lists no minimum, so this is unverified for that table (key supports 200 yuan minimum in Beijing).",
+   "'2% was the older standard in many places': unverifiable; key says official standards contain no 2%.",
+   "'Some branches will require all heirs to attend or sign': hedges against the key, which says one heir is enough; unverifiable and may mislead.",
+   "'No password is needed' and 'many places accept a commitment letter plus witness statements instead of grandparents death certificates': unverifiable practice claims.",
+   "Links a 2019 inheritor-inquiry notice without stating its document number: not checked."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'Most places charge 1%-1.2% on amounts under 200,000': the key's Beijing standard is 0.9%, so this overstates the common rate.",
+   "'If the local notary office really charges 2%, 172 yuan is also possible': leaves open a 2% rate that the key says appears in no official standard.",
+   "'Liaoning and Hefei public standards are both 1%-1.2% with a 200 yuan minimum' and 'some places have a 300 yuan minimum': unverifiable, no links given.",
+   "'Takes several working days to several weeks' for notarization, and 'lost card or forgotten password does not matter': unverifiable practice claims.",
+   "Opening 'the bank counter's statement is at least not the only way' softens the correction; the key says the 'must notarize' premise is wrong."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying the 8600 yuan probably needs no inheritance notarization, and both cite 银保监办发〔2021〕18号 and 金规〔2024〕6号 with the 50,000 yuan threshold. Both list the four correct materials and give 12378. I checked the cited policies on gov.cn: the 6号 funeral-allowance and one-time-notice claims in A are real, but A miscites the fee guideline as 1058号 (it is 发改价格〔2021〕1081号, which B gives correctly). A wins slightly on substance. It states plainly that the bank is applying an old rule, says the account must be cleared and closed in one go, and disposes of the 2% figure with correct arithmetic (103 yuan, 52 yuan, 172 yuan) and the shares (母亲 6450, 我 2150). B handles the 2% premise more weakly: it says only that 2% is not a national standard and leaves it possible, and it says nothing explicit about withdrawing everything at once. B is clearer that one heir is enough and that the grandparents' death certificates are not required for the simplified route. B is also shorter, while A is padded with a long notary checklist, an estate-split section and a repeated action plan."
+}

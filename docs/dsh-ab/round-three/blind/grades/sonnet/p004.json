@@ -1,0 +1,50 @@
+{
+ "pair": "p004",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Paper temporary travel proof at the station police window is stated as free (also in the table). No official basis; the cited 12306 article does not say it is free, and the key lists this as a trap.",
+   "12306 electronic proof stated as free. The cited 2025-04 article does not mention any fee (I opened it). Likely true but unsupported.",
+   "Self-service machine claims (credential via Yue-ju code, no appointment, some sites open 24 hours). Attributed to the Huadu policy page; I did not open it, so unverified.",
+   "Photo receipt costs 20-30 yuan and photo dress rules (dark collared top, eyebrows and ears visible). Not covered by the key; unverified.",
+   "Temporary ID must go through the branch office window and not the self-service machine. Not covered by the key; unverified.",
+   "Loss report is free and takes a few minutes at any nearby police station. Not covered by the key; unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Temporary ID takes 5 to 7 working days at the fastest. The cited Guangzhou 12345 reply gives only the 5-working-day signing step and no figure for the issuing step (I opened it), so this is unsupported.",
+   "Hometown temporary ID is issued within 3 days and many places hand it over on the spot. The cited Zhongmu page does not mention temporary IDs (I opened it). This echoes the key's same-day trap.",
+   "Says the temporary ID may arrive before Oct 31. Slightly optimistic against the key's 'not necessarily done by then'; it is hedged with 'do not bet the trip on it'.",
+   "12306 menu label 'riding passenger train temporary proof'. The path in the 12306 article I checked is Warm Service then Temporary ID Proof, so the label is probably inexact.",
+   "Hometown processing generalised to 2 to 3 weeks from one county's 15 working days. The Zhongmu page says 15 working days within Henan and 25 calendar days for out-of-province applicants.",
+   "Booking route via the Guangzhou Gongan WeChat account and arriving 30 to 40 minutes early. Not covered by the key; unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting both false premises (apply in Guangzhou, and use the 12312-style 12306 electronic proof or the station police window to board). Both give 40 yuan, 10 yuan for the temporary ID, 6 uses per month and 24 hours' validity. Both also give the 40-day Guangzhou time limit, which I confirmed on the Liwan notice. B also states the 60-day legal cap, which A omits. A pins down the temporary ID timing better (not likely before Oct 31), but it says the paper proof is free, which is the key's listed trap. A is also longer and repeats itself in a table. B is more compact and avoids the paper-free claim. B adds some unsupported hometown claims (3-day temporary ID issued on the spot, 5 to 7 working days) and a slightly optimistic line on Oct 31. These matter less because the hometown route is secondary. The margin is slight because the two are close in quality."
+}

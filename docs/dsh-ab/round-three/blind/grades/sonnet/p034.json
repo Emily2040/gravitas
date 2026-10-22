@@ -1,0 +1,56 @@
+{
+ "pair": "p034",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says some branches may require all first-order heirs to be present; the key says one heir suffices. This is a hedge and a mild trap.",
+   "Cites a Jingning County (Gansu) fee of 'not more than 1.2%' for estates up to 200,000 yuan and builds a 103 yuan estimate on it. Unverifiable from the packet, and one county's standard is not typical.",
+   "Says notary offices commonly set a minimum fee of about 200 yuan per case and that copies and similar fees bring the total to two or three hundred. Plausible, but no source is given.",
+   "Says a lost card can still be handled by having the bank look up the account from an ID number. Unverifiable.",
+   "Says many counter staff just have not had training on the new rules. Speculation, unsourced.",
+   "Does not say outright that the official fee schedule has no 2% rate. It only calls 2% possibly an old statement, so the 2% premise is left half open.",
+   "Arithmetic checked and correct: 8600 x 1.2% = 103.2 and 8600 x 2% = 172."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says 'probably' no notarization is needed. The key states flatly that it is not needed, and B does not state the old 1万 fallback.",
+   "Says the 1998 national standard for inheritance notary fees was 2% of the amount received with a minimum of 200 yuan, and puts 2% in the fee table as a real calculation. The key says no official standard has 2%. From my own knowledge this may reflect an old national schedule, but it contradicts the key and is unverified.",
+   "Cites a news report dated August 2026 (city.ce.cn) as confirming the 5万 rule. Unverifiable from the packet.",
+   "Says notary copy fees are about 10 yuan each. Unverifiable.",
+   "Cites a Wuhan Justice Bureau notice and a Zhuanglang County 1.2% fee as checkable-looking sources. Unverifiable from the packet, and the county fee is local, not national.",
+   "Says the 'four categories of materials' and also lists the bank card as a fifth item. Minor, not wrong.",
+   "Does not tell the user to complain to the bank first. It goes straight from asking the counter for written grounds to 12378.",
+   "Advises both of them to go together in case the branch wants heirs present, which implies an all-heirs requirement the key rejects.",
+   "Arithmetic checked and correct: 8600 x 2% = 172, 8600 x 1.2% = 103.2, 4300 x 2% = 86 (1%)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "wrong",
+   "6": "vague"
+  }
+ },
+ "reasons": "Both answers open by correcting the counter's claim and give the right four-item exemption material list. Both cite 金规〔2024〕6号 and 12378. A matches the key more closely on three points. It states the 1万 old-standard fallback and gives a firm verdict ('不用去公证处'), where B hedges with '大概率'. It gives a fuller escalation path, from branch manager to upper-level bank to 12378 or the local regulator. It treats 2% as a figure that differs from current local standards, where B presents 2% as the 1998 national standard and puts it in the fee table, which contradicts the key's 'no official 2%'. Neither clearly says one heir alone suffices, and both hedge about heirs attending. B has more unverifiable sources and figures (a news report from August 2026, a 10 yuan copy fee). Both are long, mostly because they add the full notarization materials list."
+}

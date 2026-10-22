@@ -1,0 +1,52 @@
+{
+ "pair": "p011",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Section 7 (overtime, 劳动合同法第38条 immediate termination, about 2 months' compensation) is outside the request and adds length; the figures are correct, but the advice was not asked for",
+   "Hedges that a special confidentiality-post exception may exist without naming Shanghai/Jiangsu or saying Zhejiang has none, so the exception is left unspecified",
+   "Cites 《浙江省企业工资支付管理办法》第19条 (5-day settlement) and 《工资支付暂行规定》第16条 (20% cap): I opened both gov.cn texts and they match, so these are not errors"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "'在仲裁和诉讼中基本都被认定无效' is an unsupported generalisation about outcomes, and no exception for confidentiality posts is mentioned",
+   "'责令后仍不付，还可加付赔偿金': 劳动合同法第85条 covers unpaid labour remuneration, and whether it reaches unused-leave pay is stated without a source (plausible, unverified)",
+   "The 人社部 12333 link was not opened by me, so what it says is unverified; 12333 as a hotline is correct from my own knowledge",
+   "Speculation that the company might dismiss the user for serious misconduct to avoid paying leave pay is conjecture, not a legal claim",
+   "Cites 实施办法第十八条 (calendar year): I opened the gov.cn text and it matches, so this is not an error"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 60-day and approval premises at the start and write the letter as a 通知. Both give the same right figures: 11月25日, 329 days, 4天, 551.72元, and 4,413.79元 as the extra 200% with the 300% explained correctly. I opened the gov.cn texts for the 年休假实施办法 (第10, 11, 12, 18条), the 浙江省企业工资支付管理办法第19条 and the 工资支付暂行规定第15 and 16条. Every article either answer cites checked out. Neither names Shanghai or Jiangsu as the places that allow a longer notice period for confidentiality posts. A hedges that such an exception may exist, which is more careful than B's flat statement. A adds the correct Zhejiang 5-day wage-settlement rule. A is noticeably longer, because it adds an unrequested overtime and 第38条 section plus a long legal-basis list, which the key counts against it. B is tighter and its letter is more complete, with a rebuttal of the contract clause and a signature line for the company. B also cites 民法典第201条 for the day count, says 11月26日 is the first day at the new job, and adds the one-year arbitration limit. The margin is slight because the substantive accuracy is equal."
+}

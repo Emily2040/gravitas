@@ -1,0 +1,57 @@
+{
+ "pair": "q005",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 3,
+  "added_claim_errors": [
+   "Court refund ratios are stated as 'roughly 50% to full, mostly around 70%, and platform settlements usually lower'. No case or document is cited, so this is an unverifiable statistic. It is roughly consistent with the key's 60-80% examples.",
+   "Several WeChat menu paths and features are stated as fact and cannot be verified: Wallet > Consumer protection > Security > Security lock, 'amount privacy protection', and Bills > FAQ > Download bill > 'for proof'. The key warns against copying exact menu paths.",
+   "'WeChat itself has no per-transaction limit switch' is unverifiable.",
+   "The iPhone Screen Time 'in-app purchases: not allowed' step is offered as a phone-side lock although the user paid by WeChat Pay. It would not stop WeChat Pay, and the answer does not say so.",
+   "Third-party parent platforms (Mihoyo, NetEase) and the Tencent 'Growth Guardian' mini-program flow are asserted without a link. The key says a specific platform flow cannot be verified.",
+   "The '7 working days' reply deadline is a demand the user sets, not a legal rule, and it is unsourced.",
+   "Checked online: the 2024 China Internet Association draft group standard (100% platform liability if limits are not enforced, 30-70% if the guardian is at fault) matches the gmw.cn report. The NPPA anti-addiction reporting platform at jubao.chinaso.com is real. The three-year limitation period matches the Civil Code from my own knowledge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "The letter states 'most single payments were the 648 yuan tier' as unbracketed fact. The user never said this, and 10+ payments totalling 6480 cannot all be 648 (10 x 648 = 6480). If the parent sends it as written, it is an invented detail.",
+   "The advice to turn on fingerprint or face payment is the opposite of the key's prevention step, which is to turn them off.",
+   "The sample date placeholder uses 2025, but the incident was last month (2026).",
+   "'Not ratified means void' for Civil Code art. 145 is loose wording. The act is of pending effect and does not take effect until ratified.",
+   "The jiazhang.163.com URL for the NetEase parent platform is unverifiable.",
+   "The claims that the cause of action is 'network service contract dispute' and that the court fee is 50 yuan are from my own knowledge. The fee is plausible for a claim under 10,000 yuan.",
+   "The 15-working-day reply deadline is a demand, not a legal rule.",
+   "WeChat menu paths are stated as fact without verification: Pay settings > no-password payment, and Settings > Youth mode. These are roughly plausible."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers open by rejecting the 'real-name means adult top-up' premise, cite Civil Code arts. 19, 145 and 157, and write a letter that asks for a full refund and accepts a partial one. Neither letter admits adult spending. A handles the trap most forcefully, and its added links check out. But it omits the SPC guidance (法发〔2020〕17号 art. 9), the court-side basis for a guardian's refund claim, and the WeChat Pay order-dispute complaint step. It is also very long, with two letters, a script section, a four-gate prevention list and many unverifiable menu paths, and the key penalises excess length. B quotes the SPC guidance accurately, though without the document number or article, and gives the full escalation route including the WeChat Pay complaint. It is shorter and has fewer menu paths. B's flaws are an invented '648 tier' detail inside the letter, advice to enable fingerprint pay, and thinner evidence and court-reduction guidance. The key-point tally is about even, so B wins slightly on conciseness and on covering key points 3 and 6."
+}

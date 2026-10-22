@@ -1,0 +1,57 @@
+{
+ "pair": "p001",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Applies the 3.6% January 2027 COLA to her estimate as certain ($1,680 x 1.036 = $1,740). The key lists this as a side-claim trap, and COLAs normally start with the year she turns 62, so the base should stay about $1,690.",
+   "'Budget ~$950/month average from Social Security in 2027': this does not match its own $9,440 for the year ($787 over 12 months, about $1,049 over 9).",
+   "'Cut your 2027 Social Security income by roughly $11,000': by its own figures the Social Security gap is $21,600 - $9,440 = $12,160. The $11,000 figure is the net-income gap.",
+   "Gives the $25,560 limit with a third-party link (adasoutheast.org) instead of SSA. The figure matches the key, but the source is secondary.",
+   "Break-even 'around age 79-80': an unverified estimate, though it is hedged as 'on my arithmetic'."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 8,
+  "honest": 7,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "Applies the 3.6% January 2027 COLA as certain ($2,400 -> $2,486 -> $1,740). The key lists this as a side-claim trap.",
+   "'60 months gives exactly 168/240': benefits start in April 2027, which is 59 months before full retirement age, so the reduction is 29.58%, not exactly 30%.",
+   "The monthly table shows $1,740 of Social Security minus $518 withholding in every month of 2027, Jan-Mar included. She is not entitled before April, and SSA withholds whole checks rather than spreading the withholding.",
+   "'Roughly three and a half of them get swallowed': this contradicts its own statement that SSA withholds whole checks. Four checks are withheld.",
+   "'Expect about $7,700 from Social Security that year': with whole-check withholding, calendar 2027 receipts are about 4 checks (paid Sep-Dec), about $6,960 at its own $1,740.",
+   "Federal tax of $323/month is computed on the overstated $14,664 of Social Security from the table. On its own corrected $7,700 it comes to about $264/month.",
+   "The SSA fact-sheet link (ssa.gov/news/en/cola/factsheets/2027.html) returned 403 when fetched, so it is unverified. The $25,560 figure matches the key. I opened the POMS RS 00615.101 and RS 00615.015 pages and both are real and relevant.",
+   "'Recovering part of the withholding, but not the 30% age reduction itself': misleading. The recomputation at full retirement age works precisely by reducing the age-reduction months."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "wrong",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct both premises at the start, using April 2027, the $25,560 limit and $6,220 of withholding. Both fall into the COLA trap and reach $1,740 instead of about $1,690. A's budget gets the shape right: paycheck only in Jan-Mar, whole checks withheld so about five of nine arrive, benefits credited back at 67. It also points her to her my Social Security account and gets the Medicare date and the filing window right. B's main deliverable, the monthly table, spreads the withholding smoothly and shows Social Security in every month from January. Its own later text contradicts the table, it adds arithmetic errors (3.5 checks, $7,700, a tax figure based on the overstated benefit), and it never tells her to check with SSA."
+}

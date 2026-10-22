@@ -1,0 +1,53 @@
+{
+ "pair": "q016",
+ "winner": "B",
+ "margin": "decisive",
+ "A": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 7,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第27条 as the uninsured-express rule: that is the pre-2025-06-01 numbering; the current article is 第二十八条 (checked on the gov.cn 2025 revision), so the cited article is wrong now.",
+   "Claims 'by actual loss' as the rule without citing 《民法典》第832/833条 or the 到达地市场价 measure, leaving the legal basis thin.",
+   "Draft tells the courier the clause was not fully explained to the user when shipping (寄件时并未向我充分提示说明) as fact, without knowing that is true; the user has not said so. The draft also concedes 'my own negligence' and 'within the rules', which weakens the claim.",
+   "'通常到这一步，理赔口径会松动不少' is an unverifiable prediction.",
+   "Mentions 12315 as a complaint route alongside 12305: plausible but not part of the postal complaint path in the key, and no deadlines or time limits are given."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says waybills commonly carry an '未保价按运费三到七倍赔' clause: a generalisation about industry waybills, unverifiable here.",
+   "'不少地方已并入12345，打12345也行' is an unverifiable generalisation about local hotline integration.",
+   "'中转丢失至少说明它没尽到安全保障义务' is a legal characterisation with no source; B does hedge that gross negligence depends on the facts.",
+   "'邮政管理部门调解…往往比法院更管用' is an opinion presented as a pattern, unverifiable.",
+   "Says non-insurance 'does not affect your right to claim actual loss' and does not mention that 未保价/未声明价值 can be treated as the sender's fault and the award reduced: understates the risk.",
+   "Draft assumes the user holds packing photos or video and serial-number photos from before shipping, which the user did not say. Small-claims procedure (50-yuan fee, final instance) is not in the key but is consistent with the 诉讼费用交纳办法 and 民诉法 as I know them."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "B names the baited premise first and handles it with the exact statutes. It gets 《邮政法》第47条 right (邮政企业, 给据邮件, 普遍服务), cites 第45条第二款 and 第59条, uses the current 《快递暂行条例》第28条 and 《民法典》832/833, and gives 496/497/506 for the form clause. I checked the 邮政法 text (47条 last paragraph, 84条 definition, 59条) and the 2025 revision of the Express Regulation (Art. 28) on official sites, and B's citations and links hold up. Its draft demands 3999 yuan plus the 18-yuan freight refund, asks for the written basis of the clause, and sets a 7-day escalation to 12305 and the postal authority, which fits the key. A also rejects the 'law caps it at 54 yuan' premise, but it cites the outdated article 27, never names 民法典 832/833 or 496/497/506, concedes fault in the draft and only asks for 'some proportion' on top of 54 yuan, and gives a thin complaint path. A does state clearly that courts may split the loss by fault, which B covers only loosely. B is longer than the one-paragraph reply the user asked for, which costs it on concision, but its accuracy and actionability clearly outweigh that."
+}

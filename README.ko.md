@@ -118,6 +118,7 @@ dsh --profile web --dump-config
   config:
     language: ko        # auto, en, zh-CN, ja, ko 중 하나
     alwaysOnRule: true  # false로 바꾸면 스킬만 남습니다
+    claimCheck: false   # true로 바꾸면 답하기 전에 출처 없는 숫자 등을 모델에게 한 번 확인시킵니다(시험 기능)
 ```
 
 지우려면 `dsh plugin --profile web remove dsh-gravitas`를 실행합니다.
@@ -127,7 +128,7 @@ dsh --profile web --dump-config
 - "이 저장소의 로그인 코드를 감사해서 권한 검사를 우회할 수 있는 곳을 파일과 줄 번호까지 모두 찾아 줘." 스킬은 읽기 전용 검사 에이전트가 코드를 살피고, 찾은 문제는 체커가 재현한 뒤에 보고하도록 지시합니다.
 - "이 시장 조사 보고서의 숫자를 하나하나 원래 출처와 맞춰 봐 줘." 스킬은 검사 에이전트가 출처를 찾고, 반박 역할이 각 대응을 깨 보려 하며, 출처를 못 찾은 숫자는 확인되지 않은 것으로 표시하도록 지시합니다.
 
-DSH 버전은 Windows 11에서 DSH 0.2.1-rc.2를 시작하고, 네 가지 언어 모두에서 스킬 목록·시스템 프롬프트·도구를 읽어 확인했습니다. 이 페이지의 평가 결과는 모두 Antigravity에서 잰 것이고, DSH에서의 평가는 아직 하지 않았습니다.
+DSH 버전은 Windows 11에서 DSH 0.2.1-rc.2를 시작하고, 네 가지 언어 모두에서 스킬 목록·시스템 프롬프트·도구를 읽어 확인했습니다. 이 페이지의 평가 결과는 모두 Antigravity에서 잰 것입니다. DSH에서는 deepseek-flash로 기본 DSH와의 블라인드 비교를 시작했고, 최신 결과는 [3차](docs/dsh-ab/round-three/README.md)입니다. Gravitas가 표(26 대 13)와 틀린 덧붙임 수에서 앞섰지만, 답이 더 길고 흐릿한 요점이 더 많아 미리 정한 기준은 아직 통과하지 못했습니다.
 
 ---
 

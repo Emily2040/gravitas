@@ -1,0 +1,31 @@
+Before the email — the premise is wrong, and it's worth $3,400.
+
+**The dealer's stated reason is not a lawful basis for denying coverage in the US.** Under [15 U.S.C. § 2302(c)](https://www.law.cornell.edu/uscode/text/15/2302) and its implementing regulation [16 C.F.R. § 700.10(c)](https://www.law.cornell.edu/cfr/text/16/700.10), a manufacturer cannot condition warranty coverage on your using its dealers for routine maintenance. The regulation addresses your exact situation: a provision that coverage is void "if service is performed by anyone other than an authorized dealer" is prohibited, and is separately *deceptive*.
+
+The one real exception is in the same regulation: the dealer can deny the claim if it **demonstrates** the outside work caused the failure. That's their burden, not yours, and it's a hard case to make for oil changes causing a transmission failure at 41,000 miles.
+
+Which points to the thing to watch for. Jiffy Lube shops have drained transmission fluid instead of engine oil on some cars. If the dealer is actually alleging that — not just "you didn't service here" — then causation is live, and your claim is against Jiffy Lube, not Honda. That's why the email below asks for the denial **in writing, with the specific cause**. Nothing they say verbally is worth much later.
+
+Here's the email. It's the short version you asked for, with the warranty point reduced to two sentences; delete that paragraph if you decide not to raise it, and the rest stands alone.
+
+---
+
+**Subject:** Transmission repair — 2023 CR-V
+
+Dear [Service Manager],
+
+Thanks for diagnosing the transmission and for the estimate. I'd like to go ahead with the repair — please let me know what dates you have open.
+
+One thing first: I don't believe the warranty exclusion is correct. Routine maintenance at an independent shop doesn't void the powertrain warranty on its own, and under 16 C.F.R. § 700.10 coverage can be denied only if you can show the outside service caused the failure. If you have that evidence, I'd appreciate it in writing — the diagnosis and any fluid analysis. If not, could you submit the repair to Honda as a warranty claim?
+
+If the cost does end up on my bill, is there any flexibility on the $3,400? I'd rather have the work done here than take it elsewhere.
+
+I'm happy to discuss any of this by phone.
+
+Thanks,
+[Your name]
+[Phone]
+
+---
+
+If they hold firm on the phone but won't put the causation in writing, that silence is itself useful. Next steps would be American Honda customer relations, then your state attorney general's consumer protection division. The Magnuson-Moss Act also lets a prevailing consumer recover attorney's fees, which is why a consumer-law attorney will often take a look at a denial like this for free.

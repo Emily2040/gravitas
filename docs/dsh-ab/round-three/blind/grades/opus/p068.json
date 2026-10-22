@@ -1,0 +1,40 @@
+{
+ "pair": "p068",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 6,
+  "honest": 6,
+  "useful": 5,
+  "concise": 7,
+  "added_claim_errors": [
+   "'in effect since late 2024': loose. The rule took effect June 25, 2024 and the compliance date was October 28, 2024 (minor).",
+   "'The weather carve-out covers things like hotels and meals': suggests a legal right to meals or hotels for cancellations the airline controls. Those come from airline service commitments, not law, and the answer gives no source (unverifiable, misleading).",
+   "'United's credits usually run about a year from the original ticket date': a claim about United policy the answer could not have checked. For a credit given instead of a refund, DOT requires at least 5 years, so this frames a 12-month request as protective when it falls short of the law."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "wrong",
+   "5": "missing"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 5,
+  "honest": 8,
+  "useful": 4,
+  "concise": 6,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "missing",
+   "5": "missing"
+  }
+ },
+ "reasons": "Both answers correct the agent at the start, saying weather does not remove the right to a refund. Both then write the message accepting the credit with a 12-month validity request. Neither mentions the 7-business-day or 20-day refund deadlines or the 5-year minimum for credits, and neither drafts the refund request. A gives the stronger warning: it cites 14 CFR part 260, says that accepting a credit ends the refund right, and stops the person before the draft. But A adds an unverifiable claim that United credits run about a year, which works against the 5-year rule. B adds no wrong claims and links the official DOT page. However, its correction is softer and its draft includes explicit waiver wording ('I am electing the credit'). A edges ahead on handling the trap, despite its side-claim errors."
+}

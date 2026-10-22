@@ -1,0 +1,60 @@
+{
+ "pair": "p010",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "'她个人缴费也可以试着用医保钱包缴' (2027 resident premium): the key says Anhui had not opened premium payment from 共济 funds as of 10-20 (expected November). The hedge 'try' still misleads.",
+   "'安徽不低于400元' as the 2027 individual contribution: unverifiable, no source given.",
+   "'安徽普通门诊和两病门诊只报一级及以下定点基层医疗机构': the national rule in the key is 二级及以下; the Anhui-wide narrowing is unverifiable.",
+   "'门慢 起付350元、报60%' presented as Anhui-wide, with the closing '居民医保大概能报1200元': unverifiable, and too sure because it depends on 门慢 approval, which is not guaranteed for plain hypertension.",
+   "门慢 criteria ('近半年两次非同日门诊、间隔≥28天'; '通过后次月起报60%'): sourced from a hospital website, not an official one, so unverifiable.",
+   "'两病备案通过后下月起…直接按50%–60%结算' and '一类定点零售药店可报': unverifiable procedural details.",
+   "'额度设了会暂时冻结' and '断缴会绑不上': unverifiable 医保钱包 mechanics.",
+   "City limits '宿州260元、六安150元' (two病) and '蚌埠2000/360元': no link for 宿州 or 六安, so unverifiable (labelled as local examples, which is acceptable in form).",
+   "Arithmetic note: '普通门诊按180元限额算, 2400-180=2220' does not match the table's 150–220 reimbursed / 2180–2250 self-paid (2180 implies a 220 limit). Internal inconsistency."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "'她个人缴费也可以试着用医保钱包缴' (2027 resident premium): the key says Anhui had not opened premium payment from 共济 funds as of 10-20 (expected November). The hedge 'try' still misleads.",
+   "'安徽不低于400元' as the 2027 individual contribution: unverifiable, no source given.",
+   "'安徽普通门诊和两病门诊只报一级及以下定点基层医疗机构': the national rule in the key is 二级及以下; the Anhui-wide narrowing is unverifiable.",
+   "'门慢 起付350元、报60%' presented as Anhui-wide, with the closing '居民医保大概能报1200元': unverifiable, and too sure because it depends on 门慢 approval, which is not guaranteed for plain hypertension.",
+   "门慢 criteria ('近半年两次非同日门诊、间隔≥28天'; '通过后次月起报60%'): sourced from a hospital website, not an official one, so unverifiable.",
+   "'两病备案通过后下月起…直接按50%–60%结算' and '一类定点零售药店可报': unverifiable procedural details.",
+   "'额度设了会暂时冻结' and '断缴会绑不上': unverifiable 医保钱包 mechanics.",
+   "'门慢年限额常见2000–2500元，两病高血压年限额常见260–360元': generalised from a few cities without labelling them; unverifiable, and it contradicts the answer's own table, whose 两病 range starts at 150.",
+   "'各地居民医保待遇…最准的是打12393': 12393 is the national hotline but is routed by the caller's location (my own knowledge), so calling from Suzhou would not reach Anhui's bureau. The advice is muddled, though it adds 'or ask her county bureau'."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word-for-word the same. Both correct the 'family use is fraud' premise at the start, explain cross-province pooling through the 医保钱包, get 2400 yuan right, and recommend 两病 or 门慢 registration. Both share the same weak spots: they suggest paying the resident premium from the wallet, which the key says Anhui has not opened yet; they give a fairly firm '大概能报1200元' headline that depends on 门慢 approval; and they rely on several unofficial Anhui figures. A edges ahead because it names its local limits city by city, which is the form the key prefers, and it points the mother to her own 参保地's 12345 line. B instead turns the city figures into unlabelled 'common' ranges that contradict its own table, and it suggests 12393, which would route to Suzhou. B is a little tighter, and its 'Suzhou was a first-batch pilot' claim checks out against the nhsa link it gives (fetched: 江苏省（苏州市） is in the first batch). A's arithmetic note has a small mismatch with its own table (a 180 limit versus the table's 220)."
+}

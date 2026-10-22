@@ -1,0 +1,55 @@
+{
+ "pair": "p027",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "公开判例里这类案子判返还比例大致五成到全额、多数七成上下；与平台协商通常比法院判的低：无出处，无法核实",
+   "微信本身没有单笔限额开关：未核实，无法确认",
+   "把微信青少年模式列为防线之一，没说明它不限制支付：易误导",
+   "团体标准征求意见稿的说法（平台未落实限额担100%，监护人有过错时平台30%-70%）：我打开了gmw.cn报道，大体属实，但原文是平台未接入实名验证或未执行限额才担100%，答案压缩得略宽松",
+   "钱包里亲属卡、金额隐私保护、登录设备管理等具体微信菜单路径：未逐项核实，有与实际不符的风险",
+   "全文含短版与正式版两封信、客服话术应对、四道闸门、升级路径，篇幅明显过长"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "多数渠道有时间限制，越早越好：无出处，模糊，近似键里说的编造期限陷阱，但没给具体数字",
+   "信里建议退款比例不低于70%（6480x70%=4536）：算术正确，但70%是自拟的谈判锚点，无依据，且主动给自己设了偏低的底线",
+   "信里承认自己没有保管好手机和支付密码、有责任：不是自认成年人消费，但是不必要的让步，会成为对方减免的依据",
+   "苹果账单商户显示Apple时走reportaproblem.apple.com：用户付款走微信支付，此路径多半不适用",
+   "安卓官服走游戏公司的未成年人退款专线：无出处，无法核实",
+   "《未成年人网络保护条例》第四十三、四十四条要求提供消费管理功能、合理限制单次和单日消费：我打开了gov.cn原文核对，属实",
+   "最高法意见（二）只写了全名和内容，没给文号法发〔2020〕17号和第9条：不算错，但不够具体"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "B covers all seven key points: it names the SPC疫情意见(二) with its right holding (no 文号 or article number, so only partly specific), gives the WeChat bill complaint step, 12315, and litigation, and notes that WeChat teen mode does not restrict payment. A has strong opening trap handling, with explicit warnings not to say 'I did it' or 'I agreed' and a letter that never self-admits adult spending. But A never cites the SPC 法发〔2020〕17号 rule, which is the most direct judicial basis, and it omits the WeChat bill complaint route. A is also far too long, with two letter versions plus scripts, four gates and an escalation ladder, and it adds unsourced refund-percentage claims. B's weaknesses are a letter that concedes fault and anchors at 70%, plus a somewhat irrelevant Apple refund route and a vague 'most channels have time limits' line. Overall B is more complete on the key and more concise."
+}

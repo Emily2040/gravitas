@@ -1,0 +1,52 @@
+{
+ "pair": "p065",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says leave cannot lapse unless the employee waives it 'in writing'; the rules require the employee's consent, and the 'written' requirement is an overstatement.",
+   "Adds a speculative wrongful-dismissal scenario (about 4 months' pay as 2N with 2 years' service). The arithmetic is right, but it was not asked for and adds length.",
+   "Says to file arbitration 'within 1 year after leaving'; this simplifies a limitation period that runs from when the person knew or should have known of the infringement.",
+   "Does not name the current basis for 21.75 (人社部发〔2025〕2号); cites 实施办法第十一条 for the divisor instead. Not wrong, but omits the basis the key requires."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says such clauses are 'basically always' held invalid in arbitration and litigation; an unverifiable generalisation with no source.",
+   "Names the body as '杭州市区劳动人事争议仲裁委员会'; Hangzhou's bodies are the city and district 仲裁院, jurisdiction depends on where the employer is, and the name cannot be checked.",
+   "Says the leave-pay base is 'the payable wage' and that a basic-plus-allowance split still counts as 12000; the rule uses the prior 12 months' average wage excluding overtime, so this is loosely stated, though harmless here.",
+   "Does not name the current basis for 21.75 (人社部发〔2025〕2号); cites 实施办法第十一条 instead. Not wrong, but omits the basis the key requires."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct both false premises at the start (60 days and the need for approval), and both write the letter as a 解除劳动合同通知书 rather than an application. Both reach the key numbers: last day 2026-11-25 (Wednesday), 329 days, 4.5068 rounded down to 4 days, daily wage 551.72, and 4,413.79 as the extra 200%. Both explain that 300% already includes normal pay, and both give evidence-keeping steps and 12333 or arbitration. Neither mentions the Shanghai/Jiangsu exception, the Hangzhou ordinance repeal, 劳办发〔1995〕324号, 工资支付暂行规定第十五条 or 人社部发〔2025〕2号. A is more explicit on 第九十条 and on its stated assumptions, but it is longer and adds unrequested material (a wrongful-dismissal 2N scenario, a 'written waiver' point). B is tighter, gives a useful safety margin on the day count and the consequence of late service (11-26), and loses only a little on unsourced generalisations. The gap is small, so B wins slightly on concision."
+}

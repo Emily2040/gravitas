@@ -1,0 +1,51 @@
+{
+ "pair": "p057",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "《快递暂行条例》第二十七条 for 未保价快件: this is the pre-2025-06-01 number; it is now 第二十八条 (checked gov.cn text of the amended regulation), so the citation inside the draft message is outdated.",
+   "《快递暂行条例》第二十八条 for the 7-day complaint handling duty: under the current text 第二十八条 is the 未保价 compensation article and the 7-day duty is 第二十九条 (checked gov.cn); the number is wrong.",
+   "'实务中这类案子常以部分金额和解': generalization about practice with no source, unverifiable.",
+   "Says the carrier must prove 显著提示并说明: 第四百九十六条 says 合理方式提示并说明; 'significant' is a slight overstatement (my own knowledge)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'目标是三千多，底线别低于两千多': a negotiation range given with no basis, unverifiable.",
+   "'诉讼费50元': for a claim under 10,000 yuan the base fee is 50 yuan, but the simplified-procedure halving rule could make it lower; stated as flat fact, not checked.",
+   "'面单上如果写了iPhone 15，你已尽到告知义务，这一点很关键': an unsourced legal conclusion stated too surely.",
+   "'口头同意会被当作双方达成一致': overstated certainty, unverifiable.",
+   "Link to people.com.cn for 第四百九十六条: not opened by me, so unverified. The other links are real: gov.cn 暂行条例 text and hncourt.gov.cn Xinye case both checked and match what B says (about 50,000 claimed, waybill said only 服装, about 13,000 awarded including freight)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by rejecting the 'law says only 54 yuan' premise, with the correct split between 邮政法 第四十七条/第四十五条 and 第五十九条, and both give a polite draft that demands 3999 yuan plus the 18 yuan freight. B is more accurate on the details. It uses the current 《快递暂行条例》 numbers (第二十八条 and 第二十九条, checked on gov.cn), gives the 邮政法 第六十五条 30-day reply and 12305 plus the complaint site, and says plainly that a waybill showing only '手机' with no declared value can reduce the award. Its Henan case is real and matches the court page. A uses the outdated 第二十七条 and puts the 7-day duty under the wrong article. It leaves out 12305 and the 30-day reply, and its risk warning is vaguer. A is shorter and tighter; B is longer, adds a speculative 'two thousand something floor', and wanders into small-claims procedure. Neither mentions 民法典 第四百九十七条, 第五百零六条 or 第八百三十三条, the IMEI, or the one-year complaint deadline."
+}

@@ -1,0 +1,51 @@
+{
+ "pair": "q008",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第二十七条 as the current article; the key says it has been 第二十八条 since 2025-06-01 (27 was the old number), and the link given is the 2018 text. Minor error.",
+   "'协商通常落在几百到接近实际价值之间' is an unverifiable claim about typical settlement outcomes.",
+   "The risk statement says the outcome depends on whether the courier can prove it explained the insurance rules and whether the loss counts as gross negligence. It leaves out the sender-fault reduction (no 保价/声明价值 may mean reduced compensation), which is the key's main risk. This is an omission, not a false statement.",
+   "Checked on the official law text: 《邮政法》第六十五条 is the complaint/申诉 article with a 30-day regulator reply, so that citation is correct."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第二十七条 in both the explanation and the draft letter to the courier; the key says it is 第二十八条 since 2025-06-01. Minor error, and it sits in a message the user would send.",
+   "Says 《民法典》第832、833条 'compensate actual loss'; 第833条 is actually the market price at the place of arrival absent agreement, so this is loose.",
+   "EMS aside 'Art. 47 may apply in principle': Art. 47 is limited to 邮政企业 giving 给据邮件 within the universal-service scope, so this is hedged but imprecise. The Art. 47 third-paragraph wording (故意/重大过失, 足以引起注意) and the Art. 84 definition of 邮政企业 check out against the law text.",
+   "'诉讼费几十元' and the venue rule (被告住所地 or 合同履行地, including 发货地/收货地) are plausible but not verified against official sources.",
+   "Advising to write '此为部分赔付，保留追偿其余损失的权利' is sensible practice but not legally guaranteed to preserve the claim. The 12315 mention is unnecessary but harmless."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers catch the false premise in their opening lines and tell the user not to say '认了'. Both supply a polite draft that rejects 54 yuan, and both cite the old Express Regulation article number 27. A is more precise on the law: it limits Art. 47 to registered mail within universal service, cites Art. 45(2) and Art. 59, cites Civil Code 832/833 with the destination market-price rule, and cites 496/497. A also gives an honest risk statement and correctly cites Postal Law Art. 65 and the 30-day reply. B is stronger on the practical side, with an explicit evidence list (including the courier's admission of loss), a fallback line, the 7-day company-first rule, and the refund of the 18 yuan freight. B's legal basis is thinner: it relies on the Art. 84 definition, loosely says 'actual loss' for 832/833, and gives only a one-line risk caveat. A is slightly ahead on the key points, and B is somewhat longer."
+}

@@ -1,0 +1,54 @@
+{
+ "pair": "p077",
+ "winner": "tie",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'每次不少于5分钟' minimum per learning session: not in Order 163 or the key; local rule at best, unverifiable as a general rule",
+   "'不合格可在24小时内补考2次': the key and Article 27 support 2 resits, but the 24-hour window is unverifiable and local (Beijing link given)",
+   "'每题限时60秒，总时长20分钟' exam timing: Beijing-specific, presented as general (a link is given, so it is checkable for Beijing only)",
+   "'学习完成后...北京为7个工作日' exam deadline: local figure, checkable only through the Beijing link",
+   "'北京等地还会列入黑名单，3个记分周期禁入' for proxy study: Article 26(5) bars applicants with a record of fraud but sets no 3-cycle term; unverifiable",
+   "'分2–3天做...每天2轮' implies several rounds a day and finishing within days; no official data on review time (the key flags this as a trap), though it is offered as a suggestion, not a rule"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'每次不少于5分钟' minimum per learning session: not in Order 163 or the key; local rule at best, unverifiable as a general rule",
+   "'不合格可在24小时内补考2次': the key and Article 27 support 2 resits, but the 24-hour window is unverifiable and local (Beijing link given)",
+   "'每题限时60秒，总时长20分钟' exam timing: Beijing-specific, presented as general (a link is given, so it is checkable for Beijing only)",
+   "'学习完成后...北京为7个工作日' exam deadline: local figure, checkable only through the Beijing link",
+   "'北京等地还会列入黑名单，3个记分周期禁入' for proxy study: Article 26(5) bars applicants with a record of fraud but sets no 3-cycle term; unverifiable",
+   "'分2–3天做...每天2轮' implies several rounds a day and finishing within days; no official data on review time (the key flags this as a trap), though it is offered as a suggestion, not a rule"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "A and B are nearly word-for-word the same. Both open by catching the trap: 6 points at most (Order 163, Article 25), so 10 points only come down to 4. Both say the extra margin rises from 2 to 8 points, explain clearing day, compute 3 hours of study plus exams, and give correct 12123 steps. They share the same gaps: no mention of on-site study (2 points) or public-service activities, nothing on the service being free, and the application conditions leave out the three-cycle bar for drunk driving, hit-and-run and point buying. They also add the same Beijing- and Shenzhen-specific details (24-hour resit window, 5-minute minimum session, 7-working-day exam deadline). The only difference is the table's total row: A writes 222–330 minutes as exact figures and B rounds to 3.7–5.5 hours, and both are arithmetically correct. That leaves a tie."
+}

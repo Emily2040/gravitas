@@ -1,0 +1,53 @@
+{
+ "pair": "p040",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 3,
+  "added_claim_errors": [
+   "'你上次被拒，是因为只说了“是我儿子充的”': made up. The request does not say what the user told customer service.",
+   "'最高法《人民法院审理涉未成年人民事案件工作指引》第27条': a web search shows the SPC issued this guideline on 2026-03-18 with 39 articles, but neither the article number nor the quoted wording could be checked. The link points to a law-firm site, not the official text. The answer also leaves out 法发〔2020〕17号第9条, which the key names.",
+   "中国互联网协会团体标准 '建议的责任比例是30%—70%': press coverage reports this for a May 2024 consultation draft. The standard is presented as settled without confirming it was finally adopted. The answer also leaves out that the same draft puts 100% liability on the provider when it fails to enforce the spending limits. The claims that the standard 'explicitly allows' banning the account after a refund and that it names a mediation channel are unverified.",
+   "'诉讼费50元' for small claims: I judged this from my own knowledge. 诉讼费用交纳办法第16条 halves the fee for simplified procedure, and small claims runs under simplified procedure, so the fee is normally 25 yuan.",
+   "'普通客服没有退款权限，走普通对话必然收到模板回复' and '这个数正好落在行业退费标准里，客服有权限批': unsupported generalisations.",
+   "Safety-lock path '钱包 → 客服中心 → 消费者保护 → 安全保障 → 安全锁': the extra 客服中心 step probably does not match the real menu. The key flags copied menu paths that don't match the app.",
+   "'我 → 设置 → 更多 → 未成年人模式 … 能设微信支付单次和每日消费限额': unverifiable menu path. WeChat calls this feature 青少年模式.",
+   "Hotlines '网易客服 95163611' and '米哈游成长守护': unverifiable. 0755-86013799 is Tencent's known general hotline (from my own knowledge).",
+   "Tencent route via the '腾讯客服公众号 … 上传户口页，等电话回访': process details unverifiable. The key points to the 腾讯未成年人家长服务平台."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 3,
+  "honest": 8,
+  "useful": 6,
+  "concise": 5,
+  "added_claim_errors": [
+   "Lists iPhone Screen Time in-app purchase blocking as a way to stop recharges without saying that it cannot stop direct WeChat Pay payments, which is a partial hit on the key's Screen Time trap.",
+   "'向国家新闻出版署防沉迷举报渠道反映': no specific channel is named, so this cannot be checked."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "missing",
+   "3": "missing",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "A pushes back early on the user's '认了' and gives the legal basis (民法典第19条/145条, plus a real 2026 SPC guideline with the same rule). Its message to customer service rejects the 'adult recharge' conclusion and does not concede adult consumption. It also includes the WeChat Pay complaint channel and correctly warns that Screen Time cannot stop WeChat Pay. A's weaknesses: it is very long, it invents what the user said in the earlier contact, it cites a guideline article and a draft industry standard with more certainty than the evidence supports, it gives a slightly wrong court fee, and it omits 法发〔2020〕17号. B never corrects the premise that real-name registration means no refund, cites no law, and writes a mostly goodwill plea. Its prevention steps are solid, but its complaint path misses the WeChat Pay channel."
+}

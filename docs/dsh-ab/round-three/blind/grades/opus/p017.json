@@ -1,0 +1,54 @@
+{
+ "pair": "p017",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'这 400 元也可以用你的共济额度缴': wrong per key and the NHSA 2026-10-21 Q&A (opened). As of Oct 20, Anhui had not opened premium payment from 共济 funds; expected November.",
+   "'安徽 2027 年居民医保个人缴费不低于 400 元，集中征缴期 2026 年 10 月到 2027 年 1 月底': no source given; unverifiable.",
+   "Table row '两病 50%，高血压年限额 200 元' is presented as the Anhui-wide rule. It matches Tongling's page (opened), not a provincial rule, and the key's Xuancheng example is 55%/450, so it is unlabeled and overgeneralized.",
+   "'安徽规定慢特病门诊支付比例不低于 60%': no source; unverifiable.",
+   "'六安有 500 元起付线' and '铜陵对居民高血压要求伴并发症': no source. The Tongling page (opened) does not say this; unverifiable.",
+   "'绑定近亲属（要户口本等关系证明）': unverifiable. The national flow uses a signed commitment.",
+   "'进口药、部分合资药可能不在目录，共济也付不了': unverifiable/questionable. Personal-account rules on non-catalog drugs vary by locality."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'江苏已在首批支持范围内，你还可以用共济额度直接给母亲缴安徽居民医保的个人参保费…政策明确允许': wrong. The NHSA 2026-10-21 Q&A (opened) lists 8 places where this partly works, Anhui not among them, and the key says Anhui is not open (expected November).",
+   "'8000 ÷ 2400 ≈ 3年3个月': arithmetic slip. 8000/2400 = 3.33 years = 3 years 4 months.",
+   "'跨省共济必须用这个国家级APP': overstated. The key allows the insured place's own channels as well.",
+   "'安徽居民医保的普通门诊和两病门诊都只限在一级及以下基层机构': this is Tongling's rule (page opened) generalized to all of Anhui. Nationally the key says 二级及以下; unverifiable province-wide.",
+   "'结算时提示药店优先使用共济额度' and the '亲情账户' code-switching detail: plausible, not verified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 'family use is fraud' premise at the start. Both explain cross-province family sharing (共济) through the national app's 医保钱包, warn against lending the card or code, compute 2400 yuan a year, and say pharmacy purchases are not reimbursed. Both fall into the same added trap by saying Anhui premiums can already be paid from the shared quota. B labels its reimbursement figures as city examples (Tongling, Wuhu, Huoshan) and gives links; the ones I opened check out, including the NHSA Q&A and the quoted '钱可以共济，码（卡）不能共用'. A gives the same figures as general Anhui rules with no source. A is a little shorter, gets the 3-years-4-months arithmetic right where B slips, and puts more weight on getting the chronic-disease (慢特病) certification first. Overall B's honest sourcing and labeling outweigh this, but only slightly."
+}

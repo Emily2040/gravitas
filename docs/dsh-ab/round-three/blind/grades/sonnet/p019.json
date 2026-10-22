@@ -1,0 +1,51 @@
+{
+ "pair": "p019",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says cross-province ID handling was rolled out nationwide from 2016. The key says full national implementation began on 1 July 2017, so the date is imprecise.",
+   "The Liwan police link is cited as the source, but the path ('jczgk') returns HTTP 404. The working path is 'jczwgk'. The link cannot be checked as given.",
+   "Calls the 12306 report 'CCTV News' but links m.gmw.cn, which is Guangming. The page does confirm the 24-hour validity, 6 uses per month and the paper-proof route.",
+   "Says an expired e-proof 'still counts as one use'. No source, unverifiable.",
+   "Says a temporary ID can be applied for in the home town 'within 3 days' for 10 yuan. Unverifiable; the only 3-working-day figure I found was for cross-district Guangzhou windows.",
+   "Photo receipt priced at 20-30 yuan and a total of 70-80 yuan. Local estimate with no source. The arithmetic (40+10+20 to 30) is correct.",
+   "Tells the user to bring a residence permit or the Yueju code registration. The Liwan page lists only the photo receipt for a lost-card replacement. A flags this as precautionary, but it adds a requirement."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "States flatly that the paper temporary travel proof is free and that giving your ID number is enough. The key lists 'paper proof is always free' as a bait claim, and the cited news article does not mention any fee.",
+   "Gives mailing fees of 18 yuan in-province and 20 yuan out-of-province as if they applied to Guangzhou. The Liwan page does not mention mailing. The only match I found was Shenzhen guides, and one of them says 21 yuan, so this is unverified for Guangzhou.",
+   "Photo cost of 20-40 yuan is an unsourced estimate.",
+   "Says the Zhengzhou guide gives 15 working days for 'within Henan' and then applies it to the user's home town. I confirmed 15 working days on the Zhengzhou page, but it is a Zhengzhou guide, not a statement for all of Henan. The mid-November estimate rests on it.",
+   "Says reporting the card lost needs no appointment and that an old card must be handed in when found. No source, unverifiable.",
+   "Never states the 60-day statutory limit. It gives only the Guangzhou 40-day figure, which matches the Liwan page, so key point 4 is covered only partly."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the two false premises. Both give the Guangzhou route, the 12306 e-proof (24 hours, 6 per month), the 40 yuan fee, the 10 yuan temporary ID with its 5-working-day wait, and say 31 October is not guaranteed for a new card. A also states the 60-day statutory limit (key point 4); B leaves it out. B hits one explicit bait claim by calling the paper proof free, and it presents Shenzhen-style mailing fees as Guangzhou's. B does add the 20 yuan renewal contrast and the 2017 date, and its Liwan link works. A's Liwan link returns 404 and its 2016 date is loose. Net: A is slightly better on key coverage and fewer unsupported fee claims, and slightly shorter."
+}

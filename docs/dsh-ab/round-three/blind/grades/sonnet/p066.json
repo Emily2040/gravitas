@@ -1,0 +1,52 @@
+{
+ "pair": "p066",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 《浙江省企业工资支付管理办法》第19条 for the 5-day wage settlement: the 5-day rule matches the key, but the article number is not in the key and could not be verified from the packet.",
+   "Describes a Zhejiang annual-leave opinion (hrlib.ciic-cloud.cn link) as setting extra 2x pay: the result matches the key, but what that page says is unverifiable here.",
+   "Describes the content of the nys.gov.cn, fujian.gov.cn and gd.gov.cn pages ('official policy interpretation', 'Fujian HRSS says no approval needed'): unverifiable here, and the Fujian and nys.gov.cn sources are not Hangzhou or Zhejiang.",
+   "Says the arbitration limitation period is 'generally 1 year after leaving, file before 2027-11-25': roughly matches the key's one-year point, but the exact end date oversimplifies, since the period runs from when the person knew of the infringement."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Cites 《浙江省企业工资支付管理办法》第19条 for the 5-day wage settlement: the 5-day rule matches the key, but the article number is not in the key and could not be verified from the packet.",
+   "Says 'China Legal Service Network explicitly replied that a notice period over 30 days is invalid because it burdens the worker': a source-checked claim, and the know.12348.gov.cn link could not be verified here.",
+   "Says to 'think about' writing 11月26日 on the letter to avoid a 'one day short' dispute: not wrong, but it hedges the correct 11月25日 date and adds a practical step the key does not cover.",
+   "Mentions possible carried-over unused leave from last year as separate: not part of the request, and under the leave rules carry-over is uncertain; unverified."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 60-day and approval premises at the start, write the letter as a 辞职通知书 (not an application), and get every number right: 11月25日 as the last working day with 11月26日 free, 329 days, 4.51 rounded down to 4 days, 551.72 yuan per day, and 4,413.79 yuan extra (200% on top of wages). Neither mentions the Shanghai/Jiangsu carve-out, the repealed Hangzhou ordinance, 劳办发〔1995〕324号 or 人社部发〔2025〕2号, so key point 1 is vague in both. A is slightly stronger on the legal basis for the wage-deduction point: it cites Art 90, Art 27 and the 20% deduction cap, while B leaves out Art 90. B is slightly stronger on delivery logistics and the handover trap, but it is longer and repeats itself (a 'why invalid' section, a one-line summary, and the hedge about writing 11月26日). Both are too long for the medium, so the difference is slight."
+}

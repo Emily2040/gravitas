@@ -1,0 +1,57 @@
+{
+ "pair": "p045",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the mother's 400-yuan 2027 resident premium 'can be paid from your 共济额度' (这400元也可以用你的共济额度缴). The key says Anhui had not opened this as of Oct 20 (expected November). This is one of the key's listed traps.",
+   "Gives Anhui's 两病 hypertension annual cap as a flat 200 yuan and presents it as the province-wide figure. No source is given, and the key says caps vary by city (e.g. Xuancheng 450).",
+   "Says Lu'an has a 500-yuan deductible for chronic-disease outpatient care. No source is given and the key does not cover it.",
+   "Says Tongling requires complications before resident hypertension counts as a chronic disease. No source is given.",
+   "Gives the 2027 Anhui collection window as October 2026 to the end of January 2027 and the minimum premium as 400 yuan. The key does not cover these and no source is given.",
+   "Says chronic-disease certification needs a diagnosis certificate from a level-2-or-above hospital. Plausible, but no source is given.",
+   "The arithmetic checks out: 2400×60%=1440; (2400−500)×60%=1140; 8000/2400≈3 years 4 months; 8000/960–1260≈6–8 years."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Table inconsistency: the 普通门诊 row gives 150–220 yuan reimbursed (self-pay 2180–2250), but the worked explanation uses a 180-yuan cap (2400−180=2220).",
+   "Headline says the 门慢 route reimburses '约1200元', based on an unattributed 350-yuan deductible. The arithmetic (2400−350)×60%=1230 is right, but the deductible is not tied to a city, and the closing line '居民医保大概能报1200元' is firmer than the evidence supports.",
+   "Says Anhui 两病 and ordinary outpatient care are covered only at 一级及以下 basic institutions. The key's national rule is 二级及以下, and no Anhui source is given for the narrower level.",
+   "Gives city caps (Bengbu 门慢 2000 and 两病 360, Suzhou-in-Anhui 260, Lu'an 150). Only some are backed by the linked pages; the rest are unverifiable.",
+   "Says 门慢 certification needs two non-same-day outpatient records at least 28 days apart within six months, with 60% reimbursement from the following month. The source is a hospital website, not an official one, so this is unverifiable.",
+   "Says 门慢 drugs can be reimbursed at 一类定点零售药店. Unverifiable.",
+   "Says the 共济 quota is frozen once set, and that a lapse in the mother's coverage blocks binding. Unverifiable.",
+   "Says the Suzhou guide confines local family 共济 (江苏医保云) to in-province insured people. A checkable link is given, so this is plausible rather than an error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise in their first lines ('卡不能共用，钱可以共济' vs '说法已经过时了'), compute 2400 yuan, and push the 两病 or 门慢 route before using 共济. A states flatly that the 400-yuan Anhui premium can be paid from the 共济 quota, which is a trap the key lists by name. B only says '可以试着'. A also leaves out reselling drugs as a violation and never says the quota cannot be withdrawn or passed to a third party; B covers both. B is longer, has a small table inconsistency (220 vs 180), and its '约1200元' headline is a bit too firm. Even so, its city figures are labelled and backed by checkable links, so it edges ahead."
+}

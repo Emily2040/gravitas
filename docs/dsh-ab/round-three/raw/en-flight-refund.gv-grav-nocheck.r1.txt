@@ -1,0 +1,30 @@
+The agent has this backwards, and it's worth $412 to you.
+
+When United cancels your flight and you don't take the replacement, DOT rules give you a refund to your original payment method — full fare back on your card within 7 business days for a credit card purchase. The cause is irrelevant: the final rule says the refund obligation "applies irrespective of the reason for a cancellation," weather included. Airlines must also tell you that before offering a credit instead ([final rule, 89 FR 32760](https://www.govinfo.gov/content/pkg/FR-2024-04-26/html/2024-07177.htm)).
+
+So don't take the credit. A credit isn't cash — it's typically good for about a year, tied to your name, and can't be cashed out. "At least a year" is roughly the standard anyway, so you'd be asking for the default in exchange for giving up $412.
+
+Send this instead:
+
+---
+
+**Subject:** Refund request — confirmation [CODE], ORD–DEN, [date]
+
+Hello,
+
+United cancelled my flight from Chicago O'Hare to Denver on [date] (flight [number]). I was rebooked onto a flight the next afternoon, but that didn't work for my trip, so I did not travel.
+
+Please refund the $412 fare to my original form of payment. Under DOT's refund rule (14 CFR part 260), a refund is due when the airline cancels and the passenger doesn't take the alternative, regardless of why the flight was cancelled, and it's due within seven business days for a credit card purchase.
+
+Please confirm the refund and the amount, and let me know if you need anything else from me.
+
+Thank you,
+[Name]
+Confirmation code: [CODE]
+Ticket number: [number]
+
+---
+
+Send it through United's Customer Care form or as a reply to the cancellation email, and keep a copy. If they balk, a [DOT complaint](https://www.transportation.gov/airconsumer/file-consumer-complaint) usually unblocks it.
+
+And if you'd genuinely rather have the credit — say, you fly United often enough that the cash doesn't matter — tell me and I'll swap the ask.

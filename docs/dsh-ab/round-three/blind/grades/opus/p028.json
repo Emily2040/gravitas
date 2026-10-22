@@ -1,0 +1,50 @@
+{
+ "pair": "p028",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'向杭州市区劳动人事争议仲裁委员会申请仲裁': the body's exact name is unverifiable, and the right venue depends on the district where the company sits (judged from own knowledge).",
+   "'在仲裁和诉讼中基本都被认定无效': a general claim about case outcomes with no source. The direction is plausible but it is unverifiable as stated."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'同一条第二十六条规定': 第二十六条 is not part of the same article (第三十七条). It means the same law, so the citation is mislabeled.",
+   "Letter pre-fills '于2024年____月____日入职': the year is assumed from '做了两年' and the user never gave it. It could be wrong.",
+   "Letter puts a paraphrase in quotation marks as the contract clause ('辞职须提前六十日申请、经公司批准后方可离职'). The actual wording is '员工辞职须提前60天书面申请，经公司批准后方可离职', so the quote is inaccurate.",
+   "'向杭州市区劳动人事争议仲裁委员会申请仲裁': the body's exact name is unverifiable, and the venue depends on the district (judged from own knowledge)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "The two answers are almost the same. Both correct the 60-day and approval premises at the start, give a 解除劳动合同通知书 rather than an application, and get the right numbers: 11月25日 (周三) as the last working day, 329 days → 4 days, 551.72 yuan per day, and an extra 200% = 4,413.79 yuan. I recomputed each of these and all are right. Neither mentions the Shanghai/Jiangsu exception or 劳办发〔1995〕324号. A is a little more precise. It cites 第二十五条 for the penalty limit and 第十八条 for the calendar year, shows the month-by-month day count, links the 民法典 and 12333 sources, and quotes the contract clause word for word in the letter. B has small accuracy slips: '同一条第二十六条' and a paraphrased quote of the contract. It also pre-fills an assumed 2024 start date. Both are somewhat long for the task."
+}

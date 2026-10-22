@@ -1,0 +1,49 @@
+{
+ "pair": "q020",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'有的地方最低 300 元': no source given; unverifiable",
+   "'辽宁、合肥的公开标准都是 20 万元以下按 1%—1.2%、不足 200 元按 200 元收': no link or document number for either; unverifiable",
+   "'多数地方对 20 万元以下部分按 1%—1.2% 收取': unsupported generalization; the key's Beijing example is 0.9%",
+   "'如果当地公证处确实按 2% 收 172 元，也可能': treats 2% as a possibly real rate; the key says no official standard uses 2%",
+   "'准备 200—300 元比较稳': under the key's Beijing standard 8600 yuan costs at most 200 yuan; the 300 upper bound has no support",
+   "'继承权公证 数个工作日到数周': timing given without a source; unverifiable (minor)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'实际去办的话，大致在100元到200元之间': contradicts its own point that a common 200-yuan minimum applies, which would make 103 yuan unlikely; minor",
+   "'最多两三百元': the key's Beijing standard gives at most 200 yuan for 8600; the upper bound has no support (minor)",
+   "'农村中小银行最晚2025年底也已落实': states that rollout is finished, while the key gives only the deadline; minor overstatement"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 'must notarize' premise with the 5万元 rule from 金规〔2024〕6号 and 银保监办发〔2021〕18号. Both list the four required materials and give the 12378 escalation path. I checked their cited links: B's '第四条' citation and its Jingning fee notice (published 2026-03-31, at most 1.2%) are accurate, and A's 发改价格〔2021〕1081号 is a real notarization-fee document. B opens with a flat correction and states plainly that any one of the spouse, children or parents can withdraw alone and that the money comes out in one go with interest and the account closed. A hedges on the first two of these ('大概率', '通常') and only mentions account closure in passing. A also leaves the door open to 2% being a real local rate and adds unsourced fee claims (Liaoning and Hefei rates, a 300-yuan minimum in some places). Both run long because of the backup notarization section, but A runs longer, with heavy tables. A's inheritance-share note is correct but does not outweigh these gaps."
+}

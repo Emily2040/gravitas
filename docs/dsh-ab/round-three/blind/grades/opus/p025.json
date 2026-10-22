@@ -1,0 +1,60 @@
+{
+ "pair": "p025",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Applies the 3.6% January 2027 COLA to her $2,400 estimate as certain ($2,486, then $1,740/month). The key flags this as a trap; the right figure is about $1,690.",
+   "Says 70% from '60 months gives exactly 168/240'. She starts April 2027, which is 59 months early (29.58%). Acceptable as an approximation, but stated as exact.",
+   "Table shows $1,222 of Social Security in every month of 2027, with $518/month withholding spread over 12 months. No benefits are paid January to March and SSA withholds whole checks, and the table contradicts the answer's own $7,700 annual figure.",
+   "'Roughly three and a half of them get swallowed': SSA withholds whole checks, so it is four checks, with the small excess repaid later.",
+   "'You'll lose that $6,220 every year until March 2032': the limit rises every year, the FRA year uses a higher limit and a $1-for-$3 rule, and withheld benefits are not simply lost.",
+   "'Waiting to 67 would pay $2,486': this ignores COLAs between now and 2032. Minor.",
+   "Federal tax estimate assumes $14,664 of benefits received in 2027, but actual 2027 receipts are lower. Labelled as an estimate; minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 8,
+  "honest": 6,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "Applies the 3.6% January 2027 COLA to her $2,400 estimate as certain ($2,486, then $1,740/month). The key flags this as a trap; the right figure is about $1,690.",
+   "Says claiming at 62 pays 70%. She is 59 months early (29.58%). Acceptable approximation.",
+   "Table shows $1,222 of Social Security in every month of 2027 with smoothed $518/month withholding, though no benefits come January to March and whole checks are withheld.",
+   "'About $1,740/month less before tax, roughly $1,500 less after' is arithmetic error. $5,567 - $4,389 = $1,178 before tax; $5,567 - $3,824 = $1,743 after tax.",
+   "'Calendar 2027 will deliver about $9,400' counts nine months (April to December) less $6,220. The December benefit is paid in January 2028 and the excess is refunded later, so 2027 cash receipts are about $6,960.",
+   "'Drop to about $25,500 ... come out roughly even on cash' is wrong. Giving up about $12,500 in wages to keep $6,220 in benefits is a net loss of about $6,280 before tax.",
+   "'Budget $500-900/month' for health insurance is unverifiable and unsourced; it depends heavily on location and subsidies.",
+   "'You'll lose that $6,220 every year until March 2032': the limit is indexed each year and the FRA-year rules differ.",
+   "'Waiting to 67 pays about $2,486' ignores COLAs to 2032. Minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "The two answers are nearly identical. Both correct both premises at the start, give the right 2027 earnings-test figures ($25,560 limit, $12,440 excess, $6,220 withheld) and the April 2027 start, and both fall into the COLA trap ($1,740 instead of about $1,690). Both also show a smoothed table that hides the first months with no Social Security, and neither points her to SSA's calculators or her my Social Security account. B adds substantive errors that A avoids: the shortfall comparison is miscomputed ('$1,740 less before tax' when it is $1,178), it says cutting hours would leave her 'roughly even' when that is a net loss of about $6,280, and it gives an unsourced $500-900 health-insurance range. A gets the hours trade-off and the before-tax gap right and cites its tax brackets. B's 'four checks' matches the key slightly better than A's 'three and a half', but that does not outweigh B's arithmetic and advice errors."
+}

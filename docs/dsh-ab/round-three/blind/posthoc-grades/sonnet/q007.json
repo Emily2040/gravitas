@@ -1,0 +1,52 @@
+{
+ "pair": "q007",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Fraud/proxy-exam penalty given as '1000–2000 元' (第三十一条): the article says fraud is 1000元以下 and impersonation 2000元以下, so the range is wrong (I opened the gov.cn text of the 办法).",
+   "Time table is internally inconsistent: components of 30 + 10–20 + 5–15 min sum to 45–65 min per round, but the table says '约50–70分钟'. Stated '理论下限5小时' even though 3 h study + 6×10 min exam is 4 h. The 5–15 min overhead per round is invented.",
+   "'每天 2–3 次，2–3 天减满 6 分': no official source for several applications per day or for the 2–3 day pace (the key warns about timing claims). Unverifiable.",
+   "Specific UI wording ('在线申请', 首页驾驶证卡片上的'可减分', '去学习', '去考试', '网办进度') is stated as fact for all provinces. Unverifiable; only '更多→学习教育业务→学法减分' and 网上学习 are backed by the Beijing page I opened.",
+   "Face recognition 'usually gives 2 chances, two failures void the attempt': the Beijing page confirms random capture but not the 2-chance rule. Unverifiable.",
+   "Shenzhen and Qingdao police links cited for the exclusion list and the on-site/public-benefit rules were not opened; the content matches the 办法 text, which I did check."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Exam 'total 20 minutes' and 'three wrong/unanswered = automatic fail' are not on the Beijing page I opened (the 18/20 pass mark is in the key). A makes the same claims; unverifiable.",
+   "Step 1 '打开12123→首页→驾驶证，确认累积记分和清分日期' and '系统提交申请时会校验' are UI/behaviour details I could not verify.",
+   "Step list has no review/approval step after applying and no face recognition at the application step (the key lists both). This is an omission, not a false statement.",
+   "Exam time 'at most 5 hours' treats 20 min as the cap per exam; plausible given the stated limit, but the 20-minute limit itself is unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying the cap is 6 points and not 10. Both explain the 4-point leftover, the 8-point risk of reaching 12, and the rule that points clear at the cycle end if under 12 and fines are paid. Both also give the 30-minute, 20-question, 18-to-pass, 2-retake details, and a correct list of ineligibility conditions. I checked the 办法 text on gov.cn (Articles 15, 17, 18, 25, 26, 27, 31) and the Beijing steps page. B's 24-hour retake rule, its penalty wording (1000元以下 for fraud, 2000元以下 for impersonation) and its time arithmetic (3 h of study plus at most 2 h of exams, so at most 5 h) all hold up. A has a wrong fine range (1000–2000 元), a time table whose rows don't add up, and a '2–3 days' pace claim with no source. B is also tighter and says plainly that screen names come from Beijing. A is more complete on the flow (审核 step, face recognition at application) and on the no-prestore and 12-point single-violation points. It is also much longer and spends space on extras, which weighs against it on length. On balance B is slightly better."
+}

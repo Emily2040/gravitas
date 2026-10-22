@@ -1,0 +1,49 @@
+{
+ "pair": "p057",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites the unpaid-insurance rule as 《快递暂行条例》第二十七条: that is the old number. Since 1 June 2025 it is 第二十八条 (checked against the key and the gov.cn text of 国令第806号).",
+   "Cites the 7-day complaint deadline as 《快递暂行条例》第二十八条: in the current text it is 第二十九条 (checked on gov.cn, content_7019786). 第二十八条 was the pre-2025 number.",
+   "'实务中这类案子常以部分金额和解' (such cases usually settle for part of the amount): a general claim about practice with no source, so it cannot be verified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "'3999元可适用小额诉讼程序…诉讼费50元': 50 yuan is the base fee for claims up to 10,000 yuan. Small claims is part of the simplified procedure (简易程序), and 诉讼费用交纳办法 第十六条 halves the fee for that, so the likely fee is 25 yuan (from my own knowledge).",
+   "'面单上如果写了iPhone 15，你已尽到告知义务': overstated. Naming the item on the waybill does not declare its value, and no source is given for this conclusion.",
+   "'底线别低于两千多' (do not settle for less than two thousand-odd): a negotiation floor with no stated basis.",
+   "'12305（省会区号+12305）': the dialing rule is plausible but the answer gives no source for it (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 54-yuan premise at the start, using 《邮政法》第47、45、59条, and both give a polite but firm reply that demands 3999 yuan. A uses the old 《快递暂行条例》 article numbers: 27 for unpaid-insurance claims and 28 for the complaint deadline. The current numbers are 28 and 29, which B uses. B also covers more of the complaint route: 12305, the sswz.spb.gov.cn complaint site, and the 30-day reply under 邮政法 第六十五条. B is clearer about the risk: the court may cut the award because the sender did not insure or declare the value. It backs this with the Xinye County case, which I opened at the hncourt.gov.cn link it gives and found accurate. A's reply does ask for the 18-yuan shipping fee back and is a little shorter, while B overstates the court fee and adds an unsupported negotiation floor. Overall B is more accurate and easier to act on."
+}

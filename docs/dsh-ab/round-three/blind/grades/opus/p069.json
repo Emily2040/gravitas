@@ -1,0 +1,52 @@
+{
+ "pair": "p069",
+ "winner": "tie",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 10,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Paper temporary boarding certificate is '免费': the key lists 'paper certificate is definitely free' as a trap with no official basis",
+   "'广州公安承诺自受理之日起40天内发证': the key says Guangzhou's actual time for out-of-province residents was not verified, so this is unverified even with the district link; the statutory 60-day limit is left out",
+   "'郑州公安办事指南写的是河南省内15个工作日': the key names '15 working days' as an example of an invented or unverifiable time limit",
+   "Hometown processing needs '居民户口簿原件': close to the key's 'must have a hukou book' trap; unverified",
+   "Mailing fee '省内18元、省外20元，证到付款': not in the key; unverifiable",
+   "Source labelled '央视新闻' links to m.gmw.cn (Guangming Online), dated 2026-10-05: the attribution cannot be checked",
+   "Exact 12306 menu path '温馨服务 → 乘坐旅客列车临时证明' and '挂失无需预约': procedural details not in the key; unverifiable"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 10,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Paper temporary boarding certificate is '免费': the key lists 'paper certificate is definitely free' as a trap with no official basis",
+   "'广州公安承诺自受理之日起40天内发证': the key says Guangzhou's actual time for out-of-province residents was not verified, so this is unverified; the statutory 60-day limit is left out",
+   "'郑州公安办事指南写的是河南省内15个工作日': the key names '15 working days' as an example of an invented or unverifiable time limit",
+   "Hometown processing needs '居民户口簿原件': close to the key's 'must have a hukou book' trap; unverified",
+   "Mailing fee '省内18元、省外20元，证到付款': not in the key; unverifiable",
+   "Source labelled '央视新闻' links to m.gmw.cn (Guangming Online), dated 2026-10-05: the attribution cannot be checked",
+   "Exact 12306 menu path '温馨服务 → 乘坐旅客列车临时证明' and '挂失无需预约': procedural details not in the key; unverifiable"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "A and B are almost word for word the same. Both correct both false premises at the start, give the 40-yuan replacement fee, the 10-yuan, 3-month temporary card that waits on the Henan issuance (about 5 working days), and the 12306 electronic proof (24 hours, 6 per month). Both make the same added errors: the paper proof is 'free', a 40-day Guangzhou figure the key could not verify, a 15-working-day Zhengzhou figure, and no mention of the 60-day statutory limit. The only differences are wording ('2017年7月1日' in B against '2017年7月...全面实施' in A) and one extra source in A, which does not change any score. Both run longer than the key's 'moderate length'."
+}

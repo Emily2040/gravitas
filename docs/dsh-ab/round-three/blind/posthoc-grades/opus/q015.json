@@ -1,0 +1,46 @@
+{
+ "pair": "q015",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says people who use a stand-in for study or exams 'go on a blacklist' (进黑名单): unverifiable, not in Order 163; Article 31 covers only revoking the reduction, restoring the points and a fine.",
+   "Says 'most cities only offer online study' (多数城市只开了网上学习): an unsourced, unverifiable generalisation."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Opening says the points clear only if you 'add no new points afterwards' (之后不再新增记分): wrong. Under Article 15 the condition is under 12 points with fines paid. B states the right rule later.",
+   "Says '1 point a day, 6 days, fits this week exactly' (正好适合这周): there is no official approval time, so finishing within the week cannot be promised (a trap the key names)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying only 6 of the 10 points can be cleared, leaving 4. Both get the online-study numbers right: 30 minutes, 20 questions, 18 correct to pass, 2 retakes, 3 hours of study in total. A also explains near the top why 'no fear of more points' is wrong (4 + 8 = 12, then the licence is held for full-score study and an exam). B leaves that until later. A lists the full Article 26 exclusions, including drunk driving, hit-and-run and point-buying records. B leaves out those history-based exclusions and opens with a wrong condition for clearing the points ('no new points'). B also says the 6-day plan 'fits this week exactly', even though approval time is not fixed. A is longer than it needs to be, but it is more accurate and easier to act on. I checked both answers' links to Order 163 on gov.cn and they are real. I opened the local pages they cited and found that the 7-working-day (A) and 7-day (B) exam windows each match their own local source."
+}

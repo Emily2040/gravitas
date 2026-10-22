@@ -1,0 +1,51 @@
+{
+ "pair": "p033",
+ "winner": "B",
+ "margin": "decisive",
+ "A": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 7,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第27条 for the uninsured-parcel rule. That is the pre-June-2025 article number; the current number is 第二十八条 (gov.cn text shows Art. 28), so it is outdated.",
+   "Says Art. 47 governs 邮政企业 / 中国邮政的普遍服务业务 and that this settles the point because the user used an ordinary courier. It never gives 第五十九条 / 第四十五条第二款, the actual reason the cap does not reach express parcels, and it implies the split is by company type.",
+   "Names 12315 as a venue to complain to alongside 12305. 12315 is the market-regulation line, not the postal-industry complaint route, so it is misdirected. No 7-day handling period, 30-day answer period or 1-year filing limit is given.",
+   "Claims 'usually at this step the claims position softens a lot'. This is an unsupported prediction.",
+   "The draft writes that not insuring was the user's oversight and proposes settling at 'a percentage of actual loss'. It concedes fault and lowers the ask in writing, and never demands actual loss of 3999 or the 18 yuan freight back. The follow-up line says the term was 'not fully brought to my attention', which the user has not established."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Court fee of 50 yuan for a small-claims case. It is plausible for a claim under 10,000 yuan but not checked against the fee rules.",
+   "'Aim for over 3,000, floor over 2,000' (目标是三千多，底线别低于两千多). This is a judgment call with no stated basis.",
+   "'If the waybill says iPhone 15, you have met your duty to inform' (面单上如果写了iPhone 15，你已尽到告知义务). This is a legal conclusion stated fairly confidently with no source.",
+   "Does not say to ask for the 18 yuan freight to be refunded, and omits the 1-year filing limit for the postal-authority complaint and Civil Code Arts. 497 and 506. These are omissions rather than errors."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "B corrects the premise in its first sentence and gives the key's reasoning: 邮政法 Art. 47 only reaches universal-service mail, and Art. 59 extends only Art. 45(2) to 快件. It uses the current 快递暂行条例 Art. 28 number, which I checked at gov.cn (Art. 28 and Art. 29). It rests the standard-form-term argument on Civil Code Art. 496 and cites 邮政法 Art. 65, which I confirmed gives a 30-day answer period. Its letter demands actual loss in writing without conceding 54 yuan, and it covers evidence, the 7-day and 12305 route, and the risk of a reduced award. Its Henan Xinye County case checks out: about 50,000 claimed, a 'clothing' waybill, about 13,000 awarded. A also corrects the premise, but it uses the outdated Art. 27 number, cites no Civil Code articles, and leaves out Art. 59. Its draft concedes fault and proposes only a percentage settlement, and its complaint route is vague."
+}

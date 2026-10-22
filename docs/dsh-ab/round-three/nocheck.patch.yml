@@ -1,0 +1,6 @@
+# Attribution arm: gv-grav with the claim check off, everything else the same.
+- id: dsh-gravitas
+  config:
+    language: zh-CN
+    alwaysOnRule: true
+    claimCheck: false

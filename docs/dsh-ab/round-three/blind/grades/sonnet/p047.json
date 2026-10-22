@@ -1,0 +1,56 @@
+{
+ "pair": "p047",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 6,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the sharing quota can pay the mother's Anhui resident-insurance contribution (about 400 yuan/year) and that this is explicitly allowed. The NHSA 2026-10-21 Q&A I opened lists eight provinces that support this as of Oct 20 and Anhui is not among them. This is the key's baited trap. The 400-yuan figure is also unverifiable.",
+   "8000 / 2400 = about 3 years 3 months is wrong: 8000/2400 = 3.33 years, i.e. 3 years 4 months.",
+   "The chronic-disease table row (60%, 500 deductible, 1140-1440 yuan) sits under the Tongling heading, but the Tongling page I opened gives no hypertension chronic-disease base limit or deductible. The 500 comes from Huoshan and the 60% from Wuhu, so the row blends cities.",
+   "Says the NHSA specifically clarified 'money can be shared, code cannot' and links nhsa.gov.cn/art/2025/6/6/art_14_16742.html. I did not open it; the slogan and the claim are unverifiable.",
+   "Says to sign a personal commitment letter, and that the mother's code can be switched in via a 'family account' even without a phone. Unverifiable app-flow details.",
+   "Quotes 'depends on cooperation of local designated institutions' as source wording. Unverifiable.",
+   "Says Jiangsu is in the first supported batch for paying the mother's premium. Jiangsu is on the NHSA list, but the mother's province (Anhui) is what matters and it is not listed, so this misleads."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the sharing quota can also pay the mother's resident-insurance contribution, stated as available now. Anhui is not among the eight provinces supporting this as of Oct 20 per the NHSA 2026-10-21 Q&A I opened. This is the key's baited trap, though B gives no amount.",
+   "Hefei two-disease figures (70%, 360 yuan) and the claim that Hefei chronic-disease limits are 'close to 2000' cite a bendibao aggregator and a Wuhu page I could not confirm. The 'about 1200-2000 yuan' upper end and the headline range '0-2000' are speculative.",
+   "Wuhu second-level-and-below deductible of 300 yuan is unverifiable. The Wuhu page I opened gives 60% and a 2500 limit but no deductible. The 1260 result is arithmetically right on that assumption: (2400-300)*0.6 = 1260.",
+   "'7-8 years' at about 1000 yuan/year out-of-pocket is optimistic. B's own range is 400-1200 and the Wuhu example gives about 1140 out-of-pocket, which is about 7 years.",
+   "Specific Anhui chronic-disease recognition rules (two non-same-day records within six months, 28-day interval, complications) cite a hospital website. Unverifiable.",
+   "Says the 2.0 wallet freezes the quota, settles in real time, takes effect at once, returns unused quota on release, and can be handled via an Alipay mini-program. Unverifiable procedural details.",
+   "Says only the 'dual channel' national-negotiated drugs go through pharmacies and that long prescriptions can run 4-12 weeks. Plausible but unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the premise that the account is for the holder only. Both explain the money-not-code rule, the cross-province route from Suzhou to Anhui, the 2400 yuan/year calculation, and the point that ordinary-pharmacy purchases get no resident-insurance reimbursement. Both give clearly local examples (Tongling 50% and 200 yuan, which I confirmed on the Tongling page) rather than a single national number. Both fall into the baited trap by saying the quota can pay the mother's Anhui resident-insurance premium now, when the NHSA Q&A I opened shows Anhui was not yet supported. B edges ahead because it states the 2021/2024/2025 policy chain and the 2026-10-16 launch date that the key asks for, and has no arithmetic slip. A has the 3-year-3-month error, blends cities in one table row, and adds a more specific premium claim (about 400 yuan/year). B's weaknesses are a speculative 0-2000 headline and a wider spread of unverifiable procedural details, so the margin is slight."
+}

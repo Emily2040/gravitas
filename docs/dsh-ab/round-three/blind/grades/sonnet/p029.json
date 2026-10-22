@@ -1,0 +1,52 @@
+{
+ "pair": "p029",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Quoted wording of the notice (应当按照本通知规定办理) is presented as the regulation's original text with no way to check it; unverifiable.",
+   "Card lost: the bank can look up the account from the ID number. This is a bank-procedure claim not in the key; unverifiable.",
+   "Some branches may require all first-order heirs to be present. This leans toward the all-heirs-present trap; the key says one heir is enough and the bank pays one heir.",
+   "Notary minimum fee commonly about 200 yuan per case, plus copy fees, so budget two to three hundred yuan. Not covered by the key beyond the Beijing 200 minimum; the cited Jingning page (opened) states no minimum fee, so the figure is unverified.",
+   "Escalation steps (ask for a written refusal, contact the upper-level bank's operations department) are not in the key; plausible but unverifiable.",
+   "The 1.2% ceiling for inheritance notarization under 200,000 yuan was checked on the cited Jingning County page (opened) and is correct as a local maximum. 8600x1.2% = 103 and 8600x2% = 172 both recompute correctly."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "2% is an old standard still used in many places, and some places still charge 2%. This is unverifiable and contradicts the key, which says no official standard has 2%. It also treats the bank's 2% as a real fee basis (按2%算:172元).",
+   "After the 2021 NDRC and Ministry of Justice document, many provinces changed how fees are calculated. This policy claim has no document number and is unverifiable.",
+   "The 2021 notice sets 10,000 yuan (banks may raise it, up to 50,000). This attributes an upper limit of 50,000 to the 2021 notice; unverifiable and probably not what the notice says.",
+   "Complaints of this kind usually get resolved. This is an unsupported outcome claim.",
+   "The transfer-inheritance caveat (if the grandparents died after the father, the father's siblings may have a share) is legally sound but off the user's stated facts, so it is padding rather than an error.",
+   "8600x2% = 172 recomputes correctly."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "wrong",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the must-notarize premise, cite the 2021 notice and the 2024 rule with the 50,000 yuan threshold, list the right exemption materials, and say to withdraw everything at once and close the account. B is clearer that one person is enough (key point 2), while A hedges that some branches may want all heirs there. The decisive difference is the 2% fee. A says 2% differs from published local standards, backs this with a checkable county standard (1.2% maximum, which I verified), and treats 172 yuan only as a what-if. B calls 2% an old standard that many places still use and computes 172 yuan as a real basis, which contradicts the key and is the listed deduction. Both are long and add some unverifiable procedural claims; A's escalation path is slightly fuller, so A edges ahead."
+}

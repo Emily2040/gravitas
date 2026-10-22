@@ -1,0 +1,48 @@
+{
+ "pair": "p033",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第27条 for the uninsured-item rule: since 1 June 2025 this is 第二十八条, so the number is out of date (a minor error per the key)",
+   "'通常到这一步，理赔口径会松动不少': an unverifiable prediction of how claims staff will react",
+   "The template asserts the clause was '寄件时并未向我充分提示说明' and that the loss was '并非我包装不当': facts the user never stated, written into a message for them to send"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'诉讼费 50 元' for small claims: under 《诉讼费用交纳办法》 simplified and small-claims cases pay half, so about 25 yuan (judged from my own knowledge)",
+   "'面单上如果写了iPhone 15，你已尽到告知义务': overstated, since naming the item is not the same as declaring its value",
+   "'协商阶段目标是三千多，底线别低于两千多': a negotiation floor with no stated basis (unverifiable)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers reject the claim that 《邮政法》 limits the payout to three times the freight. B gets the law right in more detail. It explains how Articles 45, 47 and 59 fit together and cites the current 《快递暂行条例》 article numbers (28 for compensation, 29 for the 7-day complaint), plus 《民法典》496. I opened the gov.cn regulation text and the hncourt.gov.cn case page, and both confirm what B says. A cites the outdated Article 27 and gives no Civil Code articles. B's reply to the courier firmly asks for the actual 3999-yuan loss and gives a concrete complaint path (7 days, 12305, a 30-day reply under Postal Law Article 65); A's reply only asks for a share of the loss and gives no deadlines. B is longer and adds a few small unsupported claims (the 50-yuan court fee, the negotiation floor), which costs it on concision."
+}

@@ -1,0 +1,54 @@
+{
+ "pair": "p037",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 5,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "Table gives the Anhui 两病 benefit as 50% with a 200-yuan annual hypertension limit, as if province-wide; the key says limits are set by each city (Xuancheng 2020 was 450 yuan/yr), so 200 is unverifiable and probably not a province-wide figure.",
+   "States that Anhui requires 慢特病门诊 to pay at least 60%, and gives Wuhu hypertension 2500 yuan/60%, Liuan 500-yuan deductible and Tongling 'with complications' as facts; the key does not cover these and I judged them from my own knowledge only. Unverifiable.",
+   "Quotes Tongling's requirement as '持续1年以上门诊降压治疗记录，每季度至少1次' with no link or document number; quoted wording of a source, unverifiable.",
+   "Says the roughly 400-yuan Anhui 居民医保 premium (collection Oct 2026 to end Jan 2027) can be paid now with the 共济额度; the key says Anhui had not opened this as of Oct 20 (expected Nov). The premium amount and dates are also unverifiable.",
+   "Arithmetic inconsistency: '8000 ÷ 1000 左右 ≈ 6-8 年' (8000/1000 = 8, not a 6-8 range, and 1000 does not match the 960-1260 self-pay range). '一年能少掏 1100-1400' is a loose rounding of the correct 1140-1440.",
+   "Says binding a relative needs 户口本等关系证明, and that re-enrolling after a lapse has a 待遇等待期; neither is in the key. Unverifiable.",
+   "Typo in the closing line: '把他居民医保的慢特病待遇激活' (他 for 她); minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 6,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "Same table: Anhui 两病 benefit of 50% with a 200-yuan annual hypertension limit, presented as the Anhui figure; the key says limits are set locally (Xuancheng 450), so this is unverifiable.",
+   "Same unverified Anhui claims (慢特病 not below 60%, Wuhu 2500/60%, Liuan 500 deductible, Tongling 'with complications'); the key does not cover them and I judged them from my own knowledge only.",
+   "Says the roughly 400-yuan Anhui 居民医保 premium (collection Oct 2026 to end Jan 2027) can be paid now with the 共济额度; the key says Anhui had not opened this as of Oct 20 (expected Nov). The premium amount and dates are unverifiable.",
+   "Says binding a relative needs 户口本等关系证明, and that re-enrolling after a lapse has a 待遇等待期; neither is in the key. Unverifiable.",
+   "'8000 ÷ 960-1260 ≈ 6-8 年' is a loose range (actual 6.3-8.3 years); a rounding, not an error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "The two answers are almost the same text. Both open by correcting the premise, separate legitimate 共济 from 冒名使用, state the Oct 16, 2026 nationwide 医保钱包 2.0 launch, compute 2400 yuan, and recommend 慢特病 recognition before using the wallet. Both fall into the same trap by saying the Anhui premium can be paid with the 共济额度 now. Both also present a table of firm Anhui figures (50%, 200-yuan limit, 60%) where the key wants no hard number, and both omit that the 共济额度 cannot be cashed out or transferred. B is better in three small ways. It shows its arithmetic correctly (1140-1440), it gives a consistent 8000 ÷ 960-1260 range where A writes 8000 ÷ 1000 ≈ 6-8 年, and it drops A's unsourced Tongling quotation and tells the user to confirm required materials with the local 医保局. It also fixes A's 他/她 typo. These make B slightly more accurate and honest, but the shared flaws keep the margin slight."
+}

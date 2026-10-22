@@ -1,0 +1,44 @@
+{
+ "pair": "p038",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "'如果属于公司违法解除……N约为2个月工资（24,000元）': this understates the remedy. For an unlawful dismissal the employee gets 赔偿金 of 2N under Art. 87 of the Labor Contract Law, about 4 months' pay (48,000), not N. Judged from my own knowledge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct both premises (the 60 days and the approval) in the opening. Both write the letter as a 通知, and both reach 11月25日 (or 26日起), 4 days and 4,413.79元, with 300% correctly split into the wage already paid plus 200% extra. I opened B's gov.cn link: the Zhejiang 5-day wage settlement rule is 第十九条 of 《浙江省企业工资支付管理办法》, as B says. B's 20% deduction cap and its Art. 26 and 27 cites are also accurate. B, however, says illegal dismissal gives N (2 months' pay) when it is 2N, and it pads the answer with a 5-day alternative calculation and a script for talking to the manager. A is a little tighter, writes the delivery date into the letter itself, and every extra claim it adds is accurate (实施办法第十八条 on the calendar year, 2N = about 4 months, arbitration is free). Neither mentions the Shanghai/Jiangsu exception or that the Hangzhou regulation was repealed."
+}

@@ -1,0 +1,55 @@
+{
+ "pair": "p030",
+ "winner": "tie",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the two-diseases (两病) outpatient benefit in Anhui is 50% with a hypertension annual cap of only 200 yuan, stated as general. Unsupported: the key's Xuancheng example is 55% and 450 yuan, and my search found no provincial 200-yuan figure.",
+   "Says the 400-yuan Anhui resident premium 'can also be paid with your 共济 quota', with no caveat. The key says Anhui had not opened this as of Oct 20, so this is the baited premise.",
+   "Says Anhui 2027 resident premium is 'not less than 400 yuan' and the collection period is Oct 2026 to end of Jan 2027. Not in the key and not checkable from the answer.",
+   "Cites Wuhu 2500/60%, Lu'an 500-yuan deductible and Tongling 'must have complications' with no source. Unverifiable.",
+   "The 960-1260 yuan out-of-pocket range rests on other cities' rules but is presented firmly, and 'tell me the city and I can give the exact cap' overclaims.",
+   "Says binding a relative needs a household register and similar proof. Unverifiable."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says the transfer rule is at most 3 transfers per day, 2000 yuan each, none from 22:00 to 06:00. I opened the People's Daily page it links and it does list these limits for the national scheme, but the key warns against treating daily-count and amount limits as fixed national rules. B adds 'follow the App's actual prompt', and Wallet 2.0 rules may differ.",
+   "Describes the mechanism as the user 'transferring money' into the mother's wallet. The key describes setting up a 共济 relationship with a quota. Possibly right in practice, but it differs from the key.",
+   "Says 'you can also use the wallet to pay her resident premium (400 yuan in 2026)', with no caveat. The key says Anhui had not opened this as of Oct 20, so this is the baited premise. The 400-yuan figure is also not in the key.",
+   "Gives the chronic-disease (慢特病) criteria as 'Anhui's' rule: two non-same-day visits in the last half year, at least 28 days apart, via the Anhui medical insurance mini-program. It cites only a Ma'anshan reply, so it is a local rule presented as provincial.",
+   "Says that if there is no designated pharmacy, the reimbursement ratio is the same at a township clinic, a community centre or the county hospital. Dubious, because ratios differ by institution tier.",
+   "Gives 'two diseases' as 55% and about 450 yuan a year for hypertension, and 150 yuan for ordinary outpatient, as Anhui figures. These match Xuancheng-type local figures and are generalised to Anhui, though B adds that cities differ slightly.",
+   "Says the 1320-yuan and 1080-yuan results follow from a 200-yuan deductible, 60% and a 2500-yuan cap, citing Guangde and Xuancheng pages. The arithmetic is right, but these are local documents presented as the Anhui rule. I did not open them."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers fix the false premise at the start, separate legitimate 家庭共济 from the real violation (lending your card or code), compute 2400 yuan a year, and recommend getting the mother's hypertension chronic-disease (慢特病) status confirmed first, with the wallet covering the self-paid part. A gives the exact Oct 16 national launch date and a wallet flow closer to the key (link the relative, set a quota, she settles with her own code). B gives the 2021 and 2024 policy specifics and checkable links. Both fall for the premium trap, claiming the shared quota can pay her resident premium when Anhui had not opened it. Both also give firm reimbursement figures where the key wants none: A's 200-yuan cap for 两病 looks wrong, and B's transfer-limit and local-criteria claims are presented as national or provincial rules. Neither says the quota cannot be cashed out, and B is longer. The strengths and faults roughly cancel, so I call it a slight tie."
+}

@@ -1,0 +1,45 @@
+{
+ "pair": "p009",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 8,
+  "concise": 9,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'还会进黑名单' for proxy study or proxy exams: unverifiable. Order 163 Art. 31 (gov.cn text, which I opened) gives revocation, restored points and a fine of up to 1000 yuan, and Art. 26 bars applying for three periods. It mentions no blacklist.",
+   "'多数城市只开了网上学习': unverifiable generalisation with no source.",
+   "'申请、审核、实人认证 约5分钟' per round: there is no official figure for review time, so this implies a review speed nobody has published (though it is hedged as approximate).",
+   "'一轮走完才能开下一轮，不能先攒3小时学习时间再连考6次': not stated in the cited Beijing guide; plausible but unverified (partly hedged by '以APP为准')."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the premise: at most 6 points can be removed, so the driver goes from 10 down to 4. Both also explain that remaining points are cleared on the reset date anyway, that 8 more points would bring the total to 12, and they get the 3-hour learning arithmetic right. B covers more of the key. It gives the 2-retake rule, the 7-working-day exam window and the 5-minute minimum session, all of which I confirmed on its cited Beijing traffic page. It also includes on-site learning (2 points for 1 hour), the check that violations are processed, and the fraud penalties that match Art. 31. A has no on-site learning or public-welfare route at all, and its retake guidance is vague. B is much longer than the request needs and adds a few unverifiable extras (a blacklist, 'most cities'), so its edge is only slight."
+}

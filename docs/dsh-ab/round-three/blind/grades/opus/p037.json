@@ -1,0 +1,57 @@
+{
+ "pair": "p037",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 5,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "Table gives the hypertension 'two diseases' (两病) outpatient annual cap as 200 yuan, as if it held across Anhui: unverifiable, and the key says caps vary by city (Xuancheng 450 yuan)",
+   "Says Anhui rules set the outpatient chronic and special disease (慢特病) payment rate at no less than 60%: no source, unverifiable",
+   "Says Wuhu pays 60% of hypertension chronic-disease costs up to 2500 yuan a year, Lu'an has a 500-yuan deductible, and Tongling requires complications for resident hypertension: city figures with no source, unverifiable",
+   "Gives the chronic-disease annual cap as about 2000-2500 yuan as a general figure: unverifiable",
+   "Quotes Tongling's rule word for word (at least 1 year of outpatient blood-pressure treatment records, at least one visit a quarter): quoted wording with no source, unverifiable",
+   "Says the mother's 400-yuan resident premium can be paid from the family-sharing (共济) quota: wrong per the key, Anhui had not opened this as of Oct 20 (expected November)",
+   "Says Anhui's 2027 individual premium is at least 400 yuan with collection from Oct 2026 to end of Jan 2027: unverifiable",
+   "Says the chronic-disease route saves 1100-1400 yuan a year: does not match its own figures of 1140 and 1440",
+   "Writes 8000 ÷ about 1000 ≈ 6-8 years: 8000/1000 is 8, so the range does not follow from the calculation shown"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 6,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "Table gives the hypertension 'two diseases' (两病) outpatient annual cap as 200 yuan, as if it held across Anhui: unverifiable, and the key says caps vary by city (Xuancheng 450 yuan)",
+   "Says Anhui rules set the outpatient chronic and special disease (慢特病) payment rate at no less than 60%: no source, unverifiable",
+   "Says Wuhu pays 60% of hypertension chronic-disease costs up to 2500 yuan a year, Lu'an has a 500-yuan deductible, and Tongling requires complications for resident hypertension: city figures with no source, unverifiable",
+   "Gives the chronic-disease annual cap as about 2000-2500 yuan as a general figure: unverifiable",
+   "Says the mother's 400-yuan resident premium can be paid from the family-sharing (共济) quota: wrong per the key, Anhui had not opened this as of Oct 20 (expected November)",
+   "Says Anhui's 2027 individual premium is at least 400 yuan with collection from Oct 2026 to end of Jan 2027: unverifiable"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "A and B are almost word for word the same. Both correct the 'only the account holder can use it' premise at the start, separate legal family sharing (共济) from lending your own card, which is the actual violation, give the right Oct 16, 2026 nationwide launch date for the medical-insurance wallet (医保钱包), compute 2400 yuan a year, and send the mother to get her chronic disease registered first. Both share the same flaws. They state an Anhui-wide 200-yuan cap and city figures without sources, they say the sharing quota can pay Anhui's resident premium (a trap the key lists), and they leave out that the quota cannot be withdrawn as cash. B is slightly better: its savings range (1140-1440) and its years estimate (8000 ÷ 960-1260) agree with its own arithmetic, where A's 1100-1400 and '8000 ÷ 1000 ≈ 6-8 years' do not. B also drops A's unsourced Tongling quotation in favor of telling her to call the local insurance bureau or 12345, and it fixes A's pronoun typo (他 for 她)."
+}

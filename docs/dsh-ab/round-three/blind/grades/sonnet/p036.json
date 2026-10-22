@@ -1,0 +1,52 @@
+{
+ "pair": "p036",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Cites a 2026年8月 ce.cn report as confirming the 5万 policy; I could not open it (504), so unverifiable.",
+   "'银行柜台...是按老规定讲的' is a guess about the teller's reasoning, not checkable.",
+   "Gives a 武汉司法局 notary-notice link and a 庄浪县 1.2% fee standard; I did not open these. The key does not cover them, and local fees vary.",
+   "Says 2% was the 1998 national standard with a 200 yuan minimum. I checked drc.gd.gov.cn and it matches 计价费〔1998〕814号, so this is true but outdated. The key's 'no 2% in official standards' is not matched. The answer does say provinces later lowered it.",
+   "'公证书副本费每份10元左右' is unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'有的网点会要求第一顺序继承人都签字' and asking whether all heirs must attend are unverifiable. They partly cut against the key, where one heir suffices and not all heirs need to attend.",
+   "'个别地方可能到300元' is unverifiable and has no source.",
+   "'多数也按最低200元收' is an unsupported generalisation about provincial fee standards.",
+   "Cites a 2026年8月 ce.cn report as confirming '5万元以下免交公证书', and puts it in quotation marks. I could not open it (504), so unverifiable.",
+   "'不需要知道银行卡密码' is plausible but unsourced.",
+   "Gives a 武汉 notary-notice link and a 庄浪县 1.2% standard; I did not open them. '公证书副本费每份10元左右' is unverifiable.",
+   "Says 2% was the 1998 national standard with a 200 yuan minimum. I checked the Guangdong DRC document and it is accurate for 1998, but it conflicts with the key's 'no 2%' claim."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers open with the right correction. A bank balance of 8600 yuan is under the 5万 limit under 金规〔2024〕6号, so no inheritance notarization is needed. Both list the four exemption documents plus the card, say the withdrawal is one-off with the account closed, give 12378, and compute the fees correctly: 172, 103.2 and 86 yuan, with the 200 yuan minimum. They are nearly identical in structure and both run long. Both reproduce the full notarization checklist the user asked for, though the key prefers brevity. A is slightly better. It also cites 银保监办发〔2021〕18号 and links a 12378 source that I verified. It adds fewer unsupported claims. B hedges that some branches need all first-order heirs to sign, which drifts toward the key's 'all heirs must attend' trap, and it adds an unsupported 300 yuan fee ceiling. B's explicit note that 2% is not a nationwide price is a small plus. Neither says to complain to the bank first."
+}

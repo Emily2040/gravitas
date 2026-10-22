@@ -1,0 +1,50 @@
+{
+ "pair": "p020",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "'补考次数和间隔各地可能不同': the key gives a fixed national rule (2 resits allowed), so presenting the resit count as varying by region contradicts it, even with the hedge",
+   "'每次不少于5分钟' minimum per study session: not in the key; unverifiable from my own knowledge (it may be a local Beijing rule)",
+   "Exact button names ('更多'→'学习教育业务'→'学法减分', '在线申请', '去学习', '去考试', '开始考试'): not in the key, plausible but unverifiable; consistent with the key's path",
+   "Exam '20分钟' time limit and 'random photo capture': not in the key; plausible, cited only to a Beijing page I could not check"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 9,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "'每次不少于5分钟' minimum per study session: not in the key; unverifiable from my own knowledge (it may be a local Beijing rule)",
+   "Exact button names ('更多'→'学习教育业务'→'学法减分', '在线申请', '去学习', '去考试', '开始考试'): not in the key, plausible but unverifiable; consistent with the key's path",
+   "Exam '20分钟' time limit and 'random photo capture': not in the key; plausible, cited only to a Beijing page I could not check",
+   "'伪造牌证' added to the Art. 26 exclusions: not in the key, but my own knowledge says Art. 26 does list forged plates and licences, so it is likely correct"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word for word the same. Both open by correcting the premise (at most 6 points, so 10 can only come down to 4), explain the score-clearing rule and the risk of having 4 points left, and get the time right: 6×30 min = 3 h of study, up to 5 h with exams. Neither mentions in-person study (2 points per hour), public-service activities, or that it is free, so key point 5 is missing in both. B ties the exclusions correctly to Article 26 and states them firmly as '不予受理'. A only says applicants 'may be refused', and it adds that the number of resits varies by region, which contradicts the key's fixed 2 resits. B leaves resits to the page prompts instead, which gives B a slight edge on honesty and precision."
+}

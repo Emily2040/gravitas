@@ -1,0 +1,51 @@
+{
+ "pair": "p052",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'Some branches may require all first-order heirs to be present' (hedged, with advice to phone first): this leans toward the key's trap. Article 4 of 银保监办发〔2021〕18号 needs only the applicant's documents and signed commitment letter, and A never says one heir is enough.",
+   "Lists 'your mother's and your ID cards' as required. Only the applicant's ID is needed.",
+   "'Many notary offices set a minimum fee, commonly about 200 yuan per case': a general claim I could not verify (it matches Beijing's 200-yuan minimum).",
+   "Jingning County, Gansu, '1.2% on the portion under 200,000 yuan': a local figure, not verified (link given, not opened). It is consistent with the 200-yuan practical outcome.",
+   "Says the 12378 link is a page about the banking and insurance consumer complaint hotline: the page's content is unverified. The number itself matches the key."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 8,
+  "honest": 8,
+  "useful": 9,
+  "concise": 4,
+  "added_claim_errors": [
+   "'2% was the old standard in many places': unverifiable.",
+   "'After 2021 most localities switched to segmented, declining rates' (citing doc 1058): overstated. I opened the Fujian copy of the NDRC/MOJ 2021 guidance. It sets tiered rates with a first tier of no more than 0.5% mainly for residential-property inheritance, and value-based segmented rates existed before 2021.",
+   "'No password is needed': the 18号文 does not mention passwords, so this is unverified practice.",
+   "'Some sub-branches require all heirs to attend or sign': leans toward the key's trap. It is hedged and follows a correct statement that the mother can apply alone.",
+   "'Notarial certificate copy fee 10 yuan each': unverifiable and varies by locality.",
+   "Zhuanglang County fee table: a local figure, not verified (link given). It is labelled as an example, not a national rate."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers start by correcting the bank's claim that notarization is required, and both cite the 2021 notice (1万元 limit) and the 2024 notice (5万元 limit), list the right documents for the no-notarization route, require a one-time withdrawal and account closure, and give 12378. B states plainly that the mother alone can apply, and it rejects the flat 2% fee more firmly. Its extra specifics check out against the official texts, which I opened on gov.cn: unsettled interest is excluded from the limit, funeral and survivor payments do not count toward it, and the bank must list all missing documents at once. A never says one heir is enough: it lists both IDs and suggests all heirs may need to attend, and it treats the 2% only loosely, as possibly an old figure. B is longer and more padded, with a full notarization section and fee table, which keeps the margin slight."
+}

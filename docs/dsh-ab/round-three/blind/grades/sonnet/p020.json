@@ -1,0 +1,56 @@
+{
+ "pair": "p020",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "Specific 12123 menu path and button names (更多→学习教育业务→学法减分, 在线申请, 去学习, 去考试, 开始考试, 累积记分/网办进度): not in the key, unverifiable and may differ by province/version.",
+   "'每次不少于5分钟', '系统会随机抓拍', 'APP须在前台': app-rule details not in the key, unverifiable.",
+   "Exam 'limit 20 minutes': not in key or the regulation text I checked; unverifiable (the 20题/18题 figures match the key).",
+   "'补考次数和间隔各地可能不同': the key gives a fixed rule (can retake 2 times); this hedge omits it and is probably not accurate.",
+   "'代刷代考会被撤销减分、恢复记分并处罚': the regulation (art. 31) I opened only confirms a fine up to 2000 yuan; the revoke-and-restore part was not confirmed.",
+   "Four listed source links (gov.cn, jtgl.beijing.gov.cn x3, beijing.gov.cn): I opened only the gov.cn one; the Beijing pages are not checked.",
+   "Eligibility bars are listed without the article number and without the 'violations must be handled first' condition."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Specific 12123 menu path and button names (更多→学习教育业务→学法减分, 在线申请, 去学习, 去考试, 开始考试, 累积记分/网办进度): not in the key, unverifiable and may differ by province/version.",
+   "'每次不少于5分钟', '系统会随机抓拍', 'APP须在前台': app-rule details not in the key, unverifiable.",
+   "Exam 'limit 20 minutes': not in key or the regulation text I checked; unverifiable (the 20题/18题 figures match the key).",
+   "'代刷代考会被撤销减分、恢复记分并处罚': the regulation (art. 31) I opened only confirms a fine up to 2000 yuan; the revoke-and-restore part was not confirmed.",
+   "'6轮合计最多5小时，一周内做完时间够': presented fairly firmly. There is no official data on review time, though the answer does add that review and retakes cost extra time.",
+   "Four listed source links: I opened only the gov.cn one; the Beijing pages are not checked.",
+   "Omits 'violations must be handled first' from the art. 26 conditions. The article number, 不予受理 wording and the forged-plate item match the regulation text I opened, so they are not errors."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word for word the same. Both open with the right trap handling (at most 6 points, so 10 can only drop to 4). Both give the clear-day rule with the buffer going from 2 to 8, the risk of 4 + 8 = 12 points with licence detention, and correct arithmetic (6 x 30 min = 3 h of study, up to 5 h with exams). Neither mentions on-site learning (1 h for 2 points), public-welfare activities, mixing the three, or that it is free. Neither gives the 2-retake figure or the regulation article for the 6-point cap. B is slightly better because its eligibility paragraph cites art. 26 and the specific bars. I checked those against the gov.cn text and they are right. A gives a looser list and says retake rules vary by place, which departs from the key's fixed 2 retakes. A keeps a slightly more careful hedge on the one-week claim and a closing 'defer to your phone' line."
+}

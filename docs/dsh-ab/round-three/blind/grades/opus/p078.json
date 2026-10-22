@@ -1,0 +1,44 @@
+{
+ "pair": "p078",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 6,
+  "honest": 6,
+  "useful": 5,
+  "concise": 8,
+  "added_claim_errors": [
+   "'United's credits usually run about a year from the original ticket date': United policy wording the answer could not have checked, and it treats one year as normal when credits in lieu of a refund must stay valid at least 5 years",
+   "'in effect since late 2024': imprecise. The rule took effect June 25, 2024; October 28, 2024 is only the compliance date",
+   "'$412 is very likely refundable': hedges a refund the rule requires for a cancelled flight the passenger did not take"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "missing",
+   "5": "wrong"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 6,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "'United's credits often run about 12 months from the original ticket date, and some require you to fly before the expiry': United policy the answer could not have checked, and it treats 12 months as normal when credits in lieu of a refund must stay valid at least 5 years",
+   "'typically within 7 business days': the rule requires 7 business days for a credit card refund; 'typically' understates it",
+   "'the version United is more likely to owe you': understates it. United owes the refund under 14 CFR 260.6"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague"
+  }
+ },
+ "reasons": "Both answers say at the start that the agent was wrong and that weather does not remove the refund right. Both still draft the message accepting the credit and ask for 12 months, so both miss the 5-year minimum for a credit given in place of a refund. Both also repeat an unchecked claim about how long United's credits last. B is ahead because it cites the actual final rule (89 FR 32760), gives the 7-business-day refund deadline for a credit card purchase, and shows how to turn the letter into a refund request now. A only offers to write that version later and hedges with 'very likely refundable'. A is shorter, but that does not make up the difference."
+}

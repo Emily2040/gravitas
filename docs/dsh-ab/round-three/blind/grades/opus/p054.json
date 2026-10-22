@@ -1,0 +1,56 @@
+{
+ "pair": "p054",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "'2024年12月国家医保局在苏州启动跨省共济': a dated event, backed only by a link I did not open; consistent with the key's 'Suzhou opened before March 2025', but not confirmed",
+   "Step 2 '签个人承诺书': a procedural step with no source; unverifiable",
+   "Bengbu 门慢 numbers (350 deductible, 60%, 2000 limit) and Wuhu numbers (300 deductible, 普通门诊 150, 两病 350): linked to county/city sites but not covered by the key; unverifiable here",
+   "Summary states '居民医保报1230元，家里实际承担1170元' fairly firmly, although it rests on Bengbu figures and an all-in-catalogue assumption",
+   "'如果苏州要求账户先保留2000元': a hypothetical rule with no source",
+   "Anhui 门慢 criteria (two visits at least 28 days apart) are cited to a hospital website, not an official one"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'现在正是2027年度居民医保集中缴费期...也可以试着用医保钱包缴': the key says Anhui had not opened 共济 premium payment as of Oct 20 (expected November); hedged, but it points the user at a listed trap",
+   "'安徽不低于400元' as the individual premium: unverifiable for the 2027 year",
+   "'苏州医保局的办事指南写明...适用对象是本省基本医疗保险参保': a claim that a source was checked, linked but not verified here",
+   "'你妈也要开医保钱包...带身份证去参保地医保窗口或乡镇便民中心': a procedural step with no source",
+   "City limits for Suzhou (宿州) 260 and Lu'an 150, and Wuhu 门慢 2500: unverifiable; the Suzhou and Lu'an figures have no link",
+   "'两病备案...通过后下月起' and '门慢通过后次月起报60%': unsourced timing claims",
+   "Inconsistent figures: the table says about 1200 reimbursed / 1200 self-paid, but the worked arithmetic gives 1230 / 1170; the table's 普通门诊 220 is never explained",
+   "'安徽居民医保普通门诊和两病门诊只报一级及以下': narrower than the national 二级及以下 rule in the key; unverifiable for Anhui"
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers reject the premise up front, explain the cross-province 医保钱包 family pooling, compute 2400 yuan correctly, and give city-specific reimbursement figures labelled as examples, with 门慢/两病 steps. A gives the policy specifics for the premise (2021 scope: spouse, parents, children; 2024 expansion to near relatives) and the penalties under the 条例, and it is tighter. B never names who may use the account. B does mention the 2.0 national launch and the no-third-party rule, but it nudges the user to try paying the premium through 共济, which the key flags as not yet available in Anhui. B is also longer, and its figures disagree with each other (1200 in the table vs 1230 in the arithmetic). A states its 1230 conclusion somewhat firmly and omits the no-cash-out/no-transfer rule, so the margin is slight."
+}

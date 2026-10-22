@@ -1,0 +1,50 @@
+{
+ "pair": "p041",
+ "winner": "tie",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'有的网点可能要求所有第一顺序继承人都到场': the 2021 notice (which I opened on gov.cn) asks only for the applicant's documents and commitment letter, and the key says the bank pays one heir with no need for all heirs to attend. The hedge still steers toward a known trap.",
+   "'你妈妈和你的身份证': only the applicant's ID is required (2021 notice, Article 4). Small over-requirement.",
+   "Death proof 'cremation certificate or police household-cancellation certificate, any one will do': the notice gives a death certificate as its example. That any one of these alternatives alone will be accepted is unverifiable.",
+   "'不少公证处会设最低收费，常见200元/件左右': a generalization with no source. The Jingning page it cites sets no minimum for inheritance (I checked). Beijing's 200-yuan minimum in the key partly supports it.",
+   "Calling the 2% figure '可能是旧说法' is speculation. Nothing shows 2% was ever an official rate, and the key says no official standard has 2%."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'有的网点可能要求所有第一顺序继承人都到场': the 2021 notice (which I opened on gov.cn) asks only for the applicant's documents and commitment letter, and the key says the bank pays one heir with no need for all heirs to attend. The hedge still steers toward a known trap.",
+   "'你妈妈和你的身份证': only the applicant's ID is required (2021 notice, Article 4). Small over-requirement.",
+   "Death proof 'cremation certificate or police household-cancellation certificate, any one will do': the notice gives a death certificate as its example. That any one of these alternatives alone will be accepted is unverifiable.",
+   "'不少公证处会设最低收费，常见200元/件左右': a generalization with no source. The Jingning page it cites sets no minimum for inheritance (I checked). Beijing's 200-yuan minimum in the key partly supports it.",
+   "Calling the 2% figure '可能是旧的说法' is speculation. Nothing shows 2% was ever an official rate, and the key says no official standard has 2%."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word for word the same. Both open by correcting the 'must notarize' premise and cite both documents with working gov.cn links: 2021 No.18 and 2024 No.6, effective June 1, 2024, 50,000-yuan limit, rural banks by end of 2025, accounts at one bank combined. Both list the right non-notarized materials, require a one-time withdrawal and account closure, and give 12378. Both make the same small slips: they hedge that some branches may want all heirs present, they ask for both IDs, and they handle the 2% fee loosely with a verified Jingning 1.2% example (8600×1.2%≈103 and 8600×2%=172 are both correct). The only real difference is that B links 12378 to the real 2023 NFRA/PBOC/CSRC announcement, which I verified, while A names it the way the key does. That is too small to choose between them."
+}

@@ -1,0 +1,47 @@
+{
+ "pair": "p021",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 8,
+  "concise": 9,
+  "added_claim_errors": [
+   "'6轮合计最多5小时，一周内做完时间够' leans toward saying it can be finished within a week, but there is no official figure for review time. The answer does hedge right after, noting that review and retakes take extra time."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'实际需要留出4–5小时' contradicts B's own table total of 222–330分钟 (3小时42分–5小时30分). The arithmetic in the table is right; the summary sentence understates the upper bound.",
+   "'审核结果通过短信/APP消息告知' is unverifiable: the cited Beijing operation page does not mention notification by SMS.",
+   "'分2–3天做更从容（每天2轮）' assumes reviews come back fast enough for two rounds a day, and there is no official figure for review time.",
+   "'交管12123上最多只能减6分' frames the cap as a limit of the app rather than the per-cycle rule (第二十五条). This is minor, because the next sentence cites the article correctly."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying 10 points cannot all be cleared and the limit is 6, leaving 4. Both explain that leftover points clear on the reset date anyway, warn about the buffer going from 2 to 8 points, and give the same app path. Their time arithmetic is correct: 180 min of study plus up to 120 min of exams. B's extra rule details hold up against the cited Beijing and Shenzhen pages I opened: 60 s per question, retakes within 24 h, the 7-working-day exam deadline, and the rule that one study block earns only one exam attempt. However, B is much longer, its 4–5 h summary contradicts its own 3h42–5h30 table, and its eligibility list leaves out the disqualifier for drunk driving, hit-and-run or buying and selling points in the last three cycles. A cites 第26条 and covers that disqualifier. A is tighter and closer to the key's ideal answer of moderate length. Neither answer mentions on-site learning, public-service activities, or that the scheme is free."
+}

@@ -1,0 +1,49 @@
+{
+ "pair": "p004",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Paper temporary boarding proof at the station window is '免费': the key lists this as having no official basis, and A's own cited gmw article does not say it",
+   "List of provinces not open for self-service (湖南、湖北、江西、上海、天津、黑龙江、青海、新疆): unverifiable; the cited Huadu page would not load (DNS failure)",
+   "Photo receipt '一般20—30元': unverifiable specific figure; the key says the cost varies by place",
+   "Self-service machines '凭粤居码、免预约，部分点位24小时开放': unverifiable",
+   "'别截图' for the 12306 QR code: not in the cited source (the source only says the code refreshes every 60 s and needs face re-check after 30 min)",
+   "Loss report '免费，几分钟': unverifiable (minor)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Henan temporary ID '3日内发放，很多地方当场可取': the 3-day limit is plausible, but 'same day in many places' echoes the key's same-day trap and is unverifiable (the cited Zhongmu page does not cover temporary IDs)",
+   "Guangzhou temporary ID '最快5至7个工作日': the cited 12345 reply was not checked; partly unverifiable",
+   "'河南户籍地补办一般2至3周': generalized from one county guide (Zhongmu says 15 working days within Henan, which I verified); not confirmed for other places",
+   "'按2024年须知' Henan is not on the not-yet-open list: the date and list are unverifiable (no link given for that claim)",
+   "Booking path via '广州公安'公众号 → '政务服务' → '户政预约': unverifiable (minor)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers correct both baited premises at the start, give the right fees (40 yuan to replace, 10 yuan for the temporary ID), and send the user to 12306's electronic proof (24 hours, 6 times a month). I opened the Liwan notice: it confirms the 40-day Guangzhou time limit both answers cite. I also opened the 12306 articles each answer cites and the Zhongmu guide; both articles confirm the 12306 rules, and the guide confirms B's 15 working days. A falls into the key's trap of calling the station's paper proof certainly free, and it never gives the 60-day legal limit. B mentions the 60-day legal cap and is somewhat tighter. B's one weak spot is saying the temporary ID can be collected on the spot in many Henan offices, which it only says for the go-home option. A's 5-working-day date arithmetic for the temporary ID is more precise, but A is longer and adds more unverified specifics, so B wins narrowly."
+}

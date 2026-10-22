@@ -1,0 +1,55 @@
+{
+ "pair": "p013",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "WeChat 安全锁 path (客服中心 → 常用工具 → 消费者保护 → 安全保障 → 安全锁) rests on one media article; menu names vary by app version, unverifiable",
+   "\"多数渠道有时间限制，越早越好\": no channel or deadline named, unverifiable",
+   "\"普通客服的权限和口径就是按实名信息判断；转到退款专员才可能重新看\": claim about the game company's internal process, unverifiable",
+   "\"12315 不受理就打 12345，要求转新闻出版或市场监管\": referral procedure with no source, unverifiable",
+   "Names only \"腾讯成长守护\" for Tencent, not the key's 腾讯未成年人家长服务平台, and the user never said the game is a Tencent game",
+   "Letter says the amounts far exceed the 2019 caps and the company failed to block them: the account is registered as an adult (parent's ID), so the caps may not have applied; the argument is stretched (same in B)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "Apple refund request \"90 天内\": I opened Apple's official refund page (support.apple.com/zh-cn/118223); it gives no 90-day window and says eligibility varies by country or region. This is the invented-deadline pattern the key warns about.",
+   "WeChat bill export path \"右上角“…” → 下载账单 → 用于证明/报销\": a web search gave 账单 → 常见问题 → 下载账单, with options 用于个人对账 / 用作证明材料, so B's entry point and option names do not match",
+   "\"诉讼费 50 元、简易程序减半\": roughly right under the 诉讼费用交纳办法 (my own legal knowledge, source not opened), but ambiguous, since the simplified-procedure fee may be 25 yuan, not 50",
+   "Detailed menu paths for WeChat and Alipay (支付设置, 安全锁, 生物支付, 账号与安全 → 安全中心) with no source; may not match the user's app version, unverifiable",
+   "\"多数渠道有时间限制，越早越好\": no channel or deadline named, unverifiable",
+   "\"普通客服的权限和说法就是实名是成年人，不退\": claim about the game company's internal process, unverifiable",
+   "Letter says the amounts far exceed the 2019 caps and the company failed to block them: the account is registered as an adult (parent's ID), so the caps may not have applied; the argument is stretched (same in A)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "The two answers are nearly identical. Both correct the \"real-name means adult recharge\" premise at the start. Both write a letter that states the child is 11, gives 十余笔 and 6480 yuan, asks for a full refund, offers evidence and does not admit adult spending. Both cite 民法典 第十九条 and 第一百四十五条 plus the Supreme People's Court 意见（二）. Both give the right complaint path (customer service, WeChat order complaint, 12315, lawsuit) and the right payment fixes (免密, biometrics, password). Neither gives 法发〔2020〕17号 第9条, and neither says courts often reduce the refund for guardian negligence or reject claims with weak proof, so points 3 and 5 are equally thin, and both are far too long. The difference is in the extra specifics. B states an Apple \"90 天内\" window that Apple's own page does not give, which is the invented-deadline pattern the key warns about. B also has a WeChat bill-export path that does not match the real interface, and many unsourced menu paths. A stays vaguer on those points and attaches official links, which makes it a little safer. B's better Tencent platform naming and its 2021 notice link do not make up for that, so A wins slightly."
+}

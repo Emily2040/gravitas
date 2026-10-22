@@ -1,0 +1,52 @@
+{
+ "pair": "p038",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"除非你本人书面提出不休，否则不能作废\" is stated a little too broadly. The 实施办法 art. 10 para. 2 supports the written-request rule, but leave can also be carried into the next year with the employee's consent (art. 9).",
+   "The cited source links (12371.cn, sft.gd.gov.cn, chinajob.mohrss.gov.cn) were not opened. They are unverifiable here, and the 民法典 art. 201 link is a Guangdong reply that only quotes the article.",
+   "Checked and correct (not errors): art. 18 (年度 = 公历年度), art. 11 (21.75) and art. 12 (折算) of the 实施办法, opened on gov.cn. The art. 50 and art. 89 citations, the 2N = about 4 months figure, free arbitration, and the 329-day and 4.5068 arithmetic were checked from my own knowledge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "The N = about 2 months (24,000 yuan) line is attached to \"公司违法解除\". In that case the amount would be 2N (48,000), so the sentence is imprecise.",
+   "\"浙江省年休假意见：除正常工资外，额外支付2倍\" is sourced to a commercial site (hrlib.ciic-cloud.cn) that was not opened. It is unverifiable here, though it matches the national rule.",
+   "The other cited links (nys.gov.cn, the Fujian HRSS page, gd.gov.cn) were not opened. They are unverifiable here.",
+   "The 5-day alternative (5 × 551.72 × 300% = 8,275.86, extra 5,517.24) is arithmetically right but is speculative padding on top of the requested figure.",
+   "Checked and correct (not errors): the Zhejiang wage-settlement rule (5 days from completing the termination procedures, 《浙江省企业工资支付管理办法》第19条), opened on gov.cn. The 20% monthly wage-deduction cap and the 劳动合同法 art. 26(1)(2)(3), art. 27 and art. 30 citations were checked from my own knowledge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the baited premises at the start and give the right figures: last working day 2026-11-25 (11-26 onward free to leave), 4 days of leave, 551.72 yuan per day, and 4,413.79 yuan extra with the 300% explained as already including normal wages. Both frame the letter as a notice with delivery evidence, and both cite the 劳动合同法 articles 25, 26, 37 and 90. Neither mentions the Shanghai and Jiangsu exceptions or the repealed 杭州 ordinance, and neither makes an error on those points. Neither cites 劳办发〔1995〕324号 or 人社部发〔2025〕2号, and neither cites 工资支付暂行规定 art. 15. A leads with all three answers (the clause is unenforceable, the date, the amount) and is shorter. B adds correct extras (the Zhejiang 5-day wage rule, the 20% deduction cap) but runs longer, with a dialogue script, draft arbitration requests and a 5-day variant, which the key penalises as length. This makes it a close call, with a slight edge to A for concision and a clearer lead."
+}

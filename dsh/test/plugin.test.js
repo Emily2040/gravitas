@@ -95,8 +95,8 @@ test('language: config wins, then the system locale, then English', () => {
   assert.throws(() => plugin.readConfig({ langauge: 'ja' }), /unknown config key/)
   assert.throws(() => plugin.readConfig({ alwaysOnRule: 'yes' }), /true or false/)
   assert.throws(() => plugin.readConfig({ claimCheck: 'on' }), /claimCheck must be true or false/)
-  assert.equal(plugin.readConfig({}).claimCheck, true)
-  assert.equal(plugin.readConfig({ claimCheck: false }).claimCheck, false)
+  assert.equal(plugin.readConfig({}).claimCheck, false, 'the claim check is opt-in')
+  assert.equal(plugin.readConfig({ claimCheck: true }).claimCheck, true)
 })
 
 for (const lang of plugin.LANGUAGES) {
@@ -144,7 +144,7 @@ const text = (t) => [{ type: 'text', text: t }]
 
 test('claim check: steers once with the unsupported specifics, then lets the revision close the turn', async () => {
   const { ctx, listeners } = fakeCtx()
-  await plugin.apply(ctx, { language: 'zh-CN', alwaysOnRule: true })
+  await plugin.apply(ctx, { language: 'zh-CN', alwaysOnRule: true, claimCheck: true })
   const t = fakeTurn(listeners)
   t.emit('turn/start', { turn: 1 })
   t.emit('user/message', { role: 'user', content: text('我月薪6525元，国庆加班怎么算？'), source: { kind: 'user' } })
@@ -167,7 +167,7 @@ test('claim check: steers once with the unsupported specifics, then lets the rev
 
 test('claim check: an echoed shell line, a file the model wrote, or a subagent report is not evidence', async () => {
   const { ctx, listeners } = fakeCtx()
-  await plugin.apply(ctx, { language: 'en', alwaysOnRule: true })
+  await plugin.apply(ctx, { language: 'en', alwaysOnRule: true, claimCheck: true })
   const t = fakeTurn(listeners)
   t.emit('turn/start', { turn: 1 })
   t.emit('user/message', { role: 'user', content: text('Who do I call?'), source: { kind: 'user' } })
@@ -192,7 +192,7 @@ test('claim check: GRAVITAS_CLAIM_LOG records the draft check and what the revis
   process.env.GRAVITAS_CLAIM_LOG = file
   try {
     const { ctx, listeners } = fakeCtx()
-    await plugin.apply(ctx, { language: 'en', alwaysOnRule: true })
+    await plugin.apply(ctx, { language: 'en', alwaysOnRule: true, claimCheck: true })
     const t = fakeTurn(listeners)
     t.emit('turn/start', { turn: 1 })
     t.emit('user/message', { role: 'user', content: text('My ticket was $412.'), source: { kind: 'user' } })
@@ -213,7 +213,7 @@ test('claim check: GRAVITAS_CLAIM_LOG records the draft check and what the revis
 test('claim check: no steer when every specific is supported, for subagents, or when switched off', async () => {
   const quiet = async (config, origin, answer) => {
     const { ctx, listeners } = fakeCtx()
-    await plugin.apply(ctx, { language: 'en', alwaysOnRule: true, ...config })
+    await plugin.apply(ctx, { language: 'en', alwaysOnRule: true, claimCheck: true, ...config })
     if (!listeners['agent/turn-stopping']) return 0
     const t = fakeTurn(listeners, { origin })
     t.emit('turn/start', { turn: 1 })

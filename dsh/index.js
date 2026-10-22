@@ -51,7 +51,9 @@ export function readConfig(config = {}) {
   }
   const alwaysOnRule = config?.alwaysOnRule ?? true
   if (typeof alwaysOnRule !== 'boolean') throw new Error('dsh-gravitas: alwaysOnRule must be true or false')
-  const claimCheck = config?.claimCheck ?? true
+  // Off by default: in round three of the DSH A/B the check made answers longer and graders
+  // preferred the same rule without it (docs/dsh-ab/round-three).
+  const claimCheck = config?.claimCheck ?? false
   if (typeof claimCheck !== 'boolean') throw new Error('dsh-gravitas: claimCheck must be true or false')
   return { language: resolveLanguage(config?.language ?? 'auto'), alwaysOnRule, claimCheck }
 }

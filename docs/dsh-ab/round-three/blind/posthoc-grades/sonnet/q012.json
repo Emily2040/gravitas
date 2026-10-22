@@ -1,0 +1,51 @@
+{
+ "pair": "q012",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Temporary ID 'fastest 5 to 7 working days' is credited to the Guangzhou 12345 reply. The page I opened gives only the 5-working-day household-place limit and no 5-7 day figure, so it is unverifiable.",
+   "Temporary ID 'issued within 3 days, often on the spot' sits next to the Zhongmou County guide, which does not mention temporary IDs (I opened the page). The claim is unverifiable as sourced.",
+   "Home-town timing 'generally 2 to 3 weeks' rests on one county guide (Zhongmou: 15 working days in Henan, 25 calendar days otherwise). It is hedged, but the key does not cover it.",
+   "'New card about early December' is 40 days from now. The arithmetic is fine and the Lw.gov.cn notice does say 40 days, but the key treats Guangzhou timing for out-of-province holders as unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says the paper temporary travel proof is 'free, valid for the day of travel'. The key lists 'paper proof is always free' as a trap because there is no official basis.",
+   "The first Lw.gov.cn notice link has a typo (jczgkk instead of jczwgk). I opened it and got a 404, so the link does not work.",
+   "'Guangzhou has accepted out-of-province replacement since March 2017' is unverifiable and not in the key.",
+   "'First-time applications now work across provinces too' is unverifiable and not in the key.",
+   "'QR code refreshes every 60 seconds' is unverifiable.",
+   "Temporary ID 'about 1-2 weeks' in Guangzhou, and 'on the spot or within 3 days' at the home-town office, have no source. Both are unverifiable.",
+   "Loss reporting 'free, done on the spot' and 'Guangzhou has supported remote loss reporting since 2016' are unverifiable. I did not open the Panyu link.",
+   "Temporary ID 'can only be applied for at the district centre that handles your formal card', and a photo receipt costing 20-30 yuan, are unverifiable.",
+   "A list of identity documents to bring (household register, residence permit, driving licence, passport, social security card, 'one that can verify identity') is unverifiable. The Lw.gov.cn notice I opened lists only the photo receipt."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers catch both false premises at the start and give the correct core facts. Each says to renew in Guangzhou, use the 12306 e-proof (24 hours, 6 per month) or the station paper proof, pay 40 yuan for the card and 10 yuan for the temporary ID (3 months), and not count on the temporary ID by 10/31. Neither mentions the 30-day extension of the 60-day limit. A is tighter and avoids the key's trap: it never says the paper proof is free. Its links check out (the gmw page is credited to CCTV and matches the 12306 path it gives; the Lw.gov.cn notice confirms 40 yuan and 40 days). B repeats the home-town material three times (summary, section 4, table), says the paper proof is free, has a dead Lw.gov.cn link, and adds several unsourced specifics (QR refresh every 60 seconds, 1-2 weeks, a document list). B's table and to-do list are handy, but A leads to the same actions in less space with fewer unverifiable claims."
+}

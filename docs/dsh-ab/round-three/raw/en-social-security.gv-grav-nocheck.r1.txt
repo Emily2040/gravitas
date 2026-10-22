@@ -1,0 +1,61 @@
+Two things in your plan don't work the way you've described, and together they cut your 2027 Social Security income from the ~$24,000 you're expecting to roughly $7,000. The budget below reflects how the rules actually work.
+
+## What's wrong
+
+**The 40 years don't protect you from the early-claiming reduction.** Forty credits (about 10 years of work) is the threshold for being insured at all. Past that, the reduction is purely actuarial and based on how many months before 67 you start. Your full retirement age is 67, so claiming at 62 cuts your benefit by 5/9 of 1% for each of the first 36 months and 5/12 of 1% for each month beyond — 30% total. You get 70%, permanently ([20 CFR 404.410](https://ecfr.io/Title-20/Section-404.410)).
+
+**Working while claiming triggers the earnings test.** Below 67, SSA withholds $1 of benefits for every $2 you earn above $25,560 in 2027 ([(SSA 2027 figures)](https://www.ssa.gov/news/en/cola/factsheets/2027.html)). At $38,000 you're $12,440 over, so SSA keeps about $6,220 — roughly four of your monthly checks. This has nothing to do with your work history.
+
+Also, since you were born on the 18th, you aren't 62 for all of March. The earliest month you can be paid for is April 2027, so your first check arrives in May ([POMS RS 00615.015](https://secure.ssa.gov/poms.nsf/lnx/0300615015)).
+
+## Your actual benefit
+
+Your statement's $2,400 is in the dollars of the year it was printed. Assuming 2026:
+
+| | Amount |
+|---|---:|
+| 2027 full benefit at 67 (with 3.6% COLA) | $2,486 |
+| Benefit at 62 (70.4%, 59 months early) | **$1,750** |
+| What you expected | $2,400 |
+
+## 2027 monthly budget
+
+You'd be entitled for April–December, so nine months. About four of those checks get withheld, leaving roughly four payments of $1,750 landing in calendar 2027.
+
+| 2027 | Per month (avg) | Year |
+|---|---:|---:|
+| Part-time job, gross | $3,167 | $38,000 |
+| Social Security (≈4 checks × $1,750) | $583 | $7,000 |
+| **Gross income** | **$3,750** | **$45,000** |
+| FICA (7.65% of wages) | −$242 | −$2,907 |
+| Federal income tax (single, standard deduction) | −$258 | −$3,094 |
+| State income tax | varies | — |
+| **Net** | **≈$3,250** | **≈$39,000** |
+
+In 2028, your first full year, you'd get eight checks instead of four — about $14,000 — bringing net to roughly **$3,780/month**. From 2028 through 2031 that's the pattern: twelve months of entitlement, four checks withheld.
+
+A few things that will move this:
+
+- **Medicare at 65** (March 2030): Part B premiums start coming out of that check, so budget roughly $200/month in today's terms.
+- **The earnings test ends in March 2032**, the month you turn 67. After that you can earn any amount with no withholding.
+- **Withheld checks aren't lost.** At 67 SSA recomputes your benefit upward to credit the withheld months, so part of the early-claiming reduction gets restored. The rest is permanent.
+- **Taxes.** I assumed single with the standard deduction. Married filing jointly would lower the federal figure. I couldn't estimate state tax without knowing your state.
+- **Report your earnings estimate when you apply.** Understating it creates an overpayment you have to repay.
+
+## Before you file
+
+At 62 you lock in $1,750. At 67 you'd get $2,486:
+
+| Claim at | Monthly |
+|---|---:|
+| 62 | $1,750 |
+| 64 | $1,990 |
+| 65 | $2,155 |
+| 67 | $2,486 |
+| 70 | $3,083 |
+
+Because the earnings test eats four checks a year anyway, claiming now gets you only about $63,000 by the time you hit 67 — and after that you're roughly $470/month behind for life. Break-even lands around age 78, give or take a couple of years.
+
+That doesn't automatically mean wait. If you need the cash to cover 2027, claiming is the right call, and you can change your mind once — SSA lets you withdraw an application within 12 months if you repay what you received. But if your paycheck covers you, waiting is likely worth well over $50,000 in lifetime benefits. It's worth pricing out before you sign.
+
+If you do want the April start, apply in December 2026 — SSA takes applications up to four months ahead.

@@ -1,0 +1,49 @@
+{
+ "pair": "p063",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第二十七条 for unsaved-item compensation: that is the old number; since 2025-06-01 it is Art. 28 (per key; confirmed on elawcn.com text of the 2025 revision).",
+   "Cites 《快递暂行条例》第二十八条 for the 7-day complaint duty: in the 2025 text that is Art. 29 (Art. 28 is now the compensation article), so the citation mixes in old numbering.",
+   "'全额3999元有明确依据' overstates: Civil Code 833 measures by destination market price, and courts may reduce for an unsaved, undeclared item (key point 7)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第27条 for unsaved compensation: old number; Art. 28 since 2025-06-01 (per key).",
+   "'如果是EMS/中国邮政，第47条原则上可能适用' is misleading: Art. 47 applies only to universal-service mail (Art. 45(1)); EMS express is outside universal service and goes to civil law via Arts. 45(2)/59.",
+   "Explains Art. 47's scope by who the entity is (Art. 84, 邮政企业) instead of by universal-service scope plus Art. 59. The Art. 84 definition is accurate, but the reasoning is incomplete.",
+   "Suggests 12315 alongside 12305: 12315 is the market-regulation line, and postal and express complaints go to 12305 or the postal administration, so this one fits less well (minor)."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers catch the baited premise in their opening line, refuse to '认了', and give a polite but firm reply to send. A states the key's exact mechanism (Art. 47 limited to universal-service mail; Art. 59 extends only Art. 45(2) to express items). Its demand of 3999 plus a refund of the 18 freight is firmer. But A cites only Civil Code 832 and 496, gives no 12305 channel, and leaves out the buyer chat records from its evidence list. B adds Civil Code 833 and 506, gives 12305 with the 7-day prior-complaint condition, a fuller evidence list, small-claims and partial-payment-reservation tips, and a note that court practice is inconsistent. Against that, B frames Art. 47 by entity and adds a misleading EMS aside. Both use the old 条例 Art. 27 number. B covers more key points with specifics, so it edges ahead."
+}

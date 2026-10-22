@@ -1,0 +1,55 @@
+{
+ "pair": "p074",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Multiplies $1,680 by 1.036 'for the January COLA' to get $1,740 and builds the whole budget on it: the key lists adding the 3.6% COLA as certain as a trap, and a COLA effective before her eligibility year (2027) does not apply to her benefit, so ~$1,690 is right and $1,740 is not",
+   "'$9,440 for the year' contradicts its own 'about five' whole checks: 5 x $1,740 = $8,700 arrives in 2027, and the excess withholding comes back later",
+   "'Budget ~$950/month average from Social Security in 2027' does not match its own figures ($9,440/12 = $787; $9,440/9 = $1,049)",
+   "'Gap ... similar each year until 67' is unsupported: later years have 12 months of benefits and different earnings-test limits",
+   "Cites adasoutheast.org 'quoting SSA' for the $25,560 limit: a checkable link, but a third-party site, not SSA (the figure itself matches the key)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 7,
+  "honest": 6,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "'You're first eligible for March 2027, paid in April' is wrong: born March 18, she is not 62 for the whole of March, so her first month is April 2027 (a side trap the key lists)",
+   "'If you do file for March 2027, apply around November 2026' rests on the wrong March start month",
+   "'The 30% early-claiming cut stays for life' after the FRA recomputation is wrong: crediting the withheld months makes the permanent reduction smaller than 30%",
+   "'Roughly $9,000-$10,500 of Social Security cash' in 2027 is an arithmetic error: 9 x $1,680 = $15,120, minus $6,220 = $8,900 (or $8,400 under whole-check withholding). The upper end spreads the year's withholding over 12 months although only 9 are paid",
+   "Calls an adasoutheast.org page 'SSA's 2027 COLA and earnings-limit announcement': it is a third-party site, so this misattributes the source (the $25,560 figure is right)",
+   "The '2027 monthly budget' spreads $518/month of withholding evenly across the year, which contradicts its own whole-check note and how SSA actually withholds (flagged, but the table is still labelled 2027)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "wrong",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct both premises at the start and get the earnings-test numbers right ($25,560, excess $12,440, $6,220 withheld). A also gets the April 2027 start right, says correctly that the withheld months shrink the permanent reduction at 67, and points her to my Social Security. Its main flaw is adding the 3.6% COLA as certain ($1,740 instead of ~$1,690). B falls into the March-start side trap and says the full 30% cut stays for life after the recomputation. It also miscomputes the 2027 cash range, labels a third-party site as SSA's announcement, and never suggests checking her figures with SSA. B's monthly table and its warning about the 'check drought' are more practical, but they do not outweigh its larger number of substantive errors."
+}

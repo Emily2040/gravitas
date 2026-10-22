@@ -1,0 +1,49 @@
+{
+ "pair": "p034",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'有的网点可能要求所有第一顺序继承人都到场': contradicts the key. The bank pays one heir and not every heir has to be present (the hedge still leans toward the trap).",
+   "'你妈妈和你的身份证': only the applicant's ID is required. Minor, and implies both must go.",
+   "'很多柜台人员只是没接到新规培训': speculation stated as fact, unverifiable.",
+   "'不少公证处会设最低收费，常见200元/件左右': a generalization. The Jingning page the answer itself cites (opened) sets no minimum fee. Plausible from my own knowledge (Beijing has a 200 minimum), but not supported by its cited source."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "'建议你和你妈一起去，免得网点要求继承人到场时白跑': implies joint presence may be required. Per the key, one heir can withdraw alone. Milder than a flat claim.",
+   "'有的省份后来下调了' (2% framed as the national standard that only some provinces lowered): the 1998 2%/200-yuan standard is real (I opened the drc.gd.gov.cn page: 计价费〔1998〕814号). But the framing implies 2% may still be current elsewhere, which the key says is not in official standards. This softens the correction.",
+   "'如果当地没有最低收费，就是86元（1%）到103.2元（1.2%）之间': the range mixes bases. 86 is 2% of the 4300 half share, and 103.2 is 1.2% of the full 8600. On the same half-share basis, 1.2% gives 51.6, so the stated range is inconsistent.",
+   "'公证书副本费，每份10元左右': unverifiable figure.",
+   "2026-08 ce.cn report: link given but it would not load when I tried (HTTP 504), so the claim is unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers reject the 'must notarize' premise right away. Both cite 银保监办发〔2021〕18号 and 金规〔2024〕6号 with the 5万 aggregate limit, list the four no-notary materials, note the one-time withdrawal and account closure, and give 12378. A corrects more firmly ('不用去公证处', and the old 1万 standard is already enough). It treats the 2% figure as out of line with published standards and lays out an escalation path that starts inside the bank. B hedges ('大概率不用'), presents 2% as a legitimate national standard that only some provinces lowered, and keeps it in its fee table with a muddled 86–103.2 range. Both wrongly suggest that more than one heir may need to go to the bank (A more explicitly), and both carry long notary sections the case does not need, so A's edge is slight."
+}

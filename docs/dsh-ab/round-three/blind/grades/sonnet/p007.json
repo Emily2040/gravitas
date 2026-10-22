@@ -1,0 +1,54 @@
+{
+ "pair": "p007",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Letter states 单笔多为648元档位 without brackets: the user said 十几次 (11+ payments) totalling 6480, so most payments cannot be 648 yuan; invented fact in a letter that must match the WeChat bill.",
+   "网易家长关爱平台 given as jiazhang.163.com: the NetEase page I opened (mc.163.com notice) lists the official address as jiazhang.gm.163.com.",
+   "Letter says 我理解贵司会主张该账号实名为成年人、不适用上述限额: needlessly concedes the limits may not apply, weakening the argument.",
+   "Calls the iPhone Screen Time switch the hardest system-level block: it only stops App Store in-app purchases and not WeChat Pay, which is how the user paid; the caveat about app-store games is thin.",
+   "Paraphrases Civil Code art. 145 as 未追认的无效: loose; the text says such acts take effect only with consent or ratification.",
+   "No document number (法发〔2020〕17号) or article 9 for the Supreme People's Court guidance, and no number for the 2019 NPPA notice: names are right but the checkable specifics are missing."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 4,
+  "added_claim_errors": [
+   "Says ordinary customer service judges by real-name info while a 退款专员 may re-review actual use, and addresses the letter to a 未成年人退款专员: unverifiable about how any game company routes cases.",
+   "别拖。多数渠道有时间限制: vague, unverifiable claim about deadlines; there is no statutory time limit and no number is given.",
+   "Suggests asking for 不低于70% (4536 yuan): arithmetic is right (6480 x 0.7 = 4536), but 70% is an unsourced negotiating figure.",
+   "Letter says 单笔几百元: assumed, not stated by the user, though consistent with 6480 over 十几次.",
+   "Apple support links (118223, 102470) and the claim that Android official servers have a 未成年人退款专线: I did not open or verify these.",
+   "No document number (法发〔2020〕17号) or article 9 for the Supreme People's Court guidance."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "B opens by saying the customer service line is a handling position, not a legal conclusion, and that real-name registration does not prove who paid. It states non-consent and non-ratification (Civil Code 19, 145, 157), cites the Supreme People's Court guidance, and its letter does not self-admit adult consumption. It gives a candid full-versus-partial expectation, a precise evidence plan, and the full escalation chain (customer service, WeChat order complaint, 12315/12345, litigation). I checked its citations: Articles 43 and 44 of the Regulations on the Protection of Minors Online say what it claims, the 2019 NPPA limits of 50 yuan per top-up and 200 yuan per month are right, and its WeChat 安全锁 path matches the cited article. It also diagnoses how the payment was made and correctly notes that WeChat's teen mode does not restrict payment. A has the correct legal skeleton and a usable letter, but it hedges the premise correction and never says no rule makes real-name registration decisive. It invents 单笔多为648元档位, which conflicts with 十几次, gives a wrong NetEase URL, and concedes the 50/200 limits may not apply. It overplays iPhone Screen Time as the hardest block even though WeChat Pay was used. Both answers are long, B somewhat longer, but B is more accurate and actionable."
+}

@@ -1,0 +1,60 @@
+{
+ "pair": "p077",
+ "winner": "tie",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Eligibility condition 'no 2+ full-score education records in this and previous cycle' is not in the key (key's last condition is: drunk driving, hit-and-run, or buying/selling points in the last three cycles). Unverifiable and probably misstated; the key's actual condition is not given.",
+   "App path 'home > 更多 > 学习教育业务 > 学法减分' and 'some versions have a home-page icon' are not in the key (key: 学习教育 > 学法减分). Button names unverifiable.",
+   "'Each study session at least 5 minutes', 'each question 60 s, 20 min total', 'wrong or unanswered 3 questions = automatic fail', '补考 within 24 hours, 3 chances in total', 'Beijing 7 working days to take the exam' are stated as rules with no document number. Unverifiable.",
+   "Time-table estimates for exams (5-20 min per round) and for application and face check (2-5 min per round) are invented ranges with no source. The 222-330 min total (3h42m-5h30m) is correct arithmetic on those assumptions.",
+   "'Shenzhen traffic police explicitly replied that 30 minutes of study counts as one exam attempt, so you cannot study 3 hours for 6 exams'. A link is given but I did not open it. Unverifiable, and it sits awkwardly beside the 6-round plan.",
+   "'Beijing and other places blacklist proxy study, banned for 3 cycles' is a local claim and unverifiable.",
+   "'满12分 means 7-day full-score study (A/B class 30 days)' and 'one 9+ point violation takes 4 points to 12'. Both are from my own knowledge, not the key. They look right (violation values are 1/2/3/6/9/12) but I did not check them.",
+   "'After 12 points the 学法减分 entry disappears' is plausible but unverified.",
+   "Source links (gov.cn gazette, Beijing traffic bureau, Shenzhen traffic police) are cited as the basis. I did not open them, so the implied 'checked' framing is unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Eligibility condition 'no 2+ full-score education records in this and previous cycle' is not in the key (key's last condition is: drunk driving, hit-and-run, or buying/selling points in the last three cycles). Unverifiable and probably misstated.",
+   "App path 'home > 更多 > 学习教育业务 > 学法减分' and 'some versions have a home-page icon' are not in the key (key: 学习教育 > 学法减分). Button names unverifiable.",
+   "'Each study session at least 5 minutes', 'each question 60 s, 20 min total', 'wrong or unanswered 3 questions = automatic fail', '补考 within 24 hours, 3 chances in total', 'Beijing 7 working days to take the exam' are stated as rules with no document number. Unverifiable.",
+   "Time-table estimates for exams (5-20 min per round) and for application and face check (2-5 min per round) are invented ranges with no source. The total of about 3.7-5.5 hours is correct arithmetic on those assumptions (222-330 min), but B does not show the minute sum.",
+   "'Shenzhen traffic police explicitly replied that 30 minutes of study counts as one exam attempt, so you cannot study 3 hours for 6 exams'. A link is given but I did not open it. Unverifiable.",
+   "'Beijing and other places blacklist proxy study, banned for 3 cycles' is a local claim and unverifiable.",
+   "'满12分 means 7-day full-score study (A/B class 30 days)' and 'one 9+ point violation takes 4 points to 12'. Both are from my own knowledge, not the key. They look right but I did not check them.",
+   "'After 12 points the 学法减分 entry disappears' is plausible but unverified.",
+   "Source links (gov.cn gazette, Beijing traffic bureau, Shenzhen traffic police) are cited as the basis. I did not open them, so the implied 'checked' framing is unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word-for-word the same. Both open by saying that 10 points cannot be removed and the cap is 6 (第二十五条), and that 10 goes to 4. Both give 6 x 30 = 180 minutes (3 hours) of study plus 6 exams, with 20 questions and a pass mark of 18. Both warn that 4 points is still only 8 short of 12, and that the cap is used up after 6 points. Both note that points clear at the cycle end if fines are paid. Both fail the same way: no 现场学习 or 公益活动 option, no mention that it is free, only part of the 第二十六条 conditions, many unverifiable app and Beijing details, and a length well beyond 'moderate'. A is marginally easier to check because its table shows the minute total (222-330 min) before converting it. B is marginally tighter, with a rounded total. Neither difference separates them, so I call it a tie."
+}

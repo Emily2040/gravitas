@@ -1,0 +1,142 @@
+{
+ "q001": {
+  "A": "gv-grav-nocheck",
+  "B": "gv-plain",
+  "case": "zh-medical-family",
+  "round": "r1",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q002": {
+  "A": "gv-grav-nocheck",
+  "B": "gv-plain",
+  "case": "en-car-warranty",
+  "round": "r1",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q003": {
+  "A": "gv-grav-nocheck",
+  "B": "gv-plain",
+  "case": "zh-game-refund",
+  "round": "r1",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q004": {
+  "A": "gv-plain",
+  "B": "gv-grav-nocheck",
+  "case": "zh-id-card-lost",
+  "round": "r1",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q005": {
+  "A": "gv-plain",
+  "B": "gv-grav-nocheck",
+  "case": "zh-game-refund",
+  "round": "r2",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q006": {
+  "A": "gv-grav-nocheck",
+  "B": "gv-plain",
+  "case": "zh-resignation",
+  "round": "r2",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q007": {
+  "A": "gv-plain",
+  "B": "gv-grav-nocheck",
+  "case": "zh-driving-points",
+  "round": "r2",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q008": {
+  "A": "gv-grav-nocheck",
+  "B": "gv-plain",
+  "case": "zh-express-lost",
+  "round": "r2",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q009": {
+  "A": "gv-plain",
+  "B": "gv-grav-nocheck",
+  "case": "zh-resignation",
+  "round": "r1",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q010": {
+  "A": "gv-grav-nocheck",
+  "B": "gv-plain",
+  "case": "en-social-security",
+  "round": "r1",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q011": {
+  "A": "gv-plain",
+  "B": "gv-grav-nocheck",
+  "case": "en-flight-refund",
+  "round": "r1",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q012": {
+  "A": "gv-grav-nocheck",
+  "B": "gv-plain",
+  "case": "zh-id-card-lost",
+  "round": "r2",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q013": {
+  "A": "gv-grav-nocheck",
+  "B": "gv-plain",
+  "case": "zh-deceased-deposit",
+  "round": "r2",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q014": {
+  "A": "gv-plain",
+  "B": "gv-grav-nocheck",
+  "case": "en-car-warranty",
+  "round": "r2",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q015": {
+  "A": "gv-grav-nocheck",
+  "B": "gv-plain",
+  "case": "zh-driving-points",
+  "round": "r1",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q016": {
+  "A": "gv-plain",
+  "B": "gv-grav-nocheck",
+  "case": "zh-express-lost",
+  "round": "r1",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q017": {
+  "A": "gv-grav-nocheck",
+  "B": "gv-plain",
+  "case": "en-flight-refund",
+  "round": "r2",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q018": {
+  "A": "gv-plain",
+  "B": "gv-grav-nocheck",
+  "case": "zh-medical-family",
+  "round": "r2",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q019": {
+  "A": "gv-plain",
+  "B": "gv-grav-nocheck",
+  "case": "en-social-security",
+  "round": "r2",
+  "set": "posthoc-nocheck-vs-plain"
+ },
+ "q020": {
+  "A": "gv-plain",
+  "B": "gv-grav-nocheck",
+  "case": "zh-deceased-deposit",
+  "round": "r1",
+  "set": "posthoc-nocheck-vs-plain"
+ }
+}

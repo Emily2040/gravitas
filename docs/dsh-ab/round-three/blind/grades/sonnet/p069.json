@@ -1,0 +1,52 @@
+{
+ "pair": "p069",
+ "winner": "tie",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Paper temporary rail proof at the station is 'free, just give your ID number': the key says there is no official basis for 'definitely free'; stated as certain.",
+   "Photo about 20-40 yuan: unverified local price range, though hedged as varying by studio.",
+   "Mailing 18 yuan in-province / 20 yuan out-of-province: not on the Liwan page I opened (it lists no mailing fees); unverifiable.",
+   "Guangzhou 'commits to issuing within 40 days of acceptance' (early December): the Liwan page I opened gives 40 days as the processing limit from submitting the application form, so it broadly matches, but the key has no verified Guangzhou figure. The 60-day legal limit (+30 days) is omitted.",
+   "Zhengzhou/Henan in-province 15 working days (to mid-November): unverifiable, cited to a Zhengzhou guide I did not open; the arithmetic is fine.",
+   "Operational details (Yue Ju Ma residence registration, self-service machines for age 16+, loss reporting in person without appointment, returning the old card if found, temporary ID usable for hotels and banks): not checked, unverifiable.",
+   "'Per the Guangzhou police guide, lost-card replacement needs only the photo receipt plus in person': consistent with the Liwan page I opened, which lists the receipt as the only document for adults."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Paper temporary rail proof at the station is 'free, just give your ID number': the key says there is no official basis for 'definitely free'; stated as certain.",
+   "Photo about 20-40 yuan: unverified local price range, though hedged as varying by studio.",
+   "Mailing 18 yuan in-province / 20 yuan out-of-province: not on the Liwan page I opened (it lists no mailing fees); unverifiable.",
+   "Guangzhou 'commits to issuing within 40 days of acceptance' (early December): the Liwan page I opened gives 40 days as the processing limit from submitting the application form, so it broadly matches, but the key has no verified Guangzhou figure. The 60-day legal limit (+30 days) is omitted.",
+   "Zhengzhou/Henan in-province 15 working days (to mid-November): unverifiable, cited to a Zhengzhou guide I did not open; the arithmetic is fine.",
+   "Operational details (Yue Ju Ma residence registration, self-service machines for age 16+, loss reporting in person without appointment, returning the old card if found, temporary ID usable for hotels and banks): not checked, unverifiable.",
+   "'Per the Guangzhou police guide, lost-card replacement needs only the photo receipt plus in person': consistent with the Liwan page I opened, which lists the receipt as the only document for adults."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word-for-word identical, so their content scores match. Both correct the two baited premises at the start: ID cards can be replaced in Guangzhou, and 12306's e-temporary proof or the station police window lets the holder board. Both give 40 yuan (20 for expiry renewal), 10 yuan and 3 months for the temporary ID, and the roughly 5-working-day wait for the Henan police, and both say the temporary ID may miss Oct 31. They share the same flaws: the paper proof is called 'free' without an official basis, neither gives the 60+30 day legal limit, and both add unchecked details such as mailing fees, photo price and a Zhengzhou 15-working-day time. The only differences are small: B writes 'July 1, 2017' (matches the key's date), while A writes 'July 2017' and adds a fifth source link that I opened and that supports the rollout. Both are somewhat long, with a reference list added. This is effectively a tie."
+}

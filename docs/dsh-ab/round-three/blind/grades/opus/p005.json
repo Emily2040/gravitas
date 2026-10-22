@@ -1,0 +1,49 @@
+{
+ "pair": "p005",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Per-round total '约50–70分钟' and 6-round total '约5–7小时' / '理论下限5小时' do not match its own table: 30+10–20+5–15 = 45–65 min per round, so 270–390 min (4.5–6.5 h) for 6 rounds; the stated lower bound is wrong.",
+   "'代学代考...并处1000–2000元罚款（第三十一条）': art. 31 (checked on the gov.cn text A itself links) sets fines of up to 1,000 yuan for cheating and up to 2,000 yuan for having someone else study or sit the exam, not a 1,000–2,000 range.",
+   "'需在学完后7个工作日内考' given as a national rule: the regulation does not say this (local operating rule, e.g. Beijing); unverifiable as universal.",
+   "'首页驾驶证卡片上的\"可减分\"' entry: a specific button name that cannot be verified and may vary by version or province."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'不合格可在24小时内补考2次': the 24-hour window is not in the regulation (gov.cn text checked); at best a local operating rule, unverifiable as stated.",
+   "'北京等地还会列入黑名单，3个记分周期禁入': presented as a local Beijing practice, but the 3-cycle bar on fraud is the national rule in art. 26; the framing is misleading but not substantively wrong.",
+   "'深圳交警明确答复' that 30 minutes gives only one exam chance: attributed to a linked local Q&A page I did not open; plausible but unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting both baited premises: the cap is 6 points (art. 25), so the 10 points can only go down to 4, and having 4 left still means 8 more points reaches 12. B's arithmetic is clean (300 min for 10 points, 180 min for 6, total 222–330 min) and it puts the clearing rule best: if the user barely drives, the 10 points clear on their own anyway. But B leaves out on-site study (2 points per hour) and public-service activities entirely, and it drops the 3-cycle exclusions for drunk driving, hit-and-run and point trading. A covers all seven key points, including the alternatives and the full eligibility list. However, its overhead totals do not match its own table (it says 5–7 h where the table gives 4.5–6.5 h), it states the art. 31 fine as a 1,000–2,000 range instead of 'up to', and it is longer. A wins slightly on coverage; B is the more precise answer."
+}

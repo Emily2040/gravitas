@@ -1,0 +1,52 @@
+{
+ "pair": "p010",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 6,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Suggests the mother's 2027 居民医保 premium (Anhui 'not less than 400 yuan') can be tried through 医保钱包. The key says Anhui had not opened paying 居民医保 with 共济额度 as of 10-20 (expected November). The 400 yuan figure is unverifiable.",
+   "Closing line says 居民医保 'can probably reimburse about 1200 yuan'. It rests on an assumed 350 yuan deductible and 60% rate for 高血压门慢, unverified for her county and needing 认定 first. Its own cited 蚌埠 2000 yuan 门慢 cap would give about 990, not 1230.",
+   "Local figures (蚌埠 门慢 2000 and 两病 360, 芜湖 门慢 2500, 宿州 两病 260, 六安 两病 150) are labelled as city examples and come with links. I did not open them, so they are plausible but unchecked.",
+   "Procedural claims (门慢认定 needs two non-same-day visits at least 28 days apart within six months, benefits start next month, quota is frozen and returned on cancellation, 断缴 blocks binding) are unverified, and some rest on a hospital web page.",
+   "'苏州医保局的办事指南写明...' states a source was checked. A link is given but I did not open it."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Suggests the mother's 2027 居民医保 premium (Anhui 'not less than 400 yuan') can be tried through 医保钱包. The key says Anhui had not opened this as of 10-20. The 400 yuan figure is unverifiable.",
+   "Closing line says 居民医保 'can probably reimburse about 1200 yuan' on an assumed 350 yuan deductible and 60% rate, with no local source. The table range 150-360 and the later text range 260-360 are inconsistent, and the arithmetic is not shown.",
+   "'门慢 cap commonly 2000-2500, 两病 cap commonly 260-360' generalises from unnamed localities, so it is less checkable than naming them.",
+   "Procedural claims (28-day two-visit rule, benefits start next month, frozen quota returned on cancellation, 断缴 blocks binding) are unverified.",
+   "'苏州是首批试点城市' is correct. I opened the 国家医保局 2024-12-04 page and it lists Suzhou among first-batch cross-province 家庭共济 pilot areas."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "The two answers are nearly identical in structure and conclusions. Both correct the false premise in the first lines (卡不能共用，钱可以共济), explain 国家医保服务平台 医保钱包 cross-province 共济 for the Suzhou/Anhui case, and compute 2400 yuan. Both separate the real violations (冒名用卡, 转卖药品), explain the 两病 versus 门慢 routes, and tell her to register. Both share the same flaws: they suggest paying the mother's 居民医保 premium through 医保钱包, which Anhui had not opened yet, and they close with a firm-sounding 'about 1200 yuan'. A edges ahead because it shows the arithmetic for each table row, which recomputes correctly, and names specific Anhui cities as cited local examples for the caps, as the key asks. B is a little shorter and its '苏州首批试点' claim checks out, but its range text is inconsistent with its table and gives no local examples."
+}

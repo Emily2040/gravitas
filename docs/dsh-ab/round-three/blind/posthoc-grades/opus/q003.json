@@ -1,0 +1,55 @@
+{
+ "pair": "q003",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 7,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says Tencent 成长守护 covers 100多款腾讯游戏 and 1万多款微信小游戏: specific coverage figures, no source given, unverifiable",
+   "Gives hotline 0755-86013799 with no link; I believe from memory it is Tencent's guardian hotline, but the key does not cover it and it is not checkable here",
+   "Says the WeChat transaction statement is accepted by 客服 and 12315 (客服和12315都认): unverifiable claim about how others treat it",
+   "Says 多数这类案子在庭前调解阶段就和解了: unverifiable statistic",
+   "Says courts usually order partial return 而不是全额: overstated, since the key notes full refunds also happen",
+   "Gives 深圳市腾讯天游科技有限公司 as a sample merchant name with no source: unverifiable",
+   "Lists iOS Screen Time App Store purchase restriction as a purchase-blocking layer; it does not stop in-game WeChat Pay (not explicitly claimed, so mild)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 3,
+  "honest": 7,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "Recommends turning on the WeChat 安全锁 (path 钱包→消费者保护/安全保障→安全锁) as payment protection; that lock only guards entry to the wallet page and does not block in-game payments, and the menu path is unverifiable",
+   "Recommends reporting through 国家新闻出版署防沉迷举报渠道 with no link or name: unverifiable channel",
+   "Names an Android Google Play setting 购买前询问; Play's actual setting is purchase authentication, so the name is inaccurate",
+   "Suggests 互联网法院, which sit only in Beijing, Hangzhou and Guangzhou with limited jurisdiction; not generally available to the user",
+   "The drafted message says 我并非要求全额退款, giving up the full-refund claim the key says may be pursued first",
+   "Lists iOS Screen Time purchase restrictions; these do not block WeChat Pay in-game payments (not explicitly claimed, so mild)"
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "missing",
+   "3": "missing",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "A opens by separating the parent's acceptance of fault from giving up the refund claim, and says the right to get the money back still exists. It cites Civil Code arts. 19, 145 and 157 correctly, and its draft message refuses ratification without admitting adult consumption. It also gives a solid evidence list and notes that courts reduce refunds for parental fault. B never challenges the premise that real-name verification as an adult blocks a refund. It tells the user not to argue about the real name, cites no law, and writes a pleading message that gives up the full refund up front. Neither answer cites 法发〔2020〕17号 art. 9 or the WeChat Pay bill complaint step. Both cover prevention well, but A carries a few unverifiable specifics (Tencent coverage figures, mediation claims) and both answers run long."
+}

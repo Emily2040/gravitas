@@ -1,0 +1,51 @@
+{
+ "pair": "p011",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Cites 《浙江省企业工资支付管理办法》第19条 for the 5-day wage settlement. The content matches the key, but the article number and the gov.cn link (content_5719128) can't be checked against the key and look doubtful for a provincial regulation.",
+   "Suggests mailing by EMS on 10月26日 as a way to make sure the notice arrives that day. A letter posted by EMS arrives a day or more later, so this advice is slightly inconsistent; A does note elsewhere that a later receipt moves the date to 11月26日.",
+   "The long overtime and Art. 38 forced-resignation section (with economic compensation of about 2 months) rests on a guess that the person worked unpaid overtime. The law it states is correct (150/200/300%, N=2), but the premise is unverified and it adds length."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Names \"杭州市区劳动人事争议仲裁委员会\" as the arbitration body. Arbitration is handled by the commission with jurisdiction over the employer's location or district, and this exact institution name is unverifiable.",
+   "Warns that the company might dismiss the worker for misconduct and so avoid paying the leave money. That is misleading: under 实施办法第十二条 unused-leave pay is still owed when the contract ends for any reason.",
+   "Says such clauses are \"在仲裁和诉讼中基本都被认定无效\". This is a generalization about case outcomes with no source given, though it is plausible.",
+   "Cites 实施办法第十八条 as the rule that the leave year is the calendar year. From my own knowledge this is likely correct, but I did not verify it against a source."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct both false premises at the start: the 60-day notice period and the need for approval. Both give a letter written as a 解除劳动合同通知书 and get the same correct numbers: last day 11月25日 (Wednesday), 329/365×5 = 4.51 rounded down to 4 days, 12000/21.75 = 551.72, and 4,413.79 extra at 200% with the 300% total explained. A adds a hedged note on the confidentiality-role exception and the 20% wage-deduction rule. B cites 民法典第二百零一条 for the day count, says outright that the new job can start 11月26日, gives the one-year arbitration limit, and is noticeably shorter. A's long sections on overtime, Art. 38 and a cited source list make it longer than the key's 篇幅适中 standard, so B wins by a slight margin."
+}

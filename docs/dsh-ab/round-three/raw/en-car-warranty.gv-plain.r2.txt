@@ -1,0 +1,33 @@
+Before the draft, one important flag: **the dealer's explanation is probably wrong, and "that's on me" likely isn't accurate.**
+
+Under the Magnuson-Moss Warranty Act, a manufacturer generally can't void your warranty just because routine maintenance was done at an independent shop like Jiffy Lube. The burden is on Honda to show that the specific service (or a non-spec oil/filter) *caused* the transmission failure — not merely that you went elsewhere. Your CR-V at 41,000 miles is squarely inside the 5-year/60,000-mile powertrain window, and the transmission is a covered component. So this may be a covered repair, not a $3,400 favor.
+
+That matters for the email: if you concede the warranty point, you lose most of your leverage on price. Here's a draft that authorizes the repair and asks about cost, while politely keeping the coverage question alive. The third paragraph is the part I'd strongly recommend keeping, but you can delete it if you truly want only the price ask.
+
+---
+
+**Subject:** 2023 CR-V — transmission repair authorization and cost question
+
+Dear [Service Manager],
+
+Thank you for diagnosing the transmission issue on my 2023 CR-V (41,000 miles) and for walking me through the estimate. I'd like to go ahead and authorize the repair.
+
+Before we schedule it, could you tell me whether there's any flexibility on the $3,400 figure — a goodwill adjustment, a revised labor rate, or a payment plan? I'd appreciate anything you can do.
+
+I'd also like to revisit the coverage decision. My understanding is that routine maintenance at an independent shop doesn't by itself void the powertrain warranty, and that Honda would need to establish that the service caused the failure. Could you send me the denial in writing and let me know whether there's a review process? I'd like to resolve that alongside the repair.
+
+Either way, please let me know your next available appointment.
+
+Best regards,
+[Your name]
+[Phone]
+[VIN or repair order number]
+
+---
+
+Two quick practical notes:
+
+- **Ask for the denial in writing.** A verbal "Jiffy Lube voided it" is hard to challenge; a written denial naming the maintenance as the cause is something Honda corporate and possibly your state consumer-protection office can review.
+- **Keep your Jiffy Lube receipts.** If they show oil meeting Honda's specified grade and interval, that undercuts the causation argument further.
+
+Want me to make it firmer (e.g., explicitly requesting reconsideration before authorizing), or a shorter version with just the price question?

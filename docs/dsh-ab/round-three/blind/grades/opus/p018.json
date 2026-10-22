@@ -1,0 +1,51 @@
+{
+ "pair": "p018",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites the four materials as 18号文 '第四条': article number unverifiable from the key or the answer",
+   "'甘肃静宁2026年公示的标准' while the linked URL path says 2024: inconsistent and unverifiable",
+   "'不少地方现在按不超过1.2%收' and a common 200元 minimum: generalization not backed by a cited standard (key's example is Beijing 0.9%, minimum 200)",
+   "'材料不齐的，按规定银行应当一次性告知': cites a rule with no source given, unverifiable",
+   "Opens the fee section with '按银行说的2%算: 172元' in bold, which half-endorses the baited 2% before qualifying it"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 4,
+  "added_claim_errors": [
+   "'建议你和你妈一起去，免得网点要求继承人到场' plus listing both IDs: implies more than one heir may need to attend, which contradicts the key (one heir is enough)",
+   "'2026年8月的报道 (city.ce.cn)': cited news report unverifiable",
+   "Presents 2% (minimum 200) as the 1998 national standard and uses it as a live basis for the estimate; the key says current official standards have no 2%, so this is stale and misleading",
+   "'甘肃庄浪县公证处2024年标准 不超过1.2%': unverifiable local figure",
+   "'公证书副本费每份10元左右': unverifiable number",
+   "Fee range '86元（1%）到103.2元（1.2%）' mixes a halved estate base (4300 at 2%) with the full base (8600 at 1.2%) and mislabels it as 1%. The arithmetic is correct but the comparison is inconsistent"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the 'must notarize' premise and cite the 5万元 rule (金规〔2024〕6号, 18号文) with the same-bank aggregate. A is more definitive and says the mother alone can do it, while B hedges ('大概率') and advises both heirs to attend in case the bank asks, which leans toward the key's 'all heirs present' trap. On the fee, both are vague: A computes 2% first and then calls it non-uniform. B treats 2% as the old national standard and adds a confusing mixed-base range plus unverifiable side numbers (副本费, a 2026 news report). A is tighter and easier to act on, while B is considerably longer and padded with notary detail."
+}

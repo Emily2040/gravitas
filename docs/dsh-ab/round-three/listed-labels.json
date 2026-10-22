@@ -1,0 +1,1114 @@
+[
+ {
+  "case": "en-car-warranty",
+  "round": "r2",
+  "raw": "\"I'm ready to move forward.\"",
+  "cls": "quote",
+  "label": "right",
+  "why": "This is the draft quoting its own suggested wording for the email (\"I'll go ahead\" changed to \"I'm ready to move forward.\"). It is not a quotation from an outside source and makes no factual claim. The key says nothing against it. Avoiding a written \"I authorize\" before the warranty question is settled fits the key's advice not to accept the $3,400 bill. I am calling it correct as used, though only a snippet is visible, so I cannot confirm the phrase appears word for word in the email body."
+ },
+ {
+  "case": "en-flight-refund",
+  "round": "r2",
+  "raw": "14 CFR part 260",
+  "cls": "article",
+  "label": "right",
+  "why": "The key places DOT's refund rule at 14 CFR 260.6 (required by 49 U.S.C. 42305). Section 260.6 is part of 14 CFR part 260, 'Refunds for Airline Fare and Ancillary Service Fees', so calling the refund rule 'part 260' is correct."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "March 18, 2027",
+  "cls": "date",
+  "label": "right",
+  "why": "Key: born March 18, so she turns 62 on March 18, 2027 and is not 62 for all of March. First month of entitlement is April 2027."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "decide\n\n1",
+  "cls": "date",
+  "label": "right",
+  "why": "This is an extraction artifact: the heading 'before you decide' followed by list number 1. It makes no date or factual claim, so nothing in it is incorrect."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$11,000",
+  "cls": "money",
+  "label": "wrong",
+  "why": "The context calls this a cut to 2027 Social Security income. The answer's own figures give $21,600 - $9,440 = $12,160. Key figures (9 x ~$1,690 less about four withheld checks, about $8,450-$8,990 received) give a cut of about $12,600-$13,150, not ~$11,000."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$1,740",
+  "cls": "money",
+  "label": "wrong",
+  "why": "Key: about $1,690 a month ($1,680 acceptable). $1,740 adds the 3.6% COLA as certain, which the key lists as a trap. From my own knowledge, the COLA effective December 2026 does not apply to someone first eligible at 62 in 2027."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$15,660",
+  "cls": "money",
+  "label": "wrong",
+  "why": "9 x $1,740 is built on the COLA-inflated benefit. Key: 9 x ~$1,690 = about $15,210 gross for April-December 2027."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$9,440",
+  "cls": "money",
+  "label": "wrong",
+  "why": "Inherits the $1,740 error. Key: about $15,210 - $6,220 = ~$8,990 net. Because SSA withholds whole checks, about five checks of ~$1,690 (~$8,450) actually arrive in 2027."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$21,600",
+  "cls": "money",
+  "label": "right",
+  "why": "9 months (April-December 2027) at the premise's $2,400 is $21,600. That is a fair restatement of her expected $2,400 a month over the months she can actually be entitled (key: $2,400 a month was the premise)."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$47,440",
+  "cls": "money",
+  "label": "wrong",
+  "why": "$38,000 + $9,440 is inflated by the COLA trap. With key figures, gross is about $38,000 + ~$8,990 = ~$46,990 (or ~$46,450 counting checks actually paid)."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$3,300",
+  "cls": "money",
+  "label": "right",
+  "why": "Own calculation, single filer with standard deduction (~$16,100): about $9k of benefits gives provisional income ~$42.5k, about $7.6k of benefits taxable, AGI ~$45.6k, taxable income ~$29.5k, federal tax about $3,250-$3,350. ~$3,300 is a reasonable estimate."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$2,900",
+  "cls": "money",
+  "label": "right",
+  "why": "7.65% x $38,000 = $2,907, so FICA of about $2,900 is correct (own calculation)."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$41,200",
+  "cls": "money",
+  "label": "wrong",
+  "why": "$47,440 - $3,300 - $2,900 carries the COLA-inflated benefit. Key figures give about $46,990 - $3,250 - $2,907 = ~$40,800, or less counting only the checks paid in 2027."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$2,730",
+  "cls": "money",
+  "label": "right",
+  "why": "Own calculation: $3,167 gross - $242 FICA - about $198 federal withholding on wages alone (single, standard deduction) = ~$2,727. 'About $2,730' is a correct paycheck-only figure."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$4,470",
+  "cls": "money",
+  "label": "wrong",
+  "why": "$2,730 + $1,740 uses the COLA-inflated check (key trap). With the key's ~$1,690 benefit, a month with a check is about $4,420."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$3,430",
+  "cls": "money",
+  "label": "wrong",
+  "why": "$41,200/12 is built on the COLA-inflated benefit. With key figures (~$40,300-$40,800 take-home) the monthly average is about $3,360-$3,400."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$52,000",
+  "cls": "money",
+  "label": "right",
+  "why": "Own calculation of the premise: $38,000 wages + 9 x $2,400 = $59,600, less ~$2,907 FICA and ~$4,400 federal tax, is about $52,300 after tax. '~$52,000 expected' is consistent."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "$9,400",
+  "cls": "money",
+  "label": "wrong",
+  "why": "Key: about five checks of ~$1,690 arrive in 2027 (~$8,450), or ~$8,990 net of the $6,220 withholding. ~$9,400 is inflated by the COLA trap and contradicts the answer's own 'about five' checks."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "2032 dollars",
+  "cls": "money",
+  "label": "unverified",
+  "why": "2032 is the right year: FRA 67 is reached March 2032 (key: FRA 67 for 1960+ births). But '$2,900/month in 2032 dollars' is a projection that depends on future COLAs and indexing, so it cannot be confirmed (own knowledge)."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "85%",
+  "cls": "percent",
+  "label": "right",
+  "why": "Key: up to 85% of benefits may be taxable at her income."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "9 months",
+  "cls": "months",
+  "label": "right",
+  "why": "Key: benefits start April 2027, so April through December is 9 months of entitlement in 2027."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "four months",
+  "cls": "months",
+  "label": "right",
+  "why": "Own knowledge of SSA guidance: you can apply up to four months before benefits start, so for an April 2027 start the window opens around December 2026 (also when she is 61 and 9 months). ssa.gov/benefits/retirement/apply.html returned 403 when I tried to fetch it."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "2031 ",
+  "cls": "year",
+  "label": "right",
+  "why": "If she waits for FRA (March 2032; key FRA 67), the paycheck must carry her through 2027-2031, plus January-February 2032. '2027-2031' is a fair approximation."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "79",
+  "cls": "num",
+  "label": "right",
+  "why": "Own calculation: 70.42% from 59 months early vs 100% at 67. 0.7042 x 59 / 0.2958 = ~140 months after FRA, a break-even of about age 78.8. 'Around 79-80' is approximately right; the earnings-test recalculation pulls it slightly earlier."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r1",
+  "raw": "401",
+  "cls": "num",
+  "label": "right",
+  "why": "This is the '401' of '401(k)', not a numeric claim. Saying 401(k) contributions lower take-home pay is correct (own knowledge)."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "https://www.irs.gov/forms-pubs/about-form-w-4-v",
+  "cls": "url",
+  "label": "right",
+  "why": "I opened https://www.irs.gov/forms-pubs/about-form-w-4-v. It is the IRS page for Form W-4V, Voluntary Withholding Request, which covers federal tax withholding from Social Security benefits."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "March 18",
+  "cls": "date",
+  "label": "right",
+  "why": "Key: born March 18, so she is not 62 for the whole of March and entitlement starts April."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$6,220",
+  "cls": "money",
+  "label": "right",
+  "why": "Key: ($38,000 - $25,560) / 2 = $6,220 withheld for 2027."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$518",
+  "cls": "money",
+  "label": "wrong",
+  "why": "$6,220/12 is correct arithmetic, but the answer applies it as monthly withholding. Key: SSA withholds whole monthly checks (about four, April-July), not $518 a month."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$3,167",
+  "cls": "money",
+  "label": "right",
+  "why": "$38,000/12 = $3,167 a month (key: about $3,167 a month in wages)."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$1,222",
+  "cls": "money",
+  "label": "wrong",
+  "why": "Key: SSA withholds whole checks, so almost nothing arrives until about September 2027, then about $1,690 a month. A steady $1,222 a month ($1,740 - $518) is wrong, and it also uses the COLA-inflated benefit."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$4,389",
+  "cls": "money",
+  "label": "wrong",
+  "why": "$3,167 + $1,222 rests on the wrong monthly-withholding model and the COLA-inflated benefit. Key: early months bring only the paycheck, later months the paycheck plus ~$1,690."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$242",
+  "cls": "money",
+  "label": "right",
+  "why": "7.65% x $3,167 = $242 a month FICA (own calculation)."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$323",
+  "cls": "money",
+  "label": "wrong",
+  "why": "$323/month (~$3,876/yr) assumes 12 months of net benefits (~$14,660), which the answer itself says 2027 will not deliver. Own calculation with key 2027 figures (~$9k of benefits): about $3,250/yr, or ~$270/month."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$3,824",
+  "cls": "money",
+  "label": "wrong",
+  "why": "Derived from the wrong steady $1,222 monthly benefit, the COLA-inflated figure and the overstated tax. Key: take-home is the paycheck alone for the first months, then the paycheck plus ~$1,690."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$1,500",
+  "cls": "money",
+  "label": "wrong",
+  "why": "Not consistent even with the answer's own table: expected $5,567 vs $4,389 is ~$1,178 before tax. Expected take-home (~$4,900) vs $3,824 is ~$1,100 after tax, not $1,500. The monthly-withholding model behind it is also wrong per the key."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$500",
+  "cls": "money",
+  "label": "unverified",
+  "why": "Pre-Medicare marketplace premiums at 62 vary widely by location and subsidy eligibility. The key is silent, and I cannot confirm a $500-900/month range either way (own knowledge)."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$9,400",
+  "cls": "money",
+  "label": "wrong",
+  "why": "Key: about five checks of ~$1,690 reach her in 2027 (~$8,450), or ~$8,990 net of withholding. $9,400 rests on the COLA-inflated $1,740."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$14,660",
+  "cls": "money",
+  "label": "right",
+  "why": "The context rejects $14,660 ('not $14,660') as the 2027 amount. That rejection is correct: per the key, 2027 delivers far less (~$8,450-$8,990)."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$25,500",
+  "cls": "money",
+  "label": "right",
+  "why": "Key: the 2027 limit is $25,560. Earning about $25,500, under that limit, means nothing is withheld."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "$20,880",
+  "cls": "money",
+  "label": "wrong",
+  "why": "12 x $1,740 uses the COLA-inflated benefit, and 2027 has only 9 months of entitlement. Key: ~$1,690 a month, so a full year is ~$20,280 and 2027 is ~$15,210."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "85%",
+  "cls": "percent",
+  "label": "right",
+  "why": "Key: up to 85% of benefits may be taxable at her income."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "30%",
+  "cls": "percent",
+  "label": "right",
+  "why": "Key: 29.58% reduction, and '30%' is an acceptable approximation."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "50%",
+  "cls": "percent",
+  "label": "right",
+  "why": "Key: $1 withheld for every $2 over the limit, which is a 50% withholding rate on earnings above $25,560."
+ },
+ {
+  "case": "en-social-security",
+  "round": "r2",
+  "raw": "900",
+  "cls": "num",
+  "label": "unverified",
+  "why": "Upper end of the $500-900/month health-premium range. Premiums depend on location and subsidies, and the key is silent (own knowledge)."
+ },
+ {
+  "case": "zh-deceased-deposit",
+  "round": "r1",
+  "raw": "“5 万元以下免交公证书”",
+  "cls": "quote",
+  "label": "unverified",
+  "why": "The substance matches the key: 金规〔2024〕6号 sets a 5万元 no-notarization limit, confirmed on https://www.gov.cn/zhengce/zhengceku/202404/content_6947875.htm. But the item quotes a specific August 2026 report, and http://city.ce.cn/xx/202608/t20260818_3154096.shtml returned HTTP 504 twice, so I could not confirm the report uses that wording."
+ },
+ {
+  "case": "zh-deceased-deposit",
+  "round": "r1",
+  "raw": "“办理已故存款人小额存款提取、金额 8600 多元、按金规[2024]6 号。”",
+  "cls": "quote",
+  "label": "right",
+  "why": "This is a suggested line to say at the bank counter, not a quote from a source. Its facts agree with the key: small-deposit withdrawal for a deceased depositor, about 8600元 (under 5万), under 金规〔2024〕6号."
+ },
+ {
+  "case": "zh-deceased-deposit",
+  "round": "r1",
+  "raw": "“不再适用......须经公证的规定”",
+  "cls": "quote",
+  "label": "unverified",
+  "why": "Presented as policy wording. The 2024 notice (https://www.gov.cn/zhengce/zhengceku/202404/content_6947875.htm) has no sentence with 不再适用 or 公证. I could not open the 2021 notice (银保监办发〔2021〕18号): my guessed gov.cn URL returned 404 and the web search budget was used up. I can't confirm from my own knowledge that it says this either."
+ },
+ {
+  "case": "zh-deceased-deposit",
+  "round": "r1",
+  "raw": "110 元",
+  "cls": "money",
+  "label": "wrong",
+  "why": "Wrong as calculated: 8600 × 1.2% = 103.2元, which rounds to about 100, not 110 (and 1% gives 86, not 80). The key's Beijing example is 0.9% with a 200元 minimum, and it says no notarization is needed in this case anyway."
+ },
+ {
+  "case": "zh-deceased-deposit",
+  "round": "r1",
+  "raw": "12378",
+  "cls": "num",
+  "label": "right",
+  "why": "The key gives 12378 as the 金融监管总局 consumer complaint hotline to call if the bank still demands notarization."
+ },
+ {
+  "case": "zh-deceased-deposit",
+  "round": "r2",
+  "raw": "“办已故存款人小额存款提取”",
+  "cls": "quote",
+  "label": "right",
+  "why": "This is a suggested phrase naming the service officially called 已故存款人小额存款提取 (2021 notice and 金规〔2024〕6号). The surrounding advice agrees with the key: mother goes alone with the death certificate, marriage certificate, household register and ID, and no notarization is needed."
+ },
+ {
+  "case": "zh-deceased-deposit",
+  "round": "r2",
+  "raw": "12378",
+  "cls": "num",
+  "label": "right",
+  "why": "The key gives 12378 as the 金融监管总局 consumer complaint hotline to call if the bank still refuses."
+ },
+ {
+  "case": "zh-driving-points",
+  "round": "r1",
+  "raw": "近三个周期有酒驾 > 逃逸 > 买分卖分等记录",
+  "cls": "path",
+  "label": "right",
+  "why": "Matches the key (Article 26 of 公安部令第163号): you cannot apply if any of the last three scoring periods has a record of drunk driving, hit-and-run, or buying or selling points. The '>' is just how the extractor joined the list items."
+ },
+ {
+  "case": "zh-driving-points",
+  "round": "r2",
+  "raw": "提交申请 > 阅读业务须知 > 等审核",
+  "cls": "path",
+  "label": "unverified",
+  "why": "The key's 12123 path is 申请 (face check) → choose online study → review, and its step names are given only loosely. The key never mentions '阅读业务须知', and no context was given. From my own knowledge, 12123 usually shows its notice (须知) before the application is submitted, so this order may be backwards. I could not confirm the exact screen order, which also varies by province."
+ },
+ {
+  "case": "zh-driving-points",
+  "round": "r2",
+  "raw": "3.7",
+  "cls": "num",
+  "label": "right",
+  "why": "The context derives 3.7 h as the low end of a time estimate: 3 h of fixed online study (6 x 30 min, which matches the key's Article 27 figures) + exams 6 x 5 min = 30 min + application 6 x 2 min = 12 min, so 222 min = 3.7 h. The arithmetic checks out and agrees with the key's 'about 3 hours plus exams'. The per-round exam and application minutes are the draft's own assumptions; the key gives none."
+ },
+ {
+  "case": "zh-express-lost",
+  "round": "r1",
+  "raw": "第四百九十七条",
+  "cls": "article",
+  "label": "wrong",
+  "why": "The draft cites Civil Code Art. 497 as a basis for the rule that the clause depends on whether the sender was reasonably notified, so an un-notified clause does not become part of the contract. That rule is Art. 496 only. The key lists 497 for invalid unreasonable exemptions, and its text (from my own knowledge) covers when a format clause is void, not the duty to give notice. Putting 497 next to 496 for the notice rule is a wrong article."
+ },
+ {
+  "case": "zh-express-lost",
+  "round": "r1",
+  "raw": "“此前我在不了解规定的情况下口头表示接受、那个不算数”",
+  "cls": "quote",
+  "label": "unverified",
+  "why": "This is a line the draft wrote for the user to say, not a quote from any source. It assumes the user already accepted orally, which the key does not say. It also claims that acceptance 'does not count', which is not established: a mistake or misrepresentation might make it revocable under Civil Code Arts. 147/148 (my own knowledge), but nothing guarantees that. It cannot be confirmed either way."
+ },
+ {
+  "case": "zh-express-lost",
+  "round": "r1",
+  "raw": "12305",
+  "cls": "num",
+  "label": "right",
+  "why": "The key names 12305 as the postal complaint line to call if the express company's handling is unsatisfactory."
+ },
+ {
+  "case": "zh-express-lost",
+  "round": "r1",
+  "raw": "12345",
+  "cls": "num",
+  "label": "right",
+  "why": "The key is silent. The State Council General Office guidance on local government service hotlines (https://www.gov.cn/zhengce/content/2021-01/06/content_5577419.htm) lists 全国邮政业用户申诉电话 12305 under 设分中心, which it defines as 以分中心形式归并到所在地12345热线. So saying 12305 has been merged into 12345 holds, and 12305 itself still works. 'Some regions' understates the scope but is not wrong."
+ },
+ {
+  "case": "zh-express-lost",
+  "round": "r1",
+  "raw": "1.3 万",
+  "cls": "num",
+  "label": "unverified",
+  "why": "This is the award in a specific court case (Xinye County court, Henan: 50,000 yuan claimed, waybill said only 'clothing', 13,000 yuan awarded). The key counts court names and amounts that cannot be checked as unverified. The cited hncourt.gov.cn link is cut off, and my web search budget was used up, so I could not confirm it."
+ },
+ {
+  "case": "zh-express-lost",
+  "round": "r2",
+  "raw": "第八百三十二条",
+  "cls": "article",
+  "label": "right",
+  "why": "The key cites Civil Code Art. 832 for the carrier's liability when goods are lost. The draft's summary of the exceptions (force majeure, the nature of the goods, the sender's fault) matches the article as I know it."
+ },
+ {
+  "case": "zh-express-lost",
+  "round": "r2",
+  "raw": "第四百九十六条",
+  "cls": "article",
+  "label": "right",
+  "why": "The key cites Art. 496 for format clauses: the company must give notice and explanation, or the sender can argue the clause is not part of the contract. The draft uses it that way, and saying the company must prove it gave notice matches judicial practice on the burden of proof (my own knowledge)."
+ },
+ {
+  "case": "zh-express-lost",
+  "round": "r2",
+  "raw": "“邮政普遍服务业务范围以外的邮件、适用有关民事法律的规定”",
+  "cls": "quote",
+  "label": "right",
+  "why": "This matches Postal Law Art. 45(2) as the key describes it: compensation for items outside the universal postal service follows civil law. The draft drops the words 的损失赔偿 from the article text, but the meaning is unchanged."
+ },
+ {
+  "case": "zh-express-lost",
+  "round": "r2",
+  "raw": "“未保价最高赔几倍运费”",
+  "cls": "quote",
+  "label": "right",
+  "why": "This describes the waybill clause, not the law. The key confirms that 'N times the shipping fee' is the express company's own format clause, which is how the draft treats it."
+ },
+ {
+  "case": "zh-express-lost",
+  "round": "r2",
+  "raw": "“我这边录个音、方便记录”",
+  "cls": "quote",
+  "label": "unverified",
+  "why": "This is a line the draft wrote for the user to say on a call ('I am recording this for the record'). It is not a quote from any source and makes no claim that can be checked. Recording your own call is generally usable as evidence in China (my own knowledge), but the line itself cannot be confirmed either way."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "第44条",
+  "cls": "article",
+  "label": "right",
+  "why": "I fetched the State Council text (gov.cn/zhengce/content/202310/content_6911288.htm). Article 44 of 未成年人网络保护条例 does require providers to limit minors' single and daily cumulative spending and bars paid services that do not match a minor's civil capacity."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "“转未成年人退款专员或家长监护专线”",
+  "cls": "quote",
+  "label": "unverified",
+  "why": "This is a phrase the draft tells the parent to say. The key does not say whether every non-Tencent game has a '未成年人退款专员' or '家长监护专线', and that varies by company."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "“网易家长关爱平台”",
+  "cls": "quote",
+  "label": "right",
+  "why": "From my own knowledge, NetEase runs a parental platform under the name 网易家长关爱平台. The key is silent, and I could not open an official page because the search budget was used up."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "微信 > 我 > 服务 > 钱包 > 支付设置 > 免密支付/自动扣款",
+  "cls": "path",
+  "label": "unverified",
+  "why": "WeChat's 支付设置 does hold the password-free and auto-renew settings, but the item name '免密支付/自动扣款' is Alipay's wording. WeChat's labels (免密支付, 自动续费 or 扣费服务) vary by version. The key warns against menu paths copied without checking."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "微信 > 我 > 服务 > 钱包 > 消费者保护 > 安全保障 > 安全锁",
+  "cls": "path",
+  "label": "right",
+  "why": "From my own knowledge, WeChat's wallet has 消费者保护 > 安全保障 > 安全锁 (fingerprint, face or gesture lock). The key is silent."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "微信 > 我 > 服务 > 钱包 > 银行卡",
+  "cls": "path",
+  "label": "right",
+  "why": "From my own knowledge, the WeChat wallet (我 > 服务 > 钱包) has a 银行卡 entry."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "设置 > 屏幕使用时间 > 内容和隐私访问限制",
+  "cls": "path",
+  "label": "right",
+  "why": "This is the standard iOS path (设置 > 屏幕使用时间 > 内容和隐私访问限制). The context is empty and does not show it being offered as a block on WeChat Pay."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "微信 > 我 > 服务 > 钱包 > 亲属卡",
+  "cls": "path",
+  "label": "right",
+  "why": "From my own knowledge, the WeChat wallet has a 亲属卡 entry."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "648元",
+  "cls": "money",
+  "label": "unverified",
+  "why": "The draft states the largest single charge was 648元 as fact inside the template. The request only gives the 6480元 total, so the per-charge amount is the draft's assumption."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "12315",
+  "cls": "num",
+  "label": "right",
+  "why": "12315 is the national consumer complaint platform, and the key lists it as a complaint route."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "12345",
+  "cls": "num",
+  "label": "right",
+  "why": "12345 is the local government service hotline and can pass complaints to market regulators (own knowledge)."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "95017",
+  "cls": "num",
+  "label": "right",
+  "why": "95017 is WeChat Pay's official customer service number (own knowledge)."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r1",
+  "raw": "500",
+  "cls": "num",
+  "label": "right",
+  "why": "500 is only an example daily limit the parent might set on the bank card, not a factual claim, and the advice is reasonable."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "reportaproblem.apple.com",
+  "cls": "url",
+  "label": "right",
+  "why": "reportaproblem.apple.com is Apple's official refund request site (support.apple.com/zh-cn/118223)."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "www.12315.cn",
+  "cls": "url",
+  "label": "right",
+  "why": "www.12315.cn is the official national 12315 platform (own knowledge). The key names 12315 as a route."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "第十九条",
+  "cls": "article",
+  "label": "right",
+  "why": "The key cites Civil Code Article 19: a minor aged 8 or older has limited civil capacity."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "第一百四十五条",
+  "cls": "article",
+  "label": "right",
+  "why": "The key cites Civil Code Article 145: an act beyond the minor's capacity has no effect unless the guardian consents or ratifies it."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "第一百五十七条",
+  "cls": "article",
+  "label": "right",
+  "why": "From my own knowledge, Civil Code Article 157 requires property to be returned once an act is void, revoked or definitively without effect. It is an apt citation."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "《国家新闻出版署关于防止未成年人沉迷网络游戏的通知》",
+  "cls": "title",
+  "label": "right",
+  "why": "This is the title of 国新出发〔2019〕34号, and the key gives that notice's limits: a single top-up of at most 50元 and at most 200元 a month for ages 8 to under 16."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "“实名是你、就算成年人充值”",
+  "cls": "quote",
+  "label": "right",
+  "why": "This restates the customer service claim from the request (identity verified with the parent's ID, so it counts as an adult top-up). It reports the claim and does not endorse it."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "“我要申请未成年人充值退款、请转退款专员、我这边有账单和孩子说明”",
+  "cls": "quote",
+  "label": "right",
+  "why": "This is suggested wording for customer service: ask for a refund and offer the bills and the child's account. It matches the key's best answer and does not admit adult spending."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "“实名是成年人、不退”",
+  "cls": "quote",
+  "label": "right",
+  "why": "This accurately paraphrases the customer service refusal described in the request."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "“你在哪、孩子在干什么”",
+  "cls": "quote",
+  "label": "right",
+  "why": "This is advice to match each charge to where the parent was and what the child was doing. It fits the key's evidence list (charge times, devices and similar)."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "“未成年人未经监护人同意的大额充值、要求退还”",
+  "cls": "quote",
+  "label": "right",
+  "why": "This is suggested complaint wording (unauthorized large top-ups by a minor, refund requested). It is consistent with the key."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "“网易家长关爱平台”",
+  "cls": "quote",
+  "label": "right",
+  "why": "Same as item 2: from my own knowledge, NetEase's parental platform is called 网易家长关爱平台."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "我上班不在家 > 我睡觉 > 手机放在客厅充电",
+  "cls": "path",
+  "label": "right",
+  "why": "The automatic check misread this as a path. It is a bracketed list of options for the parent to pick in the template, not a factual claim."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "微信 > 我 > 服务 > 钱包 > 账单 > 右上角",
+  "cls": "path",
+  "label": "right",
+  "why": "From my own knowledge, WeChat bills are reached through 钱包 > 账单, and the menu in the top right corner offers 下载账单."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "下载账单 > 用于证明/报销 > 选起止日期 > 填邮箱",
+  "cls": "path",
+  "label": "unverified",
+  "why": "WeChat's bill download asks for the purpose, then dates and an email address, but I recall the options as 用于个人对账 and 用于证明材料, not '用于证明/报销'. I cannot confirm the exact labels."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "账单 > 该笔 > 对此订单有疑问 > 投诉商户",
+  "cls": "path",
+  "label": "wrong",
+  "why": "The key gives the WeChat bill entry as '对订单有疑惑'. The draft's '对此订单有疑问' does not match, which is the copied-menu-path trap the key warns about. The route itself is right."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "微信 > 我 > 服务 > 钱包 > 支付设置 > 免密支付/自动扣款",
+  "cls": "path",
+  "label": "unverified",
+  "why": "Same as item 3: '免密支付/自动扣款' is Alipay's label. WeChat's wording under 支付设置 differs by version and cannot be confirmed."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "支付宝 > 我的 > 设置 > 支付设置 > 免密支付/自动扣款",
+  "cls": "path",
+  "label": "right",
+  "why": "From my own knowledge, Alipay's 我的 > 设置 > 支付设置 contains an item labelled 免密支付/自动扣款."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "微信 > 我 > 服务 > 钱包 > 支付设置 > 指纹/面容支付",
+  "cls": "path",
+  "label": "right",
+  "why": "From my own knowledge, WeChat's 支付设置 shows 指纹支付 or 面容支付 depending on the device. The slash covers both, and the key recommends turning these off."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "支付宝 > 我的 > 设置 > 支付设置 > 生物支付",
+  "cls": "path",
+  "label": "right",
+  "why": "From my own knowledge, Alipay's 支付设置 has a 生物支付 entry for fingerprint and face payment."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "微信 > 我 > 服务 > 钱包 > 消费者保护 > 安全保障 > 安全锁",
+  "cls": "path",
+  "label": "right",
+  "why": "Same as item 4: WeChat's 钱包 > 消费者保护 > 安全保障 > 安全锁 (own knowledge)."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "支付宝 > 我的 > 设置 > 账号与安全 > 安全中心 > 安全锁",
+  "cls": "path",
+  "label": "unverified",
+  "why": "I cannot confirm the exact path to Alipay's security lock. Versions have used 安全设置 or 账号与安全, and I cannot verify the intermediate '安全中心' step."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "设置 > 屏幕使用时间 > 内容和隐私访问限制 > iTunes Store",
+  "cls": "path",
+  "label": "unverified",
+  "why": "In Chinese iOS the item is 'iTunes Store 与 App Store 购买项目', and newer versions rename it, so 'iTunes Store' is a truncated or outdated label. It also only blocks Apple billing, not WeChat Pay (key trap)."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "应用商店/游戏中心 > 我的 > 设置 > 关闭免密支付",
+  "cls": "path",
+  "label": "unverified",
+  "why": "This is a generic Android app store path, and menus differ between Huawei, Xiaomi, OPPO and vivo. It cannot be confirmed as stated."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "我 > 设置 > 青少年模式",
+  "cls": "path",
+  "label": "right",
+  "why": "From my own knowledge, WeChat has 青少年模式 under 我 > 设置."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "4536元",
+  "cls": "money",
+  "label": "right",
+  "why": "70% of 6480 is 4536, so the arithmetic is correct."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "70%",
+  "cls": "percent",
+  "label": "right",
+  "why": "This is a negotiation floor, not a legal claim. The key says partial refunds such as 80% or 60% are common, so asking for no less than 70% is reasonable."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "7个工作日",
+  "cls": "days",
+  "label": "right",
+  "why": "This is a reply deadline the letter sets for the company, not a claimed statutory period, so it does not fabricate a legal deadline."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "90 天",
+  "cls": "days",
+  "label": "wrong",
+  "why": "The key lists invented '30 or 90 days' deadlines as a trap. Apple's official refund page (support.apple.com/zh-cn/118223) gives no 90-day limit and only mentions a 24 to 48 hour wait."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "11周",
+  "cls": "weeks",
+  "label": "right",
+  "why": "This is part of '11周岁', and the request says the child is 11."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "12315",
+  "cls": "num",
+  "label": "right",
+  "why": "12315 is the national consumer complaint platform, and the key lists it."
+ },
+ {
+  "case": "zh-game-refund",
+  "round": "r2",
+  "raw": "12345",
+  "cls": "num",
+  "label": "right",
+  "why": "12345 is the local government service hotline (own knowledge)."
+ },
+ {
+  "case": "zh-id-card-lost",
+  "round": "r1",
+  "raw": "2017 年 7 月 1 日",
+  "cls": "date",
+  "label": "right",
+  "why": "Matches the key: from 2017-07-01 cross-province ID card applications were accepted nationwide (公通字〔2015〕34号), so the user can reapply in Guangzhou without going back to Henan."
+ },
+ {
+  "case": "zh-id-card-lost",
+  "round": "r1",
+  "raw": "两天",
+  "cls": "days",
+  "label": "right",
+  "why": "'今明两天' (today and tomorrow) is a planning suggestion, not a fact. It fits the key's point that the user should start the Guangzhou reapplication now because of the Oct 31 trip. Nothing about it is wrong."
+ },
+ {
+  "case": "zh-id-card-lost",
+  "round": "r2",
+  "raw": "“办身份证用的广东省数字相片采集回执”",
+  "cls": "quote",
+  "label": "right",
+  "why": "The key says a photo receipt (照片回执) is required and its cost is separate. From my own knowledge, Guangdong ID applications use a provincial digital photo receipt (数字相片采集回执) from approved photo studios. The phrase is a fair description of what to ask for, not a quote from a source."
+ },
+ {
+  "case": "zh-id-card-lost",
+  "round": "r2",
+  "raw": "“暂未开通跨省自助办”",
+  "cls": "quote",
+  "label": "right",
+  "why": "The key confirms that Guangzhou publishes a 'not yet open' list for cross-province self-service and that Henan is not on it, so the use here is correct. I could not check the eight listed provinces: the key does not give them, and no web search was possible because this turn's shared search budget was used up."
+ },
+ {
+  "case": "zh-id-card-lost",
+  "round": "r2",
+  "raw": "80元",
+  "cls": "money",
+  "label": "right",
+  "why": "The key's official fees are 40 yuan for a replacement card plus 10 yuan for the optional temporary ID. Adding the draft's photo receipt estimate of 20-30 yuan gives 70-80 yuan, so the sum is consistent. The key says photo fees vary by place; from my own knowledge, 20-30 yuan is typical in Guangzhou."
+ },
+ {
+  "case": "zh-id-card-lost",
+  "round": "r2",
+  "raw": "千元",
+  "cls": "money",
+  "label": "right",
+  "why": "Own knowledge, not in the key: a one-way second-class high-speed ticket from Guangzhou South to Zhengzhou East, or to most Henan cities, costs about 500-600 yuan, so a round trip is over 1,000 yuan. The southernmost Henan stops could be slightly under that. As an approximate cost estimate, it holds."
+ },
+ {
+  "case": "zh-id-card-lost",
+  "round": "r2",
+  "raw": "两天",
+  "cls": "days",
+  "label": "right",
+  "why": "An estimate rather than a fact. A Guangzhou-Henan round trip by high-speed rail takes about 4-6 hours each way, so a trip back to apply plausibly needs at least two days off. This matches the key's point that taking leave to go home is unnecessary."
+ },
+ {
+  "case": "zh-id-card-lost",
+  "round": "r2",
+  "raw": "1.5小时",
+  "cls": "hours",
+  "label": "right",
+  "why": "Advice, not a factual claim. It is sensible for a traveller using the manual ID-check lane with a 12306 temporary e-pass, and nothing official contradicts it. The 'Saturday' in the context is also correct: 2026-10-31 is a Saturday by calendar calculation."
+ },
+ {
+  "case": "zh-id-card-lost",
+  "round": "r2",
+  "raw": "70",
+  "cls": "num",
+  "label": "right",
+  "why": "This is the lower end of the same total as item 4: 40 yuan (key, replacement) + 10 yuan (key, temporary ID) + 20 yuan photo receipt (the draft's estimate; the key says this varies) = 70 yuan. Consistent with the key's fees."
+ },
+ {
+  "case": "zh-medical-family",
+  "round": "r1",
+  "raw": "“持续 1 年以上门诊降压治疗记录、每季度至少 1 次”",
+  "cls": "quote",
+  "label": "unverified",
+  "why": "The key doesn't mention any requirement of 'over a year of outpatient blood-pressure treatment records, at least once a quarter' for chronic/special-disease (慢特病) eligibility, and no context comes with the quote. Rules are set city by city. The web search budget was used up, so I opened no official page, and I don't know of this criterion myself."
+ },
+ {
+  "case": "zh-medical-family",
+  "round": "r1",
+  "raw": "1400 元",
+  "cls": "money",
+  "label": "unverified",
+  "why": "This is the top of '1100-1400 yuan saved a year via 慢特病'. It rests on assumed local rules (60% reimbursement, an optional 500-yuan deductible 'like Lu'an', and no annual cap), none of which the key or I can confirm. The key says the reimbursement can't be pinned to one number because rates and annual caps vary by city in Anhui. It is stated firmly ('关键差别'), but whether it is true depends on the mother's locality."
+ },
+ {
+  "case": "zh-medical-family",
+  "round": "r1",
+  "raw": "1100",
+  "cls": "num",
+  "label": "unverified",
+  "why": "This is the bottom of the same range, (2400-500)x60% ≈ 1140, rounded to 1100. The arithmetic is consistent, but the inputs (60% rate, the Lu'an 500-yuan deductible, no annual cap) are unconfirmed local assumptions. The key says Anhui cities differ and gives no hard number."
+ },
+ {
+  "case": "zh-medical-family",
+  "round": "r2",
+  "raw": "“江苏医保云-家庭共济”",
+  "cls": "quote",
+  "label": "unverified",
+  "why": "The key names the 国家医保服务平台 App's 医保钱包 as the route for cross-province pooling (跨省共济) with a mother in Anhui, and says nothing of a Jiangsu 医保云 menu item. From my own knowledge, 江苏医保云 has handled in-province family pooling (家庭共济), but the quote has no context. I couldn't check the current menu path, and it may not cover the Anhui case."
+ },
+ {
+  "case": "zh-medical-family",
+  "round": "r2",
+  "raw": "2500 元",
+  "cls": "money",
+  "label": "unverified",
+  "why": "The claim is that annual caps for outpatient chronic/special diseases (门慢) are 'commonly 2000-2500 yuan'. That generalises across places; the key gives no 门慢 cap figures, and I can't confirm what is 'common' from an official source. The key only says caps differ by locality."
+ },
+ {
+  "case": "zh-medical-family",
+  "round": "r2",
+  "raw": "2040",
+  "cls": "year",
+  "label": "unverified",
+  "why": "Item 5 is misclassed as a year. It is money: annual self-pay under the 两病 route, 2400-360 = 2040, so the arithmetic matches the draft's own '150-360 yuan cap' premise. The premise is uncertain, though. The key's Anhui example (Xuancheng 2020: 55%, hypertension cap 450 yuan/yr) would give self-pay of 1950, below this floor. Local caps vary, so this can't be confirmed as stated."
+ },
+ {
+  "case": "zh-medical-family",
+  "round": "r2",
+  "raw": "12393",
+  "cls": "num",
+  "label": "right",
+  "why": "From my own knowledge (the key doesn't cover it): 12393 is China's national medical-insurance service hotline, run by the National Healthcare Security Administration and reachable in every locality, including Suzhou and Anhui. It is a correct number for questions about local benefits and the medical-insurance wallet (医保钱包)."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r1",
+  "raw": "第二百零一条",
+  "cls": "article",
+  "label": "right",
+  "why": "Key: 期间计算按《民法典》第二百零一条，开始的当日不计入. The citation and the rule it is used for match."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r1",
+  "raw": "“解除劳动合同通知书”",
+  "cls": "quote",
+  "label": "right",
+  "why": "Using '解除劳动合同通知书' as the document title fits the key, which says the letter must be a 通知 and not a 申请 or a request for approval. As the EMS item description it is a sensible label, not a factual claim."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r1",
+  "raw": "不足1整天的部分不支付 > 4天",
+  "cls": "path",
+  "label": "right",
+  "why": "Key: 329÷365×5 = 4.51; the part under one day is not paid, so 4 days (《企业职工带薪年休假实施办法》第十二条)."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r1",
+  "raw": "2026年1月1日",
+  "cls": "date",
+  "label": "right",
+  "why": "Key: the pro-rata period runs from 1月1日 to 11月25日, 329 days. Checked: 2026 is not a leap year, Jan–Oct is 304 days, plus 25 gives 329."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r1",
+  "raw": "2024年",
+  "cls": "year",
+  "label": "unverified",
+  "why": "The year is filled into a template letter as the date the user joined this company. The key only says 累计工作4年 (total work years) and gives no start date here. 2024 cannot be confirmed or ruled out, and it would be wrong if the 4 years were all at this employer."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r1",
+  "raw": "12333",
+  "cls": "num",
+  "label": "right",
+  "why": "The key recommends 12333 (人社服务热线) or labour arbitration. The one-year time limit after leaving also matches the key (《劳动争议调解仲裁法》第二十七条)."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r2",
+  "raw": "第二百零一条",
+  "cls": "article",
+  "label": "right",
+  "why": "Key cites 《民法典》第二百零一条 (start day not counted). Checked by own calculation: 2026-10-26 is a Monday and day 30 is 11月25日, a Wednesday, both as the draft states."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r2",
+  "raw": "“这是2026年10月26日送达的解除劳动合同通知书”",
+  "cls": "quote",
+  "label": "right",
+  "why": "This is a suggested statement to say on video. It matches the delivery date in the key (10月26日) and calls the document a notice, not an application, as the key requires."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r2",
+  "raw": "“解除劳动合同通知书”",
+  "cls": "quote",
+  "label": "right",
+  "why": "The document title is a 通知, which the key says the letter must be (not 申请 or 请批准)."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r2",
+  "raw": "“解除劳动合同通知书(2026年10月26日送达)”",
+  "cls": "quote",
+  "label": "right",
+  "why": "The context is empty. The quoted title is a notice and shows the key's delivery date of 10月26日, so it is consistent with the key."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r2",
+  "raw": "2026年1月1日",
+  "cls": "date",
+  "label": "right",
+  "why": "Key: 1月1日至11月25日共329天. The draft's 329÷365×5 = 4.5068, rounded down to 4 days, also matches."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r2",
+  "raw": "22026",
+  "cls": "year",
+  "label": "unverified",
+  "why": "The context is empty, and '22026' is not a valid year. It is most likely the extraction gluing a neighbouring digit onto 2026, not a claim in the draft. Without context it cannot be confirmed as a typo or ruled out."
+ },
+ {
+  "case": "zh-resignation",
+  "round": "r2",
+  "raw": "12333",
+  "cls": "num",
+  "label": "right",
+  "why": "The key recommends 12333 for complaints about withheld wages. The other details in the context agree with the key and the law: free arbitration, filing within one year of leaving, and 第五十条 (离职证明, transfer within 15 days)."
+ }
+]

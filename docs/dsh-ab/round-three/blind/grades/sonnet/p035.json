@@ -1,0 +1,53 @@
+{
+ "pair": "p035",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第二十七条 for 未保价快件 and 第二十八条 for the 7-day complaint handling. These are the old numbers (checked against the 2018 text at rmzxw.com.cn). Since 2025-06-01 the compensation clause is 第二十八条. The key treats the old number as a small error.",
+   "'实务中这类案子常以部分金额和解' is a generalisation with no source, so it is unverifiable.",
+   "'《和解协议》《赔偿确认书》...签了通常就结案了' is a practice claim with no source.",
+   "'全额3999元有明确依据' and 'the bottom line is 3999 plus the freight refund' lean overconfident. The key says full payment cannot be guaranteed and the lack of insurance may reduce it. The answer adds a caveat later.",
+   "Omits 民法典第八百三十三条 (market price at destination), 第四百九十七条 and 第五百零六条, so its legal basis is thinner than the key."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第二十七条, the old number (the linked rmzxw page is the 2018 text). Since 2025-06-01 it is 第二十八条. This is a small error per the key.",
+   "'协商通常落在几百到接近实际价值之间' is a general claim with no source, so it is unverifiable.",
+   "The zhaoqing.gov.cn link for the 民法典 text was not opened and the npc.gov.cn link failed to load, so both are unchecked. The rmzxw link was opened and contains the quoted 未保价 sentence, but it is the outdated 2018 version.",
+   "Advises 'first refund the 闲鱼 buyer' as a step. This is questionable given Xianyu's refund flow and is not in the key.",
+   "'3999元走小额诉讼，成本不高' and '12305...免费' are plausible but uncited.",
+   "The draft does not explicitly demand a refund of the 18元 freight and never names 3999元 as the amount sought, so the demand is softer than the key's."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the baited premise at the start. Both correctly say 邮政法第四十七条 covers only 给据邮件 within 邮政普遍服务, that 第五十九条 sends 快件 to civil law, and that \"N倍运费\" is a 格式条款 under 民法典第四百九十六条. Both use the outdated 暂行条例第二十七条 number. B covers more of the legal basis: 民法典第八百三十三条 market price, 第四百九十七条, and explicit 判决不一致 with no guarantee of full payment. B also gives the correct escalation path (12305, the 申诉 site, 邮政法第六十五条, the 30-day reply, which I verified) and ties the claim to checkable sources. A matches the key more closely on the demand itself (3999元 plus the 18元 refund, with an explicit evidence list and the 7-day complaint window), but its escalation path lacks 12305 and the 30-day reply, and its risk caveat is thinner. The two are close. B's better legal coverage and honesty edge out A's firmer demand and evidence checklist."
+}

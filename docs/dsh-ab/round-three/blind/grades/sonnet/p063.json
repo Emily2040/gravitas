@@ -1,0 +1,53 @@
+{
+ "pair": "p063",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "《快递暂行条例》第二十七条: old article number; current number is 第二十八条 (key treats as a small error)",
+   "Says the 7-day complaint handling comes from 《快递暂行条例》第二十八条: unverifiable, and the article number collides with the current compensation article; I could not confirm a 7-day rule in the Regulation's text",
+   "'实务中这类案子常以部分金额和解': unverifiable generalisation, no source",
+   "'全额3999元有明确依据': overstated given the key's point that practice is inconsistent and may reduce for no declared value",
+   "Does not name the 12305 hotline or the 1-year / 30-day appeal limits, so the complaint route is only generic 'local postal bureau / 申诉网站'"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "《快递暂行条例》第27条: old article number; current number is 第二十八条",
+   "Says 第47条 binds only '邮政企业' (邮政法第84条 definition): defensible, but it is not the key's basis (universal-service scope plus 第五十九条 pointing to 第四十五条第二款); 第84条 cite unverified online, judged from own knowledge",
+   "Quoted content of 邮政法第47条第三款 ('未在营业场所、单据上以足以引起注意的方式载明...无权限制赔偿责任'): could not verify the wording or the paragraph number, believed roughly right from memory",
+   "'《民法典》第832、833条按实际损失赔偿': loose; 第833条 prices by market price at destination",
+   "'诉讼费几十元' for small-claims court: unverified, plausible",
+   "Draft letter volunteers a fallback ('按一定比例赔付', '至少退18元运费'), which weakens the 3999元 demand"
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers reject 'the law only allows 54元', tell her not to give in, and give a polite, firm letter with an evidence list. A's correction matches the key most closely: 第四十七条 is limited to universal service, and 第五十九条 points only to 第四十五条第二款. B reaches the right conclusion by a different route (第四十七条 binds only 邮政企业), so key point 1 is only partly matched. B covers more of the remaining points: 民法典第八百三十三条 and 第五百零六条, 12305 plus the 7-day complaint precondition, an explicit statement that courts are inconsistent so 3999元 is not guaranteed, and a fuller evidence list with a 'partial payment, rights reserved' tip. A has the cleaner letter and the stronger key-point-1 grounding, but it is thinner on 497/506 and the complaint route. A also attributes the 7-day rule to an article number that conflicts with the key. The two are close, and I give B a slight edge on key-point coverage."
+}

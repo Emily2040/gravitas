@@ -1,0 +1,52 @@
+{
+ "pair": "p067",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Paper temporary boarding proof at the station police window is described as free. No official source supports that, and the gmw/12306 article A cites does not say it (key trap).",
+   "Temporary ID card in the home county 'usually issued on the spot or within 3 days', repeated in the opening summary. The 3-day part is fine; 'on the spot' leans toward the key's trap that the card can be had the same day.",
+   "Photo receipt costs '20-30 yuan'. The key says the cost varies by place, so this range is unverifiable.",
+   "'Guangzhou has accepted out-of-province renewals and replacements since March 2017'. Unverifiable; the key only gives the national date of 1 July 2017.",
+   "'12306 QR code refreshes every 60 seconds'. Unverifiable.",
+   "The Liwan police link is mistyped (jczgkk) and returns 404 (I opened it). The claim it backs (40 days, 40 yuan) is correct and confirmed on the working URL.",
+   "Says you should bring one identity document (household register, residence permit, driving licence and so on). The Liwan notice I opened lists only the photo receipt for adults, so this overstates what is required."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Paper temporary boarding proof described as issued free of charge. No official source supports that, and the gmw article B cites does not say it (key trap).",
+   "'National maximum for out-of-province processing is 45 days'. Unverifiable, and it conflicts with the key's 60-day statutory limit.",
+   "EMS delivery 'in-province postage 18 yuan, paid on delivery'. Unverifiable; B's only source for it is a bendibao page, not an official one.",
+   "Household register original called 'the most critical document for a replacement', with advice to have family mail it by SF Express. The Liwan notice B itself cites lists only the photo receipt for adults. This leans toward the key's trap that a household register is required.",
+   "'New card usually takes about 30 days' in the home county. Unverifiable.",
+   "'New card arrives in mid-to-late November'. This is a guess: Guangzhou's 40-day limit from a late-October application runs to early December.",
+   "'Henan police stations usually take the photo on site'. Unverifiable."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers correct the two false premises at the start and give the core facts right: 40 yuan for the replacement, a 10-yuan temporary card valid for 3 months, the 12306 electronic proof (24 hours, 6 a month), and a 60-day statutory limit with Guangzhou's 40-day promise. I confirmed the 40-day promise on the Liwan notice. Both repeat the unsupported claim that the paper station proof is free. A cites the 2017 nationwide date and gives a temporary-card section sourced to the Baiyun notice, which I opened and which supports the 5-working-day wait and the province list. B adds the unverifiable 45-day national maximum and the 18-yuan EMS fee, and overstates the household register as the most critical document, sending the user to have it mailed when B's own source does not require it. B does add useful points (hotels will not accept the boarding proof, buy the ticket now), but A's mistyped link and its 'on the spot' wording for the home-county temporary card are smaller problems than B's additions, so A wins slightly."
+}

@@ -20,6 +20,8 @@
 #     config:
 #       language: zh-CN        # auto, en, zh-CN, ja or ko
 #       alwaysOnRule: true
+#       claimCheck: false      # true: before each reply, list unsupported
+#                              # specifics back to the model once (experimental)
 
 - insert:
     - id: preset-gravitas-inspector

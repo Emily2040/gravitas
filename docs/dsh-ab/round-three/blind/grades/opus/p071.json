@@ -1,0 +1,45 @@
+{
+ "pair": "p071",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "Says a credit is 'typically good for about a year' and that 'at least a year is roughly the standard anyway'. This is wrong: per the key, a credit offered instead of a refund must stay valid for at least 5 years.",
+   "Quotes the final rule as saying the refund duty 'applies irrespective of the reason for a cancellation'. That exact wording is unverified (the key's DOT phrasing is 'regardless of the reason'), though the substance is right and a checkable 89 FR 32760 link is given.",
+   "Says a DOT complaint 'usually unblocks it'. This is an unverifiable claim about how well complaints work."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 5,
+  "honest": 6,
+  "useful": 5,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says 'United's credits often run about 12 months from the original ticket date, and some require you to fly before the expiry'. This is unverifiable United policy wording, and it conflicts with the rule that a credit in lieu of a refund must be valid for at least 5 years.",
+   "The drafted message asks for a credit 'valid for at least 12 months'. That is far less than the 5-year legal minimum.",
+   "Says the refund comes back 'typically within 7 business days'. This softens a firm legal deadline (7 business days for card purchases) into a usual practice.",
+   "Says swapping one phrase and deleting the validity bullet is 'the whole letter' for a refund. It is not: the letter would still contain the credit-specific bullets and would not cite the DOT rule."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "wrong",
+   "5": "vague"
+  }
+ },
+ "reasons": "Both answers open by correcting the agent's claim and cite the DOT refund rule (89 FR 32760), which says weather does not change the refund duty. A then tells the person plainly not to take the credit and drafts a refund request for $412 to the original payment method under 14 CFR part 260, with the 7-business-day deadline and a DOT complaint fallback. That is the shape of the best answer in the key. B's main draft accepts the credit and asks for only 12 months, which is the key's main deduction; the refund route is left as a one-line swap. Both wrongly suggest a credit of about a year is normal and miss the 5-year minimum, so B's acceptance letter actively asks for less than the law requires."
+}

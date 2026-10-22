@@ -1,0 +1,56 @@
+{
+ "pair": "p047",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says the son can already use the mutual-aid quota to pay the mother's Anhui resident premium, adding 江苏已在首批支持范围内 and 政策明确允许. This is wrong: the key says Anhui had not opened this as of Oct 20 (expected November).",
+   "8000 ÷ 2400 ≈ 3年3个月 is an arithmetic slip: 8000/2400 = 3.33 years, about 3 years 4 months.",
+   "The chronic-disease estimate of 1140-1440 yuan mixes Wuhu's 60% and 2500 limit with Huoshan's 500 deductible for 普通慢性病. That is a made-up blend of two places, not one real local policy.",
+   "The conclusion gives 两病门诊一年最多报200元 as a general figure, but it is Tongling's limit applied to Anhui as a whole.",
+   "Says Anhui's ordinary outpatient and 两病 cover are limited to 一级及以下 facilities province-wide. This is unverifiable as an all-Anhui rule; the national rule is 二级及以下.",
+   "Says cross-province mutual aid 必须用 the national app. This is too strong; the key also allows the insured place's own channels.",
+   "Quotes 还有赖于当地定点医药机构的配合 without a precise source. The wording is unverifiable.",
+   "Says the premium is 近年约400元/年. This is roughly right from my own knowledge but not verified for Anhui 2026."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says the mutual-aid quota 也可以给她缴纳居民医保的个人缴费 with no caveat. This is wrong: the key says Anhui had not opened premium payment as of Oct 20.",
+   "Says Hefei 按住院比例报销，限额可能接近2000元. This is hedged but unverifiable, and it drives the 0-2000 yuan upper bound of the conclusion.",
+   "Says pharmacies reimburse only 双通道国谈药. This overstates it: national policy lets some 定点零售药店 join 门诊统筹. Pharmacy purchases are still generally not reimbursed, so the practical point stands.",
+   "Gives detailed Anhui chronic-disease criteria (two non-same-day records ≥28 days apart, etc.) sourced from a hospital website. These are unverifiable as the official provincial standard.",
+   "Says wallet 2.0 is 额度冻结、实时结算 and that unused quota is returned after the relationship ends. Plausible but unverifiable as stated.",
+   "Cites china.com.cn and sina articles, not official documents, for the policy timeline."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the 违规套保 premise and both get the 2400 yuan figure right. B also names the policy chain the key gives (国办发2021年14号, 2024年38号, 医保发2025年35号, and the national wallet 2.0 launch on 2026-10-16), while A only says family mutual aid is nationally allowed. B ties every reimbursement figure to a named city and does the arithmetic correctly: (2400−300)×60% = 1260. A builds its chronic-disease estimate from two different cities' rules, presents Tongling's 200 yuan limit as general in its conclusion, and slips on 8000/2400 (writes 3年3个月 instead of about 3 years 4 months). Both fall into the trap of saying the quota can already pay the mother's Anhui premium, and A states it more firmly. Neither mentions that the quota cannot be withdrawn as cash."
+}

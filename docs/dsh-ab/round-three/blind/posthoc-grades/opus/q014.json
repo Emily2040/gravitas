@@ -1,0 +1,45 @@
+{
+ "pair": "q014",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 8,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'Oil changes don't cause transmission slip' / email line 'Oil changes also have no connection to a transmission fault' and 'not a gray area': stated as absolute fact. The dealer can still try to show causation, so this is overstated.",
+   "'usually reverses the moment it's questioned in writing': a generalization with no source; unverifiable.",
+   "'Dealers often won't put \"customer used Jiffy Lube\" in a letter, because it's a Magnuson-Moss violation': no source; unverifiable.",
+   "Owner's-manual quote linked to techinfo.honda.com CW0707 PDF: the document code points to an older (likely 2007) manual rather than the 2023 warranty booklet. The fetch failed on a certificate error, so the exact wording is unverified, though it matches the key's substance.",
+   "Email says the car 'has been maintained on schedule': the user never said this, so the email makes a factual claim on the user's behalf that they would need to check.",
+   "'this is a routine call for them' (Honda corporate): unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague"
+  }
+ },
+ "reasons": "Both answers catch the false premise at the start. B is firm and cites 15 U.S.C. 2302(c) and Honda's dealer-service-not-mandatory language. A is hedged ('probably wrong'). The deciding flaw is in A's draft email: it authorizes the $3,400 repair and leads with the discount request, which the key says not to do, and it treats coverage only as something to 'revisit'. B tells the user not to sign the authorization and drafts an email that asserts the warranty claim and asks for the causation reason in writing. B keeps the price ask only as a fallback. B also gives the correct Honda customer service number (1-800-999-1009) and a useful caveat about a CVT fluid service with non-HCF-2 fluid. B loses some points for overconfident, unsourced generalizations and for putting 'maintained on schedule' in the user's mouth. Neither answer mentions the NCDS, the FTC or the state attorney general."
+}

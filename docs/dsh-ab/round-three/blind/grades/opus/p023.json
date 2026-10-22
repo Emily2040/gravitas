@@ -1,0 +1,55 @@
+{
+ "pair": "p023",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "'You're first eligible for March 2027' and 'If you do file for March 2027': wrong. She was born on the 18th, so her first full month at 62 is April 2027 (this is one of the key's listed traps).",
+   "'About 9 payments land in 2027': wrong. With April entitlement, the payments fall May to December, which is 8, and about 4 of those are withheld.",
+   "'Roughly $9,000-$10,500 of Social Security cash' in 2027 is too high. Even on A's own March assumption, 9 checks minus 4 withheld is about $8,400. On the correct timing it is about $6,760 (4 checks of about $1,690, September to December).",
+   "The adasoutheast.org link is presented as 'SSA's 2027 COLA and earnings-limit announcement'. That site is not SSA, so the source is misattributed, although the $25,560 figure does match the key.",
+   "'Apply around November 2026' rests on the wrong March start date. For an April start, the earliest filing date is about four months ahead, around December 2026 (judged from my own knowledge).",
+   "The budget table spreads the withholding evenly as -$518 a month. That contradicts A's own note that SSA withholds whole checks, so April to about August actually brings no Social Security."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "'$2,400 becomes $1,751 (in 2027 dollars)': wrong. $2,400 x 70.42% = $1,690. B quietly adds the roughly 3.6% COLA as if it were certain (one of the key's listed traps), and the error carries into the $21,010.08, $14,790.08, $52,790.08, $47,538 and $735/month figures.",
+   "'First check lands in May, so only nine payments fall in the year': wrong. May to December is 8 payments, so the $47,538 and $3,961/month figures are overstated.",
+   "The budget treats the withholding as a smooth monthly average and implies checks arrive from May. In fact SSA withholds about four whole checks, so almost nothing arrives until about September. B never mentions this.",
+   "'Roughly $134/month extra federal in 2027, $168/month at full-year rates' can't be verified and is probably overstated. It appears to be based on gross benefits before the earnings-test withholding. 85% of about $9,500 in net 2027 benefits, taxed at 12%, comes to about $80/month (my own recomputation).",
+   "'I put a full one-pager in social-security-2027-budget.md' can't be verified: the user has no evidence the file exists."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct both false premises at the start and get the 2027 earnings-test math right: $25,560 limit, $12,440 excess, $6,220 withheld. Both also say that withheld benefits are credited back at full retirement age. B is more precise on the reduction (April 2027, 59 months, 29.58%). But B then quotes $1,751 instead of about $1,690 by quietly adding the COLA, miscounts the 2027 payments as nine, and never warns that SSA withholds whole checks. So B's budget implies about $1,232 arriving every month from May. A says March instead of April and misattributes its source link. Even so, A's $1,680 figure is acceptable under the key, and A gives the most budget-relevant warning: about four checks withheld and nothing from SSA until late summer. A also adds sound net-of-tax figures and the correct Medicare date. Neither answer points her to SSA's calculators or her my Social Security account."
+}

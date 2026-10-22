@@ -1,0 +1,51 @@
+{
+ "pair": "q004",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 6,
+  "useful": 6,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says the household register (户口簿) is the key document for a Guangzhou lost-card re-issue and tells the user to have family courier it. The Liwan police notice (opened lw.gov.cn page) lists only the photo receipt for an adult. The key also lists 'must have the household register' as a trap.",
+   "Paper temporary proof from the station police counter is 'free' (免费). The gmw/CCTV article (opened) does not say it is free, and the key says there is no official basis.",
+   "'Nationwide remote handling takes at most 45 days': unverifiable. The Liwan page gives only 40 days, and the key gives a legal limit of 60 days.",
+   "EMS delivery 18 yuan collect within the province: unverifiable, not in the key.",
+   "Photo receipt 'a few dozen yuan', dress code and 'some machines open 24 hours': unverifiable details.",
+   "Temporary ID 'issued within 3 days' at the household-registration place: unverifiable, the key has no such figure."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'Starting in 2016, remote handling of ID cards rolled out nationwide': imprecise. The key says 公通字〔2015〕34号, with nationwide full implementation from 1 July 2017.",
+   "Photo receipt 20-30 yuan, so a total of 70-80 yuan: the arithmetic (40+10+20 to 30) is right, but the receipt price is unverifiable and varies by place.",
+   "The first link has the path 'jczgk' instead of 'jczwgk', which looks like a typo and may not open. The content it cites matches the official Liwan page I opened.",
+   "'An expired electronic proof is void and still counts as one use': unverifiable.",
+   "Menu path '温馨服务 → 乘坐旅客列车临时证明' and 'collect the temporary ID at the branch that handled the replacement': unverifiable wording and procedure.",
+   "Temporary ID 'can be applied for together with the replacement' yet also 'issued after the registration place signs it off, 5 working days': slightly blurry on order, but the 5 working days matches the key.",
+   "Temporary ID issued 'within 3 days' at the household-registration place: unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers correct the two premises at the start (Guangzhou replacement is possible, and the 12306 e-proof or station paper proof lets the user board). Both give 40 yuan and 10 yuan, 6 uses a month and 24 hours, and say the new card will not arrive by 31 October. Both also give the temporary ID as 5 working days and 3 months. Neither mentions the extra 30 days allowed in areas with poor transport. The deciding difference is the household register. A makes it the most important document and sends the user to courier it, but the Liwan police notice (opened) lists only the photo receipt for an adult, and the key flags this as a trap. B says the register is not needed and admits the official list shows only the photo receipt. A also calls the paper proof free, which no source supports, and adds an unverified 45-day limit. B's slips are smaller, mainly the imprecise 2016 date and a likely mistyped link. The 40-day Guangzhou time limit in both answers is supported by the Liwan page."
+}

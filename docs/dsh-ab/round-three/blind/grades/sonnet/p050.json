@@ -1,0 +1,50 @@
+{
+ "pair": "p050",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第二十七条 twice, including in the copy-paste letter. Since 2025-06-01 it is 第二十八条, so this is the outdated number (a small error per the key).",
+   "EMS aside: says 《邮政法》第47条 'may apply in principle' to EMS/中国邮政 and describes its third paragraph (no limit for intentional or grossly negligent loss, or unconspicuous notice). The key says 第47条 covers only universal-service 给据邮件, so EMS express parcels may fall outside it. The wording is hedged and I could not verify the paragraph from the key.",
+   "小额诉讼 court fee 'a few dozen yuan' and the venue options (defendant's domicile, or place of performance = shipping or receiving place) are not in the key. They are plausible from my own knowledge; I did not check them on the web.",
+   "Says 12305 appeal normally requires complaining to the company first, with 7 days unhandled or dissatisfaction. This matches the key's 7-day step, but it omits the 1-year filing period and the 30-day reply."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第27条 as the current article. Since 2025-06-01 it is 第二十八条, so this is the outdated number.",
+   "'通常到这一步，理赔口径会松动不少' (the stance usually softens at this step) is an unverifiable empirical claim.",
+   "The draft letter concedes '我寄件时没有保价，这一点我确实有疏忽' and asks for an increase only 'within the rules' (规则范围内). This weakens her position, and the key says not to concede.",
+   "The letter never asks for the actual loss of 3999 yuan or a refund of the 18 yuan freight. It asks only for a proportional 'raise', which falls short of the key's demand."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the baited premise, tell her not to say '认了', and call the three-times-freight rule a contract clause, not law. Both also use the outdated 条例第27条 number. A is more complete against the key. It cites 民法典 832/833, 496 and 506. Its letter asserts the 3999 yuan actual loss, rejects 54 yuan, and falls back to at least the 18 yuan freight. It also gives the 12305 path with the 7-day step, a full evidence list and the don't-sign-a-release advice. B is shorter and does state the fault-reduction risk clearly. But it cites no Civil Code articles, and its letter concedes '有疏忽' and asks only for a raise 'within the rules', with no demand for actual loss or the freight refund. A's weaknesses are length and a vaguer risk statement."
+}

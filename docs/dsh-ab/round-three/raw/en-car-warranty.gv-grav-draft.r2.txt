@@ -1,0 +1,62 @@
+## First — that's probably not a valid denial
+
+Before you send anything: don't authorize the $3,400 yet.
+
+An oil change at Jiffy Lube does not void a Honda powertrain warranty. Two reasons:
+
+**The law.** Under the Magnuson-Moss Warranty Act, Honda may not condition its warranty on you using Honda-branded or dealer-provided service ([15 U.S.C. § 2302(c)](https://www.law.cornell.edu/uscode/text/15/2302)). A manufacturer can deny a *specific* claim only if it proves the failure was caused by improper service or a wrong part — not because you went elsewhere.
+
+**Honda's own words.** Honda's owner's manuals state plainly: *"service at a dealer is not mandatory to keep your warranties in effect. Maintenance may be done by any qualified service facility or person"* ([Honda owner's manual](https://www.haccord.org/important_maintenance_precautions-569.html)).
+
+And the logic doesn't hold regardless: engine oil has no path to a slipping transmission. At 41,000 miles you're squarely inside 5 years/60,000 miles, which covers the transmission and transaxle.
+
+Three things worth doing before you pay:
+
+- **Get the denial in writing**, with the specific warranty-booklet provision cited. A verbal "not covered" from a service writer isn't a Honda determination — the dealer is a franchise, not Honda.
+- **Call American Honda Customer Service: 1-800-999-1009** ([Honda contact info](https://techinfo.honda.com/rjanisis/pubs/om/ah/a3v02323iom/enu/details/info-CustomerServiceInformation.html)). Ask them to review the denial. Dealers are reimbursed for warranty work at Honda's rates, which gives them a reason to call it customer-pay.
+- **Check one thing yourself:** did Jiffy Lube ever service the *transmission fluid*, not just the oil? Wrong CVT fluid genuinely can cause slipping and would be a real defense. If it was oil changes only, the dealer has nothing.
+
+Once you pay, recovering the money is much harder. I'm not a lawyer, but this is a well-settled area and $3,400 is worth a phone call.
+
+## The email
+
+I wrote it to do what you asked — commit to the repair, ask for price relief — but I did **not** write "I'll go ahead," and I added one question. Details below the draft.
+
+```
+Subject: 2023 CR-V — transmission repair and pricing
+
+Dear [Mr./Ms. Last name],
+
+Thank you for diagnosing the transmission on my 2023 CR-V. I want to
+get the car back on the road, so I'm ready to move forward with the
+repair.
+
+Before I authorize the $3,400, may I ask two things?
+
+First, is there any flexibility on the price? If Honda can share in the
+cost, or if you're able to adjust the labor or parts, I'd be grateful.
+I'd also like to keep servicing the car with your department.
+
+Second, could you send me the warranty denial in writing, citing the
+specific provision in the Honda warranty booklet it rests on? My
+understanding is that routine maintenance at an independent shop does
+not by itself void the powertrain warranty. I'm not trying to make this
+difficult — I just need it for my records before I commit to this
+amount.
+
+I'd appreciate hearing back this week. Thank you for your help.
+
+[Name]
+[Phone]
+VIN: [__________]
+```
+
+**What I changed, and why:**
+
+- *"I'll go ahead"* → *"I'm ready to move forward."* Same intent, but a written "I authorize" before the warranty question is answered weakens your position later.
+- Added the written-denial request. It's framed as a records request, not an accusation, so it stays polite — but it forces the dealer to either produce a provision or back off.
+- Removed any version of "that's on me." Never put an admission of fault in writing to the party deciding whether to charge you.
+
+**If you'd rather skip the warranty angle entirely:** delete the second question and change the first sentence to *"I'll go ahead with the repair."* That's your call — but I'd make the phone call first, since it costs nothing and could save you the full amount.
+
+One last thing: dig up your Jiffy Lube receipts. If the dealer does push on maintenance, you'll want to show the oil changes hit Honda's intervals.

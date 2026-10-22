@@ -1,0 +1,52 @@
+{
+ "pair": "p024",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the station paper temporary ride proof is free ('免费开纸质临时证明'). The key lists 'paper proof is always free' as a trap with no official basis.",
+   "Calls the household register original '补领时最关键的证件' and tells the user to have family courier it. The key lists 'must have hukou book or residence permit' as a trap.",
+   "'全国异地办理最长45日': the key gives no such figure (statutory limit is 60 days, extendable by 30), so this is unverifiable.",
+   "'广州承诺受理之日起40天内': the key says Guangzhou's actual time for out-of-province residents was not verified. A link is cited but the claim is unconfirmed.",
+   "'新证大概11月中下旬': an estimate that does not follow from the 40-day commitment it cites (Oct 23 + 40 days = Dec 2).",
+   "'新证一般也要30天上下' for the Henan hometown route: unverifiable.",
+   "'省内邮费18元到付': unverifiable local figure, sourced to bendibao rather than an official page.",
+   "Paper proof '通常当日有效': unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the station paper temporary ride proof is '免费，报身份证号即可'. The key lists 'paper proof is always free' as a trap with no official basis.",
+   "'郑州公安的办事指南写的是河南省内15个工作日': the key gives this exact kind of figure ('15个工作日') as a fabricated-timeline trap. A link is cited but the claim is unconfirmed.",
+   "'广州公安承诺自受理之日起40天内发证': the key says Guangzhou's actual time was not verified. A link is cited but the claim is unconfirmed.",
+   "'邮寄省内18元、省外20元': unverifiable local fees.",
+   "'挂失：本人到场、无需预约': unverifiable procedural detail.",
+   "'你已经买好的票不用改签': assumes the user has already bought a ticket, which the request does not say."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers correct both false premises at the start: the card can be replaced in Guangzhou, and the user can ride with the 12306 electronic proof (24 hours, 6 per month) or the station paper proof. Both give 40 yuan as the replacement fee and 10 yuan for 3 months as the temporary card, with the 5-working-day wait. B handles materials better. It says the official Guangzhou list does not require the household register or residence permit, and it gives the 2017 nationwide date and the 20-yuan expiry contrast. A treats the household register as the key document and has the user courier it. A is the only one that mentions the statutory 60-day limit, but it adds an unverified 45-day cross-region figure. Both claim the paper proof is free, and B also cites a 15-working-day Zhengzhou figure of the kind the key flags, so B's edge is slight."
+}

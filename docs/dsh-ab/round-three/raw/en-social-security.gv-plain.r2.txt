@@ -1,0 +1,37 @@
+I put a full one-pager in `social-security-2027-budget.md`. Here's the short version — but I have to flag that the number is considerably lower than your plan, because three of the assumptions in your note don't hold.
+
+## Three corrections
+
+**1. Forty years of payments doesn't exempt you from the early-claiming reduction.** 40 credits (10 years) is the *eligibility* threshold — it's what makes you insured at all. It doesn't waive or offset the age reduction. There's no "paid in long enough" exemption. The reduction depends only on how many months before full retirement age you start.
+
+**2. Claiming at 62 permanently cuts your check by ~30%.** Your FRA is 67. One wrinkle in your favor: because you were born on the 18th, you aren't "62 for the entire month" of March 2027, so your first month of entitlement is **April 2027** — 59 reduction months instead of 60, or 29.58%. So $2,400 becomes **$1,751** (in 2027 dollars), permanently.
+
+**3. Working while claiming triggers the earnings test.** Until FRA, SSA withholds $1 for every $2 above **$25,560** (the 2027 limit). At $38,000, that's $12,440 over → **$6,220 withheld**.
+
+## The 2027 budget
+
+2027 is a partial year — first week of entitlement is April, first check lands in **May**, so only nine payments fall in the year.
+
+| Source | Annual | Monthly average |
+|---|---:|---:|
+| Part-time wages | $38,000.00 | $3,166.67 |
+| Social Security, gross | $21,010.08 | $1,750.84 |
+| Less earnings-test withholding | ($6,220.00) | ($518.33) |
+| **Social Security, net** | **$14,790.08** | **$1,232.51** |
+| **Total** | **$52,790.08** | **$4,399.17** |
+
+Because 2027 only has nine payments, the actual 2027 total is **$47,538** — an average of about **$3,961/month** across the calendar year.
+
+Against the $5,567/month you were figuring, that's roughly **$1,170/month less**.
+
+Also budget for tax: at $38,000 in wages, about **85% of your benefits become taxable** — roughly $134/month extra federal in 2027, $168/month at full-year rates. Form W-4V is the easy fix.
+
+## The thing I'd actually push back on
+
+In 2027 you'd net about **$9,500** in benefits — and permanently give up about **$735/month for life** to get it. Because your wages are high enough to have benefits withheld anyway, you're paying the full permanent price for very little current cash. Waiting even a year or two, or until you actually stop working, changes the math a lot: the age-67 amount is about 42% higher than the age-62 amount.
+
+Two useful escape hatches: you can withdraw a claim within 12 months (Form SSA-521, repay what you got, once per lifetime). And withheld benefits aren't lost forever — SSA credits them back at FRA through an adjustment to the reduction factor. The 30% age cut, though, is permanent.
+
+One caveat that could move these numbers materially: I assumed you're filing single. If you're married, the thresholds for taxing benefits are higher, and a spouse's record could open spousal or survivor options worth checking before you file.
+
+Do you want me to run the comparison at 63, 64, and 65 so you can see what waiting actually buys?

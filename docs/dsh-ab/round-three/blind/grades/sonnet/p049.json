@@ -1,0 +1,51 @@
+{
+ "pair": "p049",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Beijing-specific UI and rule details (7 working days to apply for the exam after study, at least 5 minutes per session, 业务待办 route, 核对手机号 step, 60 s per question) are flagged as Beijing but I did not verify them; unverifiable as nationwide.",
+   "Cited link gov.cn/zhengce/2021-12/27/content_5712880.htm was not opened; the Article 15/25/27 content it cites matches the gov.cn gazette text I checked.",
+   "'一次9分以上违法' after dropping to 4 points: an 8-point violation also reaches 12 (4+8), so 9 is not the threshold; minor looseness.",
+   "'这周做满6分，时间上够' with no mention of the review wait after applying; the key says review time has no official data."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Time table assumes 2-5 min per round for applying and face recognition and 5-10 min for a fast exam; these are invented estimates, not sourced figures.",
+   "'审核结果通过短信/APP消息告知' and '部分版本首页直接有学法减分图标': unverifiable UI claims.",
+   "'北京等地还会列入黑名单，3个记分周期禁入': the regulation (Art. 26(5)) bars those with fraud or impersonation records in the last three periods, but the Beijing blacklist wording is unverified.",
+   "'一次9分以上的违法' after dropping to 4 points: an 8-point violation also reaches 12, so 9 is not the threshold; minor looseness.",
+   "Eligibility list omits the last-three-periods records of drunk driving, hit-and-run and buying or selling points, and the answer never mentions on-site study or public-service activity."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open with the right correction (the cap is 6 points, so 10 can only drop to 4) and give the correct 3 hours of online study plus 6 exams (20 questions, 18 to pass, 2 retakes). Both explain that 4 points remaining is not safe, and that the points clear on the clearing date if the period ends under 12 points with fines paid. I opened the gov.cn gazette text of the measures (the page B cites) and confirmed Articles 15, 17, 18, 25, 26 and 27 and the fraud fines A cites. I also opened the Shenzhen police page B cites, which says study time cannot be accumulated to earn exam attempts, so B's claim is verified. A covers more of the key: the on-site (1 hour for 2 points) and public-activity (1 hour for 1 point) routes with the shared 6-point cap, and the full list of ineligibility conditions. B skips key point 5 and is thinner on key point 6, though B's application step (face recognition, then review) matches key point 7 more closely. Both are long and carry some Beijing-specific detail, and B adds invented minute estimates for application time. A is slightly more complete against the key, so A wins by a slight margin."
+}

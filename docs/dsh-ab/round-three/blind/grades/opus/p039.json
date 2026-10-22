@@ -1,0 +1,56 @@
+{
+ "pair": "p039",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 6,
+  "useful": 7,
+  "concise": 3,
+  "added_claim_errors": [
+   "Cites 最高法《人民法院审理涉未成年人民事案件工作指引》第27条 and quotes its wording. Web search shows the guideline was issued 2026-03-18 with a gaming-refund rule, but I could not confirm the article number or wording, and the link goes to a law-firm site rather than an official source. It is also cited in place of 法发〔2020〕17号第9条.",
+   "'团体标准对这类情形建议的责任比例是30%—70%': press reports put this band in the 2024 draft for comment, as the game company's share when the guardian is at fault. Whether the final text kept it is unverified, and the answer presents it as a settled recommended ratio.",
+   "'退款到账通常伴随封号或道具回收…团体标准里明确允许': unverifiable.",
+   "'小额诉讼…诉讼费50元': by my own knowledge of 诉讼费用交纳办法, simplified/small-claims cases pay half, so 25元 for a claim under 10,000元; 50元 is the full ordinary rate.",
+   "'你上次被拒，是因为只说了“是我儿子充的”': invents what the user told customer service.",
+   "'这个数正好落在行业退费标准里，客服有权限批': unverifiable.",
+   "Many exact WeChat menu paths (e.g. 钱包→客服中心→消费者保护→安全保障→安全锁; 我→设置→更多→未成年人模式) are unverifiable against the current app. This matches the key's trap about copying specific menu paths.",
+   "'网易…客服 95163611' and '米哈游成长守护': unverifiable.",
+   "'国内手游大多走微信直付': overgeneralised. On iOS, in-game currency normally goes through Apple IAP, so Screen Time purchase limits do apply there."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Gives '上学日白天' as recharge timing that fits the child's schedule. The child is at school on school-day daytime, so this evidence would point to the parent, not the child.",
+   "'腾讯成长守护…已接入100多款腾讯游戏和1万多款微信小游戏': unverifiable numbers.",
+   "'多数这类案子在庭前调解阶段就和解了': unverifiable.",
+   "'微信支付交易流水证明…客服和12315都认': unverifiable assertion.",
+   "'苹果这条渠道经常被拒': unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the user's '认了' at the start and say that real-name registration does not change who made the recharges. Both cite 民法典 Articles 19, 145 and 157 correctly, and both write a message that states the child is 11, gives the count and amount, asks for a refund and offers evidence. A goes further on the key points. It cites a Supreme Court guideline with the same refund rule (in place of 法发〔2020〕17号, which neither answer names) and adds the WeChat Pay complaint channel. It also covers device, IP and session-time evidence, and warns correctly that iOS Screen Time does not stop direct WeChat payments. Against that, A is far too long, invents what the user said to customer service, and caps the claim at 50% up front ('我不要求全额退款'), below the 80%/60% outcomes the key calls common. B's message strategy is better (ask for a refund, accept a partial one, ask for the maximum ratio), and it names 腾讯未成年人家长服务平台. But B misses the judicial document and the WeChat Pay complaint path, and gives a self-defeating timing example ('上学日白天'). So A wins only slightly."
+}
