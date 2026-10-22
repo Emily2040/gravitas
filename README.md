@@ -81,7 +81,7 @@ The installer changes only what belongs to Gravitas: Antigravity's plugin folder
 
 ### On DeepSeek Harness
 
-Gravitas also runs on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH) 0.2.1-rc.2 and later, as the plugin `dsh-gravitas`, for the `web` profile and the desktop app. It brings the same always-on rule and the same `gravitas` skill, in the same four languages, built from the same files as the Antigravity version.
+Gravitas also runs on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH) 0.2.x, from 0.2.1-rc.2 on, as the plugin `dsh-gravitas`, for the `web` profile and the desktop app. DSH 0.3 is not supported yet: the plugin declares DSH `>=0.2.1-rc.2 <0.3.0-0`, and DSH refuses to install a plugin outside the range it declares. It brings the same always-on rule and the same `gravitas` skill, in the same four languages, built from the same files as the Antigravity version.
 
 | In Antigravity | On DeepSeek Harness |
 | --- | --- |

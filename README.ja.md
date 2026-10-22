@@ -85,7 +85,7 @@ Antigravity で新しい会話を始め、次の文を貼り付けます。
 
 ### DeepSeek Harness で使う
 
-Gravitas は [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）0.2.1-rc.2 以降でも、`dsh-gravitas` というプラグインとして動きます。対象は `web` プロファイルとデスクトップアプリです。常時適用ルールと `gravitas` スキルは Antigravity 版と同じファイルから作られ、日本語・英語・中国語・韓国語の四つの言語があります。
+Gravitas は [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）0.2.x（0.2.1-rc.2 以降の 0.2 系）でも、`dsh-gravitas` というプラグインとして動きます。DSH 0.3 にはまだ対応していません。プラグインが宣言している DSH のバージョン範囲は `>=0.2.1-rc.2 <0.3.0-0` で、範囲外の版では DSH がインストールを拒否します。対象は `web` プロファイルとデスクトップアプリです。常時適用ルールと `gravitas` スキルは Antigravity 版と同じファイルから作られ、日本語・英語・中国語・韓国語の四つの言語があります。
 
 | Antigravity では | DeepSeek Harness では |
 | --- | --- |

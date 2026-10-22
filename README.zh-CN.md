@@ -84,7 +84,7 @@ Linux 安装程序只需要 bash。如果你装过 Gravitas beta 1，它会在�
 
 ### 在 DeepSeek Harness 上使用
 
-Gravitas 现在也能在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）0.2.1-rc.2 及以后的版本上运行，插件名是 `dsh-gravitas`，适用于 `web` 配置（profile）和桌面应用。它带来的常驻规则和 `gravitas` 技能，与 Antigravity 版用的是同一批文件，同样有简体中文、英文、日文、韩文四种语言。中文版规则是按中文读者的习惯写的，不是逐句翻译。
+Gravitas 现在也能在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）0.2.x（0.2.1-rc.2 起）上运行，插件名是 `dsh-gravitas`，适用于 `web` 配置（profile）和桌面应用。暂不支持 DSH 0.3：插件声明的 DSH 版本范围是 `>=0.2.1-rc.2 <0.3.0-0`，超出这个范围，DSH 会拒绝安装。它带来的常驻规则和 `gravitas` 技能，与 Antigravity 版用的是同一批文件，同样有简体中文、英文、日文、韩文四种语言。中文版规则是按中文读者的习惯写的，不是逐句翻译。
 
 | 在 Antigravity 上 | 在 DeepSeek Harness 上 |
 | --- | --- |

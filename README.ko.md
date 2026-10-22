@@ -82,7 +82,7 @@ Antigravity에서 새 대화를 열고 아래 문장을 붙여 넣어 보냅니�
 
 ### DeepSeek Harness에서 쓰기
 
-Gravitas는 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)(DSH) 0.2.1-rc.2 이상에서도 `dsh-gravitas` 플러그인으로 돌아갑니다. 대상은 `web` 프로필과 데스크톱 앱입니다. 상시 적용 규칙과 `gravitas` 스킬은 Antigravity 버전과 같은 파일로 만들어지며, 한국어·영어·중국어·일본어 네 가지 언어가 있습니다.
+Gravitas는 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)(DSH) 0.2.x(0.2.1-rc.2 이상의 0.2 버전)에서도 `dsh-gravitas` 플러그인으로 돌아갑니다. DSH 0.3은 아직 지원하지 않습니다. 플러그인이 선언한 DSH 버전 범위는 `>=0.2.1-rc.2 <0.3.0-0`이고, 범위 밖의 버전에서는 DSH가 설치를 거부합니다. 대상은 `web` 프로필과 데스크톱 앱입니다. 상시 적용 규칙과 `gravitas` 스킬은 Antigravity 버전과 같은 파일로 만들어지며, 한국어·영어·중국어·일본어 네 가지 언어가 있습니다.
 
 | Antigravity에서는 | DeepSeek Harness에서는 |
 | --- | --- |
