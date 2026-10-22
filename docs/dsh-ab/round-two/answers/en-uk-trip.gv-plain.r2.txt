@@ -1,0 +1,27 @@
+**Short answer: almost — but not quite.** You don't need a visa, but since January 2025 US citizens need a **UK Electronic Travel Authorisation (ETA)** before boarding. It's cheap and quick, but it is a real requirement, and the airline can refuse you at Boston if you don't have one.
+
+- Each traveller needs their **own ETA** — £20 each, applied for separately ([gov.uk/eta](https://www.gov.uk/eta/apply)).
+- Apply through **gov.uk or the official "UK ETA" app only**. Lookalike sites charge far more.
+- Decisions usually arrive within a day but can take **up to 3 working days** — so do this now, not the night before.
+- It's valid 2 years (or until your passport expires) and is **tied to the passport number** you apply with.
+
+## Week-before checklist
+
+**Do today (not week-of)**
+- [ ] Both apply for the ETA — passport, email, card, photo of face. Save the 16-digit reference numbers.
+- [ ] Check both passports are **valid for the whole trip** (the UK has no 6-month rule, just validity through your stay). If either expires soon, deal with it now — US renewals take weeks.
+- [ ] Booked ticket name must match passport exactly.
+
+**In the last week**
+- [ ] Print/save offline: flight confirmations, hotel booking with full address (border officers may ask where you're staying).
+- [ ] Travel insurance — worth having for medical/cancellation; the NHS isn't free for visitors beyond emergency care.
+- [ ] Prescription meds in original packaging with a copy of the prescription; if either of you takes a controlled drug (e.g. ADHD stimulants), check UK rules and carry a doctor's letter.
+- [ ] Credit card with no foreign-transaction fee; set a travel notice; a little sterling isn't necessary — contactless is everywhere.
+- [ ] Phone plan or eSIM for the UK; pack a **type-G** adapter.
+- [ ] Copies of passport photo page + ETA reference emailed to yourselves.
+
+**Two things that could bite you**
+- If either of you has **any criminal record — even an old arrest or a minor conviction** — an ETA may not be enough; the UK can require a visa. Check [gov.uk/check-uk-visa](https://www.gov.uk/check-uk-visa) before applying.
+- If your route touches **Ireland or a Schengen country** (e.g. a connection through Dublin, Amsterdam, Paris), different or additional rules apply — tell me the routing and I'll check it.
+
+On arrival, US citizens can generally use the ePassport gates. Safe travels.

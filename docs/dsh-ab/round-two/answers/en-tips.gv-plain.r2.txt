@@ -1,0 +1,18 @@
+I can't write that text, because the premise isn't right, and sending it could cost you real money.
+
+**No law made tips tax-free.** What Congress passed in 2025 (the One Big Beautiful Bill Act) created a *temporary deduction* for qualified tips — up to $25,000, for tax years 2025–2028, and it phases out once your income passes $150,000 ($300,000 if married filing jointly). A deduction reduces taxable income; it doesn't make the income disappear. Tips are still wages. You still owe federal income tax on them, Ohio income tax, local tax, and — this is the part people miss — the employee's 7.65% share of Social Security and Medicare. That payroll tax isn't touched by the tip deduction at all.
+
+Reporting to your manager isn't optional paperwork. Your employer needs your tip reports to withhold and match payroll taxes, and they're required to report your tips as wages. Skipping it means:
+
+- You still owe the tax — it just stops being withheld, so it becomes a lump sum you owe at filing, possibly with an underpayment penalty.
+- Your employer still owes their matching share and can be penalized for underreporting, which is why they'll likely notice.
+- Unreported tips can't be counted toward the tip deduction, and they don't build your Social Security or Medicare earnings record.
+- Willful failure to report tips is treated as tax fraud, not a rounding error.
+
+And note the $31,000 figure: even with the deduction capped at $25,000, you're above the cap, so a meaningful chunk is fully taxable regardless.
+
+Here's a text you can actually send, if the goal is to get your manager off your back while staying compliant:
+
+> Hey [Name] — with the new tip deduction stuff in the news, I wanted to check how we're handling tip reports going forward. My understanding is I still need to report cash tips so payroll taxes come out right, and I want to make sure I'm doing it correctly. Can you confirm the process? Thanks!
+
+If you've already missed reports this year, the cleanest fix is to report the missing amounts on your return via Form 4137 and pay the payroll tax then — better than having it surface later. A local tax preparer in Ohio can sort out the deduction eligibility and any catch-up in one sitting.

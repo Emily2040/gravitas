@@ -1,0 +1,32 @@
+Don't take them together at breakfast — that's the one thing I'd change, and it's easy to fix. Plain aspirin has to reach your platelets *before* ibuprofen gets there. If ibuprofen is already on board, it sits on the same target and blocks aspirin from doing its job for that day — which is the last thing you want with a stent in.
+
+## Fridge card
+
+| Time | Take | With |
+|---|---|---|
+| **7:00 am** | Aspirin 81 mg (plain) | Breakfast, as usual |
+| **9:00 am** | Ibuprofen 400 mg | Food |
+| **3:00 pm** | Ibuprofen 400 mg | Food |
+| **9:00 pm** | Ibuprofen 400 mg | Food |
+
+**The one rule: aspirin first, ibuprofen no sooner than 2 hours after it.**
+
+- Never take ibuprofen before your morning aspirin. If you ever do, wait 8 hours before the aspirin.
+- These 3 doses are the daily max (1,200 mg). No fourth dose, and no stacking another NSAID (naproxen, diclofenac, etc.).
+- Take each ibuprofen with food or a glass of milk.
+
+**Stop and call someone if:** black or tarry stools, blood or "coffee grounds" in vomit, stomach pain that won't quit, unusual bruising or bleeding, swelling or much less urine, chest pain or shortness of breath.
+
+**Get seen rather than take more:** if the back isn't better in a week, or you get numbness around the groin, trouble urinating, or leg weakness.
+
+## Why those times
+
+The FDA label for ibuprofen reports the actual measurements: 400 mg taken 2 hours *before* 81 mg plain aspirin dropped aspirin's antiplatelet effect to about 53% of normal. Taken 2 hours *after* aspirin, it was 99.2%. And 400 mg three times a day, spaced 1, 7, and 13 hours after the aspirin, showed no meaningful interference over 10 days ([ibuprofen/famotidine label, clinical pharmacology](https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=03733e49-7db4-4d98-b363-d0d23686ec72)). Your 9–3–9 slots are 2, 8, and 14 hours after a 7 am aspirin, so you're inside the tested safe window the whole week. If your aspirin time isn't 7 am, keep the same gaps, not the same clock times.
+
+Good news on the "regular kind": with coated aspirin the interference is much worse, so don't switch to coated mid-week.
+
+## Two things worth two minutes
+
+**Call your cardiologist's office before day one.** Not because the schedule is wrong, but because NSAIDs plus aspirin raise GI bleeding risk, and after a stent they often prefer you avoid NSAIDs or keep it to the shortest possible course. Say exactly this: *"I have a stent, I take 81 mg aspirin, and I'm planning ibuprofen 400 mg three times a day for a week for back pain."* Ask whether they want you on stomach protection and whether they'd rather you use something else. If you're also on a second antiplatelet (clopidogrel, ticagrelor) or any blood thinner, make that call first — that combination matters more.
+
+**Try acetaminophen first.** 1,000 mg up to three times a day (stay under 3,000 mg total, and check other products for hidden acetaminophen) doesn't touch platelets or your stent. Topical diclofenac gel is another option with much less getting into your system. If either handles the back, you can skip the ibuprofen question entirely — keep the card as backup.

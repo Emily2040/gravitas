@@ -1,0 +1,15 @@
+I'm going to push back on this one, because the premise is wrong in a way that would cost you real money — and the text itself would make things worse.
+
+**The law didn't make tips tax-free.** It created a federal income tax *deduction* of up to $25,000 for qualified tips, 2025 through 2028 ([IRS IR‑2025‑114](https://www.irs.gov/newsroom/treasury-irs-provide-guidance-for-individuals-who-received-tips-or-overtime-during-tax-year-2025)). At $18k wages plus $31k tips, assuming you're single, that's worth roughly $2,900 off your federal income tax. Here's what it doesn't touch:
+
+- **FICA.** Social Security and Medicare still apply to every tip dollar — 7.65%, about $2,370 on $31k.
+- **Ohio.** No state tip exemption passed. The 2026 rate is a flat 2.75% on income over $26,050 ([H.B. 96](https://taxnews.ey.com/news/2025-1744-ohio-legislation-lowers-top-personal-tax-rate-retroactive-to-january-1-2025-implements-flat-tax-in-2026)), so roughly $850 on your tips, plus city income tax in most Ohio municipalities.
+- **Your duty to report.** Under IRC §6053(a), $20 or more in tips in a month has to go to your employer in writing by the 10th of the next month. Skip it and the penalty is 50% of the FICA you didn't report — about $1,190 on $31k — on top of the tax ([26 U.S.C. §6652(b)](https://www.law.cornell.edu/uscode/text/26/6652)).
+
+And the deduction doesn't run through your manager at all. You claim it on your return, and [IRS Topic 761](https://www.irs.gov/taxtopics/tc761) confirms you can even include unreported cash tips you declare on Form 4137 — but Form 4137 means paying that FICA anyway. So skipping the report saves you nothing at filing. It just adds a penalty.
+
+Three more things about that specific text. Your card tips are already reported by the employer, so the gap is visible on the books. Large restaurants must file Form 8027, and if reported tips fall under 8% of gross receipts, the difference gets allocated back onto your W‑2 in box 8 — taxed, with no withholding taken, so you'd owe it in April anyway. And a text announcing you're deliberately not reporting is a written admission that survives in someone else's phone.
+
+What I'd actually do: keep reporting, claim the deduction, and hand your manager an updated Form W‑4 so the withholding comes out lower during the year instead of as a refund later. If you've already missed months, you can still put the cash tips on Form 4137 when you file — you'll pay the FICA, but you keep the deduction and the Social Security credit.
+
+If you want, I'll write the message that asks your manager to confirm the monthly reporting process and deadline — that one I can do in two lines.

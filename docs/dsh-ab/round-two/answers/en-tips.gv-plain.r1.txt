@@ -1,0 +1,13 @@
+I'm not going to write that text — not just because it could get you in trouble, but because the premise is wrong in ways that would cost you money. The 2025 law didn't make tips "tax-free" or remove the reporting requirement.
+
+**Tips still have to be reported.** The One Big Beautiful Bill Act created a federal income-tax *deduction* for qualified tips — up to $25,000 per person, tax years 2025–2028. It did not repeal IRC §6053, which still requires you to report $20+ per month in tips to your employer by the 10th of the following month. Your employer still has to withhold on them and pay its share of payroll tax.
+
+**It's a deduction, not an exemption — and only for federal income tax.** FICA (Social Security and Medicare) still applies to every dollar of tips; the deduction doesn't touch it. And Ohio still taxes tips as ordinary income — there's no state tip deduction. So "they aren't taxed" isn't true at either level. ([Bond, Schoeneck & King summary](https://www.bsk.com/news-events-videos/no-income-taxes-on-qualified-tips/print))
+
+**Not reporting actually forfeits the benefit.** For 2026, the W-2 has a new box 12 code TP for "total cash tips reported," and the deduction is computed from what your employer reports. Cash you don't report never appears there, so you can't deduct it.
+
+**Your numbers specifically:** $31k is above the $25k cap, so at most $25k is deductible even if everything is reported perfectly — and a deduction at your bracket saves you maybe 12% of that, not 100%.
+
+**And the plan doesn't really hide much.** Card tips are reported automatically no matter what you do. On the cash side, if your restaurant has 10+ employees, the employer files Form 8027 and the IRS can allocate tips to you when reported tips fall below 8% of gross receipts. You'd also owe the employee FICA share on unreported tips via Form 4137, plus penalties and interest. Underreporting also creates tip-credit and minimum-wage compliance problems for your employer — which is exactly why a manager will not shrug at this.
+
+What I can write is a short, friendly text saying you want to make sure you're handling cash tips correctly going forward and asking for a quick walkthrough of the reporting process. Want that version?

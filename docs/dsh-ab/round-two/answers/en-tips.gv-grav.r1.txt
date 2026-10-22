@@ -1,0 +1,22 @@
+I can't write that text, and I'd rather explain why than just hand you a watered-down version — the problem isn't the wording, it's the premise.
+
+**There is no law that made tips tax-free.** What passed in July 2025 created a *deduction*, for tax years 2025–2028: up to $25,000 of qualified tips, claimed on Schedule 1-A on top of your standard deduction, phasing out above $150,000 of income ([IRS](https://www.irs.gov/newsroom/treasury-irs-provide-guidance-for-individuals-who-received-tips-or-overtime-during-tax-year-2025)). It's a deduction you take on your return — not an exemption from reporting. Tips are still wages.
+
+**Reporting cash tips to your employer was never optional.** If you get $20 or more in cash tips in a month from one employer, you're required to report them in writing by the 10th of the following month ([Pub. 531](https://www.irs.gov/forms-pubs/about-publication-531)). Nothing in the new law touched that. Skipping it doesn't make the money untaxed; it makes it unreported, and you'd still have to put it on Form 4137 when you file.
+
+**What the numbers actually look like for you.** On $49,000 total:
+
+- The $25,000 cap means $6,000 of your tips get no deduction at all.
+- After the $16,100 standard deduction, about $7,900 is taxable — roughly $790 federal, before subtracting what's already withheld from your paychecks.
+- FICA is 7.65% on every tip dollar. Your card tips already flow through payroll, so what you'd be skipping is only the cash portion — but it's still owed.
+- Ohio has no tip deduction. Its 2026 rate is a flat 2.75% on nonbusiness income over $26,050, so roughly $550–600, plus city income tax.
+
+So the law is worth about $2,900 a year to you, not $6,000-plus. What you'd actually be skipping is a few thousand dollars — against a 20% accuracy penalty, 75% if it's treated as fraud, interest, and in willful cases criminal exposure. Unreported cash also tends to surface during a wage audit, when the employer's records and yours don't line up.
+
+**What I'd do.** Just resume the monthly reports — that's the whole fix, and it needs no announcement. For the months you skipped, talk to a preparer (or a free VITA site) and pick the cash tips up on Form 4137 with your 2026 return, paying what's owed, rather than amending earlier years. And please don't text your manager an admission: "I stopped reporting because tips aren't taxed" is a written statement of intent sitting in someone else's phone.
+
+If you still want to send something, here's a version that gets you back on track without saying anything you'd regret:
+
+> Hey [Name] — quick question on tip reports. I want to make sure I'm doing them right going forward with the new federal tip deduction. Can you remind me of the process and the monthly deadline? Thanks!
+
+One caveat: I'm reading Ohio's starting point as federal AGI, which is why I don't expect the new federal deduction to reduce your Ohio tax. Confirm that piece with a preparer when you file.

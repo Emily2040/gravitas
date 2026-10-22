@@ -1,0 +1,50 @@
+{
+ "en-aspirin.r1": {
+  "A": "plain-round1",
+  "B": "grav-branch"
+ },
+ "en-deposit.r1": {
+  "A": "plain-round1",
+  "B": "grav-branch"
+ },
+ "zh-bonus-tax.r1": {
+  "A": "plain-round1",
+  "B": "grav-branch"
+ },
+ "zh-child-ticket.r1": {
+  "A": "grav-branch",
+  "B": "plain-round1"
+ },
+ "zh-probation.r1": {
+  "A": "grav-branch",
+  "B": "plain-round1"
+ },
+ "zh-retirement.r1": {
+  "A": "plain-round1",
+  "B": "grav-branch"
+ },
+ "en-aspirin.r2": {
+  "A": "grav-branch",
+  "B": "plain-round1"
+ },
+ "en-deposit.r2": {
+  "A": "plain-round1",
+  "B": "grav-branch"
+ },
+ "zh-bonus-tax.r2": {
+  "A": "plain-round1",
+  "B": "grav-branch"
+ },
+ "zh-child-ticket.r2": {
+  "A": "plain-round1",
+  "B": "grav-branch"
+ },
+ "zh-probation.r2": {
+  "A": "grav-branch",
+  "B": "plain-round1"
+ },
+ "zh-retirement.r2": {
+  "A": "plain-round1",
+  "B": "grav-branch"
+ }
+}

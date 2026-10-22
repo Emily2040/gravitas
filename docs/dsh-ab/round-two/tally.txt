@@ -1,0 +1,29 @@
+== held-out (20 pairs x 2 graders)
+ votes {'gv-plain': 16, 'gv-grav': 19, 'tie': 5}
+ added-claim errors listed {'gv-plain': 83, 'gv-grav': 88}
+ mean score /50 {'gv-plain': 41.17, 'gv-grav': 40.27}
+   en-tips r1:opus/grav(clear) r1:sonnet/grav(clear) r2:opus/grav(slight) r2:sonnet/plain(clear)
+   en-tylenol r1:opus/plain(clear) r1:sonnet/plain(clear) r2:opus/grav(clear) r2:sonnet/grav(clear)
+   en-uk-trip r1:opus/plain(slight) r1:sonnet/plain(slight) r2:opus/plain(slight) r2:sonnet/plain(slight)
+   zh-car-inspection r1:opus/grav(slight) r1:sonnet/plain(slight) r2:opus/grav(slight) r2:sonnet/grav(slight)
+   zh-child-deduction r1:opus/grav(slight) r1:sonnet/grav(slight) r2:opus/grav(slight) r2:sonnet/grav(slight)
+   zh-custom-return r1:opus/plain(clear) r1:sonnet/plain(clear) r2:opus/grav(slight) r2:sonnet/grav(clear)
+   zh-holiday-pay r1:opus/grav(slight) r1:sonnet/grav(slight) r2:opus/plain(slight) r2:sonnet/grav(slight)
+   zh-marriage-registration r1:opus/plain(slight) r1:sonnet/plain(slight) r2:opus/tie(slight) r2:sonnet/plain(slight)
+   zh-pension-account r1:opus/tie(slight) r1:sonnet/tie(slight) r2:opus/grav(slight) r2:sonnet/plain(slight)
+   zh-tax-refile r1:opus/plain(clear) r1:sonnet/tie(slight) r2:opus/grav(slight) r2:sonnet/tie(slight)
+== regression (12 pairs x 2 graders)
+ votes {'plain-round1': 8, 'grav-branch': 13, 'tie': 3}
+ added-claim errors listed {'plain-round1': 66, 'grav-branch': 52}
+ mean score /50 {'plain-round1': 39.62, 'grav-branch': 42.46}
+   en-aspirin r1:opus/grav(slight) r1:sonnet/grav(clear) r2:opus/plain(slight) r2:sonnet/plain(slight)
+   en-deposit r1:opus/grav(clear) r1:sonnet/grav(clear) r2:opus/grav(clear) r2:sonnet/grav(clear)
+   zh-bonus-tax r1:opus/plain(slight) r1:sonnet/plain(slight) r2:opus/plain(slight) r2:sonnet/tie(slight)
+   zh-child-ticket r1:opus/plain(slight) r1:sonnet/grav(slight) r2:opus/plain(clear) r2:sonnet/grav(slight)
+   zh-probation r1:opus/plain(slight) r1:sonnet/tie(slight) r2:opus/grav(slight) r2:sonnet/tie(slight)
+   zh-retirement r1:opus/grav(slight) r1:sonnet/grav(slight) r2:opus/grav(slight) r2:sonnet/grav(clear)
+== length and hedging, held-out
+  gv-plain median chars 2074.5 hedge/1000 0.8
+  gv-grav median chars 1974.5 hedge/1000 0.78
+  ratio chars 0.95 (limit 1.24) -> ok; ratio hedges 0.98 (limit 1.35) -> ok
+== regression lengths: branch median 1937.0 round-one Gravitas median 2025.0

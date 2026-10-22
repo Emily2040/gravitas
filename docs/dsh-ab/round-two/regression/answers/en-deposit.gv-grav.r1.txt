@@ -1,0 +1,42 @@
+One correction before the draft: California gives landlords **21 calendar days**, not 30 (Civil Code § 1950.5(h)(1)). Counting from a September 20 move-out, your landlord's deadline was **October 11** — so by October 21 they're already 10 days late. Don't cite 30 days in the letter; it would hand them a deadline you've already beaten. (The 14-day extension only applies if they sent a good-faith repair estimate within the 21 days, and you've received nothing.)
+
+Here's the email:
+
+```
+Subject: Security deposit — [apartment address], vacated September 20
+
+Dear [Landlord name],
+
+I moved out of [address] on September 20. My $2,400 security deposit has
+not been returned, and I have received no itemized statement or explanation
+of any deductions.
+
+Under Civil Code § 1950.5, you were required to return the deposit or provide
+an itemized statement with supporting receipts within 21 calendar days of my
+move-out — by October 11. That deadline has passed.
+
+Please send the full $2,400 to me at [address] by October 31. If you believe
+deductions are justified, send an itemized statement with the receipts,
+invoices, and photos, along with the remaining balance.
+
+If I do not receive payment or a complete accounting by October 31, I will
+pursue the remedies available under § 1950.5, including filing in small
+claims court, where the court may award up to twice the deposit for bad-faith
+retention.
+
+I would prefer to resolve this directly. Please confirm receipt of this email.
+
+Sincerely,
+[Name]
+[Phone]
+[Forwarding address]
+```
+
+A few practical notes:
+
+- **Send it where the lease says notices go**, plus by email if you have an address for them. Save the sent copy; certified mail is worth the few dollars if you expect a fight.
+- **Keep your evidence**: lease, deposit receipt or canceled check, move-out photos, and any texts or emails. Proof of the deposit can be any credible evidence under § 1950.5(p).
+- **If they send deductions instead of a check**, ask for the receipts, invoices, and photos. They can't charge for ordinary wear and tear, and if they miss the deadline in bad faith they may lose the right to claim anything at all (§ 1950.5(h)(7)).
+- **Small claims fits comfortably**: the limit is $12,500, and $2,400 (or double, $4,800) is well inside it.
+
+The statute is here if you want to read it yourself: [Civil Code § 1950.5](https://california.public.law/codes/civil_code_section_1950.5).

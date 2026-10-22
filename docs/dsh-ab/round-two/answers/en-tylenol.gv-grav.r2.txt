@@ -1,0 +1,34 @@
+Before I write it: two parts of that plan need to change, because as written it could hurt her.
+
+**2 caplets every 4 hours = 1,000 mg × 6 doses = 6,000 mg a day.** That is double the Extra Strength label limit (6 caplets / 3,000 mg per 24 hours) and well above the 4,000 mg absolute ceiling for healthy adults. For a 78-year-old the usual daily cap is 3,000 mg. Acetaminophen liver injury is quiet at first, so the brother would not see a problem until day 2–3.
+
+**NyQuil is not a sleep aid here.** Most NyQuil products carry 325–650 mg of acetaminophen per dose, so it acts as another Tylenol dose on top of the one you are already giving. NyQuil also usually contains doxylamine, a sedating antihistamine that geriatric prescribing guidance says to avoid after age 65: it causes confusion, dry mouth, urinary retention, and falls, especially on a nighttime bathroom trip.
+
+Here is the text to send — the schedule stays ahead of the pain, but within a safe ceiling:
+
+```
+Hi — Mom's pain plan for tonight. Please follow the times and don't add anything on your own.
+
+Tylenol Extra Strength 500 mg — 2 caplets at:
+  10:00 pm
+  6:00 am
+  2:00 pm
+
+That's 3 doses, 6 caplets total. Hard limit: never more than 6 caplets in 24 hours, and at least 6 hours between doses. If she's still hurting before the next dose is due, call me instead of giving extra.
+
+No NyQuil and no other cold, flu, or pain medicine. Almost all of them contain acetaminophen and would stack on top of what she's already had.
+
+For the cold: fluids, saline nasal spray, a humidifier, and honey for her throat. Prop her up on an extra pillow.
+
+Call me if the pain gets worse instead of better, the swelling increases, she gets a fever, she has a bad taste or pus, or she seems confused or unsteady.
+
+Thanks.
+```
+
+If 10 pm is not her bedtime, shift the whole block, but keep 8 hours between doses.
+
+Three things worth a quick check before tonight:
+
+- Confirm the 3,000 mg cap with the dentist or a pharmacist. If she has liver disease, weighs under about 50 kg, drinks alcohol regularly, or takes warfarin, the ceiling is lower (warfarin in particular can push her INR up with regular acetaminophen).
+- Only if the dentist explicitly clears 4,000 mg/day would 2 caplets every 6 hours be acceptable. Don't assume it.
+- Once the pain settles — usually day 3–4 — step down to 1 caplet every 6 hours as needed. Avoid alcohol completely while she's healing.

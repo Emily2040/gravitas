@@ -1,0 +1,40 @@
+**One change to your plan first: don't take the ibuprofen with your aspirin at breakfast.**
+
+Ibuprofen and aspirin compete for the same spot on platelets, and ibuprofen gets there first. If ibuprofen is already on board when the aspirin is absorbed, the aspirin can't do its job — and that job is keeping your stent open. Aspirin first, ibuprofen at least 30 minutes later, avoids it. Your plain (non-coated) 81 mg tablet is the right kind for this: it's absorbed fast, so the gap works.
+
+## Fridge schedule
+
+| Time | What to take |
+|---|---|
+| **7:00 AM** (breakfast) | **Aspirin 81 mg** — plain tablet, with water. Take this first. |
+| **8:00 AM** | **Ibuprofen 400 mg** — with food |
+| **2:00 PM** | **Ibuprofen 400 mg** — with food |
+| **8:00 PM** (dinner) | **Ibuprofen 400 mg** — with food |
+
+Wait at least 30 minutes between the aspirin and the first ibuprofen; an hour is an easier rule to keep. The 8 PM dose leaves roughly 11 hours before the next morning's aspirin, so it's cleared by then.
+
+If two doses control the pain, drop the 2 PM one. Lowest dose, shortest time.
+
+## One phone call before you start
+
+Call your cardiologist's office (or your pharmacist) and ask: *"I'm on aspirin after a stent — can I take ibuprofen 400 mg three times a day for a week?"* Two reasons it's worth the call:
+
+- **If you're also on a second antiplatelet** — clopidogrel (Plavix), ticagrelor (Brilinta), or prasugrel (Effient) — which is standard for months after a stent, adding ibuprofen raises bleeding risk substantially, and there may be a better pain plan. This matters more if the stent is recent.
+- **Topical diclofenac gel or acetaminophen** may handle back pain with far less reaching your stomach and bloodstream. A topical NSAID is often the preferred choice in exactly your situation.
+
+This schedule is a timing fix, not a green light.
+
+## While you're taking it
+
+- **Never skip the aspirin to "make room" for ibuprofen.** If you skip anything, skip the ibuprofen.
+- Take every ibuprofen dose with food. Skip alcohol. Don't add any other NSAID (naproxen/Aleve, another ibuprofen product).
+- 1200 mg/day is the over-the-counter ceiling, and 400 mg three times a day is exactly there — don't add extra doses.
+- Ibuprofen can raise blood pressure and, in people with coronary disease, the risk of heart attack and stroke. Risk is highest early and at higher doses, so keep this to the week you planned.
+
+## Stop and get help if
+
+- **Black, tarry, or bloody stools; vomiting blood or what looks like coffee grounds; severe stomach pain** — signs of GI bleeding.
+- Unusual bruising, or a nosebleed or gum bleeding that won't stop.
+- **Chest pain or shortness of breath — call 911, don't drive yourself.** That could be the stent, not the back.
+
+Source: [FDA/DailyMed ibuprofen prescribing information](https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=03733e49-7db4-4d98-b363-d0d23686ec72&version=1) — low-dose aspirin interaction, GI bleeding risk, and increased cardiac risk with NSAID use after a heart attack.

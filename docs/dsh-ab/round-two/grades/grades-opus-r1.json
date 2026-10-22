@@ -1,0 +1,272 @@
+[
+ {
+  "pair": "en-tips.r1",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+   "correct": 7,
+   "trap": 9,
+   "honest": 6,
+   "useful": 5,
+   "concise": 7,
+   "added_claim_errors": [
+    "Ohio still taxes tips, no state tip deduction - Ohio claim stated as fact; key marks Ohio treatment unverified (own knowledge: Ohio starts from federal AGI, so plausible)",
+    "2026 W-2 box 12 code TP is 'total cash tips reported' - draft form describes TP as total qualified tips, not cash tips reported; imprecise (own knowledge, not opened)",
+    "Unreported cash never appears on W-2 so you can't deduct it - overstated: tips reported on Form 4137 can also count as qualified tips (own knowledge)"
+   ]
+  },
+  "B": {
+   "correct": 9,
+   "trap": 9,
+   "honest": 8,
+   "useful": 9,
+   "concise": 6,
+   "added_claim_errors": [
+    "Ohio 2026 flat 2.75% over $26,050, roughly $550-600 - Ohio side claim stated as fact; key marks it unverified (hedged by closing caveat; arithmetic consistent: ~$21k x 2.75% = ~$580)",
+    "Pick up skipped months on 2026 Form 4137 rather than amending earlier years - wrong if any skipped months fell in 2025 (law passed July 2025); unverifiable from the request"
+   ]
+  },
+  "reasons": "Both catch the premise (deduction not exemption, $25,000 cap, FICA, $20/month by the 10th reporting duty). B's numbers recompute correctly: 49,000-25,000-16,100=7,900, 10% = $790; without the deduction 32,900 gives 1,240+2,460=3,700, so the law is worth about $2,910; 20%/75% penalties are right. B also gives the requested short, friendly text that keeps reporting and says what to do about skipped months; A only offers to write one, and adds a misleading claim that unreported cash tips can never be deducted. B is longer but far more usable."
+ },
+ {
+  "pair": "en-tylenol.r1",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+   "correct": 9,
+   "trap": 9,
+   "honest": 8,
+   "useful": 8,
+   "concise": 6,
+   "added_claim_errors": [
+    "NyQuil contains alcohol - true of the original liquid, not of all forms (alcohol-free versions exist); minor, from own knowledge",
+    "Lower-dose option '1 caplet every 6 hours' / '2 caplets every 8 hours' - not label directions; a dosing suggestion stated without a source (hedged as check with dentist)"
+   ]
+  },
+  "B": {
+   "correct": 5,
+   "trap": 9,
+   "honest": 7,
+   "useful": 5,
+   "concise": 7,
+   "added_claim_errors": [
+    "Schedule 2 caplets 8 pm + 1 caplet overnight + 2 at 8 am + 2 at 2 pm = 7 caplets (3,500 mg) within 24 hours, breaking its own 6-caplet hard limit",
+    "Overnight dose 'never sooner than 4 hours after the last dose' - label interval is every 6 hours"
+   ]
+  },
+  "reasons": "Both catch the 6,000 mg overdose and the hidden acetaminophen in NyQuil (650 mg/30 mL, 325 mg per capsule are right). A's schedule (10 pm, 6 am, 2 pm) is 3 doses at 8-hour gaps, 6 caplets, within the label. B's schedule adds a 1-caplet overnight dose at a 4-hour gap, which puts 7 caplets (3,500 mg) in the 8 pm-to-8 pm window and contradicts its own hard limit; for a 78-year-old on a safety question that is a serious error. A is a bit long but safe and actionable."
+ },
+ {
+  "pair": "en-uk-trip.r1",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+   "correct": 9,
+   "trap": 10,
+   "honest": 8,
+   "useful": 9,
+   "concise": 6,
+   "added_claim_errors": [
+    "ETA approval comes with a '16-digit reference' - plausible but not verified (own knowledge)"
+   ]
+  },
+  "B": {
+   "correct": 10,
+   "trap": 10,
+   "honest": 9,
+   "useful": 9,
+   "concise": 8,
+   "added_claim_errors": []
+  },
+  "reasons": "Both correct the premise at the start: each traveller needs an ETA, £20 each, apply now, allow up to 3 working days, valid 2 years or until the passport expires, no 6-month passport rule. B also warns about lookalike sites and multiple visits of up to 6 months, both in the key, and is tighter. A adds correct extras (British/Irish passport exception, £10,000 cash declaration) but runs longer than a 'short checklist'."
+ },
+ {
+  "pair": "zh-car-inspection.r1",
+  "winner": "A",
+  "margin": "slight",
+  "A": {
+   "correct": 9,
+   "trap": 10,
+   "honest": 8,
+   "useful": 9,
+   "concise": 6,
+   "added_claim_errors": [
+    "检测费多数城市两三百元 - 没有出处，各地标准不一（已注明以公示价为准，属轻微未核实）",
+    "逾期期间出事故商业险通常拒赔 - 示范条款确有'未按规定检验'免责，但'通常'说得偏满（凭自身知识）",
+    "12123菜单路径'更多→机动车业务→机动车检验预约' - 和B一致，大致可信，未打开核实"
+   ]
+  },
+  "B": {
+   "correct": 9,
+   "trap": 10,
+   "honest": 7,
+   "useful": 8,
+   "concise": 5,
+   "added_claim_errors": [
+    "逾期'一般罚200元' - 法规是警告或二百元以下罚款，说成固定200元偏满（已写'一般'）",
+    "预约'去不了至少提前1天取消' - 未核实",
+    "引用2026年hnjdctk.gov.cn流程链接 - 无法核实"
+   ]
+  },
+  "reasons": "两份都在开头纠正'6年免检'，指出今年是第6年要上线检测，周期表正确，记1分、二百元以下正确，三个月窗口正确。A多给了一个实用的自查（12123里有效期止是否早于2026年，若是则前两次标志没领、已逾期），而且'连续3个周期未检强制报废'是对的。B多出一整节第2、4、8年免检申领步骤，这次用不上，篇幅更长。差别不大。"
+ },
+ {
+  "pair": "zh-child-deduction.r1",
+  "winner": "A",
+  "margin": "slight",
+  "A": {
+   "correct": 10,
+   "trap": 10,
+   "honest": 9,
+   "useful": 9,
+   "concise": 7,
+   "added_claim_errors": [
+    "App会'通不过校验：同一子女比例合计不能超过100%' - 实时拦截与否未核实（已用'即便侥幸提交'留余地）"
+   ]
+  },
+  "B": {
+   "correct": 10,
+   "trap": 10,
+   "honest": 9,
+   "useful": 9,
+   "concise": 5,
+   "added_claim_errors": []
+  },
+  "reasons": "两份都在开头纠正'两人各2000'，给出一方100%或各50%、年度内不能变更，算出4800/3600/2400并建议丈夫全扣，数字我重算都对（B的补税2400、改50%需补3600也对）。A更紧凑，并具体说明跨档情形（他扣前14.4万–16.8万、她扣前低于6万时节税会少）以及12月年度确认，正好对应答案要点里的'假定仍在档内'。B内容同样正确但更长，有重复。差距小。"
+ },
+ {
+  "pair": "zh-custom-return.r1",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+   "correct": 6,
+   "trap": 6,
+   "honest": 6,
+   "useful": 6,
+   "concise": 4,
+   "added_claim_errors": [
+    "把实施条例第十九条第二款'未经确认不得拒绝无理由退货'套到法定除外的定作商品上作为主要退款依据 - 标准答案明确列为陷阱（A注明有争议，但投诉模板仍以此要求全额退款）",
+    "北京互联网法院2023年案例、丽江2024年十大案例定制眼镜 - 无法核实",
+    "举报'请依该条例第五十条查处' - 条文对应关系未核实"
+   ]
+  },
+  "B": {
+   "correct": 8,
+   "trap": 9,
+   "honest": 8,
+   "useful": 9,
+   "concise": 6,
+   "added_claim_errors": [
+    "'《暂行办法》第20条'是关于定制商品标注义务的条文 - 条号未核实，可能有误",
+    "投诉模板以《消保法》第二十五条作为全额退款依据之一 - 第二十五条恰恰把定作商品排除在外，引用不当"
+   ]
+  },
+  "reasons": "两份都在开头说明定作商品属于第二十五条法定除外，商家拒绝无理由退货不违法。B随后转向真实可行的理由（刻错、材质不符、质量问题、商家承诺），要求删掉不真实的段落，并给了协商话术，符合标准答案。A的主要论点和投诉模板建立在把条例第十九条用于定作商品上，这正是答案要点标出的陷阱；虽然A说明有争议，但模板仍主张全额退款，还引用了无法核实的案例，篇幅也长很多。"
+ },
+ {
+  "pair": "zh-holiday-pay.r1",
+  "winner": "A",
+  "margin": "slight",
+  "A": {
+   "correct": 10,
+   "trap": 10,
+   "honest": 9,
+   "useful": 9,
+   "concise": 7,
+   "added_claim_errors": []
+  },
+  "B": {
+   "correct": 9,
+   "trap": 10,
+   "honest": 7,
+   "useful": 8,
+   "concise": 6,
+   "added_claim_errors": [
+    "'人社厅函〔2025〕1号'明确300%另外支付 - 文号和链接（裸IP地址）无法核实，疑似编造；依据其实是劳动法第四十四条和工资支付规定",
+    "2026年中秋9月25日至27日放假 - 中秋是9月25日没错，放假天数未核实（与本题无关）",
+    "写'两点说明'却列了三点 - 小瑕疵"
+   ]
+  },
+  "reasons": "两份都在开头纠正除夕已是法定节假日，日工资300元、国庆2700+2400=5100元、春节少付300元，我重算都对，并且都给了客气的微信和补充除夕那300元的一句。A还正确说明在职期间追讨劳动报酬不受一年时效限制，并提醒'另行支付'实得相当于400%。B引了一个无法核实的人社厅函文号，还加了无关的中秋信息。差距小。"
+ },
+ {
+  "pair": "zh-marriage-registration.r1",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+   "correct": 9,
+   "trap": 10,
+   "honest": 7,
+   "useful": 8,
+   "concise": 5,
+   "added_claim_errors": [
+    "四个登记处的详细地址和电话号码 - 无法核实（来自本地宝，非官方）",
+    "非深户补换身份证'一般要求有深圳居住登记' - 现行异地补换一般不要求，未核实",
+    "照片'近6个月内、头部占2/3、不穿露肩吊带' - 来自本地宝，非条例或工作规范原文，未核实"
+   ]
+  },
+  "B": {
+   "correct": 9,
+   "trap": 10,
+   "honest": 8,
+   "useful": 8,
+   "concise": 6,
+   "added_claim_errors": [
+    "深圳免费婚检'非深户通常要居住证或社保' - 未核实",
+    "预约入口'粤省事' - 未核实，可能属实"
+   ]
+  },
+  "reasons": "两份都在开头纠正两点：2025年5月10日起全国通办、只需身份证和现场签的声明、不用户口簿、不用回户籍地，并给了3张2寸同版合影照、免费、双方到场的说法，都对。B的日期安排可以核对：2026年11月的周六是7、14、21、28日，往前推15天是10月23日和10月30日，都对；引用的是深圳市政府官方页面。A额外列了无法核实的电话、地址和身份证补换要求。两份都偏长，B略胜。"
+ },
+ {
+  "pair": "zh-pension-account.r1",
+  "winner": "tie",
+  "margin": "slight",
+  "A": {
+   "correct": 10,
+   "trap": 10,
+   "honest": 9,
+   "useful": 9,
+   "concise": 8,
+   "added_claim_errors": [
+    "App入口名称'个人养老金扣除管理' - 未核实"
+   ]
+  },
+  "B": {
+   "correct": 10,
+   "trap": 10,
+   "honest": 9,
+   "useful": 9,
+   "concise": 7,
+   "added_claim_errors": []
+  },
+  "reasons": "两份都纠正了两个误解，算出1200元（9480−8280）、领取时360元、净省840元，我重算都对；都说明3%按领取总额计、基本养老金和个人养老金的区别、12月31日前缴存。A补充了按领取额算的平衡点（领4万元时打平，也是对的）和汇算期3月1日至6月30日；B给了另一种核算方法（净投入10800对拿回11640），并说明45%档也只省5400元。两份都没提2025年新增的三种领取情形。质量相当。"
+ },
+ {
+  "pair": "zh-tax-refile.r1",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+   "correct": 7,
+   "trap": 7,
+   "honest": 7,
+   "useful": 7,
+   "concise": 6,
+   "added_claim_errors": [
+    "已经点了'提交申报'就必须补380元加滞纳金 - 已申报的也可以更正后选择享受免申报，A把已提交说成必须缴，和标准答案'不用补、没有滞纳金'不符",
+    "滞纳金21.66元（114天×0.19元）- 算术对（7月31+8月31+9月30+10月22=114天），但按答案要点属于方向错误，免于汇算的情形不该套用"
+   ]
+  },
+  "B": {
+   "correct": 9,
+   "trap": 10,
+   "honest": 9,
+   "useful": 9,
+   "concise": 6,
+   "added_claim_errors": [
+    "App路径'办&查→申报记录'以及'更正→享受免申报' - 大致可信，未打开核实"
+   ]
+  },
+  "reasons": "两份都发现了'补税不超过400元'可免于汇算这一条，并说明单位依法预扣的前提。B开头就给出明确结论（不用补、滞纳金0元），滞纳金只作为不适用的假设计算，并说明已申报甚至已缴款的情形可以更正为享受免申报，这和标准答案一致。A把已提交申报的情形当成必须缴税加滞纳金，开头就给出401.7元，削弱了正确结论，也可能误导用户去缴钱。"
+ }
+]
