@@ -84,4 +84,4 @@ What testing showed. Answers were graded blind in pairs against written answer k
 
 Limits. Most of the method is instruction the model is asked to follow; the tool lists, the installers and the scripts are the mechanical parts, and the scripts run when the agent is told to run them. It was tested on agy 1.2.9 to 1.2.16 on Windows 11. Platform behaviour that affects how you use it is in `skills/gravitas/references/13-platform.md`. Two points matter most: headless `agy -p` runs need explicit permission grants or a `toolPermission` setting in `~/.gemini/antigravity-cli/settings.json`, and the CLI reads a repository's own `.agents/` folder only when the repository is passed with `--add-dir`, which is why this plugin installs globally. The native Chinese, Japanese and Korean rules have not been benchmarked. In Japanese and Korean, the reply to someone who may be in danger can answer a person who wrote casually in a polite register; plain Antigravity does the same.
 
-Version 1.2.1 · MIT · by [Iamemily2050](https://github.com/Emily2040)
+Version 1.3.0 · MIT · by [Iamemily2050](https://github.com/Emily2040)

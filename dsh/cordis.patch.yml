@@ -1,0 +1,105 @@
+# Gravitas for DeepSeek Harness: the rows this bundle adds to a profile.
+#
+# 1. Two agent presets for Gravitas inspectors:
+#    - gravitas-inspector: read, search and web only. No tool writes or edits files.
+#    - gravitas-checker: the same plus the shell, for one independent check.
+#      As in Antigravity, its read-only status is a charter rule, not a tool limit.
+# 2. A Host-level delegation tool, gravitas_inspect, that starts a child on one
+#    of those presets. It is a separate tool, so the shipped presets and their
+#    own `subagent` tool stay exactly as DeepSeek ships them.
+# 3. The dsh-gravitas plugin (dsh/index.js): the gravitas skill and the
+#    always-on rule, in the language set below.
+#
+# To change the language or turn the rule off, override the dsh-gravitas row
+# in your profile's cordis.patch.yml, restating its whole config:
+#   - id: dsh-gravitas
+#     config:
+#       language: zh-CN        # auto, en, zh-CN, ja or ko
+#       alwaysOnRule: true
+
+- insert:
+    - id: preset-gravitas-inspector
+      name: '@deepseek-ai/dsh-agent-preset'
+      config:
+        id: gravitas-inspector
+        name: Gravitas inspector
+        description: Read-only Gravitas verifier. Reads, searches and uses the web; cannot write or edit files.
+        order: 90
+        plugins:
+          - id: persona
+            name: '@deepseek-ai/dsh-persona'
+            config:
+              prefix: >-
+                You are a Gravitas inspector: an independent, read-only verifier started by a lead agent.
+                The prompt begins with your role file (scout, reader, finder, refuter, visual critic,
+                completeness critic or prose editor) and then your task. Follow the role file exactly.
+                You can read files, search the workspace and use the web. You have no tool that writes or
+                edits files, and you must not change anything by any other means. Quote the lines and
+                sources you rely on. Return exactly the result your role file asks for, in the language of
+                the task, and nothing else.
+          - id: time-context
+            name: '@deepseek-ai/dsh-time-context'
+          - id: tool-fs
+            name: '@deepseek-ai/dsh-tool-fs'
+            config:
+              write: false
+              edit: false
+          - id: tool-fs-search
+            name: '@deepseek-ai/dsh-tool-fs-search'
+            config:
+              sampleOverCapGlobResults: false
+          - id: tool-web
+            name: '@deepseek-ai/dsh-tool-web'
+            config:
+              fetch: true
+              searchTimeoutMs: 60000
+
+    - id: preset-gravitas-checker
+      name: '@deepseek-ai/dsh-agent-preset'
+      config:
+        id: gravitas-checker
+        name: Gravitas checker
+        description: Gravitas checker. Runs one independent check with the shell; never modifies the work under review.
+        order: 91
+        plugins:
+          - id: persona
+            name: '@deepseek-ai/dsh-persona'
+            config:
+              prefix: >-
+                You are a Gravitas checker: an independent verifier started by a lead agent to run one check
+                on one claim. The prompt begins with the checker role file and then the claim. Follow the role
+                file exactly. Compute the result a different way from the way the claim was reached. You may
+                run commands. You may not modify, move or delete any file that is part of the work under review.
+                If a scratch file is unavoidable, write it only in the system temp directory and name it in your
+                result. Return exactly the result the role file asks for, in the language of the task.
+          - id: time-context
+            name: '@deepseek-ai/dsh-time-context'
+          - id: tool-fs
+            name: '@deepseek-ai/dsh-tool-fs'
+            config:
+              write: false
+              edit: false
+          - id: tool-fs-search
+            name: '@deepseek-ai/dsh-tool-fs-search'
+            config:
+              sampleOverCapGlobResults: false
+          - id: tool-pwsh
+            name: '@deepseek-ai/dsh-tool-pwsh'
+            disabled: !!js process.platform !== 'win32'
+          - id: tool-bash
+            name: '@deepseek-ai/dsh-tool-bash'
+            disabled: !!js process.platform === 'win32'
+
+    - id: tool-gravitas-inspect
+      name: '@deepseek-ai/dsh-tool-subagent'
+      config:
+        provider: spawn
+        toolName: gravitas_inspect
+        agentPreset: gravitas-inspector
+        allowedAgentPresets: [gravitas-inspector, gravitas-checker]
+
+    - id: dsh-gravitas
+      name: 'dsh-gravitas'
+      config:
+        language: auto
+        alwaysOnRule: true

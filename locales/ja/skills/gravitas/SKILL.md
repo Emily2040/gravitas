@@ -2,11 +2,11 @@
 name: "gravitas"
 description: "一度の確認では済まない作業を、掘り下げて検証するためのスキルです。対象は、コード・ドキュメント・データの監査やレビュー、多数のファイルにまたがる変更、多くの情報源を突き合わせる調査レポート、実際に動かす必要があるビルドやデバッグのほか、徹底した検証を求める依頼全般です。日常的な質問やアドバイス、短い文章の作成はこのスキルの対象外で、プラグインの常時適用ルールに従って対応します。トリガー語（言語を問わない）：审计 调试 彻底验证, 감사 디버깅 철저한 검증, 監査 デバッグ 徹底的な検証。"
 license: "MIT"
-compatibility: "Windows 11 上で、Google Antigravity デスクトップ版 2.17.0 と agy CLI 1.2.9〜1.2.16 に対応しています。読み取り専用の検証エージェントと常時適用ルールを備えたプラグインとしてインストールされます。"
+compatibility: "Windows 11 上で、Google Antigravity デスクトップ版 2.17.0 と agy CLI 1.2.9〜1.2.16 に対応しています。読み取り専用の検証エージェントと常時適用ルールを備えたプラグインとしてインストールされます。DeepSeek Harness 0.2.1-rc.2 でも dsh-gravitas プラグインとして動作します。"
 metadata:
   author: "Iamemily2050"
   repo: "https://github.com/Emily2040/gravitas"
-  version: "1.2.1"
+  version: "1.3.0"
   website: "https://Iamemily2050.com"
   x: "@iamemily2050"
   instagram: "@iamemily2050"

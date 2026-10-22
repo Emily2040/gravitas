@@ -84,4 +84,4 @@ python skills/gravitas/scripts/slopcheck.py <파일>      # 기계가 쓴 글의
 
 한계도 있습니다. 방법의 대부분은 모델에게 따르라고 하는 지시문입니다. 기계적인 부분은 도구 목록, 설치 프로그램, 스크립트이고, 스크립트도 에이전트가 돌리라는 지시를 받아야 돕니다. Windows 11의 agy 1.2.9부터 1.2.16까지에서 시험했습니다. 쓰는 방식에 영향을 주는 플랫폼 동작은 `skills/gravitas/references/13-platform.md`에 있습니다. 가장 중요한 것은 두 가지입니다. 헤드리스 `agy -p` 실행에는 권한을 명시적으로 주거나 `~/.gemini/antigravity-cli/settings.json`에 `toolPermission` 설정이 있어야 합니다. 그리고 CLI는 저장소를 `--add-dir`로 넘겼을 때만 저장소 자체의 `.agents/` 폴더를 읽는데, 이 플러그인이 전역으로 설치되는 것도 그 때문입니다. 또 일본어와 한국어에서는 위기 상황의 답이 편하게 쓴 사람에게도 정중한 말투(한국어는 합쇼체)로 나올 수 있고, 기본 Antigravity도 마찬가지입니다.
 
-버전 1.2.1 · MIT · 만든 사람 [Iamemily2050](https://github.com/Emily2040)
+버전 1.3.0 · MIT · 만든 사람 [Iamemily2050](https://github.com/Emily2040)

@@ -2,11 +2,11 @@
 name: "gravitas"
 description: "Deep verification for work one pass cannot check: audits and reviews of code, documents or data, changes across many files, research reports that reconcile many sources, builds and debugging that must run, and any request to verify thoroughly. Everyday questions, advice and short writing follow the plugin's always-on rule instead. Triggers in any language: 审计 调试 彻底验证, 감사 디버깅 철저한 검증, 監査 デバッグ 徹底的な検証."
 license: "MIT"
-compatibility: "Google Antigravity desktop 2.17.0 and agy CLI 1.2.9 to 1.2.16 on Windows 11. Installs as a plugin with read-only verifier agents and an always-on rule."
+compatibility: "Google Antigravity desktop 2.17.0 and agy CLI 1.2.9 to 1.2.16 on Windows 11. Installs as a plugin with read-only verifier agents and an always-on rule. Also runs on DeepSeek Harness 0.2.1-rc.2 as the dsh-gravitas plugin."
 metadata:
   author: "Iamemily2050"
   repo: "https://github.com/Emily2040/gravitas"
-  version: "1.2.1"
+  version: "1.3.0"
   website: "https://Iamemily2050.com"
   x: "@iamemily2050"
   instagram: "@iamemily2050"

@@ -4,6 +4,20 @@ All notable changes to this project are documented in this file.
 
 This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic Versioning](https://semver.org/).
 
+## [1.3.0] - Unreleased
+
+### Added
+- A DeepSeek Harness (DSH) plugin, `dsh-gravitas`, for DSH 0.2.1-rc.2 and later: `package.json` at the repository root and `dsh/`. It serves the same built files as the Antigravity installers (`dist/<lang>/gravitas`): the `gravitas` skill through the DSH skill registry, and the always-on rule as a global system-prompt section. Two agent presets replace Antigravity's verifier agents: `gravitas-inspector` (read, `glob`, `grep`, `web_fetch`, `web_search`; the file tool is mounted with writing and editing switched off) for seven roles, and `gravitas-checker` (adds `pwsh` or `bash`) for the checker. A separate Host tool, `gravitas_inspect`, starts children on those presets, so DeepSeek's shipped presets are not overridden. The skill gets a DSH platform note in each language, appended when it loads, that maps Antigravity's tool names to DSH's and says how to start an inspector; the rule gets a one-line tool note. Language follows the system locale (`zh*`, `ja*`, `ko*`, else English) or the row's `language` config; `alwaysOnRule: false` keeps only the skill. No dependencies and no install scripts. Install with `dsh plugin --profile web add github:Emily2040/gravitas#v1.3.0`.
+- `dsh/test/plugin.test.js` (Node) and `tests/scripts/test_dsh_plugin.py`: the manifest and patch, that the inspector preset has no tool that writes, edits or runs commands, every language's skill, rule and note, that the platform notes name the same tools in every language, the skill staying under DSH's 8,192-character tool-result pruning threshold, and that `package.json` lists every runtime file.
+- READMEs: a DeepSeek Harness section in all four languages, with example requests. The Chinese section has six examples, since most DSH users read Chinese.
+
+### Changed
+- The skill's `compatibility` line names DeepSeek Harness, in all four languages.
+- `scripts/release_check.py` treats `dsh/` and `package.json` as shipped.
+
+### Verified
+- On Windows 11 with DSH 0.2.1-rc.2: the plugin installed into the `web` profile with `dsh plugin add`, and a boot of that profile with a probe plugin read back the skill catalog (the `gravitas` skill with its note), the assembled system prompt (the rule at order 10100, in English and in Chinese), the tool list (`gravitas_inspect` with both presets in its `agent_preset` choices) and the preset roster (both presets, no activation diagnostics). `dsh plugin remove` uninstalled it and removed it from the profile's bundles. Graded runs on DSH have not been done.
+
 ## [1.2.1] - 2026-10-21
 
 ### Added

@@ -43,7 +43,7 @@ COMMAND = "Install Gravitas (Mac).command"
 SH = "Install Gravitas (Linux).sh"
 SHIPPED = ["dist", "plugin", "locales", "scripts", CMD, COMMAND, SH, ".gitattributes", "LICENSE",
            "README.md", "README.zh-CN.md", "README.ja.md", "README.ko.md",
-           "docs", "tests", "CHANGELOG.md", "TESTS.md"]
+           "docs", "tests", "CHANGELOG.md", "TESTS.md", "dsh", "package.json"]
 # Links that pin a version: a tag's source archive, a release page, or a release asset.
 VERSIONED = re.compile(r"github\.com/Emily2040/gravitas/(?:archive/refs/tags/v([^/\s)\"']+?)\.(?:zip|tar\.gz)"
                        r"|releases/(?:tag|download)/v([^/\s)\"']+))")

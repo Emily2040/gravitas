@@ -3,15 +3,15 @@
 [English](./README.md) · **简体中文** · [日本語](./README.ja.md) · [한국어](./README.ko.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.2.1-purple.svg)](#status)
+[![Release](https://img.shields.io/badge/release-v1.3.0-purple.svg)](#status)
 [![Platform](https://img.shields.io/badge/Antigravity-agy_1.2.16-blueviolet.svg)](https://antigravity.google/)
 [![Languages](https://img.shields.io/badge/languages-en_%7C_zh--CN_%7C_ja_%7C_ko-green.svg)](#languages)
 
 Gravitas 是 Google Antigravity 的免费插件：它让 Antigravity 里的 AI 助手先把回答所依据的事实查清楚，发现你哪里想错了就客气地指出来，然后照样把你要的东西交给你。
 
-[安装](#install) · [真实例子](#real-examples) · [其他语言](#other-languages-we-tested) · [为什么是 Gravitas](#why-gravitas) · [测试结果](#results) · [工作原理](#part-2)
+[安装](#install) · [DeepSeek Harness](#deepseek-harness) · [真实例子](#real-examples) · [其他语言](#other-languages-we-tested) · [为什么是 Gravitas](#why-gravitas) · [测试结果](#results) · [工作原理](#part-2)
 
-`v1.2.1` · 2026 年 10 月 · [MIT](LICENSE) · [更新日志](CHANGELOG.md) · 作者 [Iamemily2050](https://github.com/Emily2040)
+`v1.3.0` · 2026 年 10 月 · [MIT](LICENSE) · [更新日志](CHANGELOG.md) · 作者 [Iamemily2050](https://github.com/Emily2040)
 
 ![Gravitas 角色设定图](docs/assets/gravitas-hero.jpg)
 
@@ -27,16 +27,16 @@ GitHub 的按钮都是英文的，下文照原样写出按钮上的英文。
 
 ### Windows
 
-1. **下载。** 单击 [下载 Gravitas 1.2.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip)，浏览器会把 `gravitas-1.2.1.zip` 存进“下载”文件夹。它和 [Releases 页面](https://github.com/Emily2040/gravitas/releases)（版本发布页）上 v1.2.1 这一版 **Assets** 里的 **Source code (zip)** 是同一个文件；Assets 如果是折叠的，单击它就能展开。
+1. **下载。** 单击 [下载 Gravitas 1.3.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip)，浏览器会把 `gravitas-1.3.0.zip` 存进“下载”文件夹。它和 [Releases 页面](https://github.com/Emily2040/gravitas/releases)（版本发布页）上 v1.3.0 这一版 **Assets** 里的 **Source code (zip)** 是同一个文件；Assets 如果是折叠的，单击它就能展开。
 2. **解除锁定。** 按 Windows 徽标键 + E 打开“文件资源管理器”，单击左侧的 **下载**。右键单击刚下载的 ZIP 文件，选择 **属性**，在“常规”选项卡最下面勾选 **解除锁定**，再单击 **确定**。这一步是为了让 Windows 放行安装程序，不做的话，Windows 可能不让它运行。如果找不到这个复选框，说明不需要，直接跳过。
-3. **解压。** 右键单击 ZIP 文件，选择 **全部解压缩**（英文系统里叫 Extract All），再单击 **提取**。打开的 `gravitas-1.2.1` 文件夹里还有一个同名文件夹，打开它。如果右键菜单里没有“全部解压缩”，多半是 360压缩、WinRAR 或 7-Zip 接管了 ZIP 文件，用它们自带的解压功能也一样。
+3. **解压。** 右键单击 ZIP 文件，选择 **全部解压缩**（英文系统里叫 Extract All），再单击 **提取**。打开的 `gravitas-1.3.0` 文件夹里还有一个同名文件夹，打开它。如果右键菜单里没有“全部解压缩”，多半是 360压缩、WinRAR 或 7-Zip 接管了 ZIP 文件，用它们自带的解压功能也一样。
 4. **双击 Install Gravitas (Windows)。** 它的图标是一个齿轮，文件全名是 `Install Gravitas (Windows).cmd`，Windows 一般会把末尾的 `.cmd` 隐藏起来。旁边的 `Install Gravitas (Mac).command` 和 `Install Gravitas (Linux).sh` 分别是给 Mac 和 Linux 用的，不用管它们。双击之后，Windows 可能先弹出警告：如果是提示无法验证发布者的安全警告，单击 **运行**；如果是蓝色的“Windows 已保护你的电脑”，先单击 **更多信息**，再单击 **仍要运行**。接着会打开一个标题为 Gravitas 的窗口：输入 1 选英文，2 选简体中文，3 选日语，4 选韩语，然后按 **回车键**。什么都不输、直接按回车，选的是 Windows 当前的显示语言，中文 Windows 上就是 2。窗口里出现“完成”后，按任意键关闭窗口。
 5. **重启 Antigravity。** 如果 Antigravity 开着，就在屏幕右下角时钟附近找到它的图标（看不到就单击那里的小箭头 **^**），右键单击它，选择 **Quit**（这个菜单只有英文）。然后从“开始”菜单重新打开 Antigravity。如果你用的是 `agy` 命令行工具，不用重启，新开一个会话就行。
 
 ### Mac
 
-1. **下载。** 点按 [下载 Gravitas 1.2.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip)。Safari 一般会自动把它解压到“下载”文件夹里，得到一个 `gravitas-1.2.1` 文件夹；如果那里只有 `gravitas-1.2.1.zip`，连按它就能解压。
-2. **连按 Install Gravitas (Mac).command。** 它在解压出来的文件夹里：在“访达”边栏里点按 **下载**，打开 `gravitas-1.2.1`；如果里面只有一个文件夹，再打开那一个。旁边的 `.cmd` 文件是 Windows 用的，不用管。
+1. **下载。** 点按 [下载 Gravitas 1.3.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip)。Safari 一般会自动把它解压到“下载”文件夹里，得到一个 `gravitas-1.3.0` 文件夹；如果那里只有 `gravitas-1.3.0.zip`，连按它就能解压。
+2. **连按 Install Gravitas (Mac).command。** 它在解压出来的文件夹里：在“访达”边栏里点按 **下载**，打开 `gravitas-1.3.0`；如果里面只有一个文件夹，再打开那一个。旁边的 `.cmd` 文件是 Windows 用的，不用管。
 3. **第一次要手动放行。** Gravitas 是免费软件，没有任何公司为它做过苹果认可的开发者签名，所以 macOS 第一次可能会拦住它。
    - macOS 14 或更早：先点按 **好** 关掉提示框，再按住 Control 键点按这个文件，选择 **打开**，在弹出的对话框里再点按 **打开**。
    - macOS 15 或更新：上面的办法不管用了。先点按 **完成** 关掉提示框（别点 **移到废纸篓**）。然后点按屏幕左上角的苹果菜单，打开 **系统设置**，进入 **隐私与安全性**，往下滚，找到提到 Install Gravitas (Mac).command 的那条提示，点按旁边的 **仍要打开**，在弹出的对话框里再点按一次 **仍要打开**，然后输入 Mac 的登录密码。
@@ -48,8 +48,8 @@ Mac 安装程序我只在 Windows 上的 bash 命令行里跑过，还没在真�
 
 ### Linux
 
-1. **下载。** 点按 [下载 Gravitas 1.2.1](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.2.1.zip)。浏览器会把 `gravitas-1.2.1.zip` 存到“下载”文件夹。
-2. **解压。** 在文件管理器里打开“下载”，右键单击这个 ZIP，选择 **提取到此处**（或 **解压**）。会出现一个 `gravitas-1.2.1` 文件夹；如果里面只有一个文件夹，再打开那一个。里面的 `.cmd` 和 `.command` 文件分别是 Windows 和 Mac 用的，不用管。
+1. **下载。** 点按 [下载 Gravitas 1.3.0](https://github.com/Emily2040/gravitas/archive/refs/tags/v1.3.0.zip)。浏览器会把 `gravitas-1.3.0.zip` 存到“下载”文件夹。
+2. **解压。** 在文件管理器里打开“下载”，右键单击这个 ZIP，选择 **提取到此处**（或 **解压**）。会出现一个 `gravitas-1.3.0` 文件夹；如果里面只有一个文件夹，再打开那一个。里面的 `.cmd` 和 `.command` 文件分别是 Windows 和 Mac 用的，不用管。
 3. **在这个文件夹里打开终端。** 大多数文件管理器里，在文件夹的空白处右键单击，选择 **在终端中打开**。不行的话，先打开终端，输入 `cd` 和一个空格，把文件夹拖进终端窗口，再按 Enter 键。
 4. **运行 Install Gravitas (Linux).sh。** 把下面这一行粘贴进去，按 Enter 键。直接连按这个文件，多半只会用文本编辑器打开它，所以要走终端。
 
@@ -79,6 +79,65 @@ Linux 安装程序只需要 bash。如果你装过 Gravitas beta 1，它会在�
 再打开一次安装程序（Windows 上双击，Mac 上连按），输入 **5**（卸载 Gravitas），再按回车键，然后照上面的办法重启 Antigravity。安装程序会把 Gravitas 移进一个以日期和时间命名的文件夹，它在你的用户主文件夹（以你的用户名命名的那个文件夹）里的 `.gemini/gravitas-backups` 下面，完整路径安装程序会显示出来。这个文件夹随时可以删掉。Mac 的“访达”默认不显示 `.gemini` 这类以点开头的文件夹：在“访达”里选取“前往”>“前往文件夹”（Shift-Command-G），粘贴安装程序显示的路径即可。
 
 安装程序只动属于 Gravitas 的东西：Antigravity 的插件文件夹，也就是用户主文件夹里的 `.gemini/config/plugins/gravitas`，以及上面那个备份文件夹；如果你装过测试版 1，还有它留下的技能、钩子脚本，以及 `.gemini/config/hooks.json` 里的 `gravitas-always-on` 那一项。重新安装时，以前装过的那份 Gravitas 也会先移进备份文件夹；测试版 1 的技能和钩子脚本同样移进去，改 hooks.json 之前也会先在那里留一份副本，所以不会删掉任何东西。只有 [用终端安装](#install-from-a-terminal) 才需要 Python 和终端，那条路线能多装一些选项，比如“第二意见”审查。
+
+<a id="deepseek-harness"></a>
+
+### 在 DeepSeek Harness 上使用
+
+Gravitas 现在也能在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）0.2.1-rc.2 及以后的版本上运行，插件名是 `dsh-gravitas`，适用于 `web` 配置（profile）和桌面应用。它带来的常驻规则和 `gravitas` 技能，与 Antigravity 版用的是同一批文件，同样有简体中文、英文、日文、韩文四种语言。中文版规则是按中文读者的习惯写的，不是逐句翻译。
+
+| 在 Antigravity 上 | 在 DeepSeek Harness 上 |
+| --- | --- |
+| 常驻规则 | 写进每个智能体的系统提示词 |
+| `gravitas` 技能 | 同一个技能，外加一段说明，把 Antigravity 的工具名对应到 DSH 的工具名 |
+| 八个只读的 `gravitas-*` 代理 | 两个预设，用 `gravitas_inspect` 工具启动：`gravitas-inspector`（能读文件、搜索、上网，没有任何写入或修改文件的工具）负责七种角色；`gravitas-checker`（多了命令行）专门负责核验 |
+| 第二意见审查 | DSH 上暂不提供 |
+
+**安装**：在终端里输入：
+
+```bash
+dsh plugin --profile web add github:Emily2040/gravitas#v1.3.0
+```
+
+`dsh plugin` 要用到 pnpm。如果终端提示找不到 pnpm，先运行一次下面这行，再重新运行上面那行：
+
+```bash
+corepack enable pnpm
+```
+
+然后重新启动 DSH。桌面应用有自己的一套配置，npm 装的 `dsh` 命令改不了它：请在桌面应用的 **插件** 页面里添加。
+
+**确认装好了**：运行下面这行，输出的末尾附近应该有 `dsh-gravitas`：
+
+```bash
+dsh --profile web --dump-config
+```
+
+**语言**：Gravitas 跟随系统语言：系统是中文、日文或韩文时用对应的版本，否则用英文。想固定用中文，或者只要技能、不要常驻规则，就在配置文件夹（用户主文件夹里的 `.dsh/profiles/web`）的 `cordis.patch.yml` 里加上：
+
+```yaml
+- id: dsh-gravitas
+  config:
+    language: zh-CN     # 可选 auto、en、zh-CN、ja、ko
+    alwaysOnRule: true  # 改成 false 就只保留技能
+```
+
+**卸载**：运行 `dsh plugin --profile web remove dsh-gravitas`。
+
+#### 可以这样用
+
+下面是提问示例，不是测试记录。日常的提问、建议、短文写作，由常驻规则直接回答，不会加载技能；像下面这类一次检查不完的工作，才会加载 `gravitas` 技能。
+
+| 你可以这样问 | 技能会让智能体怎么做 |
+| --- | --- |
+| 审计这个仓库的登录模块，找出所有能绕过权限校验的地方，每一处都给出文件和行号。 | 派只读检查员逐个文件查找，再让核验员复现每一条发现，没能复现的会单独标明 |
+| 帮我核实这份行业研究报告里的每一个数字，逐个找到原始出处。 | 检查员去找出处，反驳员专门挑每一处对应关系的毛病；找不到出处的数字单独列为“未核实” |
+| 这个 Python 脚本跑出来的结果和 Excel 对不上，帮我查清楚到底是哪边错了。 | 核验员用另一种算法独立重算，而不是顺着原来的思路再推一遍 |
+| 把这份合同的中文版和英文版逐条对照，找出意思不一致的地方。 | 按条款切分后分给多个检查员并行对照，最后由完整性评审员检查有没有漏掉的条款 |
+| 这周要上线的改动涉及三十多个文件，帮我做一次彻底的代码审查。 | 先由侦察员列出改动范围，再按缺陷类型分派查找员，结论都附上引用的代码行 |
+| 帮我检查这篇公众号文章里引用的法规条文还有没有效，条号对不对。 | 逐条到官方来源核对现行版本和条号，并写明核对的日期 |
+
+我在 Windows 11 上启动 DSH 0.2.1-rc.2，读回了它的技能列表、系统提示词和工具清单，四种语言都能正常加载。本页的打分结果都是在 Antigravity 上测的；在 DSH 上的盲评对比还没有做。
 
 ---
 
