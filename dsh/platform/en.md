@@ -28,5 +28,6 @@ The visual critic reads images with `read_image`, which works only on a model ro
 
 - Module `13-platform.md` describes Antigravity's versions and limits. On DSH, read it for its general lessons only.
 - Module `15-harness-probing.md` applies as written: probe any DSH behaviour you rely on before trusting it.
-- Inspectors inherit the parent's skills and global rules, including this one. They follow their role file first.
+- Inspectors get the always-on rule but cannot load skills, because neither Gravitas preset has the skill tool. Put any module guidance an inspector needs into its `prompt`, after the role file. Inspectors follow their role file first.
+- `scripts/provenance_check.py` reads only Antigravity transcripts, and on DSH you cannot see an inspector's tool steps either: `gravitas_inspect` returns only its id, and the completion notice carries only its answer. So the provenance checks in `01-evidence.md`, `02-evidence-traps.md` and `08-delegation.md` are done by hand on DSH. Check each label in your own answer against the tool calls you made. Before you rely on a load-bearing claim from an inspector, open its source or run its command yourself. A claim you have not re-checked is `inferred`, whatever its label says.
 - Headless runs (the `dsh-headless` bundle) have no agent-presets service, so they get the rule and the skill only, without `gravitas_inspect`. There, start an inspector with the `subagent` tool and put the role file's text before the task; that tool can write files, so staying read-only is a charter rule, not a tool limit.

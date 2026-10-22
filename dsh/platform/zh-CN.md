@@ -31,5 +31,6 @@
 
 - 模块 `13-platform.md` 讲的是 Antigravity 的版本和限制。在 DSH 上，只取其中的通用经验。
 - 模块 `15-harness-probing.md` 照常适用：凡是要依赖的 DSH 行为，先探测、后信任。
-- 检查员会继承父智能体的技能和全局规则（包括本规则），但首先遵守自己的角色文件。
+- 检查员会收到常驻规则，但不能加载技能：两个 Gravitas 预设都没有技能工具。检查员需要的模块要点，写进 `prompt`，放在角色文件之后。检查员首先遵守自己的角色文件。
+- `scripts/provenance_check.py` 只能读取 Antigravity 的对话记录，而在 DSH 上你也看不到检查员的工具步骤：`gravitas_inspect` 只返回检查员的 id，完成通知里只有它的回答。所以 `01-evidence.md`、`02-evidence-traps.md` 和 `08-delegation.md` 要求的来源核对，在 DSH 上要手工完成：把自己答案里的每个标签和自己实际做过的工具调用逐一对照；依赖检查员的关键说法之前，自己打开它引用的来源，或自己运行它给出的命令。没有亲自复核的说法，不论标的是什么，都只算 `inferred`。
 - 无头运行（`dsh-headless` 包）没有 agent-presets 服务，只加载本规则和技能，没有 `gravitas_inspect`。这时用 `subagent` 工具启动检查员，把角色文件正文放在任务前面；这个工具能写文件，所以"只读"是一条职责规定，而不是工具层面的限制。
