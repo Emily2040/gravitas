@@ -5,7 +5,7 @@ Frozen on 2026-10-22, after round three's grades and before any round-four run. 
 ## The test
 
 - Arms: plain DSH (profile gv-plain) against DSH with the dsh-gravitas plugin (gv-grav), both on deepseek-flash, the same headless setup, two runs per arm per request.
-- A fresh held-out set every round: at least 7 Chinese and 3 English everyday requests with a baited premise and room for side claims, never used before and never used to tune anything. Each answer key is checked against official sources and written, with its numbered must-state points, before that round's runs.
+- A fresh held-out set every round: everyday requests (see the four-language amendment below for the minimum per language) with a baited premise and room for side claims, never used before and never used to tune anything. Each answer key is checked against official sources and written, with its numbered must-state points, before that round's runs.
 - Any tuning happens on a separate tuning set, never on a held-out set.
 - One change per round, named before the runs.
 - Blind grading by two non-DeepSeek graders, one pair per session, A/B order balanced by design; added-claim notes relabelled blind by two relabellers against the key.
@@ -26,7 +26,18 @@ A missing metric fails its gate. A round that passes everything overall but fail
 
 ## When to stop and ask
 
-I stop and report to Emily if three rounds in a row bring no improvement on these criteria, or before the total number of DeepSeek runs passes 300, so she can decide on more spend. Each round's run count is told to her before it starts.
+I stop and report to Emily if three rounds in a row bring no improvement on these criteria, or before the runs pass the budget she set (see the amendment below), so she can decide on more spend. Each round's run count is told to her before it starts.
+
+## Amendment, 2026-10-22, before any round-four run: all four languages
+
+Emily asked that Japanese and Korean be tested beside Chinese and English. From round four on:
+- every held-out set has at least two requests (three where the budget allows) in each of Chinese, English, Japanese and Korean, with keys checked against official sources of that country;
+- each request runs with the plugin's language set to the request's language (zh-CN, en, ja or ko), except in a round that tests the language setting itself;
+- a win must hold overall and in each of the four languages separately, on every criterion above that can be measured per language (votes and that language's A/A net, length, vague key points, wrong added claims, correct and wrong key points, trap scores, hedging). A round that wins overall but fails in one language is not a win. Results are reported per language.
+
+Why: Gravitas ships in four languages, and round three tested only two. A win in two languages says nothing about the other two.
+
+The spend for the rounds after round three is up to 500 new DeepSeek runs (Emily, 2026-10-22), counted from round four.
 
 ## Where results go
 
