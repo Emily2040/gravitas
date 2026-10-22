@@ -125,6 +125,25 @@ for (const lang of plugin.LANGUAGES) {
   })
 }
 
+test('ruleFile: your own rule replaces the built-in one; the DSH tool note is still appended', async () => {
+  const { mkdtempSync, writeFileSync, rmSync } = await import('node:fs')
+  const { tmpdir } = await import('node:os')
+  const dir = mkdtempSync(path.join(tmpdir(), 'gravitas-rule-'))
+  const file = path.join(dir, 'AGENTS.md')
+  writeFileSync(file, '# My rule\n\nLead with the decision.\n')
+  try {
+    const { ctx, sections } = fakeCtx()
+    await plugin.apply(ctx, { language: 'en', alwaysOnRule: true, ruleFile: file })
+    assert.equal(sections.length, 1)
+    assert.match(sections[0].text, /^# My rule\n\nLead with the decision\.\n\n/)
+    assert.ok(sections[0].text.includes('DeepSeek Harness'), 'tool note appended')
+    assert.throws(() => plugin.readConfig({ ruleFile: 'relative/AGENTS.md' }), /absolute path/)
+    assert.throws(() => plugin.readConfig({ ruleFile: 7 }), /absolute path/)
+  } finally {
+    rmSync(dir, { recursive: true, force: true })
+  }
+})
+
 test('rule can be turned off', async () => {
   const { ctx, sections } = fakeCtx()
   await plugin.apply(ctx, { language: 'en', alwaysOnRule: false })

@@ -39,6 +39,13 @@ Why: Gravitas ships in four languages, and round three tested only two. A win in
 
 The spend for the rounds after round three is up to 500 new DeepSeek runs (Emily, 2026-10-22), counted from round four.
 
+## Amendment, 2026-10-23, before any round-four run: hedge lists for Japanese and Korean
+
+The round-one and extended hedge lists cover only Chinese and English, so criterion 8 could not be measured in Japanese or Korean. I add these lists now, before any Japanese or Korean answer exists, and apply them the same way (markers per 1000 characters, mean over answers; first list at most 1.00 times plain, second at most 1.10):
+- Japanese, first list: かもしれ, おそらく, 恐らく, たぶん, 可能性があ, と思われ, 断言できませ, ご確認ください, 確認してください. Second list: 一般的に, 通常は, 場合によ, 地域によ, 自治体によ, お問い合わせ, 問い合わせて, 相談してください, 目安.
+- Korean, first list: 아마, 일지도, 할지도, 가능성이 있, 확실하지, 확인해 보세요, 확인하시기 바랍니다. Second list: 일반적으로, 보통은, 경우에 따라, 지역마다, 다를 수 있, 문의하, 상담하.
+In a round that tests the language setting itself, an answer is counted with the list of the language it is written in.
+
 ## Where results go
 
 Each round is written up in docs/dsh-ab/round-N with every result, losses as plainly as wins.

@@ -45,9 +45,14 @@ export function resolveLanguage(configured, locale = Intl.DateTimeFormat().resol
 
 /** Validate the row config. Unknown keys are refused so a typo cannot silently do nothing. */
 export function readConfig(config = {}) {
-  const allowed = new Set(['language', 'alwaysOnRule', 'claimCheck'])
+  const allowed = new Set(['language', 'alwaysOnRule', 'claimCheck', 'ruleFile'])
   for (const key of Object.keys(config ?? {})) {
-    if (!allowed.has(key)) throw new Error(`dsh-gravitas: unknown config key "${key}" (allowed: language, alwaysOnRule, claimCheck)`)
+    if (!allowed.has(key)) throw new Error(`dsh-gravitas: unknown config key "${key}" (allowed: language, alwaysOnRule, claimCheck, ruleFile)`)
+  }
+  // Your own always-on rule in place of the built-in one, for example to try a variant side by side.
+  const ruleFile = config?.ruleFile ?? null
+  if (ruleFile !== null && (typeof ruleFile !== 'string' || !path.isAbsolute(ruleFile))) {
+    throw new Error('dsh-gravitas: ruleFile must be an absolute path to a rule file')
   }
   const alwaysOnRule = config?.alwaysOnRule ?? true
   if (typeof alwaysOnRule !== 'boolean') throw new Error('dsh-gravitas: alwaysOnRule must be true or false')
@@ -55,7 +60,7 @@ export function readConfig(config = {}) {
   // preferred the same rule without it (docs/dsh-ab/round-three).
   const claimCheck = config?.claimCheck ?? false
   if (typeof claimCheck !== 'boolean') throw new Error('dsh-gravitas: claimCheck must be true or false')
-  return { language: resolveLanguage(config?.language ?? 'auto'), alwaysOnRule, claimCheck }
+  return { language: resolveLanguage(config?.language ?? 'auto'), alwaysOnRule, claimCheck, ruleFile }
 }
 
 /** Source kind of the claim-check message in the session log (any non-empty kind other than "plugin"). */
@@ -214,14 +219,14 @@ export async function platformNote(language) {
 }
 
 /** The always-on rule plus the short DSH tool note, as one prompt section text. */
-export async function ruleText(language) {
+export async function ruleText(language, ruleFile = null) {
   const p = pathsFor(language)
-  const [rule, note] = await Promise.all([readFile(p.rule, 'utf8'), readFile(p.ruleNote, 'utf8')])
+  const [rule, note] = await Promise.all([readFile(ruleFile ?? p.rule, 'utf8'), readFile(p.ruleNote, 'utf8')])
   return `${rule.trimEnd()}\n\n${note.trim()}\n`
 }
 
 export async function apply(ctx, config) {
-  const { language, alwaysOnRule, claimCheck } = readConfig(config)
+  const { language, alwaysOnRule, claimCheck, ruleFile } = readConfig(config)
   const p = pathsFor(language)
   await access(p.skills)
   const provider = createProvider({
@@ -232,7 +237,7 @@ export async function apply(ctx, config) {
   })
   ctx.skills.registerProvider(() => provider)
   if (alwaysOnRule) {
-    const text = await ruleText(language)
+    const text = await ruleText(language, ruleFile)
     ctx.effect(() => ctx.systemPrompt.section({ name: 'gravitas:always-on-rule', order: RULE_ORDER, text, interpolate: false }))
   }
   if (claimCheck) registerClaimCheck(ctx, language)
