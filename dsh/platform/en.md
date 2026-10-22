@@ -29,3 +29,4 @@ The visual critic reads images with `read_image`, which works only on a model ro
 - Module `13-platform.md` describes Antigravity's versions and limits. On DSH, read it for its general lessons only.
 - Module `15-harness-probing.md` applies as written: probe any DSH behaviour you rely on before trusting it.
 - Inspectors inherit the parent's skills and global rules, including this one. They follow their role file first.
+- Headless runs (the `dsh-headless` bundle) have no agent-presets service, so they get the rule and the skill only, without `gravitas_inspect`. There, start an inspector with the `subagent` tool and put the role file's text before the task; that tool can write files, so staying read-only is a charter rule, not a tool limit.

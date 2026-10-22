@@ -44,11 +44,30 @@ test('manifest: a DSH bundle with no dependencies, versioned with the plugin', (
 })
 
 test('patch: two presets, one inspector tool naming both, and the plugin row', () => {
-  assert.match(patch, /- id: preset-gravitas-inspector\n\s+name: '@deepseek-ai\/dsh-agent-preset'\n\s+config:\n\s+id: gravitas-inspector/)
-  assert.match(patch, /- id: preset-gravitas-checker\n\s+name: '@deepseek-ai\/dsh-agent-preset'\n\s+config:\n\s+id: gravitas-checker/)
+  assert.match(patch, /- id: preset-gravitas-inspector\n\s+name: '@deepseek-ai\/dsh-agent-preset'\n\s+disabled: .*\n\s+config:\n\s+id: gravitas-inspector/)
+  assert.match(patch, /- id: preset-gravitas-checker\n\s+name: '@deepseek-ai\/dsh-agent-preset'\n\s+disabled: .*\n\s+config:\n\s+id: gravitas-checker/)
   assert.match(patch, /toolName: gravitas_inspect\n\s+agentPreset: gravitas-inspector\n\s+allowedAgentPresets: \[gravitas-inspector, gravitas-checker\]/)
   assert.match(patch, /- id: dsh-gravitas\n\s+name: 'dsh-gravitas'\n\s+config:\n\s+language: auto\n\s+alwaysOnRule: true/)
   assert.equal(plugin.name, 'dsh-gravitas')
+})
+
+test('patch: presets and inspector tool switch off without a preset registry (headless); the plugin row stays on', () => {
+  const guards = [...patch.matchAll(/^ {6}disabled: !!js "(.*)"$/gm)].map((m) => m[1])
+  assert.equal(guards.length, 3, 'one guard on each preset row and on the tool row')
+  assert.equal(new Set(guards).size, 1, 'the three guards are identical')
+  for (const id of ['preset-gravitas-inspector', 'preset-gravitas-checker', 'tool-gravitas-inspect']) {
+    assert.match(patch, new RegExp(`- id: ${id}\\n\\s+name: '[^']+'\\n\\s+disabled: !!js "`), id)
+  }
+  assert.doesNotMatch(patch.slice(patch.indexOf('    - id: dsh-gravitas\n')), /disabled:/)
+  // The loader evaluates `!!js` as `with (ctx) { return eval(expr) }` on the row's own context.
+  const expr = guards[0].replace(/\\"/g, '"')
+  const disabled = (rows) => Boolean(new Function('ctx', 'expr', 'with (ctx) { return eval(expr) }')({ [Symbol.for('cordis.entry')]: { parent: { data: rows } } }, expr))
+  const ours = { id: 'tool-gravitas-inspect', name: '@deepseek-ai/dsh-tool-subagent' }
+  const registry = { id: 'agent-preset-registry', name: '@deepseek-ai/dsh-agent-preset-registry', config: { default: 'standard' } }
+  assert.equal(disabled([{ id: 'headless-runner', name: '@deepseek-ai/dsh-headless' }, ours]), true, 'headless: no registry')
+  assert.equal(disabled([registry, ours]), false, 'web: registry before the rows')
+  assert.equal(disabled([ours, registry]), false, 'registry after the rows')
+  assert.equal(disabled([{ ...registry, disabled: true }, ours]), true, 'registry switched off')
 })
 
 test('patch: the inspector preset cannot write, edit or run commands; the checker can run commands', () => {

@@ -10,6 +10,10 @@
 # 3. The dsh-gravitas plugin (dsh/index.js): the gravitas skill and the
 #    always-on rule, in the language set below.
 #
+# Rows 1 and 2 need the agent-presets service, which only a profile with an
+# agent-preset-registry row has (the web bundle). The headless bundle has
+# none, so there they disable themselves and only the skill and the rule load.
+#
 # To change the language or turn the rule off, override the dsh-gravitas row
 # in your profile's cordis.patch.yml, restating its whole config:
 #   - id: dsh-gravitas
@@ -20,6 +24,7 @@
 - insert:
     - id: preset-gravitas-inspector
       name: '@deepseek-ai/dsh-agent-preset'
+      disabled: !!js "!ctx[Symbol.for('cordis.entry')].parent.data.some((row) => row.name === '@deepseek-ai/dsh-agent-preset-registry' && row.disabled !== true)"
       config:
         id: gravitas-inspector
         name: Gravitas inspector
@@ -56,6 +61,7 @@
 
     - id: preset-gravitas-checker
       name: '@deepseek-ai/dsh-agent-preset'
+      disabled: !!js "!ctx[Symbol.for('cordis.entry')].parent.data.some((row) => row.name === '@deepseek-ai/dsh-agent-preset-registry' && row.disabled !== true)"
       config:
         id: gravitas-checker
         name: Gravitas checker
@@ -92,6 +98,7 @@
 
     - id: tool-gravitas-inspect
       name: '@deepseek-ai/dsh-tool-subagent'
+      disabled: !!js "!ctx[Symbol.for('cordis.entry')].parent.data.some((row) => row.name === '@deepseek-ai/dsh-agent-preset-registry' && row.disabled !== true)"
       config:
         provider: spawn
         toolName: gravitas_inspect
