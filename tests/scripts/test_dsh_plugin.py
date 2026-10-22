@@ -5,8 +5,9 @@ Run with plain `python tests/scripts/test_dsh_plugin.py`. Each case prints
 one PASS or FAIL line; the exit status is 1 if any case fails.
 
 The plugin is JavaScript, so its behaviour is tested with Node's own test
-runner (dsh/test/plugin.test.js): the manifest and patch, every language's
-skill, rule and platform note, the presets' tool limits, and config checks.
+runner (dsh/test/plugin.test.js and dsh/test/claims.test.js): the manifest and
+patch, every language's skill, rule and platform note, the presets' tool limits,
+config checks, and the claim check.
 This script runs that suite when Node.js 22 or later is installed, and checks
 here that every file under dsh/ that the plugin needs is listed in
 package.json "files", so a packed install cannot miss one.
@@ -65,7 +66,7 @@ def main():
         if major < 22:
             print("SKIP the Node test suite: node %s is older than 22" % v)
         else:
-            r = subprocess.run([node, "--test", "dsh/test/plugin.test.js"], cwd=REPO,
+            r = subprocess.run([node, "--test", "dsh/test/plugin.test.js", "dsh/test/claims.test.js"], cwd=REPO,
                                stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
             out = r.stdout.decode("utf-8", "replace")
             m = re.search(r"pass (\d+)\D+fail (\d+)", out.replace("ℹ", ""))
