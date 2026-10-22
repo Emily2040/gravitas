@@ -14,6 +14,7 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) an
 ### Changed
 - The skill's `compatibility` line names DeepSeek Harness, in all four languages.
 - `scripts/release_check.py` treats `dsh/` and `package.json` as shipped.
+- The DSH plugin icon is Gravitas herself: `dsh/icon.png`, a round 256-pixel crop of her face from the character sheet, replaces the drawn `dsh/icon.svg`. `docs/assets/gravitas-icon.png` is the same crop at 512 pixels, and `docs/assets/gravitas-social.jpg` is a 1280 x 640 cut of the character sheet for the repository's social preview.
 
 ### Verified
 - On Windows 11 with DSH 0.2.1-rc.2: the plugin installed into the `web` profile with `dsh plugin add`, and a boot of that profile with a probe plugin read back the skill catalog (the `gravitas` skill with its note), the assembled system prompt (the rule at order 10100, in English and in Chinese), the tool list (`gravitas_inspect` with both presets in its `agent_preset` choices) and the preset roster (both presets, no activation diagnostics). `dsh plugin remove` uninstalled it and removed it from the profile's bundles. Graded runs on DSH have not been done.
