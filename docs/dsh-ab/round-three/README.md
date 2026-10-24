@@ -1,8 +1,10 @@
 # DSH A/B, round three: a claim check instead of a rule sentence
 
+**[简体中文](./README.zh-CN.md)** · English
+
 Round two (PR #2) showed that a written instruction to check or cut added numbers, dates and steps did not change what deepseek-flash does. So in round three I tried a mechanism instead of a sentence: a claim check in the plugin itself (`dsh/lib/claims.js`, wired in `dsh/index.js`, setting `claimCheck`). When the agent's turn is about to close, the plugin lists the specifics in the drafted answer that neither the person's message nor any tool result of the turn supports (numbers with units, amounts, dates, article and document numbers, phone numbers, links, quoted wording, app menu paths, and any written calculation that does not add up) and steers the model once to confirm each with a tool, write out the calculation, or cut or loosen it, then send the full reply again.
 
-Short version: Gravitas beat plain DSH on votes, scores and wrong added claims, but failed two of my frozen limits (vague key points and length), so this is not a win. And the claim check was not what helped: Gravitas without it beat Gravitas with it, 25 to 13, and the check cut correct details more often than wrong ones. I have turned it off by default.
+Short version: Gravitas beat plain DSH on votes, scores and wrong added claims, but failed two of my frozen limits (vague key points and length), so this is not a win. And the claim check was not what helped: Gravitas without it beat Gravitas with it, 26 to 13 with 1 tie, and the check cut correct details more often than wrong ones. I have turned it off by default.
 
 ## How I tested
 
@@ -28,7 +30,9 @@ Main comparison, Gravitas (with the check) against plain, 20 pairs and 40 votes 
 | Trap scores under 8 | 5 of 40 | 11 of 40 | at most plain | pass |
 | Median length | 2448.5 chars | 2282 chars | ratio 0.70–1.00 | **fail** (1.07) |
 | Hedging, round-one and extended lists | lower | | at most plain | pass |
-| Sources claimed without opening a page | 0 | 0 | at most plain | pass |
+| Sources claimed without opening a page | 0 (0 of 20 runs qualified) | 0 (5 of 20 runs qualified) | at most plain | pass, but not measured for Gravitas |
+
+The sources gate counts only answers whose run opened no web page. Every Gravitas run opened one, so the gate passed with nothing to measure on the Gravitas side; it says nothing about whether Gravitas invents sources.
 
 Verdict: not shown (vague key points and length). Sign test on the 39 non-tie votes: p = 0.053. By language: Chinese 16–11 (1 tie), English 10–2. Graders did not favour the longer answer (20 votes to the longer, 19 to the shorter).
 
@@ -42,14 +46,14 @@ Length by arm and language (median characters): plain 2282 (Chinese 2282, Englis
 | Items listed per draft | 6.95 on average |
 | What revisions did with them | cut 60, found a source for 25, derived 3, kept 51 unsupported |
 | Draft against its own revision | revision 25, draft 1, tie 10 |
-| Check on against check off | check on 13, check off 25, tie 1 |
-| Listed items cut, by a blind right/wrong label against the key | right 38%, wrong 24%, unverified 80% |
+| Check on against check off | check on 13, check off 26, tie 1 |
+| Share of listed items the revision cut, by a blind label against the key | of those labelled right 38%, wrong 24%, unverified 80% |
 
 The revision beats its own draft, so a second pass helps a given answer a little. But the check cut correct details more often than wrong ones, so it is a generic revision pass, not detection, and runs with the check lost to runs without it. Seconds per run (median): plain 129, Gravitas without the check 142, with it 217.5.
 
 ### Gravitas without the check against plain (post-hoc, not pre-registered)
 
-After the verdict I graded the check-off arm against plain the same way, from the same runs, because the attribution result made it the obvious next baseline. This was not in the frozen plan, so it is evidence for the next round's design, not a result of this one ([blind-map-posthoc.json](blind-map-posthoc.json), [blind/posthoc-grades](blind/posthoc-grades)).
+After the verdict I graded the check-off arm against plain the same way, from the same runs, because the attribution result made it the obvious next baseline. This was not in the frozen plan, so it is evidence for the next round's design, not a result of this one ([blind-map-posthoc.json](blind-map-posthoc.json), [blind/posthoc-grades](blind/posthoc-grades)). Every figure below, and the attr and draft figures above, come from [tally_posthoc.py](tally_posthoc.py) (`python tally_posthoc.py --events <folder with the runs' NDJSON>`; the event streams are not in the repo because they carry fetched web pages).
 
 | | Gravitas, check off | Plain |
 |---|---|---|
@@ -58,13 +62,20 @@ After the verdict I graded the check-off arm against plain the same way, from th
 | Chinese / English | 23–5 / 10–2 | |
 | Mean score out of 50 | 38.95 | 35.27 |
 | Key points correct / vague / wrong | 200 / 52 / 2 | 173 / 65 / 7 |
+| Requests won / lost / even | 8 / 0 / 2 | |
+| Trap scores under 8 | 8 of 40 | 12 of 40 |
 | Median length ratio | 1.007 (Chinese 0.90, English 1.38) | |
+| Pairs under 0.6 of plain's length | 2 of 20 | |
+| Hedges per 1000 characters, round-one / extended list | 0.78 / 0.82 | 0.79 / 0.98 |
+| Added-claim notes | 186, not relabelled | 201, not relabelled |
+
+On the frozen limits this arm passes votes, each grader, key points, traps and hedging. It fails length: the median ratio is 1.007 overall against a limit of 1.00, and 1.38 in English. The wrong-added-claim gate was not measured, because its notes were never relabelled, and the sources gate could not be measured either (no run in this arm went without a web page).
 
 ## Before and after
 
 - Round two (rule sentence): Gravitas 19, plain 16, ties 5; wrong added claims 30 against 23; length ratio 0.95.
 - Round three (claim check): Gravitas 26, plain 13, tie 1, above a measured noise floor; wrong added claims 26 against 35; but length ratio 1.07 and more vague key points than plain. The prompts and graders differ between rounds, so this is not a like-for-like comparison.
-- Round three's strongest finding is the post-hoc one: the always-on rule without the check beats plain 33 to 7 here and fails only on English length.
+- Round three's strongest finding is the post-hoc one: the always-on rule without the check beats plain 33 to 7 here. It still fails the length limit (1.007 overall, 1.38 in English), and its added claims were not relabelled, so it is a lead for round four, not a win.
 
 ## What changed on the branch
 
@@ -79,4 +90,4 @@ After the verdict I graded the check-off arm against plain the same way, from th
 
 ## Files
 
-[prompts](prompts), [keys](keys), [keypoints](keypoints), [sources](sources), [criteria.md](criteria.md), [grader-prompt.md](grader-prompt.md), [blind-map.json](blind-map.json), [blind/grades](blind/grades), [claim-notes.json](claim-notes.json), [labels-sonnet.json](labels-sonnet.json), [labels-opus.json](labels-opus.json), [listed-labels.json](listed-labels.json), [verdict.py](verdict.py), [verdict.txt](verdict.txt), [validity.json](validity.json), [raw](raw) (final answers and the run-time claim log), [run.log](run.log), [schedule.txt](schedule.txt). `make_pairs.py` rebuilds the packets from `raw/`, `prompts/`, `keys/` and `keypoints/`.
+[prompts](prompts), [keys](keys), [keypoints](keypoints), [sources](sources), [criteria.md](criteria.md), [grader-prompt.md](grader-prompt.md), [blind-map.json](blind-map.json), [blind/grades](blind/grades), [claim-notes.json](claim-notes.json), [labels-sonnet.json](labels-sonnet.json), [labels-opus.json](labels-opus.json), [listed-labels.json](listed-labels.json), [verdict.py](verdict.py), [verdict.txt](verdict.txt), [tally_posthoc.py](tally_posthoc.py), [validity.json](validity.json), [raw](raw) (final answers and the run-time claim log), [run.log](run.log), [schedule.txt](schedule.txt). `make_pairs.py` rebuilds the packets from `raw/`, `prompts/`, `keys/` and `keypoints/`.
