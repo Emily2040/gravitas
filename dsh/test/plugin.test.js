@@ -137,6 +137,20 @@ test('ruleFile: your own rule replaces the built-in one; the DSH tool note is st
     assert.equal(sections.length, 1)
     assert.match(sections[0].text, /^# My rule\n\nLead with the decision\.\n\n/)
     assert.ok(sections[0].text.includes('DeepSeek Harness'), 'tool note appended')
+    // GRAVITAS_RULE_LOG records the hash of the exact text placed in the system prompt.
+    const log = path.join(dir, 'rule.jsonl')
+    process.env.GRAVITAS_RULE_LOG = log
+    try {
+      const again = fakeCtx()
+      await plugin.apply(again.ctx, { language: 'en', alwaysOnRule: true, ruleFile: file })
+      const rec = JSON.parse(readFileSync(log, 'utf8').trim())
+      const { createHash } = await import('node:crypto')
+      assert.equal(rec.sha256, createHash('sha256').update(again.sections[0].text).digest('hex'))
+      assert.equal(rec.ruleFile, file)
+      assert.equal(rec.language, 'en')
+    } finally {
+      delete process.env.GRAVITAS_RULE_LOG
+    }
     assert.throws(() => plugin.readConfig({ ruleFile: 'relative/AGENTS.md' }), /absolute path/)
     assert.throws(() => plugin.readConfig({ ruleFile: 7 }), /absolute path/)
   } finally {

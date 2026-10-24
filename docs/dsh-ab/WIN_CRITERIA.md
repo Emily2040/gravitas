@@ -46,6 +46,22 @@ The round-one and extended hedge lists cover only Chinese and English, so criter
 - Korean, first list: 아마, 일지도, 할지도, 가능성이 있, 확실하지, 확인해 보세요, 확인하시기 바랍니다. Second list: 일반적으로, 보통은, 경우에 따라, 지역마다, 다를 수 있, 문의하, 상담하.
 In a round that tests the language setting itself, an answer is counted with the list of the language it is written in.
 
+## Amendment, 2026-10-24, before any round-four run: gates restored, a mixed judge panel
+
+An independent audit found that this file, written after round three's results, was weaker than round three's own criteria. Emily approved restoring what was dropped. From round four on, a win also needs, overall and in each language where it can be measured:
+- Length: the median length ratio is at least 0.70 as well as at most 1.00 (round three's floor), so a round that wins by gutting answers does not count.
+- Requests: more requests net-positive than net-negative (request as the unit, all of its votes summed).
+- Scores: mean total score at least plain's; mean correct and mean useful each no more than 0.5 below plain's.
+- Fabricated sources: phrases claiming a source was checked, counted only in answers whose run opened no web page, no more than plain's. If neither arm has such a run, the gate is reported as not measurable rather than as a pass; if only plain has such runs, it passes on the count.
+- Vague key points: also reported is the A/A noise floor for vague key points (the vague-count difference between plain r1 and plain r2, and between Gravitas r1 and r2, graded the same way), because round three showed the same plain answers drawing 55 and 65 vague marks in two pairings. The gate stays "no more than plain"; the floor is reported beside it.
+- Wrong added claims stays "no more than plain" (round three used "fewer"), and the count of wrong added claims per 1000 characters is reported beside it.
+
+Judges: three per pair, one pair per session: Claude Opus 5.5, Claude Sonnet 5.5, and one non-Claude judge (OpenAI, through Codex CLI), following the AA-PersonalityBench design of a mixed judge panel. All three votes count. Gate 2 (each grader on its own) applies to each of the three judges. Two graders were Claude in round three (kappa 0.68), so their errors were correlated; a third model family lowers that.
+
+Also reported, not gated: format metrics per answer (words or characters, list items, bold spans), so a length change that only strips formatting is visible.
+
+Why: these were round three's own gates, change 4 targets length, and a length change needs a floor and a usefulness guard most of all. The round is judged on this version and on the version before this amendment; it counts as a win only if it wins on both.
+
 ## Where results go
 
 Each round is written up in docs/dsh-ab/round-N with every result, losses as plainly as wins.

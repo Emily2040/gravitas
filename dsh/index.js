@@ -9,7 +9,7 @@
 // The read-only inspector presets and the `gravitas_inspect` tool are rows in
 // dsh/cordis.patch.yml; this file registers the skill, the rule and the check.
 import { readFile, access, appendFile } from 'node:fs/promises'
-import { randomUUID } from 'node:crypto'
+import { randomUUID, createHash } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { createProvider } from './lib/provider.js'
@@ -239,6 +239,12 @@ export async function apply(ctx, config) {
   if (alwaysOnRule) {
     const text = await ruleText(language, ruleFile)
     ctx.effect(() => ctx.systemPrompt.section({ name: 'gravitas:always-on-rule', order: RULE_ORDER, text, interpolate: false }))
+    // Optional diagnostics: GRAVITAS_RULE_LOG names a JSON-lines file that records which rule text this
+    // session's system prompt carries, so a measured run can show from its own output what it ran with.
+    if (process.env.GRAVITAS_RULE_LOG) {
+      const record = { time: new Date().toISOString(), language, ruleFile, sha256: createHash('sha256').update(text).digest('hex'), chars: text.length }
+      await appendFile(process.env.GRAVITAS_RULE_LOG, JSON.stringify(record) + '\n', 'utf8').catch((error) => ctx.logger?.warn?.(`dsh-gravitas: rule log: ${String(error)}`))
+    }
   }
   if (claimCheck) registerClaimCheck(ctx, language)
 }
