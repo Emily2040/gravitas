@@ -1,0 +1,4 @@
+# Language identification for the question-set language check only (Emily approved lingua-py, 2026-10-25).
+# Installed into W:\AgentData\logs\gravitas-personality\venv (--system-site-packages), never the system Python.
+# lingua-language-detector 2.1.1, Apache-2.0, released 2025-05-27, the current release on 2026-10-25.
+lingua-language-detector==2.1.1 --hash=sha256:d0429b482e8b3def24ad4e5565eb187a389c35cf0506ac7ed7ef7360e7369ec7
