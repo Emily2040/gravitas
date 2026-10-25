@@ -2,30 +2,23 @@
 
 Owner: the verifier owner (builds nothing in this benchmark). Gates: `GATES.md`. This file records the freeze and says how it is checked. `verify.py` reads the stage-1 commit from the line below; D4 fails as "metric missing" until it is filled in.
 
-Stage-1 freeze commit: none yet (blocked, see below)
+Stage-1 freeze commit: recorded in the next commit of this file
 
 ## Status (2026-10-25)
 
-**Stage 1 is blocked on two builder fixes.** Everything on the verifier side is written, committed and tested; the freeze is one commit once the fixes land. The brief says to leave the freeze until builder fixes are done, and both files are number-making, so they cannot change after the freeze.
+**Stage 1 is frozen at the commit named above.** The three builder fixes I asked for landed in 25d1f9a and I checked them before freezing:
 
-What was tested before this commit:
+1. metrics.py: the zh and en hedge lists are now round three's H_ROUND1 and H_EXTENDED with its two exclusions, and ja and ko are WIN_CRITERIA's lists. I checked that they equal, item for item, the lists the verifier reads from verdict.py and WIN_CRITERIA.md. One difference remains and is accepted: metrics.py counts per 1,000 prose characters (markdown removed), while round three and C6 count per 1,000 characters of the raw final. Only reports (answer_stats.py) use metrics.py's rate; no gate does.
+2. judge.py: the template no longer says "more correct overall".
+3. judge.py: FOCUS is the 8 judged traits and `--plan focus` returns exactly those 8.
+
+Tests at the freeze:
 
 - `verify.py --self-test`: all 195 gates fail on an empty metrics object with "metric missing"; each gate goes green on a passing case and red on a failing one, and fails as missing when a key is absent, None, NaN, infinite or a bool; the 16 named holes from CHEAPEST_PASS.md fail as missing; zero-plain hedge comparisons and N6 "not measurable" behave.
 - `measure_all.py --self-test`: the two-system closed form equals `bt.fit`; the joint bootstrap; the language identifier; kappa; boilerplate; format shape; NaN never stored; round three's hedge and source lists and exclusions; every ja and ko term found verbatim in WIN_CRITERIA.md.
-- `samples.py --self-test`, `metrics.py --self-test`, `bt.py --self-test`.
-- End to end on synthetic data shaped like the real run (2,390 answers, every judging set, transcripts, labels, ledger, CONFIRM commit), in `W:\AgentData\logs\gravitas-personality-verify-synth` (generator `synth.py`, reports `*.verify.txt`). A clean run passes 177 of 195; the 18 failures are artefacts of random synthetic text plus D4 (no freeze yet). Each adversarial run fails exactly the gate meant for it: gutted answers (C5, N3, N5), a held-out phrase in the rule (N9), a pasted sentence (N2), a rule line in a plain transcript (D2), a second judging run (D1.judging), Claude verdicts copied from DeepSeek (B5, B2, K0), DeepSeek random on Truthful (B5t re-sources Truthful to Claude), DeepSeek preferring its own answers (B6a moves the Gemini platform to Claude). A full run takes about 40 seconds.
+- `samples.py`, `metrics.py` and `bt.py` self-tests.
+- End to end on synthetic data shaped like the real run (2,390 answers, every judging set, transcripts, labels, ledger, CONFIRM commit), in `W:\AgentData\logs\gravitas-personality-verify-synth` (generator `synth.py`, reports `*.verify.txt` and `*.freeze-check.txt`). A clean run passes 177 of 195; the 18 failures are artefacts of random synthetic text plus D4 (the synthetic repo has no freeze). Each adversarial run fails exactly the gate meant for it: gutted answers (C5, N3, N5), a held-out phrase in the rule (N9), a pasted sentence (N2), a rule line in a plain transcript (D2), a second judging run (D1.judging), Claude verdicts copied from DeepSeek (B5, B2, K0), DeepSeek random on Truthful (B5t re-sources Truthful to Claude), DeepSeek preferring its own answers (B6a moves the Gemini platform to Claude). The same outcomes hold after the builder's fixes. A full run takes about 40 seconds.
 - On the real pilot data (no stage-2 record yet) every gate fails as missing, as it should.
-
-## Builder fixes needed
-
-Blocking (number-making files):
-
-1. **metrics.py, hedge lists.** The docstring says the hedge lists are WIN_CRITERIA's round-one and extended lists. For zh and en they are not: WIN_CRITERIA 8 means round three's `H_ROUND1` (tally.py's list: 可能, 大概, 也许, 或许, 以…为准, 建议…核实/确认, 不确定, 请咨询, 仅供参考, may, might, probably, check with, confirm with, not sure, verify) and `H_EXTENDED` (criteria item 9), with 不可能 and "May" as a month excluded, as in `docs/dsh-ab/round-three/verdict.py`. metrics.py has, for example, "could", "possibly", "perhaps", "consult" and lacks "probably", "not sure", 不确定, 请咨询. The verifier no longer reads these numbers (C6 reads the lists from verdict.py itself), but `answer_stats.py` reports them, so tuning against them would steer the candidate by a different list from the one C6 gates. Fix: use round three's lists and exclusions in `metrics.HEDGES` (or relabel the fields as not WIN_CRITERIA's).
-2. **judge.py, JUDGE_TEMPLATE.** "You are rating how strongly the trait appears, not which answer is better, more correct overall or more helpful" contradicts Truthful, whose trait is being correct. It is the likeliest cause of the pilot's low Truthful agreement (kappa 0.0, 0.22 and 0.55 for the three judge pairs). Fix: drop "more correct overall" from that sentence (for example: "not which answer is better or more helpful overall"). The new Truthful definition already says "for this trait, being correct is the trait itself", but two contradicting sentences in one prompt make a noisy judge. This changes verdicts, so it must land before cal0.
-
-Recommended, not blocking:
-
-3. **judge.py, FOCUS and GUARD.** They still describe the 16-trait plan, so `--plan focus` would judge 16 or 17 traits. Either set FOCUS to the 8 judged traits and GUARD to an empty list, or always pass the explicit plan printed by `samples.py plan`. D1.judging fails any set built with other traits.
 
 ## What stage 1 freezes
 
@@ -41,12 +34,12 @@ Every file in `bench/personality` (D4 diffs the whole folder and counts untracke
 | answer_dsh.py, answer_agy.py, answer_raw.py, judge_agy.py, dshbatch.py, dsh/llm-batch.mjs, ledger.py | how answers and verdicts are produced and recorded |
 | plan_cost.py, spend.py, GATES_SPEC.md, CHEAPEST_PASS.md | record of the plan and the review |
 
-## Stage-1 procedure (when the fixes are committed)
+## How stage 1 was made, and how it is checked
 
-1. Read the builder's diff since this commit; confirm it touches only the fixes.
-2. Run the five self-tests and the synthetic end-to-end run again.
-3. Record here: `Stage-1 freeze commit: <the commit holding the fixed state>`, plus the sha256 of every file in the table, and commit this file alone (Emily's voice, no attribution line).
-4. From then on D4 requires `git diff <freeze commit> -- bench/personality docs/dsh-ab/WIN_CRITERIA.md docs/dsh-ab/round-three/verdict.py` to be empty apart from this file, and no untracked file in the folder. Any change after that is a re-freeze, made only between rounds with the evidence written here.
+1. I read the builder's diff (25d1f9a against my commit 5fd1377): it touches only metrics.py and judge.py, as asked.
+2. I ran the five self-tests and the synthetic runs again (above), then corrected the lines in GATES.md and this file that described the fixes as pending.
+3. That state is the freeze commit named at the top. A later commit records its hash and the sha256 table below and touches this file only.
+4. From then on D4 requires `git diff <freeze commit> -- bench/personality docs/dsh-ab/WIN_CRITERIA.md docs/dsh-ab/round-three/verdict.py` to be empty apart from this file, and no untracked file in the folder. A change after that is a re-freeze, made only between rounds, with the evidence written here. Because this file can be edited, the coordinator keeps the freeze hash separately and compares it with the one `verify.py` prints on its first line.
 
 ## Stage 2: freezing the data (I will be messaged to do it)
 
@@ -68,7 +61,6 @@ Every file in `bench/personality` (D4 diffs the whole folder and counts untracke
 
 Before any held-out run:
 
-- Fixes 1 and 2 (and 3 if wanted), then tell the coordinator so stage 1 can be frozen.
 - Run `filter_questions.py` with rating; then stage 2.
 - Run ds-plain and ds-grav on the tuning split, then **cal0** (`samples.py plan` prints the command; DeepSeek with `judge.py run`; Claude with `judge.py export cal0 claude --all`, one import with `--all`; Gemini Flash on the same 120 only if the agy runs allow), and the blind critic (`samples.py export critic`, saved as `judging/cal0/critic.jsonl` `{job, raw}`, one `labels-import` line, name `critic`). Run `verify.py --only K0`. **Do not judge anything on held-out until K0 passes.** If it fails, stop and send me the numbers (rubric revision, re-freeze, cal1).
 - Keep Claude and Gemini Flash out of every tuning judging set (D3 checks it). The candidate's tuning judging uses DeepSeek only and never the cal15 or cal15b questions.
