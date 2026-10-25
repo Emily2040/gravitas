@@ -1,0 +1,39 @@
+Two things in your plan don't hold, and together they move the income side by about **$1,700 a month**. Here's the corrected picture.
+
+## The $2,400 isn't your age-62 amount
+
+Your full retirement age is 67 (born 1965). Claiming at 62 is roughly 59 months early — you're not 62 for the whole of March, so April 2027 is your earliest month of entitlement, with the first payment in May — and that reduction is permanent. It comes to about **70.4% of your age-67 amount: roughly $1,690 a month, not $2,400**.
+
+Forty years of contributions is why you're insured and can claim at all. It doesn't remove the early-filing reduction — that's set by claiming age, not by how long you paid in.
+
+## Working while you claim triggers the earnings test
+
+Under FRA, SSA withholds $1 of benefits for every $2 you earn above an annual limit. For 2027 the limit is **$25,560** ([SSA's 2027 figures](https://adasoutheast.org/cost-of-living-adjustment-cola-information-for-2027/); [SSA fact sheet](https://www.ssa.gov/news/en/cola/factsheets/2027.html)). At $38,000 you're $12,440 over, so about **$6,220 a year is withheld** — roughly four monthly checks. There's no exemption for long contribution histories.
+
+## 2027 income, monthly
+
+| | Monthly | 2027 total |
+|---|---|---|
+| Part-time wages, gross | $3,167 | $38,000 |
+| Social Security, Apr–Dec | $1,690 | $15,210 |
+| Less earnings-test withholding | −$518 | −$6,220 |
+| Social Security actually received | $1,172 | $8,990 |
+| **Total received** | **$4,339** | **$46,990** |
+| Payroll tax (7.65%) | −$242 | −$2,907 |
+| Federal income tax, est. | −$270 | −$3,240 |
+| **Net for budgeting** | **≈$3,400** | **≈$40,840** |
+
+Your plan assumed about $5,130 a month ($2,400 plus a ~$2,730 net paycheck). The corrected figure is about **$3,400**.
+
+Assumptions: single filer, standard deduction, no state income tax, 2027 brackets approximated from 2026. On a full 2028 calendar year — twelve months of benefits instead of nine — the net run rate is about **$3,780/month**.
+
+## Four things that matter for the budget
+
+- **The statement is in today's dollars.** COLAs of 2.8% (2026) and 3.6% (2027) will lift both numbers if your $2,400 is 2025 dollars — roughly 6.5%, so about $1,800/month at 62 and ~$3,550 net. The table above is the conservative version.
+- **Checks arrive unevenly.** SSA withholds whole checks, not slices, so expect roughly four months a year with no payment. If your actual earnings exceed their estimate, they recover the difference afterward — don't spend the early checks.
+- **The withheld months aren't lost forever.** At 67, SSA recomputes the reduction to credit months when no benefit was payable — your benefit would rise to roughly $1,830. Better, but still short of $2,400.
+- **Waiting is worth pricing.** At 67 you'd get the full $2,400 with no earnings test at all. Since you'd forfeit about 30% of an early benefit to the test anyway, the real cost of waiting is much smaller than it looks, and the increase is permanent.
+
+One gap I can't fill from what you gave me: at 62 you're not on Medicare yet, so health insurance is a 2027 budget line I've left out entirely.
+
+If you tell me your filing status, state, and the expense side — housing, insurance, debt — I'll turn this into a full budget and run the claim-at-62 versus wait-to-67 comparison on your actual numbers.

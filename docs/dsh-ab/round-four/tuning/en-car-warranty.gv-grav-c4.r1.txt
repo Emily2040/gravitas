@@ -1,0 +1,25 @@
+Before the email — one thing worth checking, because it's $3,400 of your money: **Jiffy Lube oil changes almost certainly did not void your powertrain warranty.** Under the Magnuson-Moss Warranty Act (15 U.S.C. § 2302(c)), a manufacturer can't condition coverage on you using its branded parts or dealership service unless it provides them free, and it can't deny a claim just because someone else did routine maintenance. To deny you, Honda has to show the outside maintenance *caused* the transmission failure. Engine oil changes have no path to a slipping transmission.
+
+So the dealer's explanation is probably wrong, and saying "that's on me" would hand them a concession they haven't earned. Here's an email that asks for the price break without giving that up. If you'd rather just pay and be done, tell me and I'll strip out the warranty part.
+
+---
+
+**Subject:** 2023 CR-V transmission repair — authorization and cost assistance
+
+Dear [Service Manager],
+
+Thank you for diagnosing the transmission on my 2023 CR-V (41,000 miles). I'd like to move forward with the repair.
+
+Before I authorize it, I want to raise the coverage question. The vehicle is within the 5-year/60,000-mile powertrain warranty. I understand the denial is based on my routine oil changes having been done at Jiffy Lube. I don't believe that's a valid basis: routine maintenance at a non-dealership shop doesn't void the warranty under Magnuson-Moss, and Honda would need to show that the maintenance caused the transmission failure. I'd ask you to confirm the denial in writing, with the specific basis, so I can review it.
+
+That said, I'd rather resolve this here than escalate it. If Honda maintains the denial, is there anything you can do on the $3,400 — a goodwill adjustment, a reduced labor rate, or a payment plan?
+
+I'm happy to discuss by phone at [number]. Thank you for your help.
+
+Sincerely,
+[Name]
+[VIN] · [Phone]
+
+---
+
+If they hold the line: ask for the denial in writing (they often soften once it's on paper), then open a case with Honda Corporate at 1-800-999-1009 and mention your state attorney general's consumer protection office. Keep your Jiffy Lube receipts — they prove the maintenance was done, which is the thing that actually matters. I'm not a lawyer, and this isn't legal advice, but the causation burden is the part the dealer's story skips.
