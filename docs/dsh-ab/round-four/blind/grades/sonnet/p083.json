@@ -1,0 +1,52 @@
+{
+ "pair": "p083",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"설령 합의로 미뤘더라도 지연이자는 원칙적으로 그대로 붙어요(고용노동부 행정해석)\": no document number given, so unverifiable. By my own knowledge the 행정해석 usually starts the interest after the agreed extended date, so this is probably wrong.",
+   "\"3년 이하 징역 또는 3천만 원 이하 벌금 ... 제44조\": outdated penalty. The key says 5년/5천만 원 under 제43조 since 2026.9.18 (minor deduction).",
+   "\"회사가 퇴직연금(IRP)에 가입한 경우에는 지급 방식이 조금 다르지만\": conflates 퇴직연금 enrolment with IRP. IRP transfer applies to 퇴직금제도 too, for amounts over 3 million won and under age 55.",
+   "\"3~5일 안에 회신이 없으면 ... 진정\": arbitrary timeline with no source.",
+   "\"재직 1,156일 가정\": key uses 1,158 days, so the result is about 18k won low. Within 'approximately'."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"10월 30일 이후 노동청에 진정\" and a 10/30 payment deadline in the text message: arbitrary dates, no legal basis. They are practical choices, not errors.",
+   "\"취업규칙이나 근로계약서에 한 달이라고 적혀 있어도 ... 인정되기 어렵습니다\": plausible but unsourced.",
+   "\"지연이자는 민사청구로 받는 경우가 많습니다\": practice claim, unsourced. Plausible.",
+   "Reference links to law.go.kr and 1350.moel.go.kr (rtmview ids): not opened, so they are checkable but unverified.",
+   "The 95-day approximation (30×38/12) and the \"1,020만~1,045만\" range: the range holds if the 3 months total 90 days (990만÷90×95 = 1,045만). Slightly loose, still within the key's range."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start: 14 days from the 퇴직일 under 제9조, and extension needs mutual agreement. Both compute about 1,022만 won. Both miss the 통상임금 floor (up to about 1,202만), so key point 4 is missing for both. B is stronger on the practical parts. Its message states non-consent to an extension, asks for the company's 산정 내역 and payment date, sets a 10/30 deadline, and asks about IRP transfer. It also gives the current 5년/5천만 won penalty (제43조), explains the IRP rule correctly, and mentions 연차수당. A's message ends by inviting the company to name its own later date and apologising, which can read as accepting a delay. A leaves IRP out of the message and muddles it in the text (\"퇴직연금(IRP)에 가입한 경우\"). A also cites the outdated 제44조 3년/3천만 won penalty and makes an unsourced claim that interest still accrues under an agreed extension. B's one weakness is that 1350 appears only in its reference links, not in the advice."
+}

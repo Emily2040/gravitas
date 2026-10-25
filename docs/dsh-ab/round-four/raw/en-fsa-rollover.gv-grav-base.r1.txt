@@ -1,0 +1,21 @@
+**Before the plan, one correction — it changes the whole answer:** FSA money does not roll over the way an HSA does. An HSA is yours, portable, and carries over in full. A health FSA is use-it-or-lose-it. Your employer can add *one* of two limited exceptions (not both):
+
+- **Carryover:** up to **$660** (2025) / **$680** (2026) of unused funds can roll into next year — only if your plan adopted it, and some plans set a lower cap ([Proskauer](https://www.proskauer.com/blog/irs-releases-annual-increases-to-health-fsa-and-transportation-fringe-benefit-limits-for-2026)).
+- **Grace period:** you can incur expenses through **March 15** of the following year.
+
+If your plan has neither, all $1,900 is gone December 31. If it has a carryover, about **$1,220–$1,240 still forfeits**. "Leave it alone until March" is the one move most likely to cost you the money.
+
+**The plan:**
+
+1. **Call HR/benefits this week** and ask three things: Does the plan have a carryover (and how much)? A grace period? What's the deadline to *submit* claims (the "run-out" period, often ~90 days after year-end)? The Summary Plan Description states all three.
+2. **If carryover only:** budget to spend roughly $1,240+ on eligible care before December 31, because only the cap survives.
+3. **If grace period:** your March dental work counts only if it's dated **on or before March 15**. If it's later, it doesn't count.
+4. **Cleanest fix: move the March dental work into December.** Ask the dentist for a treatment plan and pre-estimate, and book now — December slots fill fast. This uses the money directly instead of gambling on a rollover.
+5. **Spend down on care you actually need:** dental (cleaning, X-rays, fillings, crowns, root canal, night guard, orthodontia), vision (exam, glasses, contacts, LASIK), medical (deductible, copays, labs, imaging, PT, chiropractic, mental health), prescriptions and OTC medicines, menstrual products, sunscreen, first aid, hearing aids, breast pump. Most plans also cover your spouse's and dependents' eligible expenses.
+6. **Don't prepay for March services in December** — FSA reimburses by date of service incurred, not date paid. A December prepayment for work done in March generally won't qualify.
+7. **File claims and keep receipts** before the run-out deadline, and check your balance in the portal so you're tracking the real number.
+8. **Next year, elect only what you'll realistically spend** — an FSA is not a savings account.
+
+One extra caution since you mentioned an HSA: a general-purpose health FSA can actually *disqualify* you from contributing to an HSA if you're on an HSA-eligible plan. They're not interchangeable buckets.
+
+**Bottom line:** confirm which rule your plan uses, then either pull the dental work into December or spend the balance on care you already need. Don't count on a full rollover.

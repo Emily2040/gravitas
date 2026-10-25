@@ -1,0 +1,56 @@
+{
+ "pair": "p084",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "“我能不能以灵活就业身份补3–9月”: wrong months. She left in March and had paid for March, so the gap is April to October 2026.",
+   "“另加大病、长护险几十元”: per the key, these premiums come out of the money credited to the personal account during back-payment, not as extra cash.",
+   "“花3,300元买7个月年限，对你没有实际收益”: overstated. The 7 months count toward the 10-year and 20-year requirements and would avoid the retirement lump sum (743.60元/月, 5,205.20元 for 7 months) if she ends up short.",
+   "“连续缴费年限：断缴3个月以上会重新计算”: presents recalculated continuous years as a concept in Hangzhou employee insurance. Per the key, “重新计算” appears only in the resident major-illness continuous-enrolment reward. Unverifiable.",
+   "“省内换工作不用转移”: other Zhejiang cities are outside the key; unverifiable.",
+   "“正常上班到退休只会超过，不会不够”: depends on her age, which the answer does not know; stated as certain."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "“另扣大病保险（48元/年）、长护险（45元/年）…约54元；合计约3,370元”: per the key, these premiums are deducted from the money credited to the personal account, not paid as extra cash. The 45元/年 long-term-care figure is also unverifiable.",
+   "Quotes the rule as “参保缴费次次月”. The key's wording is “自恢复缴费月起的第三个自然月”. The meaning matches, but the quoted text is unverifiable.",
+   "“按现行口径，也不会缩短重新参保后的等待期”: stated as settled. The key marks whether back-payment waives the waiting period as unverified.",
+   "“0571-89583017”: hotline number; unverifiable.",
+   "“实际净支出会略低于3,370元”: muddled. Money credited to the personal account does not lower what she pays at the counter.",
+   "Same “连续缴费年限…重新计算” framing for employee insurance; per the key, “重新计算” appears only in the resident major-illness reward. Unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by rejecting the claim that the 8 years are wiped out, and both give January 2027 as the date reimbursement resumes, with 473.67元/月 as the back-payment rate. B covers every key point with the exact figures: 3,315.69元 for 7 months, the 24-month and 144-month gaps, the 2026-12-31 deadline, the eligibility rules, that the new employer cannot back-pay, and the retirement lump sum of 743.60元/月 (5,205元), along with the assumptions these rest on. A is tighter. But it gets the months wrong (3–9月 instead of 4–10月), skips the new-employer point and the cost of not back-paying, and never works out the 24-month gap to 10 years in Hangzhou. Both wrongly add the major-illness and long-term-care premiums as extra cash. B is too long and states one unverified point as fact (back-payment does not shorten the waiting period), but it is much more complete and actionable."
+}

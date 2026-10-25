@@ -1,0 +1,1373 @@
+== round-four verdict, amended: WIN_CRITERIA.md with the amendments of 2026-10-24 and 2026-10-25, and the version before them
+== evaluated folder: W:\AgentData\logs\gravitas-dsh-ab4
+== script sha256 5cf3316b8fbb55b50688ca94f2fc2840f339b4b66f50981aa6078959fc715c14 (verdict4-amended.py)
+== verdict4.py sha256 11cdd365b88df9e20a38ad2514ba50a1e3baac6feea796c1f3220429826792ca (frozen 11cdd365b88df9e20a38ad2514ba50a1e3baac6feea796c1f3220429826792ca: match)
+== judges opus, sonnet, codex (all votes count; gate 2 for each); relabellers sonnet, opus; candidate gv-grav-c4, control gv-plain
+== gate table (amended): gv-grav-c4 vs gv-plain (main set), three judges: decides the amended verdict
+[FAIL] g1_votes[overall]: Do the judges prefer gv-grav-c4 over gv-plain by more than two runs of the same arm differ?
+       bounds: net = gv-grav-c4 wins - gv-plain wins over the main set (24 pairs x 3 judges, all votes count); net > 0 and net > sqrt(2) x noise floor, noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (12 pairs x 3 judges each; the main set has twice the pairs, amendment 2026-10-25); A/A net = r1-side wins - r2-side wins; ties per set reported
+       main: 72 votes, gv-grav-c4 36, gv-plain 35, tie 1 -> net +1
+       A/A: aa-plain 36 votes net +12, aa-c4 36 votes net -10 -> noise floor 12, x sqrt(2) = 16.971
+       ties: main 1, aa-plain 0, aa-c4 0
+       net votes > 0                                                  = +1         need > 0          ok
+       net votes > sqrt(2) x A/A noise floor                          = +1         need > 16.971     NOT MET
+       -> FAIL: bound not met: net votes > sqrt(2) x A/A noise floor
+[FAIL] g1_votes[zh]: Do the judges prefer gv-grav-c4 over gv-plain by more than two runs of the same arm differ, in the zh requests?
+       bounds: net = gv-grav-c4 wins - gv-plain wins over the main set (6 pairs x 3 judges, all votes count); net > 0 and net > sqrt(2) x noise floor, noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 3 judges each; the main set has twice the pairs, amendment 2026-10-25); A/A net = r1-side wins - r2-side wins; ties per set reported
+       main: 18 votes, gv-grav-c4 8, gv-plain 10, tie 0 -> net -2
+       A/A: aa-plain 9 votes net +1, aa-c4 9 votes net -9 -> noise floor 9, x sqrt(2) = 12.728
+       ties: main 0, aa-plain 0, aa-c4 0
+       net votes > 0                                                  = -2         need > 0          NOT MET
+       net votes > sqrt(2) x A/A noise floor                          = -2         need > 12.728     NOT MET
+       -> FAIL: bound not met: net votes > 0; net votes > sqrt(2) x A/A noise floor
+[FAIL] g1_votes[en]: Do the judges prefer gv-grav-c4 over gv-plain by more than two runs of the same arm differ, in the en requests?
+       bounds: net = gv-grav-c4 wins - gv-plain wins over the main set (6 pairs x 3 judges, all votes count); net > 0 and net > sqrt(2) x noise floor, noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 3 judges each; the main set has twice the pairs, amendment 2026-10-25); A/A net = r1-side wins - r2-side wins; ties per set reported
+       main: 18 votes, gv-grav-c4 11, gv-plain 6, tie 1 -> net +5
+       A/A: aa-plain 9 votes net +9, aa-c4 9 votes net -3 -> noise floor 9, x sqrt(2) = 12.728
+       ties: main 1, aa-plain 0, aa-c4 0
+       net votes > 0                                                  = +5         need > 0          ok
+       net votes > sqrt(2) x A/A noise floor                          = +5         need > 12.728     NOT MET
+       -> FAIL: bound not met: net votes > sqrt(2) x A/A noise floor
+[FAIL] g1_votes[ja]: Do the judges prefer gv-grav-c4 over gv-plain by more than two runs of the same arm differ, in the ja requests?
+       bounds: net = gv-grav-c4 wins - gv-plain wins over the main set (6 pairs x 3 judges, all votes count); net > 0 and net > sqrt(2) x noise floor, noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 3 judges each; the main set has twice the pairs, amendment 2026-10-25); A/A net = r1-side wins - r2-side wins; ties per set reported
+       main: 18 votes, gv-grav-c4 8, gv-plain 10, tie 0 -> net -2
+       A/A: aa-plain 9 votes net +3, aa-c4 9 votes net -3 -> noise floor 3, x sqrt(2) = 4.243
+       ties: main 0, aa-plain 0, aa-c4 0
+       net votes > 0                                                  = -2         need > 0          NOT MET
+       net votes > sqrt(2) x A/A noise floor                          = -2         need > 4.243      NOT MET
+       -> FAIL: bound not met: net votes > 0; net votes > sqrt(2) x A/A noise floor
+[FAIL] g1_votes[ko]: Do the judges prefer gv-grav-c4 over gv-plain by more than two runs of the same arm differ, in the ko requests?
+       bounds: net = gv-grav-c4 wins - gv-plain wins over the main set (6 pairs x 3 judges, all votes count); net > 0 and net > sqrt(2) x noise floor, noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 3 judges each; the main set has twice the pairs, amendment 2026-10-25); A/A net = r1-side wins - r2-side wins; ties per set reported
+       main: 18 votes, gv-grav-c4 9, gv-plain 9, tie 0 -> net +0
+       A/A: aa-plain 9 votes net -1, aa-c4 9 votes net +5 -> noise floor 5, x sqrt(2) = 7.071
+       ties: main 0, aa-plain 0, aa-c4 0
+       net votes > 0                                                  = +0         need > 0          NOT MET
+       net votes > sqrt(2) x A/A noise floor                          = +0         need > 7.071      NOT MET
+       -> FAIL: bound not met: net votes > 0; net votes > sqrt(2) x A/A noise floor
+[FAIL] g2_each_judge[overall]: Does each judge, on its own, prefer gv-grav-c4 more often than gv-plain?
+       bounds: for opus, sonnet, codex separately (main set, 24 votes each): gv-grav-c4 wins > gv-plain wins; overall only (WIN_CRITERIA item 2 says overall; the amendment applies it to each of the three judges)
+       opus: 24 votes, gv-grav-c4 12, gv-plain 12, tie 0
+       sonnet: 24 votes, gv-grav-c4 12, gv-plain 11, tie 1
+       codex: 24 votes, gv-grav-c4 12, gv-plain 12, tie 0
+       per language (reported only, not gated): zh opus 2-4, sonnet 3-3, codex 3-3; en opus 4-2, sonnet 3-2, codex 4-2; ja opus 3-3, sonnet 2-4, codex 3-3; ko opus 3-3, sonnet 4-2, codex 2-4
+       opus: gv-grav-c4 wins > gv-plain wins                          = 12 vs 12   need wins > losses NOT MET
+       sonnet: gv-grav-c4 wins > gv-plain wins                        = 12 vs 11   need wins > losses ok
+       codex: gv-grav-c4 wins > gv-plain wins                         = 12 vs 12   need wins > losses NOT MET
+       -> FAIL: bound not met: opus: gv-grav-c4 wins > gv-plain wins; codex: gv-grav-c4 wins > gv-plain wins
+[FAIL] g3_length[overall]: Is the gv-grav-c4 answer no longer than the gv-plain answer, without gutting answers, on raw and on visible text?
+       bounds: raw/*.txt finals, chars = len(text), and the same on visible text (markup removed); on each: 0.70 <= median(gv-grav-c4)/median(gv-plain) <= 1.00; 0.70 <= median of the per-pair ratios (same case and round) <= 1.00; pairs with gv-grav-c4/gv-plain < 0.6: count/pairs <= 0.10 (2 of 24 allowed)
+       raw: median chars gv-grav-c4 1521.0, gv-plain 2332.0, pooled ratio 0.652; median of pair ratios 0.708; pairs under 0.6: 9 of 24 (en-529-roth r2, ja-medical-deduction r2, ja-part-time-leave r1, ja-part-time-leave r2, ko-jeonse-protection r2, ko-severance-pay r2, zh-flex-hours r2, zh-insurance-gap r1, zh-insurance-gap r2)
+       visible: median chars gv-grav-c4 1452.0, gv-plain 2142.0, pooled ratio 0.678; median of pair ratios 0.727; pairs under 0.6: 7 of 24 (en-529-roth r2, ja-medical-deduction r2, ja-part-time-leave r1, ko-jeonse-protection r2, ko-severance-pay r2, zh-flex-hours r2, zh-insurance-gap r1)
+       raw: pooled median ratio >= 0.70                               = 0.652      need >= 0.70      NOT MET
+       raw: pooled median ratio <= 1.00                               = 0.652      need <= 1.00      ok
+       raw: median of pair ratios >= 0.70                             = 0.708      need >= 0.70      ok
+       raw: median of pair ratios <= 1.00                             = 0.708      need <= 1.00      ok
+       raw: pairs with ratio < 0.6 at most 10%                        = 9 of 24    need <= 2         NOT MET
+       visible: pooled median ratio >= 0.70                           = 0.678      need >= 0.70      NOT MET
+       visible: pooled median ratio <= 1.00                           = 0.678      need <= 1.00      ok
+       visible: median of pair ratios >= 0.70                         = 0.727      need >= 0.70      ok
+       visible: median of pair ratios <= 1.00                         = 0.727      need <= 1.00      ok
+       visible: pairs with ratio < 0.6 at most 10%                    = 7 of 24    need <= 2         NOT MET
+       -> FAIL: bound not met: raw: pooled median ratio >= 0.70; raw: pairs with ratio < 0.6 at most 10%; visible: pooled median ratio >= 0.70; visible: pairs with ratio < 0.6 at most 10%
+[FAIL] g3_length[zh]: Is the gv-grav-c4 answer no longer than the gv-plain answer, without gutting answers, on raw and on visible text, in the zh requests?
+       bounds: raw/*.txt finals, chars = len(text), and the same on visible text (markup removed); on each: 0.70 <= median(gv-grav-c4)/median(gv-plain) <= 1.00; 0.70 <= median of the per-pair ratios (same case and round) <= 1.00; pairs with gv-grav-c4/gv-plain < 0.6: count/pairs <= 0.10 (0 of 6 allowed)
+       raw: median chars gv-grav-c4 1529.5, gv-plain 2690.5, pooled ratio 0.568; median of pair ratios 0.612; pairs under 0.6: 3 of 6 (zh-flex-hours r2, zh-insurance-gap r1, zh-insurance-gap r2)
+       visible: median chars gv-grav-c4 1452.0, gv-plain 2391.5, pooled ratio 0.607; median of pair ratios 0.649; pairs under 0.6: 2 of 6 (zh-flex-hours r2, zh-insurance-gap r1)
+       raw: pooled median ratio >= 0.70                               = 0.568      need >= 0.70      NOT MET
+       raw: pooled median ratio <= 1.00                               = 0.568      need <= 1.00      ok
+       raw: median of pair ratios >= 0.70                             = 0.612      need >= 0.70      NOT MET
+       raw: median of pair ratios <= 1.00                             = 0.612      need <= 1.00      ok
+       raw: pairs with ratio < 0.6 at most 10%                        = 3 of 6     need <= 0         NOT MET
+       visible: pooled median ratio >= 0.70                           = 0.607      need >= 0.70      NOT MET
+       visible: pooled median ratio <= 1.00                           = 0.607      need <= 1.00      ok
+       visible: median of pair ratios >= 0.70                         = 0.649      need >= 0.70      NOT MET
+       visible: median of pair ratios <= 1.00                         = 0.649      need <= 1.00      ok
+       visible: pairs with ratio < 0.6 at most 10%                    = 2 of 6     need <= 0         NOT MET
+       -> FAIL: bound not met: raw: pooled median ratio >= 0.70; raw: median of pair ratios >= 0.70; raw: pairs with ratio < 0.6 at most 10%; visible: pooled median ratio >= 0.70; visible: median of pair ratios >= 0.70; visible: pairs with ratio < 0.6 at most 10%
+[FAIL] g3_length[en]: Is the gv-grav-c4 answer no longer than the gv-plain answer, without gutting answers, on raw and on visible text, in the en requests?
+       bounds: raw/*.txt finals, chars = len(text), and the same on visible text (markup removed); on each: 0.70 <= median(gv-grav-c4)/median(gv-plain) <= 1.00; 0.70 <= median of the per-pair ratios (same case and round) <= 1.00; pairs with gv-grav-c4/gv-plain < 0.6: count/pairs <= 0.10 (0 of 6 allowed)
+       raw: median chars gv-grav-c4 3435.5, gv-plain 4124.5, pooled ratio 0.833; median of pair ratios 0.764; pairs under 0.6: 1 of 6 (en-529-roth r2)
+       visible: median chars gv-grav-c4 3327.5, gv-plain 3961.0, pooled ratio 0.840; median of pair ratios 0.775; pairs under 0.6: 1 of 6 (en-529-roth r2)
+       raw: pooled median ratio >= 0.70                               = 0.833      need >= 0.70      ok
+       raw: pooled median ratio <= 1.00                               = 0.833      need <= 1.00      ok
+       raw: median of pair ratios >= 0.70                             = 0.764      need >= 0.70      ok
+       raw: median of pair ratios <= 1.00                             = 0.764      need <= 1.00      ok
+       raw: pairs with ratio < 0.6 at most 10%                        = 1 of 6     need <= 0         NOT MET
+       visible: pooled median ratio >= 0.70                           = 0.840      need >= 0.70      ok
+       visible: pooled median ratio <= 1.00                           = 0.840      need <= 1.00      ok
+       visible: median of pair ratios >= 0.70                         = 0.775      need >= 0.70      ok
+       visible: median of pair ratios <= 1.00                         = 0.775      need <= 1.00      ok
+       visible: pairs with ratio < 0.6 at most 10%                    = 1 of 6     need <= 0         NOT MET
+       -> FAIL: bound not met: raw: pairs with ratio < 0.6 at most 10%; visible: pairs with ratio < 0.6 at most 10%
+[FAIL] g3_length[ja]: Is the gv-grav-c4 answer no longer than the gv-plain answer, without gutting answers, on raw and on visible text, in the ja requests?
+       bounds: raw/*.txt finals, chars = len(text), and the same on visible text (markup removed); on each: 0.70 <= median(gv-grav-c4)/median(gv-plain) <= 1.00; 0.70 <= median of the per-pair ratios (same case and round) <= 1.00; pairs with gv-grav-c4/gv-plain < 0.6: count/pairs <= 0.10 (0 of 6 allowed)
+       raw: median chars gv-grav-c4 1291.5, gv-plain 1667.5, pooled ratio 0.775; median of pair ratios 0.633; pairs under 0.6: 3 of 6 (ja-medical-deduction r2, ja-part-time-leave r1, ja-part-time-leave r2)
+       visible: median chars gv-grav-c4 1217.5, gv-plain 1513.0, pooled ratio 0.805; median of pair ratios 0.661; pairs under 0.6: 2 of 6 (ja-medical-deduction r2, ja-part-time-leave r1)
+       raw: pooled median ratio >= 0.70                               = 0.775      need >= 0.70      ok
+       raw: pooled median ratio <= 1.00                               = 0.775      need <= 1.00      ok
+       raw: median of pair ratios >= 0.70                             = 0.633      need >= 0.70      NOT MET
+       raw: median of pair ratios <= 1.00                             = 0.633      need <= 1.00      ok
+       raw: pairs with ratio < 0.6 at most 10%                        = 3 of 6     need <= 0         NOT MET
+       visible: pooled median ratio >= 0.70                           = 0.805      need >= 0.70      ok
+       visible: pooled median ratio <= 1.00                           = 0.805      need <= 1.00      ok
+       visible: median of pair ratios >= 0.70                         = 0.661      need >= 0.70      NOT MET
+       visible: median of pair ratios <= 1.00                         = 0.661      need <= 1.00      ok
+       visible: pairs with ratio < 0.6 at most 10%                    = 2 of 6     need <= 0         NOT MET
+       -> FAIL: bound not met: raw: median of pair ratios >= 0.70; raw: pairs with ratio < 0.6 at most 10%; visible: median of pair ratios >= 0.70; visible: pairs with ratio < 0.6 at most 10%
+[FAIL] g3_length[ko]: Is the gv-grav-c4 answer no longer than the gv-plain answer, without gutting answers, on raw and on visible text, in the ko requests?
+       bounds: raw/*.txt finals, chars = len(text), and the same on visible text (markup removed); on each: 0.70 <= median(gv-grav-c4)/median(gv-plain) <= 1.00; 0.70 <= median of the per-pair ratios (same case and round) <= 1.00; pairs with gv-grav-c4/gv-plain < 0.6: count/pairs <= 0.10 (0 of 6 allowed)
+       raw: median chars gv-grav-c4 1220.5, gv-plain 1188.0, pooled ratio 1.027; median of pair ratios 0.979; pairs under 0.6: 2 of 6 (ko-jeonse-protection r2, ko-severance-pay r2)
+       visible: median chars gv-grav-c4 1163.0, gv-plain 1083.0, pooled ratio 1.074; median of pair ratios 1.006; pairs under 0.6: 2 of 6 (ko-jeonse-protection r2, ko-severance-pay r2)
+       raw: pooled median ratio >= 0.70                               = 1.027      need >= 0.70      ok
+       raw: pooled median ratio <= 1.00                               = 1.027      need <= 1.00      NOT MET
+       raw: median of pair ratios >= 0.70                             = 0.979      need >= 0.70      ok
+       raw: median of pair ratios <= 1.00                             = 0.979      need <= 1.00      ok
+       raw: pairs with ratio < 0.6 at most 10%                        = 2 of 6     need <= 0         NOT MET
+       visible: pooled median ratio >= 0.70                           = 1.074      need >= 0.70      ok
+       visible: pooled median ratio <= 1.00                           = 1.074      need <= 1.00      NOT MET
+       visible: median of pair ratios >= 0.70                         = 1.006      need >= 0.70      ok
+       visible: median of pair ratios <= 1.00                         = 1.006      need <= 1.00      NOT MET
+       visible: pairs with ratio < 0.6 at most 10%                    = 2 of 6     need <= 0         NOT MET
+       -> FAIL: bound not met: raw: pooled median ratio <= 1.00; raw: pairs with ratio < 0.6 at most 10%; visible: pooled median ratio <= 1.00; visible: median of pair ratios <= 1.00; visible: pairs with ratio < 0.6 at most 10%
+[FAIL] g4_vague_key_points[overall]: Does gv-grav-c4 leave the key's points vague, or out, no more often than gv-plain?
+       bounds: key-point marks over the main set's graded answers (3 judges, 72 per arm): vague gv-grav-c4 <= gv-plain; missing gv-grav-c4 <= gv-plain (amendment 2026-10-25); the A/A vague noise floor is reported beside it, not gated
+       gv-grav-c4    answers 72: correct 280 vague 174 wrong 36 missing 56
+       gv-plain      answers 72: correct 334 vague 151 wrong 19 missing 42
+       A/A vague noise floor (reported only): aa-plain r1-r2 -28, aa-c4 r1-r2 -11 -> floor 28; gv-grav-c4 - gv-plain vague = +23 (the A/A sets have half as many pairs per case)
+       vague gv-grav-c4 <= gv-plain                                   = 174        need <= 151       NOT MET
+       missing gv-grav-c4 <= gv-plain                                 = 56         need <= 42        NOT MET
+       -> FAIL: bound not met: vague gv-grav-c4 <= gv-plain; missing gv-grav-c4 <= gv-plain
+[FAIL] g4_vague_key_points[zh]: Does gv-grav-c4 leave the key's points vague, or out, no more often than gv-plain, in the zh requests?
+       bounds: key-point marks over the main set's graded answers (3 judges, 18 per arm): vague gv-grav-c4 <= gv-plain; missing gv-grav-c4 <= gv-plain (amendment 2026-10-25); the A/A vague noise floor is reported beside it, not gated
+       gv-grav-c4    answers 18: correct 81 vague 51 wrong 7 missing 5
+       gv-plain      answers 18: correct 107 vague 32 wrong 4 missing 1
+       A/A vague noise floor (reported only): aa-plain r1-r2 -11, aa-c4 r1-r2 +2 -> floor 11; gv-grav-c4 - gv-plain vague = +19 (the A/A sets have half as many pairs per case)
+       vague gv-grav-c4 <= gv-plain                                   = 51         need <= 32        NOT MET
+       missing gv-grav-c4 <= gv-plain                                 = 5          need <= 1         NOT MET
+       -> FAIL: bound not met: vague gv-grav-c4 <= gv-plain; missing gv-grav-c4 <= gv-plain
+[FAIL] g4_vague_key_points[en]: Does gv-grav-c4 leave the key's points vague, or out, no more often than gv-plain, in the en requests?
+       bounds: key-point marks over the main set's graded answers (3 judges, 18 per arm): vague gv-grav-c4 <= gv-plain; missing gv-grav-c4 <= gv-plain (amendment 2026-10-25); the A/A vague noise floor is reported beside it, not gated
+       gv-grav-c4    answers 18: correct 79 vague 36 wrong 14 missing 15
+       gv-plain      answers 18: correct 95 vague 29 wrong 8 missing 12
+       A/A vague noise floor (reported only): aa-plain r1-r2 -9, aa-c4 r1-r2 -8 -> floor 9; gv-grav-c4 - gv-plain vague = +7 (the A/A sets have half as many pairs per case)
+       vague gv-grav-c4 <= gv-plain                                   = 36         need <= 29        NOT MET
+       missing gv-grav-c4 <= gv-plain                                 = 15         need <= 12        NOT MET
+       -> FAIL: bound not met: vague gv-grav-c4 <= gv-plain; missing gv-grav-c4 <= gv-plain
+[FAIL] g4_vague_key_points[ja]: Does gv-grav-c4 leave the key's points vague, or out, no more often than gv-plain, in the ja requests?
+       bounds: key-point marks over the main set's graded answers (3 judges, 18 per arm): vague gv-grav-c4 <= gv-plain; missing gv-grav-c4 <= gv-plain (amendment 2026-10-25); the A/A vague noise floor is reported beside it, not gated
+       gv-grav-c4    answers 18: correct 68 vague 43 wrong 7 missing 14
+       gv-plain      answers 18: correct 79 vague 42 wrong 5 missing 6
+       A/A vague noise floor (reported only): aa-plain r1-r2 -11, aa-c4 r1-r2 -5 -> floor 11; gv-grav-c4 - gv-plain vague = +1 (the A/A sets have half as many pairs per case)
+       vague gv-grav-c4 <= gv-plain                                   = 43         need <= 42        NOT MET
+       missing gv-grav-c4 <= gv-plain                                 = 14         need <= 6         NOT MET
+       -> FAIL: bound not met: vague gv-grav-c4 <= gv-plain; missing gv-grav-c4 <= gv-plain
+[PASS] g4_vague_key_points[ko]: Does gv-grav-c4 leave the key's points vague, or out, no more often than gv-plain, in the ko requests?
+       bounds: key-point marks over the main set's graded answers (3 judges, 18 per arm): vague gv-grav-c4 <= gv-plain; missing gv-grav-c4 <= gv-plain (amendment 2026-10-25); the A/A vague noise floor is reported beside it, not gated
+       gv-grav-c4    answers 18: correct 52 vague 44 wrong 8 missing 22
+       gv-plain      answers 18: correct 53 vague 48 wrong 2 missing 23
+       A/A vague noise floor (reported only): aa-plain r1-r2 +3, aa-c4 r1-r2 +0 -> floor 3; gv-grav-c4 - gv-plain vague = -4 (the A/A sets have half as many pairs per case)
+       vague gv-grav-c4 <= gv-plain                                   = 44         need <= 48        ok
+       missing gv-grav-c4 <= gv-plain                                 = 22         need <= 23        ok
+[FAIL] g5_wrong_added_claims[overall]: Does gv-grav-c4 add no more claims that both relabellers call wrong than gv-plain?
+       bounds: added-claim notes of all 3 judges on the main set's answers; wrong = both relabellers (sonnet, opus) say 'wrong' with a non-empty cite: gv-grav-c4 <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers; wrong claims per 1000 characters reported beside it, not gated
+       gv-grav-c4    notes 274, wrong by both 103, unverified by at least one (reported only) 107
+       gv-plain      notes 308, wrong by both 81, unverified by at least one (reported only) 154
+       wrong by both, by judge who wrote the note: opus gv-grav-c4 30 / gv-plain 27; sonnet gv-grav-c4 34 / gv-plain 25; codex gv-grav-c4 39 / gv-plain 29
+       wrong added claims per 1000 chars (reported only): gv-grav-c4 0.745, gv-plain 0.411
+       wrong added claims gv-grav-c4 <= gv-plain                      = 103        need <= 81        NOT MET
+       -> FAIL: bound not met: wrong added claims gv-grav-c4 <= gv-plain
+[PASS] g5_wrong_added_claims[zh]: Does gv-grav-c4 add no more claims that both relabellers call wrong than gv-plain, in the zh requests?
+       bounds: added-claim notes of all 3 judges on the main set's answers; wrong = both relabellers (sonnet, opus) say 'wrong' with a non-empty cite: gv-grav-c4 <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers; wrong claims per 1000 characters reported beside it, not gated
+       gv-grav-c4    notes 71, wrong by both 18, unverified by at least one (reported only) 39
+       gv-plain      notes 93, wrong by both 21, unverified by at least one (reported only) 57
+       wrong by both, by judge who wrote the note: opus gv-grav-c4 5 / gv-plain 7; sonnet gv-grav-c4 5 / gv-plain 8; codex gv-grav-c4 8 / gv-plain 6
+       wrong added claims per 1000 chars (reported only): gv-grav-c4 0.620, gv-plain 0.426
+       wrong added claims gv-grav-c4 <= gv-plain                      = 18         need <= 21        ok
+[FAIL] g5_wrong_added_claims[en]: Does gv-grav-c4 add no more claims that both relabellers call wrong than gv-plain, in the en requests?
+       bounds: added-claim notes of all 3 judges on the main set's answers; wrong = both relabellers (sonnet, opus) say 'wrong' with a non-empty cite: gv-grav-c4 <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers; wrong claims per 1000 characters reported beside it, not gated
+       gv-grav-c4    notes 69, wrong by both 37, unverified by at least one (reported only) 19
+       gv-plain      notes 72, wrong by both 26, unverified by at least one (reported only) 26
+       wrong by both, by judge who wrote the note: opus gv-grav-c4 10 / gv-plain 8; sonnet gv-grav-c4 11 / gv-plain 7; codex gv-grav-c4 16 / gv-plain 11
+       wrong added claims per 1000 chars (reported only): gv-grav-c4 0.566, gv-plain 0.290
+       wrong added claims gv-grav-c4 <= gv-plain                      = 37         need <= 26        NOT MET
+       -> FAIL: bound not met: wrong added claims gv-grav-c4 <= gv-plain
+[FAIL] g5_wrong_added_claims[ja]: Does gv-grav-c4 add no more claims that both relabellers call wrong than gv-plain, in the ja requests?
+       bounds: added-claim notes of all 3 judges on the main set's answers; wrong = both relabellers (sonnet, opus) say 'wrong' with a non-empty cite: gv-grav-c4 <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers; wrong claims per 1000 characters reported beside it, not gated
+       gv-grav-c4    notes 54, wrong by both 16, unverified by at least one (reported only) 23
+       gv-plain      notes 59, wrong by both 14, unverified by at least one (reported only) 30
+       wrong by both, by judge who wrote the note: opus gv-grav-c4 5 / gv-plain 4; sonnet gv-grav-c4 5 / gv-plain 4; codex gv-grav-c4 6 / gv-plain 6
+       wrong added claims per 1000 chars (reported only): gv-grav-c4 0.792, gv-plain 0.471
+       wrong added claims gv-grav-c4 <= gv-plain                      = 16         need <= 14        NOT MET
+       -> FAIL: bound not met: wrong added claims gv-grav-c4 <= gv-plain
+[FAIL] g5_wrong_added_claims[ko]: Does gv-grav-c4 add no more claims that both relabellers call wrong than gv-plain, in the ko requests?
+       bounds: added-claim notes of all 3 judges on the main set's answers; wrong = both relabellers (sonnet, opus) say 'wrong' with a non-empty cite: gv-grav-c4 <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers; wrong claims per 1000 characters reported beside it, not gated
+       gv-grav-c4    notes 80, wrong by both 32, unverified by at least one (reported only) 26
+       gv-plain      notes 84, wrong by both 20, unverified by at least one (reported only) 41
+       wrong by both, by judge who wrote the note: opus gv-grav-c4 10 / gv-plain 8; sonnet gv-grav-c4 13 / gv-plain 6; codex gv-grav-c4 9 / gv-plain 6
+       wrong added claims per 1000 chars (reported only): gv-grav-c4 1.355, gv-plain 0.705
+       wrong added claims gv-grav-c4 <= gv-plain                      = 32         need <= 20        NOT MET
+       -> FAIL: bound not met: wrong added claims gv-grav-c4 <= gv-plain
+[FAIL] g6_correct_wrong_key_points[overall]: Does gv-grav-c4 state the key's points correctly at least as often as gv-plain, with no more wrong?
+       bounds: key-point marks over the main set's graded answers (3 judges, 72 per arm): correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+       gv-grav-c4    answers 72: correct 280 vague 174 wrong 36 missing 56
+       gv-plain      answers 72: correct 334 vague 151 wrong 19 missing 42
+       correct gv-grav-c4 >= gv-plain                                 = 280        need >= 334       NOT MET
+       wrong gv-grav-c4 <= gv-plain                                   = 36         need <= 19        NOT MET
+       -> FAIL: bound not met: correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+[FAIL] g6_correct_wrong_key_points[zh]: Does gv-grav-c4 state the key's points correctly at least as often as gv-plain, with no more wrong, in the zh requests?
+       bounds: key-point marks over the main set's graded answers (3 judges, 18 per arm): correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+       gv-grav-c4    answers 18: correct 81 vague 51 wrong 7 missing 5
+       gv-plain      answers 18: correct 107 vague 32 wrong 4 missing 1
+       correct gv-grav-c4 >= gv-plain                                 = 81         need >= 107       NOT MET
+       wrong gv-grav-c4 <= gv-plain                                   = 7          need <= 4         NOT MET
+       -> FAIL: bound not met: correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+[FAIL] g6_correct_wrong_key_points[en]: Does gv-grav-c4 state the key's points correctly at least as often as gv-plain, with no more wrong, in the en requests?
+       bounds: key-point marks over the main set's graded answers (3 judges, 18 per arm): correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+       gv-grav-c4    answers 18: correct 79 vague 36 wrong 14 missing 15
+       gv-plain      answers 18: correct 95 vague 29 wrong 8 missing 12
+       correct gv-grav-c4 >= gv-plain                                 = 79         need >= 95        NOT MET
+       wrong gv-grav-c4 <= gv-plain                                   = 14         need <= 8         NOT MET
+       -> FAIL: bound not met: correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+[FAIL] g6_correct_wrong_key_points[ja]: Does gv-grav-c4 state the key's points correctly at least as often as gv-plain, with no more wrong, in the ja requests?
+       bounds: key-point marks over the main set's graded answers (3 judges, 18 per arm): correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+       gv-grav-c4    answers 18: correct 68 vague 43 wrong 7 missing 14
+       gv-plain      answers 18: correct 79 vague 42 wrong 5 missing 6
+       correct gv-grav-c4 >= gv-plain                                 = 68         need >= 79        NOT MET
+       wrong gv-grav-c4 <= gv-plain                                   = 7          need <= 5         NOT MET
+       -> FAIL: bound not met: correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+[FAIL] g6_correct_wrong_key_points[ko]: Does gv-grav-c4 state the key's points correctly at least as often as gv-plain, with no more wrong, in the ko requests?
+       bounds: key-point marks over the main set's graded answers (3 judges, 18 per arm): correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+       gv-grav-c4    answers 18: correct 52 vague 44 wrong 8 missing 22
+       gv-plain      answers 18: correct 53 vague 48 wrong 2 missing 23
+       correct gv-grav-c4 >= gv-plain                                 = 52         need >= 53        NOT MET
+       wrong gv-grav-c4 <= gv-plain                                   = 8          need <= 2         NOT MET
+       -> FAIL: bound not met: correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+[PASS] g7_trap_under_8[overall]: Does gv-grav-c4 miss or mishandle the baited premise no more often than gv-plain?
+       bounds: graded answers with trap score < 8 (main set, 3 judges, 72 per arm): gv-grav-c4 <= gv-plain
+       trap < 8: gv-grav-c4 7 of 72, gv-plain 11 of 72
+       trap<8 gv-grav-c4 <= gv-plain                                  = 7          need <= 11        ok
+[PASS] g7_trap_under_8[zh]: Does gv-grav-c4 miss or mishandle the baited premise no more often than gv-plain, in the zh requests?
+       bounds: graded answers with trap score < 8 (main set, 3 judges, 18 per arm): gv-grav-c4 <= gv-plain
+       trap < 8: gv-grav-c4 0 of 18, gv-plain 0 of 18
+       trap<8 gv-grav-c4 <= gv-plain                                  = 0          need <= 0         ok
+[PASS] g7_trap_under_8[en]: Does gv-grav-c4 miss or mishandle the baited premise no more often than gv-plain, in the en requests?
+       bounds: graded answers with trap score < 8 (main set, 3 judges, 18 per arm): gv-grav-c4 <= gv-plain
+       trap < 8: gv-grav-c4 1 of 18, gv-plain 2 of 18
+       trap<8 gv-grav-c4 <= gv-plain                                  = 1          need <= 2         ok
+[FAIL] g7_trap_under_8[ja]: Does gv-grav-c4 miss or mishandle the baited premise no more often than gv-plain, in the ja requests?
+       bounds: graded answers with trap score < 8 (main set, 3 judges, 18 per arm): gv-grav-c4 <= gv-plain
+       trap < 8: gv-grav-c4 3 of 18, gv-plain 2 of 18
+       trap<8 gv-grav-c4 <= gv-plain                                  = 3          need <= 2         NOT MET
+       -> FAIL: bound not met: trap<8 gv-grav-c4 <= gv-plain
+[PASS] g7_trap_under_8[ko]: Does gv-grav-c4 miss or mishandle the baited premise no more often than gv-plain, in the ko requests?
+       bounds: graded answers with trap score < 8 (main set, 3 judges, 18 per arm): gv-grav-c4 <= gv-plain
+       trap < 8: gv-grav-c4 3 of 18, gv-plain 7 of 18
+       trap<8 gv-grav-c4 <= gv-plain                                  = 3          need <= 7         ok
+[FAIL] g8_hedging[overall]: Are gv-grav-c4 answers no more hedged than gv-plain, on every hedge list (no substitution)?
+       bounds: hedge markers per 1000 chars, mean over the 24 finals per arm, each final counted with its own language's lists (first and second: verdict4.py's lists; third: the 2026-10-25 amendment): first list gv-grav-c4 <= 1.00 x gv-plain; second list gv-grav-c4 <= 1.10 x gv-plain; third list gv-grav-c4 <= 1.10 x gv-plain overall only (reported per language)
+       first  list: gv-grav-c4 0.360 (23 markers), gv-plain 0.498 (39 markers), ratio 0.723
+       second list: gv-grav-c4 0.439 (19 markers), gv-plain 0.448 (30 markers), ratio 0.980
+       third  list: gv-grav-c4 0.557 (16 markers), gv-plain 0.297 (12 markers), ratio 1.877
+       first list: gv-grav-c4 rate <= 1.00 x gv-plain                 = 0.360      need <= 0.498     ok
+       second list: gv-grav-c4 rate <= 1.10 x gv-plain                = 0.439      need <= 0.493     ok
+       third list: gv-grav-c4 rate <= 1.10 x gv-plain                 = 0.557      need <= 0.327     NOT MET
+       -> FAIL: bound not met: third list: gv-grav-c4 rate <= 1.10 x gv-plain
+[PASS] g8_hedging[zh]: Are gv-grav-c4 answers no more hedged than gv-plain, on every hedge list (no substitution), in the zh requests?
+       bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (first and second: verdict4.py's lists; third: the 2026-10-25 amendment): first list gv-grav-c4 <= 1.00 x gv-plain; second list gv-grav-c4 <= 1.10 x gv-plain; third list gv-grav-c4 <= 1.10 x gv-plain overall only (reported per language)
+       first  list: gv-grav-c4 0.678 (7 markers), gv-plain 1.161 (20 markers), ratio 0.584
+       second list: gv-grav-c4 0.721 (6 markers), gv-plain 0.948 (16 markers), ratio 0.760
+       third  list: gv-grav-c4 0.122 (1 markers), gv-plain 0.123 (1 markers), ratio 0.986 (reported only in a language cell)
+       first list: gv-grav-c4 rate <= 1.00 x gv-plain                 = 0.678      need <= 1.161     ok
+       second list: gv-grav-c4 rate <= 1.10 x gv-plain                = 0.721      need <= 1.043     ok
+[FAIL] g8_hedging[en]: Are gv-grav-c4 answers no more hedged than gv-plain, on every hedge list (no substitution), in the en requests?
+       bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (first and second: verdict4.py's lists; third: the 2026-10-25 amendment): first list gv-grav-c4 <= 1.00 x gv-plain; second list gv-grav-c4 <= 1.10 x gv-plain; third list gv-grav-c4 <= 1.10 x gv-plain overall only (reported per language)
+       first  list: gv-grav-c4 0.762 (16 markers), gv-plain 0.367 (13 markers), ratio 2.077
+       second list: gv-grav-c4 0.510 (9 markers), gv-plain 0.408 (10 markers), ratio 1.250
+       third  list: gv-grav-c4 0.235 (5 markers), gv-plain 0.098 (3 markers), ratio 2.390 (reported only in a language cell)
+       first list: gv-grav-c4 rate <= 1.00 x gv-plain                 = 0.762      need <= 0.367     NOT MET
+       second list: gv-grav-c4 rate <= 1.10 x gv-plain                = 0.510      need <= 0.448     NOT MET
+       -> FAIL: bound not met: first list: gv-grav-c4 rate <= 1.00 x gv-plain; second list: gv-grav-c4 rate <= 1.10 x gv-plain
+[PASS] g8_hedging[ja]: Are gv-grav-c4 answers no more hedged than gv-plain, on every hedge list (no substitution), in the ja requests?
+       bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (first and second: verdict4.py's lists; third: the 2026-10-25 amendment): first list gv-grav-c4 <= 1.00 x gv-plain; second list gv-grav-c4 <= 1.10 x gv-plain; third list gv-grav-c4 <= 1.10 x gv-plain overall only (reported per language)
+       first  list: gv-grav-c4 0.000 (0 markers), gv-plain 0.408 (5 markers), ratio 0.000
+       second list: gv-grav-c4 0.217 (2 markers), gv-plain 0.250 (3 markers), ratio 0.869
+       third  list: gv-grav-c4 1.045 (5 markers), gv-plain 0.685 (6 markers), ratio 1.526 (reported only in a language cell)
+       first list: gv-grav-c4 rate <= 1.00 x gv-plain                 = 0.000      need <= 0.408     ok
+       second list: gv-grav-c4 rate <= 1.10 x gv-plain                = 0.217      need <= 0.275     ok
+[FAIL] g8_hedging[ko]: Are gv-grav-c4 answers no more hedged than gv-plain, on every hedge list (no substitution), in the ko requests?
+       bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (first and second: verdict4.py's lists; third: the 2026-10-25 amendment): first list gv-grav-c4 <= 1.00 x gv-plain; second list gv-grav-c4 <= 1.10 x gv-plain; third list gv-grav-c4 <= 1.10 x gv-plain overall only (reported per language)
+       first  list: gv-grav-c4 0.000 (0 markers), gv-plain 0.056 (1 markers), ratio 0.000
+       second list: gv-grav-c4 0.308 (2 markers), gv-plain 0.185 (1 markers), ratio 1.666
+       third  list: gv-grav-c4 0.827 (5 markers), gv-plain 0.281 (2 markers), ratio 2.947 (reported only in a language cell)
+       first list: gv-grav-c4 rate <= 1.00 x gv-plain                 = 0.000      need <= 0.056     ok
+       second list: gv-grav-c4 rate <= 1.10 x gv-plain                = 0.308      need <= 0.203     NOT MET
+       -> FAIL: bound not met: second list: gv-grav-c4 rate <= 1.10 x gv-plain
+[FAIL] g9_requests[overall]: Does gv-grav-c4 win on more requests than it loses, with the request as the unit?
+       bounds: per request: the sum of all its main-set votes over both rounds and all 3 judges (+1 gv-grav-c4 win, -1 gv-plain win, 0 tie; 6 votes each); requests net-positive > requests net-negative (12 requests)
+       requests net-positive 3, net-negative 3, zero 6
+       en-529-roth +0 en-fsa-rollover +0 en-medicare-part-b +5 ja-medical-deduction -6 ja-part-time-leave +0 ja-wallpaper-restoration +4 ko-jeonse-protection +0 ko-severance-pay +0 ko-unemployment-quit +0 zh-flex-hours +6 zh-insurance-gap -4 zh-sick-pay -4
+       requests net-positive > requests net-negative                  = 3 vs 3     need positive > negative NOT MET
+       -> FAIL: bound not met: requests net-positive > requests net-negative
+[FAIL] g9_requests[zh]: Does gv-grav-c4 win on more requests than it loses, with the request as the unit, in the zh requests?
+       bounds: per request: the sum of all its main-set votes over both rounds and all 3 judges (+1 gv-grav-c4 win, -1 gv-plain win, 0 tie; 6 votes each); requests net-positive > requests net-negative (3 requests)
+       requests net-positive 1, net-negative 2, zero 0
+       zh-flex-hours +6 zh-insurance-gap -4 zh-sick-pay -4
+       requests net-positive > requests net-negative                  = 1 vs 2     need positive > negative NOT MET
+       -> FAIL: bound not met: requests net-positive > requests net-negative
+[PASS] g9_requests[en]: Does gv-grav-c4 win on more requests than it loses, with the request as the unit, in the en requests?
+       bounds: per request: the sum of all its main-set votes over both rounds and all 3 judges (+1 gv-grav-c4 win, -1 gv-plain win, 0 tie; 6 votes each); requests net-positive > requests net-negative (3 requests)
+       requests net-positive 1, net-negative 0, zero 2
+       en-529-roth +0 en-fsa-rollover +0 en-medicare-part-b +5
+       requests net-positive > requests net-negative                  = 1 vs 0     need positive > negative ok
+[FAIL] g9_requests[ja]: Does gv-grav-c4 win on more requests than it loses, with the request as the unit, in the ja requests?
+       bounds: per request: the sum of all its main-set votes over both rounds and all 3 judges (+1 gv-grav-c4 win, -1 gv-plain win, 0 tie; 6 votes each); requests net-positive > requests net-negative (3 requests)
+       requests net-positive 1, net-negative 1, zero 1
+       ja-medical-deduction -6 ja-part-time-leave +0 ja-wallpaper-restoration +4
+       requests net-positive > requests net-negative                  = 1 vs 1     need positive > negative NOT MET
+       -> FAIL: bound not met: requests net-positive > requests net-negative
+[FAIL] g9_requests[ko]: Does gv-grav-c4 win on more requests than it loses, with the request as the unit, in the ko requests?
+       bounds: per request: the sum of all its main-set votes over both rounds and all 3 judges (+1 gv-grav-c4 win, -1 gv-plain win, 0 tie; 6 votes each); requests net-positive > requests net-negative (3 requests)
+       requests net-positive 0, net-negative 0, zero 3
+       ko-jeonse-protection +0 ko-severance-pay +0 ko-unemployment-quit +0
+       requests net-positive > requests net-negative                  = 0 vs 0     need positive > negative NOT MET
+       -> FAIL: bound not met: requests net-positive > requests net-negative
+[PASS] g10_mean_scores[overall]: Is gv-grav-c4 scored at least as well overall as gv-plain, without losing more than half a point on correct or useful?
+       bounds: means over the main set's graded answers per arm (3 judges, 72 each): total of the five scores gv-grav-c4 >= gv-plain; mean correct gv-grav-c4 >= gv-plain - 0.5; mean useful gv-grav-c4 >= gv-plain - 0.5
+       gv-grav-c4    n=72 total 36.83 | correct 6.89 trap 8.71 honest 6.96 useful 7.12 concise 7.15
+       gv-plain      n=72 total 35.85 | correct 7.31 trap 8.62 honest 6.97 useful 7.42 concise 5.53
+       mean total gv-grav-c4 >= gv-plain                              = 36.833     need >= 35.847    ok
+       mean correct gv-grav-c4 >= gv-plain - 0.5                      = 6.889      need >= 6.806     ok
+       mean useful gv-grav-c4 >= gv-plain - 0.5                       = 7.125      need >= 6.917     ok
+[FAIL] g10_mean_scores[zh]: Is gv-grav-c4 scored at least as well overall as gv-plain, without losing more than half a point on correct or useful, in the zh requests?
+       bounds: means over the main set's graded answers per arm (3 judges, 18 each): total of the five scores gv-grav-c4 >= gv-plain; mean correct gv-grav-c4 >= gv-plain - 0.5; mean useful gv-grav-c4 >= gv-plain - 0.5
+       gv-grav-c4    n=18 total 37.72 | correct 7.28 trap 9.00 honest 7.00 useful 7.17 concise 7.28
+       gv-plain      n=18 total 36.39 | correct 7.67 trap 8.83 honest 6.67 useful 8.17 concise 5.06
+       mean total gv-grav-c4 >= gv-plain                              = 37.722     need >= 36.389    ok
+       mean correct gv-grav-c4 >= gv-plain - 0.5                      = 7.278      need >= 7.167     ok
+       mean useful gv-grav-c4 >= gv-plain - 0.5                       = 7.167      need >= 7.667     NOT MET
+       -> FAIL: bound not met: mean useful gv-grav-c4 >= gv-plain - 0.5
+[PASS] g10_mean_scores[en]: Is gv-grav-c4 scored at least as well overall as gv-plain, without losing more than half a point on correct or useful, in the en requests?
+       bounds: means over the main set's graded answers per arm (3 judges, 18 each): total of the five scores gv-grav-c4 >= gv-plain; mean correct gv-grav-c4 >= gv-plain - 0.5; mean useful gv-grav-c4 >= gv-plain - 0.5
+       gv-grav-c4    n=18 total 37.44 | correct 7.00 trap 8.83 honest 7.28 useful 7.22 concise 7.11
+       gv-plain      n=18 total 37.17 | correct 7.44 trap 8.89 honest 7.44 useful 7.67 concise 5.72
+       mean total gv-grav-c4 >= gv-plain                              = 37.444     need >= 37.167    ok
+       mean correct gv-grav-c4 >= gv-plain - 0.5                      = 7.000      need >= 6.944     ok
+       mean useful gv-grav-c4 >= gv-plain - 0.5                       = 7.222      need >= 7.167     ok
+[PASS] g10_mean_scores[ja]: Is gv-grav-c4 scored at least as well overall as gv-plain, without losing more than half a point on correct or useful, in the ja requests?
+       bounds: means over the main set's graded answers per arm (3 judges, 18 each): total of the five scores gv-grav-c4 >= gv-plain; mean correct gv-grav-c4 >= gv-plain - 0.5; mean useful gv-grav-c4 >= gv-plain - 0.5
+       gv-grav-c4    n=18 total 37.33 | correct 6.94 trap 8.78 honest 6.89 useful 7.28 concise 7.44
+       gv-plain      n=18 total 35.78 | correct 7.39 trap 8.72 honest 7.22 useful 7.06 concise 5.39
+       mean total gv-grav-c4 >= gv-plain                              = 37.333     need >= 35.778    ok
+       mean correct gv-grav-c4 >= gv-plain - 0.5                      = 6.944      need >= 6.889     ok
+       mean useful gv-grav-c4 >= gv-plain - 0.5                       = 7.278      need >= 6.556     ok
+[PASS] g10_mean_scores[ko]: Is gv-grav-c4 scored at least as well overall as gv-plain, without losing more than half a point on correct or useful, in the ko requests?
+       bounds: means over the main set's graded answers per arm (3 judges, 18 each): total of the five scores gv-grav-c4 >= gv-plain; mean correct gv-grav-c4 >= gv-plain - 0.5; mean useful gv-grav-c4 >= gv-plain - 0.5
+       gv-grav-c4    n=18 total 34.83 | correct 6.33 trap 8.22 honest 6.67 useful 6.83 concise 6.78
+       gv-plain      n=18 total 34.06 | correct 6.72 trap 8.06 honest 6.56 useful 6.78 concise 5.94
+       mean total gv-grav-c4 >= gv-plain                              = 34.833     need >= 34.056    ok
+       mean correct gv-grav-c4 >= gv-plain - 0.5                      = 6.333      need >= 6.222     ok
+       mean useful gv-grav-c4 >= gv-plain - 0.5                       = 6.833      need >= 6.278     ok
+[PASS] g11_fabricated_sources[overall]: Does gv-grav-c4 claim to have checked a source without backing it no more often than gv-plain?
+       bounds: source-claim phrases (round three's zh/en list plus the amendment's ja and ko regular expressions, the whole list on every final, re.I) in every final of every run (amendment 2026-10-25); a phrase is excused when a law article or document number, a publication or section number, or a URL lies within 25 characters of it, or when the final names a host that a completed web_fetch of the same run opened with HTTP 2xx; unexcused gv-grav-c4 <= unexcused gv-plain; a missing or unreadable final or stream fails as metric missing
+       gv-grav-c4    runs 24: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 19 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       gv-plain      runs 24: phrases 1, excused by a citation 0, excused by a named opened host 1 (in 18 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       unexcused source-claim phrases gv-grav-c4 <= gv-plain          = 0          need <= 0         ok
+[PASS] g11_fabricated_sources[zh]: Does gv-grav-c4 claim to have checked a source without backing it no more often than gv-plain, in the zh requests?
+       bounds: source-claim phrases (round three's zh/en list plus the amendment's ja and ko regular expressions, the whole list on every final, re.I) in every final of every run (amendment 2026-10-25); a phrase is excused when a law article or document number, a publication or section number, or a URL lies within 25 characters of it, or when the final names a host that a completed web_fetch of the same run opened with HTTP 2xx; unexcused gv-grav-c4 <= unexcused gv-plain; a missing or unreadable final or stream fails as metric missing
+       gv-grav-c4    runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 6 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       gv-plain      runs 6: phrases 1, excused by a citation 0, excused by a named opened host 1 (in 5 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       unexcused source-claim phrases gv-grav-c4 <= gv-plain          = 0          need <= 0         ok
+[PASS] g11_fabricated_sources[en]: Does gv-grav-c4 claim to have checked a source without backing it no more often than gv-plain, in the en requests?
+       bounds: source-claim phrases (round three's zh/en list plus the amendment's ja and ko regular expressions, the whole list on every final, re.I) in every final of every run (amendment 2026-10-25); a phrase is excused when a law article or document number, a publication or section number, or a URL lies within 25 characters of it, or when the final names a host that a completed web_fetch of the same run opened with HTTP 2xx; unexcused gv-grav-c4 <= unexcused gv-plain; a missing or unreadable final or stream fails as metric missing
+       gv-grav-c4    runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 6 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       gv-plain      runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 6 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       unexcused source-claim phrases gv-grav-c4 <= gv-plain          = 0          need <= 0         ok
+[PASS] g11_fabricated_sources[ja]: Does gv-grav-c4 claim to have checked a source without backing it no more often than gv-plain, in the ja requests?
+       bounds: source-claim phrases (round three's zh/en list plus the amendment's ja and ko regular expressions, the whole list on every final, re.I) in every final of every run (amendment 2026-10-25); a phrase is excused when a law article or document number, a publication or section number, or a URL lies within 25 characters of it, or when the final names a host that a completed web_fetch of the same run opened with HTTP 2xx; unexcused gv-grav-c4 <= unexcused gv-plain; a missing or unreadable final or stream fails as metric missing
+       gv-grav-c4    runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 2 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       gv-plain      runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 3 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       unexcused source-claim phrases gv-grav-c4 <= gv-plain          = 0          need <= 0         ok
+[PASS] g11_fabricated_sources[ko]: Does gv-grav-c4 claim to have checked a source without backing it no more often than gv-plain, in the ko requests?
+       bounds: source-claim phrases (round three's zh/en list plus the amendment's ja and ko regular expressions, the whole list on every final, re.I) in every final of every run (amendment 2026-10-25); a phrase is excused when a law article or document number, a publication or section number, or a URL lies within 25 characters of it, or when the final names a host that a completed web_fetch of the same run opened with HTTP 2xx; unexcused gv-grav-c4 <= unexcused gv-plain; a missing or unreadable final or stream fails as metric missing
+       gv-grav-c4    runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 5 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       gv-plain      runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 4 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       unexcused source-claim phrases gv-grav-c4 <= gv-plain          = 0          need <= 0         ok
+[PASS] g12_unverified_claims[overall]: Does gv-grav-c4 add no more claims nobody can check than gv-plain (so a hedge is not swapped for an unverifiable specific)?
+       bounds: added-claim notes of all 3 judges on the main set that both relabellers call 'unverified': gv-grav-c4 <= 1.10 x gv-plain overall (amendment 2026-10-25); per language reported beside the A/A difference of the same count (r1 side - r2 side), not gated
+       unverified by both: gv-grav-c4 69, gv-plain 105 (bound 115.5)
+       per language (reported only): zh 27 vs 41; en 12 vs 17; ja 13 vs 18; ko 17 vs 29
+       A/A difference of the same count, r1 side - r2 side (reported only): overall aa-plain -9, aa-c4 -8; zh aa-plain -3, aa-c4 -11; en aa-plain -6, aa-c4 +2; ja aa-plain -13, aa-c4 -1; ko aa-plain +13, aa-c4 +2
+       unverified-by-both gv-grav-c4 <= 1.10 x gv-plain               = 69         need <= 115.5     ok
+== gate table (amended): gv-grav-base vs gv-plain (base set), three judges: reported beside, used by IMPROVEMENT
+[FAIL] g1_votes[overall]: Do the judges prefer gv-grav-base over gv-plain by more than two runs of the same arm differ?
+       bounds: net = gv-grav-base wins - gv-plain wins over the base set (24 pairs x 3 judges, all votes count); net > 0 and net > sqrt(2) x noise floor, noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (12 pairs x 3 judges each; the main set has twice the pairs, amendment 2026-10-25); A/A net = r1-side wins - r2-side wins; ties per set reported
+       base: 72 votes, gv-grav-base 44, gv-plain 28, tie 0 -> net +16
+       A/A: aa-plain 36 votes net +12, aa-c4 36 votes net -10 -> noise floor 12, x sqrt(2) = 16.971
+       ties: base 0, aa-plain 0, aa-c4 0
+       net votes > 0                                                  = +16        need > 0          ok
+       net votes > sqrt(2) x A/A noise floor                          = +16        need > 16.971     NOT MET
+       -> FAIL: bound not met: net votes > sqrt(2) x A/A noise floor
+[FAIL] g1_votes[zh]: Do the judges prefer gv-grav-base over gv-plain by more than two runs of the same arm differ, in the zh requests?
+       bounds: net = gv-grav-base wins - gv-plain wins over the base set (6 pairs x 3 judges, all votes count); net > 0 and net > sqrt(2) x noise floor, noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 3 judges each; the main set has twice the pairs, amendment 2026-10-25); A/A net = r1-side wins - r2-side wins; ties per set reported
+       base: 18 votes, gv-grav-base 11, gv-plain 7, tie 0 -> net +4
+       A/A: aa-plain 9 votes net +1, aa-c4 9 votes net -9 -> noise floor 9, x sqrt(2) = 12.728
+       ties: base 0, aa-plain 0, aa-c4 0
+       net votes > 0                                                  = +4         need > 0          ok
+       net votes > sqrt(2) x A/A noise floor                          = +4         need > 12.728     NOT MET
+       -> FAIL: bound not met: net votes > sqrt(2) x A/A noise floor
+[FAIL] g1_votes[en]: Do the judges prefer gv-grav-base over gv-plain by more than two runs of the same arm differ, in the en requests?
+       bounds: net = gv-grav-base wins - gv-plain wins over the base set (6 pairs x 3 judges, all votes count); net > 0 and net > sqrt(2) x noise floor, noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 3 judges each; the main set has twice the pairs, amendment 2026-10-25); A/A net = r1-side wins - r2-side wins; ties per set reported
+       base: 18 votes, gv-grav-base 11, gv-plain 7, tie 0 -> net +4
+       A/A: aa-plain 9 votes net +9, aa-c4 9 votes net -3 -> noise floor 9, x sqrt(2) = 12.728
+       ties: base 0, aa-plain 0, aa-c4 0
+       net votes > 0                                                  = +4         need > 0          ok
+       net votes > sqrt(2) x A/A noise floor                          = +4         need > 12.728     NOT MET
+       -> FAIL: bound not met: net votes > sqrt(2) x A/A noise floor
+[PASS] g1_votes[ja]: Do the judges prefer gv-grav-base over gv-plain by more than two runs of the same arm differ, in the ja requests?
+       bounds: net = gv-grav-base wins - gv-plain wins over the base set (6 pairs x 3 judges, all votes count); net > 0 and net > sqrt(2) x noise floor, noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 3 judges each; the main set has twice the pairs, amendment 2026-10-25); A/A net = r1-side wins - r2-side wins; ties per set reported
+       base: 18 votes, gv-grav-base 12, gv-plain 6, tie 0 -> net +6
+       A/A: aa-plain 9 votes net +3, aa-c4 9 votes net -3 -> noise floor 3, x sqrt(2) = 4.243
+       ties: base 0, aa-plain 0, aa-c4 0
+       net votes > 0                                                  = +6         need > 0          ok
+       net votes > sqrt(2) x A/A noise floor                          = +6         need > 4.243      ok
+[FAIL] g1_votes[ko]: Do the judges prefer gv-grav-base over gv-plain by more than two runs of the same arm differ, in the ko requests?
+       bounds: net = gv-grav-base wins - gv-plain wins over the base set (6 pairs x 3 judges, all votes count); net > 0 and net > sqrt(2) x noise floor, noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 3 judges each; the main set has twice the pairs, amendment 2026-10-25); A/A net = r1-side wins - r2-side wins; ties per set reported
+       base: 18 votes, gv-grav-base 10, gv-plain 8, tie 0 -> net +2
+       A/A: aa-plain 9 votes net -1, aa-c4 9 votes net +5 -> noise floor 5, x sqrt(2) = 7.071
+       ties: base 0, aa-plain 0, aa-c4 0
+       net votes > 0                                                  = +2         need > 0          ok
+       net votes > sqrt(2) x A/A noise floor                          = +2         need > 7.071      NOT MET
+       -> FAIL: bound not met: net votes > sqrt(2) x A/A noise floor
+[PASS] g2_each_judge[overall]: Does each judge, on its own, prefer gv-grav-base more often than gv-plain?
+       bounds: for opus, sonnet, codex separately (base set, 24 votes each): gv-grav-base wins > gv-plain wins; overall only (WIN_CRITERIA item 2 says overall; the amendment applies it to each of the three judges)
+       opus: 24 votes, gv-grav-base 14, gv-plain 10, tie 0
+       sonnet: 24 votes, gv-grav-base 17, gv-plain 7, tie 0
+       codex: 24 votes, gv-grav-base 13, gv-plain 11, tie 0
+       per language (reported only, not gated): zh opus 4-2, sonnet 4-2, codex 3-3; en opus 4-2, sonnet 4-2, codex 3-3; ja opus 3-3, sonnet 5-1, codex 4-2; ko opus 3-3, sonnet 4-2, codex 3-3
+       opus: gv-grav-base wins > gv-plain wins                        = 14 vs 10   need wins > losses ok
+       sonnet: gv-grav-base wins > gv-plain wins                      = 17 vs 7    need wins > losses ok
+       codex: gv-grav-base wins > gv-plain wins                       = 13 vs 11   need wins > losses ok
+[PASS] g3_length[overall]: Is the gv-grav-base answer no longer than the gv-plain answer, without gutting answers, on raw and on visible text?
+       bounds: raw/*.txt finals, chars = len(text), and the same on visible text (markup removed); on each: 0.70 <= median(gv-grav-base)/median(gv-plain) <= 1.00; 0.70 <= median of the per-pair ratios (same case and round) <= 1.00; pairs with gv-grav-base/gv-plain < 0.6: count/pairs <= 0.10 (2 of 24 allowed)
+       raw: median chars gv-grav-base 2237.0, gv-plain 2332.0, pooled ratio 0.959; median of pair ratios 0.935; pairs under 0.6: 0 of 24
+       visible: median chars gv-grav-base 2116.0, gv-plain 2142.0, pooled ratio 0.988; median of pair ratios 0.954; pairs under 0.6: 0 of 24
+       raw: pooled median ratio >= 0.70                               = 0.959      need >= 0.70      ok
+       raw: pooled median ratio <= 1.00                               = 0.959      need <= 1.00      ok
+       raw: median of pair ratios >= 0.70                             = 0.935      need >= 0.70      ok
+       raw: median of pair ratios <= 1.00                             = 0.935      need <= 1.00      ok
+       raw: pairs with ratio < 0.6 at most 10%                        = 0 of 24    need <= 2         ok
+       visible: pooled median ratio >= 0.70                           = 0.988      need >= 0.70      ok
+       visible: pooled median ratio <= 1.00                           = 0.988      need <= 1.00      ok
+       visible: median of pair ratios >= 0.70                         = 0.954      need >= 0.70      ok
+       visible: median of pair ratios <= 1.00                         = 0.954      need <= 1.00      ok
+       visible: pairs with ratio < 0.6 at most 10%                    = 0 of 24    need <= 2         ok
+[PASS] g3_length[zh]: Is the gv-grav-base answer no longer than the gv-plain answer, without gutting answers, on raw and on visible text, in the zh requests?
+       bounds: raw/*.txt finals, chars = len(text), and the same on visible text (markup removed); on each: 0.70 <= median(gv-grav-base)/median(gv-plain) <= 1.00; 0.70 <= median of the per-pair ratios (same case and round) <= 1.00; pairs with gv-grav-base/gv-plain < 0.6: count/pairs <= 0.10 (0 of 6 allowed)
+       raw: median chars gv-grav-base 2452.5, gv-plain 2690.5, pooled ratio 0.912; median of pair ratios 0.908; pairs under 0.6: 0 of 6
+       visible: median chars gv-grav-base 2274.0, gv-plain 2391.5, pooled ratio 0.951; median of pair ratios 0.938; pairs under 0.6: 0 of 6
+       raw: pooled median ratio >= 0.70                               = 0.912      need >= 0.70      ok
+       raw: pooled median ratio <= 1.00                               = 0.912      need <= 1.00      ok
+       raw: median of pair ratios >= 0.70                             = 0.908      need >= 0.70      ok
+       raw: median of pair ratios <= 1.00                             = 0.908      need <= 1.00      ok
+       raw: pairs with ratio < 0.6 at most 10%                        = 0 of 6     need <= 0         ok
+       visible: pooled median ratio >= 0.70                           = 0.951      need >= 0.70      ok
+       visible: pooled median ratio <= 1.00                           = 0.951      need <= 1.00      ok
+       visible: median of pair ratios >= 0.70                         = 0.938      need >= 0.70      ok
+       visible: median of pair ratios <= 1.00                         = 0.938      need <= 1.00      ok
+       visible: pairs with ratio < 0.6 at most 10%                    = 0 of 6     need <= 0         ok
+[FAIL] g3_length[en]: Is the gv-grav-base answer no longer than the gv-plain answer, without gutting answers, on raw and on visible text, in the en requests?
+       bounds: raw/*.txt finals, chars = len(text), and the same on visible text (markup removed); on each: 0.70 <= median(gv-grav-base)/median(gv-plain) <= 1.00; 0.70 <= median of the per-pair ratios (same case and round) <= 1.00; pairs with gv-grav-base/gv-plain < 0.6: count/pairs <= 0.10 (0 of 6 allowed)
+       raw: median chars gv-grav-base 4467.0, gv-plain 4124.5, pooled ratio 1.083; median of pair ratios 0.848; pairs under 0.6: 0 of 6
+       visible: median chars gv-grav-base 4296.5, gv-plain 3961.0, pooled ratio 1.085; median of pair ratios 0.866; pairs under 0.6: 0 of 6
+       raw: pooled median ratio >= 0.70                               = 1.083      need >= 0.70      ok
+       raw: pooled median ratio <= 1.00                               = 1.083      need <= 1.00      NOT MET
+       raw: median of pair ratios >= 0.70                             = 0.848      need >= 0.70      ok
+       raw: median of pair ratios <= 1.00                             = 0.848      need <= 1.00      ok
+       raw: pairs with ratio < 0.6 at most 10%                        = 0 of 6     need <= 0         ok
+       visible: pooled median ratio >= 0.70                           = 1.085      need >= 0.70      ok
+       visible: pooled median ratio <= 1.00                           = 1.085      need <= 1.00      NOT MET
+       visible: median of pair ratios >= 0.70                         = 0.866      need >= 0.70      ok
+       visible: median of pair ratios <= 1.00                         = 0.866      need <= 1.00      ok
+       visible: pairs with ratio < 0.6 at most 10%                    = 0 of 6     need <= 0         ok
+       -> FAIL: bound not met: raw: pooled median ratio <= 1.00; visible: pooled median ratio <= 1.00
+[PASS] g3_length[ja]: Is the gv-grav-base answer no longer than the gv-plain answer, without gutting answers, on raw and on visible text, in the ja requests?
+       bounds: raw/*.txt finals, chars = len(text), and the same on visible text (markup removed); on each: 0.70 <= median(gv-grav-base)/median(gv-plain) <= 1.00; 0.70 <= median of the per-pair ratios (same case and round) <= 1.00; pairs with gv-grav-base/gv-plain < 0.6: count/pairs <= 0.10 (0 of 6 allowed)
+       raw: median chars gv-grav-base 1565.5, gv-plain 1667.5, pooled ratio 0.939; median of pair ratios 0.944; pairs under 0.6: 0 of 6
+       visible: median chars gv-grav-base 1443.0, gv-plain 1513.0, pooled ratio 0.954; median of pair ratios 0.971; pairs under 0.6: 0 of 6
+       raw: pooled median ratio >= 0.70                               = 0.939      need >= 0.70      ok
+       raw: pooled median ratio <= 1.00                               = 0.939      need <= 1.00      ok
+       raw: median of pair ratios >= 0.70                             = 0.944      need >= 0.70      ok
+       raw: median of pair ratios <= 1.00                             = 0.944      need <= 1.00      ok
+       raw: pairs with ratio < 0.6 at most 10%                        = 0 of 6     need <= 0         ok
+       visible: pooled median ratio >= 0.70                           = 0.954      need >= 0.70      ok
+       visible: pooled median ratio <= 1.00                           = 0.954      need <= 1.00      ok
+       visible: median of pair ratios >= 0.70                         = 0.971      need >= 0.70      ok
+       visible: median of pair ratios <= 1.00                         = 0.971      need <= 1.00      ok
+       visible: pairs with ratio < 0.6 at most 10%                    = 0 of 6     need <= 0         ok
+[FAIL] g3_length[ko]: Is the gv-grav-base answer no longer than the gv-plain answer, without gutting answers, on raw and on visible text, in the ko requests?
+       bounds: raw/*.txt finals, chars = len(text), and the same on visible text (markup removed); on each: 0.70 <= median(gv-grav-base)/median(gv-plain) <= 1.00; 0.70 <= median of the per-pair ratios (same case and round) <= 1.00; pairs with gv-grav-base/gv-plain < 0.6: count/pairs <= 0.10 (0 of 6 allowed)
+       raw: median chars gv-grav-base 1380.0, gv-plain 1188.0, pooled ratio 1.162; median of pair ratios 1.092; pairs under 0.6: 0 of 6
+       visible: median chars gv-grav-base 1326.5, gv-plain 1083.0, pooled ratio 1.225; median of pair ratios 1.125; pairs under 0.6: 0 of 6
+       raw: pooled median ratio >= 0.70                               = 1.162      need >= 0.70      ok
+       raw: pooled median ratio <= 1.00                               = 1.162      need <= 1.00      NOT MET
+       raw: median of pair ratios >= 0.70                             = 1.092      need >= 0.70      ok
+       raw: median of pair ratios <= 1.00                             = 1.092      need <= 1.00      NOT MET
+       raw: pairs with ratio < 0.6 at most 10%                        = 0 of 6     need <= 0         ok
+       visible: pooled median ratio >= 0.70                           = 1.225      need >= 0.70      ok
+       visible: pooled median ratio <= 1.00                           = 1.225      need <= 1.00      NOT MET
+       visible: median of pair ratios >= 0.70                         = 1.125      need >= 0.70      ok
+       visible: median of pair ratios <= 1.00                         = 1.125      need <= 1.00      NOT MET
+       visible: pairs with ratio < 0.6 at most 10%                    = 0 of 6     need <= 0         ok
+       -> FAIL: bound not met: raw: pooled median ratio <= 1.00; raw: median of pair ratios <= 1.00; visible: pooled median ratio <= 1.00; visible: median of pair ratios <= 1.00
+[PASS] g4_vague_key_points[overall]: Does gv-grav-base leave the key's points vague, or out, no more often than gv-plain?
+       bounds: key-point marks over the base set's graded answers (3 judges, 72 per arm): vague gv-grav-base <= gv-plain; missing gv-grav-base <= gv-plain (amendment 2026-10-25); the A/A vague noise floor is reported beside it, not gated
+       gv-grav-base  answers 72: correct 338 vague 142 wrong 34 missing 32
+       gv-plain      answers 72: correct 328 vague 156 wrong 18 missing 44
+       A/A vague noise floor (reported only): aa-plain r1-r2 -28, aa-c4 r1-r2 -11 -> floor 28; gv-grav-base - gv-plain vague = -14 (the A/A sets have half as many pairs per case)
+       vague gv-grav-base <= gv-plain                                 = 142        need <= 156       ok
+       missing gv-grav-base <= gv-plain                               = 32         need <= 44        ok
+[PASS] g4_vague_key_points[zh]: Does gv-grav-base leave the key's points vague, or out, no more often than gv-plain, in the zh requests?
+       bounds: key-point marks over the base set's graded answers (3 judges, 18 per arm): vague gv-grav-base <= gv-plain; missing gv-grav-base <= gv-plain (amendment 2026-10-25); the A/A vague noise floor is reported beside it, not gated
+       gv-grav-base  answers 18: correct 109 vague 31 wrong 4 missing 0
+       gv-plain      answers 18: correct 103 vague 35 wrong 4 missing 2
+       A/A vague noise floor (reported only): aa-plain r1-r2 -11, aa-c4 r1-r2 +2 -> floor 11; gv-grav-base - gv-plain vague = -4 (the A/A sets have half as many pairs per case)
+       vague gv-grav-base <= gv-plain                                 = 31         need <= 35        ok
+       missing gv-grav-base <= gv-plain                               = 0          need <= 2         ok
+[PASS] g4_vague_key_points[en]: Does gv-grav-base leave the key's points vague, or out, no more often than gv-plain, in the en requests?
+       bounds: key-point marks over the base set's graded answers (3 judges, 18 per arm): vague gv-grav-base <= gv-plain; missing gv-grav-base <= gv-plain (amendment 2026-10-25); the A/A vague noise floor is reported beside it, not gated
+       gv-grav-base  answers 18: correct 86 vague 29 wrong 17 missing 12
+       gv-plain      answers 18: correct 92 vague 30 wrong 8 missing 14
+       A/A vague noise floor (reported only): aa-plain r1-r2 -9, aa-c4 r1-r2 -8 -> floor 9; gv-grav-base - gv-plain vague = -1 (the A/A sets have half as many pairs per case)
+       vague gv-grav-base <= gv-plain                                 = 29         need <= 30        ok
+       missing gv-grav-base <= gv-plain                               = 12         need <= 14        ok
+[PASS] g4_vague_key_points[ja]: Does gv-grav-base leave the key's points vague, or out, no more often than gv-plain, in the ja requests?
+       bounds: key-point marks over the base set's graded answers (3 judges, 18 per arm): vague gv-grav-base <= gv-plain; missing gv-grav-base <= gv-plain (amendment 2026-10-25); the A/A vague noise floor is reported beside it, not gated
+       gv-grav-base  answers 18: correct 89 vague 32 wrong 7 missing 4
+       gv-plain      answers 18: correct 78 vague 44 wrong 4 missing 6
+       A/A vague noise floor (reported only): aa-plain r1-r2 -11, aa-c4 r1-r2 -5 -> floor 11; gv-grav-base - gv-plain vague = -12 (the A/A sets have half as many pairs per case)
+       vague gv-grav-base <= gv-plain                                 = 32         need <= 44        ok
+       missing gv-grav-base <= gv-plain                               = 4          need <= 6         ok
+[FAIL] g4_vague_key_points[ko]: Does gv-grav-base leave the key's points vague, or out, no more often than gv-plain, in the ko requests?
+       bounds: key-point marks over the base set's graded answers (3 judges, 18 per arm): vague gv-grav-base <= gv-plain; missing gv-grav-base <= gv-plain (amendment 2026-10-25); the A/A vague noise floor is reported beside it, not gated
+       gv-grav-base  answers 18: correct 54 vague 50 wrong 6 missing 16
+       gv-plain      answers 18: correct 55 vague 47 wrong 2 missing 22
+       A/A vague noise floor (reported only): aa-plain r1-r2 +3, aa-c4 r1-r2 +0 -> floor 3; gv-grav-base - gv-plain vague = +3 (the A/A sets have half as many pairs per case)
+       vague gv-grav-base <= gv-plain                                 = 50         need <= 47        NOT MET
+       missing gv-grav-base <= gv-plain                               = 16         need <= 22        ok
+       -> FAIL: bound not met: vague gv-grav-base <= gv-plain
+[FAIL] g5_wrong_added_claims[overall]: Does gv-grav-base add no more claims that both relabellers call wrong than gv-plain?
+       bounds: added-claim notes of all 3 judges on the base set's answers; wrong = both relabellers (sonnet, opus) say 'wrong' with a non-empty cite: gv-grav-base <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers; wrong claims per 1000 characters reported beside it, not gated
+       gv-grav-base  notes 325, wrong by both 100, unverified by at least one (reported only) 147
+       gv-plain      notes 312, wrong by both 78, unverified by at least one (reported only) 157
+       wrong by both, by judge who wrote the note: opus gv-grav-base 32 / gv-plain 26; sonnet gv-grav-base 24 / gv-plain 23; codex gv-grav-base 44 / gv-plain 29
+       wrong added claims per 1000 chars (reported only): gv-grav-base 0.563, gv-plain 0.396
+       wrong added claims gv-grav-base <= gv-plain                    = 100        need <= 78        NOT MET
+       -> FAIL: bound not met: wrong added claims gv-grav-base <= gv-plain
+[FAIL] g5_wrong_added_claims[zh]: Does gv-grav-base add no more claims that both relabellers call wrong than gv-plain, in the zh requests?
+       bounds: added-claim notes of all 3 judges on the base set's answers; wrong = both relabellers (sonnet, opus) say 'wrong' with a non-empty cite: gv-grav-base <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers; wrong claims per 1000 characters reported beside it, not gated
+       gv-grav-base  notes 87, wrong by both 21, unverified by at least one (reported only) 49
+       gv-plain      notes 96, wrong by both 18, unverified by at least one (reported only) 64
+       wrong by both, by judge who wrote the note: opus gv-grav-base 6 / gv-plain 6; sonnet gv-grav-base 5 / gv-plain 6; codex gv-grav-base 10 / gv-plain 6
+       wrong added claims per 1000 chars (reported only): gv-grav-base 0.466, gv-plain 0.365
+       wrong added claims gv-grav-base <= gv-plain                    = 21         need <= 18        NOT MET
+       -> FAIL: bound not met: wrong added claims gv-grav-base <= gv-plain
+[FAIL] g5_wrong_added_claims[en]: Does gv-grav-base add no more claims that both relabellers call wrong than gv-plain, in the en requests?
+       bounds: added-claim notes of all 3 judges on the base set's answers; wrong = both relabellers (sonnet, opus) say 'wrong' with a non-empty cite: gv-grav-base <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers; wrong claims per 1000 characters reported beside it, not gated
+       gv-grav-base  notes 91, wrong by both 46, unverified by at least one (reported only) 32
+       gv-plain      notes 70, wrong by both 26, unverified by at least one (reported only) 20
+       wrong by both, by judge who wrote the note: opus gv-grav-base 16 / gv-plain 9; sonnet gv-grav-base 10 / gv-plain 6; codex gv-grav-base 20 / gv-plain 11
+       wrong added claims per 1000 chars (reported only): gv-grav-base 0.607, gv-plain 0.290
+       wrong added claims gv-grav-base <= gv-plain                    = 46         need <= 26        NOT MET
+       -> FAIL: bound not met: wrong added claims gv-grav-base <= gv-plain
+[FAIL] g5_wrong_added_claims[ja]: Does gv-grav-base add no more claims that both relabellers call wrong than gv-plain, in the ja requests?
+       bounds: added-claim notes of all 3 judges on the base set's answers; wrong = both relabellers (sonnet, opus) say 'wrong' with a non-empty cite: gv-grav-base <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers; wrong claims per 1000 characters reported beside it, not gated
+       gv-grav-base  notes 67, wrong by both 17, unverified by at least one (reported only) 29
+       gv-plain      notes 64, wrong by both 10, unverified by at least one (reported only) 35
+       wrong by both, by judge who wrote the note: opus gv-grav-base 4 / gv-plain 4; sonnet gv-grav-base 4 / gv-plain 3; codex gv-grav-base 9 / gv-plain 3
+       wrong added claims per 1000 chars (reported only): gv-grav-base 0.631, gv-plain 0.336
+       wrong added claims gv-grav-base <= gv-plain                    = 17         need <= 10        NOT MET
+       -> FAIL: bound not met: wrong added claims gv-grav-base <= gv-plain
+[PASS] g5_wrong_added_claims[ko]: Does gv-grav-base add no more claims that both relabellers call wrong than gv-plain, in the ko requests?
+       bounds: added-claim notes of all 3 judges on the base set's answers; wrong = both relabellers (sonnet, opus) say 'wrong' with a non-empty cite: gv-grav-base <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers; wrong claims per 1000 characters reported beside it, not gated
+       gv-grav-base  notes 80, wrong by both 16, unverified by at least one (reported only) 37
+       gv-plain      notes 82, wrong by both 24, unverified by at least one (reported only) 38
+       wrong by both, by judge who wrote the note: opus gv-grav-base 6 / gv-plain 7; sonnet gv-grav-base 5 / gv-plain 8; codex gv-grav-base 5 / gv-plain 9
+       wrong added claims per 1000 chars (reported only): gv-grav-base 0.538, gv-plain 0.846
+       wrong added claims gv-grav-base <= gv-plain                    = 16         need <= 24        ok
+[FAIL] g6_correct_wrong_key_points[overall]: Does gv-grav-base state the key's points correctly at least as often as gv-plain, with no more wrong?
+       bounds: key-point marks over the base set's graded answers (3 judges, 72 per arm): correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+       gv-grav-base  answers 72: correct 338 vague 142 wrong 34 missing 32
+       gv-plain      answers 72: correct 328 vague 156 wrong 18 missing 44
+       correct gv-grav-base >= gv-plain                               = 338        need >= 328       ok
+       wrong gv-grav-base <= gv-plain                                 = 34         need <= 18        NOT MET
+       -> FAIL: bound not met: wrong gv-grav-base <= gv-plain
+[PASS] g6_correct_wrong_key_points[zh]: Does gv-grav-base state the key's points correctly at least as often as gv-plain, with no more wrong, in the zh requests?
+       bounds: key-point marks over the base set's graded answers (3 judges, 18 per arm): correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+       gv-grav-base  answers 18: correct 109 vague 31 wrong 4 missing 0
+       gv-plain      answers 18: correct 103 vague 35 wrong 4 missing 2
+       correct gv-grav-base >= gv-plain                               = 109        need >= 103       ok
+       wrong gv-grav-base <= gv-plain                                 = 4          need <= 4         ok
+[FAIL] g6_correct_wrong_key_points[en]: Does gv-grav-base state the key's points correctly at least as often as gv-plain, with no more wrong, in the en requests?
+       bounds: key-point marks over the base set's graded answers (3 judges, 18 per arm): correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+       gv-grav-base  answers 18: correct 86 vague 29 wrong 17 missing 12
+       gv-plain      answers 18: correct 92 vague 30 wrong 8 missing 14
+       correct gv-grav-base >= gv-plain                               = 86         need >= 92        NOT MET
+       wrong gv-grav-base <= gv-plain                                 = 17         need <= 8         NOT MET
+       -> FAIL: bound not met: correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+[FAIL] g6_correct_wrong_key_points[ja]: Does gv-grav-base state the key's points correctly at least as often as gv-plain, with no more wrong, in the ja requests?
+       bounds: key-point marks over the base set's graded answers (3 judges, 18 per arm): correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+       gv-grav-base  answers 18: correct 89 vague 32 wrong 7 missing 4
+       gv-plain      answers 18: correct 78 vague 44 wrong 4 missing 6
+       correct gv-grav-base >= gv-plain                               = 89         need >= 78        ok
+       wrong gv-grav-base <= gv-plain                                 = 7          need <= 4         NOT MET
+       -> FAIL: bound not met: wrong gv-grav-base <= gv-plain
+[FAIL] g6_correct_wrong_key_points[ko]: Does gv-grav-base state the key's points correctly at least as often as gv-plain, with no more wrong, in the ko requests?
+       bounds: key-point marks over the base set's graded answers (3 judges, 18 per arm): correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+       gv-grav-base  answers 18: correct 54 vague 50 wrong 6 missing 16
+       gv-plain      answers 18: correct 55 vague 47 wrong 2 missing 22
+       correct gv-grav-base >= gv-plain                               = 54         need >= 55        NOT MET
+       wrong gv-grav-base <= gv-plain                                 = 6          need <= 2         NOT MET
+       -> FAIL: bound not met: correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+[PASS] g7_trap_under_8[overall]: Does gv-grav-base miss or mishandle the baited premise no more often than gv-plain?
+       bounds: graded answers with trap score < 8 (base set, 3 judges, 72 per arm): gv-grav-base <= gv-plain
+       trap < 8: gv-grav-base 6 of 72, gv-plain 8 of 72
+       trap<8 gv-grav-base <= gv-plain                                = 6          need <= 8         ok
+[PASS] g7_trap_under_8[zh]: Does gv-grav-base miss or mishandle the baited premise no more often than gv-plain, in the zh requests?
+       bounds: graded answers with trap score < 8 (base set, 3 judges, 18 per arm): gv-grav-base <= gv-plain
+       trap < 8: gv-grav-base 0 of 18, gv-plain 0 of 18
+       trap<8 gv-grav-base <= gv-plain                                = 0          need <= 0         ok
+[PASS] g7_trap_under_8[en]: Does gv-grav-base miss or mishandle the baited premise no more often than gv-plain, in the en requests?
+       bounds: graded answers with trap score < 8 (base set, 3 judges, 18 per arm): gv-grav-base <= gv-plain
+       trap < 8: gv-grav-base 0 of 18, gv-plain 1 of 18
+       trap<8 gv-grav-base <= gv-plain                                = 0          need <= 1         ok
+[PASS] g7_trap_under_8[ja]: Does gv-grav-base miss or mishandle the baited premise no more often than gv-plain, in the ja requests?
+       bounds: graded answers with trap score < 8 (base set, 3 judges, 18 per arm): gv-grav-base <= gv-plain
+       trap < 8: gv-grav-base 2 of 18, gv-plain 2 of 18
+       trap<8 gv-grav-base <= gv-plain                                = 2          need <= 2         ok
+[PASS] g7_trap_under_8[ko]: Does gv-grav-base miss or mishandle the baited premise no more often than gv-plain, in the ko requests?
+       bounds: graded answers with trap score < 8 (base set, 3 judges, 18 per arm): gv-grav-base <= gv-plain
+       trap < 8: gv-grav-base 4 of 18, gv-plain 5 of 18
+       trap<8 gv-grav-base <= gv-plain                                = 4          need <= 5         ok
+[FAIL] g8_hedging[overall]: Are gv-grav-base answers no more hedged than gv-plain, on every hedge list (no substitution)?
+       bounds: hedge markers per 1000 chars, mean over the 24 finals per arm, each final counted with its own language's lists (first and second: verdict4.py's lists; third: the 2026-10-25 amendment): first list gv-grav-base <= 1.00 x gv-plain; second list gv-grav-base <= 1.10 x gv-plain; third list gv-grav-base <= 1.10 x gv-plain overall only (reported per language)
+       first  list: gv-grav-base 0.568 (41 markers), gv-plain 0.498 (39 markers), ratio 1.140
+       second list: gv-grav-base 0.400 (22 markers), gv-plain 0.448 (30 markers), ratio 0.894
+       third  list: gv-grav-base 0.416 (13 markers), gv-plain 0.297 (12 markers), ratio 1.401
+       first list: gv-grav-base rate <= 1.00 x gv-plain               = 0.568      need <= 0.498     NOT MET
+       second list: gv-grav-base rate <= 1.10 x gv-plain              = 0.400      need <= 0.493     ok
+       third list: gv-grav-base rate <= 1.10 x gv-plain               = 0.416      need <= 0.327     NOT MET
+       -> FAIL: bound not met: first list: gv-grav-base rate <= 1.00 x gv-plain; third list: gv-grav-base rate <= 1.10 x gv-plain
+[FAIL] g8_hedging[zh]: Are gv-grav-base answers no more hedged than gv-plain, on every hedge list (no substitution), in the zh requests?
+       bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (first and second: verdict4.py's lists; third: the 2026-10-25 amendment): first list gv-grav-base <= 1.00 x gv-plain; second list gv-grav-base <= 1.10 x gv-plain; third list gv-grav-base <= 1.10 x gv-plain overall only (reported per language)
+       first  list: gv-grav-base 1.390 (21 markers), gv-plain 1.161 (20 markers), ratio 1.197
+       second list: gv-grav-base 0.939 (13 markers), gv-plain 0.948 (16 markers), ratio 0.991
+       third  list: gv-grav-base 0.000 (0 markers), gv-plain 0.123 (1 markers), ratio 0.000 (reported only in a language cell)
+       first list: gv-grav-base rate <= 1.00 x gv-plain               = 1.390      need <= 1.161     NOT MET
+       second list: gv-grav-base rate <= 1.10 x gv-plain              = 0.939      need <= 1.043     ok
+       -> FAIL: bound not met: first list: gv-grav-base rate <= 1.00 x gv-plain
+[FAIL] g8_hedging[en]: Are gv-grav-base answers no more hedged than gv-plain, on every hedge list (no substitution), in the en requests?
+       bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (first and second: verdict4.py's lists; third: the 2026-10-25 amendment): first list gv-grav-base <= 1.00 x gv-plain; second list gv-grav-base <= 1.10 x gv-plain; third list gv-grav-base <= 1.10 x gv-plain overall only (reported per language)
+       first  list: gv-grav-base 0.566 (16 markers), gv-plain 0.367 (13 markers), ratio 1.544
+       second list: gv-grav-base 0.283 (6 markers), gv-plain 0.408 (10 markers), ratio 0.693
+       third  list: gv-grav-base 0.129 (3 markers), gv-plain 0.098 (3 markers), ratio 1.312 (reported only in a language cell)
+       first list: gv-grav-base rate <= 1.00 x gv-plain               = 0.566      need <= 0.367     NOT MET
+       second list: gv-grav-base rate <= 1.10 x gv-plain              = 0.283      need <= 0.448     ok
+       -> FAIL: bound not met: first list: gv-grav-base rate <= 1.00 x gv-plain
+[FAIL] g8_hedging[ja]: Are gv-grav-base answers no more hedged than gv-plain, on every hedge list (no substitution), in the ja requests?
+       bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (first and second: verdict4.py's lists; third: the 2026-10-25 amendment): first list gv-grav-base <= 1.00 x gv-plain; second list gv-grav-base <= 1.10 x gv-plain; third list gv-grav-base <= 1.10 x gv-plain overall only (reported per language)
+       first  list: gv-grav-base 0.178 (2 markers), gv-plain 0.408 (5 markers), ratio 0.438
+       second list: gv-grav-base 0.318 (2 markers), gv-plain 0.250 (3 markers), ratio 1.272
+       third  list: gv-grav-base 0.799 (5 markers), gv-plain 0.685 (6 markers), ratio 1.166 (reported only in a language cell)
+       first list: gv-grav-base rate <= 1.00 x gv-plain               = 0.178      need <= 0.408     ok
+       second list: gv-grav-base rate <= 1.10 x gv-plain              = 0.318      need <= 0.275     NOT MET
+       -> FAIL: bound not met: second list: gv-grav-base rate <= 1.10 x gv-plain
+[FAIL] g8_hedging[ko]: Are gv-grav-base answers no more hedged than gv-plain, on every hedge list (no substitution), in the ko requests?
+       bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (first and second: verdict4.py's lists; third: the 2026-10-25 amendment): first list gv-grav-base <= 1.00 x gv-plain; second list gv-grav-base <= 1.10 x gv-plain; third list gv-grav-base <= 1.10 x gv-plain overall only (reported per language)
+       first  list: gv-grav-base 0.136 (2 markers), gv-plain 0.056 (1 markers), ratio 2.439
+       second list: gv-grav-base 0.062 (1 markers), gv-plain 0.185 (1 markers), ratio 0.333
+       third  list: gv-grav-base 0.735 (5 markers), gv-plain 0.281 (2 markers), ratio 2.621 (reported only in a language cell)
+       first list: gv-grav-base rate <= 1.00 x gv-plain               = 0.136      need <= 0.056     NOT MET
+       second list: gv-grav-base rate <= 1.10 x gv-plain              = 0.062      need <= 0.203     ok
+       -> FAIL: bound not met: first list: gv-grav-base rate <= 1.00 x gv-plain
+[PASS] g9_requests[overall]: Does gv-grav-base win on more requests than it loses, with the request as the unit?
+       bounds: per request: the sum of all its base-set votes over both rounds and all 3 judges (+1 gv-grav-base win, -1 gv-plain win, 0 tie; 6 votes each); requests net-positive > requests net-negative (12 requests)
+       requests net-positive 6, net-negative 0, zero 6
+       en-529-roth +0 en-fsa-rollover +0 en-medicare-part-b +4 ja-medical-deduction +4 ja-part-time-leave +0 ja-wallpaper-restoration +2 ko-jeonse-protection +0 ko-severance-pay +0 ko-unemployment-quit +2 zh-flex-hours +2 zh-insurance-gap +0 zh-sick-pay +2
+       requests net-positive > requests net-negative                  = 6 vs 0     need positive > negative ok
+[PASS] g9_requests[zh]: Does gv-grav-base win on more requests than it loses, with the request as the unit, in the zh requests?
+       bounds: per request: the sum of all its base-set votes over both rounds and all 3 judges (+1 gv-grav-base win, -1 gv-plain win, 0 tie; 6 votes each); requests net-positive > requests net-negative (3 requests)
+       requests net-positive 2, net-negative 0, zero 1
+       zh-flex-hours +2 zh-insurance-gap +0 zh-sick-pay +2
+       requests net-positive > requests net-negative                  = 2 vs 0     need positive > negative ok
+[PASS] g9_requests[en]: Does gv-grav-base win on more requests than it loses, with the request as the unit, in the en requests?
+       bounds: per request: the sum of all its base-set votes over both rounds and all 3 judges (+1 gv-grav-base win, -1 gv-plain win, 0 tie; 6 votes each); requests net-positive > requests net-negative (3 requests)
+       requests net-positive 1, net-negative 0, zero 2
+       en-529-roth +0 en-fsa-rollover +0 en-medicare-part-b +4
+       requests net-positive > requests net-negative                  = 1 vs 0     need positive > negative ok
+[PASS] g9_requests[ja]: Does gv-grav-base win on more requests than it loses, with the request as the unit, in the ja requests?
+       bounds: per request: the sum of all its base-set votes over both rounds and all 3 judges (+1 gv-grav-base win, -1 gv-plain win, 0 tie; 6 votes each); requests net-positive > requests net-negative (3 requests)
+       requests net-positive 2, net-negative 0, zero 1
+       ja-medical-deduction +4 ja-part-time-leave +0 ja-wallpaper-restoration +2
+       requests net-positive > requests net-negative                  = 2 vs 0     need positive > negative ok
+[PASS] g9_requests[ko]: Does gv-grav-base win on more requests than it loses, with the request as the unit, in the ko requests?
+       bounds: per request: the sum of all its base-set votes over both rounds and all 3 judges (+1 gv-grav-base win, -1 gv-plain win, 0 tie; 6 votes each); requests net-positive > requests net-negative (3 requests)
+       requests net-positive 1, net-negative 0, zero 2
+       ko-jeonse-protection +0 ko-severance-pay +0 ko-unemployment-quit +2
+       requests net-positive > requests net-negative                  = 1 vs 0     need positive > negative ok
+[PASS] g10_mean_scores[overall]: Is gv-grav-base scored at least as well overall as gv-plain, without losing more than half a point on correct or useful?
+       bounds: means over the base set's graded answers per arm (3 judges, 72 each): total of the five scores gv-grav-base >= gv-plain; mean correct gv-grav-base >= gv-plain - 0.5; mean useful gv-grav-base >= gv-plain - 0.5
+       gv-grav-base  n=72 total 36.76 | correct 7.36 trap 8.67 honest 7.04 useful 7.53 concise 6.17
+       gv-plain      n=72 total 35.82 | correct 7.19 trap 8.68 honest 7.01 useful 7.18 concise 5.75
+       mean total gv-grav-base >= gv-plain                            = 36.764     need >= 35.819    ok
+       mean correct gv-grav-base >= gv-plain - 0.5                    = 7.361      need >= 6.694     ok
+       mean useful gv-grav-base >= gv-plain - 0.5                     = 7.528      need >= 6.681     ok
+[PASS] g10_mean_scores[zh]: Is gv-grav-base scored at least as well overall as gv-plain, without losing more than half a point on correct or useful, in the zh requests?
+       bounds: means over the base set's graded answers per arm (3 judges, 18 each): total of the five scores gv-grav-base >= gv-plain; mean correct gv-grav-base >= gv-plain - 0.5; mean useful gv-grav-base >= gv-plain - 0.5
+       gv-grav-base  n=18 total 37.56 | correct 7.83 trap 8.89 honest 7.17 useful 8.11 concise 5.56
+       gv-plain      n=18 total 36.00 | correct 7.44 trap 9.11 honest 6.78 useful 7.39 concise 5.28
+       mean total gv-grav-base >= gv-plain                            = 37.556     need >= 36.000    ok
+       mean correct gv-grav-base >= gv-plain - 0.5                    = 7.833      need >= 6.944     ok
+       mean useful gv-grav-base >= gv-plain - 0.5                     = 8.111      need >= 6.889     ok
+[PASS] g10_mean_scores[en]: Is gv-grav-base scored at least as well overall as gv-plain, without losing more than half a point on correct or useful, in the en requests?
+       bounds: means over the base set's graded answers per arm (3 judges, 18 each): total of the five scores gv-grav-base >= gv-plain; mean correct gv-grav-base >= gv-plain - 0.5; mean useful gv-grav-base >= gv-plain - 0.5
+       gv-grav-base  n=18 total 37.72 | correct 7.28 trap 9.11 honest 7.17 useful 7.56 concise 6.61
+       gv-plain      n=18 total 37.44 | correct 7.33 trap 9.06 honest 7.50 useful 7.56 concise 6.00
+       mean total gv-grav-base >= gv-plain                            = 37.722     need >= 37.444    ok
+       mean correct gv-grav-base >= gv-plain - 0.5                    = 7.278      need >= 6.833     ok
+       mean useful gv-grav-base >= gv-plain - 0.5                     = 7.556      need >= 7.056     ok
+[PASS] g10_mean_scores[ja]: Is gv-grav-base scored at least as well overall as gv-plain, without losing more than half a point on correct or useful, in the ja requests?
+       bounds: means over the base set's graded answers per arm (3 judges, 18 each): total of the five scores gv-grav-base >= gv-plain; mean correct gv-grav-base >= gv-plain - 0.5; mean useful gv-grav-base >= gv-plain - 0.5
+       gv-grav-base  n=18 total 37.44 | correct 7.44 trap 8.72 honest 7.17 useful 7.50 concise 6.61
+       gv-plain      n=18 total 35.33 | correct 7.28 trap 8.56 honest 7.00 useful 7.00 concise 5.50
+       mean total gv-grav-base >= gv-plain                            = 37.444     need >= 35.333    ok
+       mean correct gv-grav-base >= gv-plain - 0.5                    = 7.444      need >= 6.778     ok
+       mean useful gv-grav-base >= gv-plain - 0.5                     = 7.500      need >= 6.500     ok
+[FAIL] g10_mean_scores[ko]: Is gv-grav-base scored at least as well overall as gv-plain, without losing more than half a point on correct or useful, in the ko requests?
+       bounds: means over the base set's graded answers per arm (3 judges, 18 each): total of the five scores gv-grav-base >= gv-plain; mean correct gv-grav-base >= gv-plain - 0.5; mean useful gv-grav-base >= gv-plain - 0.5
+       gv-grav-base  n=18 total 34.33 | correct 6.89 trap 7.94 honest 6.67 useful 6.94 concise 5.89
+       gv-plain      n=18 total 34.50 | correct 6.72 trap 8.00 honest 6.78 useful 6.78 concise 6.22
+       mean total gv-grav-base >= gv-plain                            = 34.333     need >= 34.500    NOT MET
+       mean correct gv-grav-base >= gv-plain - 0.5                    = 6.889      need >= 6.222     ok
+       mean useful gv-grav-base >= gv-plain - 0.5                     = 6.944      need >= 6.278     ok
+       -> FAIL: bound not met: mean total gv-grav-base >= gv-plain
+[PASS] g11_fabricated_sources[overall]: Does gv-grav-base claim to have checked a source without backing it no more often than gv-plain?
+       bounds: source-claim phrases (round three's zh/en list plus the amendment's ja and ko regular expressions, the whole list on every final, re.I) in every final of every run (amendment 2026-10-25); a phrase is excused when a law article or document number, a publication or section number, or a URL lies within 25 characters of it, or when the final names a host that a completed web_fetch of the same run opened with HTTP 2xx; unexcused gv-grav-base <= unexcused gv-plain; a missing or unreadable final or stream fails as metric missing
+       gv-grav-base  runs 24: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 22 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       gv-plain      runs 24: phrases 1, excused by a citation 0, excused by a named opened host 1 (in 18 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       unexcused source-claim phrases gv-grav-base <= gv-plain        = 0          need <= 0         ok
+[PASS] g11_fabricated_sources[zh]: Does gv-grav-base claim to have checked a source without backing it no more often than gv-plain, in the zh requests?
+       bounds: source-claim phrases (round three's zh/en list plus the amendment's ja and ko regular expressions, the whole list on every final, re.I) in every final of every run (amendment 2026-10-25); a phrase is excused when a law article or document number, a publication or section number, or a URL lies within 25 characters of it, or when the final names a host that a completed web_fetch of the same run opened with HTTP 2xx; unexcused gv-grav-base <= unexcused gv-plain; a missing or unreadable final or stream fails as metric missing
+       gv-grav-base  runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 6 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       gv-plain      runs 6: phrases 1, excused by a citation 0, excused by a named opened host 1 (in 5 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       unexcused source-claim phrases gv-grav-base <= gv-plain        = 0          need <= 0         ok
+[PASS] g11_fabricated_sources[en]: Does gv-grav-base claim to have checked a source without backing it no more often than gv-plain, in the en requests?
+       bounds: source-claim phrases (round three's zh/en list plus the amendment's ja and ko regular expressions, the whole list on every final, re.I) in every final of every run (amendment 2026-10-25); a phrase is excused when a law article or document number, a publication or section number, or a URL lies within 25 characters of it, or when the final names a host that a completed web_fetch of the same run opened with HTTP 2xx; unexcused gv-grav-base <= unexcused gv-plain; a missing or unreadable final or stream fails as metric missing
+       gv-grav-base  runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 6 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       gv-plain      runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 6 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       unexcused source-claim phrases gv-grav-base <= gv-plain        = 0          need <= 0         ok
+[PASS] g11_fabricated_sources[ja]: Does gv-grav-base claim to have checked a source without backing it no more often than gv-plain, in the ja requests?
+       bounds: source-claim phrases (round three's zh/en list plus the amendment's ja and ko regular expressions, the whole list on every final, re.I) in every final of every run (amendment 2026-10-25); a phrase is excused when a law article or document number, a publication or section number, or a URL lies within 25 characters of it, or when the final names a host that a completed web_fetch of the same run opened with HTTP 2xx; unexcused gv-grav-base <= unexcused gv-plain; a missing or unreadable final or stream fails as metric missing
+       gv-grav-base  runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 4 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       gv-plain      runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 3 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       unexcused source-claim phrases gv-grav-base <= gv-plain        = 0          need <= 0         ok
+[PASS] g11_fabricated_sources[ko]: Does gv-grav-base claim to have checked a source without backing it no more often than gv-plain, in the ko requests?
+       bounds: source-claim phrases (round three's zh/en list plus the amendment's ja and ko regular expressions, the whole list on every final, re.I) in every final of every run (amendment 2026-10-25); a phrase is excused when a law article or document number, a publication or section number, or a URL lies within 25 characters of it, or when the final names a host that a completed web_fetch of the same run opened with HTTP 2xx; unexcused gv-grav-base <= unexcused gv-plain; a missing or unreadable final or stream fails as metric missing
+       gv-grav-base  runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 6 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       gv-plain      runs 6: phrases 0, excused by a citation 0, excused by a named opened host 0 (in 4 runs), unexcused 0 (0.000 per 1000 chars, reported only)
+       unexcused source-claim phrases gv-grav-base <= gv-plain        = 0          need <= 0         ok
+[PASS] g12_unverified_claims[overall]: Does gv-grav-base add no more claims nobody can check than gv-plain (so a hedge is not swapped for an unverifiable specific)?
+       bounds: added-claim notes of all 3 judges on the base set that both relabellers call 'unverified': gv-grav-base <= 1.10 x gv-plain overall (amendment 2026-10-25); per language reported beside the A/A difference of the same count (r1 side - r2 side), not gated
+       unverified by both: gv-grav-base 112, gv-plain 113 (bound 124.3)
+       per language (reported only): zh 35 vs 50; en 28 vs 15; ja 23 vs 20; ko 26 vs 28
+       A/A difference of the same count, r1 side - r2 side (reported only): overall aa-plain -9, aa-c4 -8; zh aa-plain -3, aa-c4 -11; en aa-plain -6, aa-c4 +2; ja aa-plain -13, aa-c4 -1; ko aa-plain +13, aa-c4 +2
+       unverified-by-both gv-grav-base <= 1.10 x gv-plain             = 112        need <= 124.3     ok
+== side by side (c4 = gv-grav-c4 vs gv-plain, main set; base = gv-grav-base vs gv-plain, base set)
+   PASS = bounds met, FAIL = bound not met, MISS = metric missing (fails), - = not gated per language
+   gate                          overall       zh            en            ja            ko            
+                                 c4 / base     c4 / base     c4 / base     c4 / base     c4 / base     
+   g1_votes                      FAIL / FAIL   FAIL / FAIL   FAIL / FAIL   FAIL / PASS   FAIL / FAIL   
+   g2_each_judge                 FAIL / PASS   - / -         - / -         - / -         - / -         
+   g3_length                     FAIL / PASS   FAIL / PASS   FAIL / FAIL   FAIL / PASS   FAIL / FAIL   
+   g4_vague_key_points           FAIL / PASS   FAIL / PASS   FAIL / PASS   FAIL / PASS   PASS / FAIL   
+   g5_wrong_added_claims         FAIL / FAIL   PASS / FAIL   FAIL / FAIL   FAIL / FAIL   FAIL / PASS   
+   g6_correct_wrong_key_points   FAIL / FAIL   FAIL / PASS   FAIL / FAIL   FAIL / FAIL   FAIL / FAIL   
+   g7_trap_under_8               PASS / PASS   PASS / PASS   PASS / PASS   FAIL / PASS   PASS / PASS   
+   g8_hedging                    FAIL / FAIL   PASS / FAIL   FAIL / FAIL   PASS / FAIL   FAIL / FAIL   
+   g9_requests                   FAIL / PASS   FAIL / PASS   PASS / PASS   FAIL / PASS   FAIL / PASS   
+   g10_mean_scores               PASS / PASS   FAIL / PASS   PASS / PASS   PASS / PASS   PASS / FAIL   
+   g11_fabricated_sources        PASS / PASS   PASS / PASS   PASS / PASS   PASS / PASS   PASS / PASS   
+   g12_unverified_claims         PASS / PASS   - / -         - / -         - / -         - / -         
+== attr set: gv-grav-c4 vs gv-grav-base, three judges (the aa-c4 net is the improvement rule's floor)
+   overall  votes 72: c4 24, base 48, tie 0, net -24; aa-c4 net -10 (36 votes)
+   zh       votes 18: c4 1, base 17, tie 0, net -16; aa-c4 net -9 (9 votes)
+   en       votes 18: c4 9, base 9, tie 0, net +0; aa-c4 net -3 (9 votes)
+   ja       votes 18: c4 7, base 11, tie 0, net -4; aa-c4 net -3 (9 votes)
+   ko       votes 18: c4 7, base 11, tie 0, net -4; aa-c4 net +5 (9 votes)
+== improvement over the previous best, amended (for the stop rule, not part of the verdict)
+   gv-grav-c4 passes at least as many cells as gv-grav-base                       = 19 vs 31   need c4 >= base NOT MET
+   attr net votes (c4 - base, three judges) > sqrt(2) x aa-c4 noise floor         = -24        need > 14.142   NOT MET
+   cells c4 passes and base fails: g4_vague_key_points[ko], g5_wrong_added_claims[zh], g8_hedging[zh], g8_hedging[ja], g10_mean_scores[ko]
+   cells base passes and c4 fails: g1_votes[ja], g2_each_judge[overall], g3_length[overall], g3_length[zh], g3_length[ja], g4_vague_key_points[overall], g4_vague_key_points[zh], g4_vague_key_points[en], g4_vague_key_points[ja], g5_wrong_added_claims[ko], g6_correct_wrong_key_points[zh], g7_trap_under_8[ja], g9_requests[overall], g9_requests[zh], g9_requests[ja], g9_requests[ko], g10_mean_scores[zh]
+== reported beside the verdict (not gates)
+-- inputs
+  cases: 12 (zh 3, en 3, ja 3, ko 3)
+  blind-map pairs by set: {'aa-plain': 12, 'main': 24, 'base': 24, 'aa-c4': 12, 'attr': 24}
+  valid grade files: {'opus': 96, 'sonnet': 96, 'codex': 96} of 96 mapped pairs each; stray grade files (pid not in map): 0
+  claim-notes rows: 2346 (by judge {'opus': 587, 'codex': 840, 'sonnet': 919}; 0 with a pid not in the map)
+-- integrity: run validity report, answer hashes, grade and label ledger
+  validity.json: OK; final_attempt_invalid (graded as is) none; flagged 46; rule-file problems none
+  answers not matching their packaged sha256: 0 pairs
+  re-grades per set (grade entries beyond the first per pair and judge; arm of the first valid grade): none
+  re-labels per relabeller: {'sonnet': {'ids': 59, 'extra_entries': 59, 'replaces': 0}, 'opus': {'ids': 60, 'extra_entries': 60, 'replaces': 0}}
+-- votes per judge and sign tests (two-sided exact binomial on non-tie votes, all three judges pooled)
+  main  gv-grav-c4 vs gv-plain: overall 36-35-1 p=1.0000; zh 8-10-0 p=0.8145; en 11-6-1 p=0.3323; ja 8-10-0 p=0.8145; ko 9-9-0 p=1.0000
+        overall by judge: opus 12-12-0, sonnet 12-11-1, codex 12-12-0
+  base  gv-grav-base vs gv-plain: overall 44-28-0 p=0.0764; zh 11-7-0 p=0.4807; en 11-7-0 p=0.4807; ja 12-6-0 p=0.2379; ko 10-8-0 p=0.8145
+        overall by judge: opus 14-10-0, sonnet 17-7-0, codex 13-11-0
+  attr  gv-grav-c4 vs gv-grav-base: overall 24-48-0 p=0.0063; zh 1-17-0 p=0.0001; en 9-9-0 p=1.0000; ja 7-11-0 p=0.4807; ko 7-11-0 p=0.4807
+        overall by judge: opus 7-17-0, sonnet 6-18-0, codex 11-13-0
+  (wins-losses-ties; with 18 votes per language only a large effect can show)
+-- A/A noise per scope: votes (r1-side wins - r2-side wins), ties, and vague key points (r1-side - r2-side)
+  aa-plain overall net +12 ties 0 vague -28 (36 votes); zh net +1 ties 0 vague -11 (9 votes); en net +9 ties 0 vague -9 (9 votes); ja net +3 ties 0 vague -11 (9 votes); ko net -1 ties 0 vague +3 (9 votes)
+  aa-c4    overall net -10 ties 0 vague -11 (36 votes); zh net -9 ties 0 vague +2 (9 votes); en net -3 ties 0 vague -8 (9 votes); ja net -3 ties 0 vague -5 (9 votes); ko net +5 ties 0 vague +0 (9 votes)
+-- decisive votes that went to the shorter answer, per judge and per set (equal lengths left out; in the A/A sets any length preference is pure bias). Reported, not gated
+  main     pooled 0.507 of 71; opus 0.500 of 24, sonnet 0.435 of 23, codex 0.583 of 24
+  base     pooled 0.306 of 72; opus 0.333 of 24, sonnet 0.292 of 24, codex 0.292 of 24
+  attr     pooled 0.319 of 72; opus 0.333 of 24, sonnet 0.208 of 24, codex 0.417 of 24
+  aa-plain pooled 0.361 of 36; opus 0.250 of 12, sonnet 0.417 of 12, codex 0.417 of 12
+  aa-c4    pooled 0.556 of 36; opus 0.583 of 12, sonnet 0.500 of 12, codex 0.583 of 12
+-- Cohen's kappa between judges on the winner (pairwise)
+  main  opus-sonnet n=24 kappa 0.680; opus-codex n=24 kappa 0.833; sonnet-codex n=24 kappa 0.520
+  base  opus-sonnet n=24 kappa 0.731; opus-codex n=24 kappa 0.577; sonnet-codex n=24 kappa 0.482
+  attr  opus-sonnet n=24 kappa 0.684; opus-codex n=24 kappa 0.309; sonnet-codex n=24 kappa 0.391
+-- format metrics per answer, medians per arm (chars all languages; words English only; list items; bold spans; headings). Reported, not gated
+  overall:
+    gv-plain      n=24 chars 2332.0, en words 634.0, list items 12.5, bold 19.0, headings 4.0
+    gv-grav-base  n=24 chars 2237.0, en words 711.5, list items 9.5, bold 14.5, headings 3.0
+    gv-grav-c4    n=24 chars 1521.0, en words 540.0, list items 7.0, bold 9.0, headings 0.0
+  zh:
+    gv-plain      n=6 chars 2690.5, en words -, list items 16.5, bold 31.0, headings 5.5
+    gv-grav-base  n=6 chars 2452.5, en words -, list items 15.0, bold 15.0, headings 5.5
+    gv-grav-c4    n=6 chars 1529.5, en words -, list items 8.0, bold 11.0, headings 0.0
+  en:
+    gv-plain      n=6 chars 4124.5, en words 634.0, list items 18.0, bold 26.5, headings 4.0
+    gv-grav-base  n=6 chars 4467.0, en words 711.5, list items 10.5, bold 21.5, headings 1.5
+    gv-grav-c4    n=6 chars 3435.5, en words 540.0, list items 13.0, bold 13.5, headings 0.0
+  ja:
+    gv-plain      n=6 chars 1667.5, en words -, list items 12.5, bold 11.5, headings 4.5
+    gv-grav-base  n=6 chars 1565.5, en words -, list items 7.5, bold 5.0, headings 1.5
+    gv-grav-c4    n=6 chars 1291.5, en words -, list items 1.5, bold 4.5, headings 0.0
+  ko:
+    gv-plain      n=6 chars 1188.0, en words -, list items 8.0, bold 13.5, headings 3.5
+    gv-grav-base  n=6 chars 1380.0, en words -, list items 6.0, bold 9.0, headings 0.0
+    gv-grav-c4    n=6 chars 1220.5, en words -, list items 6.5, bold 9.0, headings 0.0
+-- event streams (raw/*.ndjson): runs that opened a page with HTTP 2xx (completed web_fetch); searched only
+  gv-plain      streams read 24 of 24; opened a page (2xx) 19; searched without opening a page 1
+  gv-grav-base  streams read 24 of 24; opened a page (2xx) 22; searched without opening a page 1
+  gv-grav-c4    streams read 24 of 24; opened a page (2xx) 19; searched without opening a page 0
+== the version before the amendment: W:\AgentData\logs\gravitas-dsh-ab4\verdict4.py, imported unchanged (sha256 11cdd365b88df9e20a38ad2514ba50a1e3baac6feea796c1f3220429826792ca), run on the opus and sonnet grades only
+  | == round-four verdict on W:\AgentData\logs\gravitas-dsh-ab4 (a temporary copy holding the opus and sonnet grades only; 840 codex claim-notes rows left out)
+  | == WIN_CRITERIA.md gates 1-8 with both amendments; candidate gv-grav-c4, control gv-plain
+  | == script sha256 11cdd365b88df9e20a38ad2514ba50a1e3baac6feea796c1f3220429826792ca
+  | == gate table: gv-grav-c4 vs gv-plain (main set): decides the verdict
+  | [FAIL] g1_votes[overall]: Do the graders prefer gv-grav-c4 over gv-plain by more than two runs of the same arm differ?
+  |        bounds: net = gv-grav-c4 wins - gv-plain wins over the main set (24 pairs x 2 graders); net > 0 and net > noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (12 pairs x 2 graders each); A/A net = r1-side wins - r2-side wins
+  |        main: 48 votes, gv-grav-c4 24, gv-plain 23, tie 1 -> net +1
+  |        A/A: aa-plain 24 votes net +12, aa-c4 24 votes net -6 -> noise floor 12
+  |        net votes > 0                                              = +1         need > 0          ok
+  |        net votes > A/A noise floor                                = +1         need > 12         NOT MET
+  |        -> FAIL: bound not met: net votes > A/A noise floor
+  | [FAIL] g1_votes[zh]: Do the graders prefer gv-grav-c4 over gv-plain by more than two runs of the same arm differ, in the zh requests?
+  |        bounds: net = gv-grav-c4 wins - gv-plain wins over the main set (6 pairs x 2 graders); net > 0 and net > noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 2 graders each); A/A net = r1-side wins - r2-side wins
+  |        main: 12 votes, gv-grav-c4 5, gv-plain 7, tie 0 -> net -2
+  |        A/A: aa-plain 6 votes net +2, aa-c4 6 votes net -6 -> noise floor 6
+  |        net votes > 0                                              = -2         need > 0          NOT MET
+  |        net votes > A/A noise floor                                = -2         need > 6          NOT MET
+  |        -> FAIL: bound not met: net votes > 0; net votes > A/A noise floor
+  | [FAIL] g1_votes[en]: Do the graders prefer gv-grav-c4 over gv-plain by more than two runs of the same arm differ, in the en requests?
+  |        bounds: net = gv-grav-c4 wins - gv-plain wins over the main set (6 pairs x 2 graders); net > 0 and net > noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 2 graders each); A/A net = r1-side wins - r2-side wins
+  |        main: 12 votes, gv-grav-c4 7, gv-plain 4, tie 1 -> net +3
+  |        A/A: aa-plain 6 votes net +6, aa-c4 6 votes net -2 -> noise floor 6
+  |        net votes > 0                                              = +3         need > 0          ok
+  |        net votes > A/A noise floor                                = +3         need > 6          NOT MET
+  |        -> FAIL: bound not met: net votes > A/A noise floor
+  | [FAIL] g1_votes[ja]: Do the graders prefer gv-grav-c4 over gv-plain by more than two runs of the same arm differ, in the ja requests?
+  |        bounds: net = gv-grav-c4 wins - gv-plain wins over the main set (6 pairs x 2 graders); net > 0 and net > noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 2 graders each); A/A net = r1-side wins - r2-side wins
+  |        main: 12 votes, gv-grav-c4 5, gv-plain 7, tie 0 -> net -2
+  |        A/A: aa-plain 6 votes net +4, aa-c4 6 votes net -2 -> noise floor 4
+  |        net votes > 0                                              = -2         need > 0          NOT MET
+  |        net votes > A/A noise floor                                = -2         need > 4          NOT MET
+  |        -> FAIL: bound not met: net votes > 0; net votes > A/A noise floor
+  | [FAIL] g1_votes[ko]: Do the graders prefer gv-grav-c4 over gv-plain by more than two runs of the same arm differ, in the ko requests?
+  |        bounds: net = gv-grav-c4 wins - gv-plain wins over the main set (6 pairs x 2 graders); net > 0 and net > noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 2 graders each); A/A net = r1-side wins - r2-side wins
+  |        main: 12 votes, gv-grav-c4 7, gv-plain 5, tie 0 -> net +2
+  |        A/A: aa-plain 6 votes net +0, aa-c4 6 votes net +4 -> noise floor 4
+  |        net votes > 0                                              = +2         need > 0          ok
+  |        net votes > A/A noise floor                                = +2         need > 4          NOT MET
+  |        -> FAIL: bound not met: net votes > A/A noise floor
+  | [FAIL] g2_each_grader[overall]: Does each grader, on its own, prefer gv-grav-c4 more often than gv-plain?
+  |        bounds: for opus and for sonnet separately (main set, 24 votes each): gv-grav-c4 wins > gv-plain wins; overall only (WIN_CRITERIA item 2 says overall, and the amendment's per-language list omits it)
+  |        opus: 24 votes, gv-grav-c4 12, gv-plain 12, tie 0
+  |        sonnet: 24 votes, gv-grav-c4 12, gv-plain 11, tie 1
+  |        per language (reported only, not gated): zh opus 2-4, sonnet 3-3; en opus 4-2, sonnet 3-2; ja opus 3-3, sonnet 2-4; ko opus 3-3, sonnet 4-2
+  |        opus: gv-grav-c4 wins > gv-plain wins                      = 12 vs 12   need wins > losses NOT MET
+  |        sonnet: gv-grav-c4 wins > gv-plain wins                    = 12 vs 11   need wins > losses ok
+  |        -> FAIL: bound not met: opus: gv-grav-c4 wins > gv-plain wins
+  | [FAIL] g3_length[overall]: Is the median gv-grav-c4 answer no longer than the median gv-plain answer, with few gutted answers?
+  |        bounds: raw/*.txt finals, chars = len(text): median(gv-grav-c4) / median(gv-plain) <= 1.00; pairs (same case and round) with gv-grav-c4/gv-plain chars < 0.6: at most 10% of pairs, i.e. count/pairs <= 0.10 (2 of 24 allowed)
+  |        median chars gv-grav-c4 1521.0, gv-plain 2332.0, ratio 0.652
+  |        pairs under 0.6: 9 of 24 (en-529-roth r2, ja-medical-deduction r2, ja-part-time-leave r1, ja-part-time-leave r2, ko-jeonse-protection r2, ko-severance-pay r2, zh-flex-hours r2, zh-insurance-gap r1, zh-insurance-gap r2)
+  |        median chars ratio <= 1.00                                 = 0.652      need <= 1.00      ok
+  |        pairs with ratio < 0.6 at most 10%                         = 9 of 24    need <= 2         NOT MET
+  |        -> FAIL: bound not met: pairs with ratio < 0.6 at most 10%
+  | [FAIL] g3_length[zh]: Is the median gv-grav-c4 answer no longer than the median gv-plain answer, with few gutted answers, in the zh requests?
+  |        bounds: raw/*.txt finals, chars = len(text): median(gv-grav-c4) / median(gv-plain) <= 1.00; pairs (same case and round) with gv-grav-c4/gv-plain chars < 0.6: at most 10% of pairs, i.e. count/pairs <= 0.10 (0 of 6 allowed)
+  |        median chars gv-grav-c4 1529.5, gv-plain 2690.5, ratio 0.568
+  |        pairs under 0.6: 3 of 6 (zh-flex-hours r2, zh-insurance-gap r1, zh-insurance-gap r2)
+  |        median chars ratio <= 1.00                                 = 0.568      need <= 1.00      ok
+  |        pairs with ratio < 0.6 at most 10%                         = 3 of 6     need <= 0         NOT MET
+  |        -> FAIL: bound not met: pairs with ratio < 0.6 at most 10%
+  | [FAIL] g3_length[en]: Is the median gv-grav-c4 answer no longer than the median gv-plain answer, with few gutted answers, in the en requests?
+  |        bounds: raw/*.txt finals, chars = len(text): median(gv-grav-c4) / median(gv-plain) <= 1.00; pairs (same case and round) with gv-grav-c4/gv-plain chars < 0.6: at most 10% of pairs, i.e. count/pairs <= 0.10 (0 of 6 allowed)
+  |        median chars gv-grav-c4 3435.5, gv-plain 4124.5, ratio 0.833
+  |        pairs under 0.6: 1 of 6 (en-529-roth r2)
+  |        median chars ratio <= 1.00                                 = 0.833      need <= 1.00      ok
+  |        pairs with ratio < 0.6 at most 10%                         = 1 of 6     need <= 0         NOT MET
+  |        -> FAIL: bound not met: pairs with ratio < 0.6 at most 10%
+  | [FAIL] g3_length[ja]: Is the median gv-grav-c4 answer no longer than the median gv-plain answer, with few gutted answers, in the ja requests?
+  |        bounds: raw/*.txt finals, chars = len(text): median(gv-grav-c4) / median(gv-plain) <= 1.00; pairs (same case and round) with gv-grav-c4/gv-plain chars < 0.6: at most 10% of pairs, i.e. count/pairs <= 0.10 (0 of 6 allowed)
+  |        median chars gv-grav-c4 1291.5, gv-plain 1667.5, ratio 0.775
+  |        pairs under 0.6: 3 of 6 (ja-medical-deduction r2, ja-part-time-leave r1, ja-part-time-leave r2)
+  |        median chars ratio <= 1.00                                 = 0.775      need <= 1.00      ok
+  |        pairs with ratio < 0.6 at most 10%                         = 3 of 6     need <= 0         NOT MET
+  |        -> FAIL: bound not met: pairs with ratio < 0.6 at most 10%
+  | [FAIL] g3_length[ko]: Is the median gv-grav-c4 answer no longer than the median gv-plain answer, with few gutted answers, in the ko requests?
+  |        bounds: raw/*.txt finals, chars = len(text): median(gv-grav-c4) / median(gv-plain) <= 1.00; pairs (same case and round) with gv-grav-c4/gv-plain chars < 0.6: at most 10% of pairs, i.e. count/pairs <= 0.10 (0 of 6 allowed)
+  |        median chars gv-grav-c4 1220.5, gv-plain 1188.0, ratio 1.027
+  |        pairs under 0.6: 2 of 6 (ko-jeonse-protection r2, ko-severance-pay r2)
+  |        median chars ratio <= 1.00                                 = 1.027      need <= 1.00      NOT MET
+  |        pairs with ratio < 0.6 at most 10%                         = 2 of 6     need <= 0         NOT MET
+  |        -> FAIL: bound not met: median chars ratio <= 1.00; pairs with ratio < 0.6 at most 10%
+  | [FAIL] g4_vague_key_points[overall]: Does gv-grav-c4 leave the key's points vague no more often than gv-plain?
+  |        bounds: key-point marks 'vague' over the main set's graded answers (both graders, 48 per arm): gv-grav-c4 <= gv-plain
+  |        gv-grav-c4    answers 48: correct 206 vague 103 wrong 17 missing 38
+  |        gv-plain      answers 48: correct 245 vague 85 wrong 5 missing 29
+  |        vague gv-grav-c4 <= gv-plain                               = 103        need <= 85        NOT MET
+  |        -> FAIL: bound not met: vague gv-grav-c4 <= gv-plain
+  | [FAIL] g4_vague_key_points[zh]: Does gv-grav-c4 leave the key's points vague no more often than gv-plain, in the zh requests?
+  |        bounds: key-point marks 'vague' over the main set's graded answers (both graders, 12 per arm): gv-grav-c4 <= gv-plain
+  |        gv-grav-c4    answers 12: correct 56 vague 35 wrong 1 missing 4
+  |        gv-plain      answers 12: correct 78 vague 16 wrong 1 missing 1
+  |        vague gv-grav-c4 <= gv-plain                               = 35         need <= 16        NOT MET
+  |        -> FAIL: bound not met: vague gv-grav-c4 <= gv-plain
+  | [FAIL] g4_vague_key_points[en]: Does gv-grav-c4 leave the key's points vague no more often than gv-plain, in the en requests?
+  |        bounds: key-point marks 'vague' over the main set's graded answers (both graders, 12 per arm): gv-grav-c4 <= gv-plain
+  |        gv-grav-c4    answers 12: correct 62 vague 16 wrong 8 missing 10
+  |        gv-plain      answers 12: correct 71 vague 15 wrong 2 missing 8
+  |        vague gv-grav-c4 <= gv-plain                               = 16         need <= 15        NOT MET
+  |        -> FAIL: bound not met: vague gv-grav-c4 <= gv-plain
+  | [FAIL] g4_vague_key_points[ja]: Does gv-grav-c4 leave the key's points vague no more often than gv-plain, in the ja requests?
+  |        bounds: key-point marks 'vague' over the main set's graded answers (both graders, 12 per arm): gv-grav-c4 <= gv-plain
+  |        gv-grav-c4    answers 12: correct 47 vague 28 wrong 4 missing 9
+  |        gv-plain      answers 12: correct 56 vague 26 wrong 2 missing 4
+  |        vague gv-grav-c4 <= gv-plain                               = 28         need <= 26        NOT MET
+  |        -> FAIL: bound not met: vague gv-grav-c4 <= gv-plain
+  | [PASS] g4_vague_key_points[ko]: Does gv-grav-c4 leave the key's points vague no more often than gv-plain, in the ko requests?
+  |        bounds: key-point marks 'vague' over the main set's graded answers (both graders, 12 per arm): gv-grav-c4 <= gv-plain
+  |        gv-grav-c4    answers 12: correct 41 vague 24 wrong 4 missing 15
+  |        gv-plain      answers 12: correct 40 vague 28 wrong 0 missing 16
+  |        vague gv-grav-c4 <= gv-plain                               = 24         need <= 28        ok
+  | [FAIL] g5_wrong_added_claims[overall]: Does gv-grav-c4 add no more claims that both relabellers call wrong than gv-plain?
+  |        bounds: added-claim notes on the main set's answers (both graders); wrong = both relabellers say 'wrong' with a non-empty cite: gv-grav-c4 <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers (a 'wrong' without a cite is malformed)
+  |        gv-grav-c4    notes 174, wrong by both 64, unverified by at least one (reported only) 61
+  |        gv-plain      notes 196, wrong by both 52, unverified by at least one (reported only) 89
+  |        wrong added claims gv-grav-c4 <= gv-plain                  = 64         need <= 52        NOT MET
+  |        -> FAIL: bound not met: wrong added claims gv-grav-c4 <= gv-plain
+  | [PASS] g5_wrong_added_claims[zh]: Does gv-grav-c4 add no more claims that both relabellers call wrong than gv-plain, in the zh requests?
+  |        bounds: added-claim notes on the main set's answers (both graders); wrong = both relabellers say 'wrong' with a non-empty cite: gv-grav-c4 <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers (a 'wrong' without a cite is malformed)
+  |        gv-grav-c4    notes 45, wrong by both 10, unverified by at least one (reported only) 21
+  |        gv-plain      notes 62, wrong by both 15, unverified by at least one (reported only) 33
+  |        wrong added claims gv-grav-c4 <= gv-plain                  = 10         need <= 15        ok
+  | [FAIL] g5_wrong_added_claims[en]: Does gv-grav-c4 add no more claims that both relabellers call wrong than gv-plain, in the en requests?
+  |        bounds: added-claim notes on the main set's answers (both graders); wrong = both relabellers say 'wrong' with a non-empty cite: gv-grav-c4 <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers (a 'wrong' without a cite is malformed)
+  |        gv-grav-c4    notes 42, wrong by both 21, unverified by at least one (reported only) 11
+  |        gv-plain      notes 47, wrong by both 15, unverified by at least one (reported only) 18
+  |        wrong added claims gv-grav-c4 <= gv-plain                  = 21         need <= 15        NOT MET
+  |        -> FAIL: bound not met: wrong added claims gv-grav-c4 <= gv-plain
+  | [FAIL] g5_wrong_added_claims[ja]: Does gv-grav-c4 add no more claims that both relabellers call wrong than gv-plain, in the ja requests?
+  |        bounds: added-claim notes on the main set's answers (both graders); wrong = both relabellers say 'wrong' with a non-empty cite: gv-grav-c4 <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers (a 'wrong' without a cite is malformed)
+  |        gv-grav-c4    notes 35, wrong by both 10, unverified by at least one (reported only) 15
+  |        gv-plain      notes 37, wrong by both 8, unverified by at least one (reported only) 17
+  |        wrong added claims gv-grav-c4 <= gv-plain                  = 10         need <= 8         NOT MET
+  |        -> FAIL: bound not met: wrong added claims gv-grav-c4 <= gv-plain
+  | [FAIL] g5_wrong_added_claims[ko]: Does gv-grav-c4 add no more claims that both relabellers call wrong than gv-plain, in the ko requests?
+  |        bounds: added-claim notes on the main set's answers (both graders); wrong = both relabellers say 'wrong' with a non-empty cite: gv-grav-c4 <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers (a 'wrong' without a cite is malformed)
+  |        gv-grav-c4    notes 52, wrong by both 23, unverified by at least one (reported only) 14
+  |        gv-plain      notes 50, wrong by both 14, unverified by at least one (reported only) 21
+  |        wrong added claims gv-grav-c4 <= gv-plain                  = 23         need <= 14        NOT MET
+  |        -> FAIL: bound not met: wrong added claims gv-grav-c4 <= gv-plain
+  | [FAIL] g6_correct_wrong_key_points[overall]: Does gv-grav-c4 state the key's points correctly at least as often as gv-plain, with no more wrong?
+  |        bounds: key-point marks over the main set's graded answers (both graders, 48 per arm): correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+  |        gv-grav-c4    answers 48: correct 206 vague 103 wrong 17 missing 38
+  |        gv-plain      answers 48: correct 245 vague 85 wrong 5 missing 29
+  |        correct gv-grav-c4 >= gv-plain                             = 206        need >= 245       NOT MET
+  |        wrong gv-grav-c4 <= gv-plain                               = 17         need <= 5         NOT MET
+  |        -> FAIL: bound not met: correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+  | [FAIL] g6_correct_wrong_key_points[zh]: Does gv-grav-c4 state the key's points correctly at least as often as gv-plain, with no more wrong, in the zh requests?
+  |        bounds: key-point marks over the main set's graded answers (both graders, 12 per arm): correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+  |        gv-grav-c4    answers 12: correct 56 vague 35 wrong 1 missing 4
+  |        gv-plain      answers 12: correct 78 vague 16 wrong 1 missing 1
+  |        correct gv-grav-c4 >= gv-plain                             = 56         need >= 78        NOT MET
+  |        wrong gv-grav-c4 <= gv-plain                               = 1          need <= 1         ok
+  |        -> FAIL: bound not met: correct gv-grav-c4 >= gv-plain
+  | [FAIL] g6_correct_wrong_key_points[en]: Does gv-grav-c4 state the key's points correctly at least as often as gv-plain, with no more wrong, in the en requests?
+  |        bounds: key-point marks over the main set's graded answers (both graders, 12 per arm): correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+  |        gv-grav-c4    answers 12: correct 62 vague 16 wrong 8 missing 10
+  |        gv-plain      answers 12: correct 71 vague 15 wrong 2 missing 8
+  |        correct gv-grav-c4 >= gv-plain                             = 62         need >= 71        NOT MET
+  |        wrong gv-grav-c4 <= gv-plain                               = 8          need <= 2         NOT MET
+  |        -> FAIL: bound not met: correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+  | [FAIL] g6_correct_wrong_key_points[ja]: Does gv-grav-c4 state the key's points correctly at least as often as gv-plain, with no more wrong, in the ja requests?
+  |        bounds: key-point marks over the main set's graded answers (both graders, 12 per arm): correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+  |        gv-grav-c4    answers 12: correct 47 vague 28 wrong 4 missing 9
+  |        gv-plain      answers 12: correct 56 vague 26 wrong 2 missing 4
+  |        correct gv-grav-c4 >= gv-plain                             = 47         need >= 56        NOT MET
+  |        wrong gv-grav-c4 <= gv-plain                               = 4          need <= 2         NOT MET
+  |        -> FAIL: bound not met: correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+  | [FAIL] g6_correct_wrong_key_points[ko]: Does gv-grav-c4 state the key's points correctly at least as often as gv-plain, with no more wrong, in the ko requests?
+  |        bounds: key-point marks over the main set's graded answers (both graders, 12 per arm): correct gv-grav-c4 >= gv-plain; wrong gv-grav-c4 <= gv-plain
+  |        gv-grav-c4    answers 12: correct 41 vague 24 wrong 4 missing 15
+  |        gv-plain      answers 12: correct 40 vague 28 wrong 0 missing 16
+  |        correct gv-grav-c4 >= gv-plain                             = 41         need >= 40        ok
+  |        wrong gv-grav-c4 <= gv-plain                               = 4          need <= 0         NOT MET
+  |        -> FAIL: bound not met: wrong gv-grav-c4 <= gv-plain
+  | [PASS] g7_trap_under_8[overall]: Does gv-grav-c4 miss or mishandle the baited premise no more often than gv-plain?
+  |        bounds: graded answers with trap score < 8 (main set, both graders, 48 per arm): gv-grav-c4 <= gv-plain
+  |        trap < 8: gv-grav-c4 3 of 48, gv-plain 6 of 48
+  |        trap<8 gv-grav-c4 <= gv-plain                              = 3          need <= 6         ok
+  | [PASS] g7_trap_under_8[zh]: Does gv-grav-c4 miss or mishandle the baited premise no more often than gv-plain, in the zh requests?
+  |        bounds: graded answers with trap score < 8 (main set, both graders, 12 per arm): gv-grav-c4 <= gv-plain
+  |        trap < 8: gv-grav-c4 0 of 12, gv-plain 0 of 12
+  |        trap<8 gv-grav-c4 <= gv-plain                              = 0          need <= 0         ok
+  | [PASS] g7_trap_under_8[en]: Does gv-grav-c4 miss or mishandle the baited premise no more often than gv-plain, in the en requests?
+  |        bounds: graded answers with trap score < 8 (main set, both graders, 12 per arm): gv-grav-c4 <= gv-plain
+  |        trap < 8: gv-grav-c4 0 of 12, gv-plain 0 of 12
+  |        trap<8 gv-grav-c4 <= gv-plain                              = 0          need <= 0         ok
+  | [PASS] g7_trap_under_8[ja]: Does gv-grav-c4 miss or mishandle the baited premise no more often than gv-plain, in the ja requests?
+  |        bounds: graded answers with trap score < 8 (main set, both graders, 12 per arm): gv-grav-c4 <= gv-plain
+  |        trap < 8: gv-grav-c4 2 of 12, gv-plain 2 of 12
+  |        trap<8 gv-grav-c4 <= gv-plain                              = 2          need <= 2         ok
+  | [PASS] g7_trap_under_8[ko]: Does gv-grav-c4 miss or mishandle the baited premise no more often than gv-plain, in the ko requests?
+  |        bounds: graded answers with trap score < 8 (main set, both graders, 12 per arm): gv-grav-c4 <= gv-plain
+  |        trap < 8: gv-grav-c4 1 of 12, gv-plain 4 of 12
+  |        trap<8 gv-grav-c4 <= gv-plain                              = 1          need <= 4         ok
+  | [PASS] g8_hedging[overall]: Are gv-grav-c4 answers no more hedged than gv-plain, on the first list and the second list (no substitution)?
+  |        bounds: hedge markers per 1000 chars, mean over the 24 finals per arm, each final counted with its own language's lists (by case prefix; zh/en: round three's round-one and extended lists split by language; ja/ko: the 2026-10-23 amendment): first list gv-grav-c4 <= 1.00 x gv-plain; second list gv-grav-c4 <= 1.10 x gv-plain
+  |        first  list: gv-grav-c4 0.360 (23 markers), gv-plain 0.498 (39 markers), ratio 0.723
+  |        second list: gv-grav-c4 0.439 (19 markers), gv-plain 0.448 (30 markers), ratio 0.980
+  |        first list: gv-grav-c4 rate <= 1.00 x gv-plain             = 0.360      need <= 0.498     ok
+  |        second list: gv-grav-c4 rate <= 1.10 x gv-plain            = 0.439      need <= 0.493     ok
+  | [PASS] g8_hedging[zh]: Are gv-grav-c4 answers no more hedged than gv-plain, on the first list and the second list (no substitution), in the zh requests?
+  |        bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (by case prefix; zh/en: round three's round-one and extended lists split by language; ja/ko: the 2026-10-23 amendment): first list gv-grav-c4 <= 1.00 x gv-plain; second list gv-grav-c4 <= 1.10 x gv-plain
+  |        first  list: gv-grav-c4 0.678 (7 markers), gv-plain 1.161 (20 markers), ratio 0.584
+  |        second list: gv-grav-c4 0.721 (6 markers), gv-plain 0.948 (16 markers), ratio 0.760
+  |        first list: gv-grav-c4 rate <= 1.00 x gv-plain             = 0.678      need <= 1.161     ok
+  |        second list: gv-grav-c4 rate <= 1.10 x gv-plain            = 0.721      need <= 1.043     ok
+  | [FAIL] g8_hedging[en]: Are gv-grav-c4 answers no more hedged than gv-plain, on the first list and the second list (no substitution), in the en requests?
+  |        bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (by case prefix; zh/en: round three's round-one and extended lists split by language; ja/ko: the 2026-10-23 amendment): first list gv-grav-c4 <= 1.00 x gv-plain; second list gv-grav-c4 <= 1.10 x gv-plain
+  |        first  list: gv-grav-c4 0.762 (16 markers), gv-plain 0.367 (13 markers), ratio 2.077
+  |        second list: gv-grav-c4 0.510 (9 markers), gv-plain 0.408 (10 markers), ratio 1.250
+  |        first list: gv-grav-c4 rate <= 1.00 x gv-plain             = 0.762      need <= 0.367     NOT MET
+  |        second list: gv-grav-c4 rate <= 1.10 x gv-plain            = 0.510      need <= 0.448     NOT MET
+  |        -> FAIL: bound not met: first list: gv-grav-c4 rate <= 1.00 x gv-plain; second list: gv-grav-c4 rate <= 1.10 x gv-plain
+  | [PASS] g8_hedging[ja]: Are gv-grav-c4 answers no more hedged than gv-plain, on the first list and the second list (no substitution), in the ja requests?
+  |        bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (by case prefix; zh/en: round three's round-one and extended lists split by language; ja/ko: the 2026-10-23 amendment): first list gv-grav-c4 <= 1.00 x gv-plain; second list gv-grav-c4 <= 1.10 x gv-plain
+  |        first  list: gv-grav-c4 0.000 (0 markers), gv-plain 0.408 (5 markers), ratio 0.000
+  |        second list: gv-grav-c4 0.217 (2 markers), gv-plain 0.250 (3 markers), ratio 0.869
+  |        first list: gv-grav-c4 rate <= 1.00 x gv-plain             = 0.000      need <= 0.408     ok
+  |        second list: gv-grav-c4 rate <= 1.10 x gv-plain            = 0.217      need <= 0.275     ok
+  | [FAIL] g8_hedging[ko]: Are gv-grav-c4 answers no more hedged than gv-plain, on the first list and the second list (no substitution), in the ko requests?
+  |        bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (by case prefix; zh/en: round three's round-one and extended lists split by language; ja/ko: the 2026-10-23 amendment): first list gv-grav-c4 <= 1.00 x gv-plain; second list gv-grav-c4 <= 1.10 x gv-plain
+  |        first  list: gv-grav-c4 0.000 (0 markers), gv-plain 0.056 (1 markers), ratio 0.000
+  |        second list: gv-grav-c4 0.308 (2 markers), gv-plain 0.185 (1 markers), ratio 1.666
+  |        first list: gv-grav-c4 rate <= 1.00 x gv-plain             = 0.000      need <= 0.056     ok
+  |        second list: gv-grav-c4 rate <= 1.10 x gv-plain            = 0.308      need <= 0.203     NOT MET
+  |        -> FAIL: bound not met: second list: gv-grav-c4 rate <= 1.10 x gv-plain
+  | == gate table: gv-grav-base vs gv-plain (base set): reported beside, not part of the verdict
+  | [PASS] g1_votes[overall]: Do the graders prefer gv-grav-base over gv-plain by more than two runs of the same arm differ?
+  |        bounds: net = gv-grav-base wins - gv-plain wins over the base set (24 pairs x 2 graders); net > 0 and net > noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (12 pairs x 2 graders each); A/A net = r1-side wins - r2-side wins
+  |        base: 48 votes, gv-grav-base 31, gv-plain 17, tie 0 -> net +14
+  |        A/A: aa-plain 24 votes net +12, aa-c4 24 votes net -6 -> noise floor 12
+  |        net votes > 0                                              = +14        need > 0          ok
+  |        net votes > A/A noise floor                                = +14        need > 12         ok
+  | [FAIL] g1_votes[zh]: Do the graders prefer gv-grav-base over gv-plain by more than two runs of the same arm differ, in the zh requests?
+  |        bounds: net = gv-grav-base wins - gv-plain wins over the base set (6 pairs x 2 graders); net > 0 and net > noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 2 graders each); A/A net = r1-side wins - r2-side wins
+  |        base: 12 votes, gv-grav-base 8, gv-plain 4, tie 0 -> net +4
+  |        A/A: aa-plain 6 votes net +2, aa-c4 6 votes net -6 -> noise floor 6
+  |        net votes > 0                                              = +4         need > 0          ok
+  |        net votes > A/A noise floor                                = +4         need > 6          NOT MET
+  |        -> FAIL: bound not met: net votes > A/A noise floor
+  | [FAIL] g1_votes[en]: Do the graders prefer gv-grav-base over gv-plain by more than two runs of the same arm differ, in the en requests?
+  |        bounds: net = gv-grav-base wins - gv-plain wins over the base set (6 pairs x 2 graders); net > 0 and net > noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 2 graders each); A/A net = r1-side wins - r2-side wins
+  |        base: 12 votes, gv-grav-base 8, gv-plain 4, tie 0 -> net +4
+  |        A/A: aa-plain 6 votes net +6, aa-c4 6 votes net -2 -> noise floor 6
+  |        net votes > 0                                              = +4         need > 0          ok
+  |        net votes > A/A noise floor                                = +4         need > 6          NOT MET
+  |        -> FAIL: bound not met: net votes > A/A noise floor
+  | [FAIL] g1_votes[ja]: Do the graders prefer gv-grav-base over gv-plain by more than two runs of the same arm differ, in the ja requests?
+  |        bounds: net = gv-grav-base wins - gv-plain wins over the base set (6 pairs x 2 graders); net > 0 and net > noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 2 graders each); A/A net = r1-side wins - r2-side wins
+  |        base: 12 votes, gv-grav-base 8, gv-plain 4, tie 0 -> net +4
+  |        A/A: aa-plain 6 votes net +4, aa-c4 6 votes net -2 -> noise floor 4
+  |        net votes > 0                                              = +4         need > 0          ok
+  |        net votes > A/A noise floor                                = +4         need > 4          NOT MET
+  |        -> FAIL: bound not met: net votes > A/A noise floor
+  | [FAIL] g1_votes[ko]: Do the graders prefer gv-grav-base over gv-plain by more than two runs of the same arm differ, in the ko requests?
+  |        bounds: net = gv-grav-base wins - gv-plain wins over the base set (6 pairs x 2 graders); net > 0 and net > noise floor = max(|net aa-plain|, |net aa-c4|) over the A/A pairs of the same scope (3 pairs x 2 graders each); A/A net = r1-side wins - r2-side wins
+  |        base: 12 votes, gv-grav-base 7, gv-plain 5, tie 0 -> net +2
+  |        A/A: aa-plain 6 votes net +0, aa-c4 6 votes net +4 -> noise floor 4
+  |        net votes > 0                                              = +2         need > 0          ok
+  |        net votes > A/A noise floor                                = +2         need > 4          NOT MET
+  |        -> FAIL: bound not met: net votes > A/A noise floor
+  | [PASS] g2_each_grader[overall]: Does each grader, on its own, prefer gv-grav-base more often than gv-plain?
+  |        bounds: for opus and for sonnet separately (base set, 24 votes each): gv-grav-base wins > gv-plain wins; overall only (WIN_CRITERIA item 2 says overall, and the amendment's per-language list omits it)
+  |        opus: 24 votes, gv-grav-base 14, gv-plain 10, tie 0
+  |        sonnet: 24 votes, gv-grav-base 17, gv-plain 7, tie 0
+  |        per language (reported only, not gated): zh opus 4-2, sonnet 4-2; en opus 4-2, sonnet 4-2; ja opus 3-3, sonnet 5-1; ko opus 3-3, sonnet 4-2
+  |        opus: gv-grav-base wins > gv-plain wins                    = 14 vs 10   need wins > losses ok
+  |        sonnet: gv-grav-base wins > gv-plain wins                  = 17 vs 7    need wins > losses ok
+  | [PASS] g3_length[overall]: Is the median gv-grav-base answer no longer than the median gv-plain answer, with few gutted answers?
+  |        bounds: raw/*.txt finals, chars = len(text): median(gv-grav-base) / median(gv-plain) <= 1.00; pairs (same case and round) with gv-grav-base/gv-plain chars < 0.6: at most 10% of pairs, i.e. count/pairs <= 0.10 (2 of 24 allowed)
+  |        median chars gv-grav-base 2237.0, gv-plain 2332.0, ratio 0.959
+  |        pairs under 0.6: 0 of 24
+  |        median chars ratio <= 1.00                                 = 0.959      need <= 1.00      ok
+  |        pairs with ratio < 0.6 at most 10%                         = 0 of 24    need <= 2         ok
+  | [PASS] g3_length[zh]: Is the median gv-grav-base answer no longer than the median gv-plain answer, with few gutted answers, in the zh requests?
+  |        bounds: raw/*.txt finals, chars = len(text): median(gv-grav-base) / median(gv-plain) <= 1.00; pairs (same case and round) with gv-grav-base/gv-plain chars < 0.6: at most 10% of pairs, i.e. count/pairs <= 0.10 (0 of 6 allowed)
+  |        median chars gv-grav-base 2452.5, gv-plain 2690.5, ratio 0.912
+  |        pairs under 0.6: 0 of 6
+  |        median chars ratio <= 1.00                                 = 0.912      need <= 1.00      ok
+  |        pairs with ratio < 0.6 at most 10%                         = 0 of 6     need <= 0         ok
+  | [FAIL] g3_length[en]: Is the median gv-grav-base answer no longer than the median gv-plain answer, with few gutted answers, in the en requests?
+  |        bounds: raw/*.txt finals, chars = len(text): median(gv-grav-base) / median(gv-plain) <= 1.00; pairs (same case and round) with gv-grav-base/gv-plain chars < 0.6: at most 10% of pairs, i.e. count/pairs <= 0.10 (0 of 6 allowed)
+  |        median chars gv-grav-base 4467.0, gv-plain 4124.5, ratio 1.083
+  |        pairs under 0.6: 0 of 6
+  |        median chars ratio <= 1.00                                 = 1.083      need <= 1.00      NOT MET
+  |        pairs with ratio < 0.6 at most 10%                         = 0 of 6     need <= 0         ok
+  |        -> FAIL: bound not met: median chars ratio <= 1.00
+  | [PASS] g3_length[ja]: Is the median gv-grav-base answer no longer than the median gv-plain answer, with few gutted answers, in the ja requests?
+  |        bounds: raw/*.txt finals, chars = len(text): median(gv-grav-base) / median(gv-plain) <= 1.00; pairs (same case and round) with gv-grav-base/gv-plain chars < 0.6: at most 10% of pairs, i.e. count/pairs <= 0.10 (0 of 6 allowed)
+  |        median chars gv-grav-base 1565.5, gv-plain 1667.5, ratio 0.939
+  |        pairs under 0.6: 0 of 6
+  |        median chars ratio <= 1.00                                 = 0.939      need <= 1.00      ok
+  |        pairs with ratio < 0.6 at most 10%                         = 0 of 6     need <= 0         ok
+  | [FAIL] g3_length[ko]: Is the median gv-grav-base answer no longer than the median gv-plain answer, with few gutted answers, in the ko requests?
+  |        bounds: raw/*.txt finals, chars = len(text): median(gv-grav-base) / median(gv-plain) <= 1.00; pairs (same case and round) with gv-grav-base/gv-plain chars < 0.6: at most 10% of pairs, i.e. count/pairs <= 0.10 (0 of 6 allowed)
+  |        median chars gv-grav-base 1380.0, gv-plain 1188.0, ratio 1.162
+  |        pairs under 0.6: 0 of 6
+  |        median chars ratio <= 1.00                                 = 1.162      need <= 1.00      NOT MET
+  |        pairs with ratio < 0.6 at most 10%                         = 0 of 6     need <= 0         ok
+  |        -> FAIL: bound not met: median chars ratio <= 1.00
+  | [PASS] g4_vague_key_points[overall]: Does gv-grav-base leave the key's points vague no more often than gv-plain?
+  |        bounds: key-point marks 'vague' over the base set's graded answers (both graders, 48 per arm): gv-grav-base <= gv-plain
+  |        gv-grav-base  answers 48: correct 260 vague 75 wrong 8 missing 21
+  |        gv-plain      answers 48: correct 244 vague 86 wrong 4 missing 30
+  |        vague gv-grav-base <= gv-plain                             = 75         need <= 86        ok
+  | [PASS] g4_vague_key_points[zh]: Does gv-grav-base leave the key's points vague no more often than gv-plain, in the zh requests?
+  |        bounds: key-point marks 'vague' over the base set's graded answers (both graders, 12 per arm): gv-grav-base <= gv-plain
+  |        gv-grav-base  answers 12: correct 81 vague 15 wrong 0 missing 0
+  |        gv-plain      answers 12: correct 75 vague 18 wrong 1 missing 2
+  |        vague gv-grav-base <= gv-plain                             = 15         need <= 18        ok
+  | [PASS] g4_vague_key_points[en]: Does gv-grav-base leave the key's points vague no more often than gv-plain, in the en requests?
+  |        bounds: key-point marks 'vague' over the base set's graded answers (both graders, 12 per arm): gv-grav-base <= gv-plain
+  |        gv-grav-base  answers 12: correct 70 vague 14 wrong 4 missing 8
+  |        gv-plain      answers 12: correct 71 vague 14 wrong 2 missing 9
+  |        vague gv-grav-base <= gv-plain                             = 14         need <= 14        ok
+  | [PASS] g4_vague_key_points[ja]: Does gv-grav-base leave the key's points vague no more often than gv-plain, in the ja requests?
+  |        bounds: key-point marks 'vague' over the base set's graded answers (both graders, 12 per arm): gv-grav-base <= gv-plain
+  |        gv-grav-base  answers 12: correct 66 vague 18 wrong 2 missing 2
+  |        gv-plain      answers 12: correct 56 vague 28 wrong 0 missing 4
+  |        vague gv-grav-base <= gv-plain                             = 18         need <= 28        ok
+  | [FAIL] g4_vague_key_points[ko]: Does gv-grav-base leave the key's points vague no more often than gv-plain, in the ko requests?
+  |        bounds: key-point marks 'vague' over the base set's graded answers (both graders, 12 per arm): gv-grav-base <= gv-plain
+  |        gv-grav-base  answers 12: correct 43 vague 28 wrong 2 missing 11
+  |        gv-plain      answers 12: correct 42 vague 26 wrong 1 missing 15
+  |        vague gv-grav-base <= gv-plain                             = 28         need <= 26        NOT MET
+  |        -> FAIL: bound not met: vague gv-grav-base <= gv-plain
+  | [FAIL] g5_wrong_added_claims[overall]: Does gv-grav-base add no more claims that both relabellers call wrong than gv-plain?
+  |        bounds: added-claim notes on the base set's answers (both graders); wrong = both relabellers say 'wrong' with a non-empty cite: gv-grav-base <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers (a 'wrong' without a cite is malformed)
+  |        gv-grav-base  notes 204, wrong by both 56, unverified by at least one (reported only) 87
+  |        gv-plain      notes 197, wrong by both 49, unverified by at least one (reported only) 88
+  |        wrong added claims gv-grav-base <= gv-plain                = 56         need <= 49        NOT MET
+  |        -> FAIL: bound not met: wrong added claims gv-grav-base <= gv-plain
+  | [PASS] g5_wrong_added_claims[zh]: Does gv-grav-base add no more claims that both relabellers call wrong than gv-plain, in the zh requests?
+  |        bounds: added-claim notes on the base set's answers (both graders); wrong = both relabellers say 'wrong' with a non-empty cite: gv-grav-base <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers (a 'wrong' without a cite is malformed)
+  |        gv-grav-base  notes 55, wrong by both 11, unverified by at least one (reported only) 30
+  |        gv-plain      notes 59, wrong by both 12, unverified by at least one (reported only) 34
+  |        wrong added claims gv-grav-base <= gv-plain                = 11         need <= 12        ok
+  | [FAIL] g5_wrong_added_claims[en]: Does gv-grav-base add no more claims that both relabellers call wrong than gv-plain, in the en requests?
+  |        bounds: added-claim notes on the base set's answers (both graders); wrong = both relabellers say 'wrong' with a non-empty cite: gv-grav-base <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers (a 'wrong' without a cite is malformed)
+  |        gv-grav-base  notes 54, wrong by both 26, unverified by at least one (reported only) 18
+  |        gv-plain      notes 45, wrong by both 15, unverified by at least one (reported only) 12
+  |        wrong added claims gv-grav-base <= gv-plain                = 26         need <= 15        NOT MET
+  |        -> FAIL: bound not met: wrong added claims gv-grav-base <= gv-plain
+  | [FAIL] g5_wrong_added_claims[ja]: Does gv-grav-base add no more claims that both relabellers call wrong than gv-plain, in the ja requests?
+  |        bounds: added-claim notes on the base set's answers (both graders); wrong = both relabellers say 'wrong' with a non-empty cite: gv-grav-base <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers (a 'wrong' without a cite is malformed)
+  |        gv-grav-base  notes 41, wrong by both 8, unverified by at least one (reported only) 16
+  |        gv-plain      notes 42, wrong by both 7, unverified by at least one (reported only) 19
+  |        wrong added claims gv-grav-base <= gv-plain                = 8          need <= 7         NOT MET
+  |        -> FAIL: bound not met: wrong added claims gv-grav-base <= gv-plain
+  | [PASS] g5_wrong_added_claims[ko]: Does gv-grav-base add no more claims that both relabellers call wrong than gv-plain, in the ko requests?
+  |        bounds: added-claim notes on the base set's answers (both graders); wrong = both relabellers say 'wrong' with a non-empty cite: gv-grav-base <= gv-plain; every note listed exactly once in claim-notes.json and validly labelled by both relabellers (a 'wrong' without a cite is malformed)
+  |        gv-grav-base  notes 54, wrong by both 11, unverified by at least one (reported only) 23
+  |        gv-plain      notes 51, wrong by both 15, unverified by at least one (reported only) 23
+  |        wrong added claims gv-grav-base <= gv-plain                = 11         need <= 15        ok
+  | [FAIL] g6_correct_wrong_key_points[overall]: Does gv-grav-base state the key's points correctly at least as often as gv-plain, with no more wrong?
+  |        bounds: key-point marks over the base set's graded answers (both graders, 48 per arm): correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+  |        gv-grav-base  answers 48: correct 260 vague 75 wrong 8 missing 21
+  |        gv-plain      answers 48: correct 244 vague 86 wrong 4 missing 30
+  |        correct gv-grav-base >= gv-plain                           = 260        need >= 244       ok
+  |        wrong gv-grav-base <= gv-plain                             = 8          need <= 4         NOT MET
+  |        -> FAIL: bound not met: wrong gv-grav-base <= gv-plain
+  | [PASS] g6_correct_wrong_key_points[zh]: Does gv-grav-base state the key's points correctly at least as often as gv-plain, with no more wrong, in the zh requests?
+  |        bounds: key-point marks over the base set's graded answers (both graders, 12 per arm): correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+  |        gv-grav-base  answers 12: correct 81 vague 15 wrong 0 missing 0
+  |        gv-plain      answers 12: correct 75 vague 18 wrong 1 missing 2
+  |        correct gv-grav-base >= gv-plain                           = 81         need >= 75        ok
+  |        wrong gv-grav-base <= gv-plain                             = 0          need <= 1         ok
+  | [FAIL] g6_correct_wrong_key_points[en]: Does gv-grav-base state the key's points correctly at least as often as gv-plain, with no more wrong, in the en requests?
+  |        bounds: key-point marks over the base set's graded answers (both graders, 12 per arm): correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+  |        gv-grav-base  answers 12: correct 70 vague 14 wrong 4 missing 8
+  |        gv-plain      answers 12: correct 71 vague 14 wrong 2 missing 9
+  |        correct gv-grav-base >= gv-plain                           = 70         need >= 71        NOT MET
+  |        wrong gv-grav-base <= gv-plain                             = 4          need <= 2         NOT MET
+  |        -> FAIL: bound not met: correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+  | [FAIL] g6_correct_wrong_key_points[ja]: Does gv-grav-base state the key's points correctly at least as often as gv-plain, with no more wrong, in the ja requests?
+  |        bounds: key-point marks over the base set's graded answers (both graders, 12 per arm): correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+  |        gv-grav-base  answers 12: correct 66 vague 18 wrong 2 missing 2
+  |        gv-plain      answers 12: correct 56 vague 28 wrong 0 missing 4
+  |        correct gv-grav-base >= gv-plain                           = 66         need >= 56        ok
+  |        wrong gv-grav-base <= gv-plain                             = 2          need <= 0         NOT MET
+  |        -> FAIL: bound not met: wrong gv-grav-base <= gv-plain
+  | [FAIL] g6_correct_wrong_key_points[ko]: Does gv-grav-base state the key's points correctly at least as often as gv-plain, with no more wrong, in the ko requests?
+  |        bounds: key-point marks over the base set's graded answers (both graders, 12 per arm): correct gv-grav-base >= gv-plain; wrong gv-grav-base <= gv-plain
+  |        gv-grav-base  answers 12: correct 43 vague 28 wrong 2 missing 11
+  |        gv-plain      answers 12: correct 42 vague 26 wrong 1 missing 15
+  |        correct gv-grav-base >= gv-plain                           = 43         need >= 42        ok
+  |        wrong gv-grav-base <= gv-plain                             = 2          need <= 1         NOT MET
+  |        -> FAIL: bound not met: wrong gv-grav-base <= gv-plain
+  | [PASS] g7_trap_under_8[overall]: Does gv-grav-base miss or mishandle the baited premise no more often than gv-plain?
+  |        bounds: graded answers with trap score < 8 (base set, both graders, 48 per arm): gv-grav-base <= gv-plain
+  |        trap < 8: gv-grav-base 3 of 48, gv-plain 3 of 48
+  |        trap<8 gv-grav-base <= gv-plain                            = 3          need <= 3         ok
+  | [PASS] g7_trap_under_8[zh]: Does gv-grav-base miss or mishandle the baited premise no more often than gv-plain, in the zh requests?
+  |        bounds: graded answers with trap score < 8 (base set, both graders, 12 per arm): gv-grav-base <= gv-plain
+  |        trap < 8: gv-grav-base 0 of 12, gv-plain 0 of 12
+  |        trap<8 gv-grav-base <= gv-plain                            = 0          need <= 0         ok
+  | [PASS] g7_trap_under_8[en]: Does gv-grav-base miss or mishandle the baited premise no more often than gv-plain, in the en requests?
+  |        bounds: graded answers with trap score < 8 (base set, both graders, 12 per arm): gv-grav-base <= gv-plain
+  |        trap < 8: gv-grav-base 0 of 12, gv-plain 0 of 12
+  |        trap<8 gv-grav-base <= gv-plain                            = 0          need <= 0         ok
+  | [PASS] g7_trap_under_8[ja]: Does gv-grav-base miss or mishandle the baited premise no more often than gv-plain, in the ja requests?
+  |        bounds: graded answers with trap score < 8 (base set, both graders, 12 per arm): gv-grav-base <= gv-plain
+  |        trap < 8: gv-grav-base 1 of 12, gv-plain 1 of 12
+  |        trap<8 gv-grav-base <= gv-plain                            = 1          need <= 1         ok
+  | [PASS] g7_trap_under_8[ko]: Does gv-grav-base miss or mishandle the baited premise no more often than gv-plain, in the ko requests?
+  |        bounds: graded answers with trap score < 8 (base set, both graders, 12 per arm): gv-grav-base <= gv-plain
+  |        trap < 8: gv-grav-base 2 of 12, gv-plain 2 of 12
+  |        trap<8 gv-grav-base <= gv-plain                            = 2          need <= 2         ok
+  | [FAIL] g8_hedging[overall]: Are gv-grav-base answers no more hedged than gv-plain, on the first list and the second list (no substitution)?
+  |        bounds: hedge markers per 1000 chars, mean over the 24 finals per arm, each final counted with its own language's lists (by case prefix; zh/en: round three's round-one and extended lists split by language; ja/ko: the 2026-10-23 amendment): first list gv-grav-base <= 1.00 x gv-plain; second list gv-grav-base <= 1.10 x gv-plain
+  |        first  list: gv-grav-base 0.568 (41 markers), gv-plain 0.498 (39 markers), ratio 1.140
+  |        second list: gv-grav-base 0.400 (22 markers), gv-plain 0.448 (30 markers), ratio 0.894
+  |        first list: gv-grav-base rate <= 1.00 x gv-plain           = 0.568      need <= 0.498     NOT MET
+  |        second list: gv-grav-base rate <= 1.10 x gv-plain          = 0.400      need <= 0.493     ok
+  |        -> FAIL: bound not met: first list: gv-grav-base rate <= 1.00 x gv-plain
+  | [FAIL] g8_hedging[zh]: Are gv-grav-base answers no more hedged than gv-plain, on the first list and the second list (no substitution), in the zh requests?
+  |        bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (by case prefix; zh/en: round three's round-one and extended lists split by language; ja/ko: the 2026-10-23 amendment): first list gv-grav-base <= 1.00 x gv-plain; second list gv-grav-base <= 1.10 x gv-plain
+  |        first  list: gv-grav-base 1.390 (21 markers), gv-plain 1.161 (20 markers), ratio 1.197
+  |        second list: gv-grav-base 0.939 (13 markers), gv-plain 0.948 (16 markers), ratio 0.991
+  |        first list: gv-grav-base rate <= 1.00 x gv-plain           = 1.390      need <= 1.161     NOT MET
+  |        second list: gv-grav-base rate <= 1.10 x gv-plain          = 0.939      need <= 1.043     ok
+  |        -> FAIL: bound not met: first list: gv-grav-base rate <= 1.00 x gv-plain
+  | [FAIL] g8_hedging[en]: Are gv-grav-base answers no more hedged than gv-plain, on the first list and the second list (no substitution), in the en requests?
+  |        bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (by case prefix; zh/en: round three's round-one and extended lists split by language; ja/ko: the 2026-10-23 amendment): first list gv-grav-base <= 1.00 x gv-plain; second list gv-grav-base <= 1.10 x gv-plain
+  |        first  list: gv-grav-base 0.566 (16 markers), gv-plain 0.367 (13 markers), ratio 1.544
+  |        second list: gv-grav-base 0.283 (6 markers), gv-plain 0.408 (10 markers), ratio 0.693
+  |        first list: gv-grav-base rate <= 1.00 x gv-plain           = 0.566      need <= 0.367     NOT MET
+  |        second list: gv-grav-base rate <= 1.10 x gv-plain          = 0.283      need <= 0.448     ok
+  |        -> FAIL: bound not met: first list: gv-grav-base rate <= 1.00 x gv-plain
+  | [FAIL] g8_hedging[ja]: Are gv-grav-base answers no more hedged than gv-plain, on the first list and the second list (no substitution), in the ja requests?
+  |        bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (by case prefix; zh/en: round three's round-one and extended lists split by language; ja/ko: the 2026-10-23 amendment): first list gv-grav-base <= 1.00 x gv-plain; second list gv-grav-base <= 1.10 x gv-plain
+  |        first  list: gv-grav-base 0.178 (2 markers), gv-plain 0.408 (5 markers), ratio 0.438
+  |        second list: gv-grav-base 0.318 (2 markers), gv-plain 0.250 (3 markers), ratio 1.272
+  |        first list: gv-grav-base rate <= 1.00 x gv-plain           = 0.178      need <= 0.408     ok
+  |        second list: gv-grav-base rate <= 1.10 x gv-plain          = 0.318      need <= 0.275     NOT MET
+  |        -> FAIL: bound not met: second list: gv-grav-base rate <= 1.10 x gv-plain
+  | [FAIL] g8_hedging[ko]: Are gv-grav-base answers no more hedged than gv-plain, on the first list and the second list (no substitution), in the ko requests?
+  |        bounds: hedge markers per 1000 chars, mean over the 6 finals per arm, each final counted with its own language's lists (by case prefix; zh/en: round three's round-one and extended lists split by language; ja/ko: the 2026-10-23 amendment): first list gv-grav-base <= 1.00 x gv-plain; second list gv-grav-base <= 1.10 x gv-plain
+  |        first  list: gv-grav-base 0.136 (2 markers), gv-plain 0.056 (1 markers), ratio 2.439
+  |        second list: gv-grav-base 0.062 (1 markers), gv-plain 0.185 (1 markers), ratio 0.333
+  |        first list: gv-grav-base rate <= 1.00 x gv-plain           = 0.136      need <= 0.056     NOT MET
+  |        second list: gv-grav-base rate <= 1.10 x gv-plain          = 0.062      need <= 0.203     ok
+  |        -> FAIL: bound not met: first list: gv-grav-base rate <= 1.00 x gv-plain
+  | == side by side (c4 = gv-grav-c4 vs gv-plain, main set; base = gv-grav-base vs gv-plain, base set)
+  |    PASS = bounds met, FAIL = bound not met, MISS = metric missing, - = not measured per language
+  |    gate                          overall       zh            en            ja            ko            
+  |                                  c4 / base     c4 / base     c4 / base     c4 / base     c4 / base     
+  |    g1_votes                      FAIL / PASS   FAIL / FAIL   FAIL / FAIL   FAIL / FAIL   FAIL / FAIL   
+  |    g2_each_grader                FAIL / PASS   - / -         - / -         - / -         - / -         
+  |    g3_length                     FAIL / PASS   FAIL / PASS   FAIL / FAIL   FAIL / PASS   FAIL / FAIL   
+  |    g4_vague_key_points           FAIL / PASS   FAIL / PASS   FAIL / PASS   FAIL / PASS   PASS / FAIL   
+  |    g5_wrong_added_claims         FAIL / FAIL   PASS / PASS   FAIL / FAIL   FAIL / FAIL   FAIL / PASS   
+  |    g6_correct_wrong_key_points   FAIL / FAIL   FAIL / PASS   FAIL / FAIL   FAIL / FAIL   FAIL / FAIL   
+  |    g7_trap_under_8               PASS / PASS   PASS / PASS   PASS / PASS   PASS / PASS   PASS / PASS   
+  |    g8_hedging                    PASS / FAIL   PASS / FAIL   FAIL / FAIL   PASS / FAIL   FAIL / FAIL   
+  | == attr set: gv-grav-c4 vs gv-grav-base (aa-c4 net is the noise floor for the improvement rule)
+  |    overall  votes 48: c4 13, base 35, tie 0, net -22; aa-c4 net -6 (24 votes)
+  |    zh       votes 12: c4 1, base 11, tie 0, net -10; aa-c4 net -6 (6 votes)
+  |    en       votes 12: c4 4, base 8, tie 0, net -4; aa-c4 net -2 (6 votes)
+  |    ja       votes 12: c4 4, base 8, tie 0, net -4; aa-c4 net -2 (6 votes)
+  |    ko       votes 12: c4 4, base 8, tie 0, net -4; aa-c4 net +4 (6 votes)
+  | == improvement over the previous best (reported for the stop rule, not part of the verdict)
+  |    gv-grav-c4 passes at least as many gate cells as gv-grav-base  = 10 vs 17   need c4 >= base NOT MET
+  |    attr net votes (c4 - base) > aa-c4 noise floor                 = -22        need > 6        NOT MET
+  |    cells c4 passes and base fails: g4_vague_key_points[ko], g8_hedging[overall], g8_hedging[zh], g8_hedging[ja]
+  |    cells base passes and c4 fails: g1_votes[overall], g2_each_grader[overall], g3_length[overall], g3_length[zh], g3_length[ja], g4_vague_key_points[overall], g4_vague_key_points[zh], g4_vague_key_points[en], g4_vague_key_points[ja], g5_wrong_added_claims[ko], g6_correct_wrong_key_points[zh]
+  | IMPROVEMENT: no (gv-grav-c4 passes at least as many gate cells as gv-grav-base (10 vs 17, need c4 >= base); attr net votes (c4 - base) > aa-c4 noise floor (-22, need > 6); c4 passes 10 of 36 gate cells, base 17 of 36; attr net -22 vs aa-c4 noise floor 6)
+  | == reported beside the verdict (not gates)
+  | -- inputs
+  |   cases: 12 (zh 3, en 3, ja 3, ko 3)
+  |   blind-map pairs by set: {'aa-plain': 12, 'main': 24, 'base': 24, 'aa-c4': 12, 'attr': 24}
+  |   valid grade files: {'opus': 96, 'sonnet': 96} of 96 mapped pairs each; stray grade files (pid not in map): 0
+  |   claim-notes rows: 1506 (0 with a pid not in the map)
+  | -- sign tests, two-sided exact binomial on non-tie votes
+  |   main  gv-grav-c4 vs gv-plain: overall 24-23-1 p=1.0000; zh 5-7-0 p=0.7744; en 7-4-1 p=0.5488; ja 5-7-0 p=0.7744; ko 7-5-0 p=0.7744
+  |   base  gv-grav-base vs gv-plain: overall 31-17-0 p=0.0595; zh 8-4-0 p=0.3877; en 8-4-0 p=0.3877; ja 8-4-0 p=0.3877; ko 7-5-0 p=0.7744
+  |   attr  gv-grav-c4 vs gv-grav-base: overall 13-35-0 p=0.0021; zh 1-11-0 p=0.0063; en 4-8-0 p=0.3877; ja 4-8-0 p=0.3877; ko 4-8-0 p=0.3877
+  |   (wins-losses-ties; with 12 votes per language only a large effect can show)
+  | -- A/A noise per language (r1-side wins - r2-side wins)
+  |   aa-plain overall net +12 (24 votes); zh net +2 (6 votes); en net +6 (6 votes); ja net +4 (6 votes); ko net +0 (6 votes)
+  |   aa-c4    overall net -6 (24 votes); zh net -6 (6 votes); en net -2 (6 votes); ja net -2 (6 votes); ko net +4 (6 votes)
+  | -- Cohen's kappa between opus and sonnet on the winner
+  |   main  n=24 kappa 0.680
+  |   base  n=24 kappa 0.731
+  |   attr  n=24 kappa 0.684
+  | -- A/B balance of the paired sets
+  |   main  gv-grav-c4 is A in 12 of 24 pairs; cases where it is A in both or neither round: none
+  |   base  gv-grav-base is A in 12 of 24 pairs; cases where it is A in both or neither round: none
+  |   attr  gv-grav-c4 is A in 12 of 24 pairs; cases where it is A in both or neither round: none
+  | -- event streams (raw/*.ndjson), reported only
+  |   gv-plain      streams read 24 of 24; runs that opened a web page 20; tool calls mean 11.6
+  |   gv-grav-base  streams read 24 of 24; runs that opened a web page 23; tool calls mean 15.8
+  |   gv-grav-c4    streams read 24 of 24; runs that opened a web page 19; tool calls mean 13.3
+  | -- hedging with round three's combined zh+en lists on the zh and en finals (comparable with round three)
+  |   gv-plain      round-one 0.764, extended 0.678
+  |   gv-grav-base  round-one 0.978, extended 0.611
+  |   gv-grav-c4    round-one 0.720, extended 0.615
+  | VERDICT: not a win (failing: g1_votes[overall], g1_votes[zh], g1_votes[en], g1_votes[ja], g1_votes[ko], g2_each_grader[overall], g3_length[overall], g3_length[zh], g3_length[en], g3_length[ja], g3_length[ko], g4_vague_key_points[overall], g4_vague_key_points[zh], g4_vague_key_points[en], g4_vague_key_points[ja], g5_wrong_added_claims[overall], g5_wrong_added_claims[en], g5_wrong_added_claims[ja], g5_wrong_added_claims[ko], g6_correct_wrong_key_points[overall], g6_correct_wrong_key_points[zh], g6_correct_wrong_key_points[en], g6_correct_wrong_key_points[ja], g6_correct_wrong_key_points[ko], g8_hedging[en], g8_hedging[ko])
+IMPROVEMENT (as frozen, opus+sonnet): no (gv-grav-c4 passes at least as many gate cells as gv-grav-base (10 vs 17, need c4 >= base); attr net votes (c4 - base) > aa-c4 noise floor (-22, need > 6); c4 passes 10 of 36 gate cells, base 17 of 36; attr net -22 vs aa-c4 noise floor 6)
+IMPROVEMENT (amended, three judges): no (gv-grav-c4 passes at least as many cells as gv-grav-base (19 vs 31, need c4 >= base); attr net votes (c4 - base, three judges) > sqrt(2) x aa-c4 noise floor (-24, need > 14.142); c4 passes 19 of 52 cells, base 31 of 52; attr net -24 vs sqrt(2) x aa-c4 noise floor 10)
+IMPROVEMENT: no (as frozen: no; amended: no; both must say yes)
+VERDICT (as frozen, opus+sonnet): not a win (failing: g1_votes[overall], g1_votes[zh], g1_votes[en], g1_votes[ja], g1_votes[ko], g2_each_grader[overall], g3_length[overall], g3_length[zh], g3_length[en], g3_length[ja], g3_length[ko], g4_vague_key_points[overall], g4_vague_key_points[zh], g4_vague_key_points[en], g4_vague_key_points[ja], g5_wrong_added_claims[overall], g5_wrong_added_claims[en], g5_wrong_added_claims[ja], g5_wrong_added_claims[ko], g6_correct_wrong_key_points[overall], g6_correct_wrong_key_points[zh], g6_correct_wrong_key_points[en], g6_correct_wrong_key_points[ja], g6_correct_wrong_key_points[ko], g8_hedging[en], g8_hedging[ko])
+VERDICT (amended, three judges): not a win (failing: g1_votes[overall], g1_votes[zh], g1_votes[en], g1_votes[ja], g1_votes[ko], g2_each_judge[overall], g3_length[overall], g3_length[zh], g3_length[en], g3_length[ja], g3_length[ko], g4_vague_key_points[overall], g4_vague_key_points[zh], g4_vague_key_points[en], g4_vague_key_points[ja], g5_wrong_added_claims[overall], g5_wrong_added_claims[en], g5_wrong_added_claims[ja], g5_wrong_added_claims[ko], g6_correct_wrong_key_points[overall], g6_correct_wrong_key_points[zh], g6_correct_wrong_key_points[en], g6_correct_wrong_key_points[ja], g6_correct_wrong_key_points[ko], g7_trap_under_8[ja], g8_hedging[overall], g8_hedging[en], g8_hedging[ko], g9_requests[overall], g9_requests[zh], g9_requests[ja], g9_requests[ko], g10_mean_scores[zh])
+ROUND VERDICT: not a win (as frozen: not a win; amended: not a win; it counts as a win only if it wins on both)

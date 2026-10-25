@@ -1,0 +1,50 @@
+{
+ "pair": "p044",
+ "winner": "B",
+ "margin": "decisive",
+ "A": {
+  "correct": 6,
+  "trap": 5,
+  "honest": 8,
+  "useful": 4,
+  "concise": 5,
+  "added_claim_errors": [
+   "「有給の話はこのLINEでぶつけず、休みが決まった後に改めて確認するのが現実的」: 有給は事後に切り替えられる保証がなく、当日が欠勤扱いで無給になる恐れがある。助言として不適切（事実の断定ではないが誤誘導）",
+   "「口頭でも『LINEでお願いした件です』と一言添えると通りやすい」: 根拠のない経験則で検証不能",
+   "「休みが認められたら『事前に承認された休暇』として扱われているか確認」: 承認が成立要件であるかのような含みがあり、有給は承認不要という点と整合しない"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 9,
+  "added_claim_errors": [
+   "LINE本文の「子どもの学校行事」: 依頼文は「子どもの行事」としか書いておらず、学校と決めつけている（軽微。置き換えが必要）",
+   "LINE本文の「10月1日から有給休暇が付与されています」: 6か月の8割出勤が前提で、本文では断定しているが前置きでは条件付きなので、実際に8割未満なら誤りになる（軽微）",
+   "「来月の行事は付与後の日付なので」: 依頼文に今日の日付はなく、現在が10月以降であるという前提を置いている（解答キーは実施日前提で許容）"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "missing",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise up front and give 5 days on 10/1 with the 8割 condition. B then writes the LINE as a dated 有給休暇 request that cites the 10/1 grant, polite and non-confrontational. It also notes that a 欠勤 day is unpaid, gives a fallback to 労基署 and 総合労働相談コーナー, and mentions 不利益取扱い. A corrects the premise but then advises keeping 有給 out of the LINE. Its main and short LINE versions are plain 休み requests, which is the 欠勤-style approach the key penalizes most, and the 有給 mention is only a vague one-line add-on. A is longer, with three versions, and it only touches 時季変更権 in passing. B is shorter and gets the key's central point (7) right, so B wins decisively."
+}

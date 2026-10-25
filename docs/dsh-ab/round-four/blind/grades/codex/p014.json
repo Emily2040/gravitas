@@ -1,0 +1,52 @@
+{
+  "pair": "p014",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 9,
+    "honest": 5,
+    "useful": 6,
+    "concise": 4,
+    "added_claim_errors": [
+      "“10월 4일이 기한” asserts an exact deadline despite unresolved retirement-date interpretation and holiday adjustments.",
+      "“같은 법 제17조” incorrectly attributes the severance-payment delay interest rule; the key identifies Labor Standards Act Article 37 and Enforcement Decree Article 17.",
+      "“상여·연장수당이 전혀 없어서” invents the absence of overtime allowances; the request excludes only bonuses.",
+      "“고용노동부와 법제처도 … 해석합니다” gives no checkable link or document number supporting this specific attribution.",
+      "“실무에서는 두 방식이 갈리므로” presents the ordinary-wage floor as a negotiable alternative, although it is mandatory when applicable.",
+      "“퇴직소득세·지방소득세 약 20만~25만 원” contradicts the key’s estimated 94,000–141,000 won and incorrectly implies withholding upon IRP transfer.",
+      "“3년 이하 징역 또는 3천만 원 이하 벌금” uses the outdated penalty; the key specifies five years or 50 million won."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "vague",
+      "6": "vague",
+      "7": "correct"
+    }
+  },
+  "B": {
+    "correct": 8,
+    "trap": 9,
+    "honest": 7,
+    "useful": 7,
+    "concise": 5,
+    "added_claim_errors": [
+      "“회사는 평균임금 기준 1,024만 원으로 계산할 수 있습니다” misleadingly suggests the company may choose the lower calculation even when the ordinary-wage floor applies.",
+      "“퇴직소득세가 원천징수되어” incorrectly implies withholding at payment without distinguishing IRP transfers, for which withholding is deferred.",
+      "“3년 이하 징역 또는 3천만 원 이하 벌금” and its Article 44 attribution are outdated; the key specifies Article 43, five years or 50 million won."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "vague",
+      "6": "vague",
+      "7": "correct"
+    }
+  },
+  "reasons": "Both promptly reject the one-month deadline and unilateral extension, and their approximate calculations are arithmetically acceptable. B wins because it reproduces the key’s estimates more closely and avoids A’s unsupported overtime assumption, incorrect interest-law attribution, and excessive tax estimate. Both undermine the mandatory ordinary-wage floor by presenting competing calculations as discretionary, mishandle IRP taxation, and cite outdated penalties; their messages also omit the requested conditional IRP account guidance. This assessment uses the supplied packet, independently recomputed arithmetic, and general knowledge for routine procedural suggestions; no external sources were opened."
+}

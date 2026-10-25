@@ -1,0 +1,55 @@
+{
+  "pair": "p009",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 9,
+    "honest": 6,
+    "useful": 7,
+    "concise": 6,
+    "added_claim_errors": [
+      "\"$1,220+ evaporates on January 1\" incorrectly fixes forfeiture before the run-out deadline; timely claims for eligible prior-year expenses still count.",
+      "\"Many offer neither\" adds an unsupported claim about plan prevalence.",
+      "\"Usually ~90 days\" adds an unverified typical run-out deadline; the actual deadline is plan-specific.",
+      "\"All $1,900 stays usable, but only through March 15\" treats the maximum grace period as the actual period; plans may provide less time.",
+      "\"Confirm the office will charge before the 15th\" uses the payment date instead of the date care is provided.",
+      "Moving dental work into December \"uses 100% of the money\" assumes an unspecified dental cost.",
+      "\"Spending $1,500 ... to save $680\" misstates the spend-down tradeoff: eligible spending consumes the otherwise forfeitable balance, rather than merely saving the carryover."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "wrong",
+      "4": "correct",
+      "5": "vague",
+      "6": "wrong",
+      "7": "correct",
+      "8": "missing"
+    }
+  },
+  "B": {
+    "correct": 5,
+    "trap": 7,
+    "honest": 5,
+    "useful": 6,
+    "concise": 5,
+    "added_claim_errors": [
+      "\"Carried into next year (best case) ~$680\" overlooks the grace-period possibility of using all $1,900, despite acknowledging it later.",
+      "\"Carryover only happens if you're ... still enrolled\" presents a potentially plan-specific enrollment condition as universal.",
+      "\"If you change jobs, the whole balance ... is gone\" omits the COBRA exception and is overly absolute.",
+      "\"Usually have until March–April\" adds an unverified typical filing deadline; the actual run-out deadline is plan-specific."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "vague",
+      "3": "vague",
+      "4": "correct",
+      "5": "vague",
+      "6": "vague",
+      "7": "correct",
+      "8": "missing"
+    }
+  },
+  "reasons": "A gives the clearer opening correction and more accurate carryover explanation; independently recomputing $1,900 − $680 confirms $1,220. B adds unsupported universal enrollment and job-change restrictions and misleadingly labels $680 the best case. Both omit the 2027 election strategy and explicit warning against prepaying March dental work; A additionally confuses charging with receiving care and overstates the grace-period endpoint. Added claims were assessed against the packet and general knowledge, without external verification."
+}

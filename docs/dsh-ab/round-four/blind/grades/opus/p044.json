@@ -1,0 +1,47 @@
+{
+ "pair": "p044",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 5,
+  "honest": 7,
+  "useful": 5,
+  "concise": 5,
+  "added_claim_errors": [
+   "「休みが認められたら、「欠勤」ではなく「事前に承認された休暇」として扱われているか確認」: this is not a legal category. An approved day off that is not 年次有給休暇 is still unpaid, so the advice suggests a pay protection that does not exist.",
+   "「直前だと時季変更権の余地が広がります」: loosely plausible but stated as a rule. The law sets no notice period. My own judgement, no source opened."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "wrong",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "In the LINE draft, 「10月1日から有給休暇が付与されています」 is stated as fact, but the grant depends on the 8割 attendance condition. The answer gives that condition only outside the LINE (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "missing",
+   "7": "correct",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers correct the manager's claim and give the right specifics: a grant on 10月1日 after 6 months, 5 days for a 3-day week, and the 8割 attendance condition. A then tells the user not to raise paid leave in the message (「有給の話はこのLINEでぶつけず」). Its main and short LINE drafts ask only for a day off, which in practice leaves the user taking the unpaid absence the key penalises most. A is also padded, with three drafts and a long tips list. B's polite LINE asks for 有給休暇 on a specific date and says the leave can be used next month. It warns that dropping the paid-leave sentence would leave the day unpaid, and it adds brief fallback steps. Neither answer explains 比例付与 or says 「忙しい」 is not a reason to refuse. B leaves out 時季変更権 entirely, a smaller gap than A's main failure."
+}

@@ -1,0 +1,55 @@
+{
+ "pair": "p071",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "“合计约3,370元” (adds 大病/长护 about 54元 on top of 3,315.69 as cash): the key says these individual fees are deducted from the re-credited personal-account funds and are not paid as extra cash",
+   "“按现行口径，也不会缩短重新参保后的等待期”: stated as certain, but whether back-payment waives the waiting period is unverified in the key; it should be hedged with “ask the office”",
+   "长护险“45元/年”: a figure the key does not give, so unverifiable",
+   "Phone number “0571-89583017” for Hangzhou 医保: unverifiable (12393 is the known national hotline)",
+   "Quotes the Hangzhou rule as “参保缴费次次月”: the source wording is “自恢复缴费月起的第三个自然月”, so the quote is unverifiable even though the resulting month matches",
+   "“连续缴费年限：断缴超过3个月，重新参保时要重新计算”: presented as a general employee-insurance rule; the key places “连续参保年数重新计算” in resident insurance and treats only the waiting period and the 6-month maternity rule as real for Hangzhou employees, so this is overgeneralized",
+   "Car-plate lottery or house purchase “补缴一般不算连续”: outside the question and unverifiable"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "“国家医保局的口径也是：断缴3个月以内补缴，才不设等待期、可追溯待遇”: overbroad. 43号文 Art. 11 covers only cross-region transfer or a switch between employee and resident schemes with a gap of 3 months or less, not any gap. The conclusion that it does not apply to her is still right.",
+   "“另可能补扣大病保险48元/年、长护险等几十元”: implies an extra cash charge, while the key says these are deducted from the re-credited personal-account funds (hedged with 可能 and 以核定单为准, so a minor issue)",
+   "Procedure “补缴超过1个月通常要去医保经办窗口，带身份证、居住证或户口本、就业登记材料、补缴申请表” and the 浙里办 menu path: unverifiable procedural steps",
+   "“杭州职工医保的报销比例不跟‘连续年限’挂钩” and “杭州退休医保待遇不看20年以上的年限”: unverifiable claims not covered by the key"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers start by saying the 8 years are not cleared. Both get the Hangzhou retirement threshold right (local 10 years plus 20 years in total, a gap of 144 months, and 2 more years locally) and the waiting period that ends around January 2027. Both give 473.67元/month, 3,315.69元, the 2026-12-31 deadline and the retirement lump-sum figure of 743.60 / 5,205.20元. B quotes the rule's actual wording (第三个自然月) and adds the monthly deferred-payment option (443.75元). It also hedges the open question of whether back-payment waives the waiting period, as the key asks, though it overstates the scope of the national 3-month rule and never says outright that the new employer cannot back-pay. A states clearly that the new company cannot back-pay, but it inflates the total to about 3,370元 by adding the 大病/长护 fees as extra cash. It also asserts without hedging that back-payment will not shorten the waiting period and adds an unverifiable phone number and a car-plate tangent. Overall B is slightly more accurate and better calibrated."
+}

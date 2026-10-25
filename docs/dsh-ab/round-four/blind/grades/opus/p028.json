@@ -1,0 +1,47 @@
+{
+ "pair": "p028",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "「店側が変更できるのは本当に忙しくて回らないときだけです」: a loose paraphrase of the seasonal-change right. The legal test is 事業の正常な運営を妨げる場合, and the key says that simply being busy is not a reason, so framing it as busyness is imprecise.",
+   "「付与日や日数は就業規則にも書いてあるので」: 休暇 is a required item in 就業規則 (Art. 89), but the answer cannot know that this store's rules spell out the grant date and number of days. Unverifiable, minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 9,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Quotes the statute as 「業務の正常な運営を妨げる場合」. Article 39(5) and the cited Shizuoka Labour Bureau page say 事業の正常な運営 (I opened the linked page: it reads 「事業の正常な運営を妨げるような場合」). Minor misquote."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the false premise in their first line, and both give 10月1日 as the grant date and 5 days under the proportional grant. Both also say what to do if the manager refuses (check 就業規則, then 労基署 or 総合労働相談コーナー). B's LINE makes taking paid leave on the given date the main request, in a polite tone that asks the manager to confirm. A's LINE treats paid leave as an optional add-on to a general request for time off. A also invites the user to delete those lines and adds an unnecessary 急なお願い and an offer to swap shifts. B states the seasonal-change limit properly and makes clear the store cannot refuse outright, though it misquotes 業務 for 事業. A's 本当に忙しくて回らないとき leans toward busyness as a valid reason. B also adds a working link to an official source and a polite reply for a second refusal. A is shorter and more natural, but B covers the key points better."
+}

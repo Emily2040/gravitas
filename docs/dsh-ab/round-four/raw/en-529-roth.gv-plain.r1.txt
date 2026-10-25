@@ -1,0 +1,69 @@
+**Short answer: you can’t move the full $48,000 this year—and you can’t move all of it through this rule at all.** For 2026, a 529-to-Roth rollover is capped at **$7,500** for someone under 50, and the lifetime cap is **$35,000 per beneficiary**. So of the $48,000, at most **$35,000** can ever go into his Roth this way; **$13,000 cannot**.
+
+### The limits that apply
+
+| Rule | What it means for your son |
+|---|---|
+| **15-year account rule** | The 529 must have been maintained for him for 15 years. Opened in 2004, it satisfies this—assuming no beneficiary change or plan transfer restarted the clock. |
+| **5-year contribution rule** | Only contributions made before the 5-year lookback—plus earnings on those contributions—are eligible. For a December 2026 transfer, that generally means contributions made before December 2021. Ask the plan to calculate this. |
+| **2026 annual limit** | **$7,500**, or his taxable compensation if less. Reduced by any other 2026 IRA contributions he makes. |
+| **Lifetime limit** | **$35,000 per beneficiary**, across all 529 plans and all prior 529-to-Roth rollovers. |
+| **Roth owner** | The Roth IRA must be in **your son’s name**, not yours. |
+| **Transfer method** | Must be a **direct trustee-to-trustee transfer**. A check to you or your son and a later deposit is not the same thing. |
+
+The 2026 IRA limit is $7,500 per the IRS. The 529 rules are in [26 U.S.C. § 529(c)(3)(E)](https://www.law.cornell.edu/uscode/text/26/529), and the annual-limit interaction is in [26 U.S.C. § 408A](https://www.law.cornell.edu/uscode/text/26/408A).
+
+### Your realistic 2026 maximum
+
+Use the smallest of:
+
+1. **$7,500**;
+2. **his 2026 taxable compensation**—wages, salary, net self-employment income, etc.;
+3. the **5-year-eligible balance** in the 529; and
+4. **$7,500 minus any other 2026 IRA contributions** he has made.
+
+Examples:
+
+- He earns $7,500+ and has made no other IRA contribution: **$7,500**.
+- He earns $4,000: **$4,000**.
+- He earns $10,000 but already put $1,000 into a Roth IRA for 2026: **$6,500**.
+- He has no taxable compensation for 2026: **$0**. The 529 balance does not substitute for earned income.
+
+The usual Roth IRA income phase-out does not block this rollover, but the compensation requirement still does.
+
+### Steps to do it correctly
+
+1. **Call the 529 plan this week and get written answers.** Ask:
+   - Has the account been maintained for my son for the full 15 years without a beneficiary change or transfer that reset the clock?
+   - What dollar amount is attributable to contributions made before the 5-year lookback, plus earnings on those contributions?
+   - Does the plan support a direct 529-to-Roth rollover? What form, fee, and year-end deadline apply?
+   - Will it check **Box 4b** on Form 1099-Q for a 529-to-Roth transfer?
+
+2. **Confirm his 2026 compensation and other IRA contributions.** If he has no earned income, stop—there is no rollover this year. If he has other IRA contributions, subtract them from the $7,500.
+
+3. **Open or confirm a Roth IRA in his name.** He must be the owner. Get the account number, custodian mailing address, and any “letter of acceptance” the 529 plan requires. If he already has a Roth, use it.
+
+4. **Submit a partial direct trustee-to-trustee rollover request.** Request only the calculated amount—likely **$7,500**, not $48,000. State “2026 tax year” and “direct trustee-to-trustee transfer.” Do **not** request a check payable to you or your son.
+
+5. **Confirm receipt on both sides.** Get a 529 distribution statement and a Roth account statement showing the same amount arrived. If the amount or account title is wrong, correct it immediately.
+
+6. **Keep the paperwork.** Save the rollover form, the plan’s eligibility calculation, the 1099-Q, and the Roth statement. The 529 plan reports the distribution on **Form 1099-Q**; the Roth custodian should report the amount as a Roth contribution on **Form 5498**—generally Box 10, not as a taxable rollover. Check both forms in early 2027. The [Savingforcollege guide](https://www.savingforcollege.com/article/roll-over-529-plan-funds-to-a-roth-ira) walks through the mechanics and reporting.
+
+7. **Repeat annually.** At $7,500 per year, it would take five years to reach $35,000—roughly 2026 through 2030—assuming the annual limit stays the same. The remaining **$13,000** stays in the 529 or is used another way.
+
+### Deadline
+
+December 31 is **not** the federal deadline. A 2026 IRA contribution can generally be made until **April 15, 2027**, but 529 plans often have earlier year-end processing cutoffs, and the reporting is cleaner if the 529 distribution and Roth deposit both happen in 2026. Aim to submit by mid-November and confirm receipt by mid-December. See the IRS guidance on [IRA contribution deadlines](https://www.irs.gov/publications/p590a).
+
+### Do not do these
+
+- **Do not request the full $48,000.** The excess can be treated as a nonqualified 529 withdrawal—taxable earnings plus a 10% federal penalty—and as an excess Roth contribution subject to a 6% excise tax each year until corrected.
+- **Do not take a check payable to yourself or your son.** That is not a direct trustee-to-trustee transfer.
+- **Do not exceed his compensation** or the $7,500 annual limit.
+- **Do not ignore state tax.** If you claimed state income-tax deductions for 529 contributions, your state may recapture them or tax the earnings. Federal tax-free does not automatically mean state tax-free.
+
+### What about the other $13,000?
+
+It cannot go into his Roth through this rule. Options include keeping it for graduate school, a qualifying credential, or student loan repayment (up to $10,000 lifetime), changing the beneficiary to another family member—though that may restart the 15-year clock—or taking a nonqualified withdrawal, where contributions generally come out tax-free but earnings are taxable and may face the 10% penalty.
+
+This is general information, not personalized tax advice. Before submitting anything, have the plan confirm the eligible amount in writing and run the state-tax question past a CPA or tax preparer.

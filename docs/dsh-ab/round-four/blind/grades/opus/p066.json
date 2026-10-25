@@ -1,0 +1,52 @@
+{
+ "pair": "p066",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Describes the no-penalty exception as applying to coverage \"from an employer with 20+ employees\": imprecise, because employer size is not a condition of the SEP (it decides who pays first). Minor.",
+   "\"a few plans do [require Part B] for certain employee classes\": unverifiable, no source given.",
+   "\"coverage generally starts the month after Social Security processes your form\": imprecise. SEP coverage starts the month after sign-up (or a chosen later month), not after processing.",
+   "Premium given as \"roughly $185–$210/month\" rather than the 2026 figure of $202.90: vague, though not wrong."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "The Part B penalty \"applies to people who go without creditable coverage\": misleading. The Part B exemption needs a group health plan based on current employment. 'Creditable coverage' is a Part D idea, and retiree or COBRA coverage would not protect against the Part B penalty.",
+   "Tells the asker to apply at retirement \"using CMS-40B plus CMS-L564\" with no condition, after advising HSA holders to skip Part A. CMS-40B is wrong for someone without Part A; they must apply for A and B together through SSA.",
+   "\"sign up for Part D within 63 days\": imprecise. The Part D SEP runs 2 full months after coverage ends; 63 days is the penalty threshold.",
+   "Links penalty-free delay to being \"above the 20-employee threshold\": imprecise, because size is not an SEP condition. Minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start and tell the asker to hold off on Part B. Both give sound HR questions and auto-enrollment guidance, and both miss the exception for a job that ends during the IEP. A is more complete. It explains that Part A is backdated up to 6 months, which matters for an HSA, and that Part B starts the Medigap window. It also says to apply the month before coverage ends and names CMS-L564. B leaves out the HSA backdating risk and Medigap entirely. B also adds two errors: it frames the Part B penalty as depending on 'creditable coverage', and it recommends CMS-40B without conditions even for someone who deferred Part A. Neither gives the exact $202.90 premium. A is somewhat longer but still easy to act on."
+}

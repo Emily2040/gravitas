@@ -1,0 +1,49 @@
+{
+ "pair": "p022",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Ties the no-penalty delay to the 400 employees ('well over Medicare's 20-employee threshold... it lets you delay Part B'). Under 20 employees, says 'you'd need to enroll'. This is imprecise: the SEP doesn't depend on employer size; size only decides which plan pays first (minor, per key).",
+   "'you might need a Part D plan, and possibly Part B to get it': imprecise. Part D needs Part A or Part B, so someone who has premium-free Part A doesn't need Part B for it (hedged, minor).",
+   "'(some do; most don't)' on plans requiring Medicare at 65: an unsourced generalization, though plausible."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "'When your coworker would be right: ... an employer under 20 employees ... missing your Initial Enrollment Period can trigger the 10%-per-year penalty': imprecise or wrong. The SEP for current-employment GHP coverage doesn't require 20+ employees; size only sets which plan pays first (minor, per key).",
+   "The question about whether the plan will 'carve out' benefits for Medicare-eligible employees who aren't enrolled suggests a 20+ employer may do this to active employees, but Medicare Secondary Payer rules generally forbid it (judged from my own knowledge; harmless as a question)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers open by rejecting the coworker's premise ('Don't enroll in Part B this month'). Both give the correct $202.90/month (about $2,435 a year) premium, the 8-month SEP and the HSA warning with 6-month Part A backdating. Both miss the IEP-end exception and the Medigap open-enrollment clock. A is tighter and includes the 2-month Part D window at retirement, which B lacks. B adds several correct, actionable specifics: the November 1 start if enrolled now, the 2024-MAGI IRMAA thresholds of $109,000 single and $218,000 joint, the $283 deductible, CMS-1763 for undoing an active enrollment, an explicit 'not retiree or COBRA' check with HR, the GEP fallback, and SHIP. Both slip slightly by tying the SEP to the 20-employee line, and B says it a little more explicitly. B's broader correct guidance outweighs its extra length, but only slightly."
+}

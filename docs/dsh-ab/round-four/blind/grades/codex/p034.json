@@ -1,0 +1,47 @@
+{
+  "pair": "p034",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 8,
+    "honest": 8,
+    "useful": 7,
+    "concise": 5,
+    "added_claim_errors": [
+      "‘소액체당금’ is an outdated name for 간이대지급금 (general knowledge); the current scheme should be identified."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "vague",
+      "4": "vague",
+      "5": "missing",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 5,
+    "honest": 6,
+    "useful": 6,
+    "concise": 4,
+    "added_claim_errors": [
+      "‘7~9월 석 달이면 이 요건을 넘고’ incorrectly treats three late-payment months as sufficient without establishing qualifying delay days or unpaid amounts.",
+      "‘2년 근무면 150일분’ ignores the 180-day entitlement for people aged 50 or older or with disabilities.",
+      "‘하루 6만6,048~6만8,100원’ presents the eight-hour minimum without establishing daily working hours.",
+      "‘조기재취업수당(남은 급여의 절반, 12개월 이상 근무 시)’ omits the required 14-day interval after reporting unemployment and at least half the benefit days remaining."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "vague",
+      "4": "wrong",
+      "5": "vague",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "reasons": "Both answers immediately correct the voluntary-resignation premise, but A avoids B’s central error of treating three months with late payments as automatic satisfaction of the qualifying threshold. B provides useful amounts, but assumes age and working hours and incompletely describes the reemployment allowance; its approximate monetary arithmetic otherwise checks out. Both omit the concrete delay-day test, the seven-day waiting period, and livelihood loans, and both describe the 12-month benefit window too loosely as an application deadline. A wins for better calibration, although neither is sufficiently brief or complete."
+}

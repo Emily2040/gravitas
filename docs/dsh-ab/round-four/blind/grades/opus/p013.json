@@ -1,0 +1,50 @@
+{
+ "pair": "p013",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Table row '合同沿用旧“本人工资=实得工资 70%”口径 8000×70%×80%=4480元': garbled. The old 70% base was a fallback in the old 工资支付办法, used only when no wage was agreed. It was not a '实得工资70%' rule. The answer offers it only as a contract scenario, so this is a minor error.",
+   "Cites '沪劳保发〔2000〕14 号'; the key gives 沪劳保保发〔2000〕14号. A also says flatly that it '已于 2026 年 8 月 15 日到期失效', while the key says this lapse is only presumed, with no official statement.",
+   "'第九条，只规定了病假工资的计算基数': incomplete. Per the key, article 9 also obliges the employer to pay sick-leave wages, which A itself cites in the HR message."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "'旧标准还有一个容易忽略的细节：基数要先按正常工资的70%计算，所以按旧口径是 8000×70%×80%=4480元，并非6400元': wrong. The 70% base applied only as a fallback when no wage was agreed. With an agreed 8000 wage, the old bracket gives 6400, which the key states explicitly.",
+   "Table row '旧规满4年（2026年8月15日前）8000×70%×80% = 4480元': repeats the same error as the old legal standard.",
+   "'应发是2192元左右、扣掉个人社保和公积金后实发800元：公司是按最低线在发': implies the company is compliant. The majority view in the key is that the minimum excludes personal contributions, so take-home pay should not fall below 2192. B adds only a light hedge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers reject the \"company decides\" premise at the start. Both explain that 83号 lapsed on 2026-08-15 and give the correct floor of 2740×80% = 2192, a shortfall of 1392. A also correctly says that a contract or handbook copying the old 4-6 year bracket gives 8000×80% = 6400, and it notes the medical-period protection. Its HR message cites 309号第59条 and 10号第九条 and asks for the base and the legal basis. B confidently says the old standard was 4480, \"并非6400元\", by applying a 70% base as if it were mandatory. That contradicts key point 4. On the 应发 vs 实发 question, B also leans toward treating 2192 gross with deductions as compliant, and its HR message cites no articles. Neither answer covers what the base includes or the ÷21.75 daily formula. A is longer than needed but more accurate and easier to act on."
+}

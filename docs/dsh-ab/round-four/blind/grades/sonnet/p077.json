@@ -1,0 +1,52 @@
+{
+ "pair": "p077",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "States the 2192 floor as 应发 ('法定下限是 2192 元/月（应发）') as settled. The key says there is no official position after 14号 lapsed and the majority view is that the floor excludes personal contributions.",
+   "Concludes that if 800 is the net pay, 'Company may just meet the floor, no shortfall'. That adopts the minority view as the result and omits the majority view that net pay below 2192 is still unlawful.",
+   "'此后上海不再强制按工龄分档' is stated flatly. The key says only that no replacement was found and that the search was not exhaustive.",
+   "'可以在 1 年内申请劳动仲裁' is oversimplified. Per the key, wage arrears claimed while still employed are not subject to the one-year limit."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "Table row 3 says a company copying the old Shanghai method pays '8000 × 70% × 80% = 4480元' ('先按实得工资70%，再按4—6年80%'). The key says 83号 gives 80% for a 4-year employee, so 8000 × 80% = 6400. The 70% stacking is an invented rule and is also the 70% error the key penalises.",
+   "'为什么不再是当然的6400元' implies the old 83号 method gave 6400, which contradicts its own table showing 4480 for the old method. The two figures are inconsistent.",
+   "Treats 800 as a gross figure ('公司只发800元，至少少发1392元') and never raises whether it is gross or net. A user whose 800 is net pay gets no guidance.",
+   "'不再统一适用' is stated without noting that no replacement document was found. This is minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise up front, give the 2740 × 80% = 2192 floor and the 1392 shortfall, and say 83号 and 14号 lapsed on 2026-08-15. Both also point to the contract and handbook and mention 12333, labour inspection and arbitration. Answer A covers the gross-versus-net question (about 840 social insurance plus 400–560 housing fund leaves roughly 790–950, which I rechecked as correct) and asks HR to confirm the gross figure. Its weaknesses are that it states 2192 as gross without noting the dispute, leans on the minority view in the net case, and never gives the 6400 figure or the base rules. Answer B gives 6400 and a partial base caveat, but its table invents a 4480 'old Shanghai method' (70% × 80%), which contradicts the key and its own 6400 reasoning. B also never raises gross versus net. A is therefore the more reliable and more useful answer, though neither HR message cites 309号 art. 59 or 10号 art. 9 in the message body or asks for the pay itemisation."
+}

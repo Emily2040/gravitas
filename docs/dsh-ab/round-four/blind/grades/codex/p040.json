@@ -1,0 +1,49 @@
+{
+  "pair": "p040",
+  "winner": "A",
+  "margin": "slight",
+  "A": {
+    "correct": 7,
+    "trap": 8,
+    "honest": 7,
+    "useful": 8,
+    "concise": 7,
+    "added_claim_errors": [
+      "\"Some do; most don't\": the claim about how many employer plans require Medicare enrollment is unsupported.",
+      "\"CMS-L564 form (your employer fills it out)\": incomplete allocation; the applicant completes Section A and the employer Section B.",
+      "\"If you're not on Social Security, nothing is automatic\": overlooks automatic enrollment through Railroad Retirement Board benefits."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "vague",
+      "3": "correct",
+      "4": "vague",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing",
+      "8": "vague"
+    }
+  },
+  "B": {
+    "correct": 7,
+    "trap": 8,
+    "honest": 8,
+    "useful": 7,
+    "concise": 8,
+    "added_claim_errors": [
+      "\"You'll need it\" about an HR letter: overstates a particular document as required; the key specifies CMS-L564.",
+      "\"If you're not on Social Security, nothing happens automatically\": overlooks automatic enrollment through Railroad Retirement Board benefits."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "vague",
+      "3": "vague",
+      "4": "vague",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing",
+      "8": "vague"
+    }
+  },
+  "reasons": "A narrowly wins by supplying the correct premium, an accurate rounded annual cost ($202.90 × 12 = $2,434.80), the Part D enrollment deadline, and CMS-L564. B more clearly excludes COBRA and retiree coverage and instructs the user to defer Part A while contributing to an HSA. Both catch the central premise immediately but omit the IEP-end exception, enrollment while still working, precise SEP timing, Medigap consequences, and important HSA and later-application details. The Railroad Retirement Board corrections rely on general Medicare enrollment knowledge; no external sources were opened."
+}

@@ -1,0 +1,54 @@
+{
+ "pair": "p048",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "\"7~9월 석 달이면 이 요건을 넘고\" is stated flatly. The test is a 60-day total of late or unpaid days, so three months does not automatically meet it. The key calls this an overstatement.",
+   "\"2년 근무면 150일분이 나오고\" gives no age condition. It is 180 days for someone aged 50 or over or disabled, so the figure is unqualified.",
+   "\"이 기간은 회사 사정으로 늘어나지 않아요\" is plausible but unverified. The 12-month period can be extended in some cases, such as illness.",
+   "\"진정 결과는 실업급여 심사에도 도움이 됩니다\" is unverifiable.",
+   "\"조기재취업수당(남은 급여의 절반, 12개월 이상 근무 시)\" leaves out the requirement that at least half of the benefit days remain. This is a simplification.",
+   "The imaeil.com link cited for the 2026 figures was not opened. The figures themselves (66,048 and 68,100 won a day, about 198만 to 204만 won a month, about 1,000만 won in total) match the key and the arithmetic checks out. The 1350.moel.go.kr link was opened and is a real Q&A page on the 2-month wage-arrears rule.",
+   "The answer is long for a request that asked for short advice. It adds extra material such as 지연이자 and 연차수당."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 8,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"이직확인서를 회사가 안 써주면 고용센터에 발급 요청하면 됩니다\" is imprecise. The employment center asks the employer to file it, and the key says the claim can be filed without it.",
+   "\"순서는 체불임금 회수 → 수급자격 신청\" and \"체불임금·퇴직금 회수를 최우선으로\" put the benefit application second. The key says to apply right away, because the 12-month period is running.",
+   "\"지자체 생계비 지원\" is vague and does not name the 생계비 융자 (living-expense loan) of up to 1,000만 won.",
+   "No 간이대지급금, no amounts and no 소정급여일수 are given. These are omissions and not errors.",
+   "The 1350.moel.go.kr link was opened. It is a real Q&A page that covers the 2-month wage-arrears rule, so it supports the claim."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start. Both cite 별표 2 and the 2-month wage-arrears rule, and the 1350 pages they link are real. Neither gives the 60-day total of late days as the test. A states that three months \"넘고\" the requirement, which is the overclaim the key warns about. B hedges with \"가능성이 높으니\" and sends the person to the employment center, so it is slightly better on honesty. A wins because it covers more of the key. It says to apply first, with the 12-month window and the 조기재취업수당. It gives correct 2026 amounts (66,048 to 68,100 won a day, about 1,000만 won in total). It lists 진정 with 1350, the 14-day deadline, 20% late interest and 간이대지급금. B gives no amounts, no 간이대지급금 and no early-reemployment allowance, and it ranks 체불 recovery ahead of applying for the benefit. A is longer than the request wanted, so the margin is clear and not decisive."
+}

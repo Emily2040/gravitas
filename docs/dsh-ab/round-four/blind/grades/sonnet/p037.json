@@ -1,0 +1,53 @@
+{
+ "pair": "p037",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 7,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "'근저당과 선순위 임차인 보증금 합계가 집값의 70~80%를 넘으면 위험 신호': unsourced rule-of-thumb threshold, unverifiable",
+   "'계약 후 잔금 사이에 근저당을 추가하는 경우가 흔합니다': unsourced frequency claim",
+   "'전세권 설정 등기: 확정일자보다 강하지만': leaves out that it needs the landlord's cooperation (민법 제621조), so the tenant cannot do it alone; mildly misleading",
+   "Adds '계약서·잔금 영수증 지참' for 전입신고 and 'HUG·SGI' as guarantee providers with no source; plausible but unverified"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites a 울산 남구 대현동 page for 확정일자. I opened it: it confirms 수수료 600원 and 계약서 원본, but it does not say the two can be done at the same visit, and it is another city's office, not Seoul",
+   "Cites a 대법원 PDF (file.scourt.go.kr/dcboard/1529376352496_114552.pdf) for the next-day-0시 rule. I could not read its text, so this is unverifiable",
+   "'도장(서명)' listed as a required item: a seal is not generally required for 확정일자; minor",
+   "'주민센터에서 전입세대 열람으로 선순위 임차인도 확인 가능': plausible, but it needs a contract or landlord consent and the answer does not say so; unverified",
+   "'HUG·HF' as 반환보증 providers: HF is plausible, not verified",
+   "Step 1 timing '나가기 전·도착 직후' with no 잔금 step: ambiguous, can be read as checking after the balance is paid",
+   "'부동산 말은 절반만 맞습니다': softens a premise that is wrong on the point that matters"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers correct the 'only 전입신고' premise and separate 대항력 from 우선변제권 (확정일자). B also corrects the 'whenever I have time' premise directly ('시간 날 때가 아니라 이사 당일') and gives the reason: because of the 다음 날 0시 rule, a mortgage can come in during the delay. A only implies this with '바로' and '금요일 안에'. B gives the 600원 fee, 계약서 원본 and 신분증, and the instruction to keep the 주민등록 until the deposit is returned. A has the better order for the day (등기부 before the balance, then balance and keys, then 전입신고 and 확정일자), but it leaves out the fee, the keep-residence advice and any explicit 'do not delay' correction. Neither mentions 최우선변제 (2억 exceeds the 서울 1억 6,500만 원 limit) or the 임대차 신고, and neither gives 재열람 the next day. B is longer than a request for a short list warrants, and one of its two source links could not be read, but its added claims are mostly checkable or harmless."
+}

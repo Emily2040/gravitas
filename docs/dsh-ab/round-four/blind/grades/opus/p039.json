@@ -1,0 +1,49 @@
+{
+ "pair": "p039",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 8,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "Advises checking that the day is treated as 「事前に承認された休暇」 rather than 欠勤. That is not a legal category: an approved unpaid day off is still unpaid, so it is no substitute for designating paid leave, and it misleads.",
+   "「有給の話はこのLINEでぶつけず、休みが決まった後に改めて確認する」: the worker designates paid leave in advance (時季指定), and turning an approved unpaid day into paid leave afterwards is not guaranteed, so this advice can cost the worker the paid day."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 8,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "「子の看護休暇は病気・けがの看護」 and 「子どもの学校行事そのものを保障する法律はありません」 are outdated (my own knowledge): since 2025-04-01 the leave is called 子の看護等休暇 and also covers entrance and graduation ceremonies and class closures for children up to the end of 3rd grade of elementary school. The claim is minor and peripheral.",
+   "Opens with 「文面はこれで大丈夫です」 as if reviewing a draft the user never sent. This confuses the reader but is not a factual error.",
+   "The LINE changes the user's 「子どもの行事」 to 「学校行事」, which assumes school; it may be a daycare event (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the manager's claim at the start and give the right facts: Art. 39, six months plus 80% attendance, grant on Oct 1, 5 days. Both then write a neutral day-off request as the main LINE rather than a dated request for 年次有給休暇. B covers more of the key correctly. It names 比例付与, ties use next month to the condition that the month is October or later, and states that the employer can only shift the date when 事業の正常な運営を妨げる. It also cites a checkable Wakayama Labor Bureau page (I opened it and it supports the 6-month/80% rule) and supplies a concrete sentence for asking to apply paid leave. A tells the person to raise paid leave only after the day off is settled, which risks losing the paid day, and its optional line only vaguely mentions 休暇の扱い. B loses some ground for its odd opening and an outdated aside on 子の看護休暇."
+}

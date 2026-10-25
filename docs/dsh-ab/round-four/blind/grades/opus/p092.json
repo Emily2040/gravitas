@@ -1,0 +1,49 @@
+{
+ "pair": "p092",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"risks forfeiting roughly $1,220–$1,240\": the $1,240 end uses the 2025 $660 cap. That cap does not apply to a plan year ending Dec 31, 2026, which uses $680 and gives $1,220 (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"the carryover only happens if you're still employed and still enrolled in the FSA in the new plan year\": whether you must enroll again depends on the plan (key: unverified, varies by plan), yet B states it as a universal rule.",
+   "\"If you change jobs, the whole balance — carryover included — is gone\": leaves out the COBRA exception (minor).",
+   "The table labels $680 carried over as the 'best case' and $1,220 forfeited as the 'realistic math' before the grace period is mentioned. Under a grace-period plan nothing need be lost, so this understates that branch (framing, minor).",
+   "\"you usually have until March–April to submit receipts\": run-out deadlines vary by plan. This typical range is unverified (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct the rollover premise at the start, give the 2026 $680 carryover cap and the roughly $1,220 forfeiture, and send the person to HR to ask about the plan's feature and the claims deadline. A explicitly warns against prepaying in December for March work because the service date controls (key point 6). A also lays out a clean three-branch plan, including confirming the grace-period end date and what happens if the appointment falls after it, and it stays short as the person asked. B gives a richer list of things to spend on but never states the prepayment rule. B also states that carryover always requires enrolling again, opens with a forfeiture table before mentioning the grace period, and runs long for a 'quick plan'. Neither answer points to the 2027 election at open enrollment for the March work."
+}

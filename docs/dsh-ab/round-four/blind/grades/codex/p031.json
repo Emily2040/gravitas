@@ -1,0 +1,50 @@
+{
+  "pair": "p031",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+    "correct": 6,
+    "trap": 8,
+    "honest": 6,
+    "useful": 6,
+    "concise": 4,
+    "added_claim_errors": [
+      "\"Part D is 63 days\" confuses the penalty threshold with the enrollment deadline: the key specifies 2 full months after coverage ends.",
+      "\"If you don't have 40 quarters, Part A carries a premium\" ignores qualification through a spouse's work history.",
+      "\"Covering little your plan doesn't already cover\" is unsupported without knowing the employer plan's benefits.",
+      "\"Six-month Medigap open enrollment ... (in most states)\" misleadingly qualifies a federal protection for this 65-year-old."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "correct",
+      "3": "vague",
+      "4": "vague",
+      "5": "correct",
+      "6": "vague",
+      "7": "missing",
+      "8": "wrong"
+    }
+  },
+  "B": {
+    "correct": 7,
+    "trap": 8,
+    "honest": 8,
+    "useful": 7,
+    "concise": 8,
+    "added_claim_errors": [
+      "\"You'll need\" an HR letter overstates a requirement; the key specifies CMS-L564, not a mandatory separate letter.",
+      "\"If you're not on Social Security, nothing happens automatically\" is too broad: Railroad Retirement beneficiaries can also be automatically enrolled (assessed from my own knowledge)."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "vague",
+      "3": "vague",
+      "4": "vague",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing",
+      "8": "vague"
+    }
+  },
+  "reasons": "Both immediately correct the coworker's premise, but B gives a more focused checklist and avoids A's incorrect Part D deadline and categorical Part A eligibility claim. A supplies useful premium and Medigap details; its annual premium rounding checks out because $202.90 × 12 = $2,434.80. Both omit the IEP-ending exception, complete HSA timing instructions, and the retirement application routes and forms. B wins narrowly because its safer, shorter guidance outweighs its missing cost and Medigap specifics."
+}

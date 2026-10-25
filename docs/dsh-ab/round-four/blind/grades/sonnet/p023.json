@@ -1,0 +1,56 @@
+{
+ "pair": "p023",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Quotes 劳部发〔1997〕271号第四条 ('应另外支付不低于工资的300%') and 第五条 as primary sources; I could not find these article texts, and the 300% rule is normally traced to 劳动法第44条第3项 / 劳部发〔1995〕309号第62条. Unverifiable and possibly misattributed.",
+   "Cites 山东高院〔2018〕鲁民再154号 as a duty (值班) case with a 'approval is only a managerial rule' reasoning, with no link. Unverifiable.",
+   "Cites 北京高院2024年解答(一)第56条 on 值班 overtime, with no link or text. Unverifiable.",
+   "Asserts '北京主流裁审不这么看' with no source. Unsupported generalisation.",
+   "Says Beijing uses 'normal labour earnings' as the overtime base and 'cannot use only basic salary'. The key says the base is the contract-agreed wage (not below minimum wage), so this is over-assertive and may contradict the key.",
+   "Gives a specific Scenario-B figure ('最多约2482.76元', total up to 6206.90元) although the key says it cannot be computed from the given information; hedged as an upper bound but still a headline number.",
+   "States the gap between the two methods as 827.59元; 3310.34 - 2482.76 = 827.58, so off by one cent.",
+   "'工资里已经包含加班费……法定节假日部分不能包干' and the advice to apply for 政府信息公开 to check the approval are given without any source."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Gives a specific Scenario-B figure ('按这4天32小时全超时粗算约2,482.76元') although the key says it cannot be computed from the given information; hedged as a rough upper bound ('若周期内总工时没超就是0').",
+   "Puts quotation marks around '安排劳动者在法定休假日工作的,按300%' and calls it Beijing's rule. The linked gov.cn page is the 北京市工资支付规定 (I opened it), but its Article 16 text only says to pay under Article 14(3), i.e. 300%. Paraphrase presented as a quote; minor.",
+   "Says 'the company got two things wrong' but lists three numbered points. Minor inconsistency.",
+   "The 北京三中院法官 calculation link and the 光明网 link were not opened and are unverified. The 丰台法院 link was opened and supports the claims that unapproved agreements are invalid and that an expired approval reverts to standard hours."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start and reach the right Scenario-A figures: 3724.14 for the three holidays, 3310.34 for the four rest days, 7034.48 in total, paid on top of the 9,000 monthly wage. Both also say that an approved comprehensive-hours system still leaves 300% holiday pay. Both give a specific Scenario-B number (about 2482.76), which the key says cannot be computed, and neither gives the standard-hours totals. A has more statute detail (Labour Law Article 39, the 157 articles, the 2019 case, and the make-up workdays). It is much longer, though, and it carries several unverifiable citations (劳部发〔1997〕271号第四、五条, 鲁民再154号, the 北京高院 2024 解答第56条), a base-wage claim that leans away from the key, and a one-cent arithmetic slip (827.59). B is tighter and states the compensatory-leave outcome outright (3724.14 only). It cites Labour Contract Law Article 26 and gives checkable links (the two I opened support its claims). It omits the make-up workdays and the Labour Law and 157 article numbers. The tilt to B comes from concision and cleaner sourcing, not from stronger substance."
+}

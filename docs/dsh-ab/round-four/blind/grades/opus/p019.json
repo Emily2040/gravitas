@@ -1,0 +1,49 @@
+{
+ "pair": "p019",
+ "winner": "B",
+ "margin": "decisive",
+ "A": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 7,
+  "useful": 5,
+  "concise": 9,
+  "added_claim_errors": [
+   "「雇い入れから6か月たつと法律上の有給休暇が付きます」: overstated, because it leaves out the second requirement (80% attendance) under 第39条第1項",
+   "「付与日数は就業規則か給与明細で確認できます」: defers the number to workplace documents when the statutory number is fixed (5 days under 施行規則第24条の3), and a 給与明細 does not necessarily show the leave balance",
+   "「急なご相談で申し訳ありません」: the event is next month, so calling it a sudden request is inaccurate (minor wording issue, not a legal error)"
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "missing",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Quotes the condition as 「業務の正常な運営を妨げる場合」, but 第39条第5項 and the linked Shizuoka Labour Bureau page (which I opened) say 「事業の正常な運営を妨げる」. Minor misquote",
+   "Says 「所定労働日の8割」 where the statute says 全労働日. Close in practice; very minor"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the manager's claim. B gives the specifics a person needs: both statutory requirements, the 5-day grant, the 10月1日 grant date, the 80% attendance condition, and the limit on the employer's 時季変更権. Its LINE message asks for the dated day as 有給休暇 in a polite tone with no threats, and it keeps the fallback steps (就業規則, 労基署, 総合労働相談コーナー) outside the message. I opened B's cited Shizuoka Labour Bureau link and it supports B's content; the only flaw is a small misquote of 事業 as 業務. A leaves out the 80% condition, the number of days and the 時季変更権 point. Its main LINE draft deliberately avoids requesting paid leave, which leaves the person close to the trap. A is shorter, but it is clearly less correct and less usable."
+}

@@ -1,0 +1,51 @@
+{
+ "pair": "p023",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "劳部发〔1997〕271号「第四条」(holiday 300%, no comp leave) and「第五条」(cycle 150%, holidays per Art 44(3)): the content is real, but the article numbers look shifted by one; to my knowledge these are items 3 and 4 of that reply letter",
+   "「山东高院〔2018〕鲁民再154号」said to hold that approval rules are only management rules and the agreement stays valid, in a duty-shift case: case number and holding unverifiable, no link given",
+   "「北京高院2024年解答（一）第56条」on duty shifts not earning overtime pay: article number and wording unverifiable, no link",
+   "Scenario B 「最多再拿约2482.76元，合计最多约6206.90元」: puts a cap on the 150% amount, but the key says it cannot be computed from the facts given, and cycle overtime is not limited to these 32 hours",
+   "「实际发放高于合同约定的，按实际发放」for the overtime base: unverifiable, and it conflicts with the key (base is the contract wage, Beijing wage regulation Art 44)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Scenario B 「按这4天32小时全超时粗算约2,482.76元…有审批时这7天大约在3,724～6,207元之间」: gives a concrete 150% range, but the key says it cannot be computed; it is softened as a rough estimate",
+   "Puts quotation marks around paraphrased wording from the Beijing wage regulation (「安排劳动者在法定休假日工作的，按300%」); the actual Art 16 text points to Art 14(3) and does not say '300%'. The substance is right; I opened the gov.cn link to check."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers reject the 'contract signed, nothing to be done' premise, split the 3 statutory days (300%) from the 4 rest days (200%), and reach the right totals: 3724.14 + 3310.34 = 7034.48 yuan on top of the 9000 salary. Both lose points for putting a figure on scenario B's 150% (about 2482.76 yuan, range up to about 6207 yuan), which the key says cannot be computed. B rebuts the user's premise in its first sentence and cites Labor Contract Law Art 26. It also says the 4 rest days drop out if comp leave was given, notes that Oct 3 falls on a Saturday but is still a statutory holiday, and that arbitration is free. Its three links I opened (Fengtai court article, Beijing wage regulation, Third Intermediate Court judge's formula) all exist and support what B says. A cites more of the approval rules (Labor Law Art 39, 157号, the 2019 case) and names the make-up workdays. But it is much longer, with a rebuttal list and padding, and it adds citations I could not verify or that look misnumbered (271号 article numbers, 鲁民再154号, 北京高院 Art 56)."
+}

@@ -1,0 +1,51 @@
+{
+ "pair": "p008",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 10,
+  "honest": 7,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"설령 합의로 미뤘더라도 지연이자는 원칙적으로 그대로 붙어요(고용노동부 행정해석)\": cites a ministry interpretation with no document number or link, so the source cannot be checked",
+   "\"회사가 퇴직연금(IRP)에 가입한 경우에는 지급 방식이 조금 다르지만\": wrong framing. A company does not join an IRP, and the key says mandatory IRP transfer (over 300만 원, under 55) applies to plain 퇴직금 too, not only to pension-plan members",
+   "\"3년 이하 징역 또는 3천만 원 이하 벌금 (제44조)\": outdated. Since 2026-09-18 it is 제43조, 5년/5천만 원 (minor deduction per key)",
+   "Deadline \"10월 4일\" stated as fixed: the key says the deadline falls between 10/3 and 10/6 depending on how the retirement date and holidays are counted (minor)",
+   "\"정확한 재직일수에 따라 1,020만~1,030만 원 사이\": presents a narrow range as the answer and leaves out the ordinary-wage floor, which can raise the amount to about 1,202만 원"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 10,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"3년 이하 징역 또는 3천만 원 이하 벌금(같은 법 제44조 제1호)\": outdated. Since 2026-09-18 it is 제43조, 5년/5천만 원 (minor deduction per key)",
+   "\"연 20%의 지연이자(같은 법 제17조 제3항, ...)\": mis-citation. 퇴직급여법 제17조 covers DB pension benefits; the delay interest on 퇴직금 comes from 근로기준법 제37조 and 시행령 제17조",
+   "\"3개월 총일수 약 89~92일\": the three months before a 9/20 last workday (6/21~9/20) are exactly 92 days. 89 days does not apply here and inflates the upper estimate to 1,060만",
+   "\"재직기간 3년 2개월 ≈ 1,155일\": the key counts 1,158 days. Small effect on the total (minor)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the company's claim: the deadline is 14 days, and an extension needs a special reason plus the employee's agreement, so neither fell for the premise. A's average-wage calculation is more exact (92 days, 107,609원, about 1,022만). But A leaves out the ordinary-wage floor entirely, presents 1,020~1,030만 as the answer, gets the IRP rule wrong, and its message has no IRP information and a soft line about the company's difficulties. B is looser on the average-wage figure (89~92 days) and miscites 제17조 제3항. But B states the 126,316원 ordinary-wage floor and the resulting figure of about 1,200만, includes the IRP account in the message, and points to the correct complaint channels (노동포털, 1350, the local labour office). Both cite the outdated 제44조 penalty of 3년/3천만. B is longer than needed because it gives two message versions, but it covers more of the key."
+}

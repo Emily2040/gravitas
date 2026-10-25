@@ -1,0 +1,52 @@
+{
+ "pair": "p035",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Links to a Ulsan Nam-gu dong office page and a scourt.go.kr PDF are given as sources. They are checkable but unverified here, and the first is a different city's page.",
+   "\"계약 후 이사 사이에 설정되는 경우가 많습니다\" is a frequency claim with no source.",
+   "\"준비물: ... 도장(서명)\" is not a required item, though harmless.",
+   "The \"전입세대 열람으로 선순위 임차인도 확인 가능\" tip is not in the key. It is plausible but unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"확정일자는 주민센터에서 무료\" is wrong. The key gives a 600 won fee for a walk-in 확정일자.",
+   "Telling the user to fall back to 정부24 전입신고 and 인터넷등기소 확정일자 after hours skips the risk that an online 확정일자 filed after 18:00 is dated the next business day. The key flags this, and the answer does not.",
+   "\"운영시간(보통 09:00~18:00)\" is a general claim. The key says hours differ by dong.",
+   "\"빌라는 근저당이 잡힌 경우가 적지 않아\" is an unsourced generalization.",
+   "The HUG/HF note on 위반건축물 and \"임대인 협조 필요 여부\" is unsourced. It is plausible but unverified.",
+   "The law.go.kr link and statute citations are plausible but not verified here."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "correct",
+   "5": "wrong",
+   "6": "correct",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers open by correcting the first premise: 전입신고 gives only 대항력, and 우선변제권 needs 확정일자. Both also give a sensible move-day sequence. Neither mentions 최우선변제 being unavailable at 2억 원 or the 임대차 신고 requirement. A explains why \\\"시간 날 때\\\" is wrong (대항력 starts at 0:00 the next day, so a mortgage can slip in), but only in its closing section. A also gets the 600 won fee right and tells the user to keep their registration at the address until the deposit is returned. B handles both premises up front, but says 확정일자 is free, which contradicts the key's 600 won. B also suggests the online fallback after hours without the next-business-day caveat. It does include a 잔금 and account-name check that A lacks. A is slightly ahead on correctness, and B is slightly ahead on putting the traps first."
+}

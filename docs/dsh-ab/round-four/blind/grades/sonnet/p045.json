@@ -1,0 +1,49 @@
+{
+ "pair": "p045",
+ "winner": "A",
+ "margin": "decisive",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "「所定労働日の8割以上」は法の文言「全労働日」と微妙に異なる（実質ほぼ同じで軽微）",
+   "「有給休暇を一律に拒否することはできず」は正しいが、「単なる忙しさでは時季変更できない」点は書かれていない（欠落であり誤りではない）"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 8,
+  "useful": 5,
+  "concise": 6,
+  "added_claim_errors": [
+   "「事前に承認された休暇」として扱われているか確認、という言い方は法的な区分ではなく根拠のない言い回し（承認は年休の成立要件ではない）",
+   "「早めに出す。直前だと時季変更権の余地が広がります」は根拠が示されていない（法律上の申請期限はない）",
+   "「いきなり『有給をください』と書くより…角が立ちにくい」「有給の話はこのLINEでぶつけず」は助言として、欠勤扱いで処理されるリスクを残す（誤りではないが回答の方針が不利）"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "wrong",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start and give 5 days at 6 months, with the 6-month/80% conditions. Only A turns the correction into the deliverable. Its LINE asks for a specific date as 有給休暇, in a polite and non-confrontational tone, and it adds a calm reply template and a pointer to the 労働基準監督署 and 総合労働相談コーナー. It also says the shop can only change the timing when the business would be disrupted. A's cited Shizuoka Labor Bureau page exists and covers Article 39, so it is a checkable source. B's main and short LINEs are plain day-off requests that never claim 年次有給休暇, and B advises raising 有給 only later. That is close to the 欠勤扱い version the key penalises most, and it leaves the manager's wrong premise standing. B also leaves the 時季変更権 limit and the document check (就業規則 etc.) vague, and adds a loose phrase, 「事前に承認された休暇」."
+}

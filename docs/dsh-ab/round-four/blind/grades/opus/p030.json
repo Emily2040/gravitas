@@ -1,0 +1,53 @@
+{
+ "pair": "p030",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"补3–9月\": wrong months. The key's gap is April to October 2026, since March was paid.",
+   "\"另加大病、长护险几十元\": contradicts the key, which says these are deducted from the re-credited personal account funds, with no extra cash.",
+   "\"连续缴费年限：断缴3个月以上会重新计算\": per the key, a 'reset' appears only in the resident-insurance critical-illness continuity reward, not in Hangzhou employee insurance. Misleading framing.",
+   "\"省内换工作不用转移，跨省才需要办医保关系转移接续\": unverifiable. Zhejiang cities are separate pooling areas, and the key did not verify Zhejiang rules.",
+   "\"杭州的报销比例只看医院等级和费用段，不看连续缴了几年\": unverifiable, not covered by the key.",
+   "\"要等3个月才能报销\": loose. Under the third-natural-month rule only November and December go unreimbursed (A's own example shows this)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"一般也不能免除上面那 2 个月等待期\": unverifiable. The key marks waiting-period exemption after back-payment as unverified either way. B hedges with 一般 but still states it as fact.",
+   "\"7 个月年限以后随时能缴回来\": loose. The months themselves cannot be back-paid after 2026. A shortfall is only made up at retirement (one-time payment or monthly deferral) or by working longer.",
+   "\"补缴买到的只是：这 7 个月记入累计年限\": incomplete. Per the key, back-paid months count as actual contribution years, so they also count toward Hangzhou's 10 actual years."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the 'cleared after 3 months' premise. Both give the January 2027 resumption date, 473.67元/月 and about 3,316元, and both call back-payment optional. B states both gaps (12 years cumulative and 2 years in Hangzhou), the explicit 2026-12-31 deadline and the assumption that all 8 years were paid in Hangzhou. A adds errors: the wrong back-pay months (3–9月 instead of 4–10月), an extra cash charge for 大病/长护 that the key contradicts, and an unverified claim that no transfer is needed within Zhejiang. A is stronger on eligibility details and correctly hedges whether back-payment waives the waiting period, while B leans toward 'cannot waive' and is vague on eligibility. Neither gives the 743.60元/月 retirement one-time figure, and neither says the new employer cannot back-pay."
+}

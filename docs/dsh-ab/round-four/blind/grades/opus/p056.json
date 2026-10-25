@@ -1,0 +1,51 @@
+{
+ "pair": "p056",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 4,
+  "added_claim_errors": [
+   "Quoted wording attributed to '人社部办公厅的相关通知' ('在正常发放的当日工资（100%）之外，再额外支付300%') has no document number; the only link goes to a Changzhou bureau reply, so the attribution to a national notice cannot be checked",
+   "'法定节假日的工时不计入综合计算周期的总工时': no Beijing source is given and the key does not cover it, so it is unverifiable as a rule",
+   "京劳社资发〔2005〕94号 and the Xicheng office guide on union opinion and publicity materials: links are given but I did not open them, so these are unchecked. The other links I opened (gov.cn notice 国办发明电〔2025〕7号, the Fengtai court report, the ACFTU explainer, the Beijing HRSS Q&A) all match what A says"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "For the approved-hours case B gives a specific 150% amount, '最多约 2482.76元（32小时 × 51.72 × 150%）', and a total of '3724.14—6206.90元'. The key says this cannot be calculated from the facts given; B also assumes 8-hour days and treats the 4 days as the whole overage for the cycle",
+   "山东高院〔2018〕鲁民再154号, described as a duty-shift case holding that the approval rule is only a management norm: unverifiable case citation",
+   "'北京高院2024年解答（一）第56条' on duty shifts (值班): the article number and content are unverifiable, and no link is given",
+   "'两种计算方式相差约827.59元' rests on the invented 150% figure"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start, split the 7 days correctly into 3 statutory holidays at 300% and 4 rest days at 200%, and reach the key figures (413.79, 3724.14, 3310.34, 7034.48, paid on top of the 9000 salary). A gives the legal basis for why signing does not waive the right (Labor Contract Law Art. 26/27). Its links that I opened (the 2026 holiday notice, the Fengtai court report, the ACFTU explainer, the Beijing HRSS Q&A) all match what it says, and it handles the approved-hours case the way the key does, without inventing a 150% amount. B quotes the 2019 Beijing typical case well, but it states the signing point without legal basis and calculates a specific 150% ceiling (2482.76 / 6206.90) that the key marks as a deduction. B also adds two case or interpretation citations nobody can check. Both answers are longer than needed, A more so, but A's accuracy and sourcing outweigh that."
+}

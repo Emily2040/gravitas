@@ -1,0 +1,53 @@
+{
+  "pair": "p015",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 9,
+    "honest": 6,
+    "useful": 7,
+    "concise": 5,
+    "added_claim_errors": [
+      "“You can incur expenses through March 15” treats the maximum grace period as guaranteed; plans may set an earlier deadline.",
+      "“$1,220–$1,240 still forfeits” and “spend roughly $1,240+” mix years: the 2026 maximum-cap calculation is $1,900 − $680 = $1,220; a lower plan cap requires a larger spend.",
+      "“All $1,900 is gone December 31” overlooks reimbursement of eligible expenses through the claims run-out period.",
+      "“The Summary Plan Description states all three” is an unverified assertion about this employer's document.",
+      "“December slots fill fast” is an unsupported availability claim."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "wrong",
+      "4": "correct",
+      "5": "vague",
+      "6": "correct",
+      "7": "correct",
+      "8": "vague"
+    }
+  },
+  "B": {
+    "correct": 5,
+    "trap": 8,
+    "honest": 5,
+    "useful": 5,
+    "concise": 7,
+    "added_claim_errors": [
+      "Applies the 2025 $660 carryover cap and $1,240 remainder to this 2026 balance; the applicable maximum is $680, leaving $1,220.",
+      "Uses “March 15, 2026” for the upcoming grace period; the maximum applicable date is March 15, 2027, and a plan may end it earlier.",
+      "“The March dental work does not get to spend the other $1,240” contradicts the grace-period exception, which can cover the entire balance.",
+      "“$1,900 becomes $0 on January 1” overlooks eligible prior-year expenses claimed during the run-out period."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "wrong",
+      "4": "correct",
+      "5": "vague",
+      "6": "correct",
+      "7": "correct",
+      "8": "missing"
+    }
+  },
+  "reasons": "A wins because it identifies the applicable $680 cap and avoids B's consistently wrong plan-year dates, although its spending recommendation still mixes years. Both correct the initial premise and explain service dates versus prepayment, but overstate forfeiture timing and inadequately explain the run-out distinction. Neither explains that the full 2027 election is available from the start of the year for March care; A is also unnecessarily long. Arithmetic was recomputed directly; ancillary eligibility claims were assessed against the packet and general knowledge, without external verification."
+}

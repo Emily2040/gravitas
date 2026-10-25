@@ -1,0 +1,50 @@
+{
+ "pair": "p078",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"the exception for active employees at a 20+ employee employer\": imprecise. The SEP does not depend on employer size; the 20-employee line only decides which plan pays first (key treats this as minor).",
+   "\"When your coworker would be right: ... an employer under 20 employees\": imprecise. SSA says the SEP covers small or large employer plans. Under 20 employees Medicare pays first, so taking Part B makes practical sense, but the penalty exemption still applies."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"roughly $185–$210/month, set annually\": vague. The 2026 standard premium is $202.90; $185 was the 2025 figure.",
+   "\"coverage generally starts the month after Social Security processes your form\": imprecise. SEP coverage starts the month after sign-up, or the month of sign-up if you enroll while still covered; processing time does not set it.",
+   "\"big exception that fits you exactly: active employment-based group coverage from an employer with 20+ employees\": imprecise. The SEP is not tied to employer size (minor per key).",
+   "\"Medigap guaranteed-issue window\": wrong term. This is the Medigap open enrollment period, which is separate from guaranteed-issue rights (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers catch the false premise in their first line, tell the asker not to enroll in Part B this month, explain the 8-month SEP, and give the HSA and Part A backdating warning. A gets the 2026 figures exactly right: $202.90/month, about $2,435 a year, a $283 deductible, the IRMAA thresholds, and a November 1 start if enrolled now. It also covers what to do if the application was already filed. B gives only a vague premium range ($185–$210) and an imprecise rule for when coverage starts. In B's favor, it covers the retirement-stage Part D 63-day rule and the Medigap window, which A leaves out. Neither answer states the exception for coverage that ends during the IEP, both frame the SEP loosely as a 20+ employee rule, and neither mentions CMS-40B or applying for A and B together through SSA. A comes out slightly ahead on precision."
+}

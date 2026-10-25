@@ -1,0 +1,50 @@
+{
+ "pair": "p021",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "「敷金から引くには修繕内容と費用の内訳を示す必要があります（民法622条の2）」: 622条の2は敷金返還と、控除できるのは賃貸借に基づく金銭債務という趣旨の規定で、内訳提示義務を定めたものではない。条文趣旨の取り違え。",
+   "「少額調停・少額訴訟という手段もあります」: 「少額調停」は制度名として一般的でなく曖昧。少額訴訟は60万円以下で妥当。",
+   "メール案の「室内の写真は当方でも保管しております」: 利用者が写真を持っているとは限らない前提の挿入。",
+   "「これで金額が動く可能性が十分あります」: 根拠のない見込み。"
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "vague",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "「壁紙（クロス）の張り替えは原則として貸主負担」(管理会社宛メール案にも同旨): ガイドラインでは借主の故意・過失による損傷は借主負担(部分・減価考慮)。言い過ぎで、相手に反論されやすい。",
+   "「少額訴訟（60万円以下）：自分で提起でき、費用も数万円程度です」: 10万円前後の訴額なら手数料は数千円(新制度で書面3,500円・電子2,400円)。「数万円」は過大。",
+   "「多くの場合、内訳を求められた時点で請求額は下がります」「出せない請求は、根拠も怪しいことが多いです」: 根拠のない一般化で検証不能。",
+   "「民法90条で争える余地」: 通常損耗特約の争い方としては一般的でなく、補足的で根拠が弱い。"
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers refuse to write the acceptance email in their opening lines and supply a decline-and-request-itemisation reply, so both handle the trap well. Neither cites Civil Code Art. 621, the Supreme Court judgment of 16 Dec 2005, Annex 1 of the guideline, or the 20 April 2020 date, and neither demands the full 100,000 yen back. B hits more of the key's concrete numbers: the 6-year useful life with near-zero residual value at 7 years, the 20,000 yen extra-claim risk (120,000 - 100,000), and Consumer Contract Act Art. 10. Its email also states it does not agree to a lump-sum deduction from the deposit. A is better on partial-repair scope, move-out walkthrough and photo records, and cites Art. 622-2, but it misdescribes that article as requiring an itemised breakdown. It also gives no figure for depreciation and no 20,000 yen warning, and it defers settlement of the deposit instead of rejecting the deduction. B's errors are the overbroad \"wallpaper replacement is the lessor's burden in principle\" (repeated in the email) and the overstated small-claims cost. A's errors are the 622-2 mischaracterisation and the loose term \"少額調停\". B is slightly stronger on the key's specifics and slightly weaker on concision."
+}

@@ -1,0 +1,52 @@
+{
+ "pair": "p009",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"confirm the office will charge before the 15th\": the date the care is provided is what counts, not the date the office charges, so this points the person at the wrong date.",
+   "\"spending $1,500 on stuff you wouldn't otherwise buy to save $680 is a loss\": the math is muddled. On a carryover plan the $680 carries over anyway, and spending protects the $1,220 that would be forfeited, not $680.",
+   "\"$1,220+ evaporates on January 1\": too absolute. Forfeiture is measured at the end of the run-out, and 2026 claims filed during it still count (A does mention the run-out elsewhere).",
+   "\"Usually ~90 days after Dec 31\" for the run-out: a typical figure that varies by plan. It is hedged, so this is minor and unverifiable rather than wrong."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"the carryover only happens if you're still employed and still enrolled in the FSA in the new plan year\": stated as a universal rule. The sources leave enrollment as a condition some plans set, so it should be framed as \"some plans require it, check yours\".",
+   "\"Health FSA money is use-it-or-lose-it, with only a capped carryover\" and the table labeling ~$680 carried over as the \"best case\": this frames carryover as the only exception, while a grace period (the better outcome for March work) comes up only later as a \"nuance\".",
+   "\"Then: spend it before Dec 31, not in March\": unconditional advice that ignores the grace-period branch, where March work by the grace end is covered.",
+   "\"you usually have until March–April to submit receipts\": a run-out window that varies by plan. It is hedged, so this is minor and unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start, give the right $680 cap and $1,220 forfeiture, say a plan has one feature or neither, and send the person to HR about the run-out. Neither mentions using the 2027 open-enrollment election to pay for the March work. A sets out all three branches (carryover, grace period, neither) up front and gives a plan for each, and it is tighter. It slips on billing timing (\"charge before the 15th\") and has a muddled $680 remark. B states the service-date rule better (\"The service must happen by Dec 31\"). But it treats carryover as the main case and the grace period as a nuance, states the enrollment condition as a universal rule, and pushes December spending without regard to branch. It is also longer, with a closing disclaimer. Overall A edges ahead on how it handles the premise, how actionable it is and how concise it is."
+}

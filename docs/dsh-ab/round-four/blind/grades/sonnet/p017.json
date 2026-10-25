@@ -1,0 +1,56 @@
+{
+ "pair": "p017",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "States the 2192 floor as 应发 outright, and says that if 800 is the net amount the company 可能刚好达到下限，并没有差额. This gives only the minority reading and omits the majority reading (the minimum wage excludes personal contributions, so net pay still must not fall below 2192). The key says there is no official position, so the claim is overconfident.",
+   "Says 沪劳保保发〔2000〕14号 已于2026年8月15日到期失效 as fact. The key treats this as inferred, with no explicit official statement.",
+   "Says 可以在1年内申请劳动仲裁 without the in-service exception. While the employment relationship continues, wage-arrears claims are not subject to the one-year limit (key, 调解仲裁法第27条).",
+   "Never gives the 6400 figure that applies if the company system adopts the 83号 tiers (4 years = 80%). It only says company standards are 通常远高于 2192 元.",
+   "Leaves out the calculation base and the daily conversion (÷21.75). It uses 8000 only as the social-insurance contribution base."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Opens with 800 元肯定不合法 before separating gross from net. If 800 is net pay, the key says it is still illegal on the majority reading but doubtful on the minority one, so 肯定 is somewhat overconfident.",
+   "Puts 8000×70%×80% = 4480 in the headline and labels it 照搬旧上海口径. The arithmetic is right, and the 70% fallback base does appear in 沪人社规〔2026〕10号 第九条 (I fetched the rsj.sh.gov.cn page it links). But the base here is the contract wage 8000, so 4480 applies only if neither contract nor collective agreement sets a wage. The key does not mention it, and it can confuse the reader.",
+   "Says 沪劳保保发〔2000〕14号 failed on 2026-08-15 as fact. The key treats this as inferred.",
+   "Says 网上很多答案还在写旧标准，是因为那些页面发布在2026年8月15日之前. This is speculation presented as an explanation.",
+   "Never ties the 83号 scenario to the 4-years = 80% tier. 6400 appears only as the case where the contract says 按本人工资的80%.",
+   "The HR message sets a 3-working-day reply deadline and asks for 民主程序记录 and 公示证据. These are the drafter's own additions and not in the key; they are harmless but add length.",
+   "Never analyses the gross versus net case. It only asks HR whether 800 is 应发 or 实发, and it does not mention the exclusions from the base (bonus, allowances, overtime) or the 21.75 daily conversion."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start, give the same legal floor (2740 × 80% = 2192, short by 1392), and state that 83号 and 14号 failed on 2026-08-15. Both mention 12333, labour inspection and arbitration. B pulls ahead on three points. It shows 6400 (8000 × 80%) as a contract or company-system figure, not the statutory minimum. It discusses the calculation base, including the 70% fallback when no wage is agreed, which I confirmed in 10号 第九条. Its HR message cites 309号第59条 and asks for base, ratio, basis and gross versus net. A handles the gross versus net case in more detail (840 social insurance, 400–560 housing fund, 792–952 left), but presents the minority view as the only one and says the company may have no shortfall. A also never gives 6400, the base or the daily rate. B is noticeably longer, and its 4480 row is slightly confusing. A is tighter but less complete, so B wins only slightly."
+}

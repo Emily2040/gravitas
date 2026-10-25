@@ -1,0 +1,53 @@
+{
+ "pair": "p012",
+ "winner": "B",
+ "margin": "decisive",
+ "A": {
+  "correct": 5,
+  "trap": 8,
+  "honest": 6,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "'3년 이하 징역 또는 3천만 원 이하 벌금(제44조)' is the old rule; the key says 5 years / 50 million won under Article 43 from 2026.9.18 (minor deduction).",
+   "'설령 합의로 미뤘더라도 지연이자는 원칙적으로 그대로 붙어요(고용노동부 행정해석)' cites an administrative interpretation with no document number, so it is unverifiable.",
+   "'회사가 퇴직연금(IRP)에 가입한 경우에는 지급 방식이 조금 다르지만' mixes up IRP (the worker's account) with a company plan and implies IRP applies only to pension plan members, which the key calls wrong. The HR text never asks for an IRP account.",
+   "Gives about 10.2 million won ('약 1,020만 원', range 1,020만~1,030만) with no ordinary-wage floor (통상임금 하한). If the 3.3 million won is all ordinary wage, the real figure is about 12.02 million, so this understates by roughly 1.8 million won.",
+   "Assumes 1,156 days of service (key: about 1,158), giving 10,224,000 won instead of 10,241,990. The difference is small, but the days are assumed without explanation.",
+   "States the deadline as 10월 4일 flatly; the key says it falls somewhere in 10/3~10/6 depending on how the retirement date and holidays are read."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "'3년 이하 징역 또는 3천만 원 이하 벌금' is the old rule; the key says 5 years / 50 million won under Article 43 from 2026.9.18 (minor deduction).",
+   "'현행법상 퇴직금은 IRP 계정으로 이전하는 방식' leaves out the conditions (amount over 3 million won, under 55). This is a mild oversimplification, and the HR text repeats it.",
+   "The reference '법제처 ... (2026. 5. 26.)' and the moel.go.kr and law.go.kr links come with no document number or checkable detail, so they are unverifiable. The key does cite a 법제처 interpretation for this point, so it is plausible.",
+   "States the deadline as 10월 4일 flatly; the key says it falls somewhere in 10/3~10/6 depending on how the retirement date and holidays are read.",
+   "Headline '세전 약 1,200만 원' assumes the whole 3.3 million won is ordinary wage. It does state this assumption and gives the 10,242,000 won alternative, so the issue is minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the company's claim at the start (14 days under Article 9(1), extension only with a special reason plus mutual agreement) and put the deadline at 10/4. Only B applies the ordinary-wage floor (통상임금 하한). It computes 126,316 won a day, about 12.02 million won, and shows the average-wage figure of about 10.24 million won beside it (arithmetic checks out, difference about 1.78 million won). A stops at about 10.2 million won with no floor, which understates the amount and misses key point 4. A's HR text also omits the IRP account and has a soft line ('지급 가능한 구체적인 날짜를 알려 주시면') that could read as accepting delay. A's IRP remark wrongly ties IRP to a company pension plan, and its '행정해석' citation is unverifiable. Both cite the outdated penalty (3 years / 30 million won), a minor deduction. B's text is clear, includes the IRP request and a firm reply date (10/30 is a Friday), and B adds the useful tip not to sign a waiver. B is somewhat long but better targeted."
+}

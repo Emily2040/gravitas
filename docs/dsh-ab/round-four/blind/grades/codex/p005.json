@@ -1,0 +1,47 @@
+{
+  "pair": "p005",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 9,
+    "trap": 10,
+    "honest": 10,
+    "useful": 8,
+    "concise": 6,
+    "added_claim_errors": [],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "correct",
+      "7": "correct",
+      "8": "missing"
+    }
+  },
+  "B": {
+    "correct": 5,
+    "trap": 6,
+    "honest": 5,
+    "useful": 5,
+    "concise": 8,
+    "added_claim_errors": [
+      "Applies the $660 carryover for 2025 funds to this 2026 scenario; the applicable maximum is $680, making the spend-down $1,220 rather than $1,240.",
+      "Gives “March 15, 2026” as the grace deadline; the applicable maximum is March 15, 2027, and plans may provide a shorter period.",
+      "“At most $660 ... survives” and March work cannot use “the other $1,240” ignore the grace-period possibility, which can preserve the entire $1,900 for qualifying March care.",
+      "“Everything is forfeited December 31” and “$1,900 becomes $0 on January 1” overlook reimbursement of timely incurred expenses claimed during the run-out period."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "wrong",
+      "4": "correct",
+      "5": "vague",
+      "6": "correct",
+      "7": "correct",
+      "8": "missing"
+    }
+  },
+  "reasons": "A gives the correct 2026 carryover maximum and spend-down calculation, explains the alternative plan features, and distinguishes treatment timing from claim submission. B corrects the opening premise but uses the previous year's figures and dates, then makes categorical loss statements that conflict with its later grace-period caveat. Both omit the 2027 election and day-one availability of the full election; A is also unnecessarily repetitive. Arithmetic independently checks out: $1,900 − $680 = $1,220, while B's $1,240 follows from its inapplicable $660 cap."
+}

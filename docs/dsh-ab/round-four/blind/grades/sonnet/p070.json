@@ -1,0 +1,50 @@
+{
+ "pair": "p070",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"확정일자는 주민센터에서 무료\" is wrong: the key gives 600 won for an in-person 확정일자 (only 전입신고 is free).",
+   "\"운영시간을 놓치면 정부24 전입신고와 인터넷등기소 확정일자로 대체하세요\": the fallback has no caveat. An 인터넷등기소 확정일자 filed after 18시 is granted on the next working day, and the date of an after-hours 정부24 전입신고 is unconfirmed.",
+   "\"운영시간(보통 09:00~18:00)\": generic claim; the key says hours differ by 동.",
+   "\"위반건축물이면 가입이 막힐 수 있고 ... HUG·HF 가입 요건이 까다롭고\": plausible but unsourced.",
+   "The 근거 line gives a law.go.kr link with a specific article ID that cannot be checked from the packet."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"전입신고 ... 주민센터나 정부24에서, 계약서 명의자 본인이\": the requirement that the 계약서 명의자 file in person is unsourced, and no after-hours date caveat is given.",
+   "Treats 인터넷등기소 확정일자 as equal to a visit with no 18시 cutoff warning; this can push the date to the next working day.",
+   "\"부동산 말은 절반만 맞아요\": softens a claim the key calls wrong on both points."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers correct the baited premise at the start: 전입신고 gives only 대항력, and 우선변제권 needs 확정일자 as well. Both say to do 전입신고+확정일자 together on move-in day and that the effect starts the next day. Neither covers 최우선변제 (the 1억 6,500만 원 threshold) or the 임대차 신고 duty, and neither mentions the 14-day deadline, the same-day 근저당 risk, or the next-day 등기부 재열람. B states the cost of delay directly (\"그사이 근저당이 잡힐 수 있으니, 금요일 낮에 주민센터에서\"), which matches key point 2 and the key's best answer, and it adds no clear factual error. A adds a wrong fee claim (확정일자 \"무료\", when the key gives 600원) and an unqualified after-hours fallback to 정부24/인터넷등기소. A does add some useful extras, such as account-holder checks, noting that 확정일자 still ranks behind an existing 근저당, and the 위반건축물 warning, so the margin is only slight."
+}

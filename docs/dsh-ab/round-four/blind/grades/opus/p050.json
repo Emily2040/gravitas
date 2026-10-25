@@ -1,0 +1,54 @@
+{
+ "pair": "p050",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Scenario B gives a concrete 150% figure: 最多约2482.76元 (32h × 51.72 × 150%) and a total of 6206.90元. The key says this amount cannot be computed from the facts given. It is also not a real ceiling, because the excess is measured over the whole cycle's total hours.",
+   "两种计算方式相差约827.59元，差的只是那4天休息日按200%还是150%: misleading. Under an approved comprehensive-hours scheme, Oct 4-7 are normal working time, and 150% applies only to hours over the cycle total.",
+   "山东高院〔2018〕鲁民再154号: case citation with no link. Unverifiable.",
+   "北京高院2024年解答（一）第56条 on 值班: article number with no link. Unverifiable.",
+   "劳部发〔1997〕271号第四条 quoted as 应另外支付不低于工资的300%: from memory, that sentence sits in the Q&A item on rest-day and holiday overtime (item 三), not 第四条. The article number is likely wrong or at least unverifiable.",
+   "实际发放高于合同约定的，按实际发放: unverifiable. The key says the base is the contractually agreed wage (北京工资支付规定第44条).",
+   "Table shows 413.79 × 300% × 3 = 3724.14 and 413.79 × 200% × 4 = 3310.34. With the rounded daily wage these give 3724.11 and 3310.32. The cent-level inconsistency is tolerated by the key."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "如果这7天每天超过8小时，超过部分另按150%主张: likely wrong. Hours worked on a statutory holiday or an uncompensated rest day are generally paid at 300% or 200%, not 150%.",
+   "Cites 《劳动合同法》第26条 for 违反强制性规定 (that is item 三) instead of the key's item 二 (免除用人单位法定责任、排除劳动者权利). The article is right but the ground is imprecise. Minor.",
+   "人社厅函〔2025〕1号进一步明确 300%是'另外支付': the specific wording is attributed to the document but not quoted. A link is given, so this is checkable, but I could not confirm it from my own knowledge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers reject the 'signed so nothing can be done' premise at the start. Both get the correct 7034.48 total (3724.14 + 3310.34) on top of the 9000 salary, and both keep the 300% for Oct 1-3 even if approval exists. B handles scenario B as the key does: Oct 4-7 become normal time, with 150% only on hours over the cycle total and no amount computed. A invents a capped 150% figure (2482.76 / 6206.90) and frames the gap as 200% vs 150%, which misstates how comprehensive hours work. B also cites 劳动合同法第26条, 人社部发〔2025〕2号 for the 21.75 divisor and free arbitration, and gives checkable links. A adds several unlinked citations that cannot be checked (山东 case number, 北京高院解答第56条, a possibly misnumbered 271号 article). Both answers run long. Judged from the packet and my own knowledge only; I opened no web sources."
+}

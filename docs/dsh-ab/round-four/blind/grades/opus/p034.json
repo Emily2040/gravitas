@@ -1,0 +1,48 @@
+{
+ "pair": "p034",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 8,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "'회사가 사실상 도산했다면 근로복지공단 소액체당금도 확인' — the scheme has been called 간이대지급금 since 2021, and it does not require the company to be insolvent (that condition belongs to 도산대지급금). Outdated name and wrong condition.",
+   "'국민취업지원제도 — 구직촉진수당(월 50만원, 최대 6개월)' listed as a living-cost source next to 실업급여. Someone receiving 구직급여 can be excluded from the allowance, so presenting it as an extra income stream is misleading. The answer does not say outright that both can be paid at once, and the amount is not penalized (judged from own knowledge and the key).",
+   "'신청은 퇴사 다음 날부터 12개월 이내' — imprecise. The 12 months is the 수급기간, so a late application loses benefit days. It is not simply a deadline to file (key)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 7,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'7~9월 석 달이면 이 요건을 넘고' — overstated. Eligibility depends on the total days paid late or unpaid reaching 60, not on the number of late months. Three months each paid a few days late may not qualify (key).",
+   "'2년 근무면 150일분이 나오고' — leaves out the age condition: claimants aged 50 or over, or with a disability, get 180 days (key).",
+   "'이직일 다음 날부터 12개월 안에 신청해야 하고' — imprecise. The 12 months is the 수급기간, so filing late loses benefit days. It is not just a deadline to file (key)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "wrong",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start with 별표 2. B also says that wages paid late (지연 지급) count, which matters here because this person's pay was late, not necessarily unpaid. B gives the correct 2026 daily range (66,048–68,100원) and an accurate monthly and total estimate. It also gives the right 간이대지급금 cap (1,000만원), the 20% late-payment interest, the 조기재취업수당 logic, and the fact that an application can go in without 이직확인서. A gives no amounts and uses the outdated term 소액체당금 with a wrong insolvency condition. A also suggests 구직촉진수당 as an extra income source alongside 실업급여. A is better hedged on the eligibility test, since it conditions on wages being fully unpaid. B overstates by saying three months is enough, without the 60-day criterion, though the key counts that as a minor fault. Neither answer mentions 생계비 융자 or the age-based 180 days."
+}

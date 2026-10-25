@@ -1,0 +1,52 @@
+{
+ "pair": "p075",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "\"the 15-year clock restarts for the new beneficiary\" states a settled rule. The key says whether a beneficiary change resets the clock is unresolved, with no IRS guidance (a major deduction). Elsewhere A hedges with \"can restart\", so the answer contradicts itself.",
+   "\"to count for 2026 the money needs to land in the Roth by December 31, 2026\" presents December 31 as the legal deadline. Under the 2026 Form 5498 instructions and 219(f)(3), a rollover designated for 2026 can be made through April 15, 2027, though whether the plan will process it that way varies (minor).",
+   "\"If the annual limit rises with inflation, this compresses to four or five years\" is unrealistic. Even at $8,000 a year, 4 x 8,000 = 32,000 is less than 35,000, so it takes at least five tax years.",
+   "\"Most do by 2026, but not all\" (plan support) is unverifiable. No source is given."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"Complete the transfer by December 31, 2026 to count against the 2026 limit\" presents December 31 as the legal deadline. A rollover designated for 2026 can be made through April 15, 2027, subject to plan processing (minor).",
+   "\"K-12 tuition (up to $10,000 a year)\" is outdated, judged from my own knowledge. The July 2025 law (OBBBA) raised the K-12 limit to $20,000 for years after 2025. Pub 970, which I opened, still shows $10,000 only in the prior-year chart. The claim is also irrelevant to a college graduate.",
+   "\"The limits may rise with inflation, which would shorten the schedule\" is unrealistic. Indexed rises in $500 steps cannot bring $35,000 under five tax years.",
+   "\"Some plans take two to four weeks\" is an unverifiable processing time. The key says it varies by plan."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start. Both give the $7,500 annual cap, the earned-income limit, the $35,000 lifetime cap, the $13,000 that can never move, a five-year schedule, a Roth owned by the son, the direct trustee-to-trustee transfer, the 5-year contribution rule, the 15-year test and the state-tax caveat. Both wrongly present December 31 as the federal deadline. A is more thorough: its Form 1099-Q box 4b and Form 5498 box 10 details checked out against the IRS instructions, and it hints at the over-contribution mess. But A states as settled that a beneficiary change restarts the 15-year clock, which the key treats as a major deduction, and it is very long and repetitive. B hedges correctly on the beneficiary change and is tighter. Its errors are minor: the outdated K-12 figure, and it never addresses what happens if all $48,000 is moved."
+}

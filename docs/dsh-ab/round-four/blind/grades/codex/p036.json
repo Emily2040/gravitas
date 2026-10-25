@@ -1,0 +1,54 @@
+{
+  "pair": "p036",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+    "correct": 6,
+    "trap": 8,
+    "honest": 6,
+    "useful": 6,
+    "concise": 7,
+    "added_claim_errors": [
+      "Part B penalties apply to people without 'creditable coverage': this conflates Part D terminology with the current-employment group coverage required for this Part B SEP.",
+      "Unconditionally recommends CMS-40B at retirement, although that route requires existing Part A enrollment.",
+      "'Part D within 63 days' confuses the penalty threshold with the enrollment deadline of two full months after employer coverage ends.",
+      "Describes CMS-L564 as completed by the employer without distinguishing the applicant's Section A from the employer's Section B.",
+      "Dates the eight-month SEP from loss of employment or coverage; it begins the following month.",
+      "'Waiting is the financially better move' is too categorical without comparing premiums, benefits and expected medical costs."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "vague",
+      "3": "correct",
+      "4": "vague",
+      "5": "correct",
+      "6": "vague",
+      "7": "missing",
+      "8": "wrong"
+    }
+  },
+  "B": {
+    "correct": 7,
+    "trap": 8,
+    "honest": 7,
+    "useful": 7,
+    "concise": 7,
+    "added_claim_errors": [
+      "Initially implies the 20-employee threshold enables the SEP; employer size determines payment priority, not SEP eligibility.",
+      "Dates the eight-month SEP from loss of employment or coverage; it begins the following month.",
+      "'You'll need' an HR letter overstates a separate letter as mandatory; the key specifies CMS-L564 as the employer-coverage evidence.",
+      "'If you're not on Social Security, nothing happens automatically' overlooks automatic enrollment through Railroad Retirement benefits, based on general knowledge."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "vague",
+      "3": "vague",
+      "4": "vague",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing",
+      "8": "vague"
+    }
+  },
+  "reasons": "Both promptly reject the coworker's premise and correctly explain employer-primary coverage, but neither supplies the premium, Medigap timing, or the exception when employment or coverage ends during the IEP. B narrowly wins because it flags Part A retroactivity and recommends applying before retirement, while A gives incorrect Part D deadline advice and an unconditional CMS-40B route. A handles automatic enrollment and the HR checks better; both leave the HSA stopping timetable incomplete. Assessment uses the packet, with the Railroad Retirement exception judged from general knowledge; no external sources were opened."
+}

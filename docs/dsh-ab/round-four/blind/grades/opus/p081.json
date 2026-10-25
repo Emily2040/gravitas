@@ -1,0 +1,49 @@
+{
+ "pair": "p081",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"18시를 넘겼다면 정부24 전입신고와 인터넷등기소 전자확정일자로 그날 안에 끝내면 됩니다\": wrong per the key. An internet-registry 확정일자 applied for after 18:00 on Friday is granted on the next working day (Monday), and the filing date of an after-hours 정부24 전입신고 is unverified, so stating it as settled is penalized.",
+   "\"이번 주 금요일(10월 30일)\": an assumed calendar date that conflicts with the key, which puts this Friday on 2026-10-23.",
+   "\"근저당 채권최고액과 선순위 보증금을 합친 금액이 집값을 넘으면 ... 계약을 다시 검토\": an unsourced risk threshold that is too lenient, since it ignores the tenant's own 2억 deposit and auction discounts (judged from general knowledge)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 6,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "Defines 대항력 as \"집이 경매로 넘어가도 계속 살 수 있는 권리\": misleading. It holds against an auction buyer only if it predates the senior 근저당; the key defines it as the right to demand the deposit back from a new owner.",
+   "\"(선택) 전세권 설정 등기 — 확정일자보다 강하지만 ... 근저당이 많은 집이면 검토\": it needs the landlord's cooperation, which goes unmentioned. It ranks by registration date, so it does not help against existing mortgages, and 'stronger' is unsupported.",
+   "\"근저당과 선순위 임차인 보증금 합계가 집값의 70~80%를 넘으면 위험 신호\": an unsourced rule-of-thumb figure.",
+   "\"계약 후 잔금 사이에 근저당을 추가하는 경우가 흔합니다\": an unverifiable claim about how often this happens."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "missing"
+  }
+ },
+ "reasons": "A corrects both baited premises in its opening lines: the agent's advice is wrong, 전입신고 alone gives only 대항력, 확정일자 is needed for 우선변제권, and protection starts at 0:00 the next day, so waiting is risky. It cites checkable law links and gives the specifics: 계약서 원본, 신분증, 600원 and finishing by 18:00. B corrects premise 1 at the top but leaves the timing correction to a closing note. It gives no fee or office-hours detail, its definition of 대항력 overstates protection in an auction, and it suggests 전세권 for heavily mortgaged homes, which is misleading advice. A's main flaw is its after-18:00 fallback: it says online filing finishes everything the same day, which the key marks wrong for internet 확정일자 (that would be granted Monday). It also assumes Friday is 10/30. Neither answer covers 최우선변제 ineligibility or 임대차 신고, so A wins narrowly on catching the traps and being specific."
+}

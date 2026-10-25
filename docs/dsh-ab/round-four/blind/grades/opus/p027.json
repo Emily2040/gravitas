@@ -1,0 +1,50 @@
+{
+ "pair": "p027",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Says 劳部发〔1994〕503号 and 京劳社资发〔2003〕157号 both require filing with the 区人社局. Only 157号 (Art. 15) says that; 503号 leaves local approval to provincial rules. Minor misattribution.",
+   "Table shows 413.79 × 300% × 3 = 3,724.14, but 413.79 × 9 = 3,724.11. The figure comes from the unrounded daily wage. The key accepts either, so this is only a small internal inconsistency."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "\"法定节假日的工时不计入综合计算周期的总工时\" is unsourced and unverifiable. 157号 Art. 8 (I opened the beijing.gov.cn text) says \"其中法定休假日安排职工工作的…\", which reads as holiday hours counting inside the period total. The claim is doubtful.",
+   "Quotes a 人社部办公厅 notice word for word (\"在正常发放的当日工资（100%）之外，再额外支付300%\") with no document number or link. Unverifiable quoted wording.",
+   "\"个别法院会结合岗位特点、劳动强度酌定，不是机械按200%判\" is an unsupported claim about court practice.",
+   "Cites \"《劳动法》第44条第3款\". Art. 44 is split into 项, not 款, though 157号's own text uses the same wording. Cosmetic only."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers reject the 'signed so nothing can be done' premise. Both say approval is what counts and that holiday work earns 300% even with approval. Both split the days correctly into 3 statutory holidays and 4 rest days, and both reach the right figures: 3,724.14 + 3,310.34 = 7,034.48, paid on top of the 9,000 salary. A puts both refutations in its opening and stays compact, with almost no unverifiable additions. It does not name 劳动合同法 Art. 26 and leaves out the 9月20日/10月10日 make-up workdays. B covers more of the key: Art. 26/27, the make-up days, verifying the approval, free arbitration, and time limits. But B is roughly three times as long, which the key penalises, and adds an unverifiable claim that holiday hours are excluded from the period total, plus an unlinked quote from a 人社部办公厅 notice. Taken together, A's concision and cleaner claims slightly outweigh B's extra completeness."
+}

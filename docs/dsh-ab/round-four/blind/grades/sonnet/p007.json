@@ -1,0 +1,53 @@
+{
+ "pair": "p007",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Third table row says a company on the old rule would pay 8000 × 70% × 80% = 4480 yuan, using '先按实得工资70%' as the base. This conflicts with the key, where the 83号 tier gives 8000 × 80% = 6400. It is unverifiable and probably a wrong gloss on the old base.",
+   "The HR message never asks whether 800 is the gross (应发) or net (实发) figure. It does not cite 309号第59条 or 沪人社规〔2026〕10号第九条 in the text itself, only in the source list at the end. It does not ask for a pay breakdown (工资清单).",
+   "Gives source links for the 2740 figure and the rule expiry. The 2740 figure matches the key; the links were not opened and are unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites the Shanghai file as 沪劳保发〔2000〕14号; the key gives 沪劳保保发〔2000〕14号. It also lists 14号 among the 按连续工龄分档 rules, whereas the key treats it as Shanghai's minimum standard. Minor citation error.",
+   "Says 10号第九条 '只规定了病假工资的计算基数' and has no ratio. The key says 第九条 also requires paying sick-leave wages per the rules, and B's own HR message says so later. Slightly inconsistent.",
+   "Same 4480 row (8000 × 70% × 80%) for the old base. It conflicts with the key's 6400 under 83号 and is unverifiable.",
+   "'很多人（包括一些 HR）还没更新' is an unsupported generalization.",
+   "Opens with '800 元肯定不合法'. If 800 is the net figure, the key says it depends on whether the minimum includes personal contributions. B only qualifies this later, in section two.",
+   "Links the full text of 10号 on ft22.com, a non-official site, and links 中伦 and Ebner Stolz analyses. None of these were opened and they are unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start. Both give 2192 yuan (2740 × 80%) and a 1392 shortfall, and say 83号 expired on 2026-08-15. Both say 6400 comes only from a contract or company policy, and both add the same doubtful 4480 row. B is better on two key points. It separates 应发 from 实发 and notes that the old minimum excluded personal contributions (point 6). Its HR message cites 309号第五十九条 and 10号第九条 and asks for the basis and a back-payment (point 7). It also covers the dynamic-reference clause. A explains the base exclusions slightly better (point 5), and its HR message lacks the statute citations and the gross/net question. B is longer, and it has a minor citation error on the 14号 file number. B wins slightly on substance."
+}

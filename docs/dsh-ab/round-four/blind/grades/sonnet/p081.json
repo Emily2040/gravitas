@@ -1,0 +1,52 @@
+{
+ "pair": "p081",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"이번 주 금요일(10월 30일)\" — the key fixes this Friday as 2026-10-23; the date is stated flatly and conflicts with the key.",
+   "\"18시를 넘겼다면 정부24 전입신고와 인터넷등기소 전자확정일자로 그날 안에 끝내면 됩니다\" — wrong or overconfident: an internet 확정일자 filed after 18:00 is given the next working day (Mon 10-26), and the key says the 정부24 off-hours filing date is unconfirmed and must not be asserted.",
+   "\"평일 18시까지\" — presented as a fixed rule, but 주민센터 hours differ by dong (minor, unverifiable).",
+   "\"짐을 다 들이지 않아도, 열쇠를 받아 쓸 수 있으면 '인도'는 됩니다\" — stated flatly with no source; roughly right but legally simplified (unverifiable here).",
+   "\"전입세대 열람\" at the 주민센터 with the contract to see senior tenants, and the rule that mortgage ceiling plus senior deposits above the house price means rethinking the contract — not in the key; plausible but unverifiable here."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 8,
+  "useful": 6,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"근저당과 선순위 임차인 보증금 합계가 집값의 70~80%를 넘으면 위험 신호\" — a rule-of-thumb threshold with no source, not in the key (unverifiable).",
+   "\"금요일 안에 전입신고를 마쳐야 주말 공백이 없습니다\" — slightly overstated: a mortgage set on Friday itself still beats the tenant, because the effect only starts Saturday 0:00.",
+   "\"(선택) 전세권 설정 등기 — 확정일자보다 강하지만 비용 발생\" — does not say it needs the landlord's cooperation (민법 제621조), and offers it as a casual option.",
+   "\"계약 후 잔금 사이에 근저당을 추가하는 경우가 흔합니다\" — \"흔합니다\" is unsupported (unverifiable).",
+   "HUG·SGI 반환보증 \"전입신고·확정일자 후 신청 가능\" — consistent with the key for HUG, but the SGI condition is unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers open by rejecting the broker's claim and correctly separate 대항력 (from 전입신고) from 우선변제권 (needs 확정일자). Both state that 대항력 starts the next day at 0시, and both give a similar ordered list: register check before 잔금, 잔금 and key, 전입신고 and 확정일자, 반환보증. Neither covers 최우선변제 (서울 1억 6,500만 원), the 임대차 신고 duty, the next-day 등기부 재열람 or the 14-day 과태료. A addresses both premises at the very start, including the user's own phrase \"시간 날 때\", cites 주택임대차보호법 제3조 and 제3조의2 with links, and gives the key's concrete specifics (계약서 원본, 신분증, 확정일자 600원, same-day visit within office hours). B is more concise and has no clear factual error, but it is thinner. It gives no fee or hours, never says to go within working hours, and tucks the timing warning into a closing note. A's real faults are the stated Friday date of 10월 30일 (the key has 10-23) and the claim that after 18시 the user can finish \"그날 안에\" by 정부24 plus 인터넷등기소. Per the key, an online 확정일자 after 18시 is dated the next working day, so that claim is wrong and risky. A's stronger trap handling and key-point specifics narrowly outweigh B's cleaner but vaguer answer."
+}

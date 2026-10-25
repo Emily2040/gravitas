@@ -1,0 +1,49 @@
+{
+ "pair": "p057",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "HUG conditions are cited to a third-party blog (property.ambitstock.com) labelled 'HUG 가입 조건(2026. 10. 기준)', not to an official HUG page. The figures match the key, but the source is weak.",
+   "'대항력은 신고 다음 날 0시부터라 오전에 끝내는 게 좋아요': finishing in the morning does not change the effective time, so the reasoning does not support the advice (minor).",
+   "'집이 팔리거나 경매로 넘어가도 계속 살 권리': oversimplified. In an auction, 대항력 holds only if it ranks ahead of the 말소기준권리."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 7,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "'전입신고 (신분증·계약서·잔금 영수증 지참)': 전입신고 does not require a 잔금 영수증, so this adds a requirement that does not exist.",
+   "'전세권 설정 등기 — 확정일자보다 강하지만 비용 발생': oversimplified. It also leaves out that 전세권 registration needs the landlord's cooperation.",
+   "'근저당과 선순위 임차인 보증금 합계가 집값의 70~80%를 넘으면 위험 신호': a rule-of-thumb threshold given without any source.",
+   "'대항력(집이 경매로 넘어가도 계속 살 수 있는 권리)': oversimplified. In an auction it depends on ranking ahead of the 말소기준권리."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers open by rejecting the agent's claim and say correctly that 우선변제권 needs 확정일자 on top of 대항력. Neither one says that 최우선변제 does not apply at 2억 in Seoul. A also rejects the plan to report the move 'when there is time' right at the start, and B only does this through 'step 3: 바로' and a closing note. A covers more of the key: the 600원 fee, original contract and ID, keeping residence and registration until the deposit is returned, HUG timing and limit conditions, and the 30-day lease report for deposits over 6천만. B leaves out the lease report and keeping residence, adds a 잔금 영수증 requirement for 전입신고 that does not exist, and recommends 전세권 등기 as 'stronger' without saying it needs the landlord's cooperation. A is longer than the 'short' list the person asked for, but its extra material is accurate and usable."
+}

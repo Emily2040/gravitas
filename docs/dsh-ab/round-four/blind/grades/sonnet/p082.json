@@ -1,0 +1,58 @@
+{
+ "pair": "p082",
+ "winner": "tie",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"The 10%-per-year lifetime penalty\" is imprecise: the penalty is 10% per full 12 months without Part B.",
+   "Presents 20+ employees as what \"lets you delay Part B with no penalty\". The SEP does not depend on employer size; the 20-employee line only decides who pays first.",
+   "\"The drug coverage isn't creditable. Then you might need a Part D plan, and possibly Part B to get it.\" Misleading: Part D needs Part A or B enrollment, but the answer implies Part B specifically.",
+   "\"Whether the plan requires you to enroll in Medicare at 65 (some do; most don't)\": the frequency claim is unverifiable.",
+   "Says to call SSA at 1-800-772-1213 to withdraw an application before it takes effect: the withdrawal procedure is not verified. The phone number is the real SSA line.",
+   "The Federal Register link (FR-2025-11-19, 2025-20251) and the Medicare.gov links were not opened. The $202.90 figure matches the key."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Premium given as \"roughly $185-$210/month, set annually\": vague, and $185 is the 2025 figure. The 2026 standard premium is $202.90.",
+   "Frames the exception as active coverage \"from an employer with 20+ employees\", which implies employer size is a condition of the no-penalty SEP. It only decides who pays first.",
+   "\"Coverage generally starts the month after Social Security processes your form\": loosely worded and not verified.",
+   "\"A few plans do [require Medicare] for certain employee classes\": unverifiable.",
+   "Says SHIP counselors \"deal with exactly this scenario constantly\": unverifiable filler.",
+   "Says to sign up for Part D \"at the same time\" as Part B, without the 2-full-month window.",
+   "Says re-enrolling after CMS-1763 disenrollment is \"more complicated\" without detail. The form number CMS-1763 is real.",
+   "The Medicare.gov and shiphelp.org links were not opened, and the \"HSA note\" link points to the same working-past-65 page."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers open by correcting the premise: don't enroll in Part B this month, the 8-month SEP applies, and the employer plan pays first. Both give the HSA and 6-month Part A backdating warning, explain how to decline Part B if already on Social Security, and keep CMS-L564 and the creditable-coverage notice. Both miss the IEP-end exception, and neither mentions CMS-40B or the online application. A gives the exact 2026 premium ($202.90, about $2,435 a year) and the 2-month Part D window, and is tighter. B is more complete: it asks HR to rule out COBRA and retiree coverage, asks about an HSA, states the 63-day Part D rule, and covers the Medigap window. But B gives a vague and partly outdated premium range ($185-$210), and it is longer, with padding such as the SHIP referral and the disenroll section. A has a small error about needing Part B for Part D and a loose \"10%-per-year\". The strengths and flaws roughly offset, so this is a tie."
+}

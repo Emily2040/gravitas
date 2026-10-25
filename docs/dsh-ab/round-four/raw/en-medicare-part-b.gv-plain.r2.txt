@@ -1,0 +1,29 @@
+**Pause before you send in that application — the rule your coworker described has an exception that fits your situation.**
+
+The Part B late-enrollment penalty (10% of the standard premium for each full 12 months you went without Part B, for as long as you have Part B) applies to people who go without **creditable coverage**. You have group health coverage through your own current employment at a company with about 400 employees — well above the 20-employee threshold. That means your employer plan stays **primary** and Medicare is **secondary**, and you're allowed to delay Part B without a penalty. Enrolling now would mean paying the Part B premium for coverage that pays second to the plan you're keeping. ([Medicare.gov — Working past 65](https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65))
+
+## What to do this month
+
+1. **Call HR/benefits — don't rely on your coworker.** Ask:
+   - "Am I covered as an *active employee*, not a retiree or COBRA?"
+   - "Does our plan require employees turning 65 to enroll in Part A and/or Part B?" *(Some plans do — get this in writing.)*
+   - "Is our prescription drug coverage **creditable** under Medicare Part D?"
+   - "If I enroll in Medicare, does the group plan stay primary?"
+
+2. **Check whether Social Security is auto-enrolling you.** If you're already receiving Social Security or Railroad Retirement benefits, SSA will automatically enroll you in Parts A and B when you turn 65. If you want to delay Part B, contact SSA before coverage starts and decline/opt out. Don't ignore the Medicare card in the mail.
+
+3. **Decide about Part A separately.** If you have 40 quarters of work, Part A is premium-free and you can sign up anytime. **But if you contribute to an HSA**, enrolling in Part A (or taking Social Security) ends your HSA eligibility — stop HSA contributions first. If you don't have an HSA, free Part A is optional.
+
+4. **Don't submit the Part B application (CMS-40B) this month** unless HR says the plan requires it.
+
+5. **Save your proof.** Keep the annual creditable-coverage notice, pay stubs, and an employment verification letter. When you enroll later, SSA uses form **CMS-L564**, completed by your employer.
+
+6. **Calendar your real deadline: 8 months.** When you stop working or lose the employer coverage — whichever happens first — you get an **8-month Special Enrollment Period** to sign up for Part B with no penalty. COBRA does **not** extend this. Also sign up for Part D within **63 days** of losing creditable drug coverage. ([Medicare.gov — Creditable coverage](https://www.medicare.gov/health-drug-plans/part-d/basics/creditable-coverage))
+
+7. **Get a free second opinion** from your state's SHIP program: [shiphelp.org](https://www.shiphelp.org/).
+
+## When you actually retire or leave
+
+Apply for Part B during the 8-month SEP using **CMS-40B** plus **CMS-L564** (employer completes it), and get Part D within 63 days if you don't have other creditable drug coverage. ([Medicare.gov — Ready to sign up](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/ready-to-sign-up-for-part-a-part-b))
+
+**The one exception:** If HR confirms the group plan requires you to have Part B to remain covered, then enroll. Otherwise, waiting is the financially better move — you keep the plan you want and avoid paying for duplicate, secondary coverage.

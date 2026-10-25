@@ -1,0 +1,47 @@
+{
+ "pair": "p048",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"7~9월 석 달이면 이 요건을 넘고\": overstates the case. The test is a 60-day total of late or unpaid days, not the number of late months, so three late months do not by themselves meet it.",
+   "\"이직일 다음 날부터 12개월 안에 신청해야 하고\": presents the 12-month benefit period as a filing deadline. This hides that filing late cuts the number of paid days (150 days requires filing within about 208 days of leaving)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 8,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "Recommended order \"체불임금 회수 → 수급자격 신청\": putting wage recovery first delays the benefit claim, against the advice to file immediately. The 12-month benefit period runs from the day after leaving.",
+   "\"신청 기한: 이직일 다음날부터 12개월 안에 수급자격 신청\": presents the benefit period as a filing deadline and does not say that late filing loses paid days.",
+   "\"이직확인서를 회사가 안 써주면 고용센터에 발급 요청하면 됩니다\": imprecise. The job center does not issue the separation certificate; the company must submit it within 10 days of a request, and you can apply without it."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "wrong",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start by citing Annex 2 of the Enforcement Rule. A also says that wages paid late count as arrears. B hedges with \"가능성이 높으니\", while A overstates with \"요건을 넘고\". Neither gives the 60-day test. A gives the right 2026 daily range (66,048 to 68,100 won), 150 days, about 10 million won in total, the 14-day payment rule with 20% delay interest, and the simplified substitute payment capped at 10 million won. It also tells the person to file for benefits first and mentions the early re-employment allowance. B gives no amounts or day counts and leaves out the substitute payment and the livelihood loan. Its suggested order of recovering wages before filing for benefits could delay the claim. Both describe 12 months as a filing deadline and say nothing about the livelihood loan or Employment24 (고용24)."
+}

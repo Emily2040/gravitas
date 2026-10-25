@@ -1,0 +1,50 @@
+{
+ "pair": "p089",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"이번 주 금요일(10월 30일)\" is wrong. The key puts this request's Friday at 2026-10-23, so every date-dependent step is off by a week.",
+   "\"18시를 넘겼다면 정부24 전입신고와 인터넷등기소 전자확정일자로 그날 안에 끝내면 됩니다\" is wrong or unverified. An internet-registry 확정일자 filed after 18시 is granted on the next business day, and the 신고일 of an after-hours 정부24 전입신고 is unconfirmed. Stated as certain.",
+   "\"평일 18시까지\" is given as a general fact, but resident-center hours vary by 동. Minor.",
+   "\"짐을 다 들이지 않아도, 열쇠를 받아 쓸 수 있으면 '인도'는 됩니다\" is a legal assertion with no case cited. Plausible but unverified.",
+   "The \"전입세대 열람\" step for 선순위 세입자 is stated without checking who may request it or when. Plausible but unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "\"대항력은 신고 다음 날 0시부터라 오전에 끝내는 게 좋아요\" has a weak rationale. The 0시 start is the same whether the filing is in the morning or the afternoon.",
+   "The HUG conditions are sourced to a third-party site (property.ambitstock.com), and the \"2026. 10. 기준\" label is unverifiable. The conditions themselves match the key.",
+   "The extras (증액 재계약 시 확정일자 재취득, 경매 시 배당요구, 다가구 선순위 보증금) are generally correct, so no error is listed."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "B is better because it has no outright factual error, while A has two. A names the Friday as 10월 30일, but the key's Friday is 10-23. A also says that after 18시 the 정부24 and 인터넷등기소 route can finish \"그날 안에\", which contradicts the key: an online 확정일자 filed after hours is dated the next business day. Both answers correct the two baited premises at the start, separate 대항력 from 우선변제권, and give the 다음 날 0시 rule. Both give 주민센터 전입신고 plus 확정일자 with 계약서 원본, 신분증 and 600원. Both skip 최우선변제 and the 10-24 date. B adds the explicit \"둘 다 이사 당일\", a recheck right after 잔금, HUG conditions that match the key, keeping residence for the whole term, and the 6천만 원 임대차 신고 duty with its 30-day limit (though not the 의제 rule). A is shorter and fits \"짧게 정리\" better, but B's accuracy and fuller coverage of the key outweigh its extra length."
+}

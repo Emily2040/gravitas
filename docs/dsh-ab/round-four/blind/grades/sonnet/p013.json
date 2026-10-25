@@ -1,0 +1,54 @@
+{
+ "pair": "p013",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Third table row (\"合同沿用旧'本人工资=实得工资70%'口径\", 8000×70%×80%=4480) applies a 70% haircut to an 8000 contract wage. Per the Zhonglun article the 70% base applies only when no wage is specified in the contract or collective contract, so this scenario is misapplied. Offered as a hedged alternative, and A says elsewhere that the old 4-year tier means 6400.",
+   "Cites \"沪劳保发〔2000〕14号\"; the correct number is 沪劳保保发〔2000〕14号 (minor).",
+   "Says 10号第九条 \"只规定了病假工资的计算基数\". This is incomplete: 第九条 also requires the employer to pay 假期工资 per the rules. A's own HR message does cite 第九条 for that duty.",
+   "\"很多人（包括一些HR）还没更新\" is unsupported colour.",
+   "The cited links (ft22.com mirror of the 10号 text, the rsj.sh.gov.cn 2025 Q&A, Ebner Stolz) cannot be verified from the answer. The Zhonglun link is real (opened). The ft22.com link is a non-official mirror."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "States as fact that under the old rule \"基数要先按正常工资的70%计算...8000×70%×80%=4480元，并非6400元\". This contradicts the key (83号 tier at 4 years = 80% of 8000 = 6400). Per Zhonglun the 70% base applies only when the contract or collective contract specifies no wage, so it is wrong for an 8000 contract wage. The 3680 shortfall derived from it is also unsupported.",
+   "Says that if 应发 is about 2192 and 实发 is 800 after personal social insurance and housing fund, the company \"是按最低线在发，能主张的差额会少很多\". The majority view (14号 text, CMS) is that the minimum excludes personal contributions, so this still underpays. B concedes the minority reading without saying so.",
+   "The HR message and body never cite 309号第59条 or 10号第九条. They appear only as source links, and the 10号 link is not tied to 第九条's content.",
+   "The links (rsj.sh.gov.cn 83号 extension, 20260731 new measure, mohrss 309号) cannot be verified from the answer. The Zhonglun link is real (opened).",
+   "The deadlines in the HR message (\"本周内\", \"下个工资发放日前\") are invented demands, not legal rules. Minor."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise, say 83号 expired on 2026-08-15, and give 2740×80%=2192 and a 1392 shortfall. Both also give 6400/5600 as the contract or policy figure and point to 劳动监察 and 仲裁. A is stronger on the key's concrete points. It cites 309号第59条 and 10号第九条 in the HR message, spells out the 应发 versus 实发 check (800 as 应发 is plainly illegal, and the minimum excludes personal contributions), says an agreed ratio cannot be cut unilaterally, and asks for the calculation basis and the difference paid. B has no legal citation in the HR message, treats an 实发 of 800 as roughly the company paying the minimum, and states that the old 4-year figure is 4480 \\\"并非6400元\\\", which contradicts the key. A also carries a 4480 row, but only as one hedged contract scenario, and it says elsewhere that 4 years under the old tiers is 80%, about 6400. Neither explains the base exclusions or the ÷21.75 daily formula. B is shorter, while A runs long with a second HR reply and an evidence section, which costs A a little on concision but not enough to offset its accuracy lead."
+}

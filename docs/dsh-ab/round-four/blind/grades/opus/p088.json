@@ -1,0 +1,50 @@
+{
+ "pair": "p088",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Cites 劳部发〔1997〕271号第4条 for holiday 300% 'another payment, generally no 补休': from my own knowledge that item exists, but it is a general rule, not one specific to 综合工时. A citation nuance, not an error.",
+   "'10月3日恰逢周六，公司若主张按补假日折算，只会把某一天的300%和200%对调，7天总额不变': confusing reasoning with no source; harmless because the total is unchanged."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'京劳社资发〔2005〕94号' given as a Beijing licensing basis: unverifiable. The key names only 157号, and this number may not be a 综合工时 document.",
+   "Scenario B: '如果这32小时全部构成周期超时，约2482.76元，合计约6206.90元'. The key says the 150% amount cannot be computed from the facts given. The arithmetic is right (413.79/8×1.5×32 ≈ 2482.76), but the figure is speculative.",
+   "'你可以主张按9000元或近12个月平均应发工资作为基数': a 12-month average is not the Beijing overtime base rule (工资支付规定第44条: the wage set in the contract, then the collective contract, then normal wage). Unsupported.",
+   "'《综合计算工时工作制行政许可决定书》' is given as an exact document title: unverifiable, though harmless as advice."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers catch the trap at the start: without approval the 综合工时 clause does not apply, and holidays pay 300% even with approval. Both get every figure right (413.79, 3724.14, 3310.34, 7034.48, paid on top of the 9000 salary). A is tighter and better sourced: it cites 人社部发〔2025〕2号 and the Beijing HRSS case saying the contract does not decide whether special hours apply, and it describes scenario B without inventing a number. B adds useful practical points: it names the 9/20 and 10/10 make-up workdays, says to have the company show the approval document, and notes that arbitration is free and how the limitation period works. But B runs much longer and gives a speculative scenario-B 150% figure (6206.90), which the key penalises. B also adds a couple of claims that cannot be checked: 〔2005〕94号 and the 12-month average base. On balance A wins narrowly."
+}

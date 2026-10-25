@@ -1,0 +1,54 @@
+{
+ "pair": "p046",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"The Part B late-enrollment penalty ... applies to people who go without creditable coverage\": imprecise. Penalty-free delay of Part B depends on a group health plan based on current employment (the SEP). \"Creditable coverage\" is the Part D concept, and COBRA or retiree coverage does not protect Part B.",
+   "Ties penalty-free delay to the 400 employees being above the 20-employee threshold: imprecise. Employer size decides which plan pays first, not whether the SEP applies (minor).",
+   "At retirement, \"Apply for Part B ... using CMS-40B plus CMS-L564\" with no caveat that CMS-40B is only for people who already have Part A. A also says Part A is optional and should be skipped with an HSA, so this sends some readers down the wrong route.",
+   "\"stop HSA contributions first\": incomplete. Part A taken later is backdated up to 6 months, so HSA contributions must stop 6 months before applying.",
+   "\"sign up for Part D within 63 days\": the Part D SEP is 2 full months after coverage ends. 63 days is the gap that triggers the penalty (minor).",
+   "CMS-L564 \"completed by your employer\": Section A is completed by the enrollee and Section B by the employer (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"your coworker's penalty warning doesn't apply to you at 400 employees\": ties the SEP to employer size. Size decides payer order, not SEP eligibility (imprecise, minor).",
+   "\"Enroll in Part D or a Medicare Advantage plan within 63 days if your drug coverage isn't creditable\": muddled. The Part D SEP is 2 full months after employer coverage ends, and 63 days is the penalty gap.",
+   "\"If you don't have 40 quarters, Part A carries a premium and its own late penalty\": imprecise. The current-employment GHP SEP also shields premium Part A from the penalty. Minor, and B defers to SSA.",
+   "\"(you can start three months before your birthday)\" for declining Part B with SSA: an unverifiable timing detail (plausible, since it matches the start of the IEP)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers correct the coworker's premise at the start and tell the asker not to enroll in Part B this month. Both give sensible HR questions, the auto-enrollment warning, the creditable-coverage notice and a COBRA caution, and both miss the exception for a job or coverage that ends during the IEP. B gives the right 2026 premium ($202.90, about $2,435 a year) and correct IRMAA thresholds. It also mentions the Medigap open-enrollment window and gives the 6-month Part A backdating needed for the HSA warning. A has no figures and its HSA advice ('stop contributions first') is incomplete. A covers more of the retirement paperwork (CMS-L564, SHIP), but it points to CMS-40B without saying it requires Part A, and it frames the Part B penalty in Part D 'creditable coverage' terms. B is slightly longer but more complete and accurate overall."
+}

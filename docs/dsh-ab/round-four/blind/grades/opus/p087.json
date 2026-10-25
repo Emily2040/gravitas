@@ -1,0 +1,50 @@
+{
+ "pair": "p087",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "“可能另扣大病保险等几十元”: misleading. The key says the 大病/长护 premiums come out of the re-credited personal-account funds and are not paid in extra cash; “另扣” reads as an extra charge.",
+   "“通过‘浙里办’搜‘医保补缴’或‘灵活就业参保’” and “最好在11月新单位增员前”: specific procedural steps and timing not covered by the key; unverifiable (judged from my own knowledge; 12393 is the real medical-insurance hotline)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "“7 个月年限以后随时能缴回来”: loose and misleading. 补缴 for 2026 must be done by 2026-12-31 (B says so itself), and later make-up happens only at retirement through a one-time payment or monthly 延缴.",
+   "“你离退休还远”: assumes the user's age, which the request never gives. B's advice not to back-pay rests on this assumption.",
+   "“确认新公司11月及时给你参保，这是唯一有时限的事”: contradicts B's own 2026-12-31 补缴 deadline.",
+   "Two of the cited sources are non-official reposts (m.163.com, bendibao). The links are checkable but are not official guidance."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers open by rejecting the 清零 premise. Both explain the third-natural-month waiting period (2027-01, no reimbursement in Nov–Dec), give the 10-year local plus 20-year cumulative rule and the 12-year/2-year gaps, and quote 473.67 yuan/month and the 2026-12-31 deadline. A is more complete and more actionable: it shows the exact 3,315.69 calculation and the 灵活就业 eligibility conditions (户籍 or 居住证 plus 就业登记, and notes the 10-year route does not apply to her), says the new employer cannot back-pay, gives the 743.60 and 443.75 yuan/month retirement make-up rates, and ties whether to back-pay to her years left before retirement. B leaves eligibility and the cost of not back-paying vague, assumes she is far from retirement, and says the 7 months can be paid back “随时”, which clashes with its own deadline. A's only slip is the ambiguous “另扣大病保险” remark."
+}

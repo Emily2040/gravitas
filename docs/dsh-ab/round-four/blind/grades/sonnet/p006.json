@@ -1,0 +1,57 @@
+{
+ "pair": "p006",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "Asks whether she can 补3–9月. That span conflicts with the 7-month gap of April to October (new job from November), so October is left out and March is added.",
+   "Says 补缴 costs 473.67元/月 and then \"另加大病、长护险几十元\". The key says these are deducted from the personal-account funds credited by the 补缴, with no extra cash.",
+   "Treats \"连续缴费年限\" as a separate count that \"断缴3个月以上会重新计算\". The key finds no such reset for 职工医保 in Hangzhou, and only the waiting period applies, so the framing is loose.",
+   "Gives no month shortfall for the 10-year actual requirement (24 months). The cumulative gap is given only as \"还差12年\".",
+   "Gives no 退休时一次性补缴 or 延缴 figures (743.60 and 443.75 yuan/month). It only says the option exists.",
+   "Says 杭州报销比例不看连续缴费年限, and 省内换工作不用转移. Neither is checkable from the packet.",
+   "Says flatly \"不建议补\". The reasoning (8年7个月 still short of 10 and 20) is sound, but the key treats 补缴 as optional and dependent on later years, so this is firmer than the evidence."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Cites \"国家医保局口径\" that 断缴3个月内补缴 means no waiting period and 可追溯. Per the key this rule (43号文第十一条) covers only cross-region transfers and 职工/居民 switches. B correctly says it does not apply to her, but describes its scope loosely.",
+   "Gives portal paths (浙里办 → 浙里医保 → 我要参保 → 职工参保登记; 浙江税务社保缴费) and a window document list (身份证, 居住证或户口本, 就业登记材料, 补缴申请表). Also says 补缴超过1个月通常要去窗口. None of this is checkable from the packet.",
+   "Says 杭州报销比例不跟连续年限挂钩. Plausible but unverified.",
+   "Says 11–12月 \"大概率没有统筹报销\" and that 补缴 \"大概率仍有等待期\". Both are hedged, and the key says the exemption is unverified.",
+   "Does not say the new employer cannot pay the April to October months for her. It only says to mind the handover between 灵活就业 and 单位参保.",
+   "Padded and repetitive: a long multi-section answer with a closing one-sentence summary that repeats the body, and extra scenarios such as 补3–10月 for 8个月 (3,789.36, arithmetic correct)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by rejecting the 清零 premise, cite 杭政函〔2025〕88号, and describe the real consequence correctly: a 3-month gap triggers 中断参保, then a wait to the third natural month, with 2027年1月 as the likely restart. B is far more complete on the numbers. It gives the 144-month cumulative and 2-year actual gaps, 473.67×7 = 3,315.69, the 12月31日 deadline, and 补缴期间医疗费不报. It also gives the retirement-time costs of 5,205.20 and 3,106.25 (both recomputed correctly). It applies the 居住证+就业登记 eligibility to her own case. A states the 20-year and 10-year rule and gives about 3,316 yuan, but has no 24-month gap, no retirement-time figures, an inconsistent 补3–9月 span, and an extra-cash claim for 大病/长护 that contradicts the key. A is shorter and its no-补 recommendation is reasoned. B is longer and has some unverifiable procedural detail, but its extra content is mostly useful and well hedged."
+}

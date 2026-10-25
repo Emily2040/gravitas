@@ -1,0 +1,55 @@
+{
+ "pair": "p014",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "The HR text and section 1 cite the delay interest under '근로자퇴직급여 보장법 제17조'. The 연 20% rate comes from 근로기준법 제37조 and 시행령 제17조, so the statute cited to the HR team is wrong.",
+   "'퇴직소득세·지방소득세 약 20만~25만 원을 빼면 실수령' is unsupported. An IRP transfer has no withholding at payment, and the key's estimate for a non-pension withdrawal is about 9.4만~14.1만.",
+   "'3년 이하 징역 또는 3천만 원 이하 벌금' is the old penalty. Since 2026.9.18 it is 5 years or 50 million won under 제43조 (minor deduction).",
+   "The HR text says the 14 days run from '퇴사일 다음 날부터'. The statute counts from the day the payment ground arises, so the wording is imprecise.",
+   "'고용노동부와 법제처도 ... 해석합니다' gives no document number or link, so it is unverifiable as written (the key does support a 법제처 interpretation).",
+   "'실무에서는 두 방식이 갈리므로 1,200만 원을 기준으로 협의하시는 편이 유리' is unverifiable advice. The HR text also states 약 1,200만 원 as the amount, which is aggressive given the uncertainty over 통상임금.",
+   "It uses 1,157 days and 3.17 years and gets 약 1,023만, slightly off the key's 1,158 days and 약 1,024만 (rounding only)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "'3년 이하 징역 또는 3천만 원 이하 벌금 (퇴직급여법 제44조)' is the old penalty. Since 2026.9.18 it is 5 years or 50 million won under 제43조 (minor deduction).",
+   "'퇴직소득세가 원천징수되어 실수령액은 조금 줄어듭니다' ignores that an IRP transfer means no withholding at payment. It is vague, with no wrong figure given.",
+   "'법제처 해석(2026. 5. 26.)' gives a date that is unverifiable, although the number 26-0209 matches the key.",
+   "'고용노동부 실무는 통상임금을 적용하는 쪽입니다' is unverifiable.",
+   "The HR text states the amount as 약 1,020만 원, the low end only. This is not an error, but it is weaker than the answer's own point that 1,202만 is arguable.",
+   "Section 5 on IRP omits the 300만 원 and under-55 conditions."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the company at the start: 14 days under 제9조제1항, an extension needs special circumstances plus agreement, and the deadline (about 10/4) is already past. B's figures match the key: 1,158 days, 약 1,024만 from the average wage, 126,316/day and 약 1,202만 from the 통상임금 floor, with 법제처 26-0209 named. A gives 1,157 days and 약 1,023만/1,200만, which is close but looser. A's HR text cites '퇴직급여법 제17조' for the delay interest, which is the wrong statute, and it gives an unsupported 20만~25만 tax figure. A's text also says '회사 사정이 있으실 수 있다는 점은 이해합니다', which comes close to reading as consent to a delay, and it leaves out IRP information. B's text is clean, requests 지급 예정일 and 산정 내역, and adds no wrong statute, though it also omits IRP and quotes only the lower amount. Both use the outdated 3년/3천만 원 penalty, and both cover 노동포털 or 지방관서 filing with 1350. B has fewer wrong specifics and better sourcing."
+}

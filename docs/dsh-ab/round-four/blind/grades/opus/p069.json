@@ -1,0 +1,50 @@
+{
+ "pair": "p069",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"Finish by December 31, 2026 so it counts against the 2026 limit\": presents December as the deadline, but a rollover designated for 2026 can be made through April 15, 2027 (219(f)(3), 2026 Form 5498 instructions); minor error.",
+   "\"If you contributed in 2021–2026, that money isn't eligible\": too broad. For a late-2026 transfer, contributions from early 2021 are more than 5 years old and qualify.",
+   "\"Do not have the 529 send him a check — that becomes ... an excess Roth contribution (6% excise tax per year)\": overstated. A redeposited check is a nonqualified withdrawal plus a regular contribution, which is excess only if it goes over his limit.",
+   "Step 3's \"smallest of $7,500; his 2026 earned income; [eligible portion]\" and \"earned income at least equal to the amount rolled over\" leave out his other IRA contributions. With $4,000 earned and $2,000 contributed, this gives $4,000, but the correct figure is $2,000 (step 8 only partly fixes this)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "The 2026 maximum is given as the smallest of four items ($7,500; compensation; eligible balance; $7,500 minus other contributions). That is wrong when compensation is under $7,500 and he has other contributions: $4,000 earned plus $2,000 contributed gives $4,000 instead of the correct $2,000. The table's own wording (\"$7,500, or his taxable compensation if less. Reduced by any other 2026 IRA contributions\") is correct, and so are all the worked examples.",
+   "\"The 2026 IRA limit is $7,500 per the IRS\": the source is cited without a link or document number. The figure is correct per the key (IR-2025-111)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start. Both get the $7,500 annual cap, the $35,000 lifetime cap, the $13,000 that can never move, the son-owned Roth with a direct trustee-to-trustee transfer, the 15- and 5-year rules, the income-limit exemption and the state-tax caveat. A treats December 31 as the deadline. B says plainly that December is not the federal deadline (April 15, 2027) and warns that plans may cut off earlier. B also addresses requesting the full $48,000 directly, and its examples and 1099-Q Box 4b detail are correct (I checked Box 4b against the IRS i1099q instructions, Rev. 04/2025). B's four-item minimum formula overstates the limit when his compensation is low and he has other contributions. A's step 3 falls into the same trap, so this does not separate them. Neither answer gives the $40,500 excess figure."
+}

@@ -1,0 +1,58 @@
+{
+ "pair": "p064",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites article 55 of the Hangzhou measures for carrying years across cities: the article number cannot be checked from the packet.",
+   "Says the continuous-years figure is what gets recalculated and that it decides the waiting period. This goes beyond the key, and the waiting period comes from the interruption rule.",
+   "Says 大病保险等可能另计几十元 on top of the payment. The key says these charges come out of the personal-account money credited by the back payment, with no separate cash.",
+   "Says back payment is 目前仅支持线下办理 at the district office with an ID card or 市民卡: unverifiable.",
+   "The sentence 你的年限会从8年变成8年 is garbled, and the table row 少7个月 muddles how the 7 months relate to the existing years.",
+   "Says 若是外地户口，这条路可能走不通 because she has only 8 years. This blurs the 居住证加就业登记 route, which does not need 10 years.",
+   "Says back payment 一般不算连续 for home-purchase or hukou 连续社保 rules: unverifiable and outside the question.",
+   "Cites a 163.com article and a bendibao page: the links cannot be checked from the packet."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "Says 连续缴费年限 is used only for 生育津贴等少数待遇 and does not affect retirement: not covered by the key, unverifiable.",
+   "Says 可能另扣大病保险等几十元. The key says these come out of the personal account credited by the back payment, so the wording is ambiguous and may imply a separate charge.",
+   "Advises doing the back payment 最好在11月新单位增员前 and gives the route 浙里办 搜 医保补缴 or 灵活就业参保: unverifiable.",
+   "Says 现行文件也没有规定补缴可以免掉等待期. The key marks this as unverified, though the answer hedges and tells her not to rely on it.",
+   "Says 2027年1月1日 as the exact date benefits resume. The key allows January or February and says to defer to the 经办 office, and the answer does mention the February case.",
+   "Cites a hznews article and the z.hangzhou.com.cn full text: the links cannot be checked from the packet."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the baited premise at the start and keep all 8 years. Both get the Hangzhou retirement rule (10 years actual, 20 years cumulative), the 12-year and 2-year gaps, the third-natural-month waiting period, 473.67 x 7 = 3,315.69 yuan, the 2026-12-31 deadline, and no reimbursement for the back-paid months. B is more complete on the points A leaves loose. It says the new employer cannot back-pay the months before she joined. It states the eligibility routes and notes that the 10-year route is closed to her. It gives the retirement top-up figures of 743.60 and 443.75 yuan a month. It covers the January or February waiting-period ambiguity, and it adds the 8y7m result (17 months short of 10 years). A gives no top-up figures and does not mention the new-employer point. Its sentence 年限会从8年变成8年 is garbled, it states the extra charges as a separate payment (the key says they come out of the personal account), and it repeats itself in the table and the one-line summary. B is also tighter."
+}

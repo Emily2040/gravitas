@@ -1,0 +1,50 @@
+{
+ "pair": "p017",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"如果800元是扣完个人社保、公积金后的实发金额……公司可能刚好达到下限，并没有差额\": this takes the minority reading as the outcome and does not say the point is disputed; the majority view (the 14号 text, CMS) is that the minimum excludes personal contributions, so 800 net would still be unlawful",
+   "\"也可以在1年内申请劳动仲裁\": imprecise. Wage arrears claimed while still employed are not bound by the one-year limit; the one year runs from leaving (劳动争议调解仲裁法 art. 27)",
+   "States that 沪劳保保发〔2000〕14号 has expired as settled fact; the key says this is presumed, with no explicit official statement"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Headline \"如果劳动合同或公司制度沿用旧上海口径，可能是4480元\" (8000×70%×80%) is misleading: the 70% base applied only when no wage was agreed at all. With an agreed 8000 wage, the old 83号 4–6-year tier gives 6400, which the key treats as the old-tier figure",
+   "Cites the 人社局 reply link as showing that both 83号 and 14号 expired on 2026-08-15; per the key the official reply covers 83号, and 14号's expiry is only presumed",
+   "\"800元肯定不合法\" is slightly overstated: if 800 is net pay, the minority reading leaves it uncertain (though the majority view supports it)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers reject \"可以不发\", say that 83号 expired on 2026-08-15, and arrive at the correct 2740×80%=2192 floor and the 1392 shortfall. B wins clearly because it gives the 6400 figure for an 80% contractual rate, while A only says the company rate is \"通常远高于2192\". B's message to HR also cites 309号第59条 and asks for the gross-or-net figure, the base, the rate and the rule applied. A's message cites no law. A's biggest flaw is concluding that if 800 is net pay the company \"可能刚好达到下限，并没有差额\", which follows the minority reading without saying it is disputed and could lead the worker to drop a valid claim. A also gets the one-year arbitration limit slightly wrong. B's 4480 \"旧上海口径\" headline is muddled and its premise correction comes after the opening verdict rather than first, but it still keeps 2192 as the legal floor."
+}

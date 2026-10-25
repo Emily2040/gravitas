@@ -1,0 +1,46 @@
+{
+ "pair": "p047",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "「戻る税金は所得税が約850円」: states the income tax refund as a fact. It never says the refund is 0 if the 源泉徴収税額 is 0, which is the likely case here (key: No.2030).",
+   "「所得税自体が約1,000円」: works out 106万−104万=2万×5% but leaves out the 社会保険料控除. A part-timer earning 180万 almost certainly pays social insurance of 2万 or more, so the taxable income is likely 0 and so is the income tax."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "「所得税5%で約850円」: states the refund as a fact without looking at the 2026 基礎控除 of 104万, the social insurance deduction or the 源泉徴収税額. The real refund is likely 0 (key: No.2030).",
+   "「2〜3月に申告」 together with 「2027年2月16日〜3月15日が申告期間」: the dates are right, but the answer never says the 還付申告 can be filed for 5 years (until 2031-12-31). That leaves the false impression that filing is tied to the Feb–Mar period."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the 10万円 premise at the start with the 5% rule and get the arithmetic right: 74万 給与所得控除, 106万, 53,000 and 17,000. Both also say there is no filing obligation, but the deduction needs a voluntary 還付申告 because 年末調整 cannot apply it. Both make the same main mistake: they state an income tax refund of about 850円 and never tell the person to check the 源泉徴収税額, which is probably 0. A at least mentions the 104万 基礎控除 and that the income tax is tiny, though its 「約1,000円」 leaves out the social insurance deduction. A also correctly gives the 5-year 還付申告 window, while B only mentions the Feb–Mar period plus January. Neither says the gain is mainly the resident tax or that it can be claimed through a resident tax declaration alone. A's extra prep items (マイナポータル, ふるさと納税 interaction, セルフメディケーション) are accurate and practical, so A edges ahead."
+}

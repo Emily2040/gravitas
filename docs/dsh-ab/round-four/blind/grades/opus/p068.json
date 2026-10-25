@@ -1,0 +1,47 @@
+{
+ "pair": "p068",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "「戻る税金は所得税が約850円…合わせて2,500円ほど」: this states an income-tax refund as fact. With the 104万円 basic deduction, 106万 − 104万 leaves only 2万円, so any social insurance deduction of 2万円 or more brings taxable income to 0 and the refund to 0. The answer never asks the reader to check 源泉徴収税額.",
+   "「所得税自体が約1,000円」: this ignores 社会保険料控除 and overstates the remaining income tax, which is most likely 0."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "「扶養に入っている場合、収入や申告が扶養判定に影響することがあります」 is misleading: claiming 医療費控除 does not change 合計所得金額, so filing for it cannot affect whether someone counts as a dependent.",
+   "「クリーニング」 is listed as excluded without qualification. Scaling done as treatment (歯石除去) is covered; only cosmetic cleaning is excluded.",
+   "「来年1〜3月に申告」 ties filing to the Jan–Mar season, which sits awkwardly with the answer's own correct statement that a refund return can be filed for 5 years."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 10万円 premise at the start with the 5% rule. Both use the 74万円 minimum to reach 106万円, 5万3,000円 and 1万7,000円, and both say filing is optional and the return can be filed within 5 years. B gives the honest picture the key asks for: the income-tax refund is probably 0 because of the 104万円 basic deduction plus social insurance, and the real gain is about 1,700円 in resident tax. A states an 850円 income-tax refund as fact and a combined 2,500円 total, without mentioning withholding of 0, which the key names as a penalty. A has the stronger prep list: it covers subtracting reimbursements, that receipts are not attached, and dating payments by when they were made. B leaves those out, adds a misleading line about dependent status, and runs longer. On balance B wins slightly because its tax-effect conclusion is right."
+}

@@ -1,0 +1,54 @@
+{
+ "pair": "p094",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "임금체불확인서(회사 발급) is listed as evidence to prepare; a non-paying employer rarely issues one and the usual document comes from the labor office after a complaint. Unverifiable and doubtful.",
+   "근로복지공단에 피보험자격 확인청구(1588-0075) for an uninsured worker: which body takes the claim could not be verified, so unverifiable.",
+   "Says 국민취업지원제도 can pick up after 실업급여 ends ('잔여분') and to apply now; it ignores that 구직촉진수당 may be excluded for 6 months after 구직급여 ends. Oversimplified, unverifiable.",
+   "Early re-employment allowance is described as '남은 수급일수의 절반' and omits the condition that at least half of the 소정급여일수 must remain, so the explanation is imprecise.",
+   "The 1350 link (id=1000294810) opened and is a real Q&A on resigning because of wage arrears, so it is not an error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "missing",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 8,
+  "honest": 6,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "'7~9월 석 달이면 요건을 넘습니다' is stated flatly with no 60-day delay-day test and no check of how late each month was. This is the '석 달이니 무조건' overclaim.",
+   "'이미 늦게라도 받았다면 그 지연 사실 자체가 사유가 되고' is wrong as a general rule. The test is the sum of delay days, not the number of late months.",
+   "'워크넷 구직등록 후 관할 고용센터에' is wrong because worknet registration was merged into 고용24, and the key names it as an error.",
+   "'임금이 밀리거나 늦게 지급돼서 그만둔 경우는 자발적 퇴사로 보지 않고' mischaracterizes the law. It is still a 자기사정 이직 that is allowed through a 정당한 사유 exception.",
+   "'미가입이면 고용센터에 피보험자격 확인을 신청' is unverifiable (A names 근로복지공단 instead).",
+   "It never says the final decision rests with the Employment Center and only mentions that an appeal exists.",
+   "The 1350 links (id=1000319196, id=1000261514) opened and match their topics, and the 1,000만원 간이대지급금 cap is correct, so these are not errors."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "wrong",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "wrong",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both correct the premise at the start and say a 2-month wage arrears exception exists, with real 1350 links. A hedges ('가능성이 높습니다', final call with the 고용센터) and clearly tells the person to apply now because the 12-month window runs from the day after leaving. A has no worknet error. B states flatly that three months 'exceeds the requirement' and that any late payment is a valid reason, which is the day-count overclaim the key penalizes. B also tells the person to register on 워크넷, which the key marks wrong. B does better on 180 days of insured time and on 간이대지급금 (1,000만원), but neither answer gives the 150/180 days, the amounts or the 60-day test, and both are long for a request for brevity. A edges ahead on accuracy and calibration."
+}

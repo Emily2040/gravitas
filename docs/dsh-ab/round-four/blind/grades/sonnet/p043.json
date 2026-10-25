@@ -1,0 +1,52 @@
+{
+ "pair": "p043",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Penalty given as 3 years / 30 million won under Art. 44: old rule; since 2026.9.18 it is 5 years / 50 million won under Art. 43 (minor deduction). It also sits oddly beside the opening line that the answer follows the law in force in October 2026.",
+   "\"퇴직소득세가 원천징수되어 실수령액은 조금 줄어\": if the severance goes into an IRP (as the answer itself says in section 5), no tax is withheld at payment, so this is misleading.",
+   "\"법제처 해석(2026. 5. 26.)과 고용노동부 실무는 통상임금을 적용하는 쪽\": the Legislation Ministry interpretation matches the key (26-0209), but the claim about Ministry of Labor practice is unverifiable.",
+   "IRP described as the \"원칙적\" payment method with no 3 million won threshold and no under-55 condition; \"회사가 계좌를 물으면 안내받아 처리\" is passive.",
+   "The HR text says \"제가 계산한 퇴직금은 세전 약 1,020만 원\", which anchors at the lowest figure although the answer's own range goes up to about 12.02 million won (strategic weakness, not a factual error)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "Penalty given as 3 years / 30 million won: old rule; since 2026.9.18 it is 5 years / 50 million won (minor deduction).",
+   "\"10월 4일이 법정 기한\" and \"오늘(10월 25일) 기준 21일 지났어요\": a single deadline is asserted although it depends on the retirement-date reading and holidays (key range about 10/3 to 10/6). The arithmetic (10/25 minus 10/4 = 21) is right and the answer is conditional on a 9/20 exit.",
+   "The headline \"세전 약 1,200만 원\" and the text figure assume the whole 3.3 million won is ordinary wage; the answer does disclose the 10,242,000 won alternative and the caveat about non-ordinary items.",
+   "IRP described as the current-law payment method with no 3 million won threshold or under-55 condition.",
+   "The \"참고한 자료\" list (including the Ministry calculator link) is a source claim that cannot be checked from the answer alone."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the company at the start: 14 days under Art. 9(1), extension only by agreement, deadline already passed. Both show 107,609 won per day, 1,158 days, the 126,316 won ordinary-wage floor, and the 10.24 million to 12.02 million won range, with 지연이자 20% and the old 3-year/30 million won penalty (same minor error). B is slightly better because its HR text carries the retirement date, the 14-day deadline, a request for the calculation details, a reply date and IRP account guidance, with no wording that reads as agreeing to an extension. B also warns against signing a waiver or instalment agreement. A's text states about 10.2 million won, which undersells the claim, and leaves IRP out of the text. A also says tax is withheld, which clashes with the IRP route. A's pluses are a clearer range, DB/DC mention, 반의사불벌, and the online filing portal. Both only partly cover the checklist of open facts (key point 5), so the margin is slight."
+}

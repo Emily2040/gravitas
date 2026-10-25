@@ -1,0 +1,53 @@
+{
+ "pair": "p076",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "The 'smallest of' list treats compensation and '$7,500 minus other IRA contributions' as separate items. For $4,000 earned plus $2,000 contributed it gives $4,000, but the right figure is min(7,500, 4,000) minus 2,000 = $2,000. The table's wording ('Reduced by any other 2026 IRA contributions') is right, so this is a minor internal inconsistency.",
+   "Does not state the $40,500 minimum excess. Also omits the cure of withdrawing the excess with earnings by the return due date. These are omissions, not errors.",
+   "The Box 4b claim on Form 1099-Q matches the IRS 1099-Q instructions I opened (box 4b = QTP-to-Roth transfer). No error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 7,
+  "concise": 4,
+  "added_claim_errors": [
+   "'to count for 2026 the money needs to land in the Roth by December 31, 2026 - don't rely on the April 2027 filing deadline' and 'a January arrival may count against 2027'. This states December as the deadline and denies the April 15, 2027 designation, which is wrong. Per the key it is a minor error, and plan-level processing varies.",
+   "'If the annual limit rises with inflation, this compresses to four or five years'. Wrong: 8,000 x 4 = 32,000 is below 35,000, so it still takes five tax years.",
+   "'the 15-year clock restarts for the new beneficiary' (beneficiary change). Stated as settled, but the key says this is unresolved with no IRS guidance. Elsewhere it hedges with 'can restart'.",
+   "Never mentions the 6% Roth excise tax on an excess contribution. Never explains the 529-side tax on the non-qualifying part of a full $48,000 move. Only a check payout is described as non-qualified. 'Tax mess' is left vague.",
+   "'Scholarships, investment income, and parental support don't count' as earned income. Roughly right, but taxable stipends can count as compensation. Minor and unverified.",
+   "'Most do by 2026, but not all' (plans supporting 529-to-Roth) and 'distribution code 1 in Box 7' on Form 1099-Q. Plan support is unverifiable. The IRS instructions say the Box 7 code is optional ('may, but are not required'), so 'should be' is overstated."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start. Both give the $7,500 annual cap, the $35,000 lifetime cap with at least $13,000 left out, and the son-owned Roth with a direct transfer. Both state the 5-year lookback, the 15-year pass and the compensation requirement, and both say Roth income limits do not apply. A also states the key's deadline correction (December 31 is not the federal deadline, April 15, 2027 is possible, plans often cut off earlier) and covers both the 6% Roth excise and the 529 earnings-plus-10% consequence of requesting $48,000. A hedges the beneficiary-change clock ('may restart'). B tells the person the money must land by December 31 to count for 2026 and that January 'may count against 2027', which contradicts key point 7. B also says rising limits could compress the schedule to four years, states the 15-year reset as settled, and never mentions the 6% excise or the excess consequences. B is much longer, with repeated traps, a CPA question list and extra sections. A's one flaw is a muddled min-formula list that gives the wrong result in the $4,000-earned, $2,000-contributed case, while its table wording is right."
+}

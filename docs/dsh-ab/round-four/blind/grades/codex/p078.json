@@ -1,0 +1,53 @@
+{
+  "pair": "p078",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+    "correct": 6,
+    "trap": 8,
+    "honest": 6,
+    "useful": 7,
+    "concise": 6,
+    "added_claim_errors": [
+      "Says the coworker would be right for an employer under 20 employees: employer size changes payment priority, not SEP eligibility.",
+      "Includes 'not actively working' among disqualifying circumstances without preserving eligibility through a spouse's current employment.",
+      "'Years before you need it' assumes a retirement timeline and lack of benefit from secondary coverage that the request does not establish.",
+      "'Premiums aren't refunded' is an unsupported blanket assertion; the packet does not establish refund rules.",
+      "'You'll need ... plus pay stubs/W-2s as backup' incorrectly presents supplemental evidence as routinely required alongside completed CMS-L564."
+    ],
+    "key_points": {
+      "1": "wrong",
+      "2": "vague",
+      "3": "correct",
+      "4": "vague",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing",
+      "8": "vague"
+    }
+  },
+  "B": {
+    "correct": 7,
+    "trap": 8,
+    "honest": 7,
+    "useful": 7,
+    "concise": 6,
+    "added_claim_errors": [
+      "Describes the SEP exception as requiring '20+ employees': that threshold governs payment priority, not SEP eligibility.",
+      "'If you're not on Social Security, nothing happens automatically' overlooks automatic enrollment through Railroad Retirement benefits.",
+      "'Coverage generally starts the month after Social Security processes your form' incorrectly makes processing date the coverage-start trigger.",
+      "'A few plans do for certain employee classes' adds an unsubstantiated claim about the frequency and circumstances of enrollment requirements."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "vague",
+      "3": "correct",
+      "4": "vague",
+      "5": "vague",
+      "6": "correct",
+      "7": "missing",
+      "8": "vague"
+    }
+  },
+  "reasons": "B narrowly wins because it includes the six-month Medigap window and 63-day drug-coverage threshold, while A explicitly gives incorrect penalty advice for workers at small employers. A provides the correct 2026 premium, and its rounded annual figure checks out: $202.90 × 12 = $2,434.80; B supplies only a loose range. Both omit the IEP-ending exception, the explicit six-month HSA contribution stopping instruction, and the complete retirement application routes, while adding unnecessary material. Assessment uses the packet and general Medicare knowledge for supplemental procedural claims; no external sources were opened."
+}

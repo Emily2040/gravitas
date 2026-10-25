@@ -1,0 +1,47 @@
+{
+ "pair": "p096",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"이번 주 금요일(10월 30일)\": the key fixes this Friday as 2026-10-23, so the 10-30 date is an invented or conflicting specific.",
+   "\"18시를 넘겼다면 정부24 전입신고와 인터넷등기소 전자확정일자로 그날 안에 끝내면 됩니다\": wrong. Per the key, an 인터넷등기소 확정일자 applied for after 18시 on Friday is granted on the next working day, 10-26 (Mon). The 신고일 for an after-hours 정부24 전입신고 is unconfirmed, and the key penalises stating it as fact.",
+   "\"평일 18시까지\" cites a Gangdong-gu page, but the user's 동 is unknown and 주민센터 hours differ by 동. Minor, since the link is checkable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 8,
+  "useful": 7,
+  "concise": 9,
+  "added_claim_errors": [
+   "\"전입신고 — ... 계약서 명의자 본인이\": an invented requirement. A 세대주, a 세대원 or a delegate can file a 전입신고, and a family member's 전입 also counts toward 대항력.",
+   "\"확정일자 — 주민센터나 인터넷등기소에서 계약서 원본으로. 전입신고와 같은 날\": 인터넷등기소 is offered as an equal option with no warning that an application after 16시/18시 is dated the next working day. An online application uses a scanned copy, not the original."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers correct both premises at the start: 전입 gives only 대항력, 우선변제권 needs 확정일자, and the 대항력 starts at 0시 the next day, so the 전입신고 cannot wait. Both give a sensible same-day order (등기부 → 잔금/열쇠 → 주민센터 전입+확정일자 → HUG), and both miss 최우선변제 not applying (2억 > 1억 6,500만) and the 임대차 신고 duty. A gives more practical detail (600원, 신분증, 계약서 원본, 18시, 전입세대 열람). However, A states as fact that an after-18시 정부24 전입신고 plus an 인터넷등기소 확정일자 finishes everything \"그날 안에\", which is exactly what the key flags as wrong (확정일자 dated Mon 10-26). A also labels Friday as 10월 30일, against the key's 10-23. B is shorter, fits the request to keep it brief, and makes no key-flagged error, but it is vaguer on where and how to file and offers online options without the timing caveat."
+}

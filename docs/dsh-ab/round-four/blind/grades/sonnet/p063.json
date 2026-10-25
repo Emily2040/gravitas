@@ -1,0 +1,53 @@
+{
+ "pair": "p063",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "Link to 1350.moel.go.kr/rtmview.do?id=1000294810 is cited as support but was not verified here; the same link is in B.",
+   "\"7~9월 석 달이면 요건을 충족할 가능성이 높으니\" has no day-count test (60일 합계), so it is somewhat overconfident, though hedged with \"가능성\".",
+   "\"첫 입금까지 몇 주 걸립니다\" is a rough timing estimate with no 7일 대기기간 or other figure; plausible but unverified.",
+   "The ordering \"체불임금 회수 → 수급자격 신청 → 단기 현금흐름\" puts the unemployment application second and never says to file before looking for work. It does not delay the filing, but it is not the advice the key wants."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "missing",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "\"임금체불확인서(회사 발급)\" is unverifiable and probably wrong. That confirmation is normally issued by the labor office, and the employer who withheld the pay would not issue it.",
+   "\"국민취업지원제도... 실업급여가 끝난 뒤 잔여분을 받을 수 있으니 지금 미리 신청해 두세요\" is unverified and risky. The key says 구직촉진수당 can be excluded during and for 6 months after 구직급여, so applying now is not clearly safe.",
+   "\"4대보험 미가입이었다면 근로복지공단에 피보험자격 확인청구(1588-0075)\" is unverifiable as to the right agency (고용센터 or 근로복지공단) and the phone number. It is also off the stated facts, since the user never said they lacked insurance.",
+   "The 조기재취업수당 description (\"대기기간 후 12개월 이상 계속 고용되면 남은 수급일수의 절반\") leaves out the condition that at least half of the 소정급여일수 must remain, and \"수급일수의 절반\" is imprecise.",
+   "Link to 1350.moel.go.kr/rtmview.do?id=1000294810 is cited as support but was not verified here.",
+   "\"건강보험료 감면\" for the unemployed is stated without conditions; unverified.",
+   "Like A, it says 7~9월 \"요건을 넘길 가능성이 높습니다\" without any day-count test."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "missing",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the false premise at the start (자발적 퇴사여도 이직 전 1년 이내 2개월 이상 임금체불이면 정당한 사유, 시행규칙 별표 2). Neither gives the 60-day total test, the 150/180-day entitlement or the 2026 amounts. Neither mentions 간이대지급금, 생계비 융자 or 고용24. B covers more of the key's point 3: it says to apply this week and that delay costs money, and it explains that late payment counts as 체불, the 소명 route and 조기재취업수당. A is the only one to state the 180일 단위기간 requirement. B adds several shaky extras: a company-issued 임금체불확인서, applying now for 국민취업지원제도 \"잔여분\", and an unprompted 4대보험 미가입 branch. B is also longer, with four headed sections, which strains the user's request for a short answer. A is leaner and has fewer unverifiable additions, so it wins narrowly."
+}

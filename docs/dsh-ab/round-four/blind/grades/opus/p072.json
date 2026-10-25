@@ -1,0 +1,45 @@
+{
+ "pair": "p072",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "「2027年2月16日〜3月15日に確定申告」を申告手順として示している。還付申告は2027年1月1日から5年間（2031年12月31日まで）提出でき、この期間に限られない（キー）",
+   "渋谷区のリンク（.../zeisei_kaisei09.html）は確認できるURLではあるが、パスが実在するか検証できず、内容が回答の主張を裏付けるかも確認できない"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "wrong"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "「所得税5%で約850円、住民税10%で約1,700円、合わせて2,500円程度」は所得税の還付を前提にしている。2026年分は基礎控除104万円のため、社会保険料控除が2万円以上あれば課税所得は0で、源泉徴収税額が0なら還付も0円（キー）。源泉徴収税額欄の確認にも触れていない"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers open by correcting the 10万円 premise with the 5% rule. Both compute 74万→106万→5万3,000→1万7,000円 correctly, and both note that filing is not obligatory but is needed to get the deduction. A also says, as the key wants, that with the 2026 basic deduction of 104万円 income tax is likely zero, so the real gain is about 1,700円 in 住民税, and that a 住民税申告 alone is an option. B asserts a combined ~2,500円 benefit as if an income-tax refund were certain. B is better on timing: it says refund filing can start in January, while A frames filing as the 2/16–3/15 window and neither mentions the 5-year limit. On balance A's handling of the actual benefit, the core of the key's ideal answer, outweighs B's edge on timing."
+}

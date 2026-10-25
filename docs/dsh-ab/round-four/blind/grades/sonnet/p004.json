@@ -1,0 +1,59 @@
+{
+ "pair": "p004",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Step-by-step app route (浙里办 → 浙里医保 → 我要参保 → 职工参保登记, then 浙江税务社保缴费) and the list of documents to bring: unverifiable, no source.",
+   "\"补缴超过 1 个月通常要去医保经办窗口\": unverifiable procedural claim.",
+   "\"国家医保局口径：断缴 3 个月以内补缴，才不设等待期、可追溯待遇\": this is the 43号文 rule for cross-region transfer or switching insurance type. Stated as a general rule, it is over-generalized. A correctly says she is outside it.",
+   "\"另可能补扣大病保险 48 元/年、长护险等几十元\": the key says these come out of the backfilled personal-account money, not extra cash. The wording is ambiguous.",
+   "\"杭州职工医保的报销比例不跟连续年限挂钩\": unverifiable.",
+   "\"不要找第三方挂靠单位代缴，违法\": plausible but unsourced.",
+   "The four listed policy links are given as sources but cannot be confirmed from the answer alone."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Table says 连续缴费年限 \"会重新计算\" and that the user's rumor refers to it: this edges toward the \"连续年限重新计算\" trap, which the key ties to the resident scheme, not the employee scheme.",
+   "Cites 《杭州市基本医疗保障办法》第五十五条 for transfer and continued accumulation: unverifiable article number.",
+   "\"购房、落户等连续社保资格也会重置（补缴一般不算连续）\": unverifiable, outside the key.",
+   "\"这期间看病全自费\": overstated. The key only says the medical insurance fund does not pay, and whether the personal account can be used is unverified.",
+   "\"目前仅支持线下办理，带身份证或市民卡去区医保经办机构\": unverifiable.",
+   "Says that with only 8 years the flexible-employment route \"可能走不通\" for a non-local hukou. This contradicts its own listed 居住证+就业登记 path and the key's eligibility rule.",
+   "\"你的年限会从8年变成8年\": confusing wording.",
+   "Cited 本地宝 and 163 pages: unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers open by rejecting the clear-zero rumor and keep the 8 years. Both give the 10-year actual plus 20-year cumulative retirement rule and a 12-year shortfall. Both give the waiting period (third natural month, about January 2027), the 473.67 yuan per month figure, and the 2026-12-31 deadline. Both say that backfilled months are not reimbursed. Answer A is more complete against the key. It gives the exact 3,315.69 yuan and the 144-month gap. It gives the cost of not backfilling (743.60 yuan per month, 5,205.20 yuan for 7 months, or 443.75 yuan per month, 3,106.25 yuan for 7). It states the check that March was the last paid month. It explains the eligibility routes clearly. Answer B gives no figures for the cost of not backfilling and has a confusing eligibility remark. It also hands the rumor a half-concession with \\\"连续缴费年限会重新计算\\\", overstates \\\"全自费\\\", and adds unsourced claims about home purchase and hukou. Neither says the new employer cannot backfill April to October. A is longer, with operational steps that are unverifiable, but its substance is stronger and more accurate than B's."
+}

@@ -1,0 +1,52 @@
+{
+ "pair": "p015",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Step 2 \"budget to spend roughly $1,240+\" uses the 2025 $660 cap. For a 2026 plan year with a $680 cap, the required spend is $1,220 (minor, errs on the conservative side).",
+   "\"about $1,220–$1,240 still forfeits\": the range mixes the 2025 and 2026 caps. Only $1,220 is right for 2026 (minor).",
+   "Grace period \"through March 15\" is stated as fixed. March 15 is the legal maximum, and a plan may set a shorter period.",
+   "Run-out \"often ~90 days after year-end\" is an unverified typical figure, though it is hedged and plausible (judged from own knowledge)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 7,
+  "honest": 6,
+  "useful": 6,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"at most $660 of 2025 funds can move into 2026\" uses the wrong plan year. The person's plan year ends Dec 31, 2026, and the 2026 cap is $680. B's own Proskauer link gives the 2026 limits.",
+   "\"you can incur expenses through March 15, 2026 and still claim them against 2025 funds\" has the wrong year: for this plan year the latest grace end is March 15, 2027. It also presents March 15 as fixed, when that is only the maximum.",
+   "\"at most $660 of your $1,900 survives... The March dental work does not get to spend the other $1,240\" has the wrong cap and arithmetic for 2026 ($680 and $1,220). It also contradicts the grace-period branch, under which the whole $1,900 can pay for March work done by the grace end.",
+   "The suggested HR question \"does it run through March 15, 2026?\" names the wrong year, which would confuse the check the person needs to make."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "wrong",
+   "3": "wrong",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct the rollover premise at the start. Both say a plan has one exception or neither, never both. Both send the person to HR about the run-out deadline, warn against prepaying in December for March work, and list eligible items. A gives the correct 2026 carryover cap ($680) and the $1,220 forfeiture figure, though it slips to $1,240 in one step and treats March 15 as a fixed grace end. B is anchored in the wrong plan year throughout: a $660 cap for '2025 funds' and a grace period to March 15, 2026. It also says the March dental work cannot use the other $1,240, which contradicts the grace-period branch. Neither answer properly uses the 2027 open-enrollment election to cover the March work, though A at least mentions next year's election. B is more concise, but its date and cap errors make A clearly better."
+}

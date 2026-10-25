@@ -1,0 +1,50 @@
+{
+ "pair": "p053",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Table row '合同沿用旧\"本人工资=实得工资 70%\"口径 8000×70%×80% = 4480 元' is mislabeled and unsupported: the old 70% figure was a default base when nothing was agreed, not a contract term, and 10号第九条 sets the base as the contract wage (not below 2740), so 4480 has no clear basis",
+   "States 沪劳保发〔2000〕14号 '已于 2026 年 8 月 15 日到期失效' as settled fact; the key says its lapse is only presumed, with no explicit official statement",
+   "Cites ft22.com, a third-party reposting site, as the 'full text' of 10号; it is not an official source and could not be verified here"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'申请劳动仲裁，免费，时效1年' oversimplifies the time limit: while still employed, a claim for unpaid wages is not bound by the one-year limit, and the year runs from leaving the job (劳动争议调解仲裁法第27条)",
+   "States 沪劳保保发〔2000〕14号 expired on 2026-08-15 as fact; the key says this is only presumed",
+   "'以上是按现行文件和裁审口径的分析' claims to follow adjudication practice without citing any ruling or source (unverifiable)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start ('800 is certainly illegal', the company does not decide alone). Both explain that 83号 expired on 2026-08-15, give the 2192 floor with 1392 short, and give 6400 as a contract or handbook figure at 80%, not 70%. B goes further on the base: it lists the excluded items (bonuses, meal, transport and housing allowances, overtime), though it gives no 21.75 daily formula. Its HR message also follows the key more closely: it asks for the gross, deductions and net breakdown, asks HR to cite the specific clause, and sets a reply deadline, and B names 12333 among the remedies. A says nothing about base composition and adds a confusing 4480 row with no sound legal basis. A's HR message does not ask whether 800 is the gross or the net amount. B's main slip is the oversimplified 'one-year time limit' for arbitration. That is smaller than A's gaps, so B wins clearly."
+}

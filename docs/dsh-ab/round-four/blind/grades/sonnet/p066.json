@@ -1,0 +1,52 @@
+{
+ "pair": "p066",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Frames the penalty exception as requiring an employer with 20+ employees; the SEP itself has no size condition (the 20-employee line only decides who pays first). Imprecise, minor here.",
+   "Premium given only as 'roughly $185-$210/month, set annually'; the 2026 standard premium is $202.90, so the range holds but is vague.",
+   "Says form CMS-L564 is one the 'employer signs'; the asker completes Section A and the employer Section B. Minor.",
+   "'Coverage generally starts the month after Social Security processes your form' and 'disenrolling then re-enrolling is more complicated': stated without a source, loosely accurate."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "Says the Part B late penalty 'applies to people who go without creditable coverage'. 'Creditable coverage' is the Part D concept; the Part B rule turns on current-employment group coverage and the SEP. Conflates the two.",
+   "At retirement says to apply for Part B 'using CMS-40B plus CMS-L564' with no condition on Part A. The same list tells HSA holders to skip Part A, and CMS-40B is wrong for someone without Part A (A and B must be applied for together through SSA).",
+   "Gives no backdating warning for Part A and HSA; 'stop HSA contributions first' leaves out that contributions must stop 6 months before applying. Incomplete, risks a tax error.",
+   "Implies the delay is allowed because the employer has 20+ employees ('well above the 20-employee threshold'); the SEP has no size condition. Imprecise, minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers catch the baited premise at the start, tell the asker not to enroll in Part B this month, give the 8-month SEP, and list HR checks, the Social Security auto-enrollment trap, the creditable-coverage notice, CMS-L564 and SHIP. A is more complete on the key's finer points: it warns that Part A is backdated up to 6 months and that any Medicare, including free Part A, ends HSA contributions. It also says to apply about a month before the last day and mentions the Medigap 6-month window opening with Part B. B omits the backdating, the Medigap window and the month-before timing. B also tells the asker to use CMS-40B unconditionally, which is wrong if Part A is deferred for an HSA, and it misuses 'creditable coverage' for the Part B penalty. Neither answer states the exception that there is no SEP if the job or coverage ends during the IEP. B is somewhat tighter, but A's extra content is useful, so A wins clearly."
+}

@@ -1,0 +1,51 @@
+{
+ "pair": "p076",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 9,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "The 'use the smallest of' formula lists '$7,500 minus any other 2026 IRA contributions' but never compensation minus other contributions. Someone who earns $4,000 and contributes $2,000 gets $4,000 from it, but the correct cap is $2,000.",
+   "'The 2026 IRA limit is $7,500 per the IRS' credits the IRS with no link or document number, so the source claim can't be checked (the figure itself is right per IR-2025-111)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'to count for 2026 the money needs to land in the Roth by December 31, 2026 — don't rely on the April 2027 filing deadline' treats December as the legal deadline. Per the 2026 Form 5498 instructions and 219(f)(3), a rollover designated for 2026 can be made through April 15, 2027.",
+   "'the 15-year clock restarts for the new beneficiary' presents the beneficiary-change reset as settled. No IRS guidance exists, so the question is unresolved.",
+   "'If the annual limit rises with inflation, this compresses to four or five years' is wrong about four: even at $8,000 a year, four years gives only $32,000, short of $35,000, so it still takes five.",
+   "'Scholarships ... don't count' as earned income is too broad. From my own knowledge, the SECURE Act (2019) treats taxable non-tuition fellowship and stipend payments as compensation for IRA purposes.",
+   "'Most [plans] do [support it] by 2026, but not all' gives no source and can't be checked."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise up front. Both give the $7,500 annual cap, the compensation limit, the $35,000 lifetime cap, the $13,000 that can never move this way, the son-owned Roth, the direct transfer and the state-tax caveat. A gets the deadline right: December is not the federal deadline, and a 2026 rollover can be made through April 15, 2027. It also spells out what happens if all $48,000 moves (6% excise on the Roth side, earnings taxed plus 10% on the 529 side) and stays hedged on the 15-year reset. A's flaw is a subtle gap in its 'smallest of' formula. B treats December 31 as the legal deadline, says the 15-year clock 'restarts' after a beneficiary change as if settled, and wrongly suggests the transfers could take four years. B says rolling all $48,000 would create a 'tax mess' but never states the 6% excise or the 529-side tax. It is also much longer and repeats itself (the CPA question list, the repeated trap sections). B's 1099-Q Box 4b, recipient and Form 5498 Box 10 details check out against the IRS 1099-Q instructions, but that does not make up for these errors."
+}

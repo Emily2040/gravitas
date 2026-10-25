@@ -1,0 +1,57 @@
+{
+ "pair": "p056",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Cites 劳部发〔1994〕503号 article 7 and 京劳社资发〔2005〕94号 (10-working-day licence procedure); not covered by the key and not checked, plausible but unverified.",
+   "Cites an unnamed 人社部办公厅 notice with quoted wording and a 常州人社局 reply; no document number, so the quoted wording is unverified.",
+   "Says holiday work hours are not counted in the comprehensive-cycle total hours; stated as a firm rule with no source, and 157号 article 8 does not say this.",
+   "Cites 劳动合同法第26条 as invalidity for violating mandatory rules (item 3). The key's point is item (2); the substance is right but the item differs.",
+   "Gives 北京人社问答 rather than 人社部发〔2025〕2号 as the basis for 21.75; the figure is right and no abolished document is cited. I opened the page and it confirms (365-104)/12 = 21.75.",
+   "I opened the gov.cn 2026 holiday notice, the sina piece, the gmw Fengtai court report and the 157号 page; all match what A says about them (157号 art. 8 wording, Oct 1-3 at 300%, Oct 4-7 rest days, approval missing means standard hours)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 10,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Under the approved scheme it computes a concrete figure: 最多约2482.76元 (32小时×51.72×150%), total 3724.14—6206.90元. The key says this cannot be computed from the facts given; the 最多 also assumes 8 hours on each of the 4 days.",
+   "Arithmetic is inconsistent: 32×51.72×1.5 = 2482.56, not 2482.76 (that only follows from the unrounded daily wage), and 7034.48-6206.90 = 827.58, not the stated 827.59. Differences are a few cents.",
+   "Cites 劳部发〔1997〕271号 articles 4 and 5 with quoted wording. The document exists and a secondary source supports the 300% and 一般不安排补休 content, but the article numbers and exact quotes are unverified.",
+   "Cites 山东高院〔2018〕鲁民再154号 (a 值班 case) with no checkable source; unverifiable.",
+   "Cites 北京高院2024年解答（一）第56条 on 值班 with no checkable source; unverifiable.",
+   "Says the 法定节假日 part cannot be 包干 and that Beijing always uses 正常劳动应得工资 as the base; stated more firmly than the evidence allows.",
+   "The 2019 Beijing typical-case quote and 157号 articles 4, 15, 18 are consistent with the key and with the 157号 text I opened."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers catch the baited premise at the start (综合工时 needs approval, signing does not waive it) and give the same correct figures for the no-approval case: 3724.14 + 3310.34 = 7034.48 yuan. Both also say that even with approval, 10月1日至3日 is still paid at 300%. The deciding difference is scenario B. A says only that 10月4日至7日 depend on whether the cycle's total hours are exceeded, which matches the key. B invents a ceiling of 2482.76 yuan and a total of 6206.90 yuan, which the key explicitly penalises, and its arithmetic is slightly inconsistent. A also ties Labor Contract Law art. 26 to the signing point and gives links that I opened and confirmed, including the 157号 art. 8 wording, the 2026 holiday notice and the Fengtai court report. B's strengths are the 2019 typical-case quote and a good rebuttal list, but its legal support for the signing point is weaker and it adds some unverifiable citations (the Shandong case number and a 2024 Beijing High Court answer). Both are long, and A is somewhat longer."
+}

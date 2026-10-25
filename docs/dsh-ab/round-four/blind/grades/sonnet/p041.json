@@ -1,0 +1,52 @@
+{
+ "pair": "p041",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "근로복지공단 소액체당금: 2021년에 간이대지급금으로 명칭이 바뀐 낡은 용어이고, 회사가 사실상 도산했다면이라는 조건도 맞지 않는다(간이대지급금은 진정 후 체불 확인서로 청구).",
+   "구직촉진수당(월 50만원, 최대 6개월): 2026년 금액이 맞는지 확인하지 못했다. 키에서 감점하지 않는 항목이다. 구직급여와 동시 수령을 단정하지 않고 고용센터에서 자격을 확인하라고 열어 두었다.",
+   "사직서 사유를 임금체불로 남기세요: 이미 사표를 낸 사람에게는 실효가 약하다. 이직사유는 고용센터가 증거로 판단한다. 내용증명이나 문자로 증빙을 남기라는 보완 조언은 합리적이다.",
+   "긴급복지지원은 실직이 위기사유라 대상이 될 수 있다: 키에서 감점하지 않는 사례별 항목이다. 조건부로 썼다.",
+   "1350 링크(id=1000294486)를 근거로 인용했으나 열어 확인하지 못했다. 링크 내용이 본문 주장과 맞는지는 확인되지 않는다."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "missing",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "7~9월 석 달이면 요건을 충족할 가능성이 높다: 날수 합계 60일 기준을 말하지 않고 석 달이라는 기간만 근거로 삼았다. 매달 며칠 늦었는지에 따라 부족할 수 있어 약간 과장이다. 가능성이 높다는 단서는 붙였다.",
+   "이직확인서를 회사가 안 써주면 고용센터에 발급 요청하면 된다: 이직확인서 없이도 신청할 수 있다는 점과 회사에 10일 내 발급 의무가 있다는 점이 빠졌다. 고용센터가 직접 발급한다는 표현은 부정확하다(사업주에게 제출을 요청하는 절차).",
+   "첫 입금까지 몇 주 걸린다: 대기기간 7일이라는 구체 수치 없이 대기기간 등으로만 썼다. 대체로 맞으나 근거가 없다.",
+   "퇴직 후 건강보험료가 지역가입자로 바뀐다: 맞는 말이다(임의계속가입 선택지는 빠짐). 키에 없는 유용한 추가 정보다.",
+   "1350 링크(id=1000294810)를 근거로 인용했으나 열어 확인하지 못했다. 링크 내용이 본문 주장과 맞는지는 확인되지 않는다."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "missing",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the baited premise in the first sentence. Both cite 시행규칙 별표2 (임금체불 2개월 이상, 이직 전 1년 이내) and the 180-day insured-period requirement. Neither gives the 60-day day-count test, the 150/180-day benefit period, or the 2026 daily amounts and totals, so key points 2 and 5 are missing for both. A beats B on the points that matter most to the key. It says to apply this week on 고용24 and gives the 12-month deadline with urgency (key 3). It names 고용24, 고용센터 and the evidence to gather (key 6). It also hedges with \"아예 못 받으셨다면\" and \"최종 판단은 관할 고용센터\". B gives the 12-month deadline but not the urgency. B never mentions 고용24, and it orders 체불 recovery ahead of applying. B does add correct, useful items: 건강보험료 switching to 지역가입자, the duty to report short-term work, and 퇴직금 eligibility. A's weaknesses are the outdated \"소액체당금\" name with a wrong 도산 condition, and the 사직서 wording advice. Overall A is slightly better."
+}

@@ -1,0 +1,48 @@
+{
+ "pair": "p021",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "「敷金から引くには修繕内容と費用の内訳を示す必要があります（民法622条の2）」: 622条の2 says what may be deducted (only money debts arising under the lease, such as unpaid rent). It sets no itemization requirement, so the citation is wrong.",
+   "「少額調停」: no formal procedure has this name (the procedure is 民事調停). The term is imprecise."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "「国土交通省ガイドラインでは、壁紙（クロス）の張り替えは原則として貸主負担」 (repeated in the email): this overstates the guideline, which assigns cost by cause. Damage the tenant causes through negligence is the tenant's cost, so the management company could easily rebut this line.",
+   "「通常の使用によって生じた損耗・経年変化は含まれないのが判例・通説」: since 2020-04-01 this rule is written into 民法621条. Calling it case law and academic consensus misses the codification.",
+   "「少額訴訟（60万円以下）：…費用も数万円程度です」: overstated. For a claim of about 10万円 the filing fee is a few thousand yen (3,500 yen on paper under the current fees), not several tens of thousands.",
+   "「多くの場合、内訳を求められた時点で請求額は下がります」: a generalization with no support."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers catch the premise at the start and replace the acceptance email with a non-acceptance reply that asks for an itemized estimate. B is better on numbers: it states the 2万円 extra-claim risk and the 6-year life of wallpaper. But B's email tells the management company that the MLIT guideline makes wallpaper replacement the landlord's cost in principle. That overstates the guideline, and the other side could rebut it easily. A's email covers more of what the key asks for: sunburn as normal wear, partial repair, a breakdown with quantities, unit prices and depreciation, a joint inspection at move-out with photos, and 188. A's one error, citing 622条の2 as a requirement to itemize, sits in the explanation rather than in the email. Neither answer cites 民法621条 or the 2005 Supreme Court ruling, and neither demands return of the full 10万円 deposit."
+}

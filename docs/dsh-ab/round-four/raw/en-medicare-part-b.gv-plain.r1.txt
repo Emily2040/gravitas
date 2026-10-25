@@ -1,0 +1,39 @@
+## Short answer: don't enroll in Part B this month — your coworker's rule doesn't apply to you
+
+The "sign up at 65 or pay a lifetime penalty" rule is real, but it has a big exception that fits you exactly: **active employment-based group coverage from an employer with 20+ employees.** With ~400 employees and you still working there, you can delay Part B without any late-enrollment penalty, and you'll get an 8-month Special Enrollment Period (SEP) when you stop working or lose the coverage. ([Medicare.gov – Working past 65](https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65))
+
+Two practical reasons this matters:
+
+- The Part B penalty is **10% per full 12 months** you go without it — but months you were covered by active employer group coverage are *not* counted against you.
+- With a 20+ employee plan, your employer plan pays **first** and Medicare pays second. Part B would be largely duplicative while you're working — you'd be paying the premium (roughly $185–$210/month, set annually) for very little.
+
+So your "to do this month" list is mostly **verification and paperwork**, not enrollment.
+
+## Do this month
+
+1. **Hold off on the Part B application.** Don't submit it until HR confirms your plan actually requires it (a few plans do for certain employee classes — ask).
+2. **Call HR/benefits and get these five answers in writing (email is fine):**
+   - Is my coverage based on **current active employment** (not retiree or COBRA coverage)?
+   - Does the company have **20 or more employees** for Medicare coordination purposes?
+   - Is the medical plan **primary** to Medicare for me, and does it *require* me to enroll in Part A and/or Part B to keep coverage?
+   - Is the prescription drug coverage **"creditable"** under Medicare Part D? (They must tell you; they also send an annual notice — keep it.)
+   - Do I have an **HSA/High-Deductible Health Plan** through work?
+3. **Check whether you're already auto-enrolled.** If you're already receiving Social Security, you'll be auto-enrolled in Parts A and B effective your birthday month — you'd have to actively **decline Part B** (return the card per the instructions) rather than just not applying. If you're not on Social Security, nothing happens automatically; you must apply.
+4. **Decide on Part A separately.** Most people get **premium-free Part A** (40 quarters of Medicare-taxed work) and can take it at 65 while delaying Part B. It's free, and it can help if the employer plan has gaps.
+5. **If you have an HSA, pause and think.** Enrolling in **any** Medicare (including free Part A) ends your eligibility to *contribute* to an HSA. Also, Part A can be backdated up to 6 months when you enroll after 65, so contributions in that lookback window can create a tax problem. If you want to keep maxing the HSA, delay Part A too — and talk to your tax advisor. ([Medicare.gov HSA note](https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65))
+6. **Start a "retirement" folder now:** keep the creditable-coverage notice, a recent pay stub, and a letter from HR confirming your dates of employment and coverage. Later you'll file **form CMS-L564** (employer signs it) to prove you had qualifying coverage and avoid the penalty.
+7. **Get free, unbiased help if anything is unclear:** your local **SHIP** counselor ([shiphelp.org](https://www.shiphelp.org/)) or 1-800-MEDICARE. They deal with exactly this scenario constantly.
+
+## What to do when you actually retire or lose the plan
+
+- Enroll in Part B **during the 8-month SEP** that starts when you stop working (or lose coverage, whichever is first). To avoid a coverage gap, apply **the month before** your last day — coverage generally starts the month after Social Security processes your form.
+- Sign up for **Part D** (or confirm creditable drug coverage) at the same time — the drug penalty applies if you go 63+ days without creditable coverage.
+- That's also when your **Medigap guaranteed-issue window** opens (6 months from Part B enrollment, if you're 65+), so don't skip it if you want a supplement.
+
+## The one thing not to do
+
+Don't enroll in Part B "just to be safe" and then try to undo it. You can disenroll (form CMS-1763), but you'll have paid the premiums and re-enrolling later is more complicated than never enrolling. For your situation, the safer and cheaper move is to **document your coverage and wait**.
+
+*General information, not a substitute for your plan documents — the rules hinge on your specific plan, so get HR's answers in writing before you file anything.*
+
+**Sources:** [Medicare.gov – Working past 65](https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65) · [Medicare.gov – When can I sign up?](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-can-i-sign-up-for-medicare)

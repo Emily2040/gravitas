@@ -1,0 +1,58 @@
+{
+ "pair": "p061",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Lists '$7,500 minus any 2026 IRA contributions' as a separate term in a smallest-of list. For $4,000 earned and $2,000 contributed this gives $4,000. The correct figure is min(7,500, 4,000) - 2,000 = $2,000.",
+   "'If the money lands in January, it generally counts for 2027, and the 2026 room is lost' is wrong as a federal rule. A rollover designated for 2026 can run to April 15, 2027, though processing varies by plan. December 31 is treated as the deadline.",
+   "'If annual limits rise, it could take fewer years' is misleading. Four years would need an average cap of at least $8,750, and limits are indexed in $500 steps, so it still takes five years.",
+   "'It should be recorded as a rollover contribution, not a regular contribution' is imprecise. The key reports the 529-to-Roth transfer in Form 5498 box 10.",
+   "'The 529 plan probably will not verify his income or other contributions' is unverifiable.",
+   "Nothing is said about the excess if more than the cap is moved: no 6% Roth excise and no $40,500 figure. Not an added claim, but a gap."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'The transfer must be completed by December 31, 2026 to count against the 2026 annual limit' conflicts with the key. A rollover designated for 2026 can be made through April 15, 2027, subject to plan processing. It then says 'no separate December 31 deadline', which contradicts itself.",
+   "'If you transfer more than the eligible amount, the excess is a nonqualified withdrawal, tax and 10% penalty on the earnings' covers only the 529 side. It omits the 6% Roth excise and the $40,500 figure for moving all $48,000.",
+   "'Scholarships, gifts, and investment income do not [count]' is imprecise. Taxable fellowship or stipend pay can count as compensation.",
+   "'The 529 plan will issue Form 1099-Q to you as account owner' is unverifiable. The recipient of a 1099-Q for a transfer into the beneficiary's Roth may be the beneficiary.",
+   "'He is 22' is assumed. Born in 2004, he could be 21 or 22.",
+   "The state survey claims (30 states follow federal; Indiana, Louisiana, Massachusetts, Michigan, Minnesota, Utah and Vermont recapture; California taxes the rollover plus 2.5%; Colorado, Missouri and New Jersey undecided) match the cited secondary page. That page is dated September 2025 and the positions may be stale, and the key did not check other states.",
+   "The California line says 'taxes the earnings plus a 2.5% penalty'. The key says whether California taxes the whole rollover or only earnings is unresolved. This is accepted but is stated as settled.",
+   "The S. 5550 claim (introduced September 24, 2026, referred to Finance, would remove the aggregate cap) is verified at the cited govinfo page. It is extra but correct."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise in the first line ($7,500 for 2026, $35,000 lifetime, at least $13,000 stuck). Both require a direct trustee-to-trustee transfer into the son's own Roth, and both wrongly treat December 31 as the effective deadline. B handles the annual-cap interplay correctly ('subtract that too' after taking the smaller of the cap and earned income) and states that income limits do not block the rollover. A's smallest-of list gives $4,000 instead of $2,000 in the key's earned-$4,000, contributed-$2,000 case, and it never says Roth income limits do not apply. A is stronger on the five-year schedule (2026-2029 at $7,500, then $5,000 in 2030), which B omits, and A's steps are slightly cleaner. B gives a sourced state-tax picture, which I checked against its cited page, and a partial note on the excess. A says nothing about excess consequences, and neither mentions the 6% excise. Overall B is slightly more accurate and complete on the key points."
+}

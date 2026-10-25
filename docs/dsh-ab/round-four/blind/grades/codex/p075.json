@@ -1,0 +1,58 @@
+{
+  "pair": "p075",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+    "correct": 6,
+    "trap": 9,
+    "honest": 5,
+    "useful": 6,
+    "concise": 3,
+    "added_claim_errors": [
+      "\"The 15-year clock restarts for the new beneficiary\" presents an unresolved question as settled.",
+      "\"This compresses to four or five years\" is unsupported: future limits are unannounced, and even $8,000 × 4 = $32,000 falls short.",
+      "\"The money needs to land ... by December 31, 2026\" is wrong as a federal deadline; April 15, 2027 is available for a 2026 designation, subject to provider processing.",
+      "\"Scholarships ... don't count\" is too broad: qualifying taxable scholarship or fellowship compensation can count. Checked [IRS Publication 970](https://www.irs.gov/publications/p970).",
+      "\"Most [plans] do by 2026, but not all\" adds an unverified claim about adoption across plans.",
+      "\"This is the most commonly missed cost\" adds an unsupported ranking of state-tax mistakes.",
+      "\"With distribution code 1 in Box 7\" implies required reporting; code 1 is appropriate, but Box 7 codes are optional. Checked [IRS Form 1099-Q instructions](https://www.irs.gov/instructions/i1099q)."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "correct",
+      "4": "wrong",
+      "5": "missing",
+      "6": "correct",
+      "7": "wrong",
+      "8": "correct"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 9,
+    "honest": 6,
+    "useful": 6,
+    "concise": 6,
+    "added_claim_errors": [
+      "\"Roll over the smallest of these three numbers\" omits subtracting other IRA contributions. Step 8 partially repairs this for Roth contributions, but never addresses traditional IRA contributions.",
+      "\"Limits may rise with inflation, which would shorten the schedule\" is unsupported as a reduction in tax years; even $8,000 × 4 = $32,000 still requires a fifth year.",
+      "\"Complete the transfer by December 31, 2026 to count against the 2026 limit\" is wrong as a federal deadline; a 2026-designated rollover can occur through April 15, 2027, subject to provider processing.",
+      "\"Scholarships do not [count]\" is too broad: qualifying taxable scholarship or fellowship compensation can count. Checked [IRS Publication 970](https://www.irs.gov/publications/p970).",
+      "\"K-12 tuition (up to $10,000 a year)\" is outdated for 2026; the federal annual limit is $20,000. Checked [Washington's official 529 FAQ](https://529invest.wa.gov/resources/faq/).",
+      "\"The plan can tell you the balance from five years ago\" suggests an inadequate eligibility measure: qualifying current earnings must also be included.",
+      "\"Some plans take two to four weeks\" supplies a processing estimate without identifying a plan or substantiating that range."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "wrong",
+      "3": "correct",
+      "4": "correct",
+      "5": "missing",
+      "6": "correct",
+      "7": "wrong",
+      "8": "vague"
+    }
+  },
+  "reasons": "Both immediately reject the $48,000 rollover and correctly identify the principal dollar caps, direct-transfer requirement, and state-tax caveat; their displayed schedule sums and $13,000 remainder arithmetic check out. Both incorrectly impose a December federal deadline, speculate about shortening the five-year schedule, and omit the excess-rollover calculation and its separate Roth and 529 consequences. B wins narrowly because it is substantially less repetitive and avoids A's categorical beneficiary-change reset claim. B still needs correction of its incomplete contribution-room formula and outdated K-12 limit."
+}

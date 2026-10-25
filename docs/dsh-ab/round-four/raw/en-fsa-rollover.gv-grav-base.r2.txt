@@ -1,0 +1,28 @@
+## First, a correction that changes the whole plan
+
+Health FSA money does **not** roll over like an HSA. FSAs are use-it-or-lose-it — the unused balance on December 31 is forfeited to your employer. There are only two narrow exceptions, and a plan can offer **one or the other, not both** (many offer neither):
+
+- **Carryover:** up to **$680** of 2026 funds can move into 2027. That's the IRS maximum for 2026; your plan may allow less ([Rev. Proc. 2025-32](https://www.irs.gov/pub/irs-drop/rp-25-32.pdf), [summary](https://themjcos.com/2025/10/irs-releases-health-fsa-limits-for-2026/)).
+- **Grace period:** up to 2.5 months, which for a calendar-year plan means expenses through **March 15, 2027**.
+
+An HSA has no deadline, is fully portable, and is yours forever. An FSA is a spending account with an expiry date.
+
+So of your $1,900: at most $680 survives into 2027 on a carryover plan — **$1,220+ evaporates on January 1**. On a grace-period plan, all $1,900 stays usable, but only through March 15 — your March dental work would have to be booked early in the month, not late.
+
+## Quick plan
+
+**1. Call HR/benefits today.** Three questions:
+- Does our plan have a carryover or a grace period — and what's the exact carryover amount?
+- What's the claims run-out deadline? (Usually ~90 days after Dec 31, for submitting 2026 receipts — not for new services. People confuse this with a grace period.)
+- Will the FSA debit card still work during the grace period?
+
+**2. Then pick your branch:**
+- **Grace period:** book the dental work for the first week of March, and confirm the office will charge before the 15th.
+- **Carryover only:** either move the dental work into **December** — cleanest fix, uses 100% of the money, and you have two months to get on the schedule — or spend down by Dec 31.
+- **Neither:** spend down by Dec 31 or lose all of it.
+
+**3. If you need to spend down**, eligible and genuinely useful: dental exams, cleanings, fillings, crowns, root canals, implants, orthodontia, night guards; vision exams, glasses, contacts, LASIK; prescriptions and copays; OTC medicines and first aid; menstrual products; hearing aids; sunscreen SPF 15+; mental health and physical therapy copays. Check your administrator's eligible-expense list before buying.
+
+## Don't
+
+Don't buy things you don't need to rescue the balance — spending $1,500 on stuff you wouldn't otherwise buy to save $680 is a loss. And there's no cash-out, no transfer to an HSA, and generally no keeping it if you leave the job.

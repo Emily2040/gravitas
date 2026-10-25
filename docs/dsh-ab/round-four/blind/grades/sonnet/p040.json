@@ -1,0 +1,52 @@
+{
+ "pair": "p040",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"The drug coverage isn't creditable. Then you might need a Part D plan, and possibly Part B to get it\" is misleading: Part D eligibility needs Part A or Part B, so Part A alone is enough and Part B is not needed to get a Part D plan.",
+   "\"10%-per-year lifetime penalty\" is imprecise: the penalty is 10% per full 12 months without Part B.",
+   "The Federal Register link (govinfo FR-2025-11-19, doc 2025-20251) and the Medicare.gov links are cited as sources. The document number could not be verified from the packet. The $202.90 figure itself matches the key.",
+   "\"some do; most don't\" (plans that require Medicare enrollment at 65) is an unsourced frequency claim.",
+   "Names CMS-L564 as the proof form but says only that \"your employer fills it out\". The asker completes Section A and the employer Section B, so this is incomplete."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "The Medicare.gov \"Working past 65\" and \"When can I sign up\" URLs and the shiphelp.org link are cited as sources. They could not be verified from the packet, though they are plausible.",
+   "Tells the asker to get a \"letter stating your coverage start date and that it's based on current employment\" as proof for Part B. The required proof is form CMS-L564, which is never named, so this is incomplete and could point the asker to the wrong document.",
+   "\"Enrolling [in Part A] now is often sensible\" is an unsourced judgment, though it is qualified by the HSA caveat."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers open by telling the asker not to enroll in Part B this month. Both explain that with about 400 employees the group plan pays first and the 8-month Special Enrollment Period avoids the penalty. Both also give the HSA and Part A warning and the Social Security auto-enrollment and decline step. A pulls ahead on three points. It states the 2026 premium ($202.90 a month, about $2,435 a year), so the asker can see what Part B would cost behind the employer plan. It covers creditable drug coverage and the 2-month Part D window. It names CMS-L564, whereas B suggests only an HR letter. B's strengths are asking HR to confirm the coverage is not COBRA or retiree and warning that COBRA does not extend the window. B gives no premium figure, no Part D timing and no CMS-L564, and it also misses the exception for a job or coverage that ends during the Initial Enrollment Period. A has one small error (\\\"possibly Part B\\\" to get Part D) and neither mentions the Medigap clock. A's overall coverage of the key is better."
+}

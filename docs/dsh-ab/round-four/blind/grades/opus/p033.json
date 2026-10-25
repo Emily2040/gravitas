@@ -1,0 +1,50 @@
+{
+ "pair": "p033",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"如果这7天每天超过8小时，超过部分另按150%主张\": wrong for these days. Hours past 8 on a statutory holiday or rest day are still holiday or rest-day work (300%/200% under Labor Law art. 44), not ordinary 150% overtime",
+   "\"人社厅函〔2025〕1号进一步明确：这300%是'另外支付'\": I could not verify that the notice says this. The linked IP-address page would not load because of a certificate error, and a web search did not find the text",
+   "Cites 《劳动合同法》第26条 using item (3)'s wording (\"违反法律、行政法规强制性规定\") instead of item (2) (免除用人单位法定责任、排除劳动者权利). The conclusion is still right; the sub-item is imprecise"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 7,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "Scenario B estimate \"按这4天32小时全超时粗算约2,482.76元…有审批时这7天大约在3,724～6,207元之间\": the arithmetic checks out (9000/21.75/8×1.5×32 = 2482.76), but the key says the 150% amount cannot be worked out from the facts given. It is hedged, but it still gives a concrete figure",
+   "Puts the Beijing rule in quotation marks as \"安排劳动者在法定休假日工作的，按300%\". That is a paraphrase shown as a quote; the regulation refers to 第十四条第（三）项 rather than saying '300%'",
+   "Gives the daily wage 413.79 with no legal basis (人社部发〔2025〕2号 is not mentioned)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 'signed so nothing can be done' premise in their first lines. Both get 3724.14 + 3310.34 = 7034.48 yuan, paid on top of the 9000 salary, and both note that time off in lieu can replace pay only for Oct 4–7. A gives the stronger legal basis: Labor Law art. 39, 157号 arts. 3–4, Labor Law art. 44(3), and 人社部发〔2025〕2号 for 21.75. It also names the approval form, tells the worker to check whether the approval covers the dispatcher post at the district HR bureau, and declines to give a Scenario B 150% figure. B is tighter and adds the 10月3日-is-Saturday detail, but it gives a speculative 2,482.76 / 3,724–6,207 range for Scenario B, which the key penalizes, and it cites no basis for the daily wage. A is long and wrongly says 150% applies to hours past 8 on holiday or rest days. Neither answer mentions that the 9/20 and 10/10 make-up working days are not overtime."
+}

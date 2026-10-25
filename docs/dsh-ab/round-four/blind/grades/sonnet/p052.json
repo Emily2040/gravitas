@@ -1,0 +1,51 @@
+{
+ "pair": "p052",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "취업규칙이나 근로계약서에 한 달이라고 적혀 있어도 법정 기한을 넘기는 조항은 인정되기 어렵다고 함: 근거 없는 법적 판단이며, 합의 연장이 가능하므로 단정은 과함",
+   "근속을 30일 x 38/12 = 95일분으로 계산해 약 1,022만 원 제시: 키의 일수 기준(1,158일/365, 약 1,024만 원)과 약 2만 원 차이로 사소함. 다만 통상임금 하한(약 1,202만 원)을 빼고 1,020만~1,045만 원이 범위인 것처럼 말함",
+   "10월 30일까지 지급 요청, 10월 30일 이후 진정: 임의로 정한 날짜이며 법정 기한이 아님(제안으로는 무해)",
+   "1350 링크의 문서 번호(id=1000271860, id=1000313975)와 law.go.kr 링크는 열어 확인하지 못함: 확인 불가"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "14일을 넘기면 3년 이하 징역 또는 3천만 원 이하 벌금(같은 법 제44조 제1호): 2026.9.18.부터 제43조의 5년 이하 징역/5천만 원 이하 벌금으로 바뀐 옛 규정임(키상 경미 감점)",
+   "연 20% 지연이자(같은 법 제17조 제3항, 근로기준법 제37조): 퇴직급여법 제17조 제3항 인용은 근거를 확인할 수 없고 틀렸을 가능성이 큼. 근로기준법 제37조는 맞음",
+   "문자 1안의 '지연이자(연 20%)와 고용노동부 진정 절차를 검토할 수밖에 없어... 협의하고자 합니다': 키가 금지한 위협성 문구에 가깝고, '협의' 표현이 연장 동의로 읽힐 여지가 있음",
+   "3개월 총일수 약 89~92일: 지난달 20일 퇴사면 사실상 92일로 정해지는데 불필요하게 넓게 잡음(범위 1,020만~1,060만 원 자체는 키와 충돌하지 않음)",
+   "고용노동부 퇴직금 계산기 링크와 생활법령 링크는 열어 확인하지 못함: 확인 불가"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the company at the start on both premises: 14 days under Article 9(1), and an extension only with mutual agreement. Both give a plausible severance figure of about 10.2 to 10.4 million won. B adds the ordinary-wage floor (about 126,316 won a day, so about 12 million won), which changes the answer by roughly 1.8 million won and is the main content gap in A. B also names the labor-portal complaint, 1350 and the local labor office, and it tells the user to check the payslip and which basis the company used. A is better on three points: it gives the current penalty (5 years or 50 million won under Article 43) where B cites the old Article 44 (3 years or 30 million won); its message is firm, says outright that the user never agreed to an extension, and carries no threat; and it is shorter. B's message version 1 has a mild threat and a 'will discuss' phrasing, and B overall is longer, with two message versions. B wins slightly because of the ordinary-wage floor and the complaint and 1350 guidance."
+}

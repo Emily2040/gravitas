@@ -1,0 +1,26 @@
+**Don't enroll in Part B this month.** Your coworker is describing the general rule, but it doesn't fit your facts — and enrolling now would cost you money you don't need to spend.
+
+You're actively working and covered by your employer's group health plan, and the employer has about 400 employees, well over Medicare's 20-employee threshold. That makes your group plan primary, and it lets you delay Part B with **no penalty**. When you stop working or lose the coverage (whichever comes first), you get an **8-month Special Enrollment Period** to sign up for Part B. The 10%-per-year lifetime penalty your coworker mentioned applies to people who delay *without* qualifying coverage. You have qualifying coverage. ([Medicare.gov](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-can-i-sign-up-for-medicare))
+
+The standard 2026 Part B premium is **$202.90 a month** — about $2,435 a year — for coverage that would mostly sit behind your employer plan. ([Federal Register](https://www.govinfo.gov/content/pkg/FR-2025-11-19/html/2025-20251.htm))
+
+**What to do this month:**
+
+1. **Hold the Part B application.** Don't submit it. If you've already submitted it, call Social Security at 1-800-772-1213 right away and ask to withdraw it before it takes effect.
+2. **Get four things from HR/benefits, in writing:**
+   - You're actively employed and enrolled in the group health plan.
+   - The employer has 20+ employees, so the group plan is primary.
+   - Whether the prescription drug coverage is **creditable** — and get this year's creditable coverage notice.
+   - Whether the plan requires you to enroll in Medicare at 65 (some do; most don't).
+3. **Decide about Part A.** Most people get premium-free Part A (40 quarters of Medicare-covered work) and can enroll now at no monthly premium. But if you contribute to a health savings account (HSA), enrolling in Part A — even the free kind — ends your ability to contribute, and Part A can be retroactive up to 6 months. If you have an HSA, talk to a tax advisor before enrolling in Part A.
+4. **Check whether you're already on Social Security.** If you're receiving benefits, you may be auto-enrolled in both Part A and Part B at 65. In that case, you must actively decline Part B (follow the instructions that come with the card) to avoid the premium. If you're not on Social Security, nothing is automatic — you'd need to apply for Part A separately if you want it.
+5. **Build a paper file.** Save the CMS-L564 form (your employer fills it out), the creditable coverage notices, your plan summary, and proof of coverage. You'll need these when you enroll later.
+6. **Calendar the retirement window.** When you stop working or lose coverage, you have **8 months** to enroll in Part B without penalty. For Part D, the window is only **2 months** after coverage ends. If you want Part B to start the month after the employer plan ends, apply the month before you retire. ([Medicare.gov](https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods))
+
+**What would change this advice:**
+- The employer had fewer than 20 employees (not your case). Then Medicare would be primary and you'd need to enroll.
+- The drug coverage isn't creditable. Then you might need a Part D plan, and possibly Part B to get it.
+- Your employer plan requires Medicare enrollment at 65.
+- You're already auto-enrolled through Social Security.
+
+The main thing you need this month is **documentation, not an enrollment**. Keep the employer plan, get the paperwork, and put the 8-month window on your calendar for whenever you retire.

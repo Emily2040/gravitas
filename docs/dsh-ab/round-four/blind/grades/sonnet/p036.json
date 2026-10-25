@@ -1,0 +1,54 @@
+{
+ "pair": "p036",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says the Part B penalty 'applies to people who go without creditable coverage': imprecise. 'Creditable coverage' is a Part D term; the Part B penalty applies when there is no Part B and no SEP.",
+   "'sign up for Part D within 63 days of losing creditable drug coverage': loose. The Part D SEP is 2 full months after coverage ends; 63 days is the penalty threshold.",
+   "'CMS-L564, completed by your employer': imprecise. Section A is completed by the asker and Section B by the employer.",
+   "'Apply for Part B during the 8-month SEP using CMS-40B' is given without conditioning on already having Part A, although the answer calls free Part A optional. CMS-40B is not the route for someone with no Part A.",
+   "HSA warning omits the up-to-6-month Part A backdating, so 'stop HSA contributions first' gives no lead time.",
+   "Medicare.gov links (including the 'ready-to-sign-up-for-part-a-part-b' URL) are cited as sources and cannot be verified from the packet."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "'call Social Security at 1-800-772-1213 and ask about withdrawing it before it takes effect': the number is SSA's national line, but the withdrawal route is unverified and not covered by the key. Plausible.",
+   "'apply the month before you retire' to have Medicare start when coverage ends: consistent with the key's 'about a month before'; wording is loose but not wrong.",
+   "Two Medicare.gov source links are cited and cannot be verified from the packet.",
+   "Retirement steps omit CMS-L564, CMS-40B and the Part D 2-month window, offering only an HR letter. This is an omission, not an error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start. Each says the asker can delay Part B without penalty and use the 8-month SEP, because the employer plan at about 400 employees pays first. Each also covers asking HR, the Social Security auto-enrollment decline, creditable drug coverage notices, and an HSA warning on Part A. Neither gives the $202.90 premium, the Medigap clock, or the exception when the job or coverage ends during the IEP. B is slightly better on the HSA point because it states that Part A can be backdated up to 6 months, which A omits. B also explains the 20-employee rule in both directions (under 20, Medicare pays first), says to apply about a month before retiring, and has no CMS-40B-without-Part-A exposure. A has more retirement paperwork detail (CMS-40B plus CMS-L564, Part D), but it conditions none of it on having Part A and states the Part D and penalty rules loosely. B is a little tighter and more accurate, but B's retirement section is thinner, so the margin is slight."
+}

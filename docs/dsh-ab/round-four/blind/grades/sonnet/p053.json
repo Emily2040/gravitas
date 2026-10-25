@@ -1,0 +1,52 @@
+{
+ "pair": "p053",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Third table row (合同沿用旧“本人工资=实得工资70%”口径, 8000×70%×80% = 4480元): the premise is not in the key and is unverifiable. It conflicts with the key's base (the contract-stated position wage) and could mislead the user about what they are owed.",
+   "Treats 沪劳保发〔2000〕14号 as part of the 按连续工龄分档 rules and writes the number as 沪劳保发. The key says it is 沪劳保保发〔2000〕14号, the Shanghai minimum standard, not a tier table.",
+   "Gives ft22.com as the 全文 link for 沪人社规〔2026〕10号. That is a non-official third-party site, and I could not check that it hosts the document.",
+   "Lists 上海人社局, 中伦 and Ebner Stolz links as sources. The packet gives no way to confirm that the pages say what is claimed."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says arbitration limitation is 时效1年 with no qualification. The key says an in-service employee chasing unpaid wages is not bound by the one-year limit, which applies only within one year after leaving. This is a small oversimplification.",
+   "Calls 2,192元 应发下限 while also saying the personal-contribution question is disputed. The key's majority view is that 2192 is a net-pay floor. This is a minor lean toward the minority view, mitigated by the stated dispute.",
+   "The phrase 按现行文件和裁审口径的分析 refers to arbitration and court practice with no source, so it is unverifiable.",
+   "The link described as the 83号 official reply has a 2025-04-12 date in its path. The key places the official reply on 2026-08-19, so the description is unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start. They cite 309号第59条 and 沪人社规〔2026〕10号第九条. Both give the 2192元 floor (1392元 short), treat 6400元 only as a contract or company-policy figure (5600元 short), and state that 83号 and 14号 expired on 2026-08-15. B says explicitly that no replacement tier document has been issued. B's message to HR asks for the 应发, 代扣 and 实发 breakdown and the specific clause relied on, and it sets a reply deadline. B also lists which items are excluded from the base. A handles the 应发 versus 实发 check slightly better, noting that the old minimum excluded personal contributions, and it offers a useful second reply for the case where HR says the tiers are abolished. However, A adds an unverifiable 4480元 row built on a 70% 本人工资 premise, mislabels 14号 as a tier rule, and its HR message never asks whether 800元 is 应发 or 实发. B's only slips are the unqualified 时效1年 and calling 2192 应发 while flagging the dispute. Overall B is slightly better."
+}

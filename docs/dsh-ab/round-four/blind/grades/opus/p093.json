@@ -1,0 +1,50 @@
+{
+ "pair": "p093",
+ "winner": "A",
+ "margin": "decisive",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'仲裁免费，时效1年' oversimplified: a wage-arrears claim made while still employed is not bound by the one-year limit (劳动争议调解仲裁法第27条); the limit runs from leaving the job.",
+   "'以上是按现行文件和裁审口径的分析' claims arbitration/court practice with no case or document cited; unverifiable.",
+   "'沪人社规〔2026〕10号第九条只规定病假工资的计算基数' understates the article: per the key it also requires the employer to pay sick-leave wages as provided (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 4,
+  "trap": 8,
+  "honest": 5,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "'基数要先按正常工资的70%计算…8000×70%×80%=4480元，并非6400元' is wrong: the old 70% base applied only when neither the labour contract nor the collective contract set a monthly wage. With an agreed 8000 salary the old 4-6 year tier gives 8000×80% = 6400 (key).",
+   "'按旧口径补3680元' rests on the wrong 4480 figure (the arithmetic 4480−800 = 3680 is right, but the premise is not).",
+   "'应发是2192元左右、扣掉个人社保和公积金后实发800元：公司是按最低线在发' implies the employer may be compliant. The majority view (key) is that the minimum excludes personal contributions, so take-home pay should not fall below 2192. Partly hedged by '口径不完全一致'."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "wrong",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers reject the 'company decides' premise at the start and give the correct 2026 legal floor of 2740×80% = 2192 (1392 short). A also explains that the 83号 tier system expired, gives the correct contract-based 80% figure (6400, 5600 short), and covers the wage base, gross versus net pay, and the contract and handbook checks. Its HR message cites 309号第59条 and 10号第九条 and asks for the basis and a pay breakdown. B makes a central error: it invents a 70% base discount for the old rule, says the old amount was 4480 and 'not 6400', and so contradicts the key and undercuts the worker's strongest claim. B's HR message also does not ask whether the 800 is gross or net and cites no article numbers. A's only flaws are minor: an oversimplified one-year limitation period and a little extra length."
+}

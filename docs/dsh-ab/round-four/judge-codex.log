@@ -1,0 +1,198 @@
+2026-10-25T21:51:26+1100 run start (REAL, approved): 96 packets, 0 already graded validly and skipped, 1 to grade now (limit 1); model gpt-6-astra, effort high, live web search on (--search), codex-cli 0.163.0, at most 3 at a time
+2026-10-25T21:51:27+1100 run end: 96 pairs x 1 judges (codex): 96 missing, malformed or not the first valid ledger grade; 0 problems in the workflow outputs
+2026-10-25T21:52:42+1100 driver start (REAL, approved; dev/codex_drive.sh): 1 to grade, codex-cli 0.163.0
+2026-10-25T21:52:43+1100 p001 start
+2026-10-25T21:53:33+1100 p001 end exit=0 secs=50 grade valid, in force
+2026-10-25T21:53:34+1100 driver end: 96 pairs x 1 judges (codex): 95 missing, malformed or not the first valid ledger grade; 0 problems in the workflow outputs
+2026-10-25T21:53:51+1100 driver start (REAL, approved; dev/codex_drive.sh): 95 to grade, codex-cli 0.163.0
+2026-10-25T21:53:52+1100 p002 start
+2026-10-25T21:53:52+1100 p003 start
+2026-10-25T21:53:52+1100 p004 start
+2026-10-25T21:54:29+1100 p003 end exit=0 secs=37 grade valid, in force
+2026-10-25T21:54:30+1100 p005 start
+2026-10-25T21:54:39+1100 p004 end exit=0 secs=46 grade valid, in force
+2026-10-25T21:54:39+1100 p006 start
+2026-10-25T21:54:45+1100 p002 end exit=0 secs=52 grade valid, in force
+2026-10-25T21:54:45+1100 p007 start
+2026-10-25T21:54:58+1100 p005 end exit=0 secs=28 grade valid, in force
+2026-10-25T21:54:59+1100 p008 start
+2026-10-25T21:55:17+1100 p007 end exit=0 secs=32 grade valid, in force
+2026-10-25T21:55:18+1100 p009 start
+2026-10-25T21:55:25+1100 p006 end exit=0 secs=46 grade valid, in force
+2026-10-25T21:55:26+1100 p010 start
+2026-10-25T21:55:41+1100 p008 end exit=0 secs=41 grade valid, in force
+2026-10-25T21:55:41+1100 p011 start
+2026-10-25T21:55:57+1100 p009 end exit=0 secs=38 grade valid, in force
+2026-10-25T21:55:58+1100 p012 start
+2026-10-25T21:56:10+1100 p010 end exit=0 secs=44 grade valid, in force
+2026-10-25T21:56:11+1100 p013 start
+2026-10-25T21:56:37+1100 p012 end exit=0 secs=38 grade valid, in force
+2026-10-25T21:56:37+1100 p014 start
+2026-10-25T21:56:38+1100 p011 end exit=0 secs=55 grade valid, in force
+2026-10-25T21:56:38+1100 p015 start
+2026-10-25T21:56:53+1100 p013 end exit=0 secs=41 grade valid, in force
+2026-10-25T21:56:54+1100 p016 start
+2026-10-25T21:57:13+1100 p015 end exit=0 secs=34 grade valid, in force
+2026-10-25T21:57:14+1100 p017 start
+2026-10-25T21:57:18+1100 p014 end exit=0 secs=41 grade valid, in force
+2026-10-25T21:57:19+1100 p018 start
+2026-10-25T21:57:40+1100 p016 end exit=0 secs=46 grade valid, in force
+2026-10-25T21:57:41+1100 p019 start
+2026-10-25T21:57:54+1100 p017 end exit=0 secs=40 grade valid, in force
+2026-10-25T21:57:55+1100 p020 start
+2026-10-25T21:58:04+1100 p019 end exit=0 secs=23 grade valid, in force
+2026-10-25T21:58:05+1100 p018 end exit=0 secs=45 grade valid, in force
+2026-10-25T21:58:05+1100 p021 start
+2026-10-25T21:58:06+1100 p022 start
+2026-10-25T21:58:22+1100 p020 end exit=0 secs=27 grade valid, in force
+2026-10-25T21:58:23+1100 p023 start
+2026-10-25T21:58:44+1100 p021 end exit=0 secs=38 grade valid, in force
+2026-10-25T21:58:45+1100 p024 start
+2026-10-25T21:58:46+1100 p022 end exit=0 secs=39 grade valid, in force
+2026-10-25T21:58:47+1100 p025 start
+2026-10-25T21:59:26+1100 p024 end exit=0 secs=41 grade valid, in force
+2026-10-25T21:59:27+1100 p026 start
+2026-10-25T21:59:29+1100 p023 end exit=0 secs=65 grade valid, in force
+2026-10-25T21:59:30+1100 p027 start
+2026-10-25T21:59:31+1100 p025 end exit=0 secs=42 grade valid, in force
+2026-10-25T21:59:32+1100 p028 start
+2026-10-25T22:00:06+1100 p026 end exit=0 secs=39 grade valid, in force
+2026-10-25T22:00:07+1100 p029 start
+2026-10-25T22:00:09+1100 p028 end exit=0 secs=36 grade valid, in force
+2026-10-25T22:00:11+1100 p030 start
+2026-10-25T22:00:13+1100 p027 end exit=0 secs=42 grade valid, in force
+2026-10-25T22:00:14+1100 p031 start
+2026-10-25T22:00:55+1100 p031 end exit=0 secs=41 grade valid, in force
+2026-10-25T22:00:56+1100 p032 start
+2026-10-25T22:00:57+1100 p029 end exit=0 secs=49 grade valid, in force
+2026-10-25T22:00:58+1100 p033 start
+2026-10-25T22:00:58+1100 p030 end exit=0 secs=46 grade valid, in force
+2026-10-25T22:00:59+1100 p034 start
+2026-10-25T22:01:39+1100 p034 end exit=0 secs=39 grade valid, in force
+2026-10-25T22:01:40+1100 p035 start
+2026-10-25T22:01:43+1100 p033 end exit=0 secs=44 grade valid, in force
+2026-10-25T22:01:44+1100 p036 start
+2026-10-25T22:01:52+1100 p032 end exit=0 secs=55 grade valid, in force
+2026-10-25T22:01:53+1100 p037 start
+2026-10-25T22:02:17+1100 p035 end exit=0 secs=36 grade valid, in force
+2026-10-25T22:02:18+1100 p038 start
+2026-10-25T22:02:21+1100 p036 end exit=0 secs=35 grade valid, in force
+2026-10-25T22:02:23+1100 p039 start
+2026-10-25T22:02:37+1100 p037 end exit=0 secs=43 grade valid, in force
+2026-10-25T22:02:38+1100 p040 start
+2026-10-25T22:03:00+1100 p038 end exit=0 secs=41 grade valid, in force
+2026-10-25T22:03:01+1100 p041 start
+2026-10-25T22:03:15+1100 p040 end exit=0 secs=36 grade valid, in force
+2026-10-25T22:03:17+1100 p042 start
+2026-10-25T22:03:17+1100 p039 end exit=0 secs=53 grade valid, in force
+2026-10-25T22:03:19+1100 p043 start
+2026-10-25T22:03:47+1100 p041 end exit=0 secs=45 grade valid, in force
+2026-10-25T22:03:48+1100 p044 start
+2026-10-25T22:04:00+1100 p042 end exit=0 secs=42 grade valid, in force
+2026-10-25T22:04:01+1100 p045 start
+2026-10-25T22:04:03+1100 p043 end exit=0 secs=44 grade valid, in force
+2026-10-25T22:04:04+1100 p046 start
+2026-10-25T22:04:23+1100 p044 end exit=0 secs=35 grade valid, in force
+2026-10-25T22:04:24+1100 p047 start
+2026-10-25T22:04:29+1100 p045 end exit=0 secs=28 grade valid, in force
+2026-10-25T22:04:30+1100 p048 start
+2026-10-25T22:04:44+1100 p046 end exit=0 secs=39 grade valid, in force
+2026-10-25T22:04:45+1100 p049 start
+2026-10-25T22:05:08+1100 p047 end exit=0 secs=43 grade valid, in force
+2026-10-25T22:05:09+1100 p050 start
+2026-10-25T22:05:14+1100 p048 end exit=0 secs=43 grade valid, in force
+2026-10-25T22:05:15+1100 p051 start
+2026-10-25T22:05:36+1100 p049 end exit=0 secs=50 grade valid, in force
+2026-10-25T22:05:36+1100 p052 start
+2026-10-25T22:05:58+1100 p050 end exit=0 secs=49 grade valid, in force
+2026-10-25T22:05:59+1100 p053 start
+2026-10-25T22:06:01+1100 p051 end exit=0 secs=45 grade valid, in force
+2026-10-25T22:06:02+1100 p054 start
+2026-10-25T22:06:19+1100 p052 end exit=0 secs=42 grade valid, in force
+2026-10-25T22:06:20+1100 p055 start
+2026-10-25T22:06:42+1100 p053 end exit=0 secs=42 grade valid, in force
+2026-10-25T22:06:42+1100 p056 start
+2026-10-25T22:06:43+1100 p054 end exit=0 secs=40 grade valid, in force
+2026-10-25T22:06:44+1100 p057 start
+2026-10-25T22:06:52+1100 p055 end exit=0 secs=32 grade valid, in force
+2026-10-25T22:06:53+1100 p058 start
+2026-10-25T22:07:26+1100 p057 end exit=0 secs=42 grade valid, in force
+2026-10-25T22:07:27+1100 p059 start
+2026-10-25T22:07:40+1100 p056 end exit=0 secs=57 grade valid, in force
+2026-10-25T22:07:41+1100 p060 start
+2026-10-25T22:07:56+1100 p058 end exit=0 secs=62 grade valid, in force
+2026-10-25T22:07:58+1100 p061 start
+2026-10-25T22:08:06+1100 p059 end exit=0 secs=38 grade valid, in force
+2026-10-25T22:08:07+1100 p062 start
+2026-10-25T22:08:25+1100 p060 end exit=0 secs=43 grade valid, in force
+2026-10-25T22:08:26+1100 p063 start
+2026-10-25T22:08:45+1100 p062 end exit=0 secs=37 grade valid, in force
+2026-10-25T22:08:45+1100 p064 start
+2026-10-25T22:09:04+1100 p063 end exit=0 secs=37 grade valid, in force
+2026-10-25T22:09:05+1100 p065 start
+2026-10-25T22:09:08+1100 p061 end exit=0 secs=69 grade valid, in force
+2026-10-25T22:09:09+1100 p066 start
+2026-10-25T22:09:27+1100 p064 end exit=0 secs=40 grade valid, in force
+2026-10-25T22:09:28+1100 p067 start
+2026-10-25T22:09:41+1100 p065 end exit=0 secs=35 grade valid, in force
+2026-10-25T22:09:42+1100 p068 start
+2026-10-25T22:09:48+1100 p066 end exit=0 secs=39 grade valid, in force
+2026-10-25T22:09:49+1100 p069 start
+2026-10-25T22:10:03+1100 p067 end exit=0 secs=34 grade valid, in force
+2026-10-25T22:10:03+1100 p070 start
+2026-10-25T22:10:24+1100 p068 end exit=0 secs=42 grade valid, in force
+2026-10-25T22:10:25+1100 p071 start
+2026-10-25T22:10:39+1100 p069 end exit=0 secs=50 grade valid, in force
+2026-10-25T22:10:40+1100 p072 start
+2026-10-25T22:10:41+1100 p070 end exit=0 secs=37 grade valid, in force
+2026-10-25T22:10:42+1100 p073 start
+2026-10-25T22:11:11+1100 p073 end exit=0 secs=28 grade valid, in force
+2026-10-25T22:11:12+1100 p074 start
+2026-10-25T22:11:20+1100 p072 end exit=0 secs=40 grade valid, in force
+2026-10-25T22:11:21+1100 p075 start
+2026-10-25T22:11:22+1100 p071 end exit=0 secs=56 grade valid, in force
+2026-10-25T22:11:23+1100 p076 start
+2026-10-25T22:12:15+1100 p076 end exit=0 secs=51 grade valid, in force
+2026-10-25T22:12:16+1100 p077 start
+2026-10-25T22:12:17+1100 p074 end exit=0 secs=64 grade valid, in force
+2026-10-25T22:12:18+1100 p075 end exit=0 secs=56 grade valid, in force
+2026-10-25T22:12:18+1100 p078 start
+2026-10-25T22:12:19+1100 p079 start
+2026-10-25T22:12:57+1100 p077 end exit=0 secs=40 grade valid, in force
+2026-10-25T22:12:58+1100 p079 end exit=0 secs=38 grade valid, in force
+2026-10-25T22:12:58+1100 p080 start
+2026-10-25T22:12:58+1100 p081 start
+2026-10-25T22:13:18+1100 p078 end exit=0 secs=59 grade valid, in force
+2026-10-25T22:13:18+1100 p082 start
+2026-10-25T22:13:35+1100 p080 end exit=0 secs=37 grade valid, in force
+2026-10-25T22:13:36+1100 p083 start
+2026-10-25T22:13:43+1100 p081 end exit=0 secs=43 grade valid, in force
+2026-10-25T22:13:44+1100 p084 start
+2026-10-25T22:14:02+1100 p082 end exit=0 secs=43 grade valid, in force
+2026-10-25T22:14:02+1100 p085 start
+2026-10-25T22:14:19+1100 p083 end exit=0 secs=42 grade valid, in force
+2026-10-25T22:14:19+1100 p086 start
+2026-10-25T22:14:32+1100 p084 end exit=0 secs=47 grade valid, in force
+2026-10-25T22:14:33+1100 p087 start
+2026-10-25T22:14:56+1100 p086 end exit=0 secs=35 grade valid, in force
+2026-10-25T22:14:57+1100 p088 start
+2026-10-25T22:15:06+1100 p085 end exit=0 secs=62 grade valid, in force
+2026-10-25T22:15:07+1100 p089 start
+2026-10-25T22:15:11+1100 p087 end exit=0 secs=37 grade valid, in force
+2026-10-25T22:15:12+1100 p090 start
+2026-10-25T22:15:50+1100 p089 end exit=0 secs=43 grade valid, in force
+2026-10-25T22:15:51+1100 p088 end exit=0 secs=53 grade valid, in force
+2026-10-25T22:15:51+1100 p091 start
+2026-10-25T22:15:52+1100 p092 start
+2026-10-25T22:15:54+1100 p090 end exit=0 secs=41 grade valid, in force
+2026-10-25T22:15:55+1100 p093 start
+2026-10-25T22:16:28+1100 p092 end exit=0 secs=35 grade valid, in force
+2026-10-25T22:16:29+1100 p094 start
+2026-10-25T22:16:36+1100 p091 end exit=0 secs=44 grade valid, in force
+2026-10-25T22:16:38+1100 p095 start
+2026-10-25T22:16:39+1100 p093 end exit=0 secs=43 grade valid, in force
+2026-10-25T22:16:40+1100 p096 start
+2026-10-25T22:17:07+1100 p095 end exit=0 secs=28 grade valid, in force
+2026-10-25T22:17:10+1100 p096 end exit=0 secs=29 grade valid, in force
+2026-10-25T22:17:15+1100 p094 end exit=0 secs=44 grade valid, in force
+2026-10-25T22:17:16+1100 driver end: 96 pairs x 1 judges (codex): 0 missing, malformed or not the first valid ledger grade; 0 problems in the workflow outputs

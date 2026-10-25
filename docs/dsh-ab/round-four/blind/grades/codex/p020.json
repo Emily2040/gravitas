@@ -1,0 +1,49 @@
+{
+  "pair": "p020",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 9,
+    "honest": 6,
+    "useful": 7,
+    "concise": 6,
+    "added_claim_errors": [
+      "“14号已于2026年8月15日到期失效” states a definite conclusion where the key records inferred expiry without explicit official confirmation.",
+      "“2192元/月（应发）” and “可能刚好达到下限，并没有差额” present the disputed gross-pay interpretation without disclosing the majority interpretation that the minimum excludes personal contributions.",
+      "“在1年内申请劳动仲裁” misleadingly suggests a general one-year deadline; the key exempts wage arrears claims during employment and specifies one year after departure."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "vague",
+      "5": "missing",
+      "6": "wrong",
+      "7": "vague",
+      "8": "correct"
+    }
+  },
+  "B": {
+    "correct": 5,
+    "trap": 9,
+    "honest": 5,
+    "useful": 6,
+    "concise": 6,
+    "added_claim_errors": [
+      "“基数要先按正常工资的70%计算” incorrectly imposes a universal 70% reduction; the resulting 4480元 entitlement and 3680元 shortfall use the wrong premise, although their arithmetic is correct.",
+      "“公司是按最低线在发，能主张的差额会少很多” treats gross pay of about 2192元 as establishing compliance despite the unresolved deduction issue and the majority interpretation requiring the minimum after personal contributions."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "wrong",
+      "5": "wrong",
+      "6": "wrong",
+      "7": "vague",
+      "8": "correct"
+    }
+  },
+  "reasons": "Both answers reject the employer’s premise and correctly calculate the 2192元 floor and 1392元 shortfall. A wins because B introduces an unsupported mandatory 70% base reduction, materially miscalculating the adopted old-tier entitlement. A nevertheless omits the concrete conditional 6400元 calculation, and both mishandle the disputed treatment of personal deductions. Both HR drafts omit requested details and statutory article references; A additionally gives misleading arbitration timing."
+}

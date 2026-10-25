@@ -1,0 +1,914 @@
+{
+ "p001": {
+  "A": "gv-plain",
+  "A_round": "r2",
+  "A_sha256": "43c95fdb86c2e5ba9f673657076f2577826ed8a89747e02c8a505dc9d943667c",
+  "B": "gv-plain",
+  "B_round": "r1",
+  "B_sha256": "c64760d07c2ad3276729d7923031645a96e748111a9430a21ceb907c7e8b6437",
+  "case": "ko-severance-pay",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p002": {
+  "A": "gv-plain",
+  "A_round": "r2",
+  "A_sha256": "f4db5beb9afa751f4c71363c00e82dcadaf2bbcda66ea53c7c9df023ab1c2539",
+  "B": "gv-plain",
+  "B_round": "r1",
+  "B_sha256": "d931ee7c9e782a7b31313552db997c30917beaec47e05d77562dc4f8f5c99939",
+  "case": "ja-medical-deduction",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p003": {
+  "A": "gv-plain",
+  "A_round": "r2",
+  "A_sha256": "cf15c514d48370a5a91b2909ba8d2164e38ab813fa726d3f14de156a34f56094",
+  "B": "gv-plain",
+  "B_round": "r1",
+  "B_sha256": "8649c991329aa530ac88d46e56e40754d8f1d1153638485ad0368144c6b22a70",
+  "case": "en-fsa-rollover",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p004": {
+  "A": "gv-plain",
+  "A_round": "r1",
+  "A_sha256": "2844aa6b3db76dfe41a4aa53c42959441776c8167981a9170930b42e8c7f7574",
+  "B": "gv-plain",
+  "B_round": "r2",
+  "B_sha256": "40630db12027b2076030c9f8cc6a7ff979dba9ae2656a3ecae343e0fd1aa049e",
+  "case": "zh-insurance-gap",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p005": {
+  "A": "gv-plain",
+  "A_sha256": "8649c991329aa530ac88d46e56e40754d8f1d1153638485ad0368144c6b22a70",
+  "B": "gv-grav-c4",
+  "B_sha256": "d651e6c8795caec6d4160440fa2e64e91e56423becd9c61b2f5829413a67deab",
+  "case": "en-fsa-rollover",
+  "round": "r1",
+  "set": "main"
+ },
+ "p006": {
+  "A": "gv-grav-c4",
+  "A_sha256": "315d09a4dbb493d34149aa067ec70aee60f395cde2d52caaf4dbf9c883ec7d86",
+  "B": "gv-plain",
+  "B_sha256": "2844aa6b3db76dfe41a4aa53c42959441776c8167981a9170930b42e8c7f7574",
+  "case": "zh-insurance-gap",
+  "round": "r1",
+  "set": "main"
+ },
+ "p007": {
+  "A": "gv-plain",
+  "A_round": "r2",
+  "A_sha256": "3ab72f4a34a5b32749479beb278ce52a911ac5b874c8584a4bca959f8ba72f9a",
+  "B": "gv-plain",
+  "B_round": "r1",
+  "B_sha256": "a5cbd5e8478e61b46952854161dce1e7ddf4e3df013cc737bd019007f83fcffd",
+  "case": "zh-sick-pay",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p008": {
+  "A": "gv-grav-c4",
+  "A_sha256": "c8b5331a706774b76ef9b0a28f3eaa56cc3ab579300fb43b2cbaca935c877d5a",
+  "B": "gv-plain",
+  "B_sha256": "43c95fdb86c2e5ba9f673657076f2577826ed8a89747e02c8a505dc9d943667c",
+  "case": "ko-severance-pay",
+  "round": "r2",
+  "set": "main"
+ },
+ "p009": {
+  "A": "gv-grav-base",
+  "A_sha256": "954caee8aa2c002a6157c4469506161adb528e7973209aa24091b922313a6722",
+  "B": "gv-plain",
+  "B_sha256": "cf15c514d48370a5a91b2909ba8d2164e38ab813fa726d3f14de156a34f56094",
+  "case": "en-fsa-rollover",
+  "round": "r2",
+  "set": "base"
+ },
+ "p010": {
+  "A": "gv-plain",
+  "A_round": "r2",
+  "A_sha256": "e44ede490c6575e13d9a24224cfbdb11461db4cff8df6bdad34341979bd2295b",
+  "B": "gv-plain",
+  "B_round": "r1",
+  "B_sha256": "1d92a24494176472b5a3837a4a8eb48383616b9133812b7fa2c0ea9f6c54a01c",
+  "case": "ja-wallpaper-restoration",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p011": {
+  "A": "gv-grav-c4",
+  "A_round": "r2",
+  "A_sha256": "b44caeeb0a0df9f9dd3457eea2cc350d2d3accec35c37d9310b7af2526d54057",
+  "B": "gv-grav-c4",
+  "B_round": "r1",
+  "B_sha256": "d5d59e26d106fea71f7ac067bb9d19db2f504da4745cefe29e2c7503dea6881b",
+  "case": "zh-flex-hours",
+  "round": "r1r2",
+  "set": "aa-c4"
+ },
+ "p012": {
+  "A": "gv-grav-c4",
+  "A_round": "r2",
+  "A_sha256": "c8b5331a706774b76ef9b0a28f3eaa56cc3ab579300fb43b2cbaca935c877d5a",
+  "B": "gv-grav-c4",
+  "B_round": "r1",
+  "B_sha256": "d56afbbb0bddda4e45c87e2c8f8487b13c3bdff267d9924dfd3a473152814a50",
+  "case": "ko-severance-pay",
+  "round": "r1r2",
+  "set": "aa-c4"
+ },
+ "p013": {
+  "A": "gv-plain",
+  "A_sha256": "a5cbd5e8478e61b46952854161dce1e7ddf4e3df013cc737bd019007f83fcffd",
+  "B": "gv-grav-c4",
+  "B_sha256": "da2f592b293302ac5db7854d17cac87671407057807783f20f6342c9bc6a9a03",
+  "case": "zh-sick-pay",
+  "round": "r1",
+  "set": "main"
+ },
+ "p014": {
+  "A": "gv-plain",
+  "A_sha256": "c64760d07c2ad3276729d7923031645a96e748111a9430a21ceb907c7e8b6437",
+  "B": "gv-grav-base",
+  "B_sha256": "edb555f84e525a512ed0933768745fde7fc4b2f92400632a63dd577a0f78965e",
+  "case": "ko-severance-pay",
+  "round": "r1",
+  "set": "base"
+ },
+ "p015": {
+  "A": "gv-grav-base",
+  "A_sha256": "c63f1d3a7b343087454b9cd61be0a531d98f4b7ca38ae9e595c9dd81efb16e51",
+  "B": "gv-grav-c4",
+  "B_sha256": "d651e6c8795caec6d4160440fa2e64e91e56423becd9c61b2f5829413a67deab",
+  "case": "en-fsa-rollover",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p016": {
+  "A": "gv-grav-c4",
+  "A_round": "r2",
+  "A_sha256": "becd4dc2c920aaee6f57219d9e35408f9de1c60cc970b97d3bccc1a76f94ee92",
+  "B": "gv-grav-c4",
+  "B_round": "r1",
+  "B_sha256": "d651e6c8795caec6d4160440fa2e64e91e56423becd9c61b2f5829413a67deab",
+  "case": "en-fsa-rollover",
+  "round": "r1r2",
+  "set": "aa-c4"
+ },
+ "p017": {
+  "A": "gv-grav-c4",
+  "A_sha256": "bacc61a847ab5436f53a295363b84cdaf746ef43f5a55bd022ba03208c289bbf",
+  "B": "gv-grav-base",
+  "B_sha256": "e84fa9eab2bd2adac5b77cda02a18fd5caa414bcf4b380e9bf79d38d99e3e552",
+  "case": "zh-sick-pay",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p018": {
+  "A": "gv-plain",
+  "A_sha256": "c64760d07c2ad3276729d7923031645a96e748111a9430a21ceb907c7e8b6437",
+  "B": "gv-grav-c4",
+  "B_sha256": "d56afbbb0bddda4e45c87e2c8f8487b13c3bdff267d9924dfd3a473152814a50",
+  "case": "ko-severance-pay",
+  "round": "r1",
+  "set": "main"
+ },
+ "p019": {
+  "A": "gv-grav-c4",
+  "A_sha256": "576b12daedbdf81150eab30ccc45714be164489199d4db3e41902307d0a765da",
+  "B": "gv-plain",
+  "B_sha256": "9b4b045457c83fc704f8a39c86fe8833c3cbf39242388d5bfcaed8db984f26a2",
+  "case": "ja-part-time-leave",
+  "round": "r1",
+  "set": "main"
+ },
+ "p020": {
+  "A": "gv-grav-c4",
+  "A_round": "r2",
+  "A_sha256": "bacc61a847ab5436f53a295363b84cdaf746ef43f5a55bd022ba03208c289bbf",
+  "B": "gv-grav-c4",
+  "B_round": "r1",
+  "B_sha256": "da2f592b293302ac5db7854d17cac87671407057807783f20f6342c9bc6a9a03",
+  "case": "zh-sick-pay",
+  "round": "r1r2",
+  "set": "aa-c4"
+ },
+ "p021": {
+  "A": "gv-grav-c4",
+  "A_sha256": "ac5553fbf56d2d6c84a8f12d4bc0e5ced356671d53fdda19a3d3bee8c79f9541",
+  "B": "gv-plain",
+  "B_sha256": "e44ede490c6575e13d9a24224cfbdb11461db4cff8df6bdad34341979bd2295b",
+  "case": "ja-wallpaper-restoration",
+  "round": "r2",
+  "set": "main"
+ },
+ "p022": {
+  "A": "gv-grav-c4",
+  "A_sha256": "93a0636e342ae0c3e21989f5d388a24b8b0eb0f16827724c61db2e76dacb3a90",
+  "B": "gv-grav-base",
+  "B_sha256": "aa27d4d6b6c51e126ea868fff67bfae64615a2edbba2fced58b1cc0e0c742bc6",
+  "case": "en-medicare-part-b",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p023": {
+  "A": "gv-plain",
+  "A_sha256": "c61921686dbcba30b02029f0daf66953b17cf80056e921c85d59ab26fec6b5cf",
+  "B": "gv-grav-c4",
+  "B_sha256": "d5d59e26d106fea71f7ac067bb9d19db2f504da4745cefe29e2c7503dea6881b",
+  "case": "zh-flex-hours",
+  "round": "r1",
+  "set": "main"
+ },
+ "p024": {
+  "A": "gv-plain",
+  "A_sha256": "1d92a24494176472b5a3837a4a8eb48383616b9133812b7fa2c0ea9f6c54a01c",
+  "B": "gv-grav-base",
+  "B_sha256": "1a1d1618ac9ef15c6140af8ef5b7944988910bc67cc260a304df00f85a39f5d1",
+  "case": "ja-wallpaper-restoration",
+  "round": "r1",
+  "set": "base"
+ },
+ "p025": {
+  "A": "gv-grav-base",
+  "A_sha256": "e84fa9eab2bd2adac5b77cda02a18fd5caa414bcf4b380e9bf79d38d99e3e552",
+  "B": "gv-plain",
+  "B_sha256": "3ab72f4a34a5b32749479beb278ce52a911ac5b874c8584a4bca959f8ba72f9a",
+  "case": "zh-sick-pay",
+  "round": "r2",
+  "set": "base"
+ },
+ "p026": {
+  "A": "gv-grav-c4",
+  "A_round": "r1",
+  "A_sha256": "074687f250af6c7d71d46f6b85328f6e1f6c5a17a139c984fa3b11b5fe7171f0",
+  "B": "gv-grav-c4",
+  "B_round": "r2",
+  "B_sha256": "da2794b488b71f5d1b2639dc0e93c6ac71698b47725a943019f3972e3745c757",
+  "case": "ko-unemployment-quit",
+  "round": "r1r2",
+  "set": "aa-c4"
+ },
+ "p027": {
+  "A": "gv-grav-c4",
+  "A_sha256": "b44caeeb0a0df9f9dd3457eea2cc350d2d3accec35c37d9310b7af2526d54057",
+  "B": "gv-plain",
+  "B_sha256": "14f507342722a037efe11be6015880500728a61d3e9591ec8bd6a8d80a2c72ab",
+  "case": "zh-flex-hours",
+  "round": "r2",
+  "set": "main"
+ },
+ "p028": {
+  "A": "gv-grav-base",
+  "A_sha256": "d4354a7b4474267c9af6672884fbbf921150d7442123d3e2cea2f9c412773059",
+  "B": "gv-plain",
+  "B_sha256": "9b4b045457c83fc704f8a39c86fe8833c3cbf39242388d5bfcaed8db984f26a2",
+  "case": "ja-part-time-leave",
+  "round": "r1",
+  "set": "base"
+ },
+ "p029": {
+  "A": "gv-grav-c4",
+  "A_sha256": "becd4dc2c920aaee6f57219d9e35408f9de1c60cc970b97d3bccc1a76f94ee92",
+  "B": "gv-grav-base",
+  "B_sha256": "954caee8aa2c002a6157c4469506161adb528e7973209aa24091b922313a6722",
+  "case": "en-fsa-rollover",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p030": {
+  "A": "gv-grav-c4",
+  "A_round": "r1",
+  "A_sha256": "315d09a4dbb493d34149aa067ec70aee60f395cde2d52caaf4dbf9c883ec7d86",
+  "B": "gv-grav-c4",
+  "B_round": "r2",
+  "B_sha256": "abfd589631071e898d98969a4ed6ccdbe01d0c50e45ec046d8d2fce40aeecc04",
+  "case": "zh-insurance-gap",
+  "round": "r1r2",
+  "set": "aa-c4"
+ },
+ "p031": {
+  "A": "gv-grav-base",
+  "A_sha256": "c002aa743c7ebd30828dbda67da9a19c5273be06d090e3368915ee0718fe0dd3",
+  "B": "gv-grav-c4",
+  "B_sha256": "e9b2bcc6f6df004642a8eb7027a173f8edf96c07cea8f52c41e4e7f59f6fdcbb",
+  "case": "en-medicare-part-b",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p032": {
+  "A": "gv-plain",
+  "A_sha256": "d931ee7c9e782a7b31313552db997c30917beaec47e05d77562dc4f8f5c99939",
+  "B": "gv-grav-c4",
+  "B_sha256": "cc78e1b0e40ae585cf1132bc732f1d5df66c7b0a34ac2174d223a4cc70a2df2e",
+  "case": "ja-medical-deduction",
+  "round": "r1",
+  "set": "main"
+ },
+ "p033": {
+  "A": "gv-grav-base",
+  "A_sha256": "394d30da9d7e0dad323d1d36eacb09e4e52880f2efc472d4f78e14b12be14b35",
+  "B": "gv-grav-c4",
+  "B_sha256": "d5d59e26d106fea71f7ac067bb9d19db2f504da4745cefe29e2c7503dea6881b",
+  "case": "zh-flex-hours",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p034": {
+  "A": "gv-grav-c4",
+  "A_sha256": "074687f250af6c7d71d46f6b85328f6e1f6c5a17a139c984fa3b11b5fe7171f0",
+  "B": "gv-grav-base",
+  "B_sha256": "1f648f26b2d3d84195cd26ea04928c9888788b77409718d10f09cf6cfce73c90",
+  "case": "ko-unemployment-quit",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p035": {
+  "A": "gv-plain",
+  "A_sha256": "b7d01b17f5e6cbdeef5f7e57664b767b3b27e44b2cd213a0217bd329602d6788",
+  "B": "gv-grav-base",
+  "B_sha256": "9f32c9c863ae830c336d79d12e8fe5278aab4cd069e2fc3006c91d7701b8ae26",
+  "case": "ko-jeonse-protection",
+  "round": "r2",
+  "set": "base"
+ },
+ "p036": {
+  "A": "gv-plain",
+  "A_sha256": "5d46d2ace47175f6e41f0e6d30b13222938a5e30b34e4e62797e44f4fe3db373",
+  "B": "gv-grav-c4",
+  "B_sha256": "e9b2bcc6f6df004642a8eb7027a173f8edf96c07cea8f52c41e4e7f59f6fdcbb",
+  "case": "en-medicare-part-b",
+  "round": "r2",
+  "set": "main"
+ },
+ "p037": {
+  "A": "gv-plain",
+  "A_round": "r1",
+  "A_sha256": "c3f74ef84442d3eeabcbe4f03664144a50a5bd0d2a3240c42fbb6605e31f3f85",
+  "B": "gv-plain",
+  "B_round": "r2",
+  "B_sha256": "b7d01b17f5e6cbdeef5f7e57664b767b3b27e44b2cd213a0217bd329602d6788",
+  "case": "ko-jeonse-protection",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p038": {
+  "A": "gv-grav-base",
+  "A_sha256": "1a1d1618ac9ef15c6140af8ef5b7944988910bc67cc260a304df00f85a39f5d1",
+  "B": "gv-grav-c4",
+  "B_sha256": "06c84dbe618303ca745d7ceff2669448f33dc4f8d58ab313bf35d0d55cc07cda",
+  "case": "ja-wallpaper-restoration",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p039": {
+  "A": "gv-plain",
+  "A_sha256": "1f9c3acbbaaa396492fc8fda5be109afb5a9b4fb35c1862060ad04cfb6e7900c",
+  "B": "gv-grav-base",
+  "B_sha256": "fdb4444d4c1a4319fb6e8d8ad5806a7e1b4ec0a39b1c5c072e88653d781a70d6",
+  "case": "ja-part-time-leave",
+  "round": "r2",
+  "set": "base"
+ },
+ "p040": {
+  "A": "gv-grav-c4",
+  "A_round": "r1",
+  "A_sha256": "93a0636e342ae0c3e21989f5d388a24b8b0eb0f16827724c61db2e76dacb3a90",
+  "B": "gv-grav-c4",
+  "B_round": "r2",
+  "B_sha256": "e9b2bcc6f6df004642a8eb7027a173f8edf96c07cea8f52c41e4e7f59f6fdcbb",
+  "case": "en-medicare-part-b",
+  "round": "r1r2",
+  "set": "aa-c4"
+ },
+ "p041": {
+  "A": "gv-grav-c4",
+  "A_sha256": "074687f250af6c7d71d46f6b85328f6e1f6c5a17a139c984fa3b11b5fe7171f0",
+  "B": "gv-plain",
+  "B_sha256": "4965746af4e198c8bf4856ab969b5df79c08f0f48d57ab0b931ced5dadca792c",
+  "case": "ko-unemployment-quit",
+  "round": "r1",
+  "set": "main"
+ },
+ "p042": {
+  "A": "gv-grav-base",
+  "A_sha256": "81cbebd713353fd1370254cd1baca4f9b5d3f8046a7b406375779285ab00bb1b",
+  "B": "gv-grav-c4",
+  "B_sha256": "da2794b488b71f5d1b2639dc0e93c6ac71698b47725a943019f3972e3745c757",
+  "case": "ko-unemployment-quit",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p043": {
+  "A": "gv-grav-base",
+  "A_sha256": "edb555f84e525a512ed0933768745fde7fc4b2f92400632a63dd577a0f78965e",
+  "B": "gv-grav-c4",
+  "B_sha256": "d56afbbb0bddda4e45c87e2c8f8487b13c3bdff267d9924dfd3a473152814a50",
+  "case": "ko-severance-pay",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p044": {
+  "A": "gv-plain",
+  "A_sha256": "1f9c3acbbaaa396492fc8fda5be109afb5a9b4fb35c1862060ad04cfb6e7900c",
+  "B": "gv-grav-c4",
+  "B_sha256": "a97e0bd72fa36569eafbd1d83938fd3d1c8306b774b29e60b2c525943977ee95",
+  "case": "ja-part-time-leave",
+  "round": "r2",
+  "set": "main"
+ },
+ "p045": {
+  "A": "gv-plain",
+  "A_round": "r1",
+  "A_sha256": "9b4b045457c83fc704f8a39c86fe8833c3cbf39242388d5bfcaed8db984f26a2",
+  "B": "gv-plain",
+  "B_round": "r2",
+  "B_sha256": "1f9c3acbbaaa396492fc8fda5be109afb5a9b4fb35c1862060ad04cfb6e7900c",
+  "case": "ja-part-time-leave",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p046": {
+  "A": "gv-plain",
+  "A_sha256": "5d46d2ace47175f6e41f0e6d30b13222938a5e30b34e4e62797e44f4fe3db373",
+  "B": "gv-grav-base",
+  "B_sha256": "c002aa743c7ebd30828dbda67da9a19c5273be06d090e3368915ee0718fe0dd3",
+  "case": "en-medicare-part-b",
+  "round": "r2",
+  "set": "base"
+ },
+ "p047": {
+  "A": "gv-grav-c4",
+  "A_round": "r2",
+  "A_sha256": "cccf4c99010f7f892421376a4f595c23db8481eb7a609da564bfa16eecc693eb",
+  "B": "gv-grav-c4",
+  "B_round": "r1",
+  "B_sha256": "cc78e1b0e40ae585cf1132bc732f1d5df66c7b0a34ac2174d223a4cc70a2df2e",
+  "case": "ja-medical-deduction",
+  "round": "r1r2",
+  "set": "aa-c4"
+ },
+ "p048": {
+  "A": "gv-grav-base",
+  "A_sha256": "1f648f26b2d3d84195cd26ea04928c9888788b77409718d10f09cf6cfce73c90",
+  "B": "gv-plain",
+  "B_sha256": "4965746af4e198c8bf4856ab969b5df79c08f0f48d57ab0b931ced5dadca792c",
+  "case": "ko-unemployment-quit",
+  "round": "r1",
+  "set": "base"
+ },
+ "p049": {
+  "A": "gv-grav-c4",
+  "A_sha256": "4f74a7fff1ee6c43cce24cc42b126e25068fed736c68275fb6277fc1a4a05ed4",
+  "B": "gv-plain",
+  "B_sha256": "8cca694b49a49b02cdf196ed6bb07249bcb2988350fc6df1550c31e5bf3b4510",
+  "case": "en-529-roth",
+  "round": "r1",
+  "set": "main"
+ },
+ "p050": {
+  "A": "gv-plain",
+  "A_sha256": "c61921686dbcba30b02029f0daf66953b17cf80056e921c85d59ab26fec6b5cf",
+  "B": "gv-grav-base",
+  "B_sha256": "394d30da9d7e0dad323d1d36eacb09e4e52880f2efc472d4f78e14b12be14b35",
+  "case": "zh-flex-hours",
+  "round": "r1",
+  "set": "base"
+ },
+ "p051": {
+  "A": "gv-grav-base",
+  "A_sha256": "910c9ca7a76209a28543e556c753c5b26a9015c17f9e6201020ead34773e8482",
+  "B": "gv-plain",
+  "B_sha256": "f4db5beb9afa751f4c71363c00e82dcadaf2bbcda66ea53c7c9df023ab1c2539",
+  "case": "ja-medical-deduction",
+  "round": "r2",
+  "set": "base"
+ },
+ "p052": {
+  "A": "gv-grav-base",
+  "A_sha256": "be4ecb0d9054ccccf53ce6ea7a00d4ebcfa1d097176a2d544c7cf090f7bccfcf",
+  "B": "gv-plain",
+  "B_sha256": "43c95fdb86c2e5ba9f673657076f2577826ed8a89747e02c8a505dc9d943667c",
+  "case": "ko-severance-pay",
+  "round": "r2",
+  "set": "base"
+ },
+ "p053": {
+  "A": "gv-plain",
+  "A_sha256": "a5cbd5e8478e61b46952854161dce1e7ddf4e3df013cc737bd019007f83fcffd",
+  "B": "gv-grav-base",
+  "B_sha256": "d1610aa77a73c0577cb2e3e7a0e43bfe3f7a1065aeadc1bf65131add8376380d",
+  "case": "zh-sick-pay",
+  "round": "r1",
+  "set": "base"
+ },
+ "p054": {
+  "A": "gv-plain",
+  "A_sha256": "40630db12027b2076030c9f8cc6a7ff979dba9ae2656a3ecae343e0fd1aa049e",
+  "B": "gv-grav-c4",
+  "B_sha256": "abfd589631071e898d98969a4ed6ccdbe01d0c50e45ec046d8d2fce40aeecc04",
+  "case": "zh-insurance-gap",
+  "round": "r2",
+  "set": "main"
+ },
+ "p055": {
+  "A": "gv-grav-base",
+  "A_sha256": "fdb4444d4c1a4319fb6e8d8ad5806a7e1b4ec0a39b1c5c072e88653d781a70d6",
+  "B": "gv-grav-c4",
+  "B_sha256": "a97e0bd72fa36569eafbd1d83938fd3d1c8306b774b29e60b2c525943977ee95",
+  "case": "ja-part-time-leave",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p056": {
+  "A": "gv-plain",
+  "A_round": "r2",
+  "A_sha256": "14f507342722a037efe11be6015880500728a61d3e9591ec8bd6a8d80a2c72ab",
+  "B": "gv-plain",
+  "B_round": "r1",
+  "B_sha256": "c61921686dbcba30b02029f0daf66953b17cf80056e921c85d59ab26fec6b5cf",
+  "case": "zh-flex-hours",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p057": {
+  "A": "gv-grav-base",
+  "A_sha256": "b30a7ba2964324967cdf19c856bf61d2da72d9002e11b7e13513dcd39155f711",
+  "B": "gv-plain",
+  "B_sha256": "c3f74ef84442d3eeabcbe4f03664144a50a5bd0d2a3240c42fbb6605e31f3f85",
+  "case": "ko-jeonse-protection",
+  "round": "r1",
+  "set": "base"
+ },
+ "p058": {
+  "A": "gv-grav-base",
+  "A_sha256": "9ec99fe273751baced9bc70bd50a756341e5607b4844af953ec7066f67499b57",
+  "B": "gv-grav-c4",
+  "B_sha256": "1b9da5e676e39b24d3ef08e4c6b963ba78a5009642e3cf371cfa5d966362533c",
+  "case": "en-529-roth",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p059": {
+  "A": "gv-plain",
+  "A_sha256": "1d92a24494176472b5a3837a4a8eb48383616b9133812b7fa2c0ea9f6c54a01c",
+  "B": "gv-grav-c4",
+  "B_sha256": "06c84dbe618303ca745d7ceff2669448f33dc4f8d58ab313bf35d0d55cc07cda",
+  "case": "ja-wallpaper-restoration",
+  "round": "r1",
+  "set": "main"
+ },
+ "p060": {
+  "A": "gv-grav-c4",
+  "A_sha256": "cccf4c99010f7f892421376a4f595c23db8481eb7a609da564bfa16eecc693eb",
+  "B": "gv-grav-base",
+  "B_sha256": "910c9ca7a76209a28543e556c753c5b26a9015c17f9e6201020ead34773e8482",
+  "case": "ja-medical-deduction",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p061": {
+  "A": "gv-grav-c4",
+  "A_round": "r1",
+  "A_sha256": "4f74a7fff1ee6c43cce24cc42b126e25068fed736c68275fb6277fc1a4a05ed4",
+  "B": "gv-grav-c4",
+  "B_round": "r2",
+  "B_sha256": "1b9da5e676e39b24d3ef08e4c6b963ba78a5009642e3cf371cfa5d966362533c",
+  "case": "en-529-roth",
+  "round": "r1r2",
+  "set": "aa-c4"
+ },
+ "p062": {
+  "A": "gv-grav-c4",
+  "A_sha256": "4f74a7fff1ee6c43cce24cc42b126e25068fed736c68275fb6277fc1a4a05ed4",
+  "B": "gv-grav-base",
+  "B_sha256": "8285b48dba2b9a225138bea871df591dab29b76e9c1aa807c35b2080e97c22d5",
+  "case": "en-529-roth",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p063": {
+  "A": "gv-plain",
+  "A_round": "r1",
+  "A_sha256": "4965746af4e198c8bf4856ab969b5df79c08f0f48d57ab0b931ced5dadca792c",
+  "B": "gv-plain",
+  "B_round": "r2",
+  "B_sha256": "a7dcdbc112ca270032e829baf1acef75f3caec71fd20af998529828a5b31df3b",
+  "case": "ko-unemployment-quit",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p064": {
+  "A": "gv-plain",
+  "A_sha256": "40630db12027b2076030c9f8cc6a7ff979dba9ae2656a3ecae343e0fd1aa049e",
+  "B": "gv-grav-base",
+  "B_sha256": "bcbdb98c72cee001ab209fb6031d33d6ea26bf6b6e5b4fbfee914f3a2d678594",
+  "case": "zh-insurance-gap",
+  "round": "r2",
+  "set": "base"
+ },
+ "p065": {
+  "A": "gv-plain",
+  "A_sha256": "b7d01b17f5e6cbdeef5f7e57664b767b3b27e44b2cd213a0217bd329602d6788",
+  "B": "gv-grav-c4",
+  "B_sha256": "8a7fb86cad6ced5b65e10efa1ae4db2aa9ae9f8cc6eca03cef524aab540720d3",
+  "case": "ko-jeonse-protection",
+  "round": "r2",
+  "set": "main"
+ },
+ "p066": {
+  "A": "gv-plain",
+  "A_round": "r1",
+  "A_sha256": "e018965ec0dba813ab74537fc7e7407f32368b606e2034f70bc096b02b014154",
+  "B": "gv-plain",
+  "B_round": "r2",
+  "B_sha256": "5d46d2ace47175f6e41f0e6d30b13222938a5e30b34e4e62797e44f4fe3db373",
+  "case": "en-medicare-part-b",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p067": {
+  "A": "gv-grav-c4",
+  "A_sha256": "ac5553fbf56d2d6c84a8f12d4bc0e5ced356671d53fdda19a3d3bee8c79f9541",
+  "B": "gv-grav-base",
+  "B_sha256": "0f6bb308d396b10c65df083b6da82712e23c3ed0e7e3a80b0295fb3cc264f13c",
+  "case": "ja-wallpaper-restoration",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p068": {
+  "A": "gv-grav-c4",
+  "A_sha256": "cccf4c99010f7f892421376a4f595c23db8481eb7a609da564bfa16eecc693eb",
+  "B": "gv-plain",
+  "B_sha256": "f4db5beb9afa751f4c71363c00e82dcadaf2bbcda66ea53c7c9df023ab1c2539",
+  "case": "ja-medical-deduction",
+  "round": "r2",
+  "set": "main"
+ },
+ "p069": {
+  "A": "gv-grav-base",
+  "A_sha256": "8285b48dba2b9a225138bea871df591dab29b76e9c1aa807c35b2080e97c22d5",
+  "B": "gv-plain",
+  "B_sha256": "8cca694b49a49b02cdf196ed6bb07249bcb2988350fc6df1550c31e5bf3b4510",
+  "case": "en-529-roth",
+  "round": "r1",
+  "set": "base"
+ },
+ "p070": {
+  "A": "gv-grav-base",
+  "A_sha256": "9f32c9c863ae830c336d79d12e8fe5278aab4cd069e2fc3006c91d7701b8ae26",
+  "B": "gv-grav-c4",
+  "B_sha256": "8a7fb86cad6ced5b65e10efa1ae4db2aa9ae9f8cc6eca03cef524aab540720d3",
+  "case": "ko-jeonse-protection",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p071": {
+  "A": "gv-grav-base",
+  "A_sha256": "1e834ce4bd87e7a3877fca52b49aef4ba3ba7ddebb6eb32c41295c71de1e4f7c",
+  "B": "gv-plain",
+  "B_sha256": "2844aa6b3db76dfe41a4aa53c42959441776c8167981a9170930b42e8c7f7574",
+  "case": "zh-insurance-gap",
+  "round": "r1",
+  "set": "base"
+ },
+ "p072": {
+  "A": "gv-grav-base",
+  "A_sha256": "217ac69bb540916090787e7c8593b252f58fe1683545c0bc12e5bbc7e9b82a06",
+  "B": "gv-grav-c4",
+  "B_sha256": "cc78e1b0e40ae585cf1132bc732f1d5df66c7b0a34ac2174d223a4cc70a2df2e",
+  "case": "ja-medical-deduction",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p073": {
+  "A": "gv-grav-c4",
+  "A_sha256": "576b12daedbdf81150eab30ccc45714be164489199d4db3e41902307d0a765da",
+  "B": "gv-grav-base",
+  "B_sha256": "d4354a7b4474267c9af6672884fbbf921150d7442123d3e2cea2f9c412773059",
+  "case": "ja-part-time-leave",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p074": {
+  "A": "gv-plain",
+  "A_sha256": "4c6652536bc9ac4c264416fb56495ba0195bd8768ca13d455be0a711fa236729",
+  "B": "gv-grav-c4",
+  "B_sha256": "1b9da5e676e39b24d3ef08e4c6b963ba78a5009642e3cf371cfa5d966362533c",
+  "case": "en-529-roth",
+  "round": "r2",
+  "set": "main"
+ },
+ "p075": {
+  "A": "gv-plain",
+  "A_sha256": "4c6652536bc9ac4c264416fb56495ba0195bd8768ca13d455be0a711fa236729",
+  "B": "gv-grav-base",
+  "B_sha256": "9ec99fe273751baced9bc70bd50a756341e5607b4844af953ec7066f67499b57",
+  "case": "en-529-roth",
+  "round": "r2",
+  "set": "base"
+ },
+ "p076": {
+  "A": "gv-plain",
+  "A_round": "r1",
+  "A_sha256": "8cca694b49a49b02cdf196ed6bb07249bcb2988350fc6df1550c31e5bf3b4510",
+  "B": "gv-plain",
+  "B_round": "r2",
+  "B_sha256": "4c6652536bc9ac4c264416fb56495ba0195bd8768ca13d455be0a711fa236729",
+  "case": "en-529-roth",
+  "round": "r1r2",
+  "set": "aa-plain"
+ },
+ "p077": {
+  "A": "gv-grav-c4",
+  "A_sha256": "bacc61a847ab5436f53a295363b84cdaf746ef43f5a55bd022ba03208c289bbf",
+  "B": "gv-plain",
+  "B_sha256": "3ab72f4a34a5b32749479beb278ce52a911ac5b874c8584a4bca959f8ba72f9a",
+  "case": "zh-sick-pay",
+  "round": "r2",
+  "set": "main"
+ },
+ "p078": {
+  "A": "gv-grav-base",
+  "A_sha256": "aa27d4d6b6c51e126ea868fff67bfae64615a2edbba2fced58b1cc0e0c742bc6",
+  "B": "gv-plain",
+  "B_sha256": "e018965ec0dba813ab74537fc7e7407f32368b606e2034f70bc096b02b014154",
+  "case": "en-medicare-part-b",
+  "round": "r1",
+  "set": "base"
+ },
+ "p079": {
+  "A": "gv-grav-c4",
+  "A_round": "r2",
+  "A_sha256": "ac5553fbf56d2d6c84a8f12d4bc0e5ced356671d53fdda19a3d3bee8c79f9541",
+  "B": "gv-grav-c4",
+  "B_round": "r1",
+  "B_sha256": "06c84dbe618303ca745d7ceff2669448f33dc4f8d58ab313bf35d0d55cc07cda",
+  "case": "ja-wallpaper-restoration",
+  "round": "r1r2",
+  "set": "aa-c4"
+ },
+ "p080": {
+  "A": "gv-plain",
+  "A_sha256": "d931ee7c9e782a7b31313552db997c30917beaec47e05d77562dc4f8f5c99939",
+  "B": "gv-grav-base",
+  "B_sha256": "217ac69bb540916090787e7c8593b252f58fe1683545c0bc12e5bbc7e9b82a06",
+  "case": "ja-medical-deduction",
+  "round": "r1",
+  "set": "base"
+ },
+ "p081": {
+  "A": "gv-grav-c4",
+  "A_sha256": "7e8bf2aa71f49124b99526275e3feaa8d2438028ecdac73d0ac63c6b889d75e3",
+  "B": "gv-plain",
+  "B_sha256": "c3f74ef84442d3eeabcbe4f03664144a50a5bd0d2a3240c42fbb6605e31f3f85",
+  "case": "ko-jeonse-protection",
+  "round": "r1",
+  "set": "main"
+ },
+ "p082": {
+  "A": "gv-grav-c4",
+  "A_sha256": "93a0636e342ae0c3e21989f5d388a24b8b0eb0f16827724c61db2e76dacb3a90",
+  "B": "gv-plain",
+  "B_sha256": "e018965ec0dba813ab74537fc7e7407f32368b606e2034f70bc096b02b014154",
+  "case": "en-medicare-part-b",
+  "round": "r1",
+  "set": "main"
+ },
+ "p083": {
+  "A": "gv-grav-c4",
+  "A_sha256": "c8b5331a706774b76ef9b0a28f3eaa56cc3ab579300fb43b2cbaca935c877d5a",
+  "B": "gv-grav-base",
+  "B_sha256": "be4ecb0d9054ccccf53ce6ea7a00d4ebcfa1d097176a2d544c7cf090f7bccfcf",
+  "case": "ko-severance-pay",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p084": {
+  "A": "gv-grav-c4",
+  "A_sha256": "315d09a4dbb493d34149aa067ec70aee60f395cde2d52caaf4dbf9c883ec7d86",
+  "B": "gv-grav-base",
+  "B_sha256": "1e834ce4bd87e7a3877fca52b49aef4ba3ba7ddebb6eb32c41295c71de1e4f7c",
+  "case": "zh-insurance-gap",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p085": {
+  "A": "gv-grav-base",
+  "A_sha256": "d316175b35886ab458ad90842ca0737a483b379531d3852768767a152e10540b",
+  "B": "gv-plain",
+  "B_sha256": "14f507342722a037efe11be6015880500728a61d3e9591ec8bd6a8d80a2c72ab",
+  "case": "zh-flex-hours",
+  "round": "r2",
+  "set": "base"
+ },
+ "p086": {
+  "A": "gv-plain",
+  "A_sha256": "8649c991329aa530ac88d46e56e40754d8f1d1153638485ad0368144c6b22a70",
+  "B": "gv-grav-base",
+  "B_sha256": "c63f1d3a7b343087454b9cd61be0a531d98f4b7ca38ae9e595c9dd81efb16e51",
+  "case": "en-fsa-rollover",
+  "round": "r1",
+  "set": "base"
+ },
+ "p087": {
+  "A": "gv-grav-base",
+  "A_sha256": "bcbdb98c72cee001ab209fb6031d33d6ea26bf6b6e5b4fbfee914f3a2d678594",
+  "B": "gv-grav-c4",
+  "B_sha256": "abfd589631071e898d98969a4ed6ccdbe01d0c50e45ec046d8d2fce40aeecc04",
+  "case": "zh-insurance-gap",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p088": {
+  "A": "gv-grav-c4",
+  "A_sha256": "b44caeeb0a0df9f9dd3457eea2cc350d2d3accec35c37d9310b7af2526d54057",
+  "B": "gv-grav-base",
+  "B_sha256": "d316175b35886ab458ad90842ca0737a483b379531d3852768767a152e10540b",
+  "case": "zh-flex-hours",
+  "round": "r2",
+  "set": "attr"
+ },
+ "p089": {
+  "A": "gv-grav-c4",
+  "A_sha256": "7e8bf2aa71f49124b99526275e3feaa8d2438028ecdac73d0ac63c6b889d75e3",
+  "B": "gv-grav-base",
+  "B_sha256": "b30a7ba2964324967cdf19c856bf61d2da72d9002e11b7e13513dcd39155f711",
+  "case": "ko-jeonse-protection",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p090": {
+  "A": "gv-plain",
+  "A_sha256": "a7dcdbc112ca270032e829baf1acef75f3caec71fd20af998529828a5b31df3b",
+  "B": "gv-grav-base",
+  "B_sha256": "81cbebd713353fd1370254cd1baca4f9b5d3f8046a7b406375779285ab00bb1b",
+  "case": "ko-unemployment-quit",
+  "round": "r2",
+  "set": "base"
+ },
+ "p091": {
+  "A": "gv-grav-base",
+  "A_sha256": "0f6bb308d396b10c65df083b6da82712e23c3ed0e7e3a80b0295fb3cc264f13c",
+  "B": "gv-plain",
+  "B_sha256": "e44ede490c6575e13d9a24224cfbdb11461db4cff8df6bdad34341979bd2295b",
+  "case": "ja-wallpaper-restoration",
+  "round": "r2",
+  "set": "base"
+ },
+ "p092": {
+  "A": "gv-grav-c4",
+  "A_sha256": "becd4dc2c920aaee6f57219d9e35408f9de1c60cc970b97d3bccc1a76f94ee92",
+  "B": "gv-plain",
+  "B_sha256": "cf15c514d48370a5a91b2909ba8d2164e38ab813fa726d3f14de156a34f56094",
+  "case": "en-fsa-rollover",
+  "round": "r2",
+  "set": "main"
+ },
+ "p093": {
+  "A": "gv-grav-base",
+  "A_sha256": "d1610aa77a73c0577cb2e3e7a0e43bfe3f7a1065aeadc1bf65131add8376380d",
+  "B": "gv-grav-c4",
+  "B_sha256": "da2f592b293302ac5db7854d17cac87671407057807783f20f6342c9bc6a9a03",
+  "case": "zh-sick-pay",
+  "round": "r1",
+  "set": "attr"
+ },
+ "p094": {
+  "A": "gv-plain",
+  "A_sha256": "a7dcdbc112ca270032e829baf1acef75f3caec71fd20af998529828a5b31df3b",
+  "B": "gv-grav-c4",
+  "B_sha256": "da2794b488b71f5d1b2639dc0e93c6ac71698b47725a943019f3972e3745c757",
+  "case": "ko-unemployment-quit",
+  "round": "r2",
+  "set": "main"
+ },
+ "p095": {
+  "A": "gv-grav-c4",
+  "A_round": "r1",
+  "A_sha256": "576b12daedbdf81150eab30ccc45714be164489199d4db3e41902307d0a765da",
+  "B": "gv-grav-c4",
+  "B_round": "r2",
+  "B_sha256": "a97e0bd72fa36569eafbd1d83938fd3d1c8306b774b29e60b2c525943977ee95",
+  "case": "ja-part-time-leave",
+  "round": "r1r2",
+  "set": "aa-c4"
+ },
+ "p096": {
+  "A": "gv-grav-c4",
+  "A_round": "r1",
+  "A_sha256": "7e8bf2aa71f49124b99526275e3feaa8d2438028ecdac73d0ac63c6b889d75e3",
+  "B": "gv-grav-c4",
+  "B_round": "r2",
+  "B_sha256": "8a7fb86cad6ced5b65e10efa1ae4db2aa9ae9f8cc6eca03cef524aab540720d3",
+  "case": "ko-jeonse-protection",
+  "round": "r1r2",
+  "set": "aa-c4"
+ }
+}

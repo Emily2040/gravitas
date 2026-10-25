@@ -1,0 +1,41 @@
+You can’t move the whole $48,000 this year. The law is real, but for 2026 a 529-to-Roth rollover counts against the annual IRA contribution limit—**$7,500** for someone under 50—and against a **$35,000 lifetime cap** per beneficiary. So the most your son can move in 2026 is **$7,500**, and only if he has at least $7,500 of earned income and hasn’t used any of his 2026 IRA room. Of the $48,000, at most $35,000 can ever go into his Roth under this rule; the other $13,000 cannot.
+
+Your 2004 account passes the 15-year test. The 5-year lookback and the plan’s own rules still need checking.
+
+**The 2026 number is the smallest of:**
+
+- $7,500;
+- his 2026 earned income—W-2 wages or net self-employment income;
+- $7,500 minus any 2026 traditional or Roth IRA contributions he makes;
+- the amount eligible under the 5-year lookback; and
+- $35,000 minus any prior 529-to-Roth rollovers.
+
+If he earned at least $7,500, made no other 2026 IRA contributions, and the plan confirms at least $7,500 is eligible, the number is $7,500. If he earned $0, it is $0. A 401(k) at work does not use this IRA room—but the 529 plan probably will not verify his income or other contributions. You have to.
+
+**Steps to complete the 2026 rollover**
+
+1. **Confirm his 2026 earned income and IRA contributions.** Check his pay stubs, W-2, or self-employment records, and whether he has already put money into a traditional or Roth IRA for 2026. This sets the real ceiling.
+
+2. **Get the 529 plan’s rollover package and eligible amount.** Ask for the 529-to-Roth rollover form, whether partial rollovers are allowed, the plan’s year-end processing cutoff, and a written calculation of the amount eligible after excluding contributions made in the last five years and the earnings on them. Ask whether it needs a signature guarantee or a letter of acceptance from the Roth custodian. If the account was ever moved between 529 plans, ask whether the 15-year clock carried over. If the plan only allows a full-account rollover, don’t use it—you need a partial rollover.
+
+3. **Open or confirm the Roth IRA in your son’s name.** The 529 beneficiary and the Roth owner must be the same person. If he already has a Roth IRA, use it; if not, he opens one at a custodian that accepts 529-to-Roth rollovers. You can help with the paperwork, but the account is his, not yours.
+
+4. **Submit a direct trustee-to-trustee transfer request.** Put the lower of the 2026 ceiling or the plan’s eligible amount on the form—likely $7,500. The 529 plan must send the money directly to the Roth custodian. Do not request a check payable to your son, and do not take a distribution and redeposit it; the 60-day rollover rule does not apply to this move. Ask for the plan’s year-end cutoff and submit by early November, not late December.
+
+5. **Confirm the deposit before December 31.** Check the Roth account and get written confirmation from both institutions. It should be recorded as a rollover contribution, not a regular contribution. If it hasn’t arrived by mid-December, call both institutions. If the money lands in January, it generally counts for 2027, and the 2026 room is lost.
+
+6. **Keep the paper trail.** Save the 529 opening statement, contribution history, rollover form, confirmation letters, Form 1099-Q from the 529 plan, Form 5498 from the Roth custodian, and proof of his 2026 earned income. The 1099-Q reports the distribution; the 5498 shows the rollover. The 5498 may not arrive until May 2027, which is normal. Give your son copies and tell his tax preparer about the rollover.
+
+**The rest of the money**
+
+At $7,500 a year, $35,000 takes about five years: 2026–2029 at $7,500, then $5,000 in 2030 to stay under the lifetime cap. If annual limits rise, it could take fewer years. The remaining $13,000 cannot go into his Roth under this rule. It can stay in the 529 for future education, be used for another family member, or be withdrawn—but a nonqualified withdrawal taxes the earnings and adds a 10% penalty on the earnings. Taking it out and paying the tax does not create extra Roth room; the annual limit still applies. If you are considering a beneficiary change, check the 15-year clock first; it may restart.
+
+**Three traps**
+
+- **An indirect rollover fails.** A check to your son or a deposit into his bank account does not qualify.
+- **The 5-year rule can make less than $7,500 eligible.** Don’t move first and sort it out later. If part of the balance is ineligible now because of recent contributions, waiting can cure that part—but it won’t increase the $35,000 lifetime cap.
+- **State tax may not follow federal.** Some states tax the rollover or recapture prior state 529 deductions. Check your state before December.
+
+If he has no earned income this year, the 2026 answer is $0; wait until he has wages. The $35,000 lifetime cap does not expire, but unused annual room does not carry forward.
+
+Sources: [IRS Topic 313](https://www.irs.gov/taxtopics/tc313), [IRS Publication 590-A (2025)](https://www.irs.gov/publications/p590a), [IRC §529(c)(3)(E)](https://www.law.cornell.edu/uscode/text/26/529). This is general information, not a substitute for advice from a CPA or the plan.

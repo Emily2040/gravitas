@@ -1,0 +1,51 @@
+{
+ "pair": "p049",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"If the money lands in January, it generally counts for 2027, and the 2026 room is lost\" is wrong. A rollover designated for 2026 can go through April 15, 2027 (219(f)(3), 2026 Form 5498 instructions), though plan handling varies. It treats December 31 as a hard deadline.",
+   "The \"smallest of\" list treats earned income and \"$7,500 minus other IRA contributions\" as separate caps. With $4,000 earned and $2,000 into his own Roth it gives $4,000. The correct figure is min(7,500, 4,000) - 2,000 = $2,000.",
+   "\"If annual limits rise, it could take fewer years\" is misleading. With $500-step indexing (for example 8,000 x 4 = 32,000 < 35,000) it still takes five years.",
+   "The answer never says what happens if more than the cap is moved (6% excise on the Roth side, taxable earnings plus 10% on the 529 side). Its only withdrawal warning is about the $13,000 leftover."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "The \"smallest of\" list has the same flaw as A. It treats compensation and \"$7,500 minus other IRA contributions\" as separate caps, so $4,000 earned plus $2,000 contributed would give $4,000 instead of $2,000. The worked examples never hit this case.",
+   "The Savingforcollege guide link is a third-party source and its content was not verified. It is a checkable link, not a claim of having checked it.",
+   "The Form 1099-Q Box 4b claim is not in the key. I checked the IRS 1099-Q instructions (Rev. April 2025) and it is correct."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start. Both give the $7,500 annual cap, the $35,000 lifetime cap, the $13,000 leftover, the direct trustee-to-trustee transfer into the son's own Roth, and a state-tax caveat. B is better on the points that separate them. It states the December 31 is not the federal deadline and April 15, 2027 applies, with a note that plan cutoffs vary (point 7). A wrongly says a January deposit loses the 2026 room. B warns that requesting the full $48,000 creates a 6% excise on the Roth side and taxable earnings plus 10% on the 529 side (point 5). A never addresses this. B also says Roth income limits do not block the rollover. A omits this. Both share the same flawed smallest-of formula for compensation versus other IRA contributions. Both are fairly long, and B is slightly longer with a table and repetition."
+}

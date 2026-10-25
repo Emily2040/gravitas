@@ -1,0 +1,45 @@
+{
+ "pair": "p032",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "社会保険料控除「約20〜40万円（国民年金・国保など）」: an assumed figure placed in the calculation table. The request gives no social insurance amount, so it cannot be verified. A does caveat it later (社会保険料の金額が分かれば、所得税0が確定します).",
+   "「令和8年度税制改正は2025年12月の閣議決定に基づくもの」: describes the reform as resting on the cabinet decision (大綱). By October 2026 the reform has presumably been enacted, so this framing is out of date, though not wrong on substance (judged from my own knowledge)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "「所得税5%で約850円、住民税10%で約1,700円、合わせて2,500円程度」: states an income tax refund as fact. It ignores the 2026 basic deduction of 104万円 (106万−104万＝2万円, so taxable income is 0 once social insurance is deducted). The income tax refund is likely 0, and B never asks the user to check the withheld tax shown on the withholding slip."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start with the 5% threshold. Both use the 2026 minimum employment income deduction of 74万円 and reach the 1万7,000円 deduction. A also applies the 2026 basic deduction of 104万円 and concludes that income tax is likely 0, so there is no income tax refund. It says the real benefit is about 1,700円 off resident tax and that a resident tax filing alone would do. All of this matches the key. B asserts an income tax refund of about 850円 and a total of 2,500円 without considering the 104万円 basic deduction or withheld tax, which is a penalized error, and it misses that the benefit is mainly resident tax. B is tighter and its preparation list is a little more complete (明細書, the year-end adjustment point), and A is wordier and repeats itself. Neither answer states the five-year refund window ending 2031-12-31."
+}

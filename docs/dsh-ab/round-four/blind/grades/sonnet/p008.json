@@ -1,0 +1,53 @@
+{
+ "pair": "p008",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 5,
+  "trap": 9,
+  "honest": 6,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "Penalty '3년 이하 징역 또는 3천만 원 이하 벌금(제44조)' is the old rule; the key says that since 2026.9.18 it is 제43조, 5 years or 50 million won (minor deduction).",
+   "'설령 합의로 미뤘더라도 지연이자는 원칙적으로 그대로 붙어요(고용노동부 행정해석)' gives no checkable document, so it is unverifiable, and it ignores the 시행령 제18조 exclusions.",
+   "'회사가 퇴직연금(IRP)에 가입한 경우에는 지급 방식이 조금 다르지만' mixes up IRP with a company pension plan; the key says IRP transfer also applies under the 퇴직금 system (over 3 million won, under age 55).",
+   "'약 1,020만 원 ... 1,020만~1,030만 원 사이' is a narrow range with no 통상임금 floor; the key's range runs up to about 12.02 million won, so this is understated and overconfident.",
+   "Hard-codes 9월 20일 퇴사 and a 10월 4일 deadline although the user gave no month; an assumption stated as fact, though it falls inside the key's 10/3~10/6 window.",
+   "'근로감독관이 시정지시를 하고' and the '3~5일 안에 회신이 없으면' timeline are unverified procedural claims."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Penalty '3년 이하 징역 또는 3천만 원 이하 벌금(같은 법 제44조 제1호)' is the old rule; the key says that since 2026.9.18 it is 제43조, 5 years or 50 million won (minor deduction).",
+   "'연 20%의 지연이자(같은 법 제17조 제3항, 근로기준법 제37조)': the key gives the interest basis as 근로기준법 제37조 and 시행령 제17조, so '같은 법 제17조 제3항' looks like a mis-citation and is unverifiable.",
+   "Message 1 tells HR '제가 계산해 보면 세전 약 1,040만 원 안팎', anchoring below the 통상임금 floor of about 12.02 million won that B itself describes.",
+   "Message 1 says '지연이자(연 20%)와 고용노동부 진정 절차를 검토할 수밖에 없어', a mild warning tone that the key says to avoid (minor).",
+   "The '1,040만 안팎' midpoint and the '89~92일' span are hedged estimates, not the exact 92-day figure (107,609 won per day, about 10.24 million won)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start (14 days under 제9조, extension only with a special circumstance plus mutual agreement) and both reach 노동포털/1350 escalation. The deciding gap is key point 4. A gives about 1,020만 as the figure, with a 1,020만~1,030만 range, and never mentions the 통상임금 floor. The key puts the real range at about 1,024만~1,202만, so A understates the likely entitlement by up to roughly 1.8 million won. B shows the 126,316 won daily 통상임금, says the amount could rise to about 1,200만, and tells the user to check which basis the company used. A's exact 107,609 and 3,228,261 steps are more precise than B's hedged 89~92 day range, and A names a concrete deadline. A's message omits the IRP account offer, which B includes. B is longer, with two texts and extra sections, and its first message has a mild warning tone and a 1,040만 self-estimate. Both use the outdated 제44조, 3-year/30 million won penalty."
+}

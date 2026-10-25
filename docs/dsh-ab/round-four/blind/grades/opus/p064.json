@@ -1,0 +1,52 @@
+{
+ "pair": "p064",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 《杭州市基本医疗保障办法》第五十五条 for transfer and accumulation; the article number is unverifiable and the key does not cover it",
+   "\"目前仅支持线下办理，带身份证或市民卡去区医保经办机构\": unverifiable procedural claim, not in the key",
+   "\"大病保险等可能另计几十元\": the key says the 大病保险 and 长护险 premiums are deducted from the back-credited personal account funds, not paid as extra cash",
+   "\"购房、落户等'连续社保'资格也会重置（补缴一般不算连续）\": an unverifiable general claim beyond the request (my own judgment; varies by city)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"可能另扣大病保险等几十元\": the key says these premiums come out of the back-credited personal account funds, not as an extra charge; the answer is ambiguous here",
+   "\"通过'浙里办'搜'医保补缴'或'灵活就业参保'\": unverifiable claim that the back-payment can be done online, not in the key",
+   "\"连续缴费年限……它不影响退休\": a mild overstatement, since 办法第八条 also requires paying in Hangzhou up to retirement (key: light deduction)",
+   "\"最好在11月新单位增员前\" do the back-payment: unverifiable timing advice, the key gives only the 2026-12-31 deadline"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying the 8 years are not wiped out. Both explain the third-natural-month wait (from about January 2027), the 10-year local plus 20-year cumulative rule (12 years and 2 years still to go), the 473.67 yuan monthly rate, the December 31 deadline, and that months paid for later bring no reimbursement. B gives the exact 3,315.69 total where A rounds to about 3,316. B also says the new employer cannot back-pay April to October, gives the 2026 one-off and monthly late-payment rates (743.60 and 443.75), works out the 1 year 5 months still short of the local 10 years, and flags non-Hangzhou years as an assumption. A misses the new-employer point and gives no numbers for the cost of not back-paying. A also adds an unverifiable claim that the payment can only be made in person, plus an unverifiable article number, and it is longer, with tables and emojis."
+}

@@ -1,0 +1,54 @@
+{
+ "pair": "p020",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Labels the 2192 yuan floor as '(应发)' and states it flatly; the key says there is no official line and the majority view is that the minimum excludes personal contributions (take-home should not be below 2192), so this takes the minority view without flagging the dispute.",
+   "Says that if 800 is 实发, '公司可能刚好达到下限，并没有差额'; the key treats this as the minority view and still questionable, while the majority view says it is still unlawful.",
+   "'也可以在 1 年内申请劳动仲裁': oversimplified; while still employed, wage-arrears claims are not bound by the one-year limit (only within one year after leaving).",
+   "States that 沪劳保保发〔2000〕14号 expired on 2026-08-15 as fact; the key says this is inferred and there is no explicit official statement.",
+   "'一个月的病假在医疗期内，公司不能以病假为由解除合同': roughly right but over-broad (the bar is on terminations under Labor Contract Law Arts. 40/41) and the medical period (Shanghai N+2 = 6 months) is not given."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "Asserts that under the old rule '基数要先按正常工资的70%计算', so the old-rule figure is 8000×70%×80%=4480, '并非6400元'. The key gives 8000×80%=6400 for the 83号 tiers on the contract-agreed wage. A web search suggests the 70% base applies only where no wage is agreed (and its survival under the new rules is disputed), so applying it to someone with an agreed 8000 salary is misleading and contradicts the key.",
+   "Table row '旧规满4年（2026年8月15日前） 4480元' and '按旧口径补3680元' repeat the wrong 4480 figure; the arithmetic itself (4480-800=3680) is correct.",
+   "Says that if gross pay is about 2192 and take-home is 800, '能主张的差额会少很多': adopts the minority view that 2192 is gross; it does flag '口径不完全一致' but never states the majority view that take-home should not fall below 2192.",
+   "Does not state the calculation base under the current rule (contract-agreed position wage, excluding bonuses, allowances and overtime, and not below 2740); the only base it gives is the dubious 70% one.",
+   "The HR message says flatly '800元低于这个下限', assuming 800 is gross and never asking whether it is 应发 or 实发; it also sets deadlines ('本周内', '下个工资发放日前') that the user did not ask for."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "wrong",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start, explain that 83号 expired on 2026-08-15, give the 2192 yuan floor (2740×80%) and the 1392 yuan shortfall, and mention 劳动监察 and 仲裁. B gives 6400 and 5600 but frames them as a 'contract/policy only 80%' case, and it adds a 4480 'old-rule' figure from a 70% base multiplier. That figure contradicts the key's 6400 for the 83号 tiers, and the 70% base applies only when no wage is agreed, so it would confuse a user on an agreed 8000 salary. A gives no 6400 figure and no daily-rate or base definition, but it adds no figure that contradicts the key. A's message is closer to the key's verification-first tone: it asks for 应发, deductions and the calculation basis. B's message demands payment and sets deadlines. A takes the minority view on 实发 without noting the dispute, and B takes the same view but notes the inconsistency. Overall A is more accurate and less confusing, and B's 4480 error outweighs its extra 6400/5600 figures."
+}

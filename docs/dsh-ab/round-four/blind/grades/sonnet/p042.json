@@ -1,0 +1,52 @@
+{
+ "pair": "p042",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "생계비 융자 '연 1.5%': 시점 없이 적음. 키 기준 10월 현재는 한시 1.0%(2026.9.1~10.31), 1.5%는 11월부터",
+   "'7~9월 석 달이면 요건을 넘게 충족': 기준은 늦은 달 수가 아니라 전액 지연·미지급 날수 합계 60일이라 과장(날수 확인 없음)",
+   "'실업급여 150일 + 생계비 융자까지 받으면 석 달은 확보': 계산 근거가 없고 문장이 뒤섞여 검증 불가",
+   "'반려되면 이의제기 → 심사청구 순': 법정 불복은 심사청구 → 재심사청구라 '이의제기' 단계는 부정확(본인 지식으로 판단)",
+   "'회사가 이직확인서에 자발적 사직으로 올리면 1차로 반려될 수 있어요': 키에 없는 단정, 검증 불가",
+   "참고 링크 2개(eiac.ei.go.kr, 강남구청 복지게시판)는 열어 확인하지 못함. 융자 근거가 구청 게시판이라 출처 신뢰도 낮음"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "missing",
+   "3": "vague",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "'워크넷 구직등록 후 관할 고용센터에 수급자격을 신청': 워크넷 구직등록은 고용24로 통합돼 종료됨(키가 틀린 값으로 지정)",
+   "'7~9월 석 달이면 요건을 넘습니다' / '아직 못 받았다면 더 확실': 60일 날수 기준 없이 단정해 과장",
+   "'남은 수급기간의 절반을 조기재취업수당': 실제는 남은 소정급여일수 x 일액 x 1/2이고, 소정일수 1/2 이상 남기고 12개월 이상 고용돼야 한다는 조건이 빠짐",
+   "'고용노동부 상담 사례' 링크(1350.moel.go.kr id=1000319196)와 간이대지급금 '안내' 링크는 열어 확인하지 못함, 검증 불가"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "missing",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "wrong",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise in the first paragraph and say wage arrears can justify a voluntary quit. Both also overclaim that three months clearly meets the bar. Neither gives the 60-day total criterion or asks how many days late each month was, and neither gives daily amounts or the 7-day waiting period. A is slightly ahead because it gives the 150-day period (180 for age 50 and over), which B omits, and its procedure uses 고용24 and 임금체불 소명, while B sends her to 워크넷, which the key marks as wrong. A adds 생계비 융자 with the right conditions (1,000만원, within 6 months of leaving, company still operating) but states 1.5% with no date. B has things A lacks, namely 조기재취업수당, 간이대지급금 1,000만원 and a check on whether the small company enrolled her in 고용보험. B's opening is also more precise, citing 별표 2 and saying months paid late still count. Both are long for a request that asked for brevity, and A's advice to wait before taking a job sits badly with 조기재취업수당."
+}

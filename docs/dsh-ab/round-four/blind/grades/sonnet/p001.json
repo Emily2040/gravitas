@@ -1,0 +1,54 @@
+{
+ "pair": "p001",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"3년 이하 징역 또는 3천만 원 이하 벌금(같은 법 제44조 제1호)\": 옛 규정이다. 키에 따르면 2026.9.18.부터 제43조의 5년 이하 징역 또는 5천만 원 이하 벌금이다. 경미 감점.",
+   "\"연 20%의 지연이자(같은 법 제17조 제3항, 근로기준법 제37조)\": 근거는 근로기준법 제37조와 시행령 제17조다. 퇴직급여법 제17조 제3항은 근거로 확인되지 않았고 부정확해 보인다.",
+   "\"3개월 총일수 약 89~92일\"과 \"1,020만~1,060만 원\": 질문에 월이 없어 범위로 쓴 것이다. 92일 기준 정확값(10,241,990원)보다 상단이 부풀려졌고, 문자에는 평균임금 하한 값인 \"1,040만 원 안팎\"만 쓴다.",
+   "\"문자를 보내두는 것 자체가 합의해서 기다려준 것이 아니라는 증거\": 법적 효과를 단정한 과장이며 근거가 없다.",
+   "추천 문자 ①의 \"지연이자(연 20%)와 고용노동부 진정 절차를 검토할 수밖에 없어\": 키가 금지한 위협성 문구에 가깝다. \"일정을 맞추기 어려우시다면 사유와 구체적인 지급 예정일을…\"은 연장을 열어 주는 것으로 읽힐 수 있다.",
+   "고용노동부 퇴직금 계산기 링크(moel.go.kr/retirementpayCal.do)와 생활법령 링크: 확인되지 않은 출처 표기다."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"퇴직소득세·지방소득세 약 20만~25만 원\": 키의 추정(지방소득세 포함 약 9.4만~14.1만 원)과 맞지 않는다. 1,200만 원에 근속 4년이면 약 14만 원이라 직접 재계산해도 20만 원보다 훨씬 낮다. 또 IRP로 이전하면 지급 시점에는 원천징수가 없다.",
+   "\"같은 법 제17조에 따라 연 20%의 지연이자\": 근거는 근로기준법 제37조와 시행령 제17조다. 퇴직급여법 제17조는 잘못된 인용으로 보이며 문자에도 같은 인용이 들어갔다.",
+   "\"형사처벌(3년 이하 징역 또는 3천만 원 이하 벌금)\": 옛 규정이다. 현재는 5년 이하 징역 또는 5천만 원 이하 벌금이다. 경미 감점.",
+   "\"9월 20일 퇴사라면 10월 4일이 기한\"과 \"오늘(10월 25일) 기준으로 이미 3주 가까이\": 질문에 월과 오늘 날짜가 없는데 단정했다. 10/4는 키의 범위(10/3~10/6) 안이다. 문자의 \"퇴사일 다음 날부터 14일\"은 본문의 \"9/20 + 14일 = 10/4\"와 맞지 않고 법 문언(지급사유 발생일부터)과도 다르다.",
+   "\"실무에서는 두 방식이 갈리므로 … 1,200만 원을 기준으로 협의\": 통상임금 하한 적용이 해석상 확립됐다는 앞 문장과 어긋난다. 문자에 \"세전 약 1,200만 원으로 산정\"이라고 적은 것은 통상임금 구성 확인 전의 상단 값을 확정처럼 쓴 것이다.",
+   "\"고용노동부와 법제처도 퇴직금 산정에 이 조항이 적용된다고 해석\": 문서번호가 없어 확인할 수 없다. 키의 법제처-26-0209와 방향은 같다."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the company at the start: the deadline is 14 days from the retirement date under Article 9(1), and an extension needs both a special circumstance and the worker's agreement. Both also give the 노동포털/지방노동관서 진정 and 1350 route. B's arithmetic matches the key exactly: 92 days, 107,609 won per day, about 10.23M won on the average wage, and about 12.0M won on the ordinary-wage floor. It cites the Article 2(2) floor and tells the user to adjust the amount, so key points 3 and 4 are correct. A hedges with \"89~92 days\" and \"1,020~1,060만\", and its HR text uses only the low figure of about 1,040만. A's message does include the IRP offer, which B's message omits. A's recommended message also contains a mild threat, and its penalty citation (Art. 44, 3 years/30M won) is outdated. B's added errors are a tax-deduction estimate of 200k~250k won (key: about 94k~141k won) and an assumed month and today's date. Both cite \"제17조\" wrongly for the late-payment interest and use the outdated penalty. B's message is stated more concretely, with a deadline and the 산정 내역 request, and is slightly more concise. The two are close, so B wins slightly."
+}

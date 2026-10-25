@@ -1,0 +1,49 @@
+{
+ "pair": "p040",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 9,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Ties the no-penalty delay to the employer being over 20 employees (\"That makes your group plan primary, and it lets you delay Part B\"). Employer size is not a condition of the SEP; the key calls this imprecise but minor.",
+   "\"you might need a Part D plan, and possibly Part B to get it\": misleading. Part D needs Part A or Part B, and premium-free Part A is enough, so non-creditable drug coverage gives no reason to take Part B.",
+   "\"Save the CMS-L564 form (your employer fills it out)\": imprecise. The enrollee completes Section A and the employer completes Section B.",
+   "\"some do; most don't\" (plans requiring Medicare at 65): unverifiable generalization, minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 9,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "Ties the no-penalty delay to the 400-employee size (\"That lets you delay Part B\"; \"Under 20 ... you'd want to enroll at 65\"). The SEP does not depend on employer size; the key calls this imprecise but minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers open by correcting the coworker's premise. Both give the 8-month SEP and the 10% lifetime penalty correctly, cover the HR questions and the HSA warning with the 6-month backdating, and neither states the exception for coverage ending during the IEP. A adds the 2026 premium of $202.90/month (about $2,435 a year) with a Federal Register link, which I opened and which confirms the figure. A also names CMS-L564 and the 2-month Part D window after coverage ends, so the person can act on it more fully. B correctly says COBRA does not extend the window and points to SHIP. But B gives no premium figure, uses a generic HR letter instead of CMS-L564, and never mentions the Part D timing. A has small imprecisions (who fills out L564, and \"possibly Part B\" for Part D), but its answer is more concrete and more complete overall."
+}

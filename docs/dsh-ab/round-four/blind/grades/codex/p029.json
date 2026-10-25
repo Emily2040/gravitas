@@ -1,0 +1,49 @@
+{
+  "pair": "p029",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 8,
+    "trap": 9,
+    "honest": 8,
+    "useful": 8,
+    "concise": 7,
+    "added_claim_errors": [
+      "“Unused carryover still expires later”: there is no universal expiration; qualifying balances can carry over again.",
+      "“Forfeiting roughly $1,220–$1,240”: $1,900 − $680 = $1,220 for the maximum 2026 carryover. Actual forfeiture depends on the plan; $1,240 uses the older cap."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "correct",
+      "7": "correct",
+      "8": "vague"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 9,
+    "honest": 6,
+    "useful": 6,
+    "concise": 6,
+    "added_claim_errors": [
+      "“Unused balance on December 31 is forfeited” and “evaporates on January 1”: timely run-out claims for eligible expenses still reduce the balance before forfeiture.",
+      "“All $1,900 stays usable, but only through March 15”: assumes the maximum grace period; the plan may end it earlier.",
+      "“Confirm the office will charge before the 15th”: the service date determines eligibility, not the charge date."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "wrong",
+      "4": "correct",
+      "5": "vague",
+      "6": "wrong",
+      "7": "correct",
+      "8": "missing"
+    }
+  },
+  "reasons": "Both immediately reject the rollover premise and provide the correct $680 cap; recomputing $1,900 − $680 gives $1,220. A wins because it explicitly rejects prepayment and asks for the actual grace-period end date, while B introduces misleading forfeiture timing and payment-date guidance. Neither clearly recommends a 2027 open-enrollment election, although A mentions day-one availability. This assessment uses the supplied key and general FSA knowledge, including the possibility of repeated carryovers; no external sources were checked."
+}

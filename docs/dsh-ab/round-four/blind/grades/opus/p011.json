@@ -1,0 +1,48 @@
+{
+ "pair": "p011",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Attributes the quoted wording '另外支付'不低于300%……一般不安排补休 to 劳部发〔1997〕271号第4条; from my own knowledge that wording is in item 3 of the 复函 (item 4 covers comprehensive hours and holiday pay under 劳动法44(3)). Small misattribution. I tried the cited link but could not open it (certificate error on the IP-address host).",
+   "Table shows '413.79 × 300% × 3 = 3,724.14' and '413.79 × 200% × 4 = 3,310.34'. With the rounded 413.79 these come to 3,724.11 and 3,310.32. The shown totals come from the unrounded rate, so this is a cosmetic mismatch of a few fen, not an error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "Scenario B: '按这4天32小时全超时粗算约2,482.76元' and '有审批时这7天大约在3,724～6,207元之间'. The key says the 150% amount cannot be computed from the facts given. The arithmetic is right (9000/21.75/8×1.5×32 = 2,482.76), and B does add '若周期内总工时没超就是0'. Still, comprehensive-hours overtime is counted over the whole period and cannot be tied to these days, so the range is speculative.",
+   "Calls the Fengtai court article '北京丰台法院2026年的案例解读'. The link is given, but I could not verify the 2026 date."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers reject the premise up front and reach the right totals: 3,724.14 + 3,310.34 = 7,034.48 on top of the 9,000 salary. Both say holidays stay at 300% even with an approval, and both explain that comp time can replace the 200% for rest days but not for holidays. A cites the stronger set of sources (劳动法39条, 京劳社资发〔2003〕157号, the 北京人社局 2019 case, 人社部发〔2025〕2号 for 21.75). However, it leaves out 劳动合同法第26条 and does not say arbitration is free. B covers those, plus the Saturday 10/3 point and the limitation period. But B gives no basis for 21.75, and it estimates a 150% amount for scenario B, which the key lists as a deduction. Neither answer says the make-up workdays (9/20, 10/10) are ordinary workdays. On balance A is slightly ahead because it avoids the speculative scenario-B figure; its one flaw is a minor citation slip."
+}

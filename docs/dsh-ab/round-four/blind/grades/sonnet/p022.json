@@ -1,0 +1,52 @@
+{
+ "pair": "p022",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 8,
+  "concise": 9,
+  "added_claim_errors": [
+   "Plan requires Medicare at 65 ('some do; most don't'): the frequency claim is unverifiable.",
+   "Call SSA at 1-800-772-1213 and ask to withdraw the application before it takes effect: the number is right, but whether withdrawal is possible is stated flatly and is not checkable from the packet.",
+   "Cites Medicare.gov and Federal Register (govinfo FR-2025-11-19) links as sources: checkable links given, but page contents not confirmed here."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "'Medicare.gov's sign-up tool asks exactly the 20-employee question': claim about a tool's behavior, unverifiable from the packet.",
+   "Asks whether the plan 'carves out' benefits for Medicare-eligible non-enrollees and says to enroll if it does: for a 20+ employer's active employees such carve-outs are generally not allowed under Medicare Secondary Payer rules, so the concern is misleading (my own knowledge).",
+   "Pay stubs/W-2s as backup alongside CMS-L564: unverifiable, and not part of the key.",
+   "Terminating Part B with CMS-1763, with re-enrollment restricted and premiums not refunded: plausible and I believe the form is right, but not covered by the key.",
+   "'Part B starts November 1, 2026' assumes the current month is October 2026 (matches the key, but the request gives no date)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers open by rejecting the premise ('Don't enroll in Part B this month'). Both give the 8-month penalty-free window, 20+ employee primary-payer status, the $202.90 premium (about $2,435 a year), the HSA/Part A warning with 6-month retroactivity, the decline-Part-B step for Social Security recipients, creditable drug coverage, and CMS-L564. Neither mentions the IEP-end exception or the Medigap open enrollment clock, and neither covers CMS-40B or Part A deferral at retirement. B is slightly better. Its HR checklist explicitly excludes COBRA and retiree coverage, its HSA advice is more actionable (stop contributions first), it adds the General Enrollment Period fallback, and its 'when your coworker would be right' section matches the key's side-claim traps. A is a little tighter and adds the Part D 2-month window, but it only says to 'talk to a tax advisor' about the HSA. B is somewhat longer and adds a few small unverifiable details (the carve-out question, pay stubs and W-2s). Neither answer makes a major error."
+}

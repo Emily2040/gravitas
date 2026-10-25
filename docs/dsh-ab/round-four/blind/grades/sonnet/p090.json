@@ -1,0 +1,56 @@
+{
+ "pair": "p090",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "임금체불확인서(회사 발급): a company that withheld wages is unlikely to issue this; the confirmation normally comes from the labor office, or deposit records stand in for it. Unverifiable and probably wrong.",
+   "National Employment Support: says the leftover can be received after unemployment benefits end, so apply now. The key says someone still receiving benefits, or within 6 months after they end, may be excluded. Over-optimistic and unverified.",
+   "Early re-employment allowance given as 대기기간 후 12개월 이상 계속 고용되면 남은 수급일수의 절반. It drops the condition that at least half of the prescribed days must remain, and it misstates the formula (remaining days x daily amount x 1/2).",
+   "건강보험료 감면: the real measure is an income-based premium adjustment, so the wording is loose. Unverifiable.",
+   "Cites a 1350 case link (1350.moel.go.kr/rtmview.do?id=1000294810) as the basis for the conclusion. Not checked, so unverifiable.",
+   "No days-late figure and no 60-day test, yet says 7~9월 요건을 넘길 가능성이 높습니다. Hedged, but unsupported."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "missing",
+   "3": "correct",
+   "4": "missing",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 4,
+  "added_claim_errors": [
+   "7~9월 석 달이면 요건을 넘게 충족: stated flatly with no day-count criterion (60 days of full delay or non-payment, 1 month = 30 days) and no question about how late each month was. This is the 'three months so automatically' overstatement, softened by 가능성이 꽤 높아요 and 심사예요.",
+   "Living-cost loan quoted at 연 1.5% with no date. Per the key, 2026-09-01 to 10-31 is a temporary 1.0% and 1.5% applies from November, so 1.5% is wrong for today (2026-10-25) unless dated. The 1% guarantee fee is not mentioned.",
+   "실업급여 150일 plus 생계비 융자 means 석 달은 확보: vague and unsupported arithmetic.",
+   "회사가 이직확인서에 '자발적 사직'으로 올리면 1차로 반려될 수 있어요: the 반려 outcome is asserted without a source.",
+   "반려되면 이의제기 → 심사청구 순: the formal route is 심사청구 then 재심사청구, so 이의제기 is loose wording.",
+   "노동청 진정 에서 지연이자까지 한 번에 청구: the labor office does not adjudicate interest, so this is loosely stated.",
+   "Advice to cover cash flow with 단기 알바든 뭐든 omits the duty to report work or income while receiving benefits (unreported work counts as improper receipt). It also says nothing about the early re-employment allowance, so it nudges against quick job-hunting without telling her it costs nothing.",
+   "Two reference links (eiac.ei.go.kr page and a Gangnam-gu welfare page for the loan) are not checked and are unverifiable. A district welfare page is an odd source for the national loan terms."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "missing",
+   "3": "vague",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start: a self-initiated resignation can still qualify if there are 2 or more months of wage arrears within the year before leaving. Neither gives the 60-day criterion or asks how many days late each month was, so key point 2 is missing in both. A is better hedged ('가능성이 높습니다', final decision by the employment center), says delayed payment counts, and covers the 12-month window, the early re-employment allowance and the duty to report work. It gives no 150/180 days, no amounts and no loan terms, and it carries a likely wrong 'company-issued' arrears certificate and an over-optimistic claim about the National Employment Support subsidy. B gives the correct 150 days (180 for age 50 or over), a procedure closer to the key (고용24, reason entered as 임금체불, deposit records) and a concrete living-cost loan (10 million won, within 6 months, operating firm, 1588-0075), but it overstates '넘게 충족', quotes 1.5% without the date, and omits the early re-employment allowance, the waiting period and the reporting duty. Both are far longer than the 'short advice' requested. B's extra key-specific facts give it a slight edge; A's better hedging keeps the margin small."
+}
