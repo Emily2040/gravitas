@@ -1,0 +1,22 @@
+{
+ "zh": {
+  "base": "47f1b94eba63f8e7750bf9d6b7c3673705358eab798970d2df4b9c1e0d80fb35",
+  "c4": "278cafafaedbd5d202ded26d4b81dadf5bbfa14acf6a82c910e33d83f11442d5",
+  "c4Sentence": "回复开头一两句先给结论"
+ },
+ "en": {
+  "base": "61e4f1bf51e289287389cb3cfd97362bf8d4a41b152ecd97a230e68cc16546f8",
+  "c4": "0857500831eed5de935b5593e4de2812b73a96b65b36b6a45a718213af935244",
+  "c4Sentence": "The first one or two sentences give the decision"
+ },
+ "ja": {
+  "base": "8206dddab5402b51971aa9ad70af189fe23ebfea28abe311db90a25d71446af9",
+  "c4": "884ed532729d364bc3a0b3e479283cff5196ad1ed37ee5dcbae0719a74c4aeb5",
+  "c4Sentence": "返信の最初の一、二文で結論を示します"
+ },
+ "ko": {
+  "base": "8f4e720b64e665216aeb7a1dc5a3da0e141ec720fc1acd480d7e6a817b69abbd",
+  "c4": "141a7079dac85ebc6666f4ff20ea1ecc25fd55ca75e128ba8a5477f3a5e9acde",
+  "c4Sentence": "답의 첫 한두 문장에서 결론을 냅니다"
+ }
+}
