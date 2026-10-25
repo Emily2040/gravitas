@@ -11,14 +11,16 @@ answers this benchmark adds:
 - sentences: a rule-based splitter that knows common abbreviations and the CJK enders.
 - paragraphs: prose paragraphs only (no headings, code, list items or tables).
 
-Extra, not in AA: hedge markers per 1000 characters (the round-one and extended lists from
-docs/dsh-ab/WIN_CRITERIA.md), stock slop phrases per language, and the share of list lines
-that open with a bold lead.
+Extra, not in AA: hedge markers per 1000 characters (WIN_CRITERIA criterion 8: round three's
+H_ROUND1 and H_EXTENDED from docs/dsh-ab/round-three/verdict.py for zh and en, with its two
+exclusions, and the 2026-10-23 amendment's lists for ja and ko), stock slop phrases per
+language, and the share of list lines that open with a bold lead.
 
 Usage: metrics.py FILE...   prints one JSON object per file.
        metrics.py --self-test
 """
 import json
+from pathlib import Path
 import re
 import sys
 import unicodedata
@@ -51,18 +53,49 @@ CONTRACTION = re.compile(r"\b[A-Za-z]+(?:'|’)(?:t|re|ve|ll|d|m|s)\b", re.I)
 POSSESSIVE_HINT = re.compile(r"\b(?:it|he|she|that|there|what|who|where|here|how|let)(?:'|’)s\b", re.I)
 ABBREV = {"mr", "mrs", "ms", "dr", "prof", "sr", "jr", "st", "vs", "etc", "e.g", "i.e", "u.s", "u.k", "no", "fig", "inc", "ltd", "co", "approx", "dept", "est", "jan", "feb", "mar", "apr", "jun", "jul", "aug", "sep", "sept", "oct", "nov", "dec", "a.m", "p.m"}
 
-# Hedge lists from docs/dsh-ab/WIN_CRITERIA.md (round one, extended round three, and the
+# Hedge lists (WIN_CRITERIA criterion 8): round three's verdict.py for zh and en, and the
 # Japanese and Korean amendment of 2026-10-23), counted per 1000 characters.
 HEDGES = {
-    "zh": {"first": ["可能", "也许", "或许", "大概", "建议咨询", "以官方为准", "请以", "具体以"],
-           "extended": ["一般来说", "通常", "因地而异", "视情况", "具体情况", "仅供参考", "建议您", "咨询当地"]},
-    "en": {"first": ["may ", "might ", "could ", "possibly", "perhaps", "check with", "consult", "verify with"],
-           "extended": ["generally", "typically", "usually", "depending on", "it depends", "varies", "in most cases", "contact your"]},
+    # zh and en: round three's lists exactly (docs/dsh-ab/round-three/verdict.py H_ROUND1 and
+    # H_EXTENDED, WIN_CRITERIA criterion 8). Each is one mixed-language list of regular
+    # expressions, applied whatever the answer's language, as verdict.py does.
+    "zh": {"first": "H_ROUND1", "extended": "H_EXTENDED"},
+    "en": {"first": "H_ROUND1", "extended": "H_EXTENDED"},
+    # ja and ko: WIN_CRITERIA's amendment of 2026-10-23, word for word, as literal substrings.
     "ja": {"first": ["かもしれ", "おそらく", "恐らく", "たぶん", "可能性があ", "と思われ", "断言できませ", "ご確認ください", "確認してください"],
            "extended": ["一般的に", "通常は", "場合によ", "地域によ", "自治体によ", "お問い合わせ", "問い合わせて", "相談してください", "目安"]},
     "ko": {"first": ["아마", "일지도", "할지도", "가능성이 있", "확실하지", "확인해 보세요", "확인하시기 바랍니다"],
            "extended": ["일반적으로", "보통은", "경우에 따라", "지역마다", "다를 수 있", "문의하", "상담하"]},
 }
+H_ROUND1 = ["可能", "大概", "也许", "或许", "以.{0,12}为准", "建议.{0,6}核实", "建议.{0,6}确认", "不确定", "请咨询", "仅供参考",
+            r"\bmay\b", r"\bmight\b", r"\bprobably\b", r"\bcheck with\b", r"\bconfirm with\b", r"\bnot sure\b", r"\bverify\b"]
+H_EXTENDED = ["一般", "通常", "原则上", "视.{0,12}而定", "具体.{0,12}(?:咨询|确认|为准)", "向.{0,12}(?:咨询|询问|核实|确认)",
+              "各地.{0,12}(?:不同|不一)", "因地而异", "建议.{0,6}(?:核实|确认|咨询)", "以.{0,12}为准",
+              r"打.{0,12}(?:(?<!\d)\d{5}(?!\d)|五位号码).{0,12}问",
+              r"\btypically\b", r"\busually\b", r"\bgenerally\b", r"\bdepending on\b", r"\bmay vary\b", r"\bcan vary\b",
+              r"\bcontact the\b", r"\bcheck (?:the|with)\b", r"\breach out\b", r"\bdouble[- ]check\b"]
+# Exclusions, as verdict.py: "May" followed by a day number or a year, and 可能 inside 不可能.
+MAY_MONTH = re.compile(r"May,?\s+(?:\d{1,2}(?:st|nd|rd|th)?\b|\d{4}\b)")
+
+
+def count_hedges(text, lang, which):
+    """Hedge markers of one list in a text: round three's count_patterns for zh and en (each
+    pattern's matches summed, case-insensitive, with the two exclusions), literal substrings
+    for ja and ko."""
+    spec = HEDGES.get(lang, HEDGES["en"])[which]
+    if isinstance(spec, list):
+        return sum(text.count(h) for h in spec)
+    n = 0
+    for pat in (H_ROUND1 if spec == "H_ROUND1" else H_EXTENDED):
+        for m in re.finditer(pat, text, flags=re.I):
+            st = m.start()
+            if m.group().startswith("可能") and st > 0 and text[st - 1] == "不":
+                continue
+            if text.startswith("May", st) and MAY_MONTH.match(text, st):
+                continue
+            n += 1
+    return n
+
 
 # Stock slop phrases: openers, closers and filler a reader recognises as generic. Counted as
 # occurrences; reported only, never a gate on its own (a list is gamed by synonyms).
@@ -83,19 +116,6 @@ SLOP_PHRASES = {
 
 EMOJI_RANGES = [(0x1F300, 0x1FAFF), (0x2600, 0x27BF), (0x1F000, 0x1F2FF), (0x1F900, 0x1F9FF), (0x2B00, 0x2BFF), (0x2300, 0x23FF)]
 JOINERS = {0x200D, 0xFE0F, 0xFE0E} | set(range(0x1F3FB, 0x1F400)) | set(range(0xE0020, 0xE0080))
-
-
-def hedge_re(h, lang):
-    """Pattern for one hedge marker. English: whole words, case-insensitive except 'may', which
-    must be lowercase so that the month May is not counted. Chinese: '可能' not after '不'."""
-    if lang == "en" or (lang not in HEDGES):
-        w = h.strip()
-        if w == "may":
-            return re.compile(r"\bmay\b")
-        return re.compile(r"\b" + re.escape(w) + r"\b", re.I)
-    if h == "可能":
-        return re.compile(r"(?<!不)可能")
-    return re.compile(re.escape(h))
 
 
 def detect_lang(text):
@@ -264,7 +284,7 @@ def measure(text, lang=None):
     low = prose.lower()
     hedge = {}
     for which in ("first", "extended"):
-        n = sum(len(hedge_re(h, lang).findall(prose)) for h in HEDGES.get(lang, HEDGES["en"])[which])
+        n = count_hedges(prose, lang, which)
         hedge[which] = round(1000.0 * n / chars, 3) if chars else 0.0
     slop_hits = sum(low.count(p) for p in SLOP_PHRASES.get(lang, SLOP_PHRASES["en"]))
     native_words = len(prose.split()) if lang == "ko" else words
@@ -336,10 +356,20 @@ def self_test():
     assert "  - nested" not in cleaned and "nested" in cleaned, "list markers must go, item text must stay"
     f = measure("▪ first item\n▪ second item\n\n1）第一\n（2）第二\n\n✅ done\n\n<b>key</b> and 【重点】 text.", "zh")
     assert f["list_items"] == 5 and f["bold"] == 1 and f["lenticular_brackets"] == 1, f
-    h = measure("In May 2026 rates may fall. It is not impossible.", "en")
-    assert h["hedges_first_per_1k"] > 0 and abs(h["hedges_first_per_1k"] - round(1000.0 / h["characters"], 3)) < 1e-6, h
-    z2 = measure("这不可能。这可能对。", "zh")
-    assert abs(z2["hedges_first_per_1k"] - round(1000.0 / z2["characters"], 3)) < 1e-6, z2
+    assert count_hedges("It opened on May 5, 2026. Due in May 2026. You may need it.", "en", "first") == 1
+    assert count_hedges("这不可能。这可能需要时间。", "zh", "first") == 1
+    assert count_hedges("具体以当地规定为准", "zh", "extended") == 2
+    assert count_hedges("请拨打12333问一下", "zh", "extended") == 1
+    assert count_hedges("打123456问", "zh", "extended") == 0
+    vp = Path(__file__).resolve().parents[2] / "docs" / "dsh-ab" / "round-three" / "verdict.py"
+    if vp.exists():  # the lists must be round three's, character for character
+        src = vp.read_text(encoding="utf-8")
+        ns = {}
+        for name in ("H_ROUND1", "H_EXTENDED"):
+            i = src.index(name + " = [")
+            j = src.index("]\n", i) + 1
+            exec(src[i:j], {"re": re}, ns)
+        assert ns["H_ROUND1"] == H_ROUND1 and ns["H_EXTENDED"] == H_EXTENDED, "hedge lists differ from verdict.py"
     e = measure("")
     assert e["words"] == 0 and e["characters"] == 0 and e["sentences"] == 0
     print("metrics self-test: ok")
