@@ -58,6 +58,8 @@ An independent audit found that this file, written after round three's results, 
 
 Judges: three per pair, one pair per session: Claude Opus 5.5, Claude Sonnet 5.5, and one non-Claude judge, OpenAI gpt-6-astra at high reasoning effort through Codex CLI 0.163.0 (read-only sandbox, no session kept), following the AA-PersonalityBench design of a mixed judge panel. All three get the same grader prompt and the same packet. All three votes count in every vote and key-point gate. Gate 2 (each grader on its own) applies to each of the three judges. Two graders were Claude in round three (kappa 0.68), so their errors were correlated; a third model family lowers that. The two relabellers of added-claim notes stay Opus and Sonnet. The version before this amendment is judged with the Opus and Sonnet grades only, exactly as it was written.
 
+Note, 2026-10-25, before any round-four run: the Codex judge also gets live web search (`codex --search`), still in a read-only sandbox, because the grader prompt lets every judge check claims on official pages and the Claude graders can. The first real Codex call is a single pair, checked before the rest.
+
 Also reported, not gated: format metrics per answer (characters for every language and words for English; list items, meaning lines that start with -, *, + or a number followed by . or 、 or ); bold spans, meaning **...** pairs; headings, meaning lines that start with #), so a length change that only strips formatting is visible.
 
 Why: these were round three's own gates, change 4 targets length, and a length change needs a floor and a usefulness guard most of all. The round is judged on this version and on the version before this amendment; it counts as a win only if it wins on both.
