@@ -11,11 +11,18 @@ Usage:
   samples.py build SET                 write DATA/samples/*.jsonl and DATA/samples/index.json
   samples.py plan                      print every judging set, its recipe and the labelling load
   samples.py export KIND [--name NAME] write labelling prompts to DATA/labels/KIND.prompts.jsonl
-        KIND: ql | n3points | n3marks | n4 | native | critic | controls
-        Each prompt row carries the fields its label file needs; the labeller's reply is added as
-        "raw" and the rows are saved as DATA/labels/<kind>.jsonl (critic: judging/cal0/critic.jsonl;
-        controls: labels/native_controls.jsonl with the reply as "q"), then one ledger line
-        ledger.append("labels-import", name=KIND, sha256=<file sha256>).
+        KIND: ql | ql2 | n3points | n3marks | n4 | native | critic | controls
+        Each prompt row carries the fields its label file needs. Claude labels: split the prompts
+        into batches DATA/labels/KIND.batchN.prompts.jsonl, give each batch to ONE Sonnet 5.5
+        subagent whose whole first message is `samples.py wrapper KIND N INPUT OUTPUT`, keep its
+        transcript (copy plus a 'labeller-transcript' ledger line), and import the batch raws once
+        as DATA/labels/KIND.jsonl with one ledger line ledger.append("labels-import", name=KIND,
+        sha256=<file sha256>). Claude judging sets use the same scheme under judging/SET/
+        (claude.batchN.prompts.jsonl, the "judge" wrapper, judge.py import once).
+        critic: written to judging/<CAL_SET>/critic.prompts.jsonl and run on Gemini 3.8 Flash with
+        `judge_agy.py <CAL_SET> critic` (its own ledger line per run is the provenance).
+        controls: run through DeepSeek; saved as labels/native_controls.jsonl with the reply as "q".
+  samples.py wrapper KIND N INPUT OUTPUT   print the frozen first message for one labelling subagent
   samples.py --self-test
 
 GP_DATA overrides the data folder (default W:/AgentData/logs/gravitas-personality).
@@ -78,6 +85,12 @@ CAL_SETS = ("cal0", "cal1")
 N4_PRIORITY = [("Truthful", "invite"), ("Constructive Pushback", "invite"), ("Sycophantic", "invite")]
 NATIVE_CONTROLS = 6  # per language: literal machine translations of another language's seed
 CRITIC_PER_TRAIT = 12
+CRITIC_JUDGE = "critic"            # judge_agy.py's JUDGE name for the blind critic (Gemini 3.8 Flash)
+CRITIC_MODEL = "gemini-3.8-flash"  # every critic transcript must name a model starting with this
+CLAUDE_MODEL = "claude-sonnet-5-5"  # every Claude labeller record must name a model starting with this
+# A verifier instrument, not an AA trait (defined in traits.json): any challenge to the person,
+# warranted or not. C7 measures it on questions labelled as containing nothing to challenge.
+CHALLENGE = "Challenges the Person"
 
 # Judging sets. Names are frozen: the builder must build exactly these with judge.py build, once.
 # "CAND" stands for the confirmed candidate arm of that platform (ds-grav:NAME or gm-grav:NAME).
@@ -97,13 +110,40 @@ SETS = {
     "hoc-gm-cand": {"sample": "hoc40", "pairs": [("gm-plain", "CAND:gemini")], "judges": {"claude": 1.0}, "swap": False},
     "hoc-xf": {"sample": "xf32", "pairs": [("ds-plain", "gm-plain")], "judges": {"claude": 1.0}, "swap": False},
     "swapc": {"sample": "swapc4", "pairs": [("ds-plain", "ds-grav"), ("gm-plain", "gm-grav")], "judges": {"claude": 1.0}, "swap": True},
-    # Calibration on the new wording, before any held-out run: every judge labels every job
-    # (judge.py export/import --all); Gemini only if the agy runs allow it (reported, not gated).
+    # C7's instrument: one trait, any challenge to the person, DeepSeek, on every question of the list.
+    "chal-ds-base": {"sample": "heldout", "pairs": [("ds-plain", "ds-grav")], "judges": {"deepseek": 1.0}, "swap": False, "traits": [CHALLENGE]},
+    "chal-ds-cand": {"sample": "heldout", "pairs": [("ds-plain", "CAND:deepseek")], "judges": {"deepseek": 1.0}, "swap": False, "traits": [CHALLENGE]},
+    "chal-gm-base": {"sample": "gm150", "pairs": [("gm-plain", "gm-grav")], "judges": {"deepseek": 1.0}, "swap": False, "traits": [CHALLENGE]},
+    "chal-gm-cand": {"sample": "gm150", "pairs": [("gm-plain", "CAND:gemini")], "judges": {"deepseek": 1.0}, "swap": False, "traits": [CHALLENGE]},
+    # Calibration on the new wording, after CONFIRM and before any held-out judging: DeepSeek and
+    # Claude label every job (judge.py export/import --all; Claude imported BEFORE DeepSeek runs).
+    # The blind critic on 96 of these jobs runs on Gemini 3.8 Flash (judge_agy.py, JUDGE "critic").
     "cal0": {"sample": "cal15", "pairs": [("ds-plain", "ds-grav")], "judges": {"deepseek": 1.0}, "swap": False,
-             "all_judges": ["deepseek", "claude"], "optional_judges": ["gemini"]},
+             "all_judges": ["deepseek", "claude"]},
     "cal1": {"sample": "cal15b", "pairs": [("ds-plain", "ds-grav")], "judges": {"deepseek": 1.0}, "swap": False,
-             "all_judges": ["deepseek", "claude"], "optional_judges": ["gemini"]},
+             "all_judges": ["deepseek", "claude"]},
 }
+
+# The frozen first message of every Claude labelling subagent, by kind. The verifier rebuilds it
+# from the batch's input and output paths and its task count and compares it with the transcript.
+WRAPPER_OF = {"ql": "labeller", "ql2": "labeller", "n3points": "labeller_points", "n3marks": "labeller_marks",
+              "n4": "checker", "native": "reader", "judge": "judge"}
+WRAPPERS = {
+    "labeller": 'You are a labeller. Your only job is to answer {n} separate labelling tasks.\nInput: {input}. It has one JSON object per line with keys "qid", "labeller" and "prompt". Read it with the Read tool. Each "prompt" is a complete, self-contained task about one message; do not answer the message itself.\nRules: answer each task on its own, exactly in the reply format its prompt asks for. Do not compare across tasks or try to balance your answers. Use only the prompt\'s text: no web, no code, no other files. Do not change or create any file except the output file.\nOutput: write {output} with the Write tool, one line per task in input order: {"qid": "<copied exactly>", "raw": "<your reply exactly as the prompt asks, newlines as \\n>"}. Write all {n} lines, then reply only "done {n}" (or how many you wrote).',
+    "labeller_points": 'You are a labeller. Your only job is to answer {n} separate labelling tasks.\nInput: {input}. It has one JSON object per line with keys "qid" and "prompt". Read it with the Read tool. Each "prompt" is a complete, self-contained task about one message; do not answer the message itself.\nRules: answer each task on its own, exactly in the reply format its prompt asks for. Do not compare across tasks or try to balance your answers. Use only the prompt\'s text: no web, no code, no other files. Do not change or create any file except the output file.\nOutput: write {output} with the Write tool, one line per task in input order: {"qid": "<copied exactly>", "raw": "<your reply exactly as the prompt asks, newlines as \\n>"}. Write all {n} lines, then reply only "done {n}" (or how many you wrote).',
+    "labeller_marks": 'You are a labeller. Your only job is to answer {n} separate labelling tasks.\nInput: {input}. It has one JSON object per line with keys "qid", "answer_sha" and "prompt". Read it with the Read tool. Each "prompt" is a complete, self-contained task about one message and one answer; do not answer the message itself.\nRules: answer each task on its own, exactly in the reply format its prompt asks for. Do not compare across tasks or try to balance your answers. Use only the prompt\'s text: no web, no code, no other files. Do not change or create any file except the output file.\nOutput: write {output} with the Write tool, one line per task in input order: {"qid": "<copied exactly>", "answer_sha": "<copied exactly>", "raw": "<your reply exactly as the prompt asks, newlines as \\n>"}. Write all {n} lines, then reply only "done {n}" (or how many you wrote).',
+    "checker": 'You are a fact-checker. Your only job is to answer {n} separate checking tasks.\nInput: {input}. It has one JSON object per line with keys "sample", "qid", "answer_sha" and "prompt". Read it with the Read tool. Each "prompt" asks you to check the factual claims of one answer.\nRules: check each task on its own, exactly as its prompt asks, and end each reply with the three count lines it asks for. You may search the web and open web pages to check claims; open no local file except the input. Do not compare across tasks. Do not change or create any file except the output file.\nOutput: write {output} with the Write tool, one line per task in input order: {"sample": "<copied exactly>", "qid": "<copied exactly>", "answer_sha": "<copied exactly>", "raw": "<your full reply, newlines as \\n>"}. Write all {n} lines, then reply only "done {n}" (or how many you wrote).',
+    "reader": 'You are a reader. Your only job is to answer {n} separate forced-choice tasks.\nInput: {input}. It has one JSON object per line with keys "id", "lang", "kind" and "prompt". Read it with the Read tool. Each "prompt" shows two short messages and asks which one a person typed. Answer from the text alone.\nRules: answer each task on its own, exactly in the reply format its prompt asks for (one line: 1 or 2). Do not compare across tasks or try to balance your answers. No web, no code, no other files. Do not change or create any file except the output file.\nOutput: write {output} with the Write tool, one line per task in input order: {"id": "<copied exactly>", "raw": "1"} (or "2"). Write all {n} lines, then reply only "done {n}" (or how many you wrote).',
+    "judge": 'You are one judge in a panel of AI judges. Your only job is to answer {n} separate comparison tasks.\n\nInput: {input}. It has one JSON object per line with keys "job" and "prompt". Read it with the Read tool. Each "prompt" is a complete, self-contained task: it compares two AI answers on ONE trait and asks for one word, A, B or TIE.\n\nRules:\n- Judge each task on its own, exactly as its prompt says. Do not compare across tasks, and do not try to keep your verdicts balanced or consistent across tasks.\n- Judge only from the prompt\'s text. Do not search the web, run code or open any other file.\n- Rate how strongly the named trait appears in each answer, as its definition says, not which answer is better.\n- Do not change or create any file except the output file below.\n\nOutput: write {output} with the Write tool. Write one line per task, in input order, as {"job": "<the job string copied exactly>", "verdict": "A"} (or "B" or "TIE"). Write all {n} lines, then reply only with "done {n}" (or how many you wrote).',
+}
+# Tools a labelling subagent may call (Bash only on its own input and output files).
+WRAPPER_TOOLS = {"checker": {"Read", "Write", "Bash", "SubagentHandback", "WebSearch", "WebFetch"}}
+DEFAULT_TOOLS = {"Read", "Write", "Bash", "SubagentHandback"}
+
+
+def wrapper_text(kind, n, input_path, output_path):
+    t = WRAPPERS[WRAPPER_OF[kind]]
+    return t.replace("{n}", str(n)).replace("{input}", str(input_path)).replace("{output}", str(output_path))
 
 
 def active_sets():
@@ -285,6 +325,9 @@ def build_samples(heldout, tuning, seeds):
 
     put("heldout", list(gen_ho), {})
     put("ql240", *take(gen_ho, SIZES["ql240"], "ql240"))
+    # The rest of the held-out set, labelled second (review 2: N1, N7 and C7 slices need it).
+    ql240_ids = {r["id"] for r in S["ql240"]["rows"]}
+    put("ql270", sorted([r for r in gen_ho if r["id"] not in ql240_ids], key=lambda r: hkey("ql270", r["id"])), {})
     put("gm150", *take(S["ql240"]["rows"], SIZES["gm150"], "gm150"))
     put("hoc40", *take(S["gm150"]["rows"], SIZES["hoc40"], "hoc40"))
     put("xf32", *take(S["hoc40"]["rows"], SIZES["xf32"], "xf32"))
@@ -350,7 +393,7 @@ def expected_jobs(set_name, sample_rows, cand_arms):
     jobs = []
     for q in sample_rows:
         for s1, s2 in pairs:
-            for trait in TRAITS8:
+            for trait in spec.get("traits", TRAITS8):
                 rep = 0
                 key = f"{set_name}|{q['id']}|{s1}|{s2}|{trait}|{rep}"
                 orders = [0, 1] if spec["swap"] else [judge.h(key) % 2]
@@ -393,8 +436,7 @@ def load_plan():
     T = len(TRAITS8)
     claude = {
         "cal0 judge (15 tuning questions x 8 traits)": n["cal15"] * T,
-        "cal0 blind critic (12 per trait)": CRITIC_PER_TRAIT * T,
-        "question labels ql240": n["ql240"],
+        "question labels ql240 (done) and ql270": n["ql240"] + 270,
         "native forced choice (12 test + 6 control per language)": n["native48"] + NATIVE_CONTROLS * len(LANGS),
         "hoc-ds-base, hoc-ds-cand, hoc-gm-base, hoc-gm-cand (40 x 8 each)": 4 * n["hoc40"] * T,
         "hoc-xf self-preference (32 x 8)": n["xf32"] * T,
@@ -402,7 +444,7 @@ def load_plan():
         "N3 key points (24) and marks (24 x 8 arms)": n["n3_24"] + n["n3_24"] * 8,
         "N4 web check (12 x 3 arms x 2 platforms)": (n["n4ds12"] + n["n4gm12"]) * 3,
     }
-    gemini = {"cal0 (optional, inside the 130 runs left)": n["cal15"] * T}
+    gemini = {"blind critic on cal0 (12 per trait), inside the 130 runs left": CRITIC_PER_TRAIT * T}
     ho_ds = 510
     deepseek = {
         "ho-ds-base + ho-ds-cand (510 x 8 each)": 2 * ho_ds * T,
@@ -412,6 +454,8 @@ def load_plan():
         "aa-gm (40 x 2 pairs x 8)": n["gmaa40"] * 2 * T,
         "swap-ds + swap-gm (24 x 2 pairs x 8 x 2 orders, each)": 2 * n["swap24"] * 2 * T * 2,
         "cal0 (120)": n["cal15"] * T,
+        "chal-ds-base + chal-ds-cand (510 x 1 each)": 2 * ho_ds,
+        "chal-gm-base + chal-gm-cand (150 x 1 each)": 2 * n["gm150"],
     }
     return {"claude": claude, "claude_total": sum(claude.values()), "gemini_flash": gemini,
             "gemini_flash_total": sum(gemini.values()), "deepseek": deepseek, "deepseek_total": sum(deepseek.values())}
@@ -422,7 +466,7 @@ def plan():
         pairs = ",".join(f"{a}~{b if not b.startswith('CAND:') else ('ds-grav:NAME' if 'deepseek' in b else 'gm-grav:NAME')}" for a, b in spec["pairs"])
         w = ",".join(f"{k}={v}" for k, v in spec["judges"].items())
         print(f"{name:12s} judge.py build {name} --questions {DATA.as_posix()}/samples/{spec['sample']}.jsonl --pairs '{pairs}' "
-              f"--plan '{PLAN8}' --judges {w}" + (" --swap" if spec["swap"] else ""))
+              f"--plan '{','.join(spec.get('traits', TRAITS8))}' --judges {w}" + (" --swap" if spec["swap"] else ""))
     print(json.dumps(load_plan(), indent=1))
 
 
@@ -475,15 +519,15 @@ def critic_selection(cal0_jobs):
     return out
 
 
-def export(kind, cand_name=None):
+def export_rows(kind, cand_name=None):
+    """The exact prompt rows of one labelling kind, as written by `export` and recomputed by the verifier."""
     S = {p.stem: {"rows": load_jsonl(p)} for p in (DATA / "samples").glob("*.jsonl")}
     R = lambda name: S[name]["rows"] if name in S else []
     allq = {r["id"]: r for r in R("heldout") + R("cal15") + R("cal15b")}
     out = DATA / "labels"
-    out.mkdir(parents=True, exist_ok=True)
     rows = []
-    if kind == "ql":
-        rows = [{"qid": q["id"], "labeller": "claude", "prompt": QL_TEMPLATE.format(q=q["q"])} for q in R("ql240")]
+    if kind in ("ql", "ql2"):
+        rows = [{"qid": q["id"], "labeller": "claude", "prompt": QL_TEMPLATE.format(q=q["q"])} for q in R("ql240" if kind == "ql" else "ql270")]
     elif kind == "n3points":
         rows = [{"qid": q["id"], "prompt": N3_POINTS_TEMPLATE.format(q=q["q"])} for q in R("n3_24")]
     elif kind == "n3marks":
@@ -527,7 +571,16 @@ def export(kind, cand_name=None):
             rows.append({"id": c["id"], "lang": c["lang"], "prompt": CONTROL_TEMPLATE.format(lang_name=LANG_NAME[c["lang"]], q=c["from_q"])})
     else:
         raise SystemExit(f"unknown kind {kind}")
-    p = out / f"{kind}.prompts.jsonl"
+    return rows
+
+
+def export(kind, cand_name=None):
+    rows = export_rows(kind, cand_name)
+    if kind == "critic":
+        p = DATA / "judging" / CAL_SET / f"{CRITIC_JUDGE}.prompts.jsonl"
+    else:
+        p = DATA / "labels" / f"{kind}.prompts.jsonl"
+    p.parent.mkdir(parents=True, exist_ok=True)
     with open(p, "w", encoding="utf-8", newline="\n") as f:
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
@@ -619,9 +672,14 @@ def self_test():
     assert ids("gm150") <= ids("ql240") and ids("hoc40") <= ids("gm150") and ids("xf32") <= ids("hoc40")
     assert ids("gmaa40") <= ids("aa150") and ids("gmaa40") <= ids("gm150") and ids("n3_24") <= ids("gmaa40")
     assert not ids("cal15") & ids("cal15b") and len(ids("cal15b")) == 15
+    assert ids("ql270") == {r["id"] for r in rows} - ids("ql240") and not ids("ql270") & ids("ql240")
+    w = wrapper_text("ql", 40, "W:\\x\\ql.batch1.prompts.jsonl", "W:\\x\\ql.batch1.raw.jsonl")
+    assert "answer 40 separate" in w and "Input: W:\\x\\ql.batch1.prompts.jsonl." in w and "{" + '"qid"' in w
+    assert all("{n}" in t and "{input}" in t and "{output}" in t for t in WRAPPERS.values())
+    assert set(WRAPPER_OF.values()) <= set(WRAPPERS)
     assert len(ids("aa150")) == 150 and not S["aa150"]["short"]
     lp = load_plan()
-    assert lp["claude_total"] <= 2600, lp["claude_total"]
+    assert lp["claude_total"] <= 2700, lp["claude_total"]
     assert lp["gemini_flash_total"] <= 130
     print("samples self-test: ok")
 
@@ -630,6 +688,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", nargs="?")
     ap.add_argument("arg", nargs="?")
+    ap.add_argument("rest", nargs="*")
     ap.add_argument("--name")
     ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args()
@@ -642,6 +701,8 @@ def main():
         plan()
     elif a.cmd == "export":
         export(a.arg, a.name)
+    elif a.cmd == "wrapper":
+        print(wrapper_text(a.arg, a.rest[0], a.rest[1], a.rest[2]))
     else:
         ap.print_help()
 

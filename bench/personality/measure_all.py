@@ -52,8 +52,14 @@ QUOTA = {"zh": 7, "en": 4, "ja": 3, "ko": 3}
 EMILY_MARKERS = ["EMILY QUALITY LOOP", "# Reasoning method", "argon-baseline"]  # as answer_agy.py
 GEMINI_MODEL_PREFIX = "gemini-4-argon"
 MIN_PROSE_CHARS = 20
-SLICE_MIN = {"C7": {"deepseek": 60, "gemini": 40}, "N1": {"deepseek": 40, "gemini": 25}, "N7": {"deepseek": 20, "gemini": 12}}
+# Slice minimums, about two thirds of what the labelled held-out set gives (no-flaw 93%, settled 30%,
+# open 7% of 240 labelled questions); N7 on Gemini (8) is weak and GATES.md says so.
+SLICE_MIN = {"C7": {"deepseek": 200, "gemini": 60}, "N1": {"deepseek": 60, "gemini": 25}, "N7": {"deepseek": 25, "gemini": 8}}
 CLAUDE_MIN_PER_TRAIT = 30
+B5_MIN_TWO_SIDED = 30
+CLAUDE_PROJECTS = Path(os.environ.get("GP_CLAUDE_PROJECTS", "C:/Users/emily/.claude/projects"))
+BALANCE_AFTER = REPO / "bench" / "freeze" / "BALANCE_AFTER.json"
+ELO_PER_SHARE = SCALE / 0.25  # about 695 Elo per unit of favourable share at even odds
 B5_MIN_SHARED = 100
 
 # WIN_CRITERIA's instruments, never metrics.py's: the round-one hedge list, the extended list and the
@@ -142,6 +148,45 @@ para como pero der die das und ist nicht mit ein eine zu den il di che non per s
 masu ka yo ne
 """.split())
 HAN, KANA, HANGUL = metrics.HAN, metrics.KANA, metrics.HANGUL
+
+
+# Question language (A2, A5): lingua-language-detector, pinned by hash in bench/env/requirements-lingua.txt
+# and installed in DATA/venv (Emily's OK, 2026-10-25). Four languages, as the question set has; two
+# guards it cannot give: Traditional Chinese (the character table above) and another Latin-script
+# language (its function words or accented letters). Answers keep the stdlib identifier (lang_of).
+LINGUA_VERSION = "2.1.1"
+_LINGUA = {}
+
+
+def lingua_detector():
+    if "d" not in _LINGUA:
+        _LINGUA["d"] = None
+        try:
+            import importlib.metadata as im
+            if im.version("lingua-language-detector") == LINGUA_VERSION:
+                from lingua import Language, LanguageDetectorBuilder
+                _LINGUA["map"] = {Language.CHINESE: "zh", Language.ENGLISH: "en", Language.JAPANESE: "ja", Language.KOREAN: "ko"}
+                _LINGUA["d"] = LanguageDetectorBuilder.from_languages(*_LINGUA["map"]).build()
+        except Exception:  # noqa: BLE001 - no lingua, or another version: the gates that need it fail as missing
+            _LINGUA["d"] = None
+    return _LINGUA["d"]
+
+
+def question_lang(q):
+    """zh, zh-Hant, ja, ko, en, latin-other or und for one question; None if lingua is unavailable."""
+    d = lingua_detector()
+    if d is None:
+        return None
+    lang = _LINGUA["map"].get(d.detect_language_of(q or ""), "und")
+    if lang == "zh":
+        tr, si = sum(1 for c in q if c in TRAD), sum(1 for c in q if c in SIMP)
+        if tr >= 3 and tr > si:
+            return "zh-Hant"
+    if lang == "en":
+        low = [w.lower() for w in re.findall(r"[A-Za-z][A-Za-z'’]*", q)]
+        if re.search(r"[À-ÿĀ-ž]", q) or (low and sum(w in STOP_OTHER for w in low) > sum(w in STOP_EN for w in low)):
+            return "latin-other"
+    return lang
 
 
 def lang_of(text):
@@ -271,7 +316,7 @@ def measure_code_freeze(o):
         return
     if git("cat-file", "-e", c + "^{commit}") is None:
         return
-    paths = ["bench/personality", "docs/dsh-ab/WIN_CRITERIA.md", "docs/dsh-ab/round-three/verdict.py"]
+    paths = ["bench/personality", "bench/env/requirements-lingua.txt", "docs/dsh-ab/WIN_CRITERIA.md", "docs/dsh-ab/round-three/verdict.py"]
     diff = git("diff", "--name-only", c, "--", *paths)
     untracked = git("ls-files", "--others", "--exclude-standard", "--", *paths)
     if diff is None or untracked is None:
@@ -300,17 +345,28 @@ def measure_data_freeze(o, F):
     hb = [h for h, want in homes.items() if tree_sha(DATA / "agy" / h / ".gemini" / "config") != want]
     o.put("D4.agy_config_mismatch", len(hb) if homes else None)
     o.note("D4.agy_config_mismatch", hb)
+    # Files outside DATA that shape answers: the DSH profiles (model line), frozen at stage 2.
+    ext = F.get("external_files") or {}
+    eb = [f for f, want in ext.items() if sha_file(f) != want]
+    o.put("D4.external_mismatch", len(eb) if ext else None)
+    o.note("D4.external_mismatch", eb)
 
 
-def tree_sha(root):
+def tree_sha(root, exclude=()):
     root = Path(root)
     if not root.exists():
         return None
     h = hashlib.sha256()
     for p in sorted(root.rglob("*")):
-        if p.is_file():
+        if p.is_file() and p.relative_to(root).as_posix() not in exclude:
             h.update(p.relative_to(root).as_posix().encode() + b"\0" + p.read_bytes() + b"\0")
     return h.hexdigest()
+
+
+def stage2_time():
+    """Commit time of the stage-2 data record (its first commit), or None."""
+    log = git("log", "--format=%ct", "--reverse", "--", "bench/freeze/FREEZE_DATA.json")
+    return int(log.split()[0]) if log and log.strip() else None
 
 
 # ------------------------------------------------------------------------------------- question set
@@ -345,14 +401,20 @@ def measure_questions(o, Q):
     ho_ids, tu_ids = {r["id"] for r in ho}, {r["id"] for r in tun}
     o.put("A1.total", len(allq))
     o.put("A1.heldout_generated", sum(1 for r in ho if r["id"] not in seed_ids))
-    traits30 = list(json.load(open(HERE / "traits.json", encoding="utf-8"))["traits"])
+    doc = json.load(open(HERE / "traits.json", encoding="utf-8"))
+    traits30 = [t for t in doc["traits"] if any(t in m for m in doc["indexes"].values())]
     cells = defaultdict(int)
     for r in gen:
         cells[(r.get("lang"), r.get("trait"), r.get("mode"))] += 1
     short = sum(max(0, QUOTA[l] - cells[(l, t, m)]) for l in LANGS for t in traits30 for m in ("invite", "neutral"))
     o.put("A1.shortfall", short)
-    measured = {r["id"]: lang_of(r["q"]) for r in allq}
-    n = len(allq)
+    measured = {r["id"]: question_lang(r["q"]) for r in allq}
+    if any(v is None for v in measured.values()):
+        o.errors.append(f"lingua-language-detector {LINGUA_VERSION} is not importable: run verify.py with the venv's python "
+                        "(DATA/venv/Scripts/python.exe); A2 and A5 stay missing")
+        measured = {}
+    o.note("A5.stdlib_disagreements", sum(1 for r in allq if lang_of(r["q"]) != r.get("lang")))
+    n = len(allq) if measured else 0
     for l in LANGS:
         o.put(f"A2.share.{l}", sum(1 for v in measured.values() if v == l) / n if n else None)
     if n:
@@ -365,7 +427,7 @@ def measure_questions(o, Q):
         for l in LANGS:
             rs = [r for r in gen if r["id"] in ids and r.get("lang") == l]
             o.put(f"A4.invite.{sp}.{l}", sum(1 for r in rs if r.get("mode") == "invite") / len(rs) if rs else None)
-    mism = [r["id"] for r in allq if measured[r["id"]] != r.get("lang")]
+    mism = [r["id"] for r in allq if measured and measured[r["id"]] != r.get("lang")]
     o.put("A5.mismatch_share", len(mism) / n if n else None)
     o.put("A5.zh_hant", sum(1 for v in measured.values() if v == "zh-Hant"))
     o.note("A5.mismatch", mism[:20])
@@ -382,9 +444,17 @@ def measure_questions(o, Q):
     for l in LANGS:
         rs = [r for r in allq if r.get("lang") == l]
         o.put(f"A10.short.{l}", sum(1 for r in rs if q_size(r["q"], l) <= SHORT_MAX[l]) / len(rs) if rs else None)
+    # A11: every generated question passed a real rating call: the batch input holds the frozen
+    # RATE_TEMPLATE for it, and the batch output parses and passes filter_questions.rating_ok.
+    import filter_questions as FQ
     rated = dshbatch.load(DATA / "batches" / f"rate-{Q['set']}.out.jsonl")
-    ok = {i for i, r in rated.items() if not r.get("error") and r.get("usage")}
-    o.put("A11.rated_share", (sum(1 for r in gen if r["id"] in ok) / len(gen)) if gen and rated else None)
+    ins = {r.get("id"): r for r in (jl(DATA / "batches" / f"rate-{Q['set']}.in.jsonl") or [])}
+    good = 0
+    for r in gen:
+        x, i = rated.get(r["id"]), ins.get(r["id"])
+        want = FQ.RATE_TEMPLATE.format(lang_name=FQ.LANG_NAME[r["lang"]], q=r["q"], intent=FQ.intent(r)) if r.get("trait") in FQ.TRAITS else None
+        good += bool(x and i and not x.get("error") and x.get("usage") and i.get("user") == want and FQ.rating_ok(FQ.parse_rating(x.get("text"))))
+    o.put("A11.rated_share", good / len(gen) if gen and rated else None)
     return measured
 
 
@@ -458,12 +528,17 @@ def load_answer(arm, qid, qlang, platform):
     return rec
 
 
+SEP = ("：", ":", "——", "—", "–", "－", "→", "=")
+
+
 def format_shape(text):
     """Non-prose lines (red-team N13): headings, table rows, lines opening with a symbol, digit or
-    bracket, and short label lines; per answer and per 1,000 prose characters."""
+    bracket, and short label lines; separator lines (review 2: a label, then a colon, dash, arrow or
+    equals sign within the first 15 characters), the shape a list keeps when its markers go."""
     lines = [l for l in metrics.strip_code(text).split("\n") if l.strip()]
     if not lines:
-        return {"nonprose_share": 0.0, "nonprose_lines": 0}
+        return {"nonprose_share": 0.0, "nonprose_lines": 0, "sep_lines": 0}
+    sep = sum(1 for l in lines if any(x in l.strip()[:15] for x in SEP))
     med = sorted(len(l.strip()) for l in lines)[len(lines) // 2]
     n = 0
     for l in lines:
@@ -473,7 +548,7 @@ def format_shape(text):
         label = len(s) < 0.4 * med and not re.search(r"[.。!！?？…”」』)）]$", s)
         if metrics.HEADING.match(l) or s.startswith("|") or s.endswith("|") or not cat.startswith("L") or label:
             n += 1
-    return {"nonprose_share": n / len(lines), "nonprose_lines": n}
+    return {"nonprose_share": n / len(lines), "nonprose_lines": n, "sep_lines": sep}
 
 
 # ------------------------------------------------------------------------------------------- ledger
@@ -496,7 +571,7 @@ def compute(boot=1000):
     o.put("N11.ledger_bad_lines", bad_ledger if ledger or bad_ledger else None)
     if not F or not F.get("set"):
         o.errors.append("no stage-2 data freeze (bench/freeze/FREEZE_DATA.json): question-set metrics are missing")
-        measure_spend(o, ledger)
+        measure_spend(o, ledger, F)
         return o
     setname = F["set"]
     qdir = DATA / "questions" / setname
@@ -517,6 +592,7 @@ def compute(boot=1000):
 
     # Candidate (N14) before anything that needs the candidate's arm names.
     cand_name = measure_one_look(o, ledger, set(sample_ids["heldout"]), Q, sample_ids, F)
+    step(o, measure_s0, o, ledger, set(sample_ids["heldout"]), F)
     cand_arms = {"deepseek": f"ds-grav:{cand_name}", "gemini": f"gm-grav:{cand_name}"} if cand_name else {}
 
     # Which arm answers which questions.
@@ -548,10 +624,14 @@ def compute(boot=1000):
     step(o, measure_judges, o, V, jobs_by_set, A)
     routing = step(o, route, o, V) or {}
     step(o, measure_results, o, V, A, sample_ids, cand_arms, routing, labels, boot)
-    step(o, measure_text, o, A, sample_ids, cand_arms, qrows)
+    step(o, measure_text, o, A, sample_ids, cand_arms, qrows, labels.get("slices"))
     step(o, measure_label_gates, o, labels, sample_ids, cand_arms, A, V)
     step(o, measure_rule_leak, o, cand_name, Q)
-    step(o, measure_spend, o, ledger)
+    step(o, measure_spend, o, ledger, F)
+    step(o, measure_provenance, o, ledger, cand_name, jobs_by_set)
+    step(o, measure_order, o, ledger, set(sample_ids["heldout"]), jobs_by_set)
+    step(o, measure_versions, o, lists, cand_name)
+    step(o, measure_frozen_inputs, o, cand_name)
     return o
 
 
@@ -620,6 +700,8 @@ def measure_one_look(o, ledger, heldout_ids, Q, sample_ids, F):
               and r.get("qid") in heldout_ids and finite(r.get("start"))]
     builds = [parse_time(r.get("time")) for r in ledger if r.get("kind") == "judge-build" and name in str(r.get("pairs"))]
     t_first = min([t for t in starts + builds if t is not None], default=None)
+    if first:
+        o.detail["confirm_time"] = int(first[1])
     if first and t_first is not None:
         o.put("N14.confirm_before_heldout", int(first[1]) < t_first)
         content = git("show", f"{first[0]}:{rel}")
@@ -633,10 +715,19 @@ def measure_one_look(o, ledger, heldout_ids, Q, sample_ids, F):
         o.note("confirm", {"commit": first[0], "rules": rules})
     elif not first:
         o.put("N14.confirm_before_heldout", 0)
-    ql = [parse_time(r.get("time")) for r in ledger if r.get("kind") == "labels-import" and r.get("name") == "ql"]
-    if ql and t_first is not None:
-        o.put("N14.labels_before_candidate", max(t for t in ql if t is not None) < t_first)
     return name
+
+
+def measure_s0(o, ledger, heldout_ids, F):
+    """S0: nothing touched a held-out question before the held-out set was frozen."""
+    t2 = stage2_time()
+    if t2 is None:
+        return
+    n = sum(1 for r in ledger if r.get("kind") == "answer-launch" and r.get("qid") in heldout_ids
+            and finite(r.get("start")) and r["start"] < t2)
+    for d in (F or {}).get("pre_existing_judging") or []:
+        n += sum(1 for j in jl(DATA / "judging" / d / "jobs.jsonl") or [] if j.get("qid") in heldout_ids)
+    o.put("S0.heldout_touched_before_freeze", n)
 
 
 # ------------------------------------------------------------------------------------- runs, rules
@@ -881,9 +972,25 @@ def kappa(pairs):
     return (po - pe) / (1 - pe) if pe < 1 else None
 
 
-def direction(pairs):
+def direction(pairs, min_two_sided=1):
     both = [(a, b) for a, b in pairs if a != "tie" and b != "tie"]
-    return (sum(1 for a, b in both if a == b) / len(both)) if both else None
+    return (sum(1 for a, b in both if a == b) / len(both)) if len(both) >= max(1, min_two_sided) else None
+
+
+def kappa_strat(pairs_by_trait):
+    """Cohen's kappa with chance agreement computed within each trait, then pooled (review 2: a
+    shared Gravitas effect on a trait raises pooled kappa without item-level agreement)."""
+    labs = ("s1", "s2", "tie")
+    num = den = 0.0
+    for pairs in pairs_by_trait.values():
+        n = len(pairs)
+        if not n:
+            continue
+        po = sum(1 for a, b in pairs if a == b) / n
+        pe = sum(sum(1 for a, _ in pairs if a == l) * sum(1 for _, b in pairs if b == l) for l in labs) / (n * n)
+        num += n * (po - pe)
+        den += n * (1 - pe)
+    return num / den if den > 0 else None
 
 
 def matched(V, ds_sets, cl_sets):
@@ -898,8 +1005,11 @@ def matched(V, ds_sets, cl_sets):
     return out
 
 
-MAIN_DS = ["ho-ds-base", "ho-ds-cand", "ho-gm-base", "ho-gm-cand", "ho-xf"]
-MAIN_CL = ["hoc-ds-base", "hoc-ds-cand", "hoc-gm-base", "hoc-gm-cand", "hoc-xf"]
+# The comparisons C uses (plain against Gravitas). The cross-family pair is kept out of B5 (review 2:
+# two model families are easier to agree on) and reported under B6a only.
+MAIN_DS = ["ho-ds-base", "ho-ds-cand", "ho-gm-base", "ho-gm-cand"]
+MAIN_CL = ["hoc-ds-base", "hoc-ds-cand", "hoc-gm-base", "hoc-gm-cand"]
+SEAT_SETS = MAIN_DS + ["ho-xf"] + MAIN_CL + ["hoc-xf"]
 
 
 def fav(v, arm):
@@ -935,7 +1045,7 @@ def measure_judges(o, V, jobs_by_set, A):
     o.put("B2.claude.rate", sum(f) / len(f) if f and len(f) >= 0.9 * exp_n else None)
     # B3: seats, from the jobs as built (the order is fixed by the frozen name).
     from scipy.stats import binomtest
-    for name in MAIN_DS + MAIN_CL:
+    for name in SEAT_SETS:
         jobs = jobs_by_set.get(name)
         if not jobs:
             continue
@@ -950,7 +1060,7 @@ def measure_judges(o, V, jobs_by_set, A):
                 ps.append(binomtest(sum(1 for j in jt if j["left"] == j["pair"][1]), len(jt), 0.5).pvalue)
         o.put(f"B3.{name}.min_trait_p", min(ps) if ps else None)
     # B4: ties per judge over its main sets.
-    for jdg, sets in (("deepseek", MAIN_DS), ("claude", MAIN_CL)):
+    for jdg, sets in (("deepseek", MAIN_DS + ["ho-xf"]), ("claude", MAIN_CL + ["hoc-xf"])):
         vs = [v for v in V if v["judge"] == jdg and v["set"] in sets]
         if not vs:
             continue
@@ -958,23 +1068,27 @@ def measure_judges(o, V, jobs_by_set, A):
         per = [sum(1 for v in vs if v["trait"] == t and v["winner"] is None) / max(1, sum(1 for v in vs if v["trait"] == t)) for t in TRAITS8
                if any(v["trait"] == t for v in vs)]
         o.put(f"B4.{jdg}.max_trait_tie", max(per) if len(per) == len(TRAITS8) else None)
-    # B5: agreement with Claude on the held-out comparisons C uses (and the cross-family pairs).
+    # B5: agreement with Claude on the comparisons C uses (plain against Gravitas, four set pairs).
     M = matched(V, MAIN_DS, MAIN_CL)
     pairs = [(win_label(a), win_label(b)) for a, b in M]
+    by_t = {t: [(win_label(a), win_label(b)) for a, b in M if a["trait"] == t] for t in TRAITS8}
     o.put("B5.n", len(pairs))
-    o.put("B5.kappa", kappa(pairs) if len(pairs) >= B5_MIN_SHARED else None)
-    o.put("B5.direction", direction(pairs) if len(pairs) >= B5_MIN_SHARED else None)
+    o.put("B5.kappa_strat", kappa_strat(by_t) if len(pairs) >= B5_MIN_SHARED else None)
+    o.put("B5.direction", direction(pairs, B5_MIN_TWO_SIDED) if len(pairs) >= B5_MIN_SHARED else None)
+    o.note("B5.kappa_pooled", kappa(pairs) if pairs else None)
     for t in TRAITS8:
-        pt = [(win_label(a), win_label(b)) for a, b in M if a["trait"] == t]
+        pt = by_t[t]
         o.put(f"B5t.{t}.n", len(pt))
         o.put(f"B5t.{t}.kappa", kappa(pt) if len(pt) >= B5_MIN_SHARED else None)
-        o.put(f"B5t.{t}.direction", direction(pt) if len(pt) >= B5_MIN_SHARED else None)
-    # B6a: does DeepSeek lean towards DeepSeek-written answers? ds-plain against gm-plain.
+        o.put(f"B5t.{t}.direction", direction(pt, B5_MIN_TWO_SIDED) if len(pt) >= B5_MIN_SHARED else None)
+        # DeepSeek's favourable share for the Gravitas arm minus Claude's, on this trait (B5t, B6m).
+        lt = [fav(a, a["s2"]) - fav(b, a["s2"]) for a, b in M if a["trait"] == t]
+        o.put(f"B5t.{t}.lean", float(np.mean(lt)) if len(lt) >= B5_MIN_SHARED else None)
+    # B6a (reported only): does DeepSeek lean towards DeepSeek-written answers? ds-plain against gm-plain.
     Mx = matched(V, ["ho-xf"], ["hoc-xf"])
     if Mx:
         d = [fav(a, "ds-plain") - fav(b, "ds-plain") for a, b in Mx]
-        o.put("B6a.n", len(d))
-        o.put("B6a.self_preference", float(np.mean(d)) if len(d) >= 0.9 * len(jobs_by_set.get("hoc-xf", {})) else None)
+        o.note("B6a.self_preference", {"n": len(d), "lean": round(float(np.mean(d)), 4)})
         o.note("B6a.per_trait", {t: round(float(np.mean([fav(a, "ds-plain") - fav(b, "ds-plain") for a, b in Mx if a["trait"] == t])), 3)
                                  for t in TRAITS8 if any(a["trait"] == t for a, _ in Mx)})
     # B6b: does DeepSeek lean towards the Gravitas arm on the comparisons C uses?
@@ -1003,25 +1117,38 @@ def measure_judges(o, V, jobs_by_set, A):
 
 
 def route(o, V):
-    """Which judge's verdicts each (platform, arm, trait) result uses. DeepSeek by default; Claude
-    when DeepSeek disagrees badly on the trait (B5t), leans towards DeepSeek-written answers (B6a,
-    Gemini platform) or leans towards the Gravitas arm (B6b)."""
+    """(source, correction) per (platform, arm, trait).
+
+    Source: DeepSeek by default. A trait where DeepSeek disagrees badly with Claude (B5t: kappa < 0.40
+    or direction < 0.75) moves to Claude only if Claude is no friendlier to Gravitas (lean_t at least
+    -0.05); otherwise it is 'unreliable' (review 2: routing must never pick the friendlier judge).
+    Correction (B6b, B6m): where DeepSeek favours the Gravitas arm more than Claude does beyond +0.05
+    on a (platform, arm), or beyond +0.08 on a Transparency member or Slop, DeepSeek's points on it
+    are moved back by 695 Elo per unit of that lean. A negative lean changes nothing (N10 still needs
+    Claude to show the win)."""
     m = o.m
-    flagged = set()
+    flagged, unreliable = set(), set()
     for t in TRAITS8:
-        k, d = m.get(f"B5t.{t}.kappa"), m.get(f"B5t.{t}.direction")
+        k, d, lt = m.get(f"B5t.{t}.kappa"), m.get(f"B5t.{t}.direction"), m.get(f"B5t.{t}.lean")
         if k is not None and d is not None and (k < 0.40 or d < 0.75):
             flagged.add(t)
-    sp = m.get("B6a.self_preference")
-    sp_fail = sp is not None and abs(sp) > 0.10
+            if lt is None or lt < -0.05:
+                unreliable.add(t)
     R = {}
     for p in PLATFORMS:
         for a in SM.ARMS:
             ln = m.get(f"B6b.{p}.{a}.lean")
-            lean_fail = ln is not None and abs(ln) > 0.10
             for t in TRAITS8:
-                R[(p, a, t)] = "claude" if (t in flagged or (p == "gemini" and sp_fail) or lean_fail) else "deepseek"
-    o.note("routing", {f"{p}.{a}.{t}": s for (p, a, t), s in R.items() if s != "deepseek"})
+                src = "unreliable" if t in unreliable else ("claude" if t in flagged else "deepseek")
+                c = 0.0
+                if src == "deepseek":
+                    lt = m.get(f"B5t.{t}.lean")
+                    cands = [ln if (ln is not None and ln > 0.05) else 0.0]
+                    if t in TRANSPARENCY3 + ["Slop"]:
+                        cands.append(lt if (lt is not None and lt > 0.08) else 0.0)
+                    c = ELO_PER_SHARE * max(cands)
+                R[(p, a, t)] = (src, c)
+    o.note("routing", {f"{p}.{a}.{t}": v for (p, a, t), v in R.items() if v != ("deepseek", 0.0)})
     o.note("B5.flagged", sorted(flagged))
     return R
 
@@ -1046,9 +1173,11 @@ def per_q(VI, sets, judge_name, grav, trait, qids=None, pair=None):
     return dict(out)
 
 
-def index_boot(per_trait, signs, universe, boot, key):
-    """Point, lo, hi of mean(sign * Elo diff) over traits, joint bootstrap over questions (one draw
-    of questions per resample, shared by every member). None if any member has no data."""
+def index_boot(per_trait, signs, universe, boot, key, offsets=None):
+    """Point, lo, hi of mean(sign * Elo diff - offset) over traits, joint bootstrap over questions
+    (one draw of questions per resample, shared by every member). None if any member has no data.
+    `offsets` carries B6b's debiasing in the index's own units."""
+    offsets = offsets or {}
     if not universe or any(sum(n for _, n in per_trait[t].values()) == 0 for t in per_trait):
         return None
     U = sorted(universe)
@@ -1062,14 +1191,14 @@ def index_boot(per_trait, signs, universe, boot, key):
                 S[idx[q]] += s
                 N[idx[q]] += n
         arrs[t] = (S, N)
-    point = float(np.mean([signs[t] * elo_s(arrs[t][0].sum(), arrs[t][1].sum()) for t in arrs]))
+    point = float(np.mean([signs[t] * elo_s(arrs[t][0].sum(), arrs[t][1].sum()) - offsets.get(t, 0.0) for t in arrs]))
     if boot <= 0:
         return {"point": point, "lo": None, "hi": None}
     rng = rng_for(key)
     draws = rng.integers(0, len(U), size=(boot, len(U)))
     acc = np.zeros(boot)
     for t, (S, N) in arrs.items():
-        acc += signs[t] * elo_s(S[draws].sum(1), N[draws].sum(1))
+        acc += signs[t] * elo_s(S[draws].sum(1), N[draws].sum(1)) - offsets.get(t, 0.0)
     acc /= len(arrs)
     return {"point": point, "lo": float(np.percentile(acc, 2.5)), "hi": float(np.percentile(acc, 97.5))}
 
@@ -1154,26 +1283,30 @@ def measure_results(o, V, A, sample_ids, cand_arms, R, labels, boot):
             if not grav:
                 continue
             plain = P["plain"]
-            src = {t: R.get((p, a, t), "deepseek") for t in TRAITS8}
+            src = {t: R.get((p, a, t), ("deepseek", 0.0))[0] for t in TRAITS8}
+            corr = {t: R.get((p, a, t), ("deepseek", 0.0))[1] for t in TRAITS8}
             sets_for = {"deepseek": [f"ho-{short}-{a}"], "claude": [f"hoc-{short}-{a}"]}
             hoc = set(sample_ids["hoc40"])
             # Coverage for Claude-sourced traits.
-            unreliable = set()
+            unreliable = {t for t in TRAITS8 if src[t] == "unreliable"}
             ncl = {t: sum(len(VI.get((s_, "claude", t), [])) for s_ in sets_for["claude"]) for t in TRAITS8}
             o.put(f"R.claude_min_n.{p}.{a}", min(ncl.values()))
             for t in TRAITS8:
                 claude_n[t].append(ncl[t])
                 if src[t] == "claude" and ncl[t] < CLAUDE_MIN_PER_TRAIT:
                     unreliable.add(t)
-            o.note(f"C.{p}.{a}.sources", {t: ("unreliable" if t in unreliable else s) for t, s in src.items()})
+            o.note(f"C.{p}.{a}.sources", {t: ("unreliable" if t in unreliable else s) + (f" -{corr[t]:.0f} Elo" if corr[t] else "")
+                                         for t, s in src.items()})
 
             def pt_for(t, U):
-                return per_q(VI, sets_for[src[t]], src[t], grav, t, U)
+                return per_q(VI, sets_for[src[t]], src[t], grav, t, U) if src[t] in sets_for else {}
 
             def idx(members, U, scope, signs, tag):
                 if any(t in unreliable for t in members):
                     return None
-                return index_boot({t: pt_for(t, U) for t in members}, signs, U, boot, f"{p}|{a}|{scope}|{tag}")
+                # B6b debiasing: favourable Elo minus the correction, in this index's own units.
+                offs = {t: signs[t] * (-1 if t in DOWN else 1) * corr[t] for t in members}
+                return index_boot({t: pt_for(t, U) for t in members}, signs, U, boot, f"{p}|{a}|{scope}|{tag}", offs)
             tsigns = {t: (-1 if t in INVERTED else 1) for t in TRANSPARENCY3}
             for scope in ["all"] + LANGS:
                 U = {q for q in universe_all if scope == "all" or lang_for(q, A) == scope}
@@ -1190,14 +1323,24 @@ def measure_results(o, V, A, sample_ids, cand_arms, R, labels, boot):
                 o.put(f"C.{p}.{a}.trait.{t}.point", res["point"] if res else None)
                 o.put(f"C.{p}.{a}.trait.{t}.lo", res["lo"] if res else None)
                 o.put(f"C.{p}.{a}.trait.{t}.hi", res["hi"] if res else None)
-            # Control slices from the question labels (C7, N1, N7): points only.
-            for gate, trait, sl in (("C7", "Constructive Pushback", "noflaw"), ("N1", "Admits Uncertainty", "settled"), ("N7", "Admits Uncertainty", "open")):
+            # Control slices from the question labels (N1, N7): Admits Uncertainty points. The definition
+            # now calls doubt on a settled answer a TIE, so N1's trait point is kept beside the text
+            # measure (N1h), which is the one that can see a doubt spray.
+            for gate, trait, sl in (("N1", "Admits Uncertainty", "settled"), ("N7", "Admits Uncertainty", "open")):
                 ids = set(slices.get(sl, [])) & universe_all
                 if src[trait] == "claude":
                     ids &= hoc
                 res = idx([trait], ids, sl, {trait: 1}, gate) if ids and trait not in unreliable else None
                 o.put(f"{gate}.{p}.{a}.n", len(ids) if slices else None)
                 o.put(f"{gate}.{p}.{a}.point", res["point"] if res else None)
+            # C7: any challenge to the person (instrument trait, DeepSeek) on questions with nothing to challenge.
+            ids = set(slices.get("noflaw", [])) & universe_all
+            chal = per_q(VI, [f"chal-{short}-{a}"], "deepseek", grav, SM.CHALLENGE, ids)
+            res = index_boot({SM.CHALLENGE: chal}, {SM.CHALLENGE: 1}, ids, 0, None) if ids and chal else None
+            o.put(f"C7.{p}.{a}.n", len(ids) if slices else None)
+            o.put(f"C7.{p}.{a}.point", res["point"] if res else None)
+            cp = idx(["Constructive Pushback"], ids, "noflaw", {"Constructive Pushback": 1}, "C7cp") if ids else None
+            o.note(f"C7.{p}.{a}.constructive_pushback_on_noflaw", cp)
             # N10: Claude's verdicts alone (each judge family on its own).
             for lab, members, signs in (("T", TRANSPARENCY3, tsigns), ("S", ["Slop"], {"Slop": 1})):
                 pt = {t: per_q(VI, sets_for["claude"], "claude", grav, t, hoc) for t in members}
@@ -1208,7 +1351,7 @@ def measure_results(o, V, A, sample_ids, cand_arms, R, labels, boot):
             # question as the unit, over the four index traits in the direction Gravitas aims for.
             ptq = {t: pt_for(t, universe_all) for t in TRANSPARENCY3 + ["Slop"]}
             for scope in ["all"] + LANGS:
-                pos = neg = 0
+                pos = neg = nq = 0
                 for q in universe_all:
                     if scope != "all" and lang_for(q, A) != scope:
                         continue
@@ -1221,13 +1364,17 @@ def measure_results(o, V, A, sample_ids, cand_arms, R, labels, boot):
                         net += -up if t in DOWN else up
                     pos += net > 0
                     neg += net < 0
-                o.put(f"C11.{p}.{a}.{scope}.pos", pos if not unreliable & set(ptq) else None)
-                o.put(f"C11.{p}.{a}.{scope}.neg", neg if not unreliable & set(ptq) else None)
+                    nq += 1
+                ok_ = not unreliable & set(ptq)
+                o.put(f"C11.{p}.{a}.{scope}.pos", pos if ok_ else None)
+                o.put(f"C11.{p}.{a}.{scope}.neg", neg if ok_ else None)
+                o.put(f"C11.{p}.{a}.{scope}.n", nq if ok_ else None)
             # N5: Slop at equal length.
             s_src = src["Slop"]
             U = hoc if s_src == "claude" else universe_all
-            res = slop_length_adjusted(V, sets_for[s_src], s_src, grav, plain, A, U, boot, f"{p}|{a}|N5") if "Slop" not in unreliable else None
-            o.put(f"N5.{p}.{a}.hi", res["hi"] if res else None)
+            res = slop_length_adjusted(V, sets_for[s_src], s_src, grav, plain, A, U, boot, f"{p}|{a}|N5") \
+                if "Slop" not in unreliable and s_src != "unreliable" else None
+            o.put(f"N5.{p}.{a}.hi", (res["hi"] + corr["Slop"]) if res and res["hi"] is not None else None)
             o.note(f"N5.{p}.{a}", res)
     for t in TRAITS8:
         o.put(f"B5t.{t}.claude_min_n", min(claude_n[t]) if len(claude_n[t]) == 4 else None)
@@ -1266,7 +1413,8 @@ def boiler_share(texts_by_q, lang):
     return sum(1 for s in sh.values() if any(df[x] >= thr for x in s)) / n
 
 
-def measure_text(o, A, sample_ids, cand_arms, qrows):
+def measure_text(o, A, sample_ids, cand_arms, qrows, slices=None):
+    slices = slices or {}
     for p, P in PLATFORMS.items():
         universe = sample_ids[P["questions"]]
         gut = 0.6 if p == "deepseek" else 0.38
@@ -1308,10 +1456,20 @@ def measure_text(o, A, sample_ids, cand_arms, qrows):
                         pk = lambda f: (1000.0 * sum(f(x) for x in ms) / chars) if chars else None
                         bold = lambda x: x["m"]["bold"] + x["m"]["lenticular_brackets"]
                         for name, f in (("bold", bold), ("list", lambda x: x["m"]["list_items"]), ("colon", lambda x: x["m"]["colons"]),
-                                        ("nonprose", lambda x: x["fmt"]["nonprose_lines"])):
+                                        ("nonprose", lambda x: x["fmt"]["nonprose_lines"]), ("sep", lambda x: x["fmt"]["sep_lines"]),
+                                        ("italic", lambda x: x["m"]["italics"])):
                             o.put(f"C10.{pre}.{name}_pa.{tag}", pa(f))
                             o.put(f"C10.{pre}.{name}_pk.{tag}", pk(f))
                         o.put(f"C10.{pre}.nonprose_share.{tag}", pa(lambda x: x["fmt"]["nonprose_share"]))
+            # N1h, N7h: hedging measured in the text on the settled and open slices.
+            for tag, sl in (("N1h", "settled"), ("N7h", "open")):
+                if not slices:
+                    continue
+                qs = [q for q in set(slices.get(sl, [])) & set(universe) if A[(grav, q)]["ok"] and A[(plain, q)]["ok"]]
+                for key, which in (("first", "first"), ("ext", "extended")):
+                    for arm, t2 in ((grav, "g"), (plain, "p")):
+                        o.put(f"{tag}.{p}.{a}.{key}.{t2}", float(np.mean([hedge_rate(A[(arm, q)]["text"], qrows[q]["lang"], which) for q in qs]))
+                              if qs else None)
             if True:
                 g_ok = [A[(grav, q)] for q in universe if A[(grav, q)]["ok"]]
                 p_ok = [A[(plain, q)] for q in universe if A[(plain, q)]["ok"]]
@@ -1329,26 +1487,26 @@ def load_labels(o, ledger, sample_ids, qrows, A, cand_arms):
     for r in ledger:
         if r.get("kind") == "labels-import":
             imports[r.get("name")].append(r)
-    files = {"ql": "ql.jsonl", "n3points": "n3points.jsonl", "n3marks": "n3marks.jsonl", "n4": "n4.jsonl", "native": "native.jsonl"}
+    files = {"ql": "ql.jsonl", "ql2": "ql2.jsonl", "n3points": "n3points.jsonl", "n3marks": "n3marks.jsonl", "n4": "n4.jsonl",
+             "native": "native.jsonl"}
     for name, fn in files.items():
         p = DATA / "labels" / fn
         rows = jl(p)
         L[name] = rows
         im = imports.get(name, [])
         o.put(f"N11.labels.{name}.ok", (len(im) == 1 and im[0].get("sha256") == sha_file(p)) if rows is not None else None)
-    crit = DATA / "judging" / SM.CAL_SET / "critic.jsonl"
-    L["critic"] = jl(crit)
-    im = imports.get("critic", [])
-    o.put("N11.labels.critic.ok", (len(im) == 1 and im[0].get("sha256") == sha_file(crit)) if L["critic"] is not None else None)
-    # Question labels -> slices.
-    if L["ql"] is not None:
+    L["critic"] = jl(DATA / "judging" / SM.CAL_SET / f"{SM.CRITIC_JUDGE}.raw.jsonl")
+    # Question labels -> slices. Who made a label is checked by P1 from the transcripts, not by the
+    # row's "labeller" field (the builder's assembler wrote "claude-sonnet-5-5-subagent").
+    if L["ql"] is not None or L["ql2"] is not None:
         got = {}
-        for r in L["ql"]:
-            if r.get("qid") in sample_ids["ql240"] and r.get("labeller") == "claude":
-                x = SM.parse_ql(r.get("raw"))
-                if x:
-                    got[r["qid"]] = x
-        o.put("QL.coverage", len(got) / len(sample_ids["ql240"]))
+        for name, samp in (("ql", "ql240"), ("ql2", "ql270")):
+            for r in L[name] or []:
+                if r.get("qid") in sample_ids[samp]:
+                    x = SM.parse_ql(r.get("raw"))
+                    if x:
+                        got[r["qid"]] = x
+        o.put("QL.coverage", len(got) / len(sample_ids["heldout"]))
         L["slices"] = {"noflaw": [q for q, x in got.items() if not x["flaw"]], "settled": [q for q, x in got.items() if x["settled"]],
                        "open": [q for q, x in got.items() if x["open"]]}
         o.note("QL.slices", {k: len(v) for k, v in L["slices"].items()})
@@ -1367,7 +1525,7 @@ def _present_share(marks, A, arm, qs):
 
 
 def measure_label_gates(o, L, sample_ids, cand_arms, A, V):
-    # N3: key points kept.
+    # N3: key points kept, over the questions marked for both arms (coverage must be complete).
     pts = {r.get("qid"): SM.parse_points(r.get("raw")) for r in (L.get("n3points") or []) if r.get("qid")}
     marks = defaultdict(dict)
     for r in L.get("n3marks") or []:
@@ -1376,40 +1534,35 @@ def measure_label_gates(o, L, sample_ids, cand_arms, A, V):
             mk = SM.parse_marks(r.get("raw"), len(pts[q]))
             if mk:
                 marks[q][r.get("answer_sha")] = mk
+
+    def mk_of(arm, q):
+        a = A.get((arm, q))
+        return marks.get(q, {}).get(sha_text(a["text"])) if a and a["ok"] else None
     n3q = sample_ids["n3_24"]
     if L.get("n3points") is not None and L.get("n3marks") is not None:
         for p, P in PLATFORMS.items():
-            arms = {"plain": P["plain"], "base": P["base"], "aa": P["plain_aa"]}
-            if p in cand_arms:
-                arms["cand"] = cand_arms[p]
-            tot = {}
-            for role, arm in arms.items():
-                c = {"present": 0, "vague": 0, "wrong": 0, "absent": 0}
-                cov = 0
-                for q in n3q:
-                    a = A.get((arm, q))
-                    if not a or not a["ok"]:
-                        continue
-                    mk = marks.get(q, {}).get(sha_text(a["text"]))
-                    if mk:
-                        cov += 1
-                        for x in mk:
-                            c[x] += 1
-                n = sum(c.values())
-                tot[role] = {k: (v / n if n else None) for k, v in c.items()}
-                o.put(f"N3.{p}.{role}.coverage", cov / len(n3q))
             for a in SM.ARMS:
-                if a not in tot:
+                grav = P["base"] if a == "base" else cand_arms.get(p)
+                if not grav:
                     continue
-                for k in ("present", "vague", "wrong"):
-                    o.put(f"N3.{p}.{a}.{k}.g", tot[a][k])
-                    o.put(f"N3.{p}.{a}.{k}.p", tot["plain"][k])
+                paired = [q for q in n3q if mk_of(grav, q) and mk_of(P["plain"], q)]
+                o.put(f"N3.{p}.{a}.coverage", len(paired) / len(n3q))
+                for role, arm in (("g", grav), ("p", P["plain"])):
+                    c = defaultdict(int)
+                    for q in paired:
+                        for x in mk_of(arm, q):
+                            c[x] += 1
+                    n = sum(c.values())
+                    for k in ("present", "vague", "wrong"):
+                        o.put(f"N3.{p}.{a}.{k}.{role}", c[k] / n if n else None)
             for l in LANGS:
                 ql_ = [q for q in n3q if _LANG_CACHE.get(q) == l]
-                o.note(f"N3.{p}.{l}.present", {role: _present_share(marks, A, arm, ql_) for role, arm in arms.items()})
-            if tot["plain"]["present"] is not None and tot["aa"]["present"] is not None:
-                o.note(f"N3.{p}.aa_present_diff", tot["aa"]["present"] - tot["plain"]["present"])
-    # N4: wrong claims and wrong corrections, web-checked.
+                o.note(f"N3.{p}.{l}.present", {role: _present_share(marks, A, arm, ql_) for role, arm in
+                                               (("plain", P["plain"]), ("base", P["base"]), ("aa", P["plain_aa"]))})
+            aa = _present_share(marks, A, P["plain_aa"], n3q)
+            pl = _present_share(marks, A, P["plain"], n3q)
+            o.note(f"N3.{p}.aa_present_diff", (aa - pl) if aa is not None and pl is not None else None)
+    # N4: wrong claims and wrong corrections, web-checked, paired; per answer and per checked claim.
     if L.get("n4") is not None:
         by = {}
         for r in L["n4"]:
@@ -1417,44 +1570,70 @@ def measure_label_gates(o, L, sample_ids, cand_arms, A, V):
             if x:
                 by[(r.get("qid"), r.get("answer_sha"))] = x
         for p, P in PLATFORMS.items():
-            samp = "n4ds12" if p == "deepseek" else "n4gm12"
-            qs = sample_ids[samp]
+            qs = sample_ids["n4ds12" if p == "deepseek" else "n4gm12"]
             for a in SM.ARMS:
                 grav = P["base"] if a == "base" else cand_arms.get(p)
                 if not grav:
                     continue
+                get = lambda arm, q: by.get((q, sha_text((A.get((arm, q)) or {}).get("text") or "")))
+                paired = [q for q in qs if get(grav, q) and get(P["plain"], q)]
+                o.put(f"N4.{p}.{a}.coverage", len(paired) / len(qs))
                 for role, arm in (("g", grav), ("p", P["plain"])):
-                    xs = [by.get((q, sha_text((A.get((arm, q)) or {}).get("text") or ""))) for q in qs]
-                    xs = [x for x in xs if x]
-                    o.put(f"N4.{p}.{a}.coverage.{role}", len(xs) / len(qs))
+                    xs = [get(arm, q) for q in paired]
                     o.put(f"N4.{p}.{a}.wrong.{role}", float(np.mean([x["wrong_claims"] for x in xs])) if xs else None)
                     o.put(f"N4.{p}.{a}.wrong_corrections.{role}", float(np.mean([x["wrong_corrections"] for x in xs])) if xs else None)
-    # A9: forced choice against Emily's seeds, with machine-translated controls.
+                    chk = sum(x["claims_checked"] for x in xs)
+                    o.put(f"N4.{p}.{a}.wrong_per_claim.{role}", (sum(x["wrong_claims"] for x in xs) / chk) if chk else None)
+    # A9: forced choice against Emily's seeds ("reads like Emily's seeds"), per language, with
+    # machine-translated controls checked against their DeepSeek batch and their language.
     if L.get("native") is not None:
         Sx = {"native48": {"rows": jl(DATA / "samples" / "native48.jsonl") or []},
               "native_seeds": {"rows": jl(DATA / "samples" / "native_seeds.jsonl") or []},
               "native_control_sources": {"rows": jl(DATA / "samples" / "native_control_sources.jsonl") or []}}
-        pairs = {x["id"]: x for x in SM.native_pairs(Sx, jl(DATA / "labels" / "native_controls.jsonl") or [])}
-        res = {"test": [], "control": []}
+        ctrl_rows = jl(DATA / "labels" / "native_controls.jsonl") or []
+        pairs = {x["id"]: x for x in SM.native_pairs(Sx, ctrl_rows)}
+        res = {"test": defaultdict(list), "control": defaultdict(list)}
         for r in L["native"]:
             x = pairs.get(r.get("id"))
             c = SM.parse_choice(r.get("raw"))
             if x and c:
-                res[x["kind"]].append(c == x["human_side"])
-        n_ctrl_exp = SM.NATIVE_CONTROLS * len(LANGS)
-        o.put("A9.test_n", len(res["test"]))
-        o.put("A9.test_accuracy", float(np.mean(res["test"])) if len(res["test"]) >= 0.9 * 48 else None)
-        o.put("A9.control_accuracy", float(np.mean(res["control"])) if len(res["control"]) >= 0.9 * n_ctrl_exp else None)
-    # Calibration on the new wording (cal0) and the blind critic.
+                res[x["kind"]][x["lang"]].append(c == x["human_side"])
+        allt = [v for vs in res["test"].values() for v in vs]
+        o.put("A9.test_n", len(allt))
+        o.put("A9.test_accuracy", float(np.mean(allt)) if len(allt) >= 0.9 * 48 else None)
+        for l in LANGS:
+            t_ = res["test"][l]
+            o.put(f"A9.test_accuracy.{l}", float(np.mean(t_)) if len(t_) >= SM.SIZES["native48"][l] - 1 else None)
+        # Controls: the translation is the DeepSeek batch's own text for the frozen prompt, in the target language.
+        outs, ins = {}, {}
+        for f in glob.glob(str(DATA / "batches" / "controls-*.out.jsonl")):
+            outs.update(dshbatch.load(f))
+        for f in glob.glob(str(DATA / "batches" / "controls-*.in.jsonl")):
+            ins.update({r.get("id"): r for r in jl(f) or []})
+        src = {c["id"]: c for c in Sx["native_control_sources"]["rows"]}
+        valid, matched_ = set(), 0
+        for c in ctrl_rows:
+            sc = src.get(c.get("id"))
+            want = SM.CONTROL_TEMPLATE.format(lang_name=SM.LANG_NAME[sc["lang"]], q=sc["from_q"]) if sc else None
+            ok = sc and (ins.get(c["id"]) or {}).get("user") == want and (outs.get(c["id"]) or {}).get("text", "").strip() == str(c.get("q", "")).strip()
+            matched_ += bool(ok)
+            if ok and lang_of(c["q"]) == sc["lang"]:
+                valid.add(c["id"])
+        n_ctrl = SM.NATIVE_CONTROLS * len(LANGS)
+        o.put("A9.controls_from_batch", matched_ / n_ctrl if ctrl_rows else None)
+        o.put("A9.controls_valid", len(valid))
+        cv = [v for r in L["native"] for x in [pairs.get(r.get("id"))] if x and x["kind"] == "control" and x["id"].split("|", 1)[1] in valid
+              for c in [SM.parse_choice(r.get("raw"))] if c for v in [c == x["human_side"]]]
+        o.put("A9.control_accuracy", float(np.mean(cv)) if len(cv) >= 20 else None)
+    # K0: calibration on the new wording (cal0), trait-stratified kappa, and the blind critic on Gemini.
     cal = [v for v in V if v["set"] == SM.CAL_SET]
     by_job = defaultdict(dict)
     for v in cal:
         by_job[v["job"]][v["judge"]] = v
-    pairs = [(win_label(x["deepseek"]), win_label(x["claude"])) for x in by_job.values() if "deepseek" in x and "claude" in x]
-    o.put("K0.n", len(pairs))
-    o.put("K0.kappa", kappa(pairs) if len(pairs) >= 100 else None)
-    gem = [(win_label(x["claude"]), win_label(x["gemini"])) for x in by_job.values() if "claude" in x and "gemini" in x]
-    o.note("K0.claude_gemini_kappa", kappa(gem) if gem else None)
+    both = [x for x in by_job.values() if "deepseek" in x and "claude" in x]
+    by_t = {t: [(win_label(x["deepseek"]), win_label(x["claude"])) for x in both if x["deepseek"]["trait"] == t] for t in TRAITS8}
+    o.put("K0.n", len(both))
+    o.put("K0.kappa_strat", kappa_strat(by_t) if len(both) >= 100 else None)
     for jdg in ("deepseek", "claude"):
         per = []
         for t in TRAITS8:
@@ -1465,9 +1644,9 @@ def measure_label_gates(o, L, sample_ids, cand_arms, A, V):
     if L.get("critic") is not None:
         agree, n = 0, 0
         for r in L["critic"]:
-            v = judge.parse_verdict(r.get("raw"))
+            v = judge.parse_verdict(r.get("verdict"))
             x = by_job.get(r.get("job"), {}).get("claude")
-            if v is None or x is None:
+            if v is None or x is None or r.get("status") != "SUCCESS":
                 continue
             w = {"A": x["left"], "B": x["right"], "TIE": None}[v]
             n += 1
@@ -1479,11 +1658,16 @@ def measure_label_gates(o, L, sample_ids, cand_arms, A, V):
 # ---------------------------------------------------------------------------------------- rule leak
 
 def ngrams(text):
+    """8-character runs of Han and kana; 8-syllable runs of Hangul joined across spaces (Korean words
+    are short and spaced, review 2); 5-word runs of Latin tokens that hold a letter or digit."""
     t = text.lower()
     out = set()
-    for run in re.findall(r"[぀-ヿ㐀-䶿一-鿿가-힯]+", t):
+    for run in re.findall(r"[぀-ヿ㐀-䶿一-鿿]+", t):
         out |= {run[i:i + 8] for i in range(len(run) - 7)}
-    w = re.findall(r"[a-z0-9']+", t)
+    for run in re.findall(r"[가-힯]+(?:\s+[가-힯]+)*", t):
+        run = re.sub(r"\s+", "", run)
+        out |= {run[i:i + 8] for i in range(len(run) - 7)}
+    w = [x for x in re.findall(r"[a-z0-9']+", t) if re.search(r"[a-z0-9]", x)]
     out |= {" ".join(w[i:i + 5]) for i in range(len(w) - 4)}
     return out
 
@@ -1511,7 +1695,7 @@ def measure_rule_leak(o, name, Q):
 
 # ------------------------------------------------------------------------------------ spend and hours
 
-def measure_spend(o, ledger):
+def measure_spend(o, ledger, F=None):
     usd = 0.0
     found = False
     for p in glob.glob(str(DATA / "batches" / "*.out.jsonl")):
@@ -1539,7 +1723,19 @@ def measure_spend(o, ledger):
                 web += len(((e.get("input") or {}).get("queries") or [None])) if e.get("tool") == "web_search" else 1
         found = True
         usd += dshbatch.cost_usd(u) + 0.75 / 1000 * web
-    o.put("D5.deepseek_usd", usd if found else None)
+    # The independent instrument: the DeepSeek account balance Emily reads before stage 2 and after the
+    # last run. Spend is the larger of the record sum and the balance drop; without both readings, missing.
+    before = (F or {}).get("deepseek_balance_before_usd")
+    after = None
+    if BALANCE_AFTER.exists():
+        try:
+            after = json.loads(BALANCE_AFTER.read_text(encoding="utf-8")).get("usd")
+        except ValueError:
+            after = None
+    drop = (before - after) if finite(before) and finite(after) else None
+    o.note("D5.records_usd", usd if found else None)
+    o.note("D5.balance_drop_usd", drop)
+    o.put("D5.deepseek_usd", max(usd, drop) if found and drop is not None else None)
     peak = 0
     n = 0
     for r in ledger:
@@ -1552,6 +1748,265 @@ def measure_spend(o, ledger):
             n += 1
             peak += dshbatch.is_peak(t)
     o.put("D5.peak_launches", peak if n else None)
+
+
+# ------------------------------------------------------------------- P1, P2: provenance and order
+
+LABEL_UNITS = {"ql": "qid", "ql2": "qid", "native": "id", "n3points": "qid", "n3marks": ("qid", "answer_sha"),
+               "n4": ("qid", "answer_sha")}
+CLAUDE_SETS = ["hoc-ds-base", "hoc-ds-cand", "hoc-gm-base", "hoc-gm-cand", "hoc-xf", "swapc"]
+
+
+def npath(x):
+    return str(x).replace("/", "\\").lower()
+
+
+def keyof(row, key):
+    return tuple(row.get(k) for k in key) if isinstance(key, tuple) else row.get(key)
+
+
+def scan_originals():
+    """{normalised input path: {agentId}} over every Claude Code subagent transcript on this machine
+    whose first message is a labelling wrapper (re-rolls show up as two agents for one batch)."""
+    out = defaultdict(set)
+    root = str(CLAUDE_PROJECTS.resolve() if CLAUDE_PROJECTS.exists() else CLAUDE_PROJECTS)
+    if os.name == "nt" and not root.startswith("\\\\?\\"):
+        root = "\\\\?\\" + root
+    if not os.path.isdir(root):
+        return out
+    for proj in os.scandir(root):
+        if not proj.is_dir():
+            continue
+        for sess in os.scandir(proj.path):
+            sub = os.path.join(sess.path, "subagents")
+            if not sess.is_dir() or not os.path.isdir(sub):
+                continue
+            for f in os.scandir(sub):
+                if not f.name.endswith(".jsonl"):
+                    continue
+                try:
+                    with open(f.path, encoding="utf-8") as fh:
+                        first = json.loads(fh.readline())
+                except (OSError, ValueError):
+                    continue
+                c = (first.get("message") or {}).get("content")
+                if isinstance(c, str) and "Your only job is to answer" in c:
+                    m = re.search(r"Input: (\S+?\.prompts\.jsonl)\.", c)
+                    if m:
+                        out[npath(m.group(1))].add(first.get("agentId") or f.name)
+    return out
+
+
+def check_transcript(rows, kind, inp, outp):
+    """(ok, reason) for one labelling subagent's transcript against the frozen wrapper and tools."""
+    if not rows or rows[0].get("type") != "user":
+        return False, "no first user message"
+    t = (rows[0].get("message") or {}).get("content")
+    if not isinstance(t, str):
+        return False, "first message is not text"
+    mi, mo, mn = re.search(r"Input: (\S+?\.prompts\.jsonl)\.", t), re.search(r"Output: write (\S+?\.raw\.jsonl) ", t), \
+        re.search(r"answer (\d+) separate", t)
+    if not (mi and mo and mn) or npath(mi.group(1)) != npath(inp) or npath(mo.group(1)) != npath(outp):
+        return False, "wrapper names another file"
+    if SM.wrapper_text(kind, mn.group(1), mi.group(1), mo.group(1)) != t:
+        return False, "wrapper differs from the frozen text"
+    allowed = SM.WRAPPER_TOOLS.get(SM.WRAPPER_OF[kind], SM.DEFAULT_TOOLS)
+    last_write, n_asst = None, 0
+    for r in rows:
+        if r.get("type") != "assistant":
+            continue
+        n_asst += 1
+        msg = r.get("message") or {}
+        if not str(msg.get("model") or "").startswith(SM.CLAUDE_MODEL):
+            return False, f"model {msg.get('model')}"
+        for x in msg.get("content") or []:
+            if x.get("type") != "tool_use":
+                continue
+            name, inpt = x.get("name"), x.get("input") or {}
+            if name not in allowed:
+                return False, f"tool {name}"
+            if name == "Read" and npath(inpt.get("file_path")) != npath(inp):
+                return False, "read another file"
+            if name == "Write":
+                if npath(inpt.get("file_path")) != npath(outp):
+                    return False, "wrote another file"
+                last_write = inpt.get("content")
+            if name == "Bash":
+                for tok in re.findall(r"[A-Za-z]:[\\/][^\s\"']+", inpt.get("command") or ""):
+                    if npath(tok) not in (npath(inp), npath(outp)):
+                        return False, "bash touched another file"
+    if not n_asst or last_write is None:
+        return False, "no write"
+    on_disk = Path(outp).read_text(encoding="utf-8") if Path(outp).exists() else None
+    if on_disk is None or on_disk.replace("\r\n", "\n").rstrip("\n") != last_write.replace("\r\n", "\n").rstrip("\n"):
+        return False, "raw file differs from what the subagent wrote"
+    return True, "ok"
+
+
+def measure_provenance(o, ledger, cand_name, jobs_by_set):
+    """P1: every Claude label came from one Sonnet 5.5 subagent per batch, given the frozen wrapper
+    and the frozen prompts, and was imported unedited. The critic's verdicts came from one Gemini
+    3.8 Flash run per job (judge_agy's own ledger line and transcript)."""
+    copies = defaultdict(list)
+    for r in ledger:
+        if r.get("kind") == "labeller-transcript":
+            copies[r.get("batch")].append(r)
+    originals = scan_originals()
+    qs = None
+    units = [(k, "label") for k in LABEL_UNITS] + [(s_, "judge") for s_ in [SM.CAL_SET] + CLAUDE_SETS]
+    for unit, typ in units:
+        if typ == "label":
+            key = LABEL_UNITS[unit]
+            folder, prefix, kind = DATA / "labels", f"{unit}.batch", unit
+            try:
+                expected = {keyof(r, key): r for r in SM.export_rows(unit, cand_name)}
+            except Exception:  # noqa: BLE001 - a prompt that cannot be rebuilt is not covered
+                expected = {}
+            imported = {keyof(r, key): r.get("raw") for r in jl(folder / f"{unit}.jsonl") or []}
+            raw_field = "raw"
+        else:
+            key = "job"
+            folder, prefix, kind = DATA / "judging" / unit, "claude.batch", "judge"
+            jobs = jobs_by_set.get(unit) or {}
+            if qs is None:
+                qs = judge.load_questions()
+            expected = {}
+            got_jobs = {j["job"]: j for j in jl(folder / "jobs.jsonl") or [] if "job" in j}
+            for k in jobs:
+                try:
+                    expected[k] = {"job": k, "prompt": judge.prompt_for(got_jobs[k], qs)}
+                except (KeyError, SystemExit, TypeError):
+                    pass
+            imported = {r.get("job"): r.get("raw") for r in jl(folder / "claude.jsonl") or []}
+            raw_field = "verdict"
+        batches = sorted(folder.glob(f"{prefix}*.prompts.jsonl"))
+        if not batches:
+            continue
+        seen, ok_b, problems = defaultdict(int), 0, []
+        n_expected = len(SM.export_rows(unit, cand_name)) if typ == "label" else len(jobs_by_set.get(unit) or {})
+        for b in batches:
+            name = b.name[: -len(".prompts.jsonl")]
+            raw_path = folder / f"{name}.raw.jsonl"
+            batch_id = (f"{name}" if typ == "label" else f"{unit}.{name}")
+            prompts = jl(b) or []
+            raws = {keyof(r, key): r.get(raw_field) for r in jl(raw_path) or []}
+            good = True
+            for r in prompts:
+                k = keyof(r, key)
+                seen[k] += 1
+                e = expected.get(k)
+                if e is None or any(r.get(f) != e.get(f) for f in e):
+                    good = False
+                if raws.get(k) is None or imported.get(k) != raws.get(k):
+                    good = False
+            agents = {c.get("agent_id") for c in copies.get(batch_id, [])} | originals.get(npath(b), set())
+            tr = None
+            for c in copies.get(batch_id, []):
+                if sha_file(c.get("transcript")) == c.get("sha256"):
+                    tr = jl(c.get("transcript"))
+            if len(agents) != 1 or tr is None:
+                good = False
+                problems.append(f"{batch_id}: {len(agents)} labelling agents, transcript {'found' if tr else 'missing'}")
+            else:
+                ok_t, why = check_transcript(tr, kind, b, raw_path)
+                if not ok_t:
+                    good = False
+                    problems.append(f"{batch_id}: {why}")
+            ok_b += good
+        o.put(f"P1.{unit}.batches_ok", ok_b / len(batches))
+        covered = sum(1 for k in expected if seen.get(k) == 1)
+        o.put(f"P1.{unit}.coverage", covered / n_expected if n_expected and len(seen) == covered else (0.0 if n_expected else None))
+        o.note(f"P1.{unit}.problems", problems[:10])
+    # The critic on Gemini 3.8 Flash.
+    crit_raw = jl(DATA / "judging" / SM.CAL_SET / f"{SM.CRITIC_JUDGE}.raw.jsonl")
+    if crit_raw is not None:
+        expected = {r["job"]: r["prompt"] for r in SM.export_rows("critic")}
+        given = {r.get("job"): r.get("prompt") for r in jl(DATA / "judging" / SM.CAL_SET / f"{SM.CRITIC_JUDGE}.prompts.jsonl") or []}
+        runs = defaultdict(list)
+        for r in ledger:
+            if r.get("kind") == "judge-agy-run" and r.get("job") in expected:
+                runs[r["job"]].append(r)
+        ok = 0
+        for row in crit_raw:
+            k = row.get("job")
+            succ = [r for r in runs.get(k, []) if r.get("status") == "SUCCESS" and r.get("judge_clean")]
+            data = db_bytes(succ[0].get("conversation_id")) if len(succ) == 1 else None
+            trait = k.split("|")[1] if k and "|" in k else ""
+            ok += bool(k in expected and given.get(k) == expected[k] and len(succ) == 1 and succ[0].get("raw_sha256") == sha_text(row.get("verdict"))
+                       and data is not None and SM.CRITIC_MODEL.encode() in data and f"on one trait: {trait}".encode() in data)
+        o.put("P1.critic.batches_ok", ok / len(crit_raw) if crit_raw else None)
+        o.put("P1.critic.coverage", len({r.get("job") for r in crit_raw} & set(expected)) / len(expected) if expected else None)
+
+
+def measure_order(o, ledger, heldout_ids, jobs_by_set):
+    """P2: Claude's labels were made before the builder could see what they needed to be."""
+    def t_of(kind, name, jdg=None):
+        ts = [parse_time(r.get("time")) for r in ledger if r.get("kind") == kind and r.get("name") == name and (jdg is None or r.get("judge") == jdg)]
+        ts = [t for t in ts if t is not None]
+        return min(ts) if ts else None
+    cal_cl, cal_ds = t_of("judge-import", SM.CAL_SET, "claude"), t_of("judge-run", SM.CAL_SET, "deepseek")
+    o.put("P2.cal_claude_before_deepseek", (cal_cl < cal_ds) if cal_cl and cal_ds else None)
+    for x in ("ds-base", "ds-cand", "gm-base", "gm-cand", "xf"):
+        a, b = t_of("judge-import", f"hoc-{x}", "claude"), t_of("judge-run", f"ho-{x}", "deepseek")
+        o.put(f"P2.hoc_{x}_before_ho", (a < b) if a and b else None)
+    first_ho = min([r["start"] for r in ledger if r.get("kind") == "answer-launch" and r.get("qid") in heldout_ids and finite(r.get("start"))],
+                   default=None)
+    qls = [t_of("labels-import", n) for n in ("ql", "ql2")]
+    o.put("P2.labels_before_heldout", all(t is not None for t in qls) and first_ho is not None and max(qls) < first_ho
+          if first_ho is not None and all(t is not None for t in qls) else None)
+    ct = o.detail.get("confirm_time")
+    o.put("P2.confirm_before_cal_claude", (ct < cal_cl) if ct and cal_cl else None)
+    builds = [parse_time(r.get("time")) for r in ledger if r.get("kind") == "judge-build" and r.get("name") in SM.SETS
+              and r.get("name") not in SM.CAL_SETS]
+    builds = [t for t in builds if t is not None]
+    crit_jobs = {r["job"] for r in SM.export_rows("critic")} if (DATA / "judging" / SM.CAL_SET / "jobs.jsonl").exists() else set()
+    crit = [parse_time(r.get("time")) for r in ledger if r.get("kind") == "judge-agy-run" and r.get("job") in crit_jobs]
+    crit = [t for t in crit if t is not None]
+    if builds and cal_cl and crit:
+        o.put("P2.calibration_before_heldout_judging", max([cal_cl] + crit) < min(builds))
+
+
+def measure_versions(o, lists, cand_name):
+    """D6: the agy version of every Gemini run, read from each home's per-run logs after stage 2."""
+    t2 = stage2_time()
+    if t2 is None:
+        return
+    homes = [d for d in (DATA / "agy").glob("home-*") if d.is_dir()]
+    vers = set()
+    for h in homes:
+        for f in (h / ".gemini" / "antigravity-cli" / "log").glob("cli-*.log"):
+            m = re.match(r"cli-(\d{8})_(\d{6})\.log$", f.name)
+            if not m:
+                continue
+            t = datetime.datetime.strptime(m.group(1) + m.group(2), "%Y%m%d%H%M%S").timestamp()
+            if t < t2:
+                continue
+            vers |= set(re.findall(r"Language server version: (\S+)", f.read_text(encoding="utf-8", errors="replace")))
+    o.put("D6.agy_versions", len(vers) if vers else None)
+    o.note("D6.agy_versions", sorted(vers))
+
+
+def measure_frozen_inputs(o, cand_name):
+    """D4 extensions: every DeepSeek judge call ran on deepseek-flash; each candidate agy home equals
+    its base home apart from the rule file; GRAV_LINK's working tree is clean."""
+    bad = n = 0
+    for name, spec in SM.active_sets().items():
+        if "deepseek" not in spec["judges"]:
+            continue
+        for r in jl(DATA / "batches" / f"judge-{name}.out.jsonl") or []:
+            n += 1
+            bad += r.get("model") != "deepseek-flash"
+    o.put("D4.judge_model_ok", (bad == 0) if n else None)
+    if cand_name:
+        rule = "plugins/gravitas/rules/AGENTS.md"
+        res = []
+        for g in GLANG.values():
+            ch, bh = DATA / "agy" / f"home-grav-{cand_name}-{g}" / ".gemini" / "config", DATA / "agy" / f"home-grav-{g}" / ".gemini" / "config"
+            if ch.exists():
+                res.append(tree_sha(ch, exclude=(rule,)) == tree_sha(bh, exclude=(rule,)))
+        o.put("D4.cand_home_ok", all(res) if len(res) == len(GLANG) else None)
+    st = git("status", "--porcelain", cwd=GRAV_LINK)
+    o.put("D2.grav_link_clean", (st.strip() == "") if st is not None else None)
 
 
 # ---------------------------------------------------------------------------------------- self-test
@@ -1584,6 +2039,13 @@ def self_test():
     assert lang_of("My landlord kept the whole deposit for normal wear, can he do that in Ontario?") == "en"
     assert lang_of("我用Python的pandas库读取CSV文件时报错了怎么办") == "zh"
     assert lang_of("") == "und"
+    if lingua_detector() is not None:
+        for q, want in (("腰の痛み、病院に行くべき？", "ja"), ("這個問題的答案是肯定的，因為我們說過了", "zh-Hant"), ("这个问题的答案是肯定的", "zh"),
+                        ("Combien dois-je laisser de pourboire au restaurant?", "latin-other"), ("퇴직금은 얼마나 받을 수 있나요?", "ko"),
+                        ("Does deleting files free up RAM straight away?", "en")):
+            assert question_lang(q) == want, (q, question_lang(q))
+    else:
+        print(f"note: lingua {LINGUA_VERSION} not importable here, question_lang untested (run under DATA/venv)")
     # Kappa and direction.
     assert kappa([]) is None and direction([("tie", "tie")]) is None
     assert abs(kappa([("s1", "s1"), ("s2", "s2"), ("tie", "tie")]) - 1.0) < 1e-9
@@ -1613,8 +2075,15 @@ def self_test():
     o.put("y", float("inf"))
     o.put("z", np.float64(1.5))
     assert o.m == {"x": None, "y": None, "z": 1.5}
-    # Rule-leak n-grams.
+    # Rule-leak n-grams: Han, joined Hangul, no apostrophe-only tokens.
     assert "住房公积金管理" not in ngrams("住房公积金管理中心") and "住房公积金管理中" in ngrams("住房公积金管理中心")
+    assert "주택청약종합저축" in ngrams("주택청약 종합저축 월 납입액은 얼마인가요") and ngrams("' ' ' ' '") == set()
+    # Stratified kappa: two traits each with a shared effect but no item agreement -> about 0.
+    tr = {"T1": [("s2", "s2")] * 8 + [("s2", "s1"), ("s1", "s2")], "T2": [("s1", "s1")] * 8 + [("s1", "s2"), ("s2", "s1")]}
+    assert kappa_strat(tr) < kappa([x for v in tr.values() for x in v])
+    assert direction([("s1", "s1")] * 29, 30) is None and direction([("s1", "s1")] * 30, 30) == 1.0
+    # Separator lines: the list kept without its markers.
+    assert format_shape("费用——每晚约五百日元。\n交通——地铁十分钟。\n这是一句普通的话。")["sep_lines"] == 2
     print("measure_all self-test: ok")
 
 

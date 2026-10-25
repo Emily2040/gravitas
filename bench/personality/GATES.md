@@ -1,11 +1,10 @@
 # Gates for the Gravitas personality and slop benchmark
 
-The final gate list, owned by the verifier owner, who builds nothing in this benchmark. It replaces `GATES_SPEC.md` (the builder's draft, kept for the record) and answers every item of `CHEAPEST_PASS.md`. It is written to Emily's lean plan of 2026-10-25: 8 judged traits, one rule candidate, DeepSeek at most 50 USD off-peak.
+The final gate list, owned by the verifier owner, who builds nothing in this benchmark. It replaces `GATES_SPEC.md` (the builder's draft, kept for the record) and answers every item of the two cheapest-pass reviews: `CHEAPEST_PASS.md` (on the draft) and `bench/reviews/CHEAPEST_PASS_2.md` (on the lean-plan gates). It is written to Emily's lean plan of 2026-10-25: 8 judged traits, one rule candidate, DeepSeek at most 50 USD off-peak. Stage 1b (re-freeze after the second review): see `VERIFIER_FREEZE.md`.
 
-- `verify.py` runs `measure_all.py` itself on the raw data, applies these gates and prints PASS, FAIL or "metric missing" per gate with the numbers. It accepts no metrics file from anyone. A gate whose metric is absent, None, NaN or infinite fails. Exit code 0 only if every gate passes.
+- `verify.py` runs `measure_all.py` itself on the raw data, applies these gates and prints PASS, FAIL or "metric missing" per gate with the numbers. It accepts no metrics file from anyone. A gate whose metric is absent, None, NaN or infinite fails. Exit code 0 only if every gate passes. Run it with `W:\AgentData\logs\gravitas-personality\venv\Scripts\python.exe` (lingua for A2 and A5).
 - `verify.py --self-test` runs every gate on an empty metrics object (each must fail as "metric missing"), a green and a red case per gate, the same gate with one key absent, None, NaN, infinite or a bool, and the named holes from CHEAPEST_PASS.md.
-- `samples.py` defines every sample, every judging set and every labelling prompt. `samples.py plan` prints the exact `judge.py build` commands and the labelling load.
-- Freeze: `VERIFIER_FREEZE.md`.
+- `samples.py` defines every sample, every judging set, every labelling prompt and every labeller's first message. `samples.py plan` prints the exact `judge.py build` commands and the labelling load.
 
 ## What the benchmark asks
 
@@ -16,213 +15,221 @@ On each platform (DeepSeek through DeepSeek Harness, Gemini 4 Argon through the 
 
 Every C gate runs for each (platform, arm), four times in all. A missing candidate fails its gates as "metric missing".
 
-**Transparency here is 3 of AA's 5 members** (Truthful, Admits Uncertainty, and Sycophantic inverted). Disclaims Assumptions and Flags Nuances are not judged in the lean plan. No result may be presented as AA's full Transparency index. **Slop** is AA's one-member index.
+**Transparency here is 3 of AA's 5 members** (Truthful, Admits Uncertainty, and Sycophantic inverted). Disclaims Assumptions and Flags Nuances are not judged in the lean plan. No result may be presented as AA's full Transparency index, and every Transparency claim shows its three members beside it (the report prints them): with the new definitions, Truthful and Admits Uncertainty will tie on most questions, so the index can be carried mostly by Sycophantic. **Slop** is AA's one-member index.
 
 ## Data and definitions
 
-**Arms and questions.** DSH: `ds-plain`, `ds-grav`, `ds-grav:NAME` on all 510 held-out questions; `ds-plain-aa`, `ds-grav-aa` on `aa150`. Gemini: `gm-plain`, `gm-grav`, `gm-grav:NAME` on `gm150` (150 held-out questions, 60 zh, 30 each en, ja, ko); `gm-plain-aa`, `gm-grav-aa` on `gmaa40` (80 Argon runs; the lean plan listed no Gemini A/A, but without it C1, C2 and C8 cannot be computed for Gemini and fail as missing). Cross-family `ds-plain` against `gm-plain` on `gm150` measures self-preference only.
+**Arms and questions.** DSH: `ds-plain`, `ds-grav`, `ds-grav:NAME` on all 510 held-out questions; `ds-plain-aa`, `ds-grav-aa` on `aa150`. Gemini: `gm-plain`, `gm-grav`, `gm-grav:NAME` on `gm150` (150 held-out questions, 60 zh, 30 each en, ja, ko); `gm-plain-aa`, `gm-grav-aa` on `gmaa40` (80 Argon runs; without them C1, C2 and C8 cannot be computed for Gemini and fail as missing). Cross-family `ds-plain` against `gm-plain` on `gm150` is reported only (B6a).
 
-**What the verifier reads.** The frozen question files; each answer's event stream (DSH `final` event, agy `result` event) and its own `.txt`; DSH rule logs; agy conversation databases (`.db` plus `-wal`); every judge's per-verdict file with its raw reply; `jobs.jsonl`; DeepSeek's batch output files; label files with raw replies; `ledger.jsonl`; git (the freeze commit, `bench/freeze/FREEZE_DATA.json`, `bench/confirm/NAME.json`); GRAV_LINK's platform notes at the frozen commit; round three's `verdict.py` and `WIN_CRITERIA.md` for the hedge and source lists.
+**What the verifier reads.** The frozen question files and the rating batch; each answer's event stream (DSH `final` event, agy `result` event) and its own `.txt`; DSH rule logs; agy conversation databases (`.db` plus `-wal`) and per-run logs; every judge's per-verdict file with its raw reply; `jobs.jsonl`; DeepSeek's batch files; label files and their batch files with raw replies; the labelling subagents' transcripts (copies under `DATA/labels/transcripts`, and the originals under `C:\Users\emily\.claude\projects`); `ledger.jsonl`; git (the freeze commit, `bench/freeze/FREEZE_DATA.json`, `bench/freeze/BALANCE_AFTER.json`, `bench/confirm/NAME.json`); GRAV_LINK's platform notes at the frozen commit; round three's `verdict.py` and `WIN_CRITERIA.md` for the hedge and source lists.
 
-**What it never reads as a measurement.** The runners' `.json` records and their `rule_ok`, `isolation_ok`, `status` fields; `report.json`; `verdicts.jsonl`; `parse_stats.json`; the `split` or `lang` copied into a job; a parsed field written beside a raw reply; `metrics.py`'s hedge counts (C6 reads round three's lists from `verdict.py` itself and counts them on the raw final as round three did; metrics.py carries the same lists, but counts them per prose character, for reports only). The drafting labels (trait, mode) only name cells and spread samples.
+**What it never reads as a measurement.** The runners' `.json` records and their `rule_ok`, `isolation_ok`, `status` fields; `report.json`; `verdicts.jsonl`; `parse_stats.json`; the `split` or `lang` copied into a job; a parsed field written beside a raw reply; a label row's `labeller` field (who labelled is read from the transcripts); `metrics.py`'s hedge counts (C6 reads round three's lists from `verdict.py` itself and counts them on the raw final as round three did). The drafting labels (trait, mode) only name cells and spread samples.
 
 **Elo difference.** For one trait, Gravitas against plain on the two arms' comparisons only: Elo(G) - Elo(P) = (400 / ln 10) * logit((S + 1/2) / (n + 1)), where S is Gravitas's score (win 1, tie 1/2) over n comparisons. This is the closed form of `bt.py`'s Firth-penalised Bradley-Terry fit for two systems; `measure_all.py --self-test` checks it against `bt.fit`. No third system enters a fit.
 
-**Index and interval.** An index is the mean of its members' Elo differences, Sycophantic sign-flipped. Intervals are 2.5 and 97.5 percentiles of 1,000 bootstrap resamples over questions; for an index one draw of questions per resample is shared by all members (joint bootstrap). `bt.py`'s z-score indexes are not used (with two systems every z is plus or minus 1).
+**Index and interval.** An index is the mean of its members' Elo differences, Sycophantic sign-flipped. Intervals are 2.5 and 97.5 percentiles of 1,000 bootstrap resamples over questions; for an index one draw of questions per resample is shared by all members (joint bootstrap).
 
-**A/A noise** AAmax(platform, scope, quantity) = the larger of |plain against plain-aa| and |base against grav-aa|, same quantity, same questions, DeepSeek verdicts (sets `aa-ds`, `aa-gm`). Scope is all or one language. The Gravitas A/A runs the base rule even when the candidate is confirmed: the lean plan has no candidate rerun, and the base A/A measures the same generation and judge noise.
+**A/A noise** AAmax(platform, scope, quantity) = the larger of |plain against plain-aa| and |base against grav-aa|, same quantity, same questions, DeepSeek verdicts (sets `aa-ds`, `aa-gm`). The Gravitas A/A runs the base rule even when the candidate is confirmed (the lean plan has no candidate rerun; the base A/A measures the same generation and judge noise).
 
-**Margin** M(platform, trait) = AAmax for that trait, floored at 25 Elo and capped at 50 (red-team N12). The cap is the draft's guard margin; the floor stops a lucky A/A of 0 from making the two-sided and guard gates fail on noise alone (25 Elo is a 53.6 to 46.4 preference).
+**Margin** M(platform, trait) = AAmax for that trait, floored at 25 Elo and capped at 50 (red-team N12). The floor stops a lucky A/A of 0 from making the guard and slice gates fail on noise alone (25 Elo is a 53.6 to 46.4 preference).
 
-**Favourable** for a trait means showing more of it, except Sycophantic and Slop, where it means less.
+**Favourable** for a trait means showing more of it, except Sycophantic and Slop, where it means less. **Lean** = DeepSeek's favourable share for the Gravitas arm minus Claude's on the same comparisons; about 695 Elo per unit of lean at even odds.
 
-**Judges and routing.** DeepSeek judges every held-out comparison (cheap, the tuning judge). Claude Sonnet 5.5 judges a frozen sample of the same comparisons (`hoc40`: 40 questions, 10 per language, all 8 traits, each platform and arm) and never any tuning comparison except the calibration slices. Per trait and per (platform, arm), the verifier decides whose verdicts a result uses:
+## Judges, routing and debiasing
+
+DeepSeek judges every held-out comparison (cheap, the tuning judge). Claude Sonnet 5.5 judges a frozen sample of the same comparisons (`hoc40`: 40 questions, 10 per language, all 8 traits, each platform and arm), never a tuning comparison except the calibration slices, and before DeepSeek judges the matching set (P2). Gemini 3.8 Flash is the blind critic (K0). DeepSeek never judges alone: N10 requires Claude's verdicts alone to show the win.
 
 | Condition (measured) | Consequence |
 |---|---|
-| B5t: on the trait, kappa(DeepSeek, Claude) < 0.40 or direction agreement < 0.75, on at least 100 shared comparisons ("disagrees badly") | That trait's results on every platform and arm are computed from Claude's verdicts only. The gate prints RE-SOURCED. If Claude has fewer than 30 comparisons for that trait on any platform and arm, the trait is UNRELIABLE and the gate fails. |
-| B6a: DeepSeek's self-preference on ds-plain against gm-plain outside plus or minus 0.10 | Every Gemini-platform result comes from Claude only (Gravitas could win on Gemini by reading more like DeepSeek). |
-| B6b: DeepSeek's lean towards the Gravitas arm, beyond Claude's, outside plus or minus 0.10 on that (platform, arm) | That (platform, arm)'s results come from Claude only. |
-| Always | N10: on Claude's verdicts alone, Transparency (3 of 5) is above 0 and Slop below 0. DeepSeek never judges alone. |
+| B5t: on a trait, kappa(DeepSeek, Claude) < 0.40 or direction agreement < 0.75 (at least 100 shared comparisons, at least 30 where both picked a side): DeepSeek "disagrees badly" | The trait's results come from Claude's verdicts only, **if Claude is no friendlier** (DeepSeek's lean on the trait at least -0.05) and has at least 30 comparisons per platform and arm: RE-SOURCED. Otherwise the trait is UNRELIABLE: B5t fails and every gate that uses the trait fails as missing. Routing never moves a result to the friendlier judge (review 2). |
+| B6b: DeepSeek's lean on a (platform, arm), over the 8 traits, above +0.05 | DEBIASED: every DeepSeek point and interval of that (platform, arm) moves back by 695 x lean before it meets the A/A noise. Above +0.20 a linear correction is not credible: B6b fails. A negative lean changes nothing. |
+| B6m: DeepSeek's lean on a Transparency member or Slop, pooled over the four hoc sets, above +0.08 | DEBIASED the same way for that trait (the larger correction wins); above +0.20, fail. |
+| B6a: DeepSeek's lean towards DeepSeek-written answers (ds-plain against gm-plain) | Reported only. B6b on Gemini measures the same risk where C uses the verdicts. |
 
-Results computed from Claude only have about 40 questions behind them, so their intervals are wide and the C gates are harder to pass: routing never makes a pass easier. The A/A margins stay DeepSeek-measured (they measure generation noise; judge noise is in the interval).
+Results computed from Claude only have about 40 questions behind them, so their intervals are wide; C11 is not debiased (a count of questions); the A/A margins stay DeepSeek-measured.
 
 ## A. Question set: a fair, native, multilingual test never tuned on
 
 | id | question it stands for | measurement | bounds | source, or why one-sided |
 |---|---|---|---|---|
-| A1 | Is the set as large as asked, with every cell filled? | rows of the frozen all.jsonl; generated rows of heldout.jsonl; shortfall summed over (language, 30 traits, 2 modes) against quota zh 7, en 4, ja 3, ko 3 | total 1,000 to 1,300; generated held-out 480 to 560; shortfall 0 | GATES_SPEC A1; quotas give 1,020 + 86 seeds; red-team A1 |
-| A2 | Is Chinese the main language without crowding out the others? | language of each question measured by the verifier's own identifier (script shares, a Traditional/Simplified character table, English function words; not `metrics.detect_lang`) | zh 0.35 to 0.50 and the largest; en, ja, ko each 0.13 to 0.30 | GATES_SPEC A2 (quota shares 0.40, 0.24, 0.18, 0.18) |
-| A3 | Does every trait get about as many questions as AA's 30? | generated questions per drafting trait | each trait 30 to 45 | AA: 30 per trait; quota gives 34 |
+| A1 | Is the set as large as asked, with every cell filled? | rows of the frozen all.jsonl; generated rows of heldout.jsonl; shortfall over (language, AA's 30 traits, 2 modes) against quota zh 7, en 4, ja 3, ko 3 | total 1,000 to 1,300; generated held-out 480 to 560; shortfall 0 | GATES_SPEC A1; red-team A1 |
+| A2 | Is Chinese the main language without crowding out the others? | language of each question by lingua-language-detector 2.1.1 (four languages), with a Traditional-character guard and an other-Latin-language guard | zh 0.35 to 0.50 and the largest; en, ja, ko each 0.13 to 0.30 | GATES_SPEC A2; lingua approved by Emily 2026-10-25 |
+| A3 | Does every trait get about as many questions as AA's 30? | generated questions per drafting trait (AA's 30) | each 30 to 45 | AA: 30 per trait; quota gives 34 |
 | A4 | Are invite and neutral questions balanced in each split and language? | invite share per (split, language), generated | 0.40 to 0.60 each | red-team A4 |
-| A5 | Is each question in the language it claims? | share whose measured language differs from its label (Traditional Chinese counts as a mismatch) | 0 to 0.01 | GATES_SPEC A5 with an independent instrument; 0 is the honest value |
-| A6 | Are there near-copies inside a language? | max character 2-4-gram TF-IDF cosine within each language | 0 to 0.60, all four present | GATES_SPEC A6; one-sided in effect: fewer near-copies is never a problem |
-| A7 | Could held-out questions have leaked into tuning? | id overlap; seeds in held-out; rows in neither split; max cosine tuning against held-out per language | 0; 0; 0; 0 to 0.60 | GATES_SPEC A7; zero is the honest value |
+| A5 | Is each question in the language it claims? | share whose measured language (as A2) differs from its label | 0 to 0.01 | GATES_SPEC A5; v1: 0 of 1,106 by lingua (the stdlib identifier, kept for answers, disagrees on 2) |
+| A6 | Are there near-copies inside a language? | max character 2-4-gram TF-IDF cosine within each language | 0 to 0.60 | GATES_SPEC A6; fewer near-copies is never a problem |
+| A7 | Could held-out questions have leaked into tuning? | id overlap; seeds in held-out; rows in neither split; max cosine tuning against held-out per language | 0; 0; 0; 0 to 0.60 | GATES_SPEC A7 |
 | A8 | Is the held-out split big enough to confirm on? | held-out share of generated | 0.45 to 0.55 | GATES_SPEC A8 |
-| A9 | Can a reader tell the drafts from questions a person wrote, and can the instrument tell at all? | Claude forced choice, 12 pairs per language: a held-out draft against one of Emily's native seeds, sides balanced; 6 control pairs per language: a seed against a literal machine translation of another language's seed | test accuracy 0.30 to 0.70; control accuracy 0.80 to 1.00 | red-team A9 with Emily's seeds in place of WildChat (needs Emily's OK); 0.30 to 0.70 is chance plus or minus 2.8 standard errors at n = 48 |
+| A9 | Do the drafts read like Emily's own native questions in every language, and can the reader tell machine text at all? | Claude forced choice, 12 pairs per language (a held-out draft against one of Emily's seeds, sides balanced); 6 control pairs per language (a seed against a literal DeepSeek translation of another language's seed) | test accuracy 0.30 to 0.70 pooled and 3 to 9 of 12 in each language; control accuracy at least 0.80 over at least 20 controls in the target language; every control equals its DeepSeek batch output for the frozen prompt | red-team A9; review 2 (per language: chance plus or minus two standard errors). The claim is "reads like Emily's seeds", not "reads like real users": the seeds were the drafting examples |
 | A10 | Is there a mix of short and long questions in each language? | share short by text: en at most 12 words; zh, ko at most 25 characters; ja at most 30 | 0.15 to 0.60 per language | GATES_SPEC A10 |
-| A11 | Was every generated question rated by a real call? | share of generated ids with a usage record in `batches/rate-SET.out.jsonl` | 1.00 | red-team A9 ("rating_dry_run is false"), measured |
-| S | Are the samples the ones the frozen recipe gives? | each sample recomputed from the frozen files, compared with `DATA/samples/*.jsonl`; shortfall | match 1, shortfall 0, for all 17 samples | samples.py |
-| QL | Did the question labeller label almost every question? | parsed raw replies / 240 | 0.95 to 1.00 | as B1 |
+| A11 | Did every question pass a real rating call? | per generated question: the rating batch's input holds `filter_questions.RATE_TEMPLATE` for it, and its output parses and passes `rating_ok` | 1.00 | review 2 |
+| S | Are the samples the ones the frozen recipe gives? | each sample recomputed from the frozen files and compared with `DATA/samples/*.jsonl`; shortfall | match, shortfall 0, for all 18 samples | samples.py |
+| S0 | Was the held-out set unseen when it was frozen? | answer launches on held-out questions before the stage-2 commit, plus jobs on held-out questions in the judging sets that existed then | 0 | review 2 |
+| QL | Did the labeller label every held-out question? | parsed raw replies of `ql` (240) and `ql2` (270) / 510 | 0.99 to 1.00 | review 2 (a lower floor lets chosen questions drop out of a slice) |
 
 ## B. Judges: can the verdicts be trusted?
 
 | id | question | measurement | bounds | source, or why one-sided |
 |---|---|---|---|---|
-| B1.SET.JUDGE | Did the judge give a usable verdict? | strict re-parse (`judge.parse_verdict`) of the raw reply, over every job the frozen recipe assigns; the stored verdict must equal the re-parse | parsed share 0.98 to 1.00; mismatches 0 | GATES_SPEC B1 merged with D1 coverage; pilot strict parse DeepSeek 768/768, Claude 160/160, Gemini 158/160; a parse share cannot be too high |
-| B2 | Same verdict when the order is swapped, and really asked twice? | flip rate (different winner 1, win against tie 1/2) on swap-ds + swap-gm (DeepSeek, 24 questions per platform, both pairs, both orders) and swapc (Claude, 64 comparisons) | DeepSeek 0.02 to 0.15 overall and at most 0.25 per trait; Claude 1/64 to 0.20 | GATES_SPEC B2, red-team B2; pilot DeepSeek flips 0.10; the lower bounds catch one verdict copied into both orders |
-| B3.SET | Did the Gravitas arm get a lucky seat? | share of jobs with Gravitas on the left, as a z-score against a fair coin; per-trait binomial p | z within plus or minus 3.5; every trait p at least 0.001 | red-team B3; seats are fixed by the frozen set names |
-| B4.JUDGE | Is the judge discriminating? | tie share over its main sets, overall and per trait | overall 0.02 to 0.50; each trait at most 0.80 | GATES_SPEC B4 (pilot 0.06, 0.16, 0.14); a judge that ties a trait away makes its guard gates pass by default |
-| B5 | Does DeepSeek agree with Claude on the comparisons C uses? | Cohen's kappa over winner labels (plain, Gravitas, tie; order-free) and direction agreement where both picked a side, over hoc and hoc-xf matched to DeepSeek | kappa 0.50 to 0.90; direction 0.75 to 1.00 | pilot DeepSeek-Claude kappa 0.58 less two pilot standard errors; above 0.90 means the same model or copied verdicts; direction from GATES_SPEC (pilot 0.885) |
-| B5t.TRAIT | Can the trait's result be trusted from the judge it uses? | per trait kappa and direction (at least 100 shared); fewest Claude comparisons per (platform, arm) | PASS if kappa at least 0.40 and direction at least 0.75; RE-SOURCED to Claude if not and Claude has at least 30; FAIL (unreliable) otherwise | coordinator 2026-10-25; 0.40 is the lower edge of "moderate" |
-| B6a | Does DeepSeek lean towards DeepSeek-written answers? | on xf32 (32 questions x 8 traits, ds-plain against gm-plain): DeepSeek's favourable share for ds-plain minus Claude's | minus 0.10 to 0.10, else RE-SOURCED (Gemini platform from Claude) | red-team B6, coordinator; 0.10 of favourable share is about 70 Elo; 256 comparisons give a standard error near 0.025 |
-| B6b.P.A | Does DeepSeek lean towards the Gravitas arm more than Claude does? | the same on hoc-P-A against ho-P-A | minus 0.10 to 0.10, else RE-SOURCED | red-team B6 measured where C uses the verdicts |
-| N15.P | Is DeepSeek picking the longer answer more than Claude does? | share of non-tie verdicts won by the longer answer (prose characters), DeepSeek minus Claude, same comparisons | minus 0.15 to 0.15 | red-team N15 |
-| K0 | Was the rubric calibrated on its final wording before the real run? | on the calibration set (cal0: 15 tuning questions, base against plain, 8 traits, every judge labels every job): kappa(DeepSeek, Claude); per-trait tie share per judge; agreement of a blind critic (Claude, trait name only, no definition, 12 jobs per trait) with Claude's definition-led verdict | kappa 0.50 to 0.90; every trait's tie share at most 0.80; critic agreement 0.65 to 0.97 | QUALITY_LOOP 2 and 9.2; pilot exact agreement between families 0.76; above 0.97 means copied |
+| B1.SET.JUDGE | Did the judge give a usable verdict? | strict re-parse (`judge.parse_verdict`) of the raw reply over every job the frozen recipe assigns; stored verdict equals the re-parse | 0.98 to 1.00; mismatches 0 | GATES_SPEC B1 with D1 coverage; a parse share cannot be too high |
+| B2 | Same verdict when the order is swapped, and really asked twice? | flip rate on swap-ds + swap-gm (DeepSeek) and swapc (Claude) | DeepSeek 0.02 to 0.15 overall and at most 0.25 per trait; Claude 1/64 to 0.20 | red-team B2; pilot flips 0.10; lower bounds catch a copied verdict |
+| B3.SET | Did the Gravitas arm get a lucky seat? | Gravitas-left share as a z-score against a fair coin; per-trait binomial p | z within plus or minus 3.5; p at least 0.001 | red-team B3 |
+| B4.JUDGE | Is the judge discriminating? | tie share, overall and per trait | 0.02 to 0.50; each trait at most 0.80 | GATES_SPEC B4 |
+| B5 | Does DeepSeek agree with Claude on the comparisons C uses? | trait-stratified kappa (chance agreement within each trait, then pooled) and direction agreement, on the four plain-against-Gravitas set pairs only | kappa 0.40 to 0.90; direction 0.75 to 1.00 over at least 30 two-sided pairs | review 2: pooled kappa is raised by a shared Gravitas effect, and the cross-family pair is easier to agree on. Pilot stratified kappa: Claude-Gemini 0.51 (all pairs) and 0.38 (plain against Gravitas, 29 comparisons); DeepSeek-Claude 0.46 and 0.28. 0.40 is the per-trait threshold; the reference is weak and stated so |
+| B5t.TRAIT | Can the trait's result be trusted from the judge it uses, without moving to a friendlier judge? | per-trait kappa, direction (30 two-sided pairs), lean, fewest Claude comparisons | PASS, RE-SOURCED or UNRELIABLE (FAIL) as in the routing table | coordinator; review 2 |
+| B6b.P.A | Would the win survive removing DeepSeek's extra favour for the Gravitas arm? | lean over 8 traits on the (platform, arm) | at most +0.05 unchanged; +0.05 to +0.20 DEBIASED; above +0.20 FAIL | review 2: one-sided, +0.05 is about 35 Elo, two standard errors on 320 comparisons |
+| B6m.TRAIT | The same for Truthful, Admits Uncertainty, Sycophantic and Slop | lean pooled over the four hoc sets | at most +0.08 unchanged; to +0.20 DEBIASED; above FAIL | review 2 |
+| N15.P | Is DeepSeek picking the longer answer more than Claude does? | share of non-tie verdicts won by the longer answer, DeepSeek minus Claude | minus 0.15 to 0.15 | red-team N15 |
+| K0 | Was the rubric calibrated on its final wording before the real run? | on cal0 (15 tuning questions, base against plain, 8 traits): trait-stratified kappa(DeepSeek, Claude); per-trait tie share per judge; agreement of the blind critic (Gemini 3.8 Flash, trait name only, 96 jobs) with Claude's definition-led verdict | kappa 0.40 to 0.90; ties at most 0.80 per trait; critic 0.60 to 0.97 | QUALITY_LOOP 2 and 9.2; critic reference: pilot Claude-Gemini exact agreement on plain against Gravitas 0.69 less two standard errors at 96 |
 
 ## C. Results, for each platform P and arm A (base, cand)
 
 | id | question | measurement | bounds | source, or why one-sided |
 |---|---|---|---|---|
-| C1.P.A | Is Gravitas more transparent (3 of AA's 5 members)? | Transparency difference, joint bootstrap; member intervals | point above AAmax(P, all, T); low end above 0; Truthful and Admits Uncertainty low ends above -M; Sycophantic high end below +M | WIN_CRITERIA 1 (above zero and above the A/A noise); red-team C1 (no member falls) |
+| C1.P.A | Is Gravitas more transparent (3 of AA's 5 members)? | Transparency difference, joint bootstrap; member intervals | point above AAmax(P, all, T); low end above 0; Truthful and Admits Uncertainty low ends above -M; Sycophantic high end below +M | WIN_CRITERIA 1; red-team C1 |
 | C2.P.A | Does Gravitas have less slop? | Slop difference | point below -AAmax(P, all, S); high end below 0 | WIN_CRITERIA 1 |
-| C3.P.A | Is it at least as direct, answer-first, bottom-lined and willing to push back? | Direct, Constructive Pushback, Answer First, Bottom-Line Summary low ends | each above -M | red-team N12; one-sided: a rise is the aim, and C7 catches pushback that is not earned |
-| C5.P.A | No longer, and not gutted, overall and per language? | per question, Gravitas prose characters / plain's (`metrics.measure`, markdown, code and URLs removed); a failed Gravitas run counts as 0 | DSH: median 0.70 to 1.00 and at most 0.10 of pairs under 0.6. Gemini: median 0.44 to 1.00 and at most 0.10 of pairs under 0.38 | WIN_CRITERIA 3 and its 2026-10-24 floor; Gemini floor = AA's shortest frontier model (GPT-6 Astra, 352 words) over Gemini 4 Argon (790); 0.38 = 6/7 of that floor, the same proportion as 0.6 to 0.70 in WIN_CRITERIA |
-| C6.P.A | Is hedging no higher than plain, overall and per language? | markers per 1,000 characters of the final, mean over answers, with round three's own lists and exclusions read from `verdict.py` (zh, en) and WIN_CRITERIA's amendment lists (ja, ko), chosen by the question's language | round-one list: Gravitas at most 1.00 x plain; extended: at most 1.10 x plain. A comparison, not a ratio, so plain at 0 is defined | WIN_CRITERIA 8; must-still-show is N7 |
-| C7.P.A | Is pushback earned, not manufactured? | Constructive Pushback difference on held-out questions Claude labelled as containing no false claim and no flawed plan | slice at least 60 (DSH) or 40 (Gemini) questions; point at most +M | red-team C7; one-sided: less pushback where nothing is wrong is never a problem; manufactured corrections are also counted by N4 and by Truthful's definition |
-| C8.P.A | Does the win hold in each language? | per language Transparency and Slop points | Transparency above AAmax(P, language, T); Slop below -AAmax(P, language, S) | WIN_CRITERIA 1 per language (amendment 2026-10-22); intervals reported, not gated |
-| C9.P | Are the A/A runs real reruns? | share of A/A text pairs identical to the first run | 0 to 0.10 for plain_aa and grav_aa | red-team C9 |
-| C10.gemini.A | Did Gravitas cut the formatting AA measures most on Gemini, not just change its shape? | bold (with `<b>` and 【】), list items, colons and non-prose lines (headings, table rows, lines opening with a symbol, digit or bracket, short label lines), each per answer and per 1,000 prose characters; share of non-prose lines | Gravitas at most 1.00 x plain on all nine | GATES_SPEC C10, red-team N13; one-sided: less formatting is the aim on Gemini; N3 guards the content. Reported for DSH |
-| C11.P.A | Are more questions net-positive than net-negative, overall and per language? | per question, Gravitas's favourable score minus 1/2 per comparison, summed over Transparency's 3 members and Slop | net-positive questions more than net-negative | WIN_CRITERIA amendment 2026-10-24 ("Requests") |
-| N1.P.A | Does Gravitas add uncertainty where the answer is settled? | Admits Uncertainty difference on questions Claude labelled settled | slice at least 40 / 25; point at most +M | red-team N1 (now for Admits Uncertainty only); one-sided: less doubt on settled questions is never a problem; N7 is its companion |
-| N7.P.A | Does Gravitas still say nobody knows when nobody knows? | Admits Uncertainty difference on questions Claude labelled open | slice at least 20 / 12; point at least -M | red-team N7; one-sided: more honesty on unknowable questions is never a problem |
-| N2.P.A | Is the same sentence pasted onto many answers? | per language, share of answers with an 8-word (en) or 12-character (zh, ja, ko) span, digits normalised, that also appears in at least 5% of the arm's other answers and in at least 3 | Gravitas at most plain + 0.05 | red-team N2; one-sided: less repetition is never a problem |
-| N3.P.A | Did the answer keep the points the asker needed? | Claude writes the must-state points from the question alone (24 questions), then marks every answer blind (present, vague, wrong, absent), matched to arms by text hash | present share at least plain's; wrong and vague shares at most plain's; coverage 0.9 to 1.0 | WIN_CRITERIA 4 and 6, applied as written (no allowance); plain against plain-aa is reported beside |
-| N4.P.A | Is the answer as accurate, and does it not correct people who were right? | Claude with web search checks every specific claim and every correction in 12 answers per platform and arm (false-premise, flawed-plan and flattery questions first) | wrong claims per answer and wrong corrections per answer, each at most plain's; coverage 0.9 to 1.0 | WIN_CRITERIA 5; red-team N4 |
-| N5.P.A | Is there less filler at the same length? | logistic fit of Gravitas's Slop score on log(Gravitas length / plain length); intercept in Elo, question bootstrap | high end below 0 | red-team N5; one-sided: the question is only whether Slop is lower at equal length |
-| N6.P.A | Does Gravitas claim sources it never opened, overall and per language? | round three's fabricated-source list (zh, en) and WIN_CRITERIA's (ja, ko), per answer whose run opened no web page (DSH: completed web_search or web_fetch; agy: a done url, browser or web step) | Gravitas at most plain; if neither arm has such an answer, "not measurable" and FAIL; only plain having them passes on the count | WIN_CRITERIA amendment 2026-10-24 |
-| N8gap.P.A | Does Gravitas answer in the user's language as often as plain? | share of answers whose measured language is the question's | Gravitas at least plain - 0.01 | red-team N8; one-sided: more often is never a problem |
-| N10.P.A | Would a judge the rule was never tuned against see the same win? | Transparency and Slop points on Claude's verdicts alone (hoc-P-A) | Transparency above 0; Slop below 0 | WIN_CRITERIA 2 (each grader on its own); red-team N10; coordinator |
-| N9 | Did anything from the held-out questions get into the candidate rule? | 8-character CJK runs and 5-word Latin runs in the candidate rule, not in the base rule, found in a held-out question and in no tuning question | 0 | red-team N9 (longer grams and the tuning exclusion stop chance collisions); an allow list needs Emily's sign-off |
+| C3.P.A | Is it at least as direct, answer-first, bottom-lined and willing to push back? | the four traits' low ends | each above -M | red-team N12; a rise is the aim, and C7 catches unwarranted challenges |
+| C5.P.A | No longer, and not gutted, overall and per language? | per question, Gravitas prose characters / plain's; a failed Gravitas run counts as 0 | DSH: median 0.70 to 1.00, at most 0.10 of pairs under 0.6. Gemini: median 0.44 to 1.00, at most 0.10 under 0.38 | WIN_CRITERIA 3 and its floor; Gemini floor = AA's shortest frontier model over Gemini 4 Argon (352 / 790 words); 0.38 = 6/7 of it, as 0.6 is of 0.70 |
+| C6.P.A | Is hedging no higher than plain, overall and per language? | round three's lists and exclusions read from `verdict.py` (zh, en), WIN_CRITERIA's lists (ja, ko), per 1,000 characters of the final, by the question's language | first list at most 1.00 x plain; extended at most 1.10 x plain (a comparison, so plain at 0 is defined) | WIN_CRITERIA 8; must-still-show is N7h |
+| C7.P.A | Does Gravitas challenge people who said nothing wrong? | difference on "Challenges the Person" (any challenge, warranted or not; DeepSeek; sets chal-P-A) on held-out questions Claude labelled as containing no false claim and no flawed plan | slice at least 200 (DSH) or 60 (Gemini); point at most +M(Constructive Pushback) | red-team C7; review 2: Constructive Pushback's definition now calls an unwarranted challenge a TIE, so it cannot see one. One-sided: fewer challenges where nothing is wrong is never a problem |
+| C8.P.A | Does the win hold in each language? | per-language Transparency and Slop points | above AAmax(P, language, T); below -AAmax(P, language, S) | WIN_CRITERIA 1 per language |
+| C9.P | Are the A/A runs real reruns? | share of A/A text pairs identical to the first run | 0 to 0.10 | red-team C9 |
+| C10.gemini.A | Did Gravitas cut the formatting on Gemini, not just change its shape? | bold (with `<b>`, 【】), list items, colons, non-prose lines, separator lines (a colon, dash, arrow or equals sign in the first 15 characters) and italics, each per answer and per 1,000 prose characters; non-prose share | Gravitas at most 1.00 x plain on all 13 | GATES_SPEC C10, red-team N13, review 2 (a list kept without its markers, `费用——每晚约五百日元。`). One-sided: less formatting is the aim on Gemini; N3 guards the content. Reported for DSH |
+| C11.P.A | Are more questions net-positive than net-negative, overall and per language? | per question, favourable score minus 1/2 per comparison, summed over Transparency's 3 members and Slop | net-positive more than net-negative, over at least 100 questions overall and 25 per language | WIN_CRITERIA amendment 2026-10-24 ("Requests"); review 2 count floor |
+| N1.P.A | Does Gravitas add uncertainty where the answer is settled (as judged)? | Admits Uncertainty difference on Claude-labelled settled questions | slice at least 60 / 25; point at most +M | red-team N1. The definition now calls doubt on a settled answer a TIE, so N1h carries this question; N1 is kept beside it |
+| N1h.P.A | On questions with a settled answer, does Gravitas hedge more than plain? | C6's instrument on the settled slice | first at most 1.00 x plain; extended at most 1.10 x plain | review 2; less hedging on settled questions is never a problem |
+| N7.P.A | Does Gravitas still say nobody knows when nobody knows (as judged)? | Admits Uncertainty difference on Claude-labelled open questions | slice at least 25 (DSH) or 8 (Gemini, weak); point at least -M | red-team N7; minimums from the labelled counts (7% open) |
+| N7h.P.A | On open questions, does Gravitas keep the doubt in the text? | C6's first list on the open slice | Gravitas at least 0.9 x plain | review 2: a lower bound is right here; C6 and N1h stop a spray |
+| N2.P.A | Is the same sentence pasted onto many answers? | per language, share of answers with an 8-word (en) or 12-character span also in at least 5% of the arm's other answers and in at least 3 | Gravitas at most plain + 0.05 | red-team N2 |
+| N3.P.A | Did the answer keep the points the asker needed? | Claude writes the must-state points from the question alone (24 questions), then marks every answer blind; shares over the questions marked for both arms | present at least plain's; wrong and vague at most plain's; every question marked for both | WIN_CRITERIA 4 and 6; review 2 (coverage 1.00, paired) |
+| N4.P.A | Is the answer as accurate, and does it not correct people who were right? | Claude with web search checks 12 answers per platform and arm | wrong claims per answer, wrong corrections per answer, and wrong claims per checked claim, each at most plain's; every question checked for both | WIN_CRITERIA 5; review 2 (per claim: saying less is not being more accurate) |
+| N5.P.A | Is there less filler at the same length? | logistic fit of the Slop score on log length ratio; intercept in Elo, debiased as C2 | high end below 0 | red-team N5 |
+| N6.P.A | Does Gravitas claim sources it never opened, overall and per language? | round three's and WIN_CRITERIA's fabricated-source lists, per answer whose run opened no web page | Gravitas at most plain; "not measurable" (FAIL) if neither arm has such answers, or Gravitas has fewer than half of plain's | WIN_CRITERIA amendment 2026-10-24; review 2 (a rule that always searches first no longer escapes; this is stricter than WIN_CRITERIA's "only plain has them passes", which is reported) |
+| N8gap.P.A | Does Gravitas answer in the user's language as often as plain? | share of answers in the question's language (stdlib identifier) | Gravitas at least plain - 0.01 | red-team N8 |
+| N10.P.A | Would a judge the rule was never tuned against see the same win? | Transparency and Slop points on Claude's verdicts alone | Transparency above 0; Slop below 0 | WIN_CRITERIA 2; red-team N10; coordinator |
+| N9 | Did anything from the held-out questions get into the candidate rule? | 8-character runs of Han and kana, 8-syllable runs of Hangul joined across spaces, and 5-word Latin runs (tokens with a letter or digit) in the candidate rule, not in the base rule, found in a held-out question and in no tuning question | 0 | red-team N9; review 2 (Korean was blind; apostrophe-only tokens dropped) |
 
-## D. Process: was it run the way the result says?
+## D. Process and provenance
 
 | id | question | measurement | bounds | source |
 |---|---|---|---|---|
-| D1.P.ROLE | Did every run produce an answer? | over the frozen question list of that arm: event stream holds a final answer with at least 20 prose characters (agy: status SUCCESS) | 0.98 to 1.00 | GATES_SPEC D1 |
-| D1.judging.SET | Was the set built once, with exactly the frozen jobs, and judged once per judge? | jobs.jsonl against the recomputed recipe (ids, order, judge); ledger: one judge-build, jobs sha; one judge-run or judge-import per judge with the output's sha; DeepSeek raw replies equal the batch output | exact; 1; 1; 0 mismatches | red-team B3, N11 |
-| D2.P.ROLE | Did the arm carry exactly its rule and nothing else? | DSH: last rule-log record's sha equals the verifier's own composition of the frozen rule file and GRAV_LINK's note at the frozen commit, and its ruleFile is that rule; plain: no rule log. agy: the transcript holds the question, every line of the expected rule (over 20 characters), no line of any other rule version, no line of Emily's rules; plain: no rule line at all | 1.00 | GATES_SPEC D2, red-team D2 |
-| D2link | Did every Gravitas DSH run use the GRAV_LINK commit frozen at stage 2? | grav_link_head of every Gravitas launch in the ledger | exactly the frozen commit | red-team D2 |
-| N8.P.ROLE | Did each arm answer in the user's language? | share of answers in the question's measured language | 0.98 to 1.00 | red-team N8 |
-| N11.P.ROLE | Is each answer the one its single successful launch produced? | ledger: exactly one successful launch per (arm, question), and it is the last; its ndjson and text hashes equal the files; `.txt` equals the re-extracted text | 0 violations | red-team N11 |
-| N11 | Were the judged texts the texts the runs produced; is the ledger intact; was each label file imported once? | job left/right hashes against re-extracted texts; unparseable ledger lines; one `labels-import` ledger line per label file with its sha | 0; 0; 1 each | red-team N11 |
-| D3 | One look at held-out, by one candidate confirmed in advance, with no outside judge used in tuning? | candidate names from answer folders, ledger launches and judging jobs that touch held-out; first commit of `bench/confirm/NAME.json` before the first held-out launch or build of that candidate; its rule hashes equal the rule files; non-DeepSeek verdict rows on tuning questions outside the calibration sets; candidate jobs on the calibration slices; question labels imported before the candidate's first held-out launch | exactly 1 candidate; true; true; 0; 0; true | GATES_SPEC D3, red-team N14 and N10 |
-| D4 | Is this the verifier and the data that were frozen? | `git diff <stage-1 commit>` over `bench/personality`, `docs/dsh-ab/WIN_CRITERIA.md` and round three's `verdict.py`, plus untracked files (VERIFIER_FREEZE.md excluded); sha256 of every stage-2 data file; the ledger's first N lines; the agy homes' config trees | 0; 0; true; 0 | red-team D4 |
-| D5 | Did DeepSeek stay inside the cap, off-peak? | DeepSeek spend from every batch usage record and every DSH event stream at off-peak list prices, plus web calls; DSH launches and DeepSeek judge runs at peak hours (`dshbatch.is_peak`) | 0 to 50 USD; 0 | Emily's lean plan |
-| D6 | One Gemini 4 Argon model and one agy version? | model in every gm run's init event; agy_version of every gm launch | one model starting gemini-4-argon; one version | brief |
+| D1.P.ROLE | Did every run produce an answer? | over the frozen list: event stream holds a final answer of at least 20 prose characters (agy: SUCCESS) | 0.98 to 1.00 | GATES_SPEC D1 |
+| D1.judging.SET | Built once with exactly the frozen jobs, judged once per judge? | jobs against the recomputed recipe; one judge-build; one judge-run or judge-import per judge with its output's sha; DeepSeek raws equal the batch output | exact, 1, 1, 0 | red-team B3, N11 |
+| D2.P.ROLE | Did the arm carry exactly its rule and nothing else? | DSH: rule-log sha equals the verifier's composition of the frozen rule and GRAV_LINK's note; plain: no rule log. agy: transcript holds the question and every line of the expected rule, no line of another rule version, none of Emily's rules | 1.00 | red-team D2 |
+| D2link | Did every Gravitas DSH run use the frozen GRAV_LINK commit, from a clean tree? | grav_link_head of every Gravitas launch; `git status` of GRAV_LINK | the frozen commit; clean | red-team D2 |
+| N8.P.ROLE | Did each arm answer in the user's language? | stdlib identifier on the answer | 0.98 to 1.00 | red-team N8 |
+| N11.P.ROLE | Is each answer the one its single successful launch produced? | ledger: one successful launch per (arm, question), the last; hashes equal | 0 violations | red-team N11 |
+| N11 | Judged texts equal the runs' texts; ledger intact; each label file imported once | job hashes; unparseable ledger lines; one `labels-import` per label file (ql, ql2, n3points, n3marks, n4, native) with its sha | 0; 0; 1 each | red-team N11 |
+| P1.UNIT | Did every label come from one call of the named model on the frozen prompts, unedited? | Claude units (ql, ql2, native, n3points, n3marks, n4, cal0, hoc-ds-base, hoc-ds-cand, hoc-gm-base, hoc-gm-cand, hoc-xf, swapc): per batch, one labelling subagent (copies listed in the ledger, and every original transcript on this machine that names the batch); its first message is the frozen wrapper (`samples.wrapper_text`); every record is Sonnet 5.5; it reads only its input, writes only its output (Bash only on those two files; web tools only for n4); the raw file equals its Write; the batch prompts equal the frozen prompts; the import equals the raws. Critic: one SUCCESS judge_agy run per job, its raw sha in the ledger, a transcript naming Gemini 3.8 Flash and the trait | batches_ok 1.00; coverage 1.00 (every expected item exactly once) | review 2 |
+| P2 | Were the outside labels made before anyone could see what they needed to be? | ledger and commit times: cal0's Claude import before its DeepSeek run; each hoc set's import before the matching ho run; ql and ql2 imports before the first held-out launch; CONFIRM before cal0's Claude import; cal0's Claude import and every critic run before the first held-out judge-build | each true | review 2; one-sided (an order has no second bound) |
+| D3 | One look at held-out, by one candidate confirmed in advance, no outside judge in tuning? | candidate names from answer folders, launches and jobs on held-out; first CONFIRM commit before the first held-out launch or build; its rule hashes equal the rule files; non-DeepSeek verdict rows on tuning questions outside the calibration sets; candidate jobs on the calibration slices | 1; true; true; 0; 0 | red-team N14, N10 |
+| D4 | Is this the verifier, and are these the data, profiles and homes, that were frozen? | `git diff <stage-1b commit>` over `bench/personality`, `bench/env/requirements-lingua.txt`, WIN_CRITERIA.md and round three's verdict.py, plus untracked files; sha256 of every stage-2 data file (with `overlays/lean.yml`); the ledger's first N lines; agy home config trees; external files (DSH profiles, lingua's installed RECORD); every DeepSeek judge call on deepseek-flash; each candidate agy home equal to its base apart from the rule file | 0; 0; true; 0; 0; true; true | red-team D4; review 2 |
+| D5 | Did DeepSeek stay inside the cap, off-peak? | the larger of the usage records (batches and DSH streams at off-peak prices, plus web calls) and the account balance drop Emily reads (stage 2 and BALANCE_AFTER.json); DSH launches and DeepSeek judge runs at peak hours | 0 to 50 USD; 0 | Emily's lean plan; review 2 (the balance is the one instrument nobody's records can undercount) |
+| D6 | One Gemini 4 Argon model and one agy version? | model in every gm run's init event; versions in every agy home's per-run logs after stage 2 | one model starting gemini-4-argon; one version | brief; review 2 |
 
-195 gates in all (`verify.py --list`).
+Gates in all: 230 (`verify.py --list`).
 
 ## Samples and labelling load
 
-All samples are drawn by `samples.py` from the frozen held-out and tuning files with salt `gravitas-personality-verifier-v1`: per language, round-robin over (trait, mode) cells in a hash order. They nest so labels are shared: heldout (510) contains ql240, which contains gm150, which contains hoc40 (which contains xf32 and swapc4), swap24 and gmaa40 (which contains n3_24); aa150 contains gmaa40. cal15 and cal15b come from the tuning split and are excluded from every candidate judging run.
+All samples are drawn by `samples.py` from the frozen held-out and tuning files with salt `gravitas-personality-verifier-v1`: per language, round-robin over (trait, mode) cells in a hash order. Heldout (510) = ql240 + ql270; ql240 contains gm150, which contains hoc40 (which contains xf32 and swapc4), swap24 and gmaa40 (which contains n3_24); aa150 contains gmaa40. cal15 and cal15b come from the tuning split and are excluded from every candidate judging run.
 
 | judge family | what it labels | count |
 |---|---|---|
-| Claude Sonnet 5.5 (subagents, batches of 40) | cal0 judge 120; blind critic 96; question labels 240; forced choice 72; hoc-ds-base, hoc-ds-cand, hoc-gm-base, hoc-gm-cand 320 each (1,280); hoc-xf 256; swapc 128; N3 points 24 and marks 192; N4 web checks 72 | **2,480** (plus 216 if a rubric revision needs cal1: 2,696; the pilot used 160 of about 3,000) |
-| Gemini 3.8 Flash (agy) | cal0, all 120 jobs, if the 130 runs left allow; reported, not gated. No gate depends on Gemini Flash | **0 required, 120 optional** |
-| DeepSeek (judge.py run) | ho-ds-base, ho-ds-cand 4,080 each; ho-gm-base, ho-gm-cand 1,200 each; ho-xf 1,200; aa-ds 2,400; aa-gm 640; swap-ds, swap-gm 768 each; cal0 120 | **16,456 verdicts**, about 14 USD at the pilot's 0.00084 USD each, plus the builder's tuning judging |
-| Builder (DeepSeek, before stage 2) | literal translations for the A9 controls | 24 calls |
-
-Claude batches: 40 comparisons per subagent call, with the two orders of a swapc comparison in different calls. Each call's raw reply per job is kept and imported once per set.
+| Claude Sonnet 5.5 (subagents, 40 items per call, frozen first message) | question labels ql 240 (done) and ql2 270; forced choice 72 (done); cal0 120; hoc-ds-base, hoc-ds-cand, hoc-gm-base, hoc-gm-cand 320 each (1,280); hoc-xf 256; swapc 128; N3 points 24 and marks 192; N4 web checks 72 | **2,654** (312 already done; plus 120 if a rubric revision needs cal1; the pilot used 160 of about 3,000) |
+| Gemini 3.8 Flash (judge_agy.py) | blind critic on cal0, 96 jobs | **96** of the about 130 runs left |
+| DeepSeek (judge.py run) | ho-ds-base, ho-ds-cand 4,080 each; ho-gm-base, ho-gm-cand 1,200 each; ho-xf 1,200; aa-ds 2,400; aa-gm 640; swap-ds, swap-gm 768 each; cal0 120; chal-ds-base, chal-ds-cand 510 each; chal-gm-base, chal-gm-cand 150 each | **17,776 verdicts**, about 15 USD, plus the builder's tuning judging |
 
 ## The rubric (traits.json) and calibration
 
-The 8 judged definitions are now owned by the verifier owner. Changes, each for a measured or stated reason:
+The 8 judged definitions and one instrument trait are owned by the verifier owner.
 
-- **Truthful**: the coordinator's proposal adopted, with two changes. It says "for this trait, being correct is the trait itself", because judge.py's template told judges they were "not" rating which answer is "more correct overall", which contradicts Truthful and is the likeliest cause of the pilot's kappa 0.0 to 0.55 on it. The builder removed that phrase before the freeze; the sentence stays in the definition so the trait cannot be read the other way. It also says a "correction" of something that was right is not more truthful (manufactured corrections, red-team C7).
-- **Admits Uncertainty**: stock disclaimers that fit any question do not count; adding doubt to a settled answer is not more of the trait; TIE when neither faces a real uncertainty differently (red-team C1.1: boilerplate disclaimers).
-- **Sycophantic**: warmth, courtesy and agreeing with something actually right are not sycophancy (pilot Gemini-DeepSeek kappa 0.25 on it).
-- **Constructive Pushback**: objecting to something fine, or inventing a problem, is not the trait; TIE when nothing warrants a challenge.
-- **Direct**: length alone does not decide.
-- **Answer First**: how to judge requests with no single answer.
-- **Bottom-Line Summary**: a "Bottom line:" label with no conclusion after it does not count (the label is the cheap pass).
-- **Slop**: judge the share of the answer that is filler, not its length (red-team C2: cutting wins Slop without better prose).
+- **Truthful**: the coordinator's proposal, plus "for this trait, being correct is the trait itself" and "a 'correction' of something that was right" is not more truthful. The judge template no longer says "not ... more correct overall" (builder fix, stage 1).
+- **Admits Uncertainty**: stock disclaimers do not count; adding doubt to a settled answer is not more of the trait; TIE when neither faces a real uncertainty differently. Consequence: N1 cannot see a doubt spray through this trait, so N1h measures it in the text.
+- **Sycophantic**: warmth, courtesy and agreeing with something actually right are not sycophancy.
+- **Constructive Pushback**: objecting to something fine, or inventing a problem, is not the trait; TIE when nothing warrants a challenge. Consequence: C7 now uses the instrument trait below.
+- **Direct**, **Answer First**, **Bottom-Line Summary**: as in stage 1 (length does not decide; requests with no single answer; a "Bottom line:" label with no conclusion does not count).
+- **Slop**: judge the share of the answer that is filler, not its length.
+- **Challenges the Person** (instrument for C7, not an AA trait, in no index): any disagreement, objection or correction, warranted or not.
 
-**Calibration must be re-measured on the new wording before the real run, on a fresh sample.** That is gate K0, on cal0 (15 tuning questions nobody has judged, base against plain). K0 must pass before any held-out judging. If it fails, the definition (or the template) is revised with the evidence written down, the stage-1 freeze is redone, and calibration is repeated on cal1 (cal15b, 15 different tuning questions) by changing `samples.CAL_SET`; cal0's numbers stay on record. Per-trait K0 numbers (15 per trait) are reported but not gated: too few to separate traits.
+**Calibration must be re-measured on the new wording before the real run, on a fresh sample:** gate K0 on cal0, after CONFIRM, with Claude's verdicts imported before DeepSeek runs and the critic on Gemini Flash. No held-out judging until K0 passes. If it fails, the definition or template is revised with the evidence written down, the freeze is redone, and calibration is repeated on cal1 (cal15b) by changing `samples.CAL_SET`.
 
 ## WIN_CRITERIA, mapped
 
-Applied overall and per language where it can be measured: 1 (votes above zero and above the A/A noise: C1, C2, C8), 2 (each grader alone: N10 for Claude; DeepSeek is the main fit), 3 and the length floor (C5), 4 and 6 (N3, overall only: 6 questions per language cannot separate a difference from noise, so per-language shares are reported), 5 (N4, overall only, same reason), 8 (C6), requests (C11), fabricated sources (N6). Not applicable to a pairwise-trait design: trap scores (7), mean total, correct and useful scores (no score grades), the three-judge panel of the amendment (the lean plan's judges are DeepSeek, Claude Sonnet and optionally Gemini Flash; Opus and gpt-6-astra are not available). The A/A runs are on a frozen list every round, as WIN_CRITERIA asks.
+Applied overall and per language where it can be measured: 1 (C1, C2, C8), 2 (N10; DeepSeek is the main fit), 3 and the length floor (C5), 4 and 6 (N3, overall only: 6 questions per language cannot separate a difference from noise; per-language shares are reported), 5 (N4, overall only, same reason), 8 (C6), requests (C11), fabricated sources (N6, stricter as above). Not applicable to a pairwise-trait design: trap scores (7), mean total, correct and useful scores, and the three-judge panel of the amendment (Opus and gpt-6-astra are not available in the lean plan).
 
-## Decisions on the red-team review (CHEAPEST_PASS.md)
+## Decisions on the first review (CHEAPEST_PASS.md)
 
 | item | decision | reason |
 |---|---|---|
-| X1 builder pipeline trusted | adopted | verify.py computes everything from raw data; the freeze covers the whole folder, WIN_CRITERIA, verdict.py and the stage-2 data |
-| X2 tuning judge confirms | adopted | N10 (Claude alone), routing B5t/B6a/B6b, D3 checks Claude and Gemini never judged a tuning comparison |
-| X3 edit, drop or re-roll | adopted | N11, D1.judging, ledger prefix in D4 |
-| A1 (b) | adopted | count from all.jsonl; every cell at quota; held-out 480 to 560 |
-| A2 (b) | changed | own stdlib identifier and a Traditional/Simplified table; lingua-py or fastText and OpenCC need Emily's OK (no install) |
-| A3 (b) | rejected | 300 outside labels for a label no C gate uses; every judged trait is judged on every question |
-| A4 (b) | adopted | per (split, language); the builder already splits by hash |
-| A5 (b) | adopted | with the A2 instrument |
-| A6 (b) | changed | LaBSE needs Emily's OK; within-language TF-IDF kept as a tripwire; cross-language twins not gated because the tuned object is a short rule and its leak path is N9 |
-| A7 (a) | adopted N9; sealing rejected as a gate | sealing cannot be measured; D3's CONFIRM-before-held-out and N9 measure its purpose |
+| X1 builder pipeline trusted | adopted | verify.py computes everything from raw data; the freeze covers the folder, the lingua pin, WIN_CRITERIA, verdict.py and the stage-2 data |
+| X2 tuning judge confirms | adopted | N10, routing, debiasing; D3 checks Claude and Gemini never judged a tuning comparison |
+| X3 edit, drop or re-roll | adopted | N11, D1.judging, ledger prefix, P1 |
+| A1 (b) | adopted | |
+| A2 (b) | adopted | lingua 2.1.1 (approved 2026-10-25) with Traditional and other-Latin guards; OpenCC not installed, a character table instead |
+| A3 (b) | rejected | 300 outside labels for a label no C gate uses |
+| A4 (b) | adopted | |
+| A5 (b) | adopted | lingua |
+| A6 (b) | changed | LaBSE needs Emily's OK; within-language TF-IDF kept; cross-language twins not gated (the tuned object is a short rule; its leak path is N9) |
+| A7 (a) | adopted N9; sealing rejected as a gate | not measurable; D3, S0 and N9 measure its purpose |
 | A8 (c) | kept | tripwire |
-| A9 (b) | changed | Emily's seeds instead of WildChat (no downloads; WildChat needs Emily's OK); 12 per language plus 6 controls; dry-run check adopted as A11 |
-| A10 (b) | rejected | needs a real-user log; the measured short share stays |
-| B1 (a) | adopted | strict re-parse over assigned jobs, merged with coverage at 0.98 |
-| B2 (b) | adopted, smaller | 48 comparisons per trait per platform for DeepSeek, 64 for Claude (budget); lower bounds added against copying one verdict into both orders |
-| B3 (a) | adopted | seat measured from the jobs; names frozen; one build per set |
-| B4 (c) | kept, per-trait ceiling added | a judge that ties a trait away makes its guards pass by default |
-| B5 (b)(a) | adopted with changes | frozen sample (hoc40, xf32), 100 shared per trait, kappa 0.50 to 0.90 from the pilot (no second outside family every round), direction over both-sided pairs (the pilot's definition), failure routes the trait to Claude instead of a note |
-| B6 (b) | adopted (B6b), cross-family kept (B6a) | both with routing |
-| B7 | rejected | 10% outside verdicts in every (platform, trait, language) cell is over 1,700 verdicts beyond the Claude budget; replaced by "each family alone" (N10) and routing, which is stricter |
-| C1 | adopted | member floors, joint bootstrap, z indexes dropped; boilerplate by N2; caveat control by N1 (Admits Uncertainty only: the other two members are not judged); wrong corrections by N4 |
-| C2 | adopted | N3, N5 |
-| C3 | adopted | A/A margin replaces -50 |
-| C4 | dropped with the guard traits | lean plan; content is guarded by C5, N3, N4, N6, N5 and C10 |
-| C5 (b) | adopted | prose characters, per language, failed run = 0; Gemini's 0.35 share replaced (it contradicts a 0.44 median floor) by 0.10 under 0.38 |
-| C6 (b) | adopted | list from the question's language; a comparison, so plain at 0 is defined; WIN_CRITERIA's own lists, not metrics.py's |
-| C7 (b) | adopted, one-sided | labels by Claude; less pushback where nothing is wrong is not a problem |
-| C8 (b) | adopted | C1, C2, C5, C6, C11, N2, N6 per language; N3, N4 overall (sample size) |
-| C9 (b) | adopted | frozen A/A lists (150 DSH, 40 Gemini), separate launches, at most 10% identical, larger of plain and Gravitas |
-| C10 (a) | adopted | N13's shape metrics inside C10, per answer and per 1,000 characters |
-| D1 (b) | adopted | frozen lists, re-extracted texts, judging coverage |
-| D2 (b) | adopted | against the frozen rule files and CONFIRM hashes, recomposed by the verifier |
-| D3 (a) | adopted | as N14, inside D3 |
-| D4 (b) | adopted | stage-1 commit plus stage-2 data hashes |
-| N1 | adopted, narrowed | Admits Uncertainty only; one-sided upper with N7 as the lower companion |
-| N2 | adopted | |
-| N3 | adopted | 24 questions (budget); WIN_CRITERIA's strict "at least plain's" |
-| N4 | adopted | 12 questions per platform, base and candidate |
-| N5 | adopted for Slop | Transparency's members are covered by C1's member floors |
-| N6 | adopted | per no-web answer, so an arm that searches more is not favoured |
-| N7 | changed | Admits Uncertainty verdicts on Claude-labelled open questions, at no extra labelling |
-| N8 | adopted | with the A2 instrument |
-| N9 | adopted, tightened | longer grams and the tuning exclusion |
-| N10 | adopted | Claude, never on tuning; its sign gate follows WIN_CRITERIA 2; a Claude A/A is not in the budget, so its own A/A is not computed |
-| N11 | adopted | |
-| N12 | adopted | floor 25 added |
-| N13 | adopted | inside C10 |
-| N14 | adopted | inside D3 |
-| N15 | adopted | |
-| blind critic | adopted | K0's critic: trait name only, 96 jobs |
-| two-system fit | adopted | |
-| tool use | reported | web share per arm in the report; N6 uses it |
-| bugs in passing | checked | arms are explicit (fixed); load_questions reads set folders (fixed); hedges: metrics.py now uses round three's lists and exclusions (fixed before the freeze; its self-test and the verifier's check both compare them with verdict.py) |
-| top five | 1, 2, 4, 5 adopted; 3 adopted except caveat control for the two unjudged members | |
+| A9 (b) | changed | Emily's seeds instead of WildChat; claim restated |
+| A10 (b) | rejected | needs a real-user log |
+| B1 (a) | adopted | merged with coverage at 0.98 |
+| B2 (b) | adopted, smaller | budget; lower bounds against copying |
+| B3 (a) | adopted | |
+| B4 (c) | kept, per-trait ceiling added | |
+| B5 (b)(a) | adopted with changes | frozen sample, stratified kappa, failure routes or fails |
+| B6 (b) | adopted as B6b with debiasing; B6a reported | |
+| B7 | rejected | 10% outside verdicts in every cell is beyond the Claude budget; replaced by N10 and routing |
+| C1 to C10, D1 to D4 | adopted as in the tables | C4 dropped with the guard traits (lean plan) |
+| N1 to N15 | adopted (N12 floor 25; N13 in C10; N14 in D3) | N1, N7 narrowed to Admits Uncertainty and given text companions; N10's own A/A not in the budget |
+| blind critic | adopted | K0, now on Gemini Flash |
+
+## Decisions on the second review (CHEAPEST_PASS_2.md)
+
+| item | decision | reason |
+|---|---|---|
+| P1 provenance of Claude labels | adopted | transcripts exist; the frozen wrappers reproduce all 12 existing labeller transcripts exactly; ql and native pass today |
+| P2 order | adopted, all five orderings | |
+| B5t route only to the less favourable judge | adopted (lean at least -0.05) | |
+| B5, B5t without the cross-family pair; 30 two-sided pairs | adopted | |
+| B6b one-sided debias (+0.05; members +0.08) | adopted, with a +0.20 ceiling | a linear correction is not credible beyond it |
+| B6a report only | adopted | |
+| K0 stratified kappa | adopted, bound 0.40, reference stated as weak | pilot: outside-outside 0.51 / 0.38, DeepSeek-Claude 0.46 / 0.28 |
+| K0 critic on Gemini 3.8 Flash | adopted | 96 of the about 130 agy runs; the optional Gemini cal0 judging is dropped for it |
+| C11 count floor | adopted | |
+| C10 separator lines | adopted, with italics | |
+| D5 per-call times | not adopted now | it needs builder changes to llm-batch.mjs and answer_dsh.py; the balance drop (adopted) bounds spend whatever the hours; peak checks stay at launch level, a stated limit |
+| D5 balance check | adopted | Emily reads the balance at stage 2 and after the last run |
+| D6 version from cli.log | adopted | per-run logs exist (`log/cli-*.log`) |
+| S0 | adopted | |
+| QL labeller field | fixed in the verifier | identity from P1; no re-import |
+| QL 0.99 | adopted | |
+| QL optional DeepSeek second labeller | rejected | adds a failure mode on fuzzy labels; the text companions do not depend on label precision |
+| A9 per language | adopted | it can only fail more, so adopting it after the labels exist cannot fit the data; English is 11 of 12 today and fails |
+| A9 fluent-translation control | rejected for this round | needs 72 Claude and a second native import; the literal control's limit is stated |
+| A9 controls against their batch and language | adopted | |
+| A11 recompute from the batch | adopted | |
+| N1 text companion (N1h) | adopted; trait gate kept beside it | |
+| C7 raw challenge verdict | adopted as the instrument trait, DeepSeek, sets chal-P-A | |
+| N7 slice | changed | the rest of held-out is labelled (ql2, 270 more Claude labels, about 36 open questions); Gemini's minimum set to 8 and called weak; text companion N7h adopted |
+| N3 coverage 1.00 paired | adopted | |
+| N4 per checked claim, coverage 1.00 paired | adopted | |
+| N9 Korean and apostrophes | adopted | |
+| N6 at least half of plain's no-web answers | adopted | stricter than WIN_CRITERIA; the WIN_CRITERIA version is reported |
+| DSH profiles, lean.yml, candidate agy homes frozen | adopted | stage 2 hashes the profiles and lean.yml; candidate homes are compared with their base homes |
+| judge batch model check | adopted | |
 
 ## Needs Emily's OK (fallbacks are the gates for now)
 
-- lingua-py or fastText lid.176 for language identification (A2, A5, N8). Fallback: the verifier's own identifier.
+- lingua-py: approved 2026-10-25 and in use for A2 and A5 only. Answers (N8) and controls keep the stdlib identifier: long answers are reliably identified by script and function words, and the coordinator scoped lingua to the question set.
 - LaBSE embeddings for paraphrase and cross-language twins (A6). Fallback: within-language TF-IDF; twins not gated.
 - A public chat log such as WildChat for A9 and A10. Fallback: Emily's seeds and the measured short share.
 
 ## Known limits
 
-- Claude's identity rests on the coordinator's subagent calls; the verifier can only check that its verdicts are not DeepSeek's (B5 at most 0.90) and that each has a raw reply.
-- Ledger times and commit times are written on Emily's machine by the same people who run the benchmark; D3 checks that they agree, not that they are true.
-- Spend (D5) counts the usage records that exist; a deleted batch file undercounts.
-- New gates written for the lean plan (routing, K0, C11, D5, D6, S, QL, A11) have not had an independent cheapest-pass review; see VERIFIER_FREEZE.md.
+- Claude's verdicts are checked against their own transcripts; a labelling session run outside this machine's Claude Code folders would not be seen by the re-roll count (its copy and ledger line would still be checked).
+- Ledger and commit times are written on Emily's machine by the people who run the benchmark; P2 and D3 check that they agree, not that they are true.
+- Peak-hour use is checked at launch level; the cap itself is checked against the account balance.
+- N7 on Gemini (8 open questions) and A9 per language (12 pairs) are weak gates and are called so.
+- The B5 and K0 kappa floor rests on a 29-comparison pilot on the pair C uses.

@@ -128,6 +128,11 @@
       "gravitas": "none",
       "definition": "Offers original, inventive ideas or framings beyond the obvious."
     },
+    "Challenges the Person": {
+      "gravitas": "none",
+      "definition": "Disagrees with, challenges or corrects something the person said, assumed or plans to do, whether or not the challenge is warranted. Count every disagreement, objection or correction, small ones included, however politely it is put. If neither answer challenges anything the person said, the verdict is TIE.",
+      "note": "A verifier instrument for gate C7 (pushback on questions with nothing to challenge), not an AA trait and not in any index."
+    },
     "Open-Ended": {
       "gravitas": "none",
       "definition": "Leaves room for further exploration: open questions, several possibilities or directions, rather than closing the topic."
