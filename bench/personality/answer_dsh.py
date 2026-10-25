@@ -19,6 +19,7 @@ rule hash; plain must show none).
 """
 import argparse
 import hashlib
+import dshbatch
 import ledger
 import json
 import os
@@ -109,6 +110,7 @@ def run_one(q, arm, outdir):
         attempt = rec.get("attempt", 1) + 1
     plain, _ = parse_arm(arm)
     prof = "gv-plain" if plain else "gv-grav"
+    dshbatch.wait_offpeak()  # Emily's lean plan: DeepSeek runs off-peak only
     # DSH's Windows sandbox needs Full control on the run folder; the one folder Emily granted it
     # is round three's cwd, so each run gets its own gp- subfolder there (round three, 2026-10-25).
     cwd = DSH_CWD / f"gp-{arm.replace(':', '_')}-{qid}"

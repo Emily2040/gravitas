@@ -21,8 +21,27 @@ def _yaml_str(s):
     return "'" + str(s).replace("'", "''") + "'"
 
 
+def is_peak(t=None):
+    """DeepSeek peak hours: 01:00-04:00 and 06:00-10:00 UTC, Monday to Friday (api-docs pricing
+    page, read 2026-10-24). Chinese public holidays are off-peak too; not modelled (errs safe)."""
+    g = time.gmtime(t if t is not None else time.time())
+    return g.tm_wday < 5 and (1 <= g.tm_hour < 4 or 6 <= g.tm_hour < 10)
+
+
+def wait_offpeak():
+    """Emily's lean plan runs off-peak only: hold until the peak window ends."""
+    waited = 0
+    while is_peak():
+        if waited == 0:
+            print("[dshbatch] DeepSeek peak hours: waiting for off-peak", flush=True)
+        time.sleep(60)
+        waited += 60
+    return waited
+
+
 def run(name, requests, concurrency=24, model="deepseek-flash", temperature=None, max_tokens=None, timeout_s=7200):
     """Run requests [{id, user, system?}] as batch `name`; return {id: result} for every id."""
+    wait_offpeak()
     bdir = DATA / "batches"
     bdir.mkdir(parents=True, exist_ok=True)
     src, out = bdir / f"{name}.in.jsonl", bdir / f"{name}.out.jsonl"

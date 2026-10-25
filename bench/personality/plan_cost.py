@@ -47,6 +47,7 @@ def harness_unit(arm, qids=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out")
+    ap.add_argument("--scope", choices=["full", "lean"], default="full")
     a = ap.parse_args()
     u = {}
     u["draft"], n_draft = batch_unit("gen-pilot[23]-*.out.jsonl")
@@ -86,6 +87,26 @@ def main():
         "judge: remaining 13 traits, 25% of questions, 2 pairs": (13 * round(0.25 * questions) * 2, "judge"),
         "judge: order-swap duplicates for position bias": (1000, "judge"),
     }
+    if a.scope == "lean":
+        # Emily's lean plan (2026-10-25): judge only the 8 Gravitas-targeted traits, one rule
+        # candidate, no bare-model arm or screening, off-peak, at most 50 USD.
+        T8 = 8
+        plan = {
+            "drafting calls": (draft_calls, "draft"),
+            "rating calls": (rate_calls, "rate"),
+            "ds-plain harness runs (all questions)": (questions, "ds_plain"),
+            "ds-grav harness runs (all questions; after round four, gv-grav)": (questions, "ds_grav"),
+            "ds-plain-aa rerun (150 held-out)": (150, "ds_plain"),
+            "ds-grav-aa rerun (150 held-out; after round four)": (150, "ds_grav"),
+            "one rule candidate in the harness: tuning + held-out": (tuning + heldout, "ds_grav"),
+            "judge: ds-plain vs ds-grav, all questions, 8 traits": (questions * T8, "judge"),
+            "judge: A/A plain and A/A Gravitas, 150 each, 8 traits": (2 * 150 * T8, "judge"),
+            "judge: candidate vs ds-plain, tuning + held-out, 8 traits": ((tuning + heldout) * T8, "judge"),
+            "judge: Gemini plain vs Gravitas, 300 questions, 8 traits": (300 * T8, "judge"),
+            "judge: Gemini candidate vs plain, 300 questions, 8 traits": (300 * T8, "judge"),
+            "judge: ds-plain vs gm-plain, 300 questions, 8 traits (self-preference)": (300 * T8, "judge"),
+            "judge: order-swap duplicates for position bias": (800, "judge"),
+        }
     rows, tot_usd, harness, single = [], 0.0, 0, 0
     for k, (n, unit) in plan.items():
         usd = n * u[unit]
