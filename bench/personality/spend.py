@@ -17,6 +17,8 @@ import sys
 import dshbatch
 
 WEB_USD = 0.75 / 1000
+# agy runs approved by the coordinator: about 1,200 (2026-10-25) plus 500 for Gemini judging.
+AGY_APPROVED = 1700
 
 
 def total():
@@ -45,8 +47,11 @@ def total():
         harness_usd += dshbatch.cost_usd({"input": u.get("input", 0), "cache_read": u.get("cache_read", 0), "output": u.get("output", 0)})
         t = r.get("tools") or {}
         harness_usd += WEB_USD * (t.get("web_search_queries", 0) + t.get("web_fetch", 0))
+    # Antigravity runs: every agy run writes one conversation database in its home, so the count
+    # of those files is the count of runs, probes and failed runs included.
+    agy_runs = len(glob.glob(str(D / "agy" / "home-*" / ".gemini" / "antigravity-cli" / "conversations" / "*.db")))
     return {"batch_calls": calls, "batch_usd": round(batch_usd, 3), "harness_runs": runs, "harness_usd": round(harness_usd, 3),
-            "total_usd": round(batch_usd + harness_usd, 3)}
+            "total_usd": round(batch_usd + harness_usd, 3), "agy_runs": agy_runs, "agy_approved": AGY_APPROVED}
 
 
 def main():

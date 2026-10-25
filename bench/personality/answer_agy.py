@@ -48,6 +48,39 @@ lock = threading.Lock()
 stop = threading.Event()
 
 
+BUILD_LOGS = DATA / "agy" / "build_logs.txt"  # one glob per line: the build legs' run logs (read only)
+
+
+def builds_hit_quota(window_s=900):
+    """True if any build leg's log, written in the last 15 minutes, shows a quota or 429 error.
+    The coordinator's rule (2026-10-25): builds come first, so judge and answer runs pause then."""
+    if not BUILD_LOGS.exists():
+        return False
+    now = time.time()
+    for pat in [l.strip() for l in BUILD_LOGS.read_text(encoding="utf-8").splitlines() if l.strip() and not l.startswith("#")]:
+        for p in glob.glob(pat, recursive=True):
+            try:
+                if now - os.path.getmtime(p) > window_s:
+                    continue
+                with open(p, "rb") as f:
+                    f.seek(max(0, os.path.getsize(p) - 200_000))
+                    tail = f.read().decode("utf-8", "replace")
+            except OSError:
+                continue
+            if any(k in tail for k in ("429", "RESOURCE_EXHAUSTED", "quota exceeded", "Quota exceeded")):
+                return True
+    return False
+
+
+def wait_for_builds():
+    paused = False
+    while builds_hit_quota():
+        if not paused:
+            print("a build leg hit a quota or 429 error: pausing agy runs until it recovers", flush=True)
+            paused = True
+        time.sleep(300)
+
+
 def parse_arm(arm):
     """(is_plain, candidate name or None) for a known arm; anything else stops the run."""
     if arm in ("gm-plain", "gm-plain-aa"):
@@ -107,6 +140,7 @@ def grav_markers(lang):
 def run_one(q, arm, model, outdir):
     if stop.is_set():
         return None
+    wait_for_builds()
     qid, lang = q["id"], q["lang"]
     base = outdir / qid
     js = base.with_suffix(".json")

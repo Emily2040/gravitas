@@ -20,7 +20,8 @@ import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 
-from answer_agy import AGY, DATA, EMILY_MARKERS, QUOTA, grav_markers
+import ledger
+from answer_agy import AGY, DATA, EMILY_MARKERS, QUOTA, grav_markers, wait_for_builds
 
 lock = threading.Lock()
 stop = threading.Event()
@@ -29,6 +30,7 @@ stop = threading.Event()
 def one(p, model, out_path, done):
     if stop.is_set() or p["job"] in done:
         return
+    wait_for_builds()
     home = AGY / "home-plain"
     ws = AGY / "ws" / f"judge-{abs(hash(p['job'])) % 10**10}"
     if ws.exists():
@@ -60,6 +62,8 @@ def one(p, model, out_path, done):
         iso = all(m.encode("utf-8") not in data for m in EMILY_MARKERS + grav_markers("en") + grav_markers("zh"))
     quota = any(k in err for k in QUOTA)
     rec = {"job": p["job"], "verdict": text, "status": status, "secs": round(time.time() - t0, 1), "judge_clean": iso, "model": model}
+    ledger.append("judge-agy-run", job=p["job"], model=model, status=status, secs=rec["secs"], judge_clean=iso, conversation_id=cid,
+                  raw_sha256=ledger.sha256_text(text))
     with lock:
         if status == "SUCCESS" and iso:
             with open(out_path, "a", encoding="utf-8", newline="\n") as f:
