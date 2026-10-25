@@ -173,7 +173,7 @@ def run(a):
 
 
 def export(a):
-    jobs = [j for j in jobs_of(a.name) if j["judge"] == a.judge]
+    jobs = [j for j in jobs_of(a.name) if a.all or j["judge"] == a.judge]
     qs = load_questions()
     out = DATA / "judging" / a.name / f"{a.judge}.prompts.jsonl"
     with open(out, "w", encoding="utf-8", newline="\n") as f:
@@ -188,7 +188,7 @@ def import_(a):
         if l.strip():
             r = json.loads(l)
             got[r["job"]] = r
-    jobs = [j for j in jobs_of(a.name) if j["judge"] == a.judge]
+    jobs = [j for j in jobs_of(a.name) if a.all or j["judge"] == a.judge]
     out = DATA / "judging" / a.name / f"{a.judge}.jsonl"
     n = 0
     with open(out, "w", encoding="utf-8", newline="\n") as f:
@@ -228,8 +228,8 @@ def main():
     b.add_argument("--swap", action="store_true"); b.add_argument("--repeat", type=int, default=1)
     b.add_argument("--judges", default="deepseek=1.0")
     r = sp.add_parser("run"); r.add_argument("name"); r.add_argument("--concurrency", type=int, default=32)
-    e = sp.add_parser("export"); e.add_argument("name"); e.add_argument("judge")
-    i = sp.add_parser("import"); i.add_argument("name"); i.add_argument("judge"); i.add_argument("file")
+    e = sp.add_parser("export"); e.add_argument("name"); e.add_argument("judge"); e.add_argument("--all", action="store_true", help="every job, for a calibration set judged by all judges")
+    i = sp.add_parser("import"); i.add_argument("name"); i.add_argument("judge"); i.add_argument("file"); i.add_argument("--all", action="store_true")
     c = sp.add_parser("collect"); c.add_argument("name")
     a = ap.parse_args()
     {"build": build, "run": run, "export": export, "import": import_, "collect": collect}[a.cmd](a)
