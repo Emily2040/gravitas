@@ -32,7 +32,17 @@ CODE_FENCE = re.compile(r"```.*?(?:```|\Z)", re.S)
 INLINE_CODE = re.compile(r"`[^`\n]+`")
 URL = re.compile(r"https?://\S+|www\.\S+")
 HEADING = re.compile(r"^\s{0,3}#{1,6}\s+\S")
-LIST_ITEM = re.compile(r"^(\s*)(?:[-*+•・]|\d+[.)、]|[a-zA-Z][.)]|[①-⑳]|[０-９]+[．.、])\s+\S")
+# ASCII markers need a space after them (so "2.5 times" or "-5°C" is not a list item); fullwidth
+# and CJK markers often have none ("・項目", "1）第一", "（2）第二").
+LIST_ITEM = re.compile(r"^(\s*)(?:(?:[-*+•▪▫◦‣→–■□◆◇★☆✓✔❖➤►▶]|\d+[.)]|[a-zA-Z][.)])\s+\S"
+                       r"|(?:・|\d+[、）]|[（(]\d+[）)]|[①-⑳]|[０-９]+[．.、）])\s*\S)")
+# The same markers, for removing them before words are counted (the item text stays).
+LIST_MARKER = re.compile(r"^(\s*)(?:(?:[-*+•▪▫◦‣→–■□◆◇★☆✓✔❖➤►▶]|\d+[.)]|[a-zA-Z][.)])\s+"
+                         r"|(?:・|\d+[、）]|[（(]\d+[）)]|[①-⑳]|[０-９]+[．.、）])\s*)", re.M)
+EMOJI_MARKER = re.compile(r"^(\s*)[\U0001F300-\U0001FAFF☀-➿]️?\s+", re.M)
+EMOJI_BULLET = re.compile(r"^\s*[\U0001F300-\U0001FAFF\u2600-\u27BF]\ufe0f?\s+\S")
+HTML_BOLD = re.compile(r"<(b|strong)>(.+?)</\1>", re.S | re.I)
+LENTICULAR = re.compile(r"【[^】\n]{1,40}】")
 TABLE_SEP = re.compile(r"^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$")
 BOLD = re.compile(r"(\*\*|__)(?=\S)(.+?)(?<=\S)\1", re.S)
 ITALIC = re.compile(r"(?<![*_\w])([*_])(?=[^\s*_])([^*_\n]+?)(?<=[^\s*_])\1(?![*_\w])")
@@ -73,6 +83,19 @@ SLOP_PHRASES = {
 
 EMOJI_RANGES = [(0x1F300, 0x1FAFF), (0x2600, 0x27BF), (0x1F000, 0x1F2FF), (0x1F900, 0x1F9FF), (0x2B00, 0x2BFF), (0x2300, 0x23FF)]
 JOINERS = {0x200D, 0xFE0F, 0xFE0E} | set(range(0x1F3FB, 0x1F400)) | set(range(0xE0020, 0xE0080))
+
+
+def hedge_re(h, lang):
+    """Pattern for one hedge marker. English: whole words, case-insensitive except 'may', which
+    must be lowercase so that the month May is not counted. Chinese: '可能' not after '不'."""
+    if lang == "en" or (lang not in HEDGES):
+        w = h.strip()
+        if w == "may":
+            return re.compile(r"\bmay\b")
+        return re.compile(r"\b" + re.escape(w) + r"\b", re.I)
+    if h == "可能":
+        return re.compile(r"(?<!不)可能")
+    return re.compile(re.escape(h))
 
 
 def detect_lang(text):
@@ -120,7 +143,8 @@ def prose_text(text):
     t = URL.sub(" ", strip_code(text))
     t = re.sub(r"^\s{0,3}#{1,6}\s+", "", t, flags=re.M)
     t = re.sub(r"^\s*>\s?", "", t, flags=re.M)
-    t = re.sub(r"^(\s*)(?:[-*+•・]|\d+[.)、]|[a-zA-Z][.)]|[①-⑳]|[０-９]+[．.、])\s+", r"\1", t, flags=re.M)
+    t = LIST_MARKER.sub(r"\1", t)
+    t = EMOJI_MARKER.sub(r"\1", t)
     t = re.sub(r"(\*\*|__|\*|_|~~)", "", t)
     t = re.sub(r"^\s*\|?\s*:?-{3,}.*$", "", t, flags=re.M)
     t = t.replace("|", " ")
@@ -172,6 +196,8 @@ def blocks(text):
             kinds.append("heading")
         elif TABLE_SEP.match(ln) or (ln.strip().startswith("|") and ln.strip().endswith("|")):
             kinds.append("table")
+        elif EMOJI_BULLET.match(ln):
+            kinds.append("list0")
         elif LIST_ITEM.match(ln):
             kinds.append("list0" if len(LIST_ITEM.match(ln).group(1).replace("\t", "    ")) < 2 else "listN")
         else:
@@ -217,7 +243,8 @@ def measure(text, lang=None):
             in_para = False
 
     stripped = strip_code(text)
-    bold = len(BOLD.findall(stripped))
+    bold = len(BOLD.findall(stripped)) + len(HTML_BOLD.findall(stripped))
+    lenticular = len(LENTICULAR.findall(stripped))
     italic = len(ITALIC.findall(BOLD.sub(" ", stripped)))
     bold_lead = sum(1 for ln, k in zip(lines, kinds) if k in ("list0", "listN") and re.match(r"^\s*(?:\S+)\s+(\*\*|__)", ln))
 
@@ -237,7 +264,7 @@ def measure(text, lang=None):
     low = prose.lower()
     hedge = {}
     for which in ("first", "extended"):
-        n = sum(low.count(h) for h in HEDGES.get(lang, HEDGES["en"])[which])
+        n = sum(len(hedge_re(h, lang).findall(prose)) for h in HEDGES.get(lang, HEDGES["en"])[which])
         hedge[which] = round(1000.0 * n / chars, 3) if chars else 0.0
     slop_hits = sum(low.count(p) for p in SLOP_PHRASES.get(lang, SLOP_PHRASES["en"]))
     native_words = len(prose.split()) if lang == "ko" else words
@@ -263,6 +290,7 @@ def measure(text, lang=None):
         "quotes": quote_marks // 2,
         "ellipses": ellipses,
         "bold": bold,
+        "lenticular_brackets": lenticular,
         "italics": italic,
         "emojis": count_emojis(text),
         "acronyms": len(ACRONYM.findall(prose)),
@@ -306,6 +334,12 @@ def self_test():
     cleaned = prose_text(en + "\n" + zh)
     assert not any(ord(c) < 32 and c not in "\n\t" for c in cleaned), "control character left in prose text"
     assert "  - nested" not in cleaned and "nested" in cleaned, "list markers must go, item text must stay"
+    f = measure("▪ first item\n▪ second item\n\n1）第一\n（2）第二\n\n✅ done\n\n<b>key</b> and 【重点】 text.", "zh")
+    assert f["list_items"] == 5 and f["bold"] == 1 and f["lenticular_brackets"] == 1, f
+    h = measure("In May 2026 rates may fall. It is not impossible.", "en")
+    assert h["hedges_first_per_1k"] > 0 and abs(h["hedges_first_per_1k"] - round(1000.0 / h["characters"], 3)) < 1e-6, h
+    z2 = measure("这不可能。这可能对。", "zh")
+    assert abs(z2["hedges_first_per_1k"] - round(1000.0 / z2["characters"], 3)) < 1e-6, z2
     e = measure("")
     assert e["words"] == 0 and e["characters"] == 0 and e["sentences"] == 0
     print("metrics self-test: ok")

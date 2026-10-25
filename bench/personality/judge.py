@@ -23,6 +23,7 @@ import sys
 from pathlib import Path
 
 import dshbatch
+import ledger
 
 DATA = dshbatch.DATA
 HERE = Path(__file__).resolve().parent
@@ -69,6 +70,12 @@ def answer(system, qid):
     return t or None
 
 
+def answer_sha(system, qid):
+    """sha256 of the answer text exactly as a judge sees it (before scrubbing)."""
+    t = answer(system, qid)
+    return ledger.sha256_text(t) if t else None
+
+
 def plan_traits(plan, q, rng_key):
     """Traits judged for one question: 'focus' = the 10 Gravitas targets + 6 guards + the
     question's own trait; 'all' = all 30; otherwise a comma list."""
@@ -112,8 +119,11 @@ def build(a):
                         jid = f"{q['id']}|{trait}|{left}|{right}|{rep}"
                         judge = assign_judge(weights, f"{a.name}|{q['id']}|{s1}|{s2}|{trait}|{rep}")
                         jobs.append({"job": jid, "qid": q["id"], "lang": q["lang"], "qtrait": q.get("trait"), "mode": q.get("mode"),
-                                     "split": q.get("split"), "trait": trait, "left": left, "right": right, "rep": rep, "judge": judge})
+                                     "split": q.get("split"), "trait": trait, "left": left, "right": right, "rep": rep, "judge": judge,
+                                     "left_sha": answer_sha(left, q["id"]), "right_sha": answer_sha(right, q["id"])})
     d = DATA / "judging" / a.name
+    if (d / "jobs.jsonl").exists() and not a.rebuild:
+        raise SystemExit(f"{d / 'jobs.jsonl'} exists; a judging set is built once (pass --rebuild only for a pilot)")
     d.mkdir(parents=True, exist_ok=True)
     with open(d / "jobs.jsonl", "w", encoding="utf-8", newline="\n") as f:
         for j in jobs:
@@ -121,36 +131,51 @@ def build(a):
     by = {}
     for j in jobs:
         by[j["judge"]] = by.get(j["judge"], 0) + 1
+    meta = {"name": a.name, "questions": str(a.questions), "questions_sha256": ledger.sha256_file(a.questions), "pairs": a.pairs,
+            "plan": a.plan, "swap": a.swap, "repeat": a.repeat, "weights": weights, "jobs": len(jobs), "by_judge": by,
+            "skipped_pairs": skipped, "jobs_sha256": ledger.sha256_file(d / "jobs.jsonl")}
+    (d / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
+    ledger.append("judge-build", **meta)
     print(json.dumps({"jobs": len(jobs), "by_judge": by, "skipped_pairs": skipped}))
 
 
 def prompt_for(job, questions):
     q = questions[job["qid"]]
     a, b = answer(job["left"], job["qid"]), answer(job["right"], job["qid"])
+    # The text judged must be the text the set was built on; an edited or deleted answer stops the run.
+    if "left_sha" in job and (ledger.sha256_text(a) != job["left_sha"] or ledger.sha256_text(b) != job["right_sha"]):
+        raise SystemExit(f"answer text changed since build: {job['job']}")
     return JUDGE_TEMPLATE.format(trait=job["trait"], definition=TRAITS["traits"][job["trait"]]["definition"],
                                  question=q["q"], a=SCRUB.sub("[assistant]", a), b=SCRUB.sub("[assistant]", b))
 
 
 def load_questions():
+    """Every question by id: drafts first, then the selected sets (which carry split and source)."""
     qs = {}
-    for p in (DATA / "questions").glob("*.jsonl"):
+    root = DATA / "questions"
+    for p in sorted(root.glob("*.jsonl")) + sorted(root.glob("*/*.jsonl")):
+        if p.name == "rejects.jsonl":
+            continue
         for l in open(p, encoding="utf-8"):
             if l.strip():
                 r = json.loads(l)
-                qs.setdefault(r["id"], r)
+                qs[r["id"]] = {**qs.get(r["id"], {}), **r}
     return qs
 
 
 def parse_verdict(text):
-    t = (text or "").strip()
-    if not t:
+    """Strict: the last non-empty line, with markdown, quotes and end punctuation removed, must be
+    exactly A, B or TIE ('tie' accepted). Anything else is unparsed, never guessed: a guess once
+    read the article 'a' as a vote."""
+    lines = [l for l in (text or "").strip().splitlines() if l.strip()]
+    if not lines:
         return None
-    last = re.sub(r"[*_`\s.\"'。]", "", t.splitlines()[-1]).upper()
-    for v in ("TIE", "A", "B"):
-        if last == v or last.endswith(":" + v) or last == f"VERDICT{v}":
-            return v
-    m = re.findall(r"\b(TIE|A|B)\b", t[-40:].upper())
-    return m[-1] if m else None
+    last = re.sub(r"[*_`#>\s.\"'\u3002\uff0e!\uff01]", "", lines[-1])
+    if last in ("A", "B"):
+        return last
+    if last.upper() == "TIE":
+        return "TIE"
+    return None
 
 
 def jobs_of(name):
@@ -166,9 +191,12 @@ def run(a):
     with open(out, "w", encoding="utf-8", newline="\n") as f:
         for j in jobs:
             r = res[j["job"]]
-            f.write(json.dumps({"job": j["job"], "judge": "deepseek", "verdict": parse_verdict(r.get("text")),
-                                "raw": (r.get("text") or "")[-80:], "error": r.get("error"), "usage": r.get("usage")}, ensure_ascii=False) + "\n")
+            f.write(json.dumps({"job": j["job"], "judge": "deepseek", "model": r.get("model"), "verdict": parse_verdict(r.get("text")),
+                                "raw": r.get("text") or "", "error": r.get("error"), "usage": r.get("usage"),
+                                "left_sha": j.get("left_sha"), "right_sha": j.get("right_sha")}, ensure_ascii=False) + "\n")
     t = dshbatch.usage_totals(res)
+    ledger.append("judge-run", name=a.name, judge="deepseek", jobs=len(jobs), out_sha256=ledger.sha256_file(out),
+                  batch_out_sha256=ledger.sha256_file(dshbatch.DATA / "batches" / f"judge-{a.name}.out.jsonl"))
     print(json.dumps({"judged": len(jobs), "usage": t, "usd_offpeak": round(dshbatch.cost_usd(t), 4)}))
 
 
@@ -196,28 +224,39 @@ def import_(a):
             r = got.get(j["job"])
             v = parse_verdict(r.get("verdict")) if r else None
             n += v is not None
-            f.write(json.dumps({"job": j["job"], "judge": a.judge, "verdict": v, "error": None if r else "missing"}) + "\n")
+            f.write(json.dumps({"job": j["job"], "judge": a.judge, "model": (r or {}).get("model"), "verdict": v,
+                                "raw": (r or {}).get("verdict"), "error": None if r else "missing",
+                                "left_sha": j.get("left_sha"), "right_sha": j.get("right_sha")}, ensure_ascii=False) + "\n")
+    ledger.append("judge-import", name=a.name, judge=a.judge, jobs=len(jobs), parsed=n,
+                  source_sha256=ledger.sha256_file(a.file), out_sha256=ledger.sha256_file(out))
     print(f"{n}/{len(jobs)} verdicts imported for {a.judge}")
 
 
 def collect(a):
     d = DATA / "judging" / a.name
     jobs = {j["job"]: j for j in jobs_of(a.name)}
-    rows = []
-    for p in d.glob("*.jsonl"):
-        if p.name in ("jobs.jsonl", "verdicts.jsonl") or p.name.endswith(".prompts.jsonl"):
+    rows, stats = [], {}
+    for p in sorted(d.glob("*.jsonl")):
+        if p.name in ("jobs.jsonl", "verdicts.jsonl") or p.name.endswith((".prompts.jsonl", ".raw.jsonl")) or ".batch" in p.name:
             continue
         for l in open(p, encoding="utf-8"):
             r = json.loads(l)
             j = jobs.get(r["job"])
-            if not j or r.get("verdict") not in ("A", "B", "TIE"):
+            st = stats.setdefault(r.get("judge") or p.stem, {"rows": 0, "parsed": 0, "unknown_job": 0})
+            st["rows"] += 1
+            if not j:
+                st["unknown_job"] += 1
                 continue
+            if r.get("verdict") not in ("A", "B", "TIE"):
+                continue
+            st["parsed"] += 1
             win = {"A": j["left"], "B": j["right"], "TIE": None}[r["verdict"]]
             rows.append({**j, "judge": r["judge"], "verdict": r["verdict"], "winner": win})
     with open(d / "verdicts.jsonl", "w", encoding="utf-8", newline="\n") as f:
         for r in rows:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
-    print(json.dumps({"verdicts": len(rows), "jobs": len(jobs)}))
+    (d / "parse_stats.json").write_text(json.dumps(stats, indent=1), encoding="utf-8")
+    print(json.dumps({"verdicts": len(rows), "jobs": len(jobs), "parse": stats}))
 
 
 def main():
@@ -227,6 +266,7 @@ def main():
     b.add_argument("--pairs", required=True); b.add_argument("--plan", default="focus")
     b.add_argument("--swap", action="store_true"); b.add_argument("--repeat", type=int, default=1)
     b.add_argument("--judges", default="deepseek=1.0")
+    b.add_argument("--rebuild", action="store_true", help="overwrite an existing set (pilots only)")
     r = sp.add_parser("run"); r.add_argument("name"); r.add_argument("--concurrency", type=int, default=32)
     e = sp.add_parser("export"); e.add_argument("name"); e.add_argument("judge"); e.add_argument("--all", action="store_true", help="every job, for a calibration set judged by all judges")
     i = sp.add_parser("import"); i.add_argument("name"); i.add_argument("judge"); i.add_argument("file"); i.add_argument("--all", action="store_true")

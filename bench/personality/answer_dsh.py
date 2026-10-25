@@ -3,11 +3,14 @@
 
 Usage: answer_dsh.py QUESTIONS.jsonl ARM [--workers 12] [--rule-dir DIR] [--limit N]
 
-Arms:
+Arms (any other name is refused, so a plain rerun can never run with a rule by accident):
   ds-plain       profile gv-plain as shipped (deepseek-flash, DSH's own tools).
+  ds-plain-aa    the same, a separate launch for the A/A noise floor.
   ds-grav        profile gv-grav, Gravitas rule only (claim check off) in the question's
-                 language, rule text from --rule-dir (default: the pinned base copy).
-  ds-grav:NAME   the same with the rule files in DATA/rules/NAME (a tuning candidate).
+                 language, rule text from DATA/rules/base (the pinned copy).
+  ds-grav-aa     the same, a separate launch for the A/A noise floor.
+  ds-grav:NAME   the same with the rule files in DATA/rules/NAME, a tuning candidate; refused
+                 unless DATA/rules/NAME/FROZEN exists.
 
 Each run starts from its own empty folder, as a user's would. Output per run:
 DATA/answers/ARM/QID.{ndjson,err,txt,json}; the .json holds exit code, seconds, usage
@@ -16,6 +19,7 @@ rule hash; plain must show none).
 """
 import argparse
 import hashlib
+import ledger
 import json
 import os
 import subprocess
@@ -29,12 +33,27 @@ GLANG = {"zh": "zh-CN", "en": "en", "ja": "ja", "ko": "ko"}
 DSH_CWD = Path(os.environ.get("GP_DSH_CWD", "W:/AgentData/logs/gravitas-dsh-ab3/cwd"))
 GRAV_LINK = Path(os.environ.get("GP_GRAV_LINK", "W:/Projects/gravitas-claim-check"))
 lock = threading.Lock()
+GRAV_HEAD = None
+
+
+def parse_arm(arm):
+    """(is_plain, rule_name) for a known arm name; anything else stops the run."""
+    if arm in ("ds-plain", "ds-plain-aa"):
+        return True, None
+    if arm in ("ds-grav", "ds-grav-aa"):
+        return False, "base"
+    if arm.startswith("ds-grav:") and len(arm) > 8:
+        name = arm.split(":", 1)[1]
+        if not (DATA / "rules" / name / "FROZEN").exists():
+            raise SystemExit(f"rule candidate {name} has no FROZEN file; freeze it before any run")
+        return False, name
+    raise SystemExit(f"unknown arm {arm!r}")
 
 
 def overlay_for(arm, lang):
-    if arm == "ds-plain":
+    plain, name = parse_arm(arm)
+    if plain:
         return None, None
-    name = arm.split(":", 1)[1] if ":" in arm else "base"
     rule = DATA / "rules" / name / f"{GLANG[lang]}.md"
     if not rule.exists():
         raise SystemExit(f"missing rule file {rule}")
@@ -80,12 +99,16 @@ def summarise(ndjson_path):
 def run_one(q, arm, outdir):
     qid, lang = q["id"], q["lang"]
     base = outdir / qid
+    ov, sha = overlay_for(arm, lang)
+    attempt = 1
     if (base.with_suffix(".json")).exists():
         rec = json.loads(base.with_suffix(".json").read_text(encoding="utf-8"))
-        if rec.get("exit") == 0 and rec.get("chars", 0) > 0:
+        # Reuse only a successful run made with the same rule text as now.
+        if rec.get("exit") == 0 and rec.get("chars", 0) > 0 and rec.get("rule_expected") == sha and rec.get("rule_ok"):
             return rec
-    ov, sha = overlay_for(arm, lang)
-    prof = "gv-plain" if arm == "ds-plain" else "gv-grav"
+        attempt = rec.get("attempt", 1) + 1
+    plain, _ = parse_arm(arm)
+    prof = "gv-plain" if plain else "gv-grav"
     # DSH's Windows sandbox needs Full control on the run folder; the one folder Emily granted it
     # is round three's cwd, so each run gets its own gp- subfolder there (round three, 2026-10-25).
     cwd = DSH_CWD / f"gp-{arm.replace(':', '_')}-{qid}"
@@ -110,10 +133,14 @@ def run_one(q, arm, outdir):
     if rulelog.exists():
         lines = [l for l in rulelog.read_text(encoding="utf-8").splitlines() if l.strip()]
         rule_rec = json.loads(lines[-1]) if lines else None
-    rule_ok = (rule_rec is None) if arm == "ds-plain" else (rule_rec is not None and rule_rec.get("sha256") == sha)
-    rec = {"qid": qid, "lang": lang, "arm": arm, "exit": code, "secs": secs, "chars": len(final), "steps": steps,
-           "usage": usage, "tools": tools, "rule": rule_rec, "rule_expected": sha, "rule_ok": rule_ok}
+    rule_ok = (rule_rec is None) if plain else (rule_rec is not None and rule_rec.get("sha256") == sha)
+    rec = {"qid": qid, "lang": lang, "arm": arm, "attempt": attempt, "exit": code, "secs": secs, "chars": len(final),
+           "steps": steps, "usage": usage, "tools": tools, "rule": rule_rec, "rule_expected": sha, "rule_ok": rule_ok,
+           "grav_link_head": None if plain else GRAV_HEAD}
     base.with_suffix(".json").write_text(json.dumps(rec, ensure_ascii=False, indent=1), encoding="utf-8")
+    ledger.append("answer-launch", platform="dsh", arm=arm, qid=qid, attempt=attempt, start=round(t0, 1), secs=secs, exit=code,
+                  ndjson_sha256=ledger.sha256_file(base.with_suffix(".ndjson")), text_sha256=ledger.sha256_text(final.strip()),
+                  rule_sha256=sha, rule_log_sha256=(rule_rec or {}).get("sha256"), grav_link_head=rec["grav_link_head"])
     with lock:
         print(f"{arm} {qid} {lang} exit={code} secs={secs} chars={len(final)} tools={tools} rule_ok={rule_ok}", flush=True)
     return rec
@@ -126,6 +153,9 @@ def main():
     ap.add_argument("--workers", type=int, default=12)
     ap.add_argument("--limit", type=int, default=0)
     a = ap.parse_args()
+    parse_arm(a.arm)
+    global GRAV_HEAD
+    GRAV_HEAD = subprocess.run(["git", "-C", str(GRAV_LINK), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip() or None
     qs = [json.loads(l) for l in open(a.questions, encoding="utf-8") if l.strip()]
     if a.limit:
         qs = qs[: a.limit]

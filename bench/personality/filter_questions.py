@@ -206,9 +206,14 @@ def main():
         report_near[lang] = skipped_near
 
     # Split per (language, trait).
+    # Which split an odd-sized cell's extra question goes to alternates by a hash of (language,
+    # trait), and neutral takes the opposite of invite, so each (language, trait) is even and the
+    # invite share is about the same in tuning and held-out in every language (red-team A4).
     for lang in QUOTA:
         for trait in TRAITS:
-            for mode, first in (("invite", "tuning"), ("neutral", "heldout")):
+            inv_first = "tuning" if int(hkey(f"{lang}|{trait}"), 16) % 2 == 0 else "heldout"
+            neu_first = "heldout" if inv_first == "tuning" else "tuning"
+            for mode, first in (("invite", inv_first), ("neutral", neu_first)):
                 rs = sorted([r for r in selected if r["lang"] == lang and r["trait"] == trait and r["mode"] == mode], key=lambda r: hkey(r["id"]))
                 other = "heldout" if first == "tuning" else "tuning"
                 for i, r in enumerate(rs):
@@ -253,6 +258,9 @@ def main():
         "by_lang": Counter(r["lang"] for r in allq), "by_split": Counter(r["split"] for r in allq),
         "by_split_generated": Counter(r["split"] for r in gen),
         "by_mode_generated": Counter(r["mode"] for r in gen),
+        "invite_share_by_split_lang": {f"{sp}|{l}": (round(sum(r["mode"] == "invite" for r in gen if r["split"] == sp and r["lang"] == l)
+                                                          / max(1, sum(1 for r in gen if r["split"] == sp and r["lang"] == l)), 3))
+                                       for sp in ("tuning", "heldout") for l in QUOTA},
         "by_trait_generated": Counter(r["trait"] for r in gen),
         "by_bucket_lang": {l: Counter(r["bucket"] for r in allq if r["lang"] == l) for l in QUOTA},
         "script_lang_mismatch": sum(1 for r in allq if metrics.detect_lang(r["q"]) != r["lang"]),

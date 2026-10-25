@@ -13,6 +13,7 @@ import argparse
 import json
 
 import dshbatch
+import ledger
 
 GLANG = {"zh": "zh-CN", "en": "en", "ja": "ja", "ko": "ko"}
 
@@ -27,21 +28,35 @@ def main():
     outdir = dshbatch.DATA / "answers" / a.arm.replace(":", "_")
     outdir.mkdir(parents=True, exist_ok=True)
     rules = {}
-    if a.arm.startswith("raw-rule:"):
+    if a.arm.startswith("raw-rule:") and len(a.arm) > 9:
         name = a.arm.split(":", 1)[1]
+        if not (dshbatch.DATA / "rules" / name / "FROZEN").exists():
+            raise SystemExit(f"rule candidate {name} has no FROZEN file; freeze it before any run")
         for lang, g in GLANG.items():
             rules[lang] = (dshbatch.DATA / "rules" / name / f"{g}.md").read_text(encoding="utf-8")
-    elif a.arm != "raw-flash":
+    elif a.arm not in ("raw-flash", "raw-flash-aa"):
         raise SystemExit(f"unknown arm {a.arm}")
-    todo = [q for q in qs if not (outdir / f"{q['id']}.txt").exists() or not (outdir / f"{q['id']}.txt").read_text(encoding="utf-8").strip()]
+    rule_sha = {l: ledger.sha256_text(t) for l, t in rules.items()}
+
+    def done(q):
+        # Reuse only a non-empty answer made with the same rule text as now.
+        t, j = outdir / f"{q['id']}.txt", outdir / f"{q['id']}.json"
+        if not (t.exists() and t.read_text(encoding="utf-8").strip() and j.exists()):
+            return False
+        return json.loads(j.read_text(encoding="utf-8")).get("rule_sha256") == rule_sha.get(q["lang"])
+    todo = [q for q in qs if not done(q)]
     reqs = [{"id": q["id"], "user": q["q"], **({"system": rules[q["lang"]]} if rules else {})} for q in todo]
-    res = dshbatch.run(f"answers-{a.arm.replace(':', '_')}-{dshbatch.time.strftime('%Y%m%d-%H%M%S')}", reqs, concurrency=a.concurrency) if reqs else {}
+    bname = f"answers-{a.arm.replace(':', '_')}-{dshbatch.time.strftime('%Y%m%d-%H%M%S')}"
+    res = dshbatch.run(bname, reqs, concurrency=a.concurrency) if reqs else {}
     for q in todo:
         r = res.get(q["id"], {})
         text = (r.get("text") or "").strip()
         (outdir / f"{q['id']}.txt").write_text(text, encoding="utf-8", newline="\n")
         (outdir / f"{q['id']}.json").write_text(json.dumps({"qid": q["id"], "lang": q["lang"], "arm": a.arm, "chars": len(text),
-                                                           "usage": r.get("usage"), "error": r.get("error")}, ensure_ascii=False), encoding="utf-8")
+                                                           "usage": r.get("usage"), "error": r.get("error"), "batch": bname,
+                                                           "rule_sha256": rule_sha.get(q["lang"])}, ensure_ascii=False), encoding="utf-8")
+        ledger.append("answer-launch", platform="raw", arm=a.arm, qid=q["id"], batch=bname, error=r.get("error"),
+                      text_sha256=ledger.sha256_text(text), rule_sha256=rule_sha.get(q["lang"]))
     t = dshbatch.usage_totals(res) if res else {}
     print(json.dumps({"arm": a.arm, "answered": len(todo), "usage": t, "usd_offpeak": round(dshbatch.cost_usd(t), 4) if t else 0}))
 
