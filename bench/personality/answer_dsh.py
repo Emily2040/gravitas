@@ -26,6 +26,7 @@ from pathlib import Path
 
 DATA = Path(os.environ.get("GP_DATA", "W:/AgentData/logs/gravitas-personality"))
 GLANG = {"zh": "zh-CN", "en": "en", "ja": "ja", "ko": "ko"}
+DSH_CWD = Path(os.environ.get("GP_DSH_CWD", "W:/AgentData/logs/gravitas-dsh-ab3/cwd"))
 GRAV_LINK = Path(os.environ.get("GP_GRAV_LINK", "W:/Projects/gravitas-claim-check"))
 lock = threading.Lock()
 
@@ -85,7 +86,9 @@ def run_one(q, arm, outdir):
             return rec
     ov, sha = overlay_for(arm, lang)
     prof = "gv-plain" if arm == "ds-plain" else "gv-grav"
-    cwd = DATA / "cwd" / f"ans-{arm.replace(':', '_')}-{qid}"
+    # DSH's Windows sandbox needs Full control on the run folder; the one folder Emily granted it
+    # is round three's cwd, so each run gets its own gp- subfolder there (round three, 2026-10-25).
+    cwd = DSH_CWD / f"gp-{arm.replace(':', '_')}-{qid}"
     cwd.mkdir(parents=True, exist_ok=True)
     rulelog = base.with_suffix(".rule.jsonl")
     if rulelog.exists():

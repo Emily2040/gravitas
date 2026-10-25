@@ -120,7 +120,7 @@ def prose_text(text):
     t = URL.sub(" ", strip_code(text))
     t = re.sub(r"^\s{0,3}#{1,6}\s+", "", t, flags=re.M)
     t = re.sub(r"^\s*>\s?", "", t, flags=re.M)
-    t = re.sub(r"^(\s*)(?:[-*+•・]|\d+[.)、]|[a-zA-Z][.)]|[①-⑳]|[０-９]+[．.、])\s+", r"", t, flags=re.M)
+    t = re.sub(r"^(\s*)(?:[-*+•・]|\d+[.)、]|[a-zA-Z][.)]|[①-⑳]|[０-９]+[．.、])\s+", r"\1", t, flags=re.M)
     t = re.sub(r"(\*\*|__|\*|_|~~)", "", t)
     t = re.sub(r"^\s*\|?\s*:?-{3,}.*$", "", t, flags=re.M)
     t = t.replace("|", " ")
@@ -303,6 +303,9 @@ def self_test():
     assert measure("x = 1\n```py\nprint('a: b')\n```\n")["colons"] == 0
     t = measure("| a | b |\n|---|---|\n| 1 | 2 |\n")
     assert t["tables"] == 1 and t["paragraphs"] == 0, t
+    cleaned = prose_text(en + "\n" + zh)
+    assert not any(ord(c) < 32 and c not in "\n\t" for c in cleaned), "control character left in prose text"
+    assert "  - nested" not in cleaned and "nested" in cleaned, "list markers must go, item text must stay"
     e = measure("")
     assert e["words"] == 0 and e["characters"] == 0 and e["sentences"] == 0
     print("metrics self-test: ok")

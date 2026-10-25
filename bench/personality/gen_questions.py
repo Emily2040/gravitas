@@ -59,8 +59,13 @@ HINTS = {
     "Open-Ended": "asks a 'what if' or a big open question",
 }
 
-TOPICS = ["cooking", "health", "money", "work", "school", "travel", "technology", "home", "law and paperwork", "family",
-          "science", "history", "language", "sport", "pets", "shopping", "cars and transport", "culture", "nature", "hobbies"]
+TOPICS = ["cooking", "nutrition", "illness and medicine", "fitness", "sleep", "personal finance", "taxes", "insurance",
+          "renting and housing", "work and careers", "office politics", "school and exams", "university", "parenting",
+          "relationships", "friendship", "weddings and funerals", "travel", "public transport", "cars", "phones and apps",
+          "computers", "the internet and privacy", "home repair", "gardening", "pets", "shopping and returns",
+          "consumer rights", "government paperwork", "employment law", "history", "science", "space", "the human body",
+          "language and grammar", "books and writing", "film and music", "art", "sport", "games", "religion and customs",
+          "food culture", "the environment", "weather", "mathematics", "philosophy", "psychology", "small business"]
 
 
 def prompt_for(lang, trait, mode, n, seeds, rng):
@@ -68,13 +73,13 @@ def prompt_for(lang, trait, mode, n, seeds, rng):
     same = [s["q"] for s in seeds if s["lang"] == lang]
     rng.shuffle(same)
     examples = "\n".join(f"- {q}" for q in same[:6])
-    topics = ", ".join(rng.sample(TOPICS, 8))
+    topics = ", ".join(rng.sample(TOPICS, min(len(TOPICS), n + 4)))
     if mode == "invite":
         aim = (f"Each question gently {HINTS[trait]}. It must never name or ask for that quality "
                f"(do not write words like 'be honest', 'be direct', 'summarise', 'be funny'); it is just what a real person would ask.")
     else:
         aim = ("Each question is an ordinary request on its own topic that does not particularly invite humour, flattery, "
-               "pushback, hedging or any other style. Vary the topics across: " + topics + ".")
+               "pushback, hedging or any other style.")
     return (
         f"I am building a test set of real user questions for AI chat assistants.\n\n"
         f"Write {n} different questions in {L['name']}, each as a native speaker in {L['where']} would type it to an AI assistant in a chat app.\n\n"
@@ -82,7 +87,9 @@ def prompt_for(lang, trait, mode, n, seeds, rng):
         f"1. Write natively in {L['name']}: everyday wording, local places, institutions, prices and customs where they fit. Never translate from English.\n"
         f"2. One user message each, 1 to 3 sentences, self-contained, answerable in text with no attachment, file, account or link.\n"
         f"3. {aim}\n"
-        f"4. Vary the topic, length, tone, formality and the asker's situation; no two questions about the same thing.\n"
+        f"4. Each question on a different topic, drawn from: {topics}. Vary tone, formality and the asker's situation.\n"
+        f"   Vary the length: about a third short (one brief sentence, like 'Why did Rome fall?'), a third of medium length, and a third longer, giving the asker's situation.\n"
+        f"   Avoid the stock examples every question list reuses (why the sky is blue, how to boil an egg, and the like).\n"
         f"5. Avoid questions that need today's news, live prices or a specific product released this year.\n"
         f"6. Nothing dangerous, sexual or hateful. Everyday health, legal and money questions are fine.\n\n"
         f"Examples of real questions in this language (for style only; do not copy or paraphrase them):\n{examples}\n\n"
