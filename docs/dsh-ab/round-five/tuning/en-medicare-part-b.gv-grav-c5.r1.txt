@@ -1,0 +1,36 @@
+**Bottom line: Don't enroll in Part B this month. You qualify to delay it without a penalty.**
+
+Your coworker is quoting the general rule, and it's a real one — but it applies to people who don't have qualifying employer coverage. You do. Because your employer has about 400 employees (well over 20), your group health plan is the primary payer under Medicare's working-aged rules, and you can keep it past 65. You can delay Part B without a late enrollment penalty, and you'll have an 8-month Special Enrollment Period (SEP) when you stop working or lose the coverage, whichever comes first. ([Medicare.gov: Working past 65](https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65), [When can I sign up](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-can-i-sign-up-for-medicare))
+
+If you enroll now, you'd pay $202.90 a month (the 2026 standard Part B premium; higher-income enrollees pay more) for coverage that pays second to your employer plan — about $2,435 a year for little or no extra benefit. ([Avoid late enrollment penalties](https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties)) Keeping your employer plan is fine; you don't have to choose between the two. You can still enroll now if you want the extra coverage, but you don't need to for penalty purposes.
+
+## This month's checklist
+
+1. **Pause the Part B application.** If you haven't submitted it, don't. If you already have, call Social Security at 1-800-772-1213 and ask to withdraw or cancel it before it takes effect. Get the representative's name and the date.
+
+2. **Check for the "Get Ready for Medicare" package.** If you're already receiving Social Security, SSA automatically enrolls you in Part A and Part B. The package should have arrived around August. If it includes a Part B card, follow the packet instructions and send the card back — keeping it means you agree to keep Part B and pay the premium. Keep a copy of everything you send. If it already started, you can still drop it; coverage ends at the end of the month after Social Security processes your request. ([How to drop Part A & Part B](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/ready-to-sign-up-for-part-a-part-b/how-to-drop-part-a-part-b)) If you're not receiving Social Security, you won't get a card; you'll need to apply for Part A separately if you want it.
+
+3. **Get written answers from HR/benefits.** Ask:
+   - Is my coverage based on my current employment (active employee, not retiree or COBRA)?
+   - Does the company have 20 or more employees? (Yes, about 400.)
+   - Is the group plan primary to Medicare?
+   - Does the plan require me to enroll in Part A and/or Part B?
+   - Is the prescription drug coverage "creditable" for Part D? Get the annual notice.
+
+   Save the answers. You'll need them later.
+
+4. **Decide about Part A.** If you're not auto-enrolled, you can sign up for Part A only (usually premium-free) and decline Part B. It can help with hospital costs. But if you have an HSA and are still contributing, get tax advice first — enrolling in Medicare (Part A or B) ends HSA eligibility. If you're already on Social Security, you're auto-enrolled in premium-free Part A and generally can't drop it; in that case, stop HSA contributions before your Part A starts.
+
+5. **Keep a Medicare file.** Save the employer letter, plan documents, creditable coverage notice, and any SSA letters. You'll need proof of coverage when you enroll later.
+
+6. **Get free help if you want it.** Your state SHIP program ([shiphelp.org](https://www.shiphelp.org)) or 1-800-MEDICARE can review the employer plan and confirm the coordination for free.
+
+## When you leave the job
+
+You'll have 8 months after you stop working or lose the coverage (whichever comes first) to enroll in Part B without a penalty. Don't wait for COBRA to end — COBRA doesn't extend the window. If you want Medicare to start when your employer coverage ends, enroll the month before you retire. At that point, submit the Part B application (CMS-40B if you already have Part A) and CMS-L564, which your employer completes to prove you had job-based coverage. ([When does Medicare coverage start](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-does-medicare-coverage-start)) If you miss the 8-month window, you'd have to wait for the General Enrollment Period (January 1–March 31) and you might pay a penalty.
+
+## The one thing that could change this
+
+If your coverage is not active-employee group coverage — for example, retiree coverage, COBRA, or a plan from an employer with fewer than 20 employees — then the general rule may apply, and you may need to enroll now. Confirm with HR in writing. Also, if the plan itself requires you to have Part A and/or Part B, follow that requirement; get it in writing.
+
+**Sources:** [Working past 65](https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65) · [When can I sign up](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-can-i-sign-up-for-medicare) · [Avoid late enrollment penalties](https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties) · [How to drop Part A & Part B](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/ready-to-sign-up-for-part-a-part-b/how-to-drop-part-a-part-b) · [When does coverage start](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-does-medicare-coverage-start) · [SHIP](https://www.shiphelp.org)

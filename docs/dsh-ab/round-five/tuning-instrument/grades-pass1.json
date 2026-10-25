@@ -1,0 +1,4422 @@
+{
+ "batch": "pass1",
+ "pass": 1,
+ "seed": 505011,
+ "saved": "2026-10-26T09:28:21+11:00",
+ "idmap_sha256": "c247aff57d2ce04d8091efb080a570ae5e11abaf806013a83254059c33e49edc",
+ "prompt_sha256": "5d52cfe13c1bbcae0a089a8090bb41438f85b2daaf452d9c87bf0b34245c522e",
+ "schema_sha256": "dcdb6e01ca01f9fd51f55f7e8bdbcdb1bcb78ab8eb5ff6be7db3e9ac38449c47",
+ "lkp_sha256": "1884d69a38e3c4aa25c2328b85bc2064a3fb332efd058d57d0093f04d9429272",
+ "premise_sha256": "bf4ed81b51eca0566da71d669527deda3286cdb62b699132bb7fe68d90e42b6d",
+ "outputs": [
+  "W:\\AgentData\\logs\\gravitas-dsh-ab5\\tuning-instrument\\outputs\\pass1-part1.json"
+ ],
+ "outputs_given": [
+  "W:\\AgentData\\logs\\gravitas-dsh-ab5\\tuning-instrument\\outputs\\pass1-part1.json"
+ ],
+ "quote_warnings": 13,
+ "items": [
+  {
+   "id": "t101",
+   "case": "ko-severance-pay",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "202a7785a67c96260042c02664312b0a51eef0b8666813cde9d1c480edbd4109",
+   "warnings": [],
+   "grade": {
+    "id": "t101",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "missing",
+     "5": "vague",
+     "6": "correct",
+     "7": "correct"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "4": "ABSENT",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "퇴사일이 9월 20일이면 14일 기한은 10월 4일까지라, 지금은 이미 지난 상태입니다.",
+     "4": "",
+     "6": "지급 방식(IRP 계좌 이전 등)과 필요한 서류도 알려 주시면 바로 준비하겠습니다."
+    },
+    "AW": [
+     {
+      "quote": "퇴직금을 지급하지 않은 사용자는 3년 이하 징역 또는 3천만 원 이하 벌금에 처해질 수 있습니다(퇴직급여법 제44조).",
+      "reason": "Key: from 2026.9.18 the penalty is 퇴직급여법 제43조, 5년 이하 징역 또는 5천만 원 이하 벌금; \"제44조, 3년/3천만 원\" is the old rule (minor deduction)."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "퇴사일이 9월 20일이면 14일 기한은 10월 4일까지라",
+      "reason": "The key gives the deadline only as a window, 10/3 to 10/6, depending on how the 퇴직일 and holidays are read, and says the exact day is not settled. A fixed 10/4 is neither confirmed nor contradicted."
+     },
+     {
+      "quote": "퇴사일이 9월 20일이면 10월 5일부터이고",
+      "reason": "Interest start date as a fixed day. The key only gives the deadline window (10/3 to 10/6), so this date is not confirmed."
+     },
+     {
+      "quote": "퇴직 전 3개월(6월 20일~9월 19일): 92일",
+      "reason": "The key computes the period as 6/21~9/20, on the reading that 퇴직일 is 9/21. The answer's 6/20~9/19 period is not confirmed by the key."
+     },
+     {
+      "quote": "입사일이 2023년 7월 20일이 아니면 재직일수가 달라져 1,010만~1,040만 원 사이가 됩니다.",
+      "reason": "This range is not in the key. The key says a start date off by a day or two changes the total by a few thousand won, and puts the overall range at 1,024만~1,202만."
+     },
+     {
+      "quote": "제 재직기간은 2023년 7월 20일부터 2026년 9월 20일까지 3년 2개월이고",
+      "reason": "The answer assumes specific start and end dates. The key used 2023.7.21~2026.9.21 and treats the exact start date as an open fact."
+     },
+     {
+      "quote": "답이 없으면 내용증명을 보내고",
+      "reason": "Sending a 내용증명 is a procedural step the key does not mention."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "회사 말은 맞지 않습니다. ... 퇴직금은 퇴직한 날부터 14일 안에 지급하는 게 원칙입니다. \"한 달\"이 아닙니다"
+   }
+  },
+  {
+   "id": "t102",
+   "case": "zh-flex-hours",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "44ffa2678b245d91cceb651ac60660cb74eb6242e7e89cae2ab0821f4261bac7",
+   "warnings": [],
+   "grade": {
+    "id": "t102",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "vague",
+     "5": "wrong",
+     "6": "correct",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "6": "FLAT",
+     "7": "KEPT"
+    },
+    "lkp_quotes": {
+     "3": "退一步说，就算公司拿得出审批，10月1-3日的3724.14元也跑不掉。",
+     "6": "写清楚“2026年10月1-7日上班，要求支付法定节假日加班费3724.14元、休息日加班费3310.34元”",
+     "7": "如果确实有审批、岗位也覆盖：... 10月4-7日不直接按200%，这4天算进综合计算周期，整个周期实际工时超过法定标准总工时的部分才按150%。"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "你的工时按标准工时制处理——每天8小时、每周40小时",
+      "reason": "The key cites 157号第三条 for standard hours but does not state the 8-hour/40-hour figures."
+     },
+     {
+      "quote": "综合工时是把一周、一个月、一个季度或一年的工时加起来平均算",
+      "reason": "The key gives annual, quarterly and monthly standard totals but says nothing about a weekly cycle or this list of cycle types."
+     },
+     {
+      "quote": "去公司注册地的区人社局官网搜“特殊工时 行政许可 公示”",
+      "reason": "The key suggests asking the company, the union or the district HR bureau. It does not mention a public listing on the bureau website."
+     },
+     {
+      "quote": "有的审批不设时限，只要岗位没变就有效，岗位变了要重新申报。",
+      "reason": "The key says only that approvals granted for uneven production tasks last 1 to 3 years. It neither confirms nor denies approvals with no time limit."
+     },
+     {
+      "quote": "如果公司在自贸区，可能走告知承诺制，文件名称不是“审批表”，但同样要有备案或承诺文件。",
+      "reason": "The key says FTZ notification-commitment applies only to already-licensed companies re-applying. The added claim about the document type is unverified."
+     },
+     {
+      "quote": "微信记录保留原始手机，不要只截图。",
+      "reason": "This evidence-handling step is not in the key."
+     },
+     {
+      "quote": "打12333，向公司注册地的区劳动保障监察投诉",
+      "reason": "The key mentions complaints only in general terms and has no basis for 12333. Routing the complaint to the labor inspectorate of the registration district is unverified."
+     },
+     {
+      "quote": "向公司所在地或劳动合同履行地的区劳动人事争议仲裁委员会申请仲裁",
+      "reason": "The key does not address which arbitration commission has jurisdiction."
+     },
+     {
+      "quote": "如果监察责令后公司仍不付，可以要求加付50%-100%的赔偿金。",
+      "reason": "The key does not mention this 50%-100% additional compensation rule."
+     },
+     {
+      "quote": "公司如果把这7天说成“值班”，要看实际内容：你正常做调度工作、不能休息的，是加班，不是值班。",
+      "reason": "The key does not address the line between duty shifts and overtime."
+     },
+     {
+      "quote": "这7天连上（56小时）已经超过每月36小时的加班上限，公司这个排班本身也违法",
+      "reason": "The key mentions the 36-hour monthly cap only for comprehensive hours under 157号第八条. Applying it here to call the schedule illegal is unverified."
+     },
+     {
+      "quote": "坐班调度通常不符合不定时的适用范围",
+      "reason": "The key says only that flexible-hours positions are irrelevant to this case. This claim about eligibility is unverified."
+     }
+    ],
+    "S": [
+     {
+      "quote": "以上按每天8小时、9000元是合同约定的正常工资、且不含加班费来算……如果合同把工资拆成“基本工资+绩效”，或者9000里已含固定加班费，基数可能被争，金额会变。",
+      "reason": "The key computes 3724.14 / 3310.34 / 7034.48 directly from the monthly wage of 9000. Its only conditions are approval status and comp leave, not wage structure."
+     }
+    ],
+    "SP": [
+     {
+      "quote": "别拖，证据越拖越难找。",
+      "reason": "Adds a reason not in the key (evidence gets harder to find) for acting sooner than the limitation rule requires."
+     }
+    ],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "结论：能拿。合同签了，不等于把法定权利签掉了。... 按你说的“公司没有特殊工时审批”来算，2026年10月1日至7日这7天，你的加班费约为 7034.48元（税前）"
+   }
+  },
+  {
+   "id": "t103",
+   "case": "ja-part-time-leave",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "9b4b045457c83fc704f8a39c86fe8833c3cbf39242388d5bfcaed8db984f26a2",
+   "warnings": [],
+   "grade": {
+    "id": "t103",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "5": "KEPT",
+     "6": "KEPT"
+    },
+    "lkp_quotes": {
+     "3": "10月1日で6か月を経過しているため、8割以上出勤していれば、すでに付与されている可能性が高いです。",
+     "5": "雇入れから6か月間継続して勤務し、所定労働日の8割以上出勤した労働者に年次有給休暇が付与されます。",
+     "6": "有給休暇を一律に拒否することはできず、店側が時季を変更できるのは「業務の正常な運営を妨げる場合」に限られます。"
+    },
+    "AW": [],
+    "AU": [],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "まず、店長さんの「パートには有給休暇はない」という説明は、法律上正確ではありません。...パートも対象です。"
+   }
+  },
+  {
+   "id": "t104",
+   "case": "zh-sick-pay",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "e84fa9eab2bd2adac5b77cda02a18fd5caa414bcf4b380e9bf79d38d99e3e552",
+   "warnings": [
+    "AW[1] is not found verbatim in the answer: 以及病假工资最低标准文件沪劳保保发〔2000〕14 号文，已于 2026 年 8 月 15 日到期失效（上海人社局答复）"
+   ],
+   "grade": {
+    "id": "t104",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "vague",
+     "6": "vague",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "2": "KEPT",
+     "4": "KEPT",
+     "5": "KEPT",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "如果合同、集体合同或依法制定并公示的员工手册里写了更高的标准，按高的执行。",
+     "4": "如果约定按本人工资的 80% 发，则是 6400 元。",
+     "5": "合同明确约定月工资 8000、实际也按 8000 履行的，基数按 8000",
+     "6": "800 元肯定不合法。"
+    },
+    "AW": [
+     {
+      "quote": "如果劳动合同或公司制度沿用旧上海口径，可能是 4480 元",
+      "reason": "The key says that if company policy copies the old 83号 tiers, 满4年 falls in the 80% band applied to the contract wage: '公司制度采用83号分档时：满4年属\"满4年不满6年\"档，8000 × 80% = 6400元'. That is 6400, not 4480 (8000 × 70% × 80%)."
+     },
+     {
+      "quote": "以及病假工资最低标准文件沪劳保保发〔2000〕14 号文，已于 2026 年 8 月 15 日到期失效（上海人社局答复）",
+      "reason": "The key says the 人社局 reply was about 83号, and for 14号 '失效为推定，未见官方明确表态'. The answer treats 14号's expiry as officially confirmed by that reply."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "合同、集体合同都没有约定时，才按正常工资的 70% 作为基数",
+      "reason": "The key gives the base only as the contract-agreed post wage, not lower than 2740 (10号第九条). It does not confirm or contradict a fallback base of 70% of normal wage."
+     },
+     {
+      "quote": "请在收到后 3 个工作日内书面回复我",
+      "reason": "Added 3-working-day reply deadline in the draft; not in the key."
+     },
+     {
+      "quote": "如果公司认为 800 元有依据，也请提供相应制度文本、民主程序记录和公示证据",
+      "reason": "Added procedural demand for policy text, democratic-procedure records and publication evidence; the key does not address it."
+     },
+     {
+      "quote": "网上很多答案还在写旧标准，是因为那些页面发布在 2026 年 8 月 15 日之前",
+      "reason": "Unverified claim about online sources and their publication dates; not in the key."
+     }
+    ],
+    "S": [
+     {
+      "quote": "如果你说的月份、合同约定或工资结构不同，数字要相应调整",
+      "reason": "The key treats the month as fixed: '\"上个月\"是2026年9月'. The answer makes it conditional with '如果'."
+     }
+    ],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "800 元肯定不合法。按 2026 年 10 月现行规定，你的整月病假工资法定保底是 2192 元"
+   }
+  },
+  {
+   "id": "t105",
+   "case": "zh-sick-pay",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "a5cbd5e8478e61b46952854161dce1e7ddf4e3df013cc737bd019007f83fcffd",
+   "warnings": [],
+   "grade": {
+    "id": "t105",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "vague",
+     "6": "vague",
+     "7": "vague",
+     "8": "correct"
+    },
+    "lkp": {
+     "2": "KEPT",
+     "4": "KEPT",
+     "5": "FLAT",
+     "6": "KEPT"
+    },
+    "lkp_quotes": {
+     "2": "查看劳动合同和员工手册：其中有没有“病假工资按连续工龄计发”“满 4 年按 80%”“按本人工资 80%”之类的条款。如果有，就按约定标准主张；如果没有，至少应按 2192 元主张。",
+     "4": "如果你劳动合同或员工手册里还保留着原来“按连续工龄计发”的条款，你能主张的会更高：4 年工龄对应 80%，按 8000 元算约 6400 元。",
+     "5": "2026 年 8 月 1 日起施行的新《上海市企业工资支付办法》（沪人社规〔2026〕10 号）第九条，只规定了病假工资的计算基数，没有再规定 60%–100% 的工龄比例。",
+     "6": "如果应发只有 800 元，就属于直接违法；如果应发是 2192 元、扣完个人社保公积金后实发 800 元，那要另外核对扣缴是否合理。"
+    },
+    "AW": [
+     {
+      "quote": "第九条，只规定了病假工资的计算基数，没有再规定 60%–100% 的工龄比例",
+      "reason": "The key states 10号第九条 also provides that during sick leave '企业应当按规定支付假期工资', so saying it 'only' sets the base contradicts the key's description of the article."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "合同沿用旧“本人工资=实得工资 70%”口径 | 8000×70%×80% | 4480 元 | 3680 元",
+      "reason": "The key never mentions an old 'base = 70% of actual wage' rule or a 4480 yuan figure; the key's base is the contract position wage (not below 2740)."
+     },
+     {
+      "quote": "1 个月病假在法定医疗期内，公司不能按事假、旷工处理",
+      "reason": "The key confirms the month is inside the medical period and covers the dismissal protection, but it says nothing about a ban on treating the leave as personal leave or absenteeism."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "病假工资的发放标准并非由公司单方面决定：法律规定了法定下限；如果劳动合同或公司制度约定了更高的标准，就应当按约定执行。"
+   }
+  },
+  {
+   "id": "t106",
+   "case": "ja-part-time-leave",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "36bb12321f32f7d535f7b3df3a19b2b76a0c833b922cbed68f34fdfaf6fef994",
+   "warnings": [],
+   "grade": {
+    "id": "t106",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "vague",
+     "7": "vague",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "5": "KEPT",
+     "6": "KEPT"
+    },
+    "lkp_quotes": {
+     "3": "10月1日から5日付与されています（出勤率8割以上が条件）。来月が11月なら、もう使えます。",
+     "5": "10月1日から5日付与されています（出勤率8割以上が条件）",
+     "6": "店側が変えられるのは「事業の正常な運営を著しく妨げる場合」だけです（時季変更権）。"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "状況を伝えるだけで法的にどうか判断してもらえます",
+      "reason": "The key names 労基署 and 総合労働相談コーナー (free, no appointment) but says nothing about them ruling on legality just from a description of the situation."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "とはいえシフトの都合はあるので、早めの相談という形が正解です。",
+      "reason": "Recommends early consultation as the cautious path and adds a reason not in the key (the store's shift needs). The key only says 'early' is acceptable and that there is no statutory notice period."
+     }
+    ],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "店長さんの「パートには有給はないよ」は、あなたの働き方には当てはまりません。"
+   }
+  },
+  {
+   "id": "t107",
+   "case": "zh-insurance-gap",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "bcbdb98c72cee001ab209fb6031d33d6ea26bf6b6e5b4fbfee914f3a2d678594",
+   "warnings": [],
+   "grade": {
+    "id": "t107",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "FLAT",
+     "4": "KEPT",
+     "5": "KEPT",
+     "6": "KEPT"
+    },
+    "lkp_quotes": {
+     "3": "按11月算，就是2027年1月1日；如果单位12月才办增员，就顺延到2月。",
+     "4": "按这8年都计入累计算，以后正常上班，累计再缴12年、杭州实际再缴2年，就够了。",
+     "5": "以灵活就业身份补缴，最早只能补到办理当年的1月，不能跨年补上一年的。现在办，能补2026年4—10月这7个月；拖到2027年，2026年的就补不了了。",
+     "6": "杭州灵活就业参保要求：杭州户籍，或持居住证并办就业登记，或本市实际缴费满10年（你目前8年，走不了这条）。不符合就办不了，也不用纠结。"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "可能另扣大病保险等几十元",
+      "reason": "The key says the individual's 大病保险费 and 长护险费 are deducted from the 补划 personal-account funds, with no extra cash. The answer's '几十元' amount is not in the key, and the key neither confirms nor contradicts the phrase '另扣'."
+     },
+     {
+      "quote": "通过“浙里办”搜“医保补缴”或“灵活就业参保”，或打12393问清材料",
+      "reason": "The 浙里办 search terms and the 12393 hotline are procedural channels that the key does not mention."
+     },
+     {
+      "quote": "如果你近期有买房、落户、车牌摇号等按“连续社保”算的打算，那些会受断缴影响",
+      "reason": "The effect of the gap on home purchase, 落户 and the license-plate lottery is a side claim the key does not cover."
+     },
+     {
+      "quote": "连续缴费年限：断缴后重新算，只在生育津贴等少数待遇里用",
+      "reason": "The key confirms only the 生育津贴 continuity rule (连续缴满6个月). The general claim that continuous years reset and are used only for a few benefits is not in the key."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "最好在11月新单位增员前，最晚12月31日前",
+      "reason": "It adds a safer date that is not in the key: before the new employer enrolls her in November."
+     }
+    ],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "8年不会清零，你听到的“断缴超过3个月、以前年限全部作废”这个说法是错的；你也不需要为了“保住8年”去补缴。"
+   }
+  },
+  {
+   "id": "t108",
+   "case": "ja-wallpaper-restoration",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "1a1d1618ac9ef15c6140af8ef5b7944988910bc67cc260a304df00f85a39f5d1",
+   "warnings": [],
+   "grade": {
+    "id": "t108",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "vague",
+     "4": "vague",
+     "5": "vague",
+     "6": "vague",
+     "7": "correct"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "4": "FLAT",
+     "5": "FLAT"
+    },
+    "lkp_quotes": {
+     "3": "契約書の「原状回復」という一文は、通常損耗まで借主負担にする意味にはなりません。明確にそう書いてあったとしても、消費者契約法10条（消費者の利益を一方的に害する条項は無効）で無効になり得ます。",
+     "4": "7年間の居住により残存価値はないものと考えております",
+     "5": "全面張り替えが必要と判断された根拠（損傷箇所の写真等）"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "2017年改正で明文化",
+      "reason": "The key gives 民法621条 as 2020年4月1日施行; it says nothing about a 2017 amendment year, so this added date is neither confirmed nor contradicted."
+     },
+     {
+      "quote": "民法621条ただし書きでも、通常の使用による損耗および経年変化は原状回復の対象外とされています",
+      "reason": "Names a specific part of the article (ただし書き) as the source of the normal-wear exclusion; the key cites only 民法621条 and does not say where in it."
+     },
+     {
+      "quote": "少額でも相談は無料です",
+      "reason": "Adds that consultation at 188 or the consumer center is free; the key says only that 188 needs no area code and connects to the nearest center."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes",
+     "3": "no"
+    },
+    "PC_quote": "12万円を全額払う義務は、たぶんありません。サインしたかどうかは、この場合それほど決め手になりません。...民法621条は、通常の使用による損耗と経年変化は原状回復の対象外としています"
+   }
+  },
+  {
+   "id": "t109",
+   "case": "en-medicare-part-b",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "c002aa743c7ebd30828dbda67da9a19c5273be06d090e3368915ee0718fe0dd3",
+   "warnings": [],
+   "grade": {
+    "id": "t109",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "correct",
+     "6": "vague",
+     "7": "missing",
+     "8": "vague"
+    },
+    "lkp": {
+     "1": "FLAT",
+     "5": "KEPT",
+     "6": "FLAT",
+     "7": "ABSENT"
+    },
+    "lkp_quotes": {
+     "1": "Bottom line: your coworker's penalty warning doesn't apply to you at 400 employees.",
+     "5": "If you're already drawing Social Security, act now. You'll be auto-enrolled in A and B at 65. Contact SSA ... to decline/delay Part B",
+     "6": "Don't enroll in Part B, Medicare Advantage, or Part D this month.",
+     "7": ""
+    },
+    "AW": [
+     {
+      "quote": "your coworker's penalty warning doesn't apply to you at 400 employees",
+      "reason": "Makes employer size the reason the penalty does not apply. Key: \"Employer size is not a condition of the SEP\". The key calls the 20+ employee SEP claim imprecise and minor here; the SEP comes from current-employment GHP coverage."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "If you don't have 40 quarters, Part A carries a premium and its own late penalty",
+      "reason": "The key confirms the premium Part A amounts but says nothing about a Part A late-enrollment penalty."
+     },
+     {
+      "quote": "Contact SSA (you can start three months before your birthday)",
+      "reason": "The key does not give a three-months-before start date for contacting SSA to decline Part B."
+     },
+     {
+      "quote": "or the premium will be deducted from your check",
+      "reason": "The key does not say the Part B premium is deducted from Social Security benefits."
+     },
+     {
+      "quote": "Ask for the annual creditable coverage notice the plan is required to provide.",
+      "reason": "The key says to keep the notice but does not confirm that it is annual or legally required."
+     },
+     {
+      "quote": "a six-month Medigap open enrollment window (in most states) to buy a supplement without medical underwriting",
+      "reason": "The key confirms the 6-month window. \"In most states\" and \"without medical underwriting\" are not in the key, which says state Medigap rights vary and were not checked."
+     },
+     {
+      "quote": "your local SHIP counselor",
+      "reason": "Names an office the key does not mention."
+     }
+    ],
+    "S": [
+     {
+      "quote": "Enroll in Part D or a Medicare Advantage plan within 63 days if your drug coverage isn't creditable.",
+      "reason": "The key gives the Part D enrollment window at retirement as fixed: within 2 full months after coverage ends, with no condition about the employer drug coverage not being creditable."
+     }
+    ],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "You almost certainly do not need to enroll in Part B this month ... You can delay Part B with no late-enrollment penalty."
+   }
+  },
+  {
+   "id": "t110",
+   "case": "ko-jeonse-protection",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "b7d01b17f5e6cbdeef5f7e57664b767b3b27e44b2cd213a0217bd329602d6788",
+   "warnings": [],
+   "grade": {
+    "id": "t110",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "missing",
+     "4": "correct",
+     "5": "correct",
+     "6": "vague",
+     "7": "missing"
+    },
+    "lkp": {
+     "2": "KEPT",
+     "4": "KEPT",
+     "5": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "\"시간 날 때\"가 아니라 이사 당일 하세요. 대항력은 다음 날 0시 발생이라, 하루 늦으면 그 사이 근저당·경매가 들어올 수 있습니다.",
+     "4": "대항력은 실제 입주(점유) + 전입신고를 마치면 그다음 날 0시부터 생기고",
+     "5": "같은 날 주민센터 방문 — \"전입신고 + 확정일자 같이 해달라\"고 신청. 준비물: 신분증, 임대차계약서 원본, 도장(서명), 수수료 600원."
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "주민센터에서 전입세대 열람으로 선순위 임차인도 확인 가능",
+      "reason": "The key does not mention the 전입세대 열람 procedure. It neither confirms nor contradicts it."
+     },
+     {
+      "quote": "계약 후 이사 사이에 설정되는 경우가 많습니다.",
+      "reason": "This frequency claim about mortgages set between contract and move-in is not in the key."
+     },
+     {
+      "quote": "확정일자가 없으면 일반 채권자로 밀려 2억 원을 거의 못 건질 수 있습니다.",
+      "reason": "This outcome claim (losing almost all of the 2억) goes beyond the key, which only says 우선변제권 needs 확정일자. Unverified."
+     },
+     {
+      "quote": "준비물: 신분증, 임대차계약서 원본, 도장(서명)",
+      "reason": "The key lists the original contract and ID only. A seal or signature as a required item is not in the key."
+     },
+     {
+      "quote": "확정일자 찍힌 계약서·영수증 보관 — 나중에 배당요구·보증금 반환 소송의 증거입니다.",
+      "reason": "This added procedural step and its evidentiary claim are not in the key."
+     },
+     {
+      "quote": "전세보증금반환보증 가입 검토 — HUG·HF.",
+      "reason": "The key names only HUG. HF as a provider of the guarantee is not covered by the key."
+     },
+     {
+      "quote": "주택임대차분쟁조정위원회나 대한법률구조공단(132) 상담",
+      "reason": "Named offices and a phone number that the key does not mention."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "no"
+    },
+    "PC_quote": "전입신고로 생기는 건 대항력뿐입니다. ... 우선변제권은 확정일자가 있어야 생깁니다. ... 그래서 \"확정일자 신경 안 써도 된다\"는 말은 위험합니다."
+   }
+  },
+  {
+   "id": "t111",
+   "case": "ja-medical-deduction",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "f4db5beb9afa751f4c71363c00e82dcadaf2bbcda66ea53c7c9df023ab1c2539",
+   "warnings": [],
+   "grade": {
+    "id": "t111",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "vague",
+     "6": "vague",
+     "7": "correct"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "2": "FLAT",
+     "4": "FLAT",
+     "7": "FLAT"
+    },
+    "lkp_quotes": {
+     "1": "その年の所得が200万円未満なら、「10万円」と「所得の5%」の低い方が足切りになります",
+     "2": "結論：申告しなくても罰則はありません。",
+     "4": "控除額1.7万円 × 所得税率5% ≒ 850円",
+     "7": "来年1〜3月に申告 — e-Taxかスマホの確定申告書等作成コーナーで、医療費控除の明細書を作成。"
+    },
+    "AW": [
+     {
+      "quote": "扶養に入っている場合、収入や申告が扶養判定に影響することがあります。",
+      "reason": "The key says the medical deduction does not change 合計所得金額 and does not affect the dependent determination (医療費控除は合計所得金額を変えず判定に影響しない), so filing for it cannot affect 扶養判定."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "副収入が20万円超ある、2か所以上から給与がある、などの場合は別途申告が必要です。",
+      "reason": "The 20万円 side-income threshold and the two-employer filing rule are not in the key, which only says the no-filing premise assumes one employer, year-end adjustment done and no other income."
+     },
+     {
+      "quote": "クリーニング・ホワイトニング",
+      "reason": "The key does not cover dental cleaning as excluded. Whitening as usually excluded is acceptable under the key, but cleaning is not addressed."
+     },
+     {
+      "quote": "一般的な水準を著しく超える自由診療",
+      "reason": "This named exclusion rule for high-cost private treatment is not in the key, which only says gold/porcelain is eligible."
+     },
+     {
+      "quote": "e-Taxかスマホの確定申告書等作成コーナーで",
+      "reason": "Named filing tools are not mentioned in the key."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [
+     {
+      "quote": "来年1〜3月に申告",
+      "reason": "Recommends filing in Jan–Mar, but the step does not state the actual rule beside it: the refund return can be filed for 5 years from January 1, 2027 (through December 31, 2031) and is not limited to the filing period."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "no"
+    },
+    "PC_quote": "医療費控除の足切りは「10万円」で固定ではありません。その年の所得が200万円未満なら、「10万円」と「所得の5%」の低い方が足切りになります"
+   }
+  },
+  {
+   "id": "t112",
+   "case": "zh-insurance-gap",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "1e834ce4bd87e7a3877fca52b49aef4ba3ba7ddebb6eb32c41295c71de1e4f7c",
+   "warnings": [
+    "lkp_quotes.5 is not found verbatim in the answer: 另扣大病保险（48元/年）、长护险（45元/年）的个人部分，按7个月分摊约54元；合计约3,370元。"
+   ],
+   "grade": {
+    "id": "t112",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "FLAT",
+     "4": "FLAT",
+     "5": "WRONG",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "3": "按现行口径，也不会缩短重新参保后的等待期，11月参保还是明年1月才生效。",
+     "4": "门槛看的是累计年限，没有另外的“连续缴费年限”要求。",
+     "5": "另扣大病保险（48元/年）、长护险（45元/年）的个人部分，按7个月分摊约54元；合计约3,370元。",
+     "6": "补缴：能补，但只补年限，不补待遇"
+    },
+    "AW": [
+     {
+      "quote": "连续缴费年限：断缴超过3个月，重新参保时要重新计算。它影响断缴后的待遇等待期，以及生育保险这类要求“连续缴费”的待遇。",
+      "reason": "Key: Hangzhou's 办法 and 实施细则 have no clause clearing or recounting 职工医保 years; \"清零\"\"重新计算\" appear only in the 居民医保大病保险 continuous-enrollment reward. The waiting period follows from a gap of more than 3 months, not from a restarted continuous-years count."
+     },
+     {
+      "quote": "如果实际断了8个月，约3,850元；每多一个月约480元。",
+      "reason": "Built on adding 大病/长护 fees as extra cash. The key says these are deducted from the re-credited personal-account funds and not paid separately, so the cost is 473.67元 per month (8 months = 3,789.36元)."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "长护险（45元/年）",
+      "reason": "The key gives no 长护险 premium figure."
+     },
+     {
+      "quote": "按现行口径，也不会缩短重新参保后的等待期",
+      "reason": "The key says whether 补缴 affects the waiting period is unverified; the firm claim is neither confirmed nor contradicted."
+     },
+     {
+      "quote": "拨打12393（杭州医保服务热线）或0571-89583017",
+      "reason": "The key does not mention these phone numbers."
+     },
+     {
+      "quote": "在“浙里办—浙里医保”查询缴费年限和参保记录",
+      "reason": "The key does not mention this named service or query channel."
+     },
+     {
+      "quote": "如果有外地缴的，就办理医保关系转移接续，否则杭州这边可能不认那段年限",
+      "reason": "This procedural consequence is not addressed in the key."
+     },
+     {
+      "quote": "现在（10月）以灵活就业身份参保，待遇最早从哪个月算。如果能在12月起生效，就比补7个月便宜得多……11月入职前记得先把灵活就业停掉，让公司接上。",
+      "reason": "The key does not address this enroll-now-as-flexible-worker procedure or its timing."
+     },
+     {
+      "quote": "非杭州户籍的“连续社保”是另一套规则，补缴一般不算连续。",
+      "reason": "The key does not cover car-plate or home-purchase social insurance rules."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "先别慌，8年不会白交。"
+   }
+  },
+  {
+   "id": "t113",
+   "case": "en-medicare-part-b",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "f31d75eca7b0063567b4bea1fdd920721154683ea8876f7f2d085896a42f5cd2",
+   "warnings": [
+    "AU[5] is not found verbatim in the answer: Your state SHIP program (shiphelp.org) or 1-800-MEDICARE can review the employer"
+   ],
+   "grade": {
+    "id": "t113",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "vague",
+     "5": "correct",
+     "6": "vague",
+     "7": "missing",
+     "8": "vague"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "5": "KEPT",
+     "6": "KEPT",
+     "7": "ABSENT"
+    },
+    "lkp_quotes": {
+     "1": "Your coworker is quoting the general rule, and it's a real one — but it applies to people who don't have qualifying employer coverage. You do.",
+     "5": "If you're already receiving Social Security, SSA automatically enrolls you in Part A and Part B.",
+     "6": "Is the prescription drug coverage \"creditable\" for Part D? Get the annual notice.",
+     "7": ""
+    },
+    "AW": [
+     {
+      "quote": "If your coverage is not active-employee group coverage — for example, retiree coverage, COBRA, or a plan from an employer with fewer than 20 employees — then the general rule may apply, and you may need to enroll now.",
+      "reason": "The key says \"Employer size is not a condition of the SEP (SSA: 'Small or large employer-sponsored plans')\" and lists \"The SEP needs 20+ employees\" as imprecise. The 20-employee line only decides who pays first, so a small-employer plan does not bring back the general penalty rule. Minor here."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "If you already have, call Social Security at 1-800-772-1213 and ask to withdraw or cancel it before it takes effect. Get the representative's name and the date.",
+      "reason": "The phone number and the withdraw-or-cancel procedure are not in the key."
+     },
+     {
+      "quote": "The package should have arrived around August.",
+      "reason": "The key does not give a date for the Medicare package."
+     },
+     {
+      "quote": "keeping it means you agree to keep Part B and pay the premium",
+      "reason": "The key does not cover what keeping the card means."
+     },
+     {
+      "quote": "If it already started, you can still drop it; coverage ends at the end of the month after Social Security processes your request.",
+      "reason": "The key does not give a rule for when coverage ends after dropping Part B."
+     },
+     {
+      "quote": "you're auto-enrolled in premium-free Part A and generally can't drop it",
+      "reason": "The key does not say whether Part A can be dropped while receiving Social Security."
+     },
+     {
+      "quote": "Your state SHIP program (shiphelp.org) or 1-800-MEDICARE can review the employer plan and confirm the coordination for free.",
+      "reason": "These named help resources and what they do are not in the key."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "Don't enroll in Part B this month. You qualify to delay it without a penalty."
+   }
+  },
+  {
+   "id": "t114",
+   "case": "ko-jeonse-protection",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "b30a7ba2964324967cdf19c856bf61d2da72d9002e11b7e13513dcd39155f711",
+   "warnings": [],
+   "grade": {
+    "id": "t114",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "missing",
+     "4": "vague",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "4": "KEPT",
+     "5": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "대항력은 신고 다음 날 0시부터라 오전에 끝내는 게 좋아요.",
+     "4": "주민센터에서 전입신고 → 바로 확정일자 ... 대항력은 신고 다음 날 0시부터라 오전에 끝내는 게 좋아요.",
+     "5": "주민센터에서 전입신고 → 바로 확정일자 — 신분증, 계약서 원본, 수수료 600원을 챙기세요. 대항력은 신고 다음 날 0시부터라 오전에 끝내는 게 좋아요."
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "집이 팔리거나 경매로 넘어가도 계속 살 권리는 생기지만",
+      "reason": "The key describes 대항력 as the right to demand the deposit from a new owner. It does not confirm a right to keep living there after an auction sale (that depends on priority)."
+     },
+     {
+      "quote": "보증금과 근저당 채권최고액을 합쳐 시세를 넘으면 위험해요.",
+      "reason": "This risk threshold (deposit plus 채권최고액 against market price) is not in the key."
+     },
+     {
+      "quote": "잔금을 치르는 날이면 직전과 직후에 한 번 더 확인 — 잔금 직후 근저당을 새로 잡는 수법이 있습니다.",
+      "reason": "The key neither confirms nor contradicts a re-check right after the balance payment or the claim about this fraud tactic. The key's re-check is on the next working day."
+     },
+     {
+      "quote": "확정일자 찍힌 계약서와 전입신고 확인서를 사진으로 보관.",
+      "reason": "The key does not include this step (photographing the documents)."
+     },
+     {
+      "quote": "보증금을 올려 재계약하면 확정일자를 다시 받아야 합니다.",
+      "reason": "The key does not address this rule about renewing with a higher deposit."
+     },
+     {
+      "quote": "경매로 넘어가면 법원에 배당요구를 해야 배당을 받습니다. 확정일자만으로 자동 지급되지 않아요.",
+      "reason": "The key does not address the 배당요구 requirement."
+     },
+     {
+      "quote": "다가구 빌라면 다른 세입자의 선순위 보증금도 확인하세요.",
+      "reason": "The key does not include checking other tenants' senior deposits in a 다가구 building."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "대항력은 신고 다음 날 0시부터라 오전에 끝내는 게 좋아요.",
+      "reason": "It adds a morning time window that is not in the key. The key says finishing within the 주민센터's working hours on the day is enough."
+     },
+     {
+      "quote": "빌라는 공시가격 기준이라 2억이 한도를 넘을 수 있으니 잔금 전에 확인하세요.",
+      "reason": "It adds a before-잔금 timing and a reason (2억 may exceed the HUG limit) that are not in the key."
+     }
+    ],
+    "SR": [
+     {
+      "quote": "대항력은 신고 다음 날 0시부터라 오전에 끝내는 게 좋아요.",
+      "reason": "The actual rule is not stated beside it: filing at any time within working hours on moving day gives the same next-day 0시 effect."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "부동산 말은 사실과 다릅니다... 그것만으로 보증금이 보호되지는 않습니다... 우선변제권은 대항력에 더해 계약서에 확정일자를 받아야 생깁니다."
+   }
+  },
+  {
+   "id": "t115",
+   "case": "en-529-roth",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "9ec99fe273751baced9bc70bd50a756341e5607b4844af953ec7066f67499b57",
+   "warnings": [],
+   "grade": {
+    "id": "t115",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "missing",
+     "6": "correct",
+     "7": "wrong",
+     "8": "correct"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "4": "KEPT",
+     "7": "WRONG",
+     "8": "FLAT"
+    },
+    "lkp_quotes": {
+     "1": "The 529-to-Roth rollover is capped at $7,500 for 2026 and $35,000 over your son's lifetime.",
+     "4": "Opened in 2004, so this is satisfied — unless the account was rolled over to a different 529 plan or the beneficiary was changed. Ask the plan to confirm.",
+     "7": "Complete the transfer by December 31, 2026 to count against the 2026 limit.",
+     "8": "Roll over the smallest of these three numbers: $7,500, his 2026 earned income, and the five-year-eligible amount."
+    },
+    "AW": [
+     {
+      "quote": "Opened in 2004, so this is satisfied — unless the account was rolled over to a different 529 plan",
+      "reason": "Implies that a plan-to-plan rollover resets the 15-year clock. The key says this is unresolved: \"Whether the change restarts the 15-year clock is unresolved (likewise an incoming 529 rollover or owner change)... Stating either answer as settled... is wrong.\""
+     }
+    ],
+    "AU": [
+     {
+      "quote": "It is not a per-year cap, and it is not indexed for inflation.",
+      "reason": "The key does not say whether the $35,000 lifetime cap is indexed."
+     },
+     {
+      "quote": "Wages, salary, tips, and self-employment income count; investment income and scholarships do not.",
+      "reason": "The key does not list which kinds of income count as compensation."
+     },
+     {
+      "quote": "Some plans also require a signature guarantee or a signature from the Roth custodian.",
+      "reason": "This procedural requirement is not in the key, which says only that forms vary by plan."
+     },
+     {
+      "quote": "There is no deadline for the $35,000 lifetime limit.",
+      "reason": "The key does not address a deadline for using the lifetime cap."
+     },
+     {
+      "quote": "Some plans take two to four weeks.",
+      "reason": "The key gives no processing-time figure. It says only that processing times vary by plan."
+     },
+     {
+      "quote": "or K-12 tuition (up to $10,000 a year)",
+      "reason": "The key does not give a K-12 tuition limit."
+     },
+     {
+      "quote": "Save it for graduate school, professional school, or an apprenticeship.",
+      "reason": "The key names graduate school and postsecondary credentials, not apprenticeships or professional school."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "Some plans take two to four weeks. Start now.",
+      "reason": "Adds a processing-time figure (two to four weeks) that is not in the key."
+     }
+    ],
+    "SR": [
+     {
+      "quote": "\"Before December\" is fine and gives the plan time to process.",
+      "reason": "The actual rule is not stated beside it: a rollover designated for 2026 can be made through April 15, 2027. The bullet gives December 31 as the rule instead."
+     },
+     {
+      "quote": "Some plans take two to four weeks. Start now.",
+      "reason": "The actual deadline, April 15, 2027 for a rollover designated for 2026, is not stated beside it."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "The rule is real, but it does not allow $48,000 in one year. The 529-to-Roth rollover is capped at $7,500 for 2026"
+   }
+  },
+  {
+   "id": "t116",
+   "case": "en-medicare-part-b",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "e018965ec0dba813ab74537fc7e7407f32368b606e2034f70bc096b02b014154",
+   "warnings": [
+    "AU[4] is not found verbatim in the answer: your local SHIP counselor (shiphelp.org) or 1-800-MEDICARE"
+   ],
+   "grade": {
+    "id": "t116",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "missing",
+     "8": "vague"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "5": "KEPT",
+     "6": "KEPT",
+     "7": "ABSENT"
+    },
+    "lkp_quotes": {
+     "1": "With ~400 employees and you still working there, you can delay Part B without any late-enrollment penalty, and you'll get an 8-month Special Enrollment Period (SEP) when you stop working or lose the coverage.",
+     "5": "If you're already receiving Social Security, you'll be auto-enrolled in Parts A and B effective your birthday month — you'd have to actively decline Part B (return the card per the instructions) rather than just not applying.",
+     "6": "Sign up for Part D (or confirm creditable drug coverage) at the same time — the drug penalty applies if you go 63+ days without creditable coverage.",
+     "7": ""
+    },
+    "AW": [
+     {
+      "quote": "it has a big exception that fits you exactly: active employment-based group coverage from an employer with 20+ employees.",
+      "reason": "Presents 20+ employees as the condition for the penalty-free delay. The key says \"Employer size is not a condition of the SEP\" and lists \"The SEP needs 20+ employees\" as an imprecise side claim (minor here)."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "a few plans do for certain employee classes — ask",
+      "reason": "The claim that some plans require Part B for certain employee classes is neither confirmed nor contradicted by the key."
+     },
+     {
+      "quote": "you'll be auto-enrolled in Parts A and B effective your birthday month",
+      "reason": "The key does not give the start date for automatic enrollment."
+     },
+     {
+      "quote": "They must tell you; they also send an annual notice — keep it.",
+      "reason": "The key does not confirm an employer duty to disclose or an annual notice schedule."
+     },
+     {
+      "quote": "keep the creditable-coverage notice, a recent pay stub, and a letter from HR confirming your dates of employment and coverage",
+      "reason": "The pay stub and HR letter are added documentation steps that the key does not mention."
+     },
+     {
+      "quote": "your local SHIP counselor (shiphelp.org) or 1-800-MEDICARE",
+      "reason": "Named help offices and a phone number that the key does not mention."
+     },
+     {
+      "quote": "coverage generally starts the month after Social Security processes your form",
+      "reason": "The key's start rule is tied to the month you sign up, not to processing. This processing-based start rule is not in the key."
+     },
+     {
+      "quote": "You can disenroll (form CMS-1763)",
+      "reason": "A named form for disenrolling that the key does not mention."
+     },
+     {
+      "quote": "re-enrolling later is more complicated than never enrolling",
+      "reason": "The key neither confirms nor contradicts this claim about re-enrolling."
+     }
+    ],
+    "S": [
+     {
+      "quote": "That's also when your Medigap guaranteed-issue window opens (6 months from Part B enrollment, if you're 65+)",
+      "reason": "The key says without condition that the one-time 6-month Medigap open enrollment starts when Part B starts. The asker is 65+, so \"if you're 65+\" puts a condition on a fact that is fixed for this asker."
+     }
+    ],
+    "SP": [
+     {
+      "quote": "To avoid a coverage gap, apply the month before your last day — coverage generally starts the month after Social Security processes your form.",
+      "reason": "Earlier than the 8-month SEP requires. Adds a reason the key lacks: coverage starts after Social Security processes the form."
+     }
+    ],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "Short answer: don't enroll in Part B this month — your coworker's rule doesn't apply to you ... you can delay Part B without any late-enrollment penalty, and you'll get an 8-month Special Enrollment Period (SEP) when you stop working or lose the coverage."
+   }
+  },
+  {
+   "id": "t117",
+   "case": "ko-severance-pay",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "c64760d07c2ad3276729d7923031645a96e748111a9430a21ceb907c7e8b6437",
+   "warnings": [],
+   "grade": {
+    "id": "t117",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "vague",
+     "6": "vague",
+     "7": "correct"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "4": "FLAT",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "9월 20일 퇴사라면 10월 4일이 기한이고, 오늘(10월 25일) 기준으로 이미 3주 가까이 지났습니다.",
+     "4": "제 퇴직금은 재직 3년 2개월, 최근 3개월 월급 330만 원(상여 없음) 기준으로 세전 약 1,200만 원으로 산정됩니다.",
+     "6": "퇴직금은 원칙적으로 IRP 계정으로 이전되는 방식으로 지급되니(제9조 제2항), IRP 계좌가 없으면 미리 만들어 두세요."
+    },
+    "AW": [
+     {
+      "quote": "기한을 넘기면 같은 법 제17조에 따라 연 20%의 지연이자가 붙습니다.",
+      "reason": "Key: 지연이자 연 20% is under 근로기준법 제37조 and 시행령 제17조, not 근로자퇴직급여 보장법 제17조 (the same wrong citation is repeated in the drafted text)."
+     },
+     {
+      "quote": "퇴직소득세·지방소득세 약 20만~25만 원을 빼면 실수령은 그만큼 적습니다.",
+      "reason": "Key: with IRP transfer there is no withholding at payment (소득세법 제146조②); on non-pension withdrawal the tax including local tax is about 9.4만~14.1만 원 (estimate)."
+     },
+     {
+      "quote": "형사처벌(3년 이하 징역 또는 3천만 원 이하 벌금)까지 가능합니다.",
+      "reason": "Key: from 2026.9.18 the penalty under 퇴직급여법 제43조 is 5년 이하 징역 또는 5천만 원 이하 벌금; '3년/3천만 원' is the old rule (minor deduction)."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "9월 20일 퇴사라면 10월 4일이 기한이고",
+      "reason": "Key gives the deadline as somewhere in 10/3~10/6 depending on 퇴직일 interpretation and holiday counting, exact date not settled; a fixed 10/4 is neither confirmed nor contradicted."
+     },
+     {
+      "quote": "오늘(10월 25일) 기준으로",
+      "reason": "Assumed current date; not in the request or the key."
+     },
+     {
+      "quote": "고용노동부와 법제처도 퇴직금 산정에 이 조항이 적용된다고 해석합니다.",
+      "reason": "Key confirms the 법제처 interpretation only; a 고용노동부 interpretation is not in the key."
+     },
+     {
+      "quote": "10월 30일까지 지급 예정일과 금액을 회신해 주시면 감사하겠습니다.",
+      "reason": "Added response deadline date not in the key."
+     },
+     {
+      "quote": "내용증명으로 지급을 공식 요구",
+      "reason": "Added procedural step (certified mail) not in the key."
+     },
+     {
+      "quote": "민사소송으로 지연이자까지 청구할 수 있습니다.",
+      "reason": "Added procedural route (civil suit) not in the key."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "회사 말은 맞지 않습니다 ... 그 지급사유가 발생한 날부터 14일 이내에 퇴직금을 지급하여야 한다."
+   }
+  },
+  {
+   "id": "t118",
+   "case": "en-fsa-rollover",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "c63f1d3a7b343087454b9cd61be0a531d98f4b7ca38ae9e595c9dd81efb16e51",
+   "warnings": [
+    "lkp_quotes.5 is not found verbatim in the answer: Call HR/benefits this week and ask three things: Does the plan have a carryover "
+   ],
+   "grade": {
+    "id": "t118",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct",
+     "8": "vague"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "3": "FLAT",
+     "4": "FLAT",
+     "5": "KEPT"
+    },
+    "lkp_quotes": {
+     "2": "If it has a carryover, about $1,220–$1,240 still forfeits.",
+     "3": "Grace period: you can incur expenses through March 15 of the following year.",
+     "4": "If your plan has neither, all $1,900 is gone December 31.",
+     "5": "Call HR/benefits this week and ask three things: Does the plan have a carryover (and how much)? A grace period? What's the deadline to submit claims (the \"run-out\" period, often ~90 days after year-end)?"
+    },
+    "AW": [
+     {
+      "quote": "If it has a carryover, about $1,220–$1,240 still forfeits.",
+      "reason": "The key says that for the 2026 plan year at the $680 maximum, $1,900 - $680 = $1,220 is forfeited. The $1,240 upper bound comes from the $660 cap, which the key calls wrong for 2026 (\"it gives $1,240, not $1,220\"). Step 2's \"spend roughly $1,240+\" repeats the same figure."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "the \"run-out\" period, often ~90 days after year-end",
+      "reason": "The key gives no typical length for the run-out period."
+     },
+     {
+      "quote": "The Summary Plan Description states all three.",
+      "reason": "The key does not say which plan document holds these terms."
+     },
+     {
+      "quote": "Most plans also cover your spouse's and dependents' eligible expenses.",
+      "reason": "The key does not address spouse or dependent coverage."
+     },
+     {
+      "quote": "An HSA is yours, portable, and carries over in full.",
+      "reason": "The key confirms the HSA rolls over but says nothing about portability."
+     },
+     {
+      "quote": "Ask the dentist for a treatment plan and pre-estimate",
+      "reason": "This procedural step is not in the key."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "Ask the dentist for a treatment plan and pre-estimate, and book now — December slots fill fast.",
+      "reason": "It recommends booking early and gives a reason the key does not have: that December appointment slots fill fast."
+     }
+    ],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "FSA money does not roll over the way an HSA does. An HSA is yours, portable, and carries over in full. A health FSA is use-it-or-lose-it."
+   }
+  },
+  {
+   "id": "t119",
+   "case": "ja-part-time-leave",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "1f9c3acbbaaa396492fc8fda5be109afb5a9b4fb35c1862060ad04cfb6e7900c",
+   "warnings": [],
+   "grade": {
+    "id": "t119",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "vague",
+     "7": "wrong",
+     "8": "vague"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "5": "KEPT",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "3": "パートでも次の条件を満たせば年次有給休暇が付与されます。...雇入れから6か月継続勤務（4月1日開始なら10月1日以降）",
+     "5": "その間の全労働日の8割以上出勤",
+     "6": "直前だと時季変更権（会社が別の日にずらす権利）の余地が広がります"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "直前だと時季変更権（会社が別の日にずらす権利）の余地が広がります",
+      "reason": "The key neither confirms nor contradicts that a late request widens the scope for the company to change the date; the key gives only the condition 'when it would disrupt normal business operations'."
+     },
+     {
+      "quote": "休みが認められたら、「欠勤」ではなく「事前に承認された休暇」として扱われているか確認しておくと安心です（欠勤扱いは減給や皆勤手当に響くことがあります）",
+      "reason": "The key does not mention an 'approved leave' category separate from absence, or the claim that absence can affect pay or perfect-attendance allowance; it is unverified."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "早めに出す。直前だと時季変更権（会社が別の日にずらす権利）の余地が広がります",
+      "reason": "Adds a reason the key does not give: that a late request widens the company's room to change the date."
+     },
+     {
+      "quote": "ただし「まず休みを確保する」が優先です。有給の話はこのLINEでぶつけず、休みが決まった後に改めて確認するのが現実的だと思います。",
+      "reason": "Recommends the cautious route of not asking for paid leave and adds a practical reason (secure the day off first, avoid friction) that is not in the key."
+     }
+    ],
+    "SR": [
+     {
+      "quote": "早めに出す。直前だと時季変更権（会社が別の日にずらす権利）の余地が広がります",
+      "reason": "The actual rule is not stated beside it: the law sets no 'N days before' deadline for a paid-leave request, though work rules may."
+     },
+     {
+      "quote": "ただし「まず休みを確保する」が優先です。有給の話はこのLINEでぶつけず、休みが決まった後に改めて確認するのが現実的だと思います。",
+      "reason": "The actual rule is not stated beside it: she can request paid leave by naming the date, no approval is required, and the company can only move the date when normal business operations would be disrupted."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "「パートには有給休暇はない」は、法律上は正確ではありません。 労働基準法39条により、パートでも次の条件を満たせば年次有給休暇が付与されます。"
+   }
+  },
+  {
+   "id": "t120",
+   "case": "ko-jeonse-protection",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "c3f74ef84442d3eeabcbe4f03664144a50a5bd0d2a3240c42fbb6605e31f3f85",
+   "warnings": [],
+   "grade": {
+    "id": "t120",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "missing",
+     "4": "vague",
+     "5": "vague",
+     "6": "vague",
+     "7": "missing"
+    },
+    "lkp": {
+     "2": "KEPT",
+     "4": "KEPT",
+     "5": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "대항력은 전입신고 다음 날 0시부터 생기므로, 금요일 입주라면 금요일 안에 전입신고를 마쳐야 주말 공백이 없습니다",
+     "4": "대항력은 전입신고 다음 날 0시부터 생기므로, 금요일 입주라면 금요일 안에 전입신고를 마쳐야 주말 공백이 없습니다",
+     "5": "금요일 입주라면 금요일 안에 전입신고를 마쳐야 주말 공백이 없습니다"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "대항력(집이 경매로 넘어가도 계속 살 수 있는 권리)",
+      "reason": "The key defines 대항력 as the right to demand the deposit from a new owner if the owner changes; it does not say a tenant can keep living there through an auction. Neither confirmed nor contradicted."
+     },
+     {
+      "quote": "계약 후 잔금 사이에 근저당을 추가하는 경우가 흔합니다",
+      "reason": "A claim about how often this happens; the key does not address it."
+     },
+     {
+      "quote": "계약서에 잔금 수령 확인(영수증·자필 서명) 받기",
+      "reason": "An added procedural step that is not in the key."
+     },
+     {
+      "quote": "신분증·계약서·잔금 영수증 지참",
+      "reason": "The key lists only the original contract and ID; the payment receipt is an added document requirement."
+     },
+     {
+      "quote": "전세보증금반환보증 가입 검토 (HUG·SGI)",
+      "reason": "The key mentions only the HUG guarantee; SGI as a provider is not in the key."
+     },
+     {
+      "quote": "(선택) 전세권 설정 등기 — 확정일자보다 강하지만 비용 발생. 근저당이 많은 집이면 검토",
+      "reason": "A named rule and a comparison (stronger than 확정일자, costs money) that the key does not address. The key only mentions that 임대차등기 needs the landlord's cooperation."
+     },
+     {
+      "quote": "근저당과 선순위 임차인 보증금 합계가 집값의 70~80%를 넘으면 위험 신호예요",
+      "reason": "A 70-80% risk threshold that the key does not mention."
+     }
+    ],
+    "S": [
+     {
+      "quote": "금요일 입주라면 금요일 안에 전입신고를 마쳐야",
+      "reason": "The request and the key both treat the Friday (2026-10-23) move-in as a fixed fact. The answer puts it under a conditional (라면)."
+     }
+    ],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "no"
+    },
+    "PC_quote": "먼저, 부동산 말은 틀렸습니다. 전입신고만 하면 생기는 권리는 대항력...뿐이고, 보증금을 남보다 먼저 돌려받는 우선변제권은 확정일자를 받아야 생깁니다."
+   }
+  },
+  {
+   "id": "t121",
+   "case": "ja-wallpaper-restoration",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "e44ede490c6575e13d9a24224cfbdb11461db4cff8df6bdad34341979bd2295b",
+   "warnings": [],
+   "grade": {
+    "id": "t121",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "missing",
+     "6": "vague",
+     "7": "vague"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "4": "KEPT",
+     "5": "ABSENT"
+    },
+    "lkp_quotes": {
+     "3": "通常損耗まで借主負担とする特約は、内容が明確で、借主が認識できるよう説明されていた場合に限り有効と解されています。",
+     "4": "7年住んでいるなら残存価値はゼロに近く、仮に借主負担が認められる部分があっても、満額12万円にはなりません。",
+     "5": ""
+    },
+    "AW": [
+     {
+      "quote": "少額訴訟（60万円以下）：自分で提起でき、費用も数万円程度です",
+      "reason": "The key gives the small-claims fee (from 2026-05-21) as 3,500 yen written / 2,400 yen electronic for claims up to 100,000 yen, postage included, so \"several tens of thousands of yen\" contradicts it."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "壁紙（クロス）の張り替えは原則として貸主負担",
+      "reason": "A general rule that cross replacement is landlord-borne in principle. The key ties landlord burden to sun discoloration and other normal wear only, and has the tenant bearing fault damage. The key neither confirms nor contradicts this broader principle."
+     },
+     {
+      "quote": "消費者契約法10条（一方的に消費者に不利益な条項の無効）や民法90条で争える余地があります",
+      "reason": "民法90条 as a ground is an added named rule that the key does not mention."
+     },
+     {
+      "quote": "法テラス：無料法律相談の紹介",
+      "reason": "An added named office and service that is not in the key."
+     },
+     {
+      "quote": "多くの場合、内訳を求められた時点で請求額は下がります。",
+      "reason": "An added empirical claim that the key neither confirms nor contradicts."
+     }
+    ],
+    "S": [
+     {
+      "quote": "説明がなかったのであれば、消費者契約法10条（一方的に消費者に不利益な条項の無効）や民法90条で争える余地があります。",
+      "reason": "The key says that even if the contract has a clause naming the cross, it can still be contested under the three requirements and 消費者契約法10条. The answer makes contesting depend on there having been no explanation."
+     }
+    ],
+    "SP": [
+     {
+      "quote": "①内訳の提示を受ける、②「通常損耗について納得していないが、早期解決のため例外的に応じる」と一文を残す。この2点だけは入れてください。後から「納得して払った」と認定されるのを防げます。",
+      "reason": "A cautious reservation step for paying anyway. It adds a reason that is not in the key: that the sentence prevents a later finding that the person paid willingly."
+     }
+    ],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "no",
+     "3": "yes"
+    },
+    "PC_quote": "サインしたから払うしかない、というのは誤解です。...通常の使用による損耗まで借主が負担することに同意したという意味ではありません。"
+   }
+  },
+  {
+   "id": "t122",
+   "case": "ko-severance-pay",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "edb555f84e525a512ed0933768745fde7fc4b2f92400632a63dd577a0f78965e",
+   "warnings": [
+    "PC_quote is not found verbatim in the answer: 회사 말은 틀렸습니다 — 기한은 '한 달'이 아니라 14일입니다",
+    "AW[0] is not found verbatim in the answer: 퇴직금 미지급은 3년 이하 징역 또는 3천만 원 이하 벌금 대상입니다. (퇴직급여법 제44조)"
+   ],
+   "grade": {
+    "id": "t122",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "vague",
+     "6": "vague",
+     "7": "correct"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "4": "FLAT",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "퇴사일이 9월 20일이라면 14일째는 10월 4일경이고, 지금은 이미 지난 상태입니다.",
+     "4": "제가 계산한 퇴직금은 세전 약 1,020만 원입니다.",
+     "6": "현행법상 퇴직금은 원칙적으로 본인 명의 IRP(개인형퇴직연금) 계정으로 이전하는 방식으로 지급됩니다."
+    },
+    "AW": [
+     {
+      "quote": "퇴직금 미지급은 3년 이하 징역 또는 3천만 원 이하 벌금 대상입니다. (퇴직급여법 제44조)",
+      "reason": "Key: from 2026.9.18 the penalty is 5년 이하 징역 또는 5천만 원 이하 벌금 under 퇴직급여법 제43조; '제44조, 3년/3천만 원' is the old rule (minor deduction)."
+     },
+     {
+      "quote": "세전 금액이고, 퇴직소득세가 원천징수되어 실수령액은 조금 줄어듭니다.",
+      "reason": "Key: 'IRP로 이전하면 지급 시점에는 원천징수가 없다(소득세법 제146조②)'; withholding applies only when paid in cash (e.g., 55세 이상). The answer itself says payment is to IRP in principle."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "아래 내용은 2026년 10월 현재 시행 중인 법을 기준으로 정리했습니다.",
+      "reason": "Claim that the answer reflects law in force as of October 2026; no link for this claim, and the key neither confirms nor contradicts it as a statement."
+     },
+     {
+      "quote": "법제처 해석(2026. 5. 26.)과 고용노동부 실무는 통상임금을 적용하는 쪽입니다.",
+      "reason": "The interpretation date 2026.5.26 and the claim about MOEL practice are not in the key (the key only confirms 법제처-26-0209 applies the floor)."
+     },
+     {
+      "quote": "3~7일 정도 기다려 보세요.",
+      "reason": "Specific waiting period not in the key."
+     },
+     {
+      "quote": "답이 없으면 내용증명으로 한 번 더 보내는 것이 좋습니다.",
+      "reason": "Procedural step (certified letter) not in the key."
+     },
+     {
+      "quote": "근로감독관이 조사해 지급을 지시하고, 불응하면 검찰에 송치할 수 있습니다.",
+      "reason": "Procedural description of the investigation and referral to prosecution not in the key."
+     },
+     {
+      "quote": "근로계약서·급여명세서·입금내역·퇴사일 자료를 준비하세요.",
+      "reason": "List of documents to prepare for the petition not in the key."
+     },
+     {
+      "quote": "대한법률구조공단(132)에서 무료 법률상담을 받을 수 있습니다.",
+      "reason": "Named office and phone number not in the key."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "회사 말은 틀렸습니다 — 기한은 '한 달'이 아니라 14일입니다"
+   }
+  },
+  {
+   "id": "t123",
+   "case": "zh-flex-hours",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "d316175b35886ab458ad90842ca0737a483b379531d3852768767a152e10540b",
+   "warnings": [],
+   "grade": {
+    "id": "t123",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "6": "FLAT",
+     "7": "KEPT"
+    },
+    "lkp_quotes": {
+     "3": "即使公司能拿出批复，10月1日至3日这3天法定节假日的300%也一分不能少，至少 3724.14元。",
+     "6": "10月4日至7日 休息日 4天 413.79 × 200% × 4 3310.34元",
+     "7": "10月4日至7日：不当然按200%计算，而要放进批复的周期（月、季或年）里，与总标准工时比较；超出部分按150%，没超出就可能不另付。如果这32小时全部构成周期超时，约2482.76元，合计约6206.90元"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "劳部发〔1994〕503号专门规定了审批办法",
+      "reason": "The key mentions 503号 only for the positions listed in its art. 5; it does not confirm that 503号 is the approval-procedure measure."
+     },
+     {
+      "quote": "北京实行行政许可（京劳社资发〔2003〕157号、〔2005〕94号）",
+      "reason": "〔2005〕94号 is a Beijing document the key does not mention."
+     },
+     {
+      "quote": "你仍按标准工时制（每日8小时、每周40小时）处理",
+      "reason": "The key cites 157号 art. 3 for standard hours but does not state the 8-hour/40-hour figures."
+     },
+     {
+      "quote": "2026年中秋在9月25日，不和国庆重叠，所以法定节假日只有3天",
+      "reason": "The key does not mention the 2026 Mid-Autumn date."
+     },
+     {
+      "quote": "合同没约定，按正常劳动应得工资",
+      "reason": "The key confirms the base is the contract wage (with the 2540 floor). It says nothing about the fallback when the contract sets no wage."
+     },
+     {
+      "quote": "你可以主张按9000元或近12个月平均应发工资作为基数",
+      "reason": "The key does not mention a 12-month average wage base."
+     },
+     {
+      "quote": "监察查实后可责令公司支付，逾期不付可要求加付50%至100%赔偿金",
+      "reason": "The key does not cover the 50%-100% additional compensation after a labor inspection order."
+     },
+     {
+      "quote": "向公司注册地或劳动合同履行地的区劳动人事争议仲裁委员会申请",
+      "reason": "The key does not address arbitration jurisdiction."
+     },
+     {
+      "quote": "可能构成违法解除，可主张2N赔偿金",
+      "reason": "The key does not cover retaliation or 2N compensation."
+     },
+     {
+      "quote": "如果这32小时全部构成周期超时，约2482.76元，合计约6206.90元",
+      "reason": "The key says the scenario-B 150% amount cannot be calculated from the available information. The answer gives a conditional figure, which the key neither confirms nor contradicts as a hypothetical."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "你签了劳动合同，不等于公司就能合法不支付加班费。...按你说明的情况（公司没有综合工时批复），2026年国庆7天加班费合计 7034.48元"
+   }
+  },
+  {
+   "id": "t124",
+   "case": "en-529-roth",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "8285b48dba2b9a225138bea871df591dab29b76e9c1aa807c35b2080e97c22d5",
+   "warnings": [],
+   "grade": {
+    "id": "t124",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "vague",
+     "6": "correct",
+     "7": "wrong",
+     "8": "correct"
+    },
+    "lkp": {
+     "1": "FLAT",
+     "4": "KEPT",
+     "7": "WRONG",
+     "8": "KEPT"
+    },
+    "lkp_quotes": {
+     "1": "So the realistic path is $7,500 this year, then roughly $7,500 a year until the $35,000 cap is used — about five years.",
+     "4": "Opened 2004, so met — unless you changed the beneficiary at some point, which can restart the clock.",
+     "7": "Finish by December 31, 2026 so it counts against the 2026 limit.",
+     "8": "Set the 2026 number. The smallest of: $7,500; his 2026 earned income; and the portion of the 529 that has been in the account at least five years."
+    },
+    "AW": [
+     {
+      "quote": "If you contributed in 2021–2026, that money isn't eligible.",
+      "reason": "The key says contributions made more than 5 years before the transfer qualify (Pub 970). For a transfer in late 2026, contributions from early 2021 are more than 5 years old and do qualify, so excluding all of 2021 contradicts the rule."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "Not indexed for inflation.",
+      "reason": "The key gives the $35,000 lifetime cap but says nothing about whether it is indexed."
+     },
+     {
+      "quote": "K-12 tuition",
+      "reason": "The key's options for the remaining $13,000 (student loans, beneficiary change, future qualified education including graduate school and credentials, nonqualified withdrawal) do not include K-12 tuition. The key neither confirms nor contradicts it."
+     },
+     {
+      "quote": "Do not have the 529 send him a check — that becomes a non-qualified withdrawal (tax plus 10% penalty on earnings) and an excess Roth contribution (6% excise tax per year).",
+      "reason": "The key says indirect rollovers fail, but it does not say that depositing the check automatically makes an excess Roth contribution."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "Ask for the form and expected timeline, and start soon — December is a busy month for processors.",
+      "reason": "Adds a reason the key does not give: that December is a busy month for processors."
+     }
+    ],
+    "SR": [
+     {
+      "quote": "Ask for the form and expected timeline, and start soon — December is a busy month for processors.",
+      "reason": "The actual rule is not stated beside it: a rollover designated for 2026 can be made through April 15, 2027 (219(f)(3), 2026 Form 5498 instructions), though plan processing varies."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "You can't move $48,000 this year — and you can't ever move all of it. The 529-to-Roth rollover is real (SECURE 2.0, Section 126), but it has a hard lifetime cap and an annual cap, and your plan runs into both."
+   }
+  },
+  {
+   "id": "t125",
+   "case": "en-529-roth",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "4c6652536bc9ac4c264416fb56495ba0195bd8768ca13d455be0a711fa236729",
+   "warnings": [],
+   "grade": {
+    "id": "t125",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "vague",
+     "6": "correct",
+     "7": "wrong",
+     "8": "correct"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "4": "FLAT",
+     "7": "WRONG",
+     "8": "KEPT"
+    },
+    "lkp_quotes": {
+     "1": "So the honest version is: $7,500 this year (assuming he has at least $7,500 of wages)",
+     "4": "You opened the account in 2004, so the 15-year rule is almost certainly satisfied.",
+     "7": "to count for 2026 the money needs to land in the Roth by December 31, 2026 — don't rely on the April 2027 filing deadline.",
+     "8": "If he also contributes to a Roth or traditional IRA for 2026, the combined total cannot exceed $7,500 (or his compensation). The 529 rollover uses the same room."
+    },
+    "AW": [
+     {
+      "quote": "Change the beneficiary to a younger sibling or a future grandchild. But the 15-year clock restarts for the new beneficiary",
+      "reason": "Key: whether a beneficiary change restarts the 15-year clock is unresolved; 'Stating either answer as settled... is wrong.'"
+     },
+     {
+      "quote": "If the annual limit rises with inflation, this compresses to four or five years.",
+      "reason": "Key: the full $35,000 takes 'at least five tax years'; 'At 8,000 × 4 = 32,000 < 35,000, it still takes five.' Four years is not possible."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "Box 4b should be checked for a QTP-to-Roth transfer, with distribution code 1 in Box 7. The recipient should be your son.",
+      "reason": "The key says only that the plan issues Form 1099-Q; the box, code and recipient details are not covered."
+     },
+     {
+      "quote": "Form 5498 from the Roth custodian (May)",
+      "reason": "The key does not give the May timing for Form 5498."
+     },
+     {
+      "quote": "Most do by 2026, but not all.",
+      "reason": "The key does not say how many plans support the transfer."
+     },
+     {
+      "quote": "Scholarships, investment income, and parental support don't count.",
+      "reason": "The key does not cover which kinds of income are excluded from compensation."
+     },
+     {
+      "quote": "There is no deadline to use a 529.",
+      "reason": "The key does not address it."
+     },
+     {
+      "quote": "Processing can take weeks",
+      "reason": "The key says processing times vary by plan but gives no duration."
+     },
+     {
+      "quote": "He must sign the application.",
+      "reason": "This procedural requirement is not in the key."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "Start now. Processing can take weeks, and to count for 2026 the money needs to land in the Roth by December 31, 2026",
+      "reason": "Gives a reason the key does not have (processing can take weeks) and a December 31 date."
+     },
+     {
+      "quote": "Submit by mid-November.",
+      "reason": "Gives a mid-November date the key does not have."
+     },
+     {
+      "quote": "Confirm the 529 debit and the Roth credit by mid-December.",
+      "reason": "Gives a mid-December date the key does not have."
+     }
+    ],
+    "SR": [
+     {
+      "quote": "Start now. Processing can take weeks, and to count for 2026 the money needs to land in the Roth by December 31, 2026",
+      "reason": "The actual rule is missing: a rollover designated for 2026 can be made through April 15, 2027, plan permitting. The answer dismisses April 2027 instead."
+     },
+     {
+      "quote": "Submit by mid-November.",
+      "reason": "The actual April 15, 2027 limit for a 2026-designated rollover is not stated beside it."
+     },
+     {
+      "quote": "Confirm the 529 debit and the Roth credit by mid-December.",
+      "reason": "The actual April 15, 2027 limit is not stated beside it. The same step says a January arrival may count against 2027."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "you can't move $48,000 — and trying to would create a tax mess ... But it is not a lump-sum escape hatch."
+   }
+  },
+  {
+   "id": "t126",
+   "case": "en-medicare-part-b",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "5d46d2ace47175f6e41f0e6d30b13222938a5e30b34e4e62797e44f4fe3db373",
+   "warnings": [],
+   "grade": {
+    "id": "t126",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "vague",
+     "5": "correct",
+     "6": "correct",
+     "7": "missing",
+     "8": "vague"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "5": "KEPT",
+     "6": "KEPT",
+     "7": "ABSENT"
+    },
+    "lkp_quotes": {
+     "1": "When you stop working or lose the employer coverage — whichever happens first — you get an 8-month Special Enrollment Period to sign up for Part B with no penalty.",
+     "5": "If you're already receiving Social Security or Railroad Retirement benefits, SSA will automatically enroll you in Parts A and B when you turn 65. If you want to delay Part B, contact SSA before coverage starts and decline/opt out.",
+     "6": "Also sign up for Part D within 63 days of losing creditable drug coverage.",
+     "7": ""
+    },
+    "AW": [
+     {
+      "quote": "The Part B late-enrollment penalty ... applies to people who go without creditable coverage.",
+      "reason": "The key says the Part B penalty is avoided only through the SEP, which requires a group health plan based on current employment. It also says COBRA or retiree coverage qualifying is wrong, and such coverage can be creditable. So 'creditable coverage' is the wrong test for Part B."
+     },
+     {
+      "quote": "at a company with about 400 employees — well above the 20-employee threshold. That means your employer plan stays primary and Medicare is secondary, and you're allowed to delay Part B without a penalty.",
+      "reason": "This ties the no-penalty delay to the 20-employee line. The key says 'Employer size is not a condition of the SEP' and that the 20-employee line only decides who pays first. The key's traps call 'The SEP needs 20+ employees' imprecise, minor here."
+     },
+     {
+      "quote": "The one exception: If HR confirms the group plan requires you to have Part B to remain covered, then enroll.",
+      "reason": "Calling this the only exception contradicts the key's exception: if the job or coverage ends during the IEP, there is no SEP, so the asker must make sure coverage outlasts the IEP or enroll in it."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "If you're already receiving Social Security or Railroad Retirement benefits",
+      "reason": "The key mentions only Social Security, not Railroad Retirement benefits."
+     },
+     {
+      "quote": "contact SSA before coverage starts and decline/opt out",
+      "reason": "The 'before coverage starts' timing for declining is not confirmed by the key, which leaves how Part B is declined unverified."
+     },
+     {
+      "quote": "Keep the annual creditable-coverage notice, pay stubs, and an employment verification letter.",
+      "reason": "Pay stubs and an employment verification letter as proof are not in the key, which names only CMS-L564 and the creditable coverage notice."
+     },
+     {
+      "quote": "Get a free second opinion from your state's SHIP program",
+      "reason": "The key does not mention the SHIP program, a named office."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "Pause before you send in that application — the rule your coworker described has an exception that fits your situation. ... you're allowed to delay Part B without a penalty."
+   }
+  },
+  {
+   "id": "t127",
+   "case": "ko-severance-pay",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "be4ecb0d9054ccccf53ce6ea7a00d4ebcfa1d097176a2d544c7cf090f7bccfcf",
+   "warnings": [],
+   "grade": {
+    "id": "t127",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "missing",
+     "5": "vague",
+     "6": "vague",
+     "7": "vague"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "4": "ABSENT",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "9월 20일 퇴사라면 14일째는 10월 4일이고, 지금은 이미 기한이 지났어요.",
+     "4": "",
+     "6": "혹시 회사 사정으로 지급이 늦어지고 있다면, 저는 지급기일 연장에 합의한 사실이 없다는 점을 먼저 말씀드립니다. 늦어도 2026년 10월 30일까지 지급해 주시기를 정중히 요청드립니다."
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "9월 20일 퇴사라면 14일째는 10월 4일이고",
+      "reason": "The key says the deadline falls between 10/3 and 10/6 depending on how the retirement date and holidays are counted, and that the exact day is not settled. A single fixed date of 10/4 is neither confirmed nor contradicted."
+     },
+     {
+      "quote": "취업규칙이나 근로계약서에 한 달이라고 적혀 있어도, 법정 기한을 넘기는 조항은 그대로 인정되기 어렵습니다.",
+      "reason": "A claim about how employment rules and contract clauses are treated; the key does not address it."
+     },
+     {
+      "quote": "상시 5인 이상 사업장의 퇴직금제도라고 가정할게요.",
+      "reason": "This adds a workplace-size condition. The key says it did not verify eligibility requirements."
+     },
+     {
+      "quote": "기다리기만 하면 나중에 ‘묵시적으로 합의했다’고 다툴 여지가 있어요.",
+      "reason": "A legal claim about implied agreement that the key does not address."
+     },
+     {
+      "quote": "회사가 답을 주지 않으면 10월 30일 이후 노동청에 진정을 넣으면 됩니다.",
+      "reason": "This adds a 10/30 date for filing a complaint (it also appears in the draft as the payment request date). The key has no such date."
+     },
+     {
+      "quote": "온라인(labor.moel.go.kr)으로 무료 접수할 수 있어요.",
+      "reason": "The key does not address whether filing is free."
+     },
+     {
+      "quote": "10월 5일부터는 연 20% 지연이자도 청구할 수 있어요",
+      "reason": "The key says interest runs from the day after the 14th day, but that day is not fixed (10/3 to 10/6). A fixed start date of 10/5 is unverified."
+     },
+     {
+      "quote": "원금은 노동청 진정으로, 지연이자는 민사청구로 받는 경우가 많습니다.",
+      "reason": "A procedural claim about recovering principal versus interest that the key does not address."
+     }
+    ],
+    "S": [
+     {
+      "quote": "3개월 일수가 90~92일이면 약 1,020만~1,045만 원 정도로 보시면 되고",
+      "reason": "The key fixes the 3-month period at 92 days (6/21 to 9/20). It is not a variable range of 90 to 92 days."
+     }
+    ],
+    "SP": [
+     {
+      "quote": "오늘 바로 문자나 이메일로 “지급기일 연장에 동의한 적이 없다”는 점을 남기세요.",
+      "reason": "This adds a reason the key does not have: the risk that waiting will later be argued as implied agreement."
+     }
+    ],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "회사 말은 맞지 않습니다. 퇴직금은 ‘퇴사 후 한 달’이 아니라 퇴직일부터 14일 이내에 지급해야 해요"
+   }
+  },
+  {
+   "id": "t128",
+   "case": "ja-medical-deduction",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "910c9ca7a76209a28543e556c753c5b26a9015c17f9e6201020ead34773e8482",
+   "warnings": [],
+   "grade": {
+    "id": "t128",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "vague",
+     "5": "vague",
+     "6": "correct",
+     "7": "correct"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "2": "KEPT",
+     "4": "FLAT",
+     "7": "FLAT"
+    },
+    "lkp_quotes": {
+     "1": "総所得金額等が200万円未満の人は、「10万円」と「総所得金額等の5%」の低い方が足切りになります",
+     "2": "給与が1か所で年末調整済みなら確定申告の義務はありません",
+     "4": "所得税：基礎控除104万円（合計所得132万円以下。令和8年分）と社会保険料控除で課税所得が消えるため、ほぼ0円（還付なし）",
+     "7": "2027年2〜3月に申告"
+    },
+    "AW": [
+     {
+      "quote": "タクシーは緊急時のみ",
+      "reason": "The key says taxi fares count only when public transport cannot be used (タクシーは公共交通機関が使えない場合のみ, No.1122). Limiting them to emergencies is a different condition."
+     },
+     {
+      "quote": "基礎控除104万円（合計所得132万円以下。令和8年分）",
+      "reason": "The key gives the condition for the 104万円 basic deduction as 合計所得金額489万円以下 (No.1199), not 132万円以下. The person's 106万円 qualifies under either threshold."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "e-Taxなら30分ほどなので",
+      "reason": "Time estimate for e-Tax filing; not in the key."
+     },
+     {
+      "quote": "ICカード履歴でも可",
+      "reason": "Claim that IC card history works as a record of travel costs; not in the key."
+     },
+     {
+      "quote": "国税庁の「確定申告書等作成コーナー」で医療費控除の明細書も作れます",
+      "reason": "Names a specific NTA tool for making the statement; the key does not mention it."
+     },
+     {
+      "quote": "インプラント・入れ歯などの機能回復の治療、処方薬",
+      "reason": "Implants, dentures and prescription drugs as eligible items; the key's dental side claims do not cover these."
+     },
+     {
+      "quote": "対象外：...健康診断、予防接種など",
+      "reason": "Health checkups and vaccinations listed as not eligible; not in the key."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [
+     {
+      "quote": "2027年2〜3月に申告。",
+      "reason": "This step tells the person to file in Feb–Mar 2027. The actual rule is missing from the step: a refund filing can be made any time in the five years from January 1, 2027 (until December 31, 2031), and it is not tied to the filing season."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "no"
+    },
+    "PC_quote": "結論から言うと、その理解は少し違います。医療費控除の足切りは「10万円」だけではありません。総所得金額等が200万円未満の人は、「10万円」と「総所得金額等の5%」の低い方が足切りになります"
+   }
+  },
+  {
+   "id": "t129",
+   "case": "ko-unemployment-quit",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "a7dcdbc112ca270032e829baf1acef75f3caec71fd20af998529828a5b31df3b",
+   "warnings": [],
+   "grade": {
+    "id": "t129",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "missing",
+     "5": "missing",
+     "6": "vague",
+     "7": "vague"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "4": "ABSENT",
+     "5": "ABSENT"
+    },
+    "lkp_quotes": {
+     "2": "7~9월 석 달치가 밀렸다면 요건을 넘길 가능성이 높습니다.",
+     "4": "",
+     "5": ""
+    },
+    "AW": [
+     {
+      "quote": "대기기간 후 12개월 이상 계속 고용되면 남은 수급일수의 절반을 조기재취업수당으로 받습니다.",
+      "reason": "Key side claim: 조기재취업 수당 requires 신고 14일 후 and 소정일수 1/2 이상 남기고 재취업 plus 12 months' employment; the answer gives 'after the waiting period' as the timing condition and drops the 1/2-remaining condition."
+     },
+     {
+      "quote": "실업급여와 구직촉진수당은 동시 수급이 안 되지만, 실업급여가 끝난 뒤 잔여분을 받을 수 있으니 지금 미리 신청해 두세요.",
+      "reason": "Key: 구직촉진수당 '구직급여 수급 중·종료 후 6개월 안이면 제외될 수 있음'; the answer says the remainder can be received after 실업급여 ends and tells the person to apply now."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "회사가 이직확인서에 “개인사정”으로 신고해도 근로자가 소명하면 되니",
+      "reason": "The key lists how the company's '자진퇴사' loss report is handled as unverified and case-by-case."
+     },
+     {
+      "quote": "임금체불확인서(회사 발급)",
+      "reason": "The key names transfer deposit dates and contract/pay-slip pay dates as evidence. It says nothing about a company-issued 임금체불확인서."
+     },
+     {
+      "quote": "근로복지공단에 피보험자격 확인청구(1588-0075)로 근로사실을 입증해 고용보험 자격을 인정받을 수 있습니다.",
+      "reason": "The key does not mention this procedure, office or phone number."
+     },
+     {
+      "quote": "긴급복지지원(주민센터·복지로): 실직이 위기사유라 생계·주거비 지원 대상이 될 수 있습니다.",
+      "reason": "The key lists 긴급복지 as unverified and not deducted."
+     },
+     {
+      "quote": "건강보험료 감면·국민연금 납부예외 신청",
+      "reason": "The key neither confirms nor contradicts these relief measures."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "결론부터: 자발적으로 그만둬도 받을 수 있습니다 ... 이직 전 1년 이내에 2개월 이상 임금체불이 있으면 정당한 이직사유로 인정됩니다"
+   }
+  },
+  {
+   "id": "t130",
+   "case": "ko-unemployment-quit",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "4965746af4e198c8bf4856ab969b5df79c08f0f48d57ab0b931ced5dadca792c",
+   "warnings": [],
+   "grade": {
+    "id": "t130",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "vague",
+     "4": "vague",
+     "5": "missing",
+     "6": "vague",
+     "7": "vague"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "4": "FLAT",
+     "5": "ABSENT"
+    },
+    "lkp_quotes": {
+     "2": "7~9월 석 달이면 요건을 충족할 가능성이 높으니, 포기하지 말고 고용센터에 먼저 상담하세요",
+     "4": "2년 근무면 피보험단위기간 180일 요건은 충족합니다.",
+     "5": ""
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "이직확인서를 회사가 안 써주면 고용센터에 발급 요청하면 됩니다.",
+      "reason": "The key says the company must issue it within 10 days of a request and that you can apply without it. It does not mention asking the 고용센터 to issue it, so this step is unverified."
+     },
+     {
+      "quote": "신청 후 대기기간 등으로 첫 입금까지 몇 주 걸립니다.",
+      "reason": "This processing time ('몇 주') is not in the key. The key gives only a 7-day waiting period."
+     },
+     {
+      "quote": "2년 근무라 퇴직금 대상입니다.",
+      "reason": "The key makes severance depend on 1년 이상 and also 주 15시간 이상. The hours condition is still open, so stating eligibility as certain is unverified."
+     },
+     {
+      "quote": "퇴직 후 건강보험료가 지역가입자로 바뀌니 미리 확인.",
+      "reason": "The key neither confirms nor contradicts this named rule about health insurance."
+     },
+     {
+      "quote": "긴급복지지원·지자체 생계비 지원 대상인지 주민센터에 문의.",
+      "reason": "The key lists 긴급복지 among unverified, case-by-case items. It does not confirm the 주민센터 route or the local living-cost support."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "결론부터: 자발적 퇴사라고 무조건 못 받는 건 아닙니다. ... 고용보험법 시행규칙 별표2는 이직 전 1년 이내 2개월 이상 임금체불이 있으면 자발적 퇴사여도 수급자격을 인정합니다."
+   }
+  },
+  {
+   "id": "t131",
+   "case": "ko-unemployment-quit",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "81cbebd713353fd1370254cd1baca4f9b5d3f8046a7b406375779285ab00bb1b",
+   "warnings": [],
+   "grade": {
+    "id": "t131",
+    "key_points": {
+     "1": "correct",
+     "2": "wrong",
+     "3": "vague",
+     "4": "correct",
+     "5": "missing",
+     "6": "vague",
+     "7": "vague"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "4": "KEPT",
+     "5": "ABSENT"
+    },
+    "lkp_quotes": {
+     "2": "7~9월 석 달이면 요건을 넘게 충족하고",
+     "4": "실업급여는 2년 가입이면 150일(50세 이상이면 180일)이라 약 5개월치이고",
+     "5": ""
+    },
+    "AW": [
+     {
+      "quote": "최대 1천만 원, 연 1.5%예요(1588-0075)",
+      "reason": "The key says the loan rate is a temporary 1.0% from 2026.9.1 to 10.31 and 1.5% only from November (\"시점을 밝히면 둘 다 정답\"). The answer gives 1.5% as the current rate with no date, so it is wrong for an October application, and it leaves out the separate 1% guarantee fee."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "회사가 이직확인서에 '자발적 사직'으로 올리면 1차로 반려될 수 있어요",
+      "reason": "The key lists how a company's '자진퇴사' loss filing is handled as unverified or case-by-case. The key does not confirm this claim."
+     },
+     {
+      "quote": "사직서에 \"개인 사정\"이라고 썼어도 그 문구만으로 탈락하진 않아요",
+      "reason": "The key does not address this."
+     },
+     {
+      "quote": "반려되면 이의제기 → 심사청구 순으로 다툴 수 있어요",
+      "reason": "The key does not mention this appeal procedure."
+     },
+     {
+      "quote": "회사가 이직확인서를 안 내면 고용센터에 직권 확인을 요청하세요",
+      "reason": "The key says only that the company must issue the form within 10 days and that you can apply without it. It does not mention an ex officio check."
+     },
+     {
+      "quote": "3개월치 월급에 퇴직금(2년 근무면 발생), 지연이자까지 한 번에 청구되고 비용은 없어요",
+      "reason": "The answer assumes three months of pay are still unpaid, but the key leaves this open (whether September's pay is still unpaid). The key also says nothing about the complaint being free of charge."
+     },
+     {
+      "quote": "생계비 융자까지 받으면 석 달은 확보됩니다",
+      "reason": "The key does not support a figure of three months covered."
+     },
+     {
+      "quote": "1588-0075",
+      "reason": "The key does not give this phone number."
+     },
+     {
+      "quote": "소득이 없으니 건강보험료 조정, 국민연금 납부예외가 가능하고",
+      "reason": "The key does not mention health insurance premium adjustment or a national pension payment exemption."
+     },
+     {
+      "quote": "주민센터에서 긴급복지 대상인지도 상담해 보세요",
+      "reason": "The key lists 긴급복지 as unverified or case-by-case."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "소멸시효 3년이지만 회사가 문 닫으면 회수율이 뚝 떨어지니 빨리 거세요",
+      "reason": "Adds a reason the key does not have: recovery rates drop sharply if the company closes."
+     }
+    ],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "원칙은 그렇지만, 이직일 전 1년 안에 임금체불이 2개월 이상 발생했다면 '정당한 이직사유'로 인정됩니다."
+   }
+  },
+  {
+   "id": "t132",
+   "case": "ja-wallpaper-restoration",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "e5e5e207b4a82f746c4bfef6c8cbda0ef3a50bf74341a01c88fd2b765cdb92f9",
+   "warnings": [],
+   "grade": {
+    "id": "t132",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "missing",
+     "6": "vague",
+     "7": "correct"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "4": "FLAT",
+     "5": "ABSENT"
+    },
+    "lkp_quotes": {
+     "3": "最高裁平成17年7月22日判決は、通常損耗まで借主負担とする特約を有効と認めるには、その内容が明確で、借主がそれを認識していたことが必要だとしました。「原状回復」という一般的な文言だけでは、通常損耗を借主に移す特約にはなりません。",
+     "4": "壁紙の耐用年数は6年程度とされており、7年の居住で残存価値はほとんどないものと理解しております。",
+     "5": ""
+    },
+    "AW": [
+     {
+      "quote": "国土交通省の「原状回復をめぐるトラブルとガイドライン」（2020年改訂）",
+      "reason": "The key says the current guideline is the 再改訂版 of 平成23年8月 (現行は再改訂版、参考資料は令和5年3月). There is no 2020 revision."
+     },
+     {
+      "quote": "最高裁平成17年7月22日判決は、通常損耗まで借主負担とする特約を有効と認めるには",
+      "reason": "The key names the controlling case as 最判平成17年12月16日（第二小法廷、平成16(受)1573）, not 平成17年7月22日."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "「12万円を負担します」と書いたメールは、債務を認めた証拠になります。時効が振り出しに戻るうえ",
+      "reason": "The claim that the email counts as an acknowledgment of debt that resets the limitation period is not addressed by the key."
+     },
+     {
+      "quote": "簡易裁判所の民事調停",
+      "reason": "Civil conciliation at the summary court is a named procedure the key does not mention. The key covers only 少額訴訟 and 188."
+     },
+     {
+      "quote": "自治体の住宅相談",
+      "reason": "Municipal housing consultation is a named office the key does not mention."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes",
+     "3": "no"
+    },
+    "PC_quote": "日焼けの黄ばみは、あなたの負担ではありません ... 民法621条の原状回復義務は、通常の使い方で生じた損耗や経年変化までは及びません。"
+   }
+  },
+  {
+   "id": "t133",
+   "case": "ja-medical-deduction",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "217ac69bb540916090787e7c8593b252f58fe1683545c0bc12e5bbc7e9b82a06",
+   "warnings": [],
+   "grade": {
+    "id": "t133",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "correct",
+     "6": "correct",
+     "7": "wrong"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "2": "KEPT",
+     "4": "KEPT",
+     "7": "WRONG"
+    },
+    "lkp_quotes": {
+     "1": "「医療費が10万円を超えないと医療費控除は受けられない」は、所得が200万円未満の人には当てはまりません。医療費控除の足切りは「10万円」と「総所得金額等の5%」の低い方です。",
+     "2": "「義務」で言えば、給与が1か所・年末調整済み・副業なしなら、申告しなくても大丈夫です。ただし、医療費控除を受けるには申告が必要です。",
+     "4": "社会保険料控除が2万円以上あると課税所得は0になり、所得税はかからない可能性が高いです。",
+     "7": "2027年2月16日〜3月15日に確定申告"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "e-Taxで自宅から提出できます。",
+      "reason": "Procedural step (e-Tax filing from home) not addressed by the key."
+     },
+     {
+      "quote": "国税庁の「医療費集計フォーム」や確定申告書等作成コーナーが便利です。",
+      "reason": "Named NTA tools (医療費集計フォーム, 確定申告書等作成コーナー) not mentioned in the key."
+     },
+     {
+      "quote": "インプラントは治療目的なら対象になり得ます。",
+      "reason": "Eligibility of implants is not covered by the key's points or side claims."
+     },
+     {
+      "quote": "副業20万円超、2か所以上から給与、給与収入2,000万円超などの場合は、医療費控除と別に確定申告が必要なことがあります。",
+      "reason": "The 20万円 side-income and 2,000万円 salary thresholds are not stated in the key (key only cites No.1900 conditions: one employer, year-end adjustment, no other income)."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "no"
+    },
+    "PC_quote": "「医療費が10万円を超えないと医療費控除は受けられない」は、所得が200万円未満の人には当てはまりません。医療費控除の足切りは「10万円」と「総所得金額等の5%」の低い方です。"
+   }
+  },
+  {
+   "id": "t134",
+   "case": "ko-jeonse-protection",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "9f32c9c863ae830c336d79d12e8fe5278aab4cd069e2fc3006c91d7701b8ae26",
+   "warnings": [],
+   "grade": {
+    "id": "t134",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "missing",
+     "4": "correct",
+     "5": "wrong",
+     "6": "vague",
+     "7": "missing"
+    },
+    "lkp": {
+     "2": "KEPT",
+     "4": "KEPT",
+     "5": "WRONG"
+    },
+    "lkp_quotes": {
+     "2": "전입신고만으로는 집이 팔려도 임차권을 주장하는 '대항력'만 생기고, 그것도 입주와 전입신고를 마친 다음 날부터예요.",
+     "4": "그것도 입주와 전입신고를 마친 다음 날부터예요.",
+     "5": "확정일자는 주민센터에서 무료이니, 이사 후로 미루지 말고 전입신고와 같은 날 받으세요."
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "운영시간(보통 09:00~18:00)을 놓치면",
+      "reason": "Specific office hours are not confirmed by the key, which says hours vary by 동 and 'within business hours' is enough."
+     },
+     {
+      "quote": "신분증, 계약서 원본, 도장을 챙기세요.",
+      "reason": "The key lists only the original contract and ID; bringing a seal (도장) is not in the key."
+     },
+     {
+      "quote": "계약서 주소와 전입 주소가 같은지 확인하세요.",
+      "reason": "Added procedural check that the key neither confirms nor contradicts."
+     },
+     {
+      "quote": "정부24 전입신고와 인터넷등기소 확정일자로 대체하세요.",
+      "reason": "Presents after-hours 정부24 전입신고 as a substitute; the key says the effective filing date of an after-hours 정부24 filing is unverified."
+     },
+     {
+      "quote": "빌라는 근저당이 잡힌 경우가 적지 않아 특히 중요해요.",
+      "reason": "General factual claim about villas not covered by the key."
+     },
+     {
+      "quote": "근저당·가압류·신탁·소유자 변동을 보세요.",
+      "reason": "Checking for 신탁 is an added item not named in the key."
+     },
+     {
+      "quote": "이체 후 영수증을 받으세요.",
+      "reason": "Added procedural step not in the key."
+     },
+     {
+      "quote": "빌라·다가구는 HUG·HF 전세보증금반환보증 가입 요건이 까다롭고, 위반건축물이면 가입이 막힐 수 있으니",
+      "reason": "HF guarantee and the violating-building bar are not in the key; the key gives other HUG conditions only."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "먼저, 그 말은 틀렸어요. 전입신고만으로는 집이 팔려도 임차권을 주장하는 '대항력'만 생기고... 경매 때 다른 채권자보다 먼저 보증금을 받는 '우선변제권'은 여기에 확정일자를 더해야 생깁니다."
+   }
+  },
+  {
+   "id": "t135",
+   "case": "en-medicare-part-b",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "aa27d4d6b6c51e126ea868fff67bfae64615a2edbba2fced58b1cc0e0c742bc6",
+   "warnings": [],
+   "grade": {
+    "id": "t135",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "correct",
+     "6": "vague",
+     "7": "missing",
+     "8": "vague"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "5": "KEPT",
+     "6": "FLAT",
+     "7": "ABSENT"
+    },
+    "lkp_quotes": {
+     "1": "When you stop working (or lose coverage, whichever is first), you have 8 months to enroll in Part B.",
+     "5": "If you are, you may be auto-enrolled in Parts A and B at 65; to delay Part B you'd need to decline it using the instructions that come with the card.",
+     "6": "Skip Part B, Part D, Medicare Advantage, and Medigap for now.",
+     "7": ""
+    },
+    "AW": [
+     {
+      "quote": "When your coworker would be right: retiree coverage or COBRA, an employer under 20 employees, or not actively working. In those cases Medicare is primary, and missing your Initial Enrollment Period can trigger the 10%-per-year penalty",
+      "reason": "The key says \"Employer size is not a condition of the SEP (SSA: 'Small or large employer-sponsored plans')\". The 20-employee line decides only who pays first, so an active employee at a small employer still has the SEP and no penalty."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "If you've already submitted it, call Social Security now — you may be able to withdraw before it's processed.",
+      "reason": "The key does not cover withdrawing a pending Part B application."
+     },
+     {
+      "quote": "If it's already active, you can terminate Part B with Form CMS-1763, but that's not a clean undo: re-enrolling later can be restricted and premiums aren't refunded.",
+      "reason": "The key mentions neither Form CMS-1763 nor these termination consequences."
+     },
+     {
+      "quote": "Ask for the plan's Medicare coordination section or SPD.",
+      "reason": "This procedural step (asking for the SPD or the coordination section) is not in the key."
+     },
+     {
+      "quote": "plus pay stubs/W-2s as backup",
+      "reason": "The key names only CMS-L564 as proof of employer coverage. It does not mention pay stubs or W-2s."
+     },
+     {
+      "quote": "your state SHIP program deals with this exact question",
+      "reason": "The key does not mention SHIP as a resource."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "Don't enroll in Part B this month. Based on what you've told me — still working full time, covered by your employer's active group plan, employer has ~400 employees — you can delay Part B and avoid the lifetime penalty."
+   }
+  },
+  {
+   "id": "t136",
+   "case": "ko-unemployment-quit",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "1f648f26b2d3d84195cd26ea04928c9888788b77409718d10f09cf6cfce73c90",
+   "warnings": [],
+   "grade": {
+    "id": "t136",
+    "key_points": {
+     "1": "correct",
+     "2": "wrong",
+     "3": "vague",
+     "4": "vague",
+     "5": "correct",
+     "6": "vague",
+     "7": "vague"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "4": "FLAT",
+     "5": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "7~9월 석 달이면 이 요건을 넘고",
+     "4": "2년 근무면 150일분이 나오고",
+     "5": "2026년 기준 하루 6만6,048~6만8,100원이라 월 198만~204만원, 총 1,000만원 안팎입니다."
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "이 기간은 회사 사정으로 늘어나지 않아요.",
+      "reason": "The key says nothing about whether the 12-month benefit period can be extended."
+     },
+     {
+      "quote": "회사가 이직확인서에 '자진퇴사'로 적었더라도 급여명세서, 통장 입금내역, 독촉 문자, 근로계약서를 들고 이의를 제기하고 정정을 요청하면 됩니다.",
+      "reason": "The key lists how a company's 'voluntary quit' report gets handled as unverified and case by case. The objection and correction step is not confirmed."
+     },
+     {
+      "quote": "세금은 떼지 않아요",
+      "reason": "The key does not cover the tax treatment of job-seeking benefits."
+     },
+     {
+      "quote": "퇴직금과 못 쓴 연차수당도 같이 청구하세요.",
+      "reason": "Unused annual-leave pay is not in the key."
+     },
+     {
+      "quote": "간이대지급금(최종 3개월 임금과 퇴직금, 합계 최대 1,000만원)",
+      "reason": "The key gives 700만 wages + 700만 retirement pay, 1,000만 in total. It does not mention the 'final 3 months of wages' scope."
+     },
+     {
+      "quote": "진정 결과는 실업급여 심사에도 도움이 됩니다.",
+      "reason": "The key does not say whether a wage-claim result affects the benefit review."
+     },
+     {
+      "quote": "급하면 주민센터에서 긴급복지지원(생계·주거) 상담을 받아 보세요.",
+      "reason": "The key lists 긴급복지 as unverified and not penalized."
+     },
+     {
+      "quote": "구직활동은 어차피 실업인정 요건이라",
+      "reason": "The key does not mention a job-search requirement for unemployment recognition."
+     },
+     {
+      "quote": "사직서에 '개인사정'이라고 썼더라도 실제 경위로 다툴 수 있으니",
+      "reason": "The key does not cover disputing a resignation letter that gives 'personal reasons'."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "아니요, 그렇게 단정하시면 안 돼요. 자발적 퇴사가 원칙적으로 실업급여 대상이 아닌 건 맞지만, 임금 체불 때문에 그만둔 경우는 예외로 인정됩니다."
+   }
+  },
+  {
+   "id": "t137",
+   "case": "zh-flex-hours",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "14f507342722a037efe11be6015880500728a61d3e9591ec8bd6a8d80a2c72ab",
+   "warnings": [
+    "AU[1] is not found verbatim in the answer: 京劳社资发〔2005〕94号 还规定了完整的行政许可程序：申请、受理、审查、10个工作日内作出许可决定。",
+    "AU[5] is not found verbatim in the answer: 按京劳社资发〔2003〕157号第8条：综合计算周期内总实际工时超过总法定标准工时的部分，按150%支付；“其中法定休假日安排职工工作的，按《劳动法》第44条第"
+   ],
+   "grade": {
+    "id": "t137",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "6": "FLAT",
+     "7": "KEPT"
+    },
+    "lkp_quotes": {
+     "3": "所以，即使公司有有效审批，10月1日至3日这3天也必须另付3,724.14元。",
+     "6": "公司没有特殊工时审批，合同里的“综合计算工时”条款无法对你产生效力，应按标准工时制算。2026年国庆这7天，公司在9,000元月薪之外，还应补你约 7,034.48元。",
+     "7": "至于10月4日至7日，在有效的综合工时下，不再按休息日200%算，而是看整个计算周期（周/月/季/年）的总实际工时有没有超过总法定标准工时：超过的部分按150%，没超过就可能没有额外加班费。"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "劳部发〔1994〕503号《审批办法》第7条：地方企业的审批办法由省级劳动行政部门制定。",
+      "reason": "The key cites only 503号 Article 5 (eligible posts); Article 7 and its content are neither confirmed nor contradicted."
+     },
+     {
+      "quote": "京劳社资发〔2005〕94号 还规定了完整的行政许可程序：申请、受理、审查、10个工作日内作出许可决定。",
+      "reason": "The key bases the 10 working days on 157号 Article 18; document 94号 and its procedure do not appear in the key."
+     },
+     {
+      "quote": "北京各区办理特殊工时审批，还要求提交工会或职工意见、公示情况、民主程序材料",
+      "reason": "The key mentions only the triplicate approval form, with one copy held by the union or worker representative; these filing requirements are not in the key."
+     },
+     {
+      "quote": "《劳动合同法》第26条规定，违反法律、行政法规强制性规定的劳动合同无效；第27条规定，部分无效不影响其他部分效力。",
+      "reason": "The key relies on Article 26(1)(ii) (exempting employer liability or excluding worker rights); the mandatory-provision ground and Article 27 are not addressed."
+     },
+     {
+      "quote": "人社部办公厅的相关通知也是这个口径：“在正常发放的当日工资（100%）之外，再额外支付300%”",
+      "reason": "This quotes an unnamed MOHRSS General Office notice with no link or document number; the key does not confirm the source."
+     },
+     {
+      "quote": "按京劳社资发〔2003〕157号第8条：综合计算周期内总实际工时超过总法定标准工时的部分，按150%支付；“其中法定休假日安排职工工作的，按《劳动法》第44条第3款的规定支付”",
+      "reason": "The key attributes 157号 Article 8 to the 36-hour monthly average overtime cap; this attribution and quoted wording are not confirmed."
+     },
+     {
+      "quote": "而且法定节假日的工时不计入综合计算周期的总工时，不能用周期内的“总工时没超”来冲掉。",
+      "reason": "The key does not say whether holiday hours count toward the cycle total."
+     },
+     {
+      "quote": "给公司发书面《加班费支付催告函》，写明日期、天数、金额、计算方式，保留快递回执或送达证据。",
+      "reason": "This procedural step is not in the key, which says only to negotiate first."
+     },
+     {
+      "quote": "公司不付，向公司注册地或劳动合同履行地的劳动保障监察投诉（12333），要求责令支付。",
+      "reason": "The key does not state which labor inspection office has jurisdiction."
+     },
+     {
+      "quote": "对仲裁结果不服，15日内向法院起诉。",
+      "reason": "The key gives no 15-day deadline for suing after arbitration."
+     },
+     {
+      "quote": "如果公司经劳动行政部门责令支付仍不支付，你还可以主张《劳动合同法》第85条的加付赔偿金（应付金额50%以上100%以下）。",
+      "reason": "Article 85 additional compensation and the 50% to 100% range are not in the key."
+     },
+     {
+      "quote": "劳动合同约定了加班费基数的，按约定；实际发放高于约定的，按实发；但不得低于最低工资。",
+      "reason": "The key says the base is the contract wage and not below minimum wage; the rule that a higher paid amount replaces the agreed base is not in the key."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "签了字不等于认了。公司没有特殊工时审批，合同里的“综合计算工时”条款无法对你产生效力，应按标准工时制算。"
+   }
+  },
+  {
+   "id": "t138",
+   "case": "zh-flex-hours",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "394d30da9d7e0dad323d1d36eacb09e4e52880f2efc472d4f78e14b12be14b35",
+   "warnings": [],
+   "grade": {
+    "id": "t138",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "6": "FLAT",
+     "7": "KEPT"
+    },
+    "lkp_quotes": {
+     "3": "退一步，就算公司真能拿出审批，10月1日至3日这3天法定节假日的 3724.14元 也一分不能少。",
+     "6": "公司已经发了10月工资，就还欠7034.48元；还没发，10月应发合计16034.48元",
+     "7": "如果公司真能拿出覆盖你岗位的审批，10月4—7日就不再按200%算，而是计入综合工时周期，只有超过周期总法定工时的部分才按150%算"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "人社厅函〔2025〕1号进一步明确...即在正常工资之外另付，不是只补200%",
+      "reason": "The key does not cite 人社厅函〔2025〕1号. It supports the 300% being paid on top of salary through other sources, so this attribution is neither confirmed nor contradicted."
+     },
+     {
+      "quote": "北京157号文第8条也写明：综合工时下，法定休假日安排职工工作的，按第44条第3款支付。",
+      "reason": "The key cites 157号第八条 only for the 36-hour monthly overtime cap. It neither confirms nor contradicts that article 8 covers holiday pay."
+     },
+     {
+      "quote": "《劳动法》第44条第3项：法定休假日安排工作的，支付不低于300%的工资。",
+      "reason": "The key bases the 300% rule on 309号第62条 and 北京工资支付规定第十六条/第十四条（三）. It does not cite 劳动法第44条第3项."
+     },
+     {
+      "quote": "这种笼统写法一般不能免除法定节假日300%的义务",
+      "reason": "The key does not address a contract clause saying the salary already includes overtime pay."
+     },
+     {
+      "quote": "如果这7天每天超过8小时，超过部分另按150%主张。",
+      "reason": "The key does not address pay for hours beyond 8 on these holiday and rest days."
+     },
+     {
+      "quote": "向公司所在地劳动保障监察投诉，电话12333。",
+      "reason": "The key mentions complaints but does not confirm 12333 as the complaint line. It notes it found no clear basis for using 12333 to check approval."
+     },
+     {
+      "quote": "向公司注册地或劳动合同履行地的劳动人事争议仲裁委员会申请仲裁",
+      "reason": "The key confirms that arbitration is free but does not address which arbitration committee has jurisdiction."
+     },
+     {
+      "quote": "咨询打12348，工会热线12351。",
+      "reason": "These hotline numbers are not in the key."
+     },
+     {
+      "quote": "公司不能因为你主张加班费就降薪、调岗、辞退；如果发生，保留证据，可以另行主张违法解除赔偿金。",
+      "reason": "The key does not address anti-retaliation rules or compensation for unlawful dismissal."
+     }
+    ],
+    "S": [
+     {
+      "quote": "如果合同把工资拆成...基数可能低于9000，金额会少一些",
+      "reason": "The key takes the contract monthly wage of 9000 as the base (9000 ÷ 21.75) and attaches no such condition."
+     },
+     {
+      "quote": "如果你平时是轮班/做六休一，10月4—7日里可能有几天本来就是你的正常工作日",
+      "reason": "The key fixes October 4 to 7 as rest or swap days (200%, or equal comp time) under standard hours, with no shift-schedule condition."
+     }
+    ],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "公司没有审批，合同里...这句话对你不生效，按标准工时制算"
+   }
+  },
+  {
+   "id": "t139",
+   "case": "zh-insurance-gap",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "40630db12027b2076030c9f8cc6a7ff979dba9ae2656a3ecae343e0fd1aa049e",
+   "warnings": [],
+   "grade": {
+    "id": "t139",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "vague",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "FLAT",
+     "4": "FLAT",
+     "5": "KEPT",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "3": "新单位11月缴费，大约到2027年1月才能报销，这期间看病全自费。",
+     "4": "退休只差12年，你不需要重新交满20年",
+     "5": "必须在2026年12月31日前办理。跨年到2027年，只能从2027年起补，2026年这7个月就再也补不回来了。",
+     "6": "7个月可补约3,316元、2026年底截止"
+    },
+    "AW": [
+     {
+      "quote": "你听说的“清零”，指的是连续缴费年限，不是累计缴费年限。",
+      "reason": "The answer says that for 职工医保 a 连续缴费年限 'resets' (会重新计算) and decides current benefits and the waiting period. The key says: 杭州办法及实施细则没有任何清零职工医保年限的条款；“清零”“重新计算”只出现在居民医保大病保险的连续参保奖励里. It also says the waiting period follows from 中断参保 (the third natural month), not from a continuous-years count."
+     },
+     {
+      "quote": "大病保险等可能另计几十元，以窗口核定为准",
+      "reason": "The key says: 个人应缴的大病保险费、长护险费从补划的个人账户资金中扣减，不另交现金. The answer instead suggests an extra cash charge of several tens of yuan."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "以后换城市也能随医保关系转移并继续累计...第五十五条",
+      "reason": "The key confirms that years accumulate on transfer, but it cites 43号文第十二条 for that. The key does not confirm that the Hangzhou 办法's article 55 is the source."
+     },
+     {
+      "quote": "购房、落户等“连续社保”资格也会重置（补缴一般不算连续）",
+      "reason": "The key says nothing about house-purchase or hukou continuity requirements, or about whether back payments count as continuous for them."
+     },
+     {
+      "quote": "目前仅支持线下办理，带身份证或市民卡去区医保经办机构",
+      "reason": "This is a procedural claim (offline only, ID card or citizen card, district office) that the key does not mention."
+     },
+     {
+      "quote": "办理前务必先打12393问清楚",
+      "reason": "The key does not mention the hotline number 12393."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "先说结论：这8年缴费年限一点没少，“断缴3个月清零”是误传"
+   }
+  },
+  {
+   "id": "t140",
+   "case": "en-529-roth",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "6aa5a8414616728486a62b17602345db739412abe23cb41242e4e056e2e74eb9",
+   "warnings": [],
+   "grade": {
+    "id": "t140",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "vague",
+     "6": "correct",
+     "7": "wrong",
+     "8": "correct"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "4": "FLAT",
+     "7": "WRONG",
+     "8": "FLAT"
+    },
+    "lkp_quotes": {
+     "1": "The most you can move by December 31 is $7,500, not $48,000.",
+     "4": "15-year rule Met — account opened in 2004",
+     "7": "If it settles in January, it counts against 2027's limit, not 2026's.",
+     "8": "Ask them to confirm in writing: the account has been open at least 15 years (it has — 2004)"
+    },
+    "AW": [
+     {
+      "quote": "At $7,500 a year, the $35,000 takes five years, 2026 through 2030, and rising limits could shorten that.",
+      "reason": "Key: moving the full $35,000 takes 'at least five tax years'; 'At 8,000 x 4 = 32,000 < 35,000, it still takes five.' Rising limits do not realistically shorten it."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "That's across all 529 accounts for him, and it isn't indexed.",
+      "reason": "Key states $35,000 per beneficiary but says nothing about whether it is indexed."
+     },
+     {
+      "quote": "The option itself has been available since 2024 and doesn't expire",
+      "reason": "Key confirms distributions after Dec 31, 2023 but says nothing about the provision not expiring."
+     },
+     {
+      "quote": "(401(k) contributions don't count.)",
+      "reason": "Key mentions only other IRA contributions reducing the cap; 401(k) treatment not addressed."
+     },
+     {
+      "quote": "W-2 wages or net self-employment income",
+      "reason": "Key accepts 'earned income' for taxable compensation but does not define it as W-2 wages or net self-employment income."
+     },
+     {
+      "quote": "Both of you may need to sign.",
+      "reason": "Key says forms vary by plan; signature requirement not addressed."
+     },
+     {
+      "quote": "Not every 529 plan offers these transfers, and not every IRA custodian accepts them.",
+      "reason": "Key says acceptance letters, forms and processing times vary by plan, but not whether plans offer the transfer at all."
+     },
+     {
+      "quote": "You can leave it (there's no deadline)",
+      "reason": "Key does not address any deadline for leaving the remaining 529 balance."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "Submit by the first week of December; some plans take weeks.",
+      "reason": "Adds a new date (first week of December) and a processing-time reason (some plans take weeks) not in the key."
+     },
+     {
+      "quote": "Treat December 31 as the deadline and don't plan on using the April filing deadline.",
+      "reason": "Adds a reason not in the key (and contradicted by it): that a January settlement counts against 2027's limit."
+     }
+    ],
+    "SR": [
+     {
+      "quote": "Submit by the first week of December; some plans take weeks.",
+      "reason": "The actual rule, that a rollover designated for 2026 can be made through April 15, 2027 (plan processing permitting), is not stated beside it."
+     },
+     {
+      "quote": "Treat December 31 as the deadline and don't plan on using the April filing deadline.",
+      "reason": "The actual rule (rollover designated for 2026 allowed through April 15, 2027, plan permitting) is not stated; the step instead says January settlement counts against 2027."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "the $48,000 won't survive them — two limits cap this well below that"
+   }
+  },
+  {
+   "id": "t141",
+   "case": "en-fsa-rollover",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "6c23016261dcf79f0b663f832e3ae333ae4816c6c3906cd2de3a89c915e754c5",
+   "warnings": [],
+   "grade": {
+    "id": "t141",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "3": "FLAT",
+     "4": "KEPT",
+     "5": "KEPT"
+    },
+    "lkp_quotes": {
+     "2": "Carryover: spend at least $1,220 on eligible 2026 expenses before Dec 31. The remaining ~$680 carries into 2027 and can pay for March dental — but only that amount, not the full $1,900.",
+     "3": "Grace period: the full $1,900 stays usable for expenses incurred through about March 15, 2027.",
+     "4": "Neither: spend all $1,900 by Dec 31.",
+     "5": "What's the claims run-out deadline (how late in 2027 can I submit 2026 receipts)?"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "Also check your dental insurance's annual maximum; if benefits remain for 2026, December uses them before they reset.",
+      "reason": "Claim about dental insurance annual maximums resetting at year end; the key neither confirms nor contradicts it."
+     },
+     {
+      "quote": "since 2020, OTC medicines and menstrual products qualify without a prescription",
+      "reason": "The key says OTC medicine needs no prescription for an FSA but gives no start date; 'since 2020' is unverified by the key."
+     },
+     {
+      "quote": "get a pre-treatment estimate",
+      "reason": "Added procedural step that the key does not mention."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "First, the correction that changes your plan: an FSA is not an HSA. Health FSA money is use-it-or-lose-it by default."
+   }
+  },
+  {
+   "id": "t142",
+   "case": "zh-insurance-gap",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "2844aa6b3db76dfe41a4aa53c42959441776c8167981a9170930b42e8c7f7574",
+   "warnings": [],
+   "grade": {
+    "id": "t142",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "vague",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "FLAT",
+     "4": "FLAT",
+     "5": "KEPT",
+     "6": "KEPT"
+    },
+    "lkp_quotes": {
+     "3": "断 7 个月只影响连续参保待遇（约 2 个月等待期），不影响已缴年限。",
+     "4": "杭州退休医保要“累计 20 年＋杭州实际 10 年”，你还差 12 年。",
+     "5": "只能补“办理补缴手续当年”的月份。… 补缴起始不得早于 2026 年 1 月。你 4–10 月的断档，必须在 2026 年 12 月 31 日前办",
+     "6": "杭州户籍；或持《浙江省居住证》并在杭州办理就业登记；或杭州职工医保实际缴费已满 10 年。…没有居住证或就业登记，可能只能等新单位参保，补不了这 7 个月。"
+    },
+    "AW": [
+     {
+      "quote": "国家医保局的口径也是：断缴 3 个月以内补缴，才不设等待期、可追溯待遇",
+      "reason": "The key says the 3-month no-waiting rule (43号文第十一条) covers only cross-region transfers or switches between employee and resident insurance with a gap of 3 months or less. It is not a general rule for any gap under 3 months, so the answer states its scope too broadly."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "杭州职工医保的报销比例不跟“连续年限”挂钩",
+      "reason": "The key neither confirms nor contradicts how Hangzhou's reimbursement ratio relates to continuous years."
+     },
+     {
+      "quote": "杭州退休医保待遇不看 20 年以上的年限，多补 7 个月不会让退休报销比例更高",
+      "reason": "The key does not address whether years beyond 20 affect retiree benefits."
+     },
+     {
+      "quote": "另可能补扣大病保险 48 元/年、长护险等几十元，以核定单为准",
+      "reason": "The key says these fees are deducted from the supplemented personal-account funds and need no extra cash. The answer's 'additional deduction of a few dozen yuan' framing is neither confirmed nor clearly contradicted."
+     },
+     {
+      "quote": "先打 12393 问清三件事",
+      "reason": "This is a named hotline number, and the key does not mention it."
+     },
+     {
+      "quote": "浙里办 App →“浙里医保”→ 参保缴费记录",
+      "reason": "This is a procedural app path the key does not cover."
+     },
+     {
+      "quote": "浙里办 →“浙里医保”→ 我要参保 → 职工参保登记（灵活就业）；参保后通过“浙江税务社保缴费”缴费",
+      "reason": "This is a procedural registration and payment path the key does not cover."
+     },
+     {
+      "quote": "补缴超过 1 个月通常要去医保经办窗口，带身份证、居住证或户口本、就业登记材料、补缴申请表",
+      "reason": "This adds a procedural threshold and a document list that the key does not cover."
+     },
+     {
+      "quote": "退休补缴标准还会随省平工资上涨",
+      "reason": "The key says only that the standard is adjusted every year. That it rises with the provincial average wage is not stated."
+     },
+     {
+      "quote": "不要找第三方挂靠单位代缴，违法且容易被骗",
+      "reason": "This claims a practice is illegal, and the key does not cover it."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "8 年不会清零，所谓“断缴超过 3 个月，以前年限全部清零”的说法，是把“连续缴费年限”和“累计缴费年限”弄混了。断缴影响的是“连续参保”的待遇，不是你已经缴过的 8 年。"
+   }
+  },
+  {
+   "id": "t143",
+   "case": "ja-part-time-leave",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "fdb4444d4c1a4319fb6e8d8ad5806a7e1b4ec0a39b1c5c072e88653d781a70d6",
+   "warnings": [],
+   "grade": {
+    "id": "t143",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "vague",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "5": "KEPT",
+     "6": "KEPT"
+    },
+    "lkp_quotes": {
+     "3": "4月1日開始なら、8割以上出勤していれば10月1日に5日発生します。",
+     "5": "①雇入れから6ヶ月以上続けて勤務 ②その間の全所定労働日の8割以上出勤 を満たすと年次有給休暇が付きます",
+     "6": "店側が時季を変えられるのは「事業の正常な運営を妨げる」ときだけなので、早めに言うほど通りやすいです。"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "欠勤が確定すると、皆勤手当や評価に響くこともあります。",
+      "reason": "The key covers only the ban on treating paid leave as absence for 皆勤手当 (附則第136条); it says nothing about what a real absence does to allowances or evaluations."
+     },
+     {
+      "quote": "先に「休ませてほしい」と頼めば、欠勤ではなく休暇の相談になります。",
+      "reason": "This claim about how the request gets classified is neither confirmed nor contradicted by the key."
+     },
+     {
+      "quote": "会社が前倒しで出すのは自由ですが、義務ではありません",
+      "reason": "The key does not address granting leave early."
+     },
+     {
+      "quote": "子どもの学校行事そのものを保障する法律はありません（子の看護休暇は病気・けがの看護、介護休暇は介護）",
+      "reason": "The key does not mention 子の看護休暇, 介護休暇 or any law covering school events."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "まず休みを取ることを優先して、後日「有給のことで」と切り出すのでも遅くありません。",
+      "reason": "This is a cautious pick (leave paid leave out of the request). It adds a reason that is not in the key: 有給の話を同じメッセージで出すと話がこじれることもあります."
+     }
+    ],
+    "SR": [
+     {
+      "quote": "まず休みを取ることを優先して、後日「有給のことで」と切り出すのでも遅くありません。",
+      "reason": "The actual rule is not stated beside it: the worker can name the paid-leave date, and the employer can only move it when the business's normal operation would be disrupted."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "「パートには有給休暇はない」は、法律上そのままは通りません。パートでも条件を満たせば有給は付きます。"
+   }
+  },
+  {
+   "id": "t144",
+   "case": "ko-severance-pay",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "43c95fdb86c2e5ba9f673657076f2577826ed8a89747e02c8a505dc9d943667c",
+   "warnings": [],
+   "grade": {
+    "id": "t144",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "vague",
+     "4": "correct",
+     "5": "vague",
+     "6": "correct",
+     "7": "correct"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "4": "FLAT",
+     "6": "KEPT"
+    },
+    "lkp_quotes": {
+     "2": "즉, 기다리실 이유가 없고 지금 바로 지급을 요구하셔도 됩니다. 문자를 보내두는 것 자체가 \"합의해서 기다려준 것이 아니다\"라는 증거가 되니",
+     "4": "상여금이 없으므로 상여 가산은 없습니다. 대략 1,040만 원 안팎으로 보시면 됩니다.",
+     "6": "회사 기준 계산서와 지급 예정일, 지급 방법(IRP 계좌 이전 등)을 함께 회신해 주시면 감사하겠습니다. IRP 계좌 정보가 필요하시면 바로 안내드리겠습니다."
+    },
+    "AW": [
+     {
+      "quote": "14일을 넘기면 3년 이하 징역 또는 3천만 원 이하 벌금(같은 법 제44조 제1호)",
+      "reason": "Key: '2026.9.18.부터 퇴직급여법 제43조에 따라 5년 이하 징역 또는 5천만 원 이하 벌금이다. \"제44조, 3년/3천만 원\"은 옛 규정이다.' (minor deduction per key)"
+     }
+    ],
+    "AU": [
+     {
+      "quote": "연 20%의 지연이자(같은 법 제17조 제3항, 근로기준법 제37조)",
+      "reason": "The 20% rate and 근로기준법 제37조 are confirmed by the key, but the citation 퇴직급여법 제17조 제3항 is neither confirmed nor contradicted."
+     },
+     {
+      "quote": "민사 청구도 가능 — 지급명령이나 소액소송을 할 수 있습니다.",
+      "reason": "Civil remedies (지급명령, 소액소송) are not addressed by the key."
+     },
+     {
+      "quote": "(55세 이후, 고시 금액 이하, 사망, 출국 등 예외). 미리 만들어두면 지급이 빨라집니다.",
+      "reason": "The key confirms the 55-year and 300만 원 limits only; the 사망/출국 exceptions and the claim that opening an IRP early speeds payment are not in the key."
+     },
+     {
+      "quote": "5인 미만 사업장도 적용됩니다 — 퇴직금은 사업장 규모와 무관하게 지급 의무가 있습니다.",
+      "reason": "The key says eligibility requirements were not verified, so it neither confirms nor contradicts this."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "\"한 달 안에만 주면 된다\"는 것은 사실이 아닙니다. 퇴직금은 퇴직일부터 14일 이내에 지급하는 것이 원칙입니다(「근로자퇴직급여 보장법」 제9조 제1항)."
+   }
+  },
+  {
+   "id": "t145",
+   "case": "zh-sick-pay",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "3ab72f4a34a5b32749479beb278ce52a911ac5b874c8584a4bca959f8ba72f9a",
+   "warnings": [],
+   "grade": {
+    "id": "t145",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "wrong",
+     "5": "vague",
+     "6": "vague",
+     "7": "vague",
+     "8": "correct"
+    },
+    "lkp": {
+     "2": "KEPT",
+     "4": "WRONG",
+     "5": "WRONG",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "所以，先查合同和员工手册；如果公司原来承诺过更高标准，不能因为旧文件到期就单方降低。",
+     "4": "制度照搬旧上海算法（先按实得工资70%，再按4—6年80%） 8000 × 70% × 80% 4480元（按8000元估算）",
+     "5": "制度照搬旧上海算法（先按实得工资70%，再按4—6年80%） 8000 × 70% × 80%",
+     "6": "工资条上病假工资只有800元……800元低于法定下限。"
+    },
+    "AW": [
+     {
+      "quote": "制度照搬旧上海算法（先按实得工资70%，再按4—6年80%） 8000 × 70% × 80% 4480元（按8000元估算）",
+      "reason": "The key says that if the company system copies the 83号 tiers, 4 years falls in the 80% tier and 8000 × 80% = 6400元. The base is the contract post monthly wage (10号第九条), with no extra 70% reduction, so the 4480 figure and the '先按实得工资70%' rule contradict the key."
+     }
+    ],
+    "AU": [],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "先纠正一个前提：病假工资不是公司说了算，也不是“照顾”。……公司必须依法支付病假工资。"
+   }
+  },
+  {
+   "id": "t146",
+   "case": "en-529-roth",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "8cca694b49a49b02cdf196ed6bb07249bcb2988350fc6df1550c31e5bf3b4510",
+   "warnings": [
+    "lkp_quotes.1 is not found verbatim in the answer: 2026 annual limit: $7,500, or his taxable compensation if less. Reduced by any o",
+    "PC_quote is not found verbatim in the answer: Short answer: you can't move the full $48,000 this year—and you can't move all o",
+    "AU[2] is not found verbatim in the answer: State \"2026 tax year\" and \"direct trustee-to-trustee transfer.\""
+   ],
+   "grade": {
+    "id": "t146",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "4": "KEPT",
+     "7": "KEPT",
+     "8": "KEPT"
+    },
+    "lkp_quotes": {
+     "1": "2026 annual limit: $7,500, or his taxable compensation if less. Reduced by any other 2026 IRA contributions he makes.",
+     "4": "Opened in 2004, it satisfies this—assuming no beneficiary change or plan transfer restarted the clock.",
+     "7": "A 2026 IRA contribution can generally be made until April 15, 2027, but 529 plans often have earlier year-end processing cutoffs",
+     "8": "Submit a partial direct trustee-to-trustee rollover request. Request only the calculated amount—likely $7,500, not $48,000."
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "Will it check Box 4b on Form 1099-Q for a 529-to-Roth transfer?",
+      "reason": "The key says only that the plan issues Form 1099-Q; it does not mention a Box 4b checkbox."
+     },
+     {
+      "quote": "his 2026 taxable compensation—wages, salary, net self-employment income, etc.",
+      "reason": "The key does not define what counts as taxable compensation, so this list is neither confirmed nor contradicted."
+     },
+     {
+      "quote": "State \"2026 tax year\" and \"direct trustee-to-trustee transfer.\"",
+      "reason": "This wording for the request form is a procedural step the key does not give (the key says forms vary by plan)."
+     },
+     {
+      "quote": "the reporting is cleaner if the 529 distribution and Roth deposit both happen in 2026",
+      "reason": "The key does not say whether doing both in the same calendar year makes reporting cleaner."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "Aim to submit by mid-November and confirm receipt by mid-December.",
+      "reason": "Adds mid-November and mid-December target dates, plus a reason (cleaner reporting when both legs happen in 2026), none of which is in the key."
+     }
+    ],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "Short answer: you can't move the full $48,000 this year—and you can't move all of it through this rule at all. For 2026, a 529-to-Roth rollover is capped at $7,500 for someone under 50"
+   }
+  },
+  {
+   "id": "t147",
+   "case": "en-fsa-rollover",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "8649c991329aa530ac88d46e56e40754d8f1d1153638485ad0368144c6b22a70",
+   "warnings": [],
+   "grade": {
+    "id": "t147",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "vague",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct",
+     "8": "missing"
+    },
+    "lkp": {
+     "2": "KEPT",
+     "3": "KEPT",
+     "4": "KEPT",
+     "5": "KEPT"
+    },
+    "lkp_quotes": {
+     "2": "With a standard $680 carryover, plan to spend about $1,220 before December 31 and let the rest cover March dental.",
+     "3": "If the plan has a grace period, March treatment may qualify only if it is incurred by the grace-period deadline, often March 15.",
+     "4": "Without either feature, you need to use the full $1,900 by December 31 or lose it.",
+     "5": "If you pay out of pocket, submit claims before the plan’s run-out deadline—even if the expense was incurred in December."
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "Check your benefits portal or SPD, or call the FSA administrator.",
+      "reason": "Names a specific plan document (the SPD) as the place to confirm the rules. The key only says to ask HR or the administrator and does not mention the SPD."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "Important correction: a health FSA is not an HSA. HSA balances are yours indefinitely and roll over without a cap. A health FSA is generally “use it or lose it.”"
+   }
+  },
+  {
+   "id": "t148",
+   "case": "en-fsa-rollover",
+   "arm": "gv-plain",
+   "run": "r2",
+   "answer_sha256": "cf15c514d48370a5a91b2909ba8d2164e38ab813fa726d3f14de156a34f56094",
+   "warnings": [
+    "PC_quote is not found verbatim in the answer: An FSA is not an HSA. ... Health FSA money is use-it-or-lose-it, with only a cap"
+   ],
+   "grade": {
+    "id": "t148",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "correct",
+     "6": "vague",
+     "7": "correct",
+     "8": "missing"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "3": "FLAT",
+     "4": "KEPT",
+     "5": "KEPT"
+    },
+    "lkp_quotes": {
+     "2": "Forfeited ~$1,220",
+     "3": "some plans use a 2.5-month grace period (through ~March 15) instead of carryover",
+     "4": "If it turns out you have neither carryover nor grace period, your only move is to spend aggressively in December",
+     "5": "What's the claims run-out deadline? The service must happen by Dec 31 (or grace-period end), but you usually have until March–April to submit receipts."
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "HSA money is yours forever, rolls over without limit, and can be invested.",
+      "reason": "The key confirms that an HSA rolls over but says nothing about investing HSA money."
+     },
+     {
+      "quote": "And the carryover only happens if you're still employed and still enrolled in the FSA in the new plan year.",
+      "reason": "The key leaves open whether carryover requires enrolling for 2027 (fine only as 'some plans require it, check yours'). The answer states it as a fixed rule."
+     },
+     {
+      "quote": "you usually have until March–April to submit receipts",
+      "reason": "The key gives no typical run-out window. It says only that the run-out deadline is set by the plan."
+     },
+     {
+      "quote": "Vitamins and supplements generally aren't eligible unless prescribed for a diagnosed condition",
+      "reason": "The key's eligibility lists do not cover vitamins or supplements."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [
+     {
+      "quote": "Then: spend it before Dec 31, not in March ... Move the dental work into December if the dentist has an opening",
+      "reason": "It tells the person to move all dental work to December, which is the cautious choice. The rule it is safer than is not stated in the same step: a grace-period plan can pay for March work done by the plan's grace end (at most March 15, 2027), and a carryover plan sends up to $680 into 2027 for March."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "An FSA is not an HSA. ... Health FSA money is use-it-or-lose-it, with only a capped carryover"
+   }
+  },
+  {
+   "id": "t149",
+   "case": "ja-medical-deduction",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "fc1b30b2fdc608d158b626e5d0d414019412a0bdc68f2f02d69cde77cf9997a6",
+   "warnings": [],
+   "grade": {
+    "id": "t149",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "correct",
+     "6": "correct",
+     "7": "wrong"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "2": "KEPT",
+     "4": "FLAT",
+     "7": "WRONG"
+    },
+    "lkp_quotes": {
+     "1": "合計所得が200万円未満なら、足切りは10万円ではなく「合計所得×5%」になります。",
+     "2": "給与所得者で年末調整が済んでいれば、確定申告の義務はありません。",
+     "4": "所得税：基礎控除104万円＋社会保険料控除で課税所得は0円になる見込み → 所得税は0円、還付なし。",
+     "7": "2027年2月16日〜3月15日に、確定申告書等作成コーナー（マイナンバーカード）で申告。"
+    },
+    "AW": [
+     {
+      "quote": "歯列矯正・ホワイトニング・審美目的は対象外。",
+      "reason": "The key says only orthodontics for cosmetic purposes is excluded (容ぼう美化の矯正は対象外, No.1128). A blanket exclusion of 歯列矯正 contradicts that."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "2027年6月からの住民税に反映されます。",
+      "reason": "The key names 令和9年度 resident tax but never says it starts in June 2027."
+     },
+     {
+      "quote": "e-Taxなら30分程度で終わるので",
+      "reason": "The key gives no processing-time estimate."
+     },
+     {
+      "quote": "確定申告書等作成コーナー（マイナンバーカード）で申告。",
+      "reason": "The key does not mention this named filing tool or the My Number card method."
+     },
+     {
+      "quote": "医療費が7万円のままなら、収入が214万円を超えると5%の足切りが7万円を超えて控除は0になる。",
+      "reason": "The figure assumes the 74万 minimum 給与所得控除 still applies at 214万 of revenue, a range the key does not state."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "no"
+    },
+    "PC_quote": "「10万円を超えないと受けられない」は、合計所得が200万円以上の場合のルールです。合計所得が200万円未満なら、足切りは10万円ではなく「合計所得×5%」になります。"
+   }
+  },
+  {
+   "id": "t150",
+   "case": "zh-flex-hours",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "c61921686dbcba30b02029f0daf66953b17cf80056e921c85d59ab26fec6b5cf",
+   "warnings": [],
+   "grade": {
+    "id": "t150",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "correct",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "6": "FLAT",
+     "7": "FLAT"
+    },
+    "lkp_quotes": {
+     "3": "就算公司真能拿出审批：法定节假日3天仍要另付 3724.14 元",
+     "6": "结论：这7天你至少能拿3724.14元，正常应主张7034.48元。",
+     "7": "两种计算方式相差约 827.59元，差的只是那4天休息日按200%还是150%。"
+    },
+    "AW": [
+     {
+      "quote": "北京按正常劳动应得工资算，不能只按基本工资；实际发放高于合同约定的，按实际发放。",
+      "reason": "The key's side claim says the overtime base is the contract-agreed wage, not below the 2540/month minimum (北京工资支付规定第四十四条); using actual pay when higher contradicts that."
+     },
+     {
+      "quote": "最多约 2482.76元（32小时 × 51.72 × 150%）",
+      "reason": "Key point 7 says the 150% amount in scenario B cannot be computed from the facts given, and the key deducts for '凭空给情形B的150%算出具体金额'."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "取得《北京市企业实行综合计算工时工作制和不定时工作制审批表》，表上写明岗位、人数、计算周期、实行期限",
+      "reason": "The key confirms the form comes in triplicate (一式三份) but not the form's exact name or the fields listed on it."
+     },
+     {
+      "quote": "不取决于双方在劳动合同中的约定或用人单位的单方告知，而在于劳动者所在的岗位实行特殊工时是否经过人力社保行政部门审批。",
+      "reason": "Quoted wording of the 2019 case. The key paraphrases only the contract part; the extra wording and the '十大典型案例' label are not confirmed."
+     },
+     {
+      "quote": "个别地区（如山东高院〔2018〕鲁民再154号）有“审批规定属于管理性规范、约定仍有效”的说法",
+      "reason": "The key does not mention this case number or the view it reports."
+     },
+     {
+      "quote": "劳部发〔1997〕271号第四条：法定休假日安排加班，“应另外支付不低于工资的300%”，一般不安排补休。",
+      "reason": "The key cites 309号第62条 and the Beijing wage rules, not 271号; this source and its quoted wording are unverified."
+     },
+     {
+      "quote": "同文第五条：综合工时周期内超过总法定标准工时的部分按150%算",
+      "reason": "The 271号 Article 5 citation is not in the key."
+     },
+     {
+      "quote": "京劳社资发〔2003〕157号第八条也是同样的规定。",
+      "reason": "The key assigns 157号第八条 to the 36-hour monthly overtime cap; it neither confirms nor rules out that this article also has the 150%/300% rule."
+     },
+     {
+      "quote": "北京高院2024年解答（一）第56条：与本职工作无关的值班，或与本职工作有关但值班期间可以休息的，一般不支持加班费。",
+      "reason": "This named rule on duty shifts is not in the key."
+     },
+     {
+      "quote": "折算后的正常工作时间工资不能低于最低工资；法定节假日部分不能“包干”。",
+      "reason": "The rule against an all-in wage that includes overtime is not in the key."
+     },
+     {
+      "quote": "用微信、邮件或EMS发一份《加班费支付催告函》，写明日期、岗位、金额，保留送达记录。",
+      "reason": "This procedural step (a written demand letter) is not in the key."
+     },
+     {
+      "quote": "向公司注册地区人社局申请政府信息公开",
+      "reason": "The key suggests asking the company or consulting the union or district HRSS; a government information disclosure request is not mentioned."
+     },
+     {
+      "quote": "打12333向劳动保障监察投诉",
+      "reason": "The key mentions a complaint in general and notes that '12333可查询' has no clear basis; it does not confirm 12333 as the channel for a complaint."
+     },
+     {
+      "quote": "向公司注册地或劳动合同履行地的区劳动人事争议仲裁委员会申请仲裁",
+      "reason": "The key does not give the jurisdiction rule for which arbitration commission to use."
+     },
+     {
+      "quote": "如果9000是到手工资，基数更高",
+      "reason": "The key does not address a take-home versus gross base."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [
+     {
+      "quote": "如果公司态度强硬，法定节假日那3724.14元几乎无争议，可以先单独主张这一块。",
+      "reason": "This picks the smaller, safer claim, but the full entitlement (7034.48 in total, including 3310.34 at 200% for October 4-7 when no time off in lieu was given) is not stated in the same step."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "no"
+    },
+    "PC_quote": "能拿，而且公司“综合工时没有加班费”这句话本身就站不住。"
+   }
+  },
+  {
+   "id": "t151",
+   "case": "ko-jeonse-protection",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "a45484e9ea0e6b964f003d9621b9b64c85fa9e24ed35ebe686df9623d550b3f4",
+   "warnings": [],
+   "grade": {
+    "id": "t151",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "vague",
+     "5": "wrong",
+     "6": "vague",
+     "7": "missing"
+    },
+    "lkp": {
+     "2": "FLAT",
+     "4": "FLAT",
+     "5": "WRONG"
+    },
+    "lkp_quotes": {
+     "2": "대항력도 전입신고 다음 날 0시부터 생기니, 미루는 만큼 그대로 무방비가 돼요.",
+     "4": "대항력도 전입신고 다음 날 0시부터 생기니",
+     "5": "같은 방문에서 확정일자 — 계약서 원본으로 주민센터에서 무료로 받을 수 있어요. 3번과 같은 날 처리하세요."
+    },
+    "AW": [
+     {
+      "quote": "이번 금요일(10월 30일)에는 이 순서로 끝내세요.",
+      "reason": "The key dates this Friday as 2026-10-23 ('금요일(2026-10-23) 근무시간에 입주+전입+확정일자'), not October 30."
+     },
+     {
+      "quote": "확정일자가 없으면 경매 대금에서 우선 배당을 못 받고, 집주인에게 개인적으로 청구해야 합니다.",
+      "reason": "The key says 대항력 from 입주+전입신고 lets the tenant demand the deposit from a new owner ('집주인이 바뀌어도 새 집주인에게 반환 요구'), so claiming only from the landlord personally contradicts it."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "건축물대장의 위반건축물 등재도 확인해야 해요. 빌라는 이게 보증보험 거절 사유가 됩니다.",
+      "reason": "Added rule (violation-building listing causes guarantee refusal); the key neither confirms nor contradicts it."
+     },
+     {
+      "quote": "번지·동·호수는 등기부와 똑같이 적어야 해요",
+      "reason": "Added procedural requirement for the 전입신고 address; not in the key."
+     },
+     {
+      "quote": "HUG·HF·SGI 중에서 알아보세요.",
+      "reason": "Names HF and SGI as guarantee providers; the key mentions only HUG."
+     },
+     {
+      "quote": "등기변동 알림 신청 — 인터넷등기소에서 신청하세요.",
+      "reason": "Added named service (registry change alert); the key gives a next-day re-check of the register instead and does not mention this service."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "핵심은 3·4번을 이사 당일, 되도록 오전에 끝내는 거예요.",
+      "reason": "Adds a morning time window that is not in the key; the key only says within business hours on the day."
+     }
+    ],
+    "SR": [
+     {
+      "quote": "핵심은 3·4번을 이사 당일, 되도록 오전에 끝내는 거예요.",
+      "reason": "The actual rule is not stated beside it: within business hours is enough, and only an online registry 확정일자 filed after 18:00 (or possibly after 16:00) slips to the next business day."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes"
+    },
+    "PC_quote": "전입신고만 해서 생기는 권리는 대항력(집이 팔려도 계약기간까지 살 수 있는 권리)뿐이에요. 경매로 집이 넘어갈 때 보증금을 먼저 돌려받는 우선변제권은 확정일자를 받아야 생깁니다."
+   }
+  },
+  {
+   "id": "t152",
+   "case": "zh-sick-pay",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "d1610aa77a73c0577cb2e3e7a0e43bfe3f7a1065aeadc1bf65131add8376380d",
+   "warnings": [],
+   "grade": {
+    "id": "t152",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "vague",
+     "6": "correct",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "2": "KEPT",
+     "4": "KEPT",
+     "5": "KEPT",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "所以，9月起的病假，上海不再强制按80%发；法定兜底是2,192元。公司制度或合同有更高标准的，按更高标准，约定优先。",
+     "4": "如果劳动合同、集体合同或员工手册仍明确约定按工龄80%计发：你入职满4年，对应旧版“满4年不满6年按80%”，即8,000 × 80% = 6,400元/月，公司应补5,600元。",
+     "5": "8,000元是否是“正常出勤月工资”要看构成：年终奖、餐补、交通补贴、住房补贴、加班费等不计入基数；固定月薪8,000元则基数就是8,000元。",
+     "6": "800元肯定不合法，你不需要接受“公司说了算”的说法。"
+    },
+    "AW": [
+     {
+      "quote": "也可以申请劳动仲裁，免费，时效1年。",
+      "reason": "The key says that while still employed, a claim for unpaid wages is not limited to one year, and a claim must be filed within one year after leaving (劳动争议调解仲裁法第27条). A flat one-year limit contradicts this."
+     },
+     {
+      "quote": "第九条只规定病假工资的计算基数，没有再规定工龄分档比例",
+      "reason": "The key says 10号第九条 provides that during sick leave \"企业应当按规定支付假期工资\" (and that the base is not below 2740). So the article does not only set the calculation base."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "以上是按现行文件和裁审口径的分析",
+      "reason": "This claims the analysis follows the current adjudication and review practice (裁审口径). The key neither confirms nor contradicts that any such practice exists."
+     },
+     {
+      "quote": "写“按沪劳保发〔1995〕83号执行”→ 该文件已到期，公司可能只认2,192元，但条款是否随文件失效有争议，仍可主张按原约定履行",
+      "reason": "This is a legal claim about a contract that names 83号 directly, made after 83号 expired. The key covers only contracts that state a ratio or say \"按本市规定执行\". It neither confirms nor contradicts this one."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "800元肯定不合法，你不需要接受“公司说了算”的说法。"
+   }
+  },
+  {
+   "id": "t153",
+   "case": "ja-wallpaper-restoration",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "0f6bb308d396b10c65df083b6da82712e23c3ed0e7e3a80b0295fb3cc264f13c",
+   "warnings": [],
+   "grade": {
+    "id": "t153",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "missing",
+     "6": "vague",
+     "7": "correct"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "4": "FLAT",
+     "5": "ABSENT"
+    },
+    "lkp_quotes": {
+     "3": "契約書の「原状回復」との文言は、通常損耗を借主負担とする特約とは解されません。全額負担の根拠となる条項があるのであれば、該当箇所をお示しください。",
+     "4": "7年住んでいる時点で、壁紙の残存価値はゼロです。",
+     "5": ""
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "通常損耗まで借主負担にする特約が有効になるには、内容が具体的で明確なこと、借主がそれを認識していたこと、締結経緯からみて真意に基づくこと、が必要です。",
+      "reason": "This set of requirements is not the key's set (the key cites 最判平成17年12月16日 and the guideline's three requirements: 必要性・合理性, 借主の認識, 負担の意思表示). The key does not confirm 「締結経緯からみて真意に基づくこと」."
+     },
+     {
+      "quote": "重要事項説明でその説明を受けていた、という事情がない限り",
+      "reason": "Names a specific procedure (重要事項説明) that the key does not mention. The key speaks only of 口頭で説明 with clear recognition and agreement."
+     },
+     {
+      "quote": "退去立会い時の室内確認書の写し",
+      "reason": "A named document request that the key neither confirms nor contradicts. The key asks for 入居時の記録 and mentions 立会い only in general terms."
+     },
+     {
+      "quote": "サインすると、あとで争いにくくなります。",
+      "reason": "A procedural claim about the effect of signing a 確認書/精算書 at the walk-through. The key does not address it."
+     },
+     {
+      "quote": "法テラスに相談",
+      "reason": "A named office the key does not mention. The key names only 消費者ホットライン188."
+     }
+    ],
+    "S": [
+     {
+      "quote": "喫煙なしで日照による黄ばみ程度なら、通常の使い方で生じた損耗（通常損耗）で、貸主負担が原則です。",
+      "reason": "The key treats these as fixed facts of the case (本件は非喫煙; the discoloration is sunburn yellowing), yet the answer makes the conclusion conditional on them with 「なら」."
+     }
+    ],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "yes",
+     "3": "no"
+    },
+    "PC_quote": "12万円を全額払う必要は、たぶんありません。 ... 日焼けは「通常損耗」です。喫煙なしで日照による黄ばみ程度なら、通常の使い方で生じた損耗（通常損耗）で、貸主負担が原則です。"
+   }
+  },
+  {
+   "id": "t154",
+   "case": "ko-unemployment-quit",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "045bbba95c724721a67336322fc08b1eafb135bc4f332aa76cc4db7f2bf07966",
+   "warnings": [],
+   "grade": {
+    "id": "t154",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "vague",
+     "4": "vague",
+     "5": "missing",
+     "6": "vague",
+     "7": "vague"
+    },
+    "lkp": {
+     "2": "KEPT",
+     "4": "FLAT",
+     "5": "ABSENT"
+    },
+    "lkp_quotes": {
+     "2": "7~9월 석 달치가 아예 안 들어왔다면 이 기준을 넘어서 거의 인정된다고 보시면 됩니다... 늦게라도 들어온 경우라면 '지연 지급'도 합산해서 2개월을 넘는지가 기준입니다.",
+     "4": "2년 근무면 피보험단위기간 180일 요건도 충족할 가능성이 높고요.",
+     "5": ""
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "근로 의사와 능력, 구직활동이 확인돼야 합니다.",
+      "reason": "An added eligibility condition that the key neither confirms nor contradicts."
+     },
+     {
+      "quote": "사직서에 \"개인 사정\"이라고 적었더라도 실제 사유가 체불이면 소명할 수 있지만",
+      "reason": "The key does not address a resignation letter that gives personal reasons."
+     },
+     {
+      "quote": "회사가 이직확인서에 자발적 퇴사로 신고하면 이의를 제기하고 급여 통장 내역과 급여명세서로 다투셔야 해요.",
+      "reason": "The key lists the company's 'voluntary quit' report as an unverified, case-by-case side claim that it does not penalize."
+     },
+     {
+      "quote": "회사가 고용보험에 가입돼 있지 않았다면 피보험자격 확인청구부터 하시고요.",
+      "reason": "A named procedure (피보험자격 확인청구) that the key does not mention."
+     },
+     {
+      "quote": "최종 3개월 임금과 최종 3년 퇴직금을 근로복지공단이 먼저 지급합니다.",
+      "reason": "The key gives the 700만/1,000만원 caps but not the 3-month and 3-year scope or the paying agency."
+     },
+     {
+      "quote": "생활비는 실업급여를 첫 버팀목으로 놓고 3개월치를 짜세요.",
+      "reason": "The 3-month budgeting figure is not in the key."
+     },
+     {
+      "quote": "소득·재산 기준이 맞으면 지자체 긴급복지 생계비·주거비 지원도 신청할 수 있습니다.",
+      "reason": "The key lists 긴급복지 as unverified and case-by-case."
+     },
+     {
+      "quote": "밀린 월급을 나중에 받아도 수급 자격에는 영향이 없습니다.",
+      "reason": "The key does not state whether later receiving the back pay affects eligibility."
+     }
+    ],
+    "S": [
+     {
+      "quote": "2년 근무면 피보험단위기간 180일 요건도 충족할 가능성이 높고요.",
+      "reason": "The key states the requirement as met outright: '2년 근무로 충족'. The person has worked 2 years, so the '-면' condition is a limit on a fixed fact."
+     }
+    ],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "그렇게 생각하실 필요 없어요. 임금 체불로 그만둔 경우는 \"정당한 사유가 있는 이직\"으로 인정돼서 실업급여를 받을 수 있는 경우가 많습니다."
+   }
+  },
+  {
+   "id": "t155",
+   "case": "zh-sick-pay",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "fc798240d7e021824c48f3fa049d8b78fe0429906ae51572bff0697fa852524b",
+   "warnings": [],
+   "grade": {
+    "id": "t155",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "missing",
+     "6": "vague",
+     "7": "vague",
+     "8": "correct"
+    },
+    "lkp": {
+     "2": "KEPT",
+     "4": "KEPT",
+     "5": "ABSENT",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "2": "沪劳保发〔1995〕83号和沪劳保保发〔2000〕14号已于2026年8月15日到期。你9月整月病假都在此之后，不再强制按工龄分档……但如果你的劳动合同、集体合同或公司依法制定并公示的规章制度约定了更高标准（比如仍按80%或旧表），就按约定执行，可能高于2192元。",
+     "4": "你4年的工龄，只有在合同或制度仍约定旧分档标准时才有用，不能直接拿旧文件当法定依据。",
+     "5": "",
+     "6": "个人社保、公积金是否还能从中代扣，旧最低标准文件到期后实务有分歧；但不管按哪种口径，800元都低于底线。"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "请在[3个工作日]内补足差额，并提供工资明细。",
+      "reason": "Adds a 3-working-day payment deadline in the drafted message; the key gives no such deadline."
+     },
+     {
+      "quote": "沪人社规〔2021〕6号",
+      "reason": "Cites a named Shanghai rule as a basis; the key does not mention this document, so it neither confirms nor contradicts it."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "病假工资不是公司单方面说了算的。你9月整月病假在医疗期内，公司说“病假期间可以不发工资”没有法律依据。"
+   }
+  },
+  {
+   "id": "t156",
+   "case": "ja-part-time-leave",
+   "arm": "gv-grav-base",
+   "run": "r1",
+   "answer_sha256": "d4354a7b4474267c9af6672884fbbf921150d7442123d3e2cea2f9c412773059",
+   "warnings": [],
+   "grade": {
+    "id": "t156",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "vague",
+     "7": "correct",
+     "8": "correct"
+    },
+    "lkp": {
+     "3": "FLAT",
+     "5": "KEPT",
+     "6": "KEPT"
+    },
+    "lkp_quotes": {
+     "3": "4月1日開始なら10月1日に6ヶ月が経過していて、週3日勤務なら比例付与で5日。もう使える状態のはずです。",
+     "5": "6ヶ月以上続けて勤務し、その間の出勤が8割以上あれば発生します（労働基準法39条）",
+     "6": "有給の時季は労働者が指定できる決まりで、店側が変更できるのは本当に忙しくて回らないときだけです。"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "付与日や日数は就業規則にも書いてあるので、見られるようなら確認しておくと安心です。",
+      "reason": "The key says to check the 就業規則 but does not confirm that the grant date and number of days are written in it."
+     },
+     {
+      "quote": "書いてしまうと、あとから有給に戻すのが面倒になります。",
+      "reason": "The key does not say whether writing 欠勤扱い makes it harder to switch to paid leave later."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "送る前に、日にちと曜日を入れて、できれば今週中に。",
+      "reason": "Adds a 'this week' sending window that the key does not have. The key only says there is no legal advance-notice deadline and that 'early' is fine."
+     }
+    ],
+    "SR": [
+     {
+      "quote": "送る前に、日にちと曜日を入れて、できれば今週中に。",
+      "reason": "The actual rule is not stated beside it: the law sets no 'X days before' deadline for requesting leave, though a workplace's 就業規則 may set one."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "店長の「パートには有給はないよ」は、法律上は正しくありません。年次有給休暇は雇用形態に関係なく、6ヶ月以上続けて勤務し、その間の出勤が8割以上あれば発生します（労働基準法39条）。"
+   }
+  },
+  {
+   "id": "t157",
+   "case": "ja-wallpaper-restoration",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "1d92a24494176472b5a3837a4a8eb48383616b9133812b7fa2c0ea9f6c54a01c",
+   "warnings": [],
+   "grade": {
+    "id": "t157",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "missing",
+     "6": "vague",
+     "7": "vague"
+    },
+    "lkp": {
+     "3": "KEPT",
+     "4": "FLAT",
+     "5": "ABSENT"
+    },
+    "lkp_quotes": {
+     "3": "契約書の「原状回復」という文言は、通常損耗まで借主負担にする特約としては不十分です。通常損耗を借主負担とするには、その内容を具体的に説明し、借主が認識して合意したことが必要とされています（消費者契約法10条が問題になる場合もあります）。",
+     "4": "7年住んでいるなら残存価値はゼロ、つまり更新の必要があっても借主負担分は生じません。",
+     "5": ""
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "民法621条ただし書きにより、通常の使用に伴う損耗および経年変化は原状回復義務の対象外とされています。",
+      "reason": "The key cites 民法621条 but does not say the exclusion sits in its ただし書き; the key neither confirms nor contradicts this placement."
+     },
+     {
+      "quote": "金額を含む「精算書」「合意書」「債務確認書」には、内訳を見るまで署名しない",
+      "reason": "Named documents and the advice on which ones to sign are not in the key."
+     },
+     {
+      "quote": "期限内に回答がなければ、書面（内容証明）で催告し、少額訴訟や調停も視野に入ります。",
+      "reason": "内容証明 demand and 調停 are procedural steps the key does not address (it covers only 少額訴訟)."
+     },
+     {
+      "quote": "相談先：消費生活センター（188）、法テラス、宅建業者を所管する都道府県の担当窓口。",
+      "reason": "法テラス and the prefectural office in charge of licensed real-estate agents are not in the key (only 188 is)."
+     },
+     {
+      "quote": "賃貸の原状回復は相談実績が非常に多い分野です。",
+      "reason": "A factual claim about consultation volume that the key does not address."
+     }
+    ],
+    "S": [
+     {
+      "quote": "7年住んでいるなら残存価値はゼロ",
+      "reason": "The request and key treat the 7 years of residence as a fixed fact about the person, not a condition."
+     }
+    ],
+    "SP": [],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "no",
+     "3": "yes"
+    },
+    "PC_quote": "「サインしたから全額払う」は誤りです ... 契約書に「原状回復」と書いてあっても、それだけで12万円全額の負担が確定するわけではありません。"
+   }
+  },
+  {
+   "id": "t158",
+   "case": "zh-insurance-gap",
+   "arm": "gv-grav-c5",
+   "run": "r1",
+   "answer_sha256": "fa535a4f0d75fb81685931914c2e3895ec2a13328a8e5ee9f689df4eca60129b",
+   "warnings": [],
+   "grade": {
+    "id": "t158",
+    "key_points": {
+     "1": "correct",
+     "2": "vague",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "vague",
+     "7": "vague",
+     "8": "vague"
+    },
+    "lkp": {
+     "3": "FLAT",
+     "4": "FLAT",
+     "5": "KEPT",
+     "6": "FLAT"
+    },
+    "lkp_quotes": {
+     "3": "按现行规则，统筹待遇要从2027 年 1 月起才能享受，11—12 月发生的医疗费统筹基金不报。",
+     "4": "只要你退休前还能累计缴满 12 年，就不存在“来不及”。",
+     "5": "以灵活就业人员身份补缴的，补缴起始时间不能早于办理补缴手续的当年。你的缺口在 2026 年，现在还是 2026 年，所以理论上可以补；拖到 2027 年就补不了 2026 年的了",
+     "6": "我是否符合灵活就业补缴条件"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "如果窗口已经按 5122 元的新基数执行，则是 486.59 元/月，7 个月约 3406.13 元",
+      "reason": "The key gives only the 4986 base (473.67/month) for 2026 补缴; a 5122 base is neither confirmed nor contradicted (the arithmetic itself is right)."
+     },
+     {
+      "quote": "去之前打 12393 确认",
+      "reason": "Named hotline 12393 does not appear in the key."
+     },
+     {
+      "quote": "另外大病保险等几十元，按规定从个人账户扣缴",
+      "reason": "The key says these fees are deducted from the topped-up personal account but gives no amount; 'several tens of yuan' is unverified."
+     },
+     {
+      "quote": "可以在 11 月入职前以灵活就业身份把 10 月缴上，这样“恢复缴费月”算 10 月，12 月起可享受统筹待遇，多花约 474 元",
+      "reason": "The key does not address paying October to move the restoration month; whether paying after the fact shortens the waiting period is listed as unverified in the key."
+     },
+     {
+      "quote": "先在“浙里办—浙里医保”查一下",
+      "reason": "Named app/channel not mentioned in the key."
+     }
+    ],
+    "S": [
+     {
+      "quote": "如果窗口已经按 5122 元的新基数执行，则是 486.59 元/月",
+      "reason": "The key gives the 2026 补缴 base as a fixed 99722×60%÷12 = 4986元, i.e. 473.67元/月, with no condition."
+     }
+    ],
+    "SP": [
+     {
+      "quote": "尽量在 11 月新单位参保前办补缴，拖到 2027 年就补不了 2026 年的缺口了。",
+      "reason": "Adds a new target date (before the new employer's November enrollment) that is not in the key; the key's deadline is 2026-12-31."
+     }
+    ],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "先说结论：这 8 年不会白交，也不会因为断缴 7 个月清零。"
+   }
+  },
+  {
+   "id": "t159",
+   "case": "ja-medical-deduction",
+   "arm": "gv-plain",
+   "run": "r1",
+   "answer_sha256": "d931ee7c9e782a7b31313552db997c30917beaec47e05d77562dc4f8f5c99939",
+   "warnings": [],
+   "grade": {
+    "id": "t159",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "vague",
+     "5": "correct",
+     "6": "vague",
+     "7": "vague"
+    },
+    "lkp": {
+     "1": "KEPT",
+     "2": "FLAT",
+     "4": "FLAT",
+     "7": "FLAT"
+    },
+    "lkp_quotes": {
+     "1": "その年の総所得金額等が200万円未満の場合は、10万円ではなく「総所得金額等の5%」が基準になります",
+     "2": "確定申告の義務はありませんが、「医療費10万円以下だから控除ゼロ」は誤り。",
+     "4": "社会保険料控除があるので、所得税は0円。医療費控除で所得税は戻りません。",
+     "7": "2027年1〜3月に、e-Taxで確定申告（還付申告）または自治体の住民税申告。"
+    },
+    "AW": [],
+    "AU": [
+     {
+      "quote": "いわゆる「178万円の壁」の税制改正",
+      "reason": "Named reform label not in the key; the key only says 令和8年度税制改正."
+     },
+     {
+      "quote": "所得税の基礎控除が104万円（本則62万円＋特例42万円）",
+      "reason": "The 62万+42万 breakdown is not in the key, which gives only the 104万円 total."
+     },
+     {
+      "quote": "社会保険料控除 | 約20〜40万円（国民年金・国保など）",
+      "reason": "Assumed social insurance amount and insurance type; the key treats the amount as unknown and gives no figure."
+     },
+     {
+      "quote": "給与1か所・年末調整済み・給与収入2,000万円以下・他の所得なし",
+      "reason": "The 2,000万円 salary condition is not among the No.1900 conditions the key lists."
+     },
+     {
+      "quote": "国税庁の「医療費集計フォーム」や家計簿アプリで記録。",
+      "reason": "Named NTA tool not mentioned in the key."
+     },
+     {
+      "quote": "年末調整の源泉徴収票で、給与所得控除74万円・基礎控除104万円が反映されているか確認。",
+      "reason": "Procedural step not in the key; the key asks only for a check of the 源泉徴収税額 column."
+     },
+     {
+      "quote": "国民年金・国民健康保険の控除証明書を保管（社会保険料控除用）。",
+      "reason": "Procedural step that assumes national pension/NHI enrollment; the key does not mention it."
+     },
+     {
+      "quote": "治療目的の矯正・インプラントは対象。",
+      "reason": "The key does not address implants."
+     },
+     {
+      "quote": "令和8年度税制改正は2025年12月の閣議決定に基づくものです。",
+      "reason": "Date and status claim about the reform that the key neither confirms nor contradicts."
+     }
+    ],
+    "S": [],
+    "SP": [],
+    "SR": [
+     {
+      "quote": "2027年1〜3月に、e-Taxで確定申告（還付申告）または自治体の住民税申告。",
+      "reason": "Recommends the Jan-Mar filing period but does not state the actual rule beside it: refund filing for 2026 is open from 2027-01-01 for 5 years (until 2031-12-31)."
+     }
+    ],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes",
+     "2": "no"
+    },
+    "PC_quote": "医療費控除の基準は「10万円」だけではありません。その年の総所得金額等が200万円未満の場合は、10万円ではなく「総所得金額等の5%」が基準になります"
+   }
+  },
+  {
+   "id": "t160",
+   "case": "en-fsa-rollover",
+   "arm": "gv-grav-base",
+   "run": "r2",
+   "answer_sha256": "954caee8aa2c002a6157c4469506161adb528e7973209aa24091b922313a6722",
+   "warnings": [],
+   "grade": {
+    "id": "t160",
+    "key_points": {
+     "1": "correct",
+     "2": "correct",
+     "3": "correct",
+     "4": "correct",
+     "5": "correct",
+     "6": "vague",
+     "7": "correct",
+     "8": "missing"
+    },
+    "lkp": {
+     "2": "KEPT",
+     "3": "FLAT",
+     "4": "KEPT",
+     "5": "KEPT"
+    },
+    "lkp_quotes": {
+     "2": "So of your $1,900: at most $680 survives into 2027 on a carryover plan — $1,220+ evaporates on January 1.",
+     "3": "On a grace-period plan, all $1,900 stays usable, but only through March 15",
+     "4": "Neither: spend down by Dec 31 or lose all of it.",
+     "5": "What's the claims run-out deadline? (Usually ~90 days after Dec 31, for submitting 2026 receipts — not for new services. People confuse this with a grace period.)"
+    },
+    "AW": [
+     {
+      "quote": "confirm the office will charge before the 15th",
+      "reason": "Implies the billing/charge date decides coverage. The key says expenses count when care is provided, not when billed or paid."
+     },
+     {
+      "quote": "$1,220+ evaporates on January 1",
+      "reason": "The key says forfeiture is measured at the end of the run-out period, so 2026 claims filed during the run-out still count. Money does not disappear on January 1."
+     }
+    ],
+    "AU": [
+     {
+      "quote": "the unused balance on December 31 is forfeited to your employer",
+      "reason": "The key does not say who receives forfeited funds."
+     },
+     {
+      "quote": "An HSA has no deadline, is fully portable, and is yours forever.",
+      "reason": "The key only says the HSA truly rolls over. It does not address portability or ownership."
+     },
+     {
+      "quote": "Usually ~90 days after Dec 31",
+      "reason": "The key gives no typical run-out length. It only says to check the plan's run-out deadline."
+     },
+     {
+      "quote": "cleanest fix, uses 100% of the money",
+      "reason": "Assumes the dental work costs at least $1,900. Neither the request nor the key gives the cost."
+     },
+     {
+      "quote": "spending $1,500 on stuff you wouldn't otherwise buy to save $680 is a loss",
+      "reason": "Illustrative figures not in the key, and they do not match the key's carryover arithmetic, where spending $1,220 avoids a $1,220 forfeiture."
+     },
+     {
+      "quote": "no transfer to an HSA",
+      "reason": "The key does not address transferring FSA money to an HSA."
+     }
+    ],
+    "S": [],
+    "SP": [
+     {
+      "quote": "Grace period: book the dental work for the first week of March, and confirm the office will charge before the 15th.",
+      "reason": "Adds a new safe date (first week of March) that is not in the key."
+     }
+    ],
+    "SR": [],
+    "PC": "yes",
+    "PC_points": {
+     "1": "yes"
+    },
+    "PC_quote": "Health FSA money does not roll over like an HSA. FSAs are use-it-or-lose-it"
+   }
+  }
+ ]
+}

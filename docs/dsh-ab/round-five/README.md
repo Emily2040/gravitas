@@ -2,7 +2,37 @@
 
 [简体中文](./README.zh-CN.md) · **English**
 
-I wrote this page before any round-five DeepSeek run. It records what was fixed in advance and does not change afterwards. When the tuning and held-out results are in, I add all of them here, losses as plainly as wins.
+The Results section was written after tuning pass 1 (2026-10-26). Everything from Why this change down was written before any run and is unchanged.
+
+## Results: abandoned after tuning pass 1, no held-out runs spent
+
+Under the decision rule written before any run, change 5 was abandoned after tuning pass 1 (outcome 6: not moved, and overshoot triggers fired). None of the 72 held-out runs was spent. Round five used 12 of the 96 approved DeepSeek runs, all valid ([validity-tuning-1.json](validity-tuning-1.json)).
+
+Pass 1: 12 gv-grav-c5 runs on round four's 12 requests, graded blind by one Claude Opus grader in one batch together with round four's existing base and plain answers (two runs each) ([tuning-pass1-check.txt](tuning-pass1-check.txt), [decision-pass1.json](tuning-instrument/decision-pass1.json)). Per 12 answers:
+
+| Measure | Change 5 | Base (r1 / r2) | Plain (r1 / r2) |
+|---|---|---|---|
+| Limited key points flattened or wrong (F) | 19 | 24 / 15 | 15 / 19 |
+| Key points correct | 54 | 65 / 58 | 60 / 56 |
+| Key points vague | 27 | 21 / 22 | 25 / 25 |
+| Key points wrong | 4 | 3 / 3 | 0 / 3 |
+| Added claims the grader judged wrong | 8 | 9 / 9 | 8 / 13 |
+| Added claims the grader judged unverified | 61 | 63 / 76 | 69 / 57 |
+| Length (median, relative to plain) | 0.87 | | |
+| Runs whose reasoning quotes or applies the sentence | 0 | | |
+
+- "Moved" needed F at most the lower base run minus 1, that is 14; change 5 got 19, the same as base's mean of 19.5.
+- Fewer correct key points than base (54 against 61.5) and more vague ones (27 against 21.5).
+- None of the 12 runs' reasoning quotes or applies the sentence. As in round two, deepseek-flash appears to read past it.
+- Four overshoot triggers fired: blur (correct points did not improve with F), the third hedge list (0.484, above base's higher run of 0.447), spraying (S = 3) and safe picks (SP ≥ 2, SR ≥ 1). The last two use fixed thresholds that base's own answers also cross (base SP mean 5.5, SR 3.5), which is a flaw in how the rule was written; but the blur and hedge triggers are relative to base and each alone gives ABANDON, so the outcome does not rest on that flaw.
+
+Also, plainly:
+
+- Regrading the same 48 old answers in this batch changed 17 of 168 flattened-or-wrong judgements, and each group's F moved by up to 5. The measure's own noise is about as large as the effect it was meant to detect; the second tuning pass was there to halve it with 24 answers, but the abandon rule fired after pass 1.
+- The grading rubric was changed twice during calibration. The first calibration marked "kept the limit, added 'usually'" as flattened, against the rule's own definition. The second rubric counted a deferral with no limit ("ask your plan") as kept, which an independent review stopped. The third calibration passed, and a separate agent checked all 26 flattened-to-kept changes and found no violation ([calibration3-flip-audit.md](tuning-instrument/calibration3-flip-audit.md)).
+- The grader sometimes did not apply the worst-statement rule (the auditor noted about 5 marks); this affects every arm alike.
+
+Conclusion: one sentence in the rule did not change how deepseek-flash flattens limits when it writes. Rounds two, four and five all went this way: rule text is either read past or overshoots. The next step is either a plugin-level mechanism (the model does act on the plugin's steers, though round three's check deleted correct details) or to stop changing rule text in this direction.
 
 ## Why this change
 

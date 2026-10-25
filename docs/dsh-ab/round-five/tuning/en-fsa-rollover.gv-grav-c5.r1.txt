@@ -1,0 +1,26 @@
+**First, the correction that changes your plan: an FSA is not an HSA.** Health FSA money is use-it-or-lose-it by default. Your plan can soften that in one of two ways — a carryover capped at about **$680** for 2026 (indexed; your plan states the exact figure) or a grace period of up to 2½ months — **not both**, and plenty of plans offer neither. So leaving $1,900 alone risks forfeiting roughly **$1,220** of it, or all of it. ([IRS Pub. 969](https://www.irs.gov/publications/p969); [2026 limits](https://www.proskauer.com/blog/irs-releases-annual-increases-to-health-fsa-and-transportation-fringe-benefit-limits-for-2026))
+
+**This week: one call to HR or your benefits portal.** Ask four things:
+1. Does our plan have a carryover, a grace period, or neither?
+2. If carryover: what's the cap, and must I re-enroll for 2027 to keep it?
+3. What's the claims run-out deadline (how late in 2027 can I submit 2026 receipts)?
+4. If grace period: what's the last date an expense can be *incurred*?
+
+**The plan depends on the answer:**
+
+- **Carryover:** spend at least **$1,220** on eligible 2026 expenses before Dec 31. The remaining ~$680 carries into 2027 and can pay for March dental — but only that amount, not the full $1,900.
+- **Grace period:** the full $1,900 stays usable for expenses incurred through about **March 15, 2027**. Your March dental works only if the appointment falls on or before that date — "incurred" means date of service, not date paid.
+- **Neither:** spend all $1,900 by Dec 31.
+
+**How to spend it down before year-end:**
+- **Move dental work into December** if your dentist can fit it — get a pre-treatment estimate. Cleanings, fillings, crowns, root canals, implants, orthodontia (per your plan's rules). Also check your dental insurance's annual maximum; if benefits remain for 2026, December uses them before they reset.
+- **Vision:** exam, glasses, contacts, prescription sunglasses, LASIK.
+- **Prescriptions and OTC:** since 2020, OTC medicines and menstrual products qualify without a prescription; add first aid, bandages, thermometers, a blood-pressure monitor, sunscreen, condoms.
+- **Submit any 2026 receipts you haven't claimed yet.**
+- One upside: the full election is available from day one, so the whole $1,900 is spendable now even if payroll deductions are still running.
+
+**Don't prepay for March dental in December.** The expense must be incurred, not merely paid — prepayment for services not yet rendered generally isn't reimbursable (orthodontia is the usual exception, if your plan allows it).
+
+**Two traps:** leaving the job forfeits the balance — FSA money isn't portable like an HSA — and if you'll be HSA-eligible in 2027, a general-purpose FSA carryover blocks HSA contributions, so check before counting on both.
+
+Finally, if open enrollment is happening now: elect a **2027 FSA** sized to the March dental work. That's separate money, available from January 1, and it doesn't depend on what carries over.
