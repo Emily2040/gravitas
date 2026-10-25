@@ -1,0 +1,22 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "Round-five tuning grade (one answer)",
+ "description": "The object tuning-grader-prompt5.md asks for. make_tuning_grade_script.py specialises key_points, lkp, lkp_quotes and PC_points per case (exactly that case's ids, all required, no others); save_tuning_grades5.py validates every grade against the specialised schema and then checks that PC is yes exactly when the gated premise point (premise-points.json 'premise') is yes in PC_points (the 'reported' premise points are marked too but do not enter PC), and that an LKP is ABSENT exactly when its key point is missing.",
+ "type": "object",
+ "properties": {
+  "id": {"type": "string", "minLength": 1},
+  "key_points": {"type": "object", "additionalProperties": {"type": "string", "enum": ["correct", "vague", "missing", "wrong"]}},
+  "lkp": {"type": "object", "additionalProperties": {"type": "string", "enum": ["KEPT", "FLAT", "WRONG", "ABSENT"]}},
+  "lkp_quotes": {"type": "object", "additionalProperties": {"type": "string"}},
+  "AW": {"type": "array", "items": {"type": "object", "properties": {"quote": {"type": "string", "minLength": 1}, "reason": {"type": "string", "minLength": 1}}, "required": ["quote", "reason"], "additionalProperties": false}},
+  "AU": {"type": "array", "items": {"type": "object", "properties": {"quote": {"type": "string", "minLength": 1}, "reason": {"type": "string", "minLength": 1}}, "required": ["quote", "reason"], "additionalProperties": false}},
+  "S": {"type": "array", "items": {"type": "object", "properties": {"quote": {"type": "string", "minLength": 1}, "reason": {"type": "string", "minLength": 1}}, "required": ["quote", "reason"], "additionalProperties": false}},
+  "SP": {"type": "array", "items": {"type": "object", "properties": {"quote": {"type": "string", "minLength": 1}, "reason": {"type": "string", "minLength": 1}}, "required": ["quote", "reason"], "additionalProperties": false}},
+  "SR": {"type": "array", "items": {"type": "object", "properties": {"quote": {"type": "string", "minLength": 1}, "reason": {"type": "string", "minLength": 1}}, "required": ["quote", "reason"], "additionalProperties": false}},
+  "PC": {"type": "string", "enum": ["yes", "no"]},
+  "PC_points": {"type": "object", "additionalProperties": {"type": "string", "enum": ["yes", "no"]}},
+  "PC_quote": {"type": "string"}
+ },
+ "required": ["id", "key_points", "lkp", "lkp_quotes", "AW", "AU", "S", "SP", "SR", "PC", "PC_points", "PC_quote"],
+ "additionalProperties": false
+}

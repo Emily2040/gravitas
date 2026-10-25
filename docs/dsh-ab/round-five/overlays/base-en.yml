@@ -1,0 +1,6 @@
+# Round five, current best: rule only, check off, plugin in the request's language.
+- id: dsh-gravitas
+  config:
+    language: en
+    alwaysOnRule: true
+    claimCheck: false

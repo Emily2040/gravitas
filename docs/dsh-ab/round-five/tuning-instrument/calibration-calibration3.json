@@ -1,0 +1,391 @@
+{
+ "batch": "calibration3",
+ "pass": true,
+ "prompt_sha256": "5d52cfe13c1bbcae0a089a8090bb41438f85b2daaf452d9c87bf0b34245c522e",
+ "saved": "2026-10-26T08:48:33+11:00",
+ "rows": [
+  {
+   "item": "en-529-roth gv-grav-base r1 kp7",
+   "want": "FLAT or WRONG",
+   "got": "WRONG",
+   "ok": true
+  },
+  {
+   "item": "ja-medical-deduction gv-grav-base r1 kp7",
+   "want": "FLAT or WRONG",
+   "got": "WRONG",
+   "ok": true
+  },
+  {
+   "item": "ko-jeonse-protection gv-grav-base r2 kp5",
+   "want": "FLAT or WRONG",
+   "got": "WRONG",
+   "ok": true
+  },
+  {
+   "item": "en-529-roth gv-plain r1 kp7",
+   "want": "KEPT",
+   "got": "KEPT",
+   "ok": true
+  },
+  {
+   "item": "en-fsa-rollover gv-plain r1 kp3",
+   "want": "KEPT",
+   "got": "KEPT",
+   "ok": true
+  }
+ ],
+ "checks": [
+  {
+   "name": "all-judges-wrong items marked FLAT or WRONG (of 3)",
+   "value": 3,
+   "op": ">=",
+   "bound": 2,
+   "bound_expr": "",
+   "result": true
+  },
+  {
+   "name": "plain items marked KEPT (of 2)",
+   "value": 2,
+   "op": "==",
+   "bound": 2,
+   "bound_expr": "",
+   "result": true
+  },
+  {
+   "name": "base r1: answers correcting the premise in the opening (PC) >= 11 of 12",
+   "value": 12,
+   "op": ">=",
+   "bound": 11,
+   "bound_expr": "",
+   "result": true
+  },
+  {
+   "name": "base r2: answers correcting the premise in the opening (PC) >= 11 of 12",
+   "value": 12,
+   "op": ">=",
+   "bound": 11,
+   "bound_expr": "",
+   "result": true
+  },
+  {
+   "name": "plain r1: answers correcting the premise in the opening (PC) >= 11 of 12",
+   "value": 12,
+   "op": ">=",
+   "bound": 11,
+   "bound_expr": "",
+   "result": true
+  },
+  {
+   "name": "plain r2: answers correcting the premise in the opening (PC) >= 11 of 12",
+   "value": 12,
+   "op": ">=",
+   "bound": 11,
+   "bound_expr": "",
+   "result": true
+  }
+ ],
+ "issues": [],
+ "groups": {
+  "base": [
+   {
+    "F": 23,
+    "K": 18,
+    "C": 66,
+    "V": 20,
+    "M": 2,
+    "W": 3,
+    "AW": 9,
+    "AU": 61,
+    "S": 4,
+    "SP": 4,
+    "SR": 4,
+    "PC": 12,
+    "F_lang": {
+     "zh": 5,
+     "en": 7,
+     "ja": 4,
+     "ko": 7
+    },
+    "M_lang": {
+     "zh": 0,
+     "en": 1,
+     "ja": 0,
+     "ko": 1
+    },
+    "PC_all": 10,
+    "per_case_F": {
+     "en-529-roth": 4,
+     "en-fsa-rollover": 2,
+     "en-medicare-part-b": 1,
+     "ja-medical-deduction": 1,
+     "ja-part-time-leave": 1,
+     "ja-wallpaper-restoration": 2,
+     "ko-jeonse-protection": 1,
+     "ko-severance-pay": 3,
+     "ko-unemployment-quit": 3,
+     "zh-flex-hours": 1,
+     "zh-insurance-gap": 3,
+     "zh-sick-pay": 1
+    },
+    "H1": {
+     "value": 0.5468069158002561,
+     "exact": "350640106230849748925/641250313591380364872"
+    },
+    "H2": {
+     "value": 0.5508667140345521,
+     "exact": "285835892970705200/518883943589985519"
+    },
+    "H3": {
+     "value": 0.44657447514605203,
+     "exact": "13353325075/29901675573"
+    },
+    "CD": {
+     "value": 4.822785513614213,
+     "exact": "319727237254911828788440164725/66295139261813672557184240337"
+    },
+    "BL": 29,
+    "WF": 126,
+    "UX": 0,
+    "vis": {
+     "en-529-roth": 3991,
+     "en-fsa-rollover": 2735,
+     "en-medicare-part-b": 4602,
+     "ja-medical-deduction": 1590,
+     "ja-part-time-leave": 747,
+     "ja-wallpaper-restoration": 1619,
+     "ko-jeonse-protection": 1409,
+     "ko-severance-pay": 2556,
+     "ko-unemployment-quit": 1201,
+     "zh-flex-hours": 3029,
+     "zh-insurance-gap": 2288,
+     "zh-sick-pay": 2260
+    }
+   },
+   {
+    "F": 16,
+    "K": 22,
+    "C": 60,
+    "V": 20,
+    "M": 8,
+    "W": 3,
+    "AW": 5,
+    "AU": 73,
+    "S": 4,
+    "SP": 7,
+    "SR": 3,
+    "PC": 12,
+    "F_lang": {
+     "zh": 5,
+     "en": 4,
+     "ja": 3,
+     "ko": 4
+    },
+    "M_lang": {
+     "zh": 0,
+     "en": 3,
+     "ja": 1,
+     "ko": 4
+    },
+    "PC_all": 10,
+    "per_case_F": {
+     "en-529-roth": 1,
+     "en-fsa-rollover": 1,
+     "en-medicare-part-b": 2,
+     "ja-medical-deduction": 2,
+     "ja-part-time-leave": 0,
+     "ja-wallpaper-restoration": 1,
+     "ko-jeonse-protection": 1,
+     "ko-severance-pay": 2,
+     "ko-unemployment-quit": 1,
+     "zh-flex-hours": 2,
+     "zh-insurance-gap": 0,
+     "zh-sick-pay": 3
+    },
+    "H1": {
+     "value": 0.5883639058428207,
+     "exact": "49917120786240895/84840555803190408"
+    },
+    "H2": {
+     "value": 0.24985967900617048,
+     "exact": "3004498625/12024743796"
+    },
+    "H3": {
+     "value": 0.3849400094182078,
+     "exact": "362125/940731"
+    },
+    "CD": {
+     "value": 4.699529886399933,
+     "exact": "242676953110999861361289829871065/51638559382990142474578704361116"
+    },
+    "BL": 23,
+    "WF": 110,
+    "UX": 0,
+    "vis": {
+     "en-529-roth": 5679,
+     "en-fsa-rollover": 2418,
+     "en-medicare-part-b": 4855,
+     "ja-medical-deduction": 1296,
+     "ja-part-time-leave": 1238,
+     "ja-wallpaper-restoration": 2018,
+     "ko-jeonse-protection": 925,
+     "ko-severance-pay": 2138,
+     "ko-unemployment-quit": 1244,
+     "zh-flex-hours": 2767,
+     "zh-insurance-gap": 1508,
+     "zh-sick-pay": 2094
+    }
+   }
+  ],
+  "plain": [
+   {
+    "F": 15,
+    "K": 24,
+    "C": 60,
+    "V": 24,
+    "M": 6,
+    "W": 1,
+    "AW": 9,
+    "AU": 68,
+    "S": 3,
+    "SP": 3,
+    "SR": 1,
+    "PC": 12,
+    "F_lang": {
+     "zh": 5,
+     "en": 0,
+     "ja": 4,
+     "ko": 6
+    },
+    "M_lang": {
+     "zh": 0,
+     "en": 2,
+     "ja": 1,
+     "ko": 3
+    },
+    "PC_all": 8,
+    "per_case_F": {
+     "en-529-roth": 0,
+     "en-fsa-rollover": 0,
+     "en-medicare-part-b": 0,
+     "ja-medical-deduction": 3,
+     "ja-part-time-leave": 0,
+     "ja-wallpaper-restoration": 1,
+     "ko-jeonse-protection": 1,
+     "ko-severance-pay": 3,
+     "ko-unemployment-quit": 2,
+     "zh-flex-hours": 2,
+     "zh-insurance-gap": 1,
+     "zh-sick-pay": 2
+    },
+    "H1": {
+     "value": 0.5301856132672652,
+     "exact": "68608957479384478105/129405543572905060032"
+    },
+    "H2": {
+     "value": 0.49983071956789726,
+     "exact": "67977731098547885/136001506984833798"
+    },
+    "H3": {
+     "value": 0.197588978796223,
+     "exact": "21338455/107994156"
+    },
+    "CD": {
+     "value": 4.1695207420093485,
+     "exact": "1685900187308435541067737135365/404339081545371387099056174946"
+    },
+    "BL": 21,
+    "WF": 82,
+    "UX": 0,
+    "vis": {
+     "en-529-roth": 5763,
+     "en-fsa-rollover": 2953,
+     "en-medicare-part-b": 4684,
+     "ja-medical-deduction": 1464,
+     "ja-part-time-leave": 1100,
+     "ja-wallpaper-restoration": 1891,
+     "ko-jeonse-protection": 675,
+     "ko-severance-pay": 2281,
+     "ko-unemployment-quit": 835,
+     "zh-flex-hours": 2491,
+     "zh-insurance-gap": 2691,
+     "zh-sick-pay": 2292
+    }
+   },
+   {
+    "F": 14,
+    "K": 24,
+    "C": 54,
+    "V": 27,
+    "M": 7,
+    "W": 3,
+    "AW": 12,
+    "AU": 61,
+    "S": 2,
+    "SP": 5,
+    "SR": 8,
+    "PC": 12,
+    "F_lang": {
+     "zh": 5,
+     "en": 3,
+     "ja": 4,
+     "ko": 2
+    },
+    "M_lang": {
+     "zh": 0,
+     "en": 2,
+     "ja": 1,
+     "ko": 4
+    },
+    "PC_all": 9,
+    "per_case_F": {
+     "en-529-roth": 1,
+     "en-fsa-rollover": 2,
+     "en-medicare-part-b": 0,
+     "ja-medical-deduction": 3,
+     "ja-part-time-leave": 1,
+     "ja-wallpaper-restoration": 0,
+     "ko-jeonse-protection": 0,
+     "ko-severance-pay": 1,
+     "ko-unemployment-quit": 1,
+     "zh-flex-hours": 1,
+     "zh-insurance-gap": 2,
+     "zh-sick-pay": 2
+    },
+    "H1": {
+     "value": 0.4654877467328979,
+     "exact": "16052268737944554575/34484836283253502938"
+    },
+    "H2": {
+     "value": 0.395640932332079,
+     "exact": "1101272593548925/2783515312881171"
+    },
+    "H3": {
+     "value": 0.3961124386337661,
+     "exact": "238345744998955127370175/601712346678723207782946"
+    },
+    "CD": {
+     "value": 3.8248862298732944,
+     "exact": "272769543969869306212974694975/71314420240652557145917551966"
+    },
+    "BL": 29,
+    "WF": 93,
+    "UX": 0,
+    "vis": {
+     "en-529-roth": 8662,
+     "en-fsa-rollover": 2998,
+     "en-medicare-part-b": 3238,
+     "ja-medical-deduction": 2003,
+     "ja-part-time-leave": 1081,
+     "ja-wallpaper-restoration": 1562,
+     "ko-jeonse-protection": 1065,
+     "ko-severance-pay": 2765,
+     "ko-unemployment-quit": 1101,
+     "zh-flex-hours": 4284,
+     "zh-insurance-gap": 1694,
+     "zh-sick-pay": 1251
+    }
+   }
+  ]
+ }
+}

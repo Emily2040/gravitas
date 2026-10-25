@@ -1,0 +1,22 @@
+{
+ "zh": {
+  "base": "47f1b94eba63f8e7750bf9d6b7c3673705358eab798970d2df4b9c1e0d80fb35",
+  "c5": "c6027725a02f3d429c425ab3b9c787a0c434ec3232d24e455d938c6e57c6eaa8",
+  "c5Sentence": "“直接说”不等于说得比查到的更绝对。数字、日期、期限或规定，只要为这次回复打开的"
+ },
+ "en": {
+  "base": "61e4f1bf51e289287389cb3cfd97362bf8d4a41b152ecd97a230e68cc16546f8",
+  "c5": "5a68fe84f1dc6adf8155948eedcb44e27be07387f42dbe8a6973556c291ab837",
+  "c5Sentence": "Plainly never means more absolute than w"
+ },
+ "ja": {
+  "base": "8206dddab5402b51971aa9ad70af189fe23ebfea28abe311db90a25d71446af9",
+  "c5": "f758024838ac868c98c60fb36658d969d1fd38856680e3981a5bcfcacfdf7d15",
+  "c5Sentence": "言い切るとは、見つけた以上に断定することではありません。数値、日付、期限、規則に"
+ },
+ "ko": {
+  "base": "8f4e720b64e665216aeb7a1dc5a3da0e141ec720fc1acd480d7e6a817b69abbd",
+  "c5": "344277c244dfa0b15b1b4db285cb36008b24406365b2da8160197bb30cb986fa",
+  "c5Sentence": "얼버무리지 않고 말한다는 것이 찾아낸 것보다 더 단정한다는 뜻은 아닙니다"
+ }
+}

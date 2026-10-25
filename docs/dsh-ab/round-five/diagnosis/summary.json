@@ -1,0 +1,126 @@
+{
+ "wrong_added_claims_by_case": {
+  "en-529-roth": {
+   "gv-grav-base": 20,
+   "gv-plain": 12
+  },
+  "en-fsa-rollover": {
+   "gv-grav-base": 19,
+   "gv-plain": 1
+  },
+  "en-medicare-part-b": {
+   "gv-grav-base": 7,
+   "gv-plain": 13
+  },
+  "ja-medical-deduction": {
+   "gv-grav-base": 5,
+   "gv-plain": 2
+  },
+  "ja-part-time-leave": {
+   "gv-grav-base": 3,
+   "gv-plain": 1
+  },
+  "ja-wallpaper-restoration": {
+   "gv-grav-base": 9,
+   "gv-plain": 7
+  },
+  "ko-jeonse-protection": {
+   "gv-grav-base": 3,
+   "gv-plain": 0
+  },
+  "ko-severance-pay": {
+   "gv-grav-base": 5,
+   "gv-plain": 15
+  },
+  "ko-unemployment-quit": {
+   "gv-grav-base": 8,
+   "gv-plain": 9
+  },
+  "zh-flex-hours": {
+   "gv-grav-base": 6,
+   "gv-plain": 5
+  },
+  "zh-insurance-gap": {
+   "gv-grav-base": 6,
+   "gv-plain": 5
+  },
+  "zh-sick-pay": {
+   "gv-grav-base": 9,
+   "gv-plain": 8
+  }
+ },
+ "wrong_added_claims_total": {
+  "gv-grav-base": 100,
+  "gv-plain": 78
+ },
+ "unverified_by_both": {
+  "gv-grav-base": 112,
+  "gv-plain": 113
+ },
+ "key_point_marks": {
+  "gv-grav-base correct": 338,
+  "gv-grav-base missing": 32,
+  "gv-grav-base vague": 142,
+  "gv-grav-base wrong": 34,
+  "gv-plain correct": 328,
+  "gv-plain missing": 44,
+  "gv-plain vague": 156,
+  "gv-plain wrong": 18
+ },
+ "wrong_key_points_by_case": {
+  "en-529-roth": {
+   "gv-grav-base": 10,
+   "gv-plain": 7
+  },
+  "en-fsa-rollover": {
+   "gv-grav-base": 5,
+   "gv-plain": 0
+  },
+  "en-medicare-part-b": {
+   "gv-grav-base": 2,
+   "gv-plain": 1
+  },
+  "ja-medical-deduction": {
+   "gv-grav-base": 4,
+   "gv-plain": 2
+  },
+  "ja-part-time-leave": {
+   "gv-grav-base": 0,
+   "gv-plain": 1
+  },
+  "ja-wallpaper-restoration": {
+   "gv-grav-base": 3,
+   "gv-plain": 1
+  },
+  "ko-jeonse-protection": {
+   "gv-grav-base": 3,
+   "gv-plain": 0
+  },
+  "ko-severance-pay": {
+   "gv-grav-base": 0,
+   "gv-plain": 0
+  },
+  "ko-unemployment-quit": {
+   "gv-grav-base": 3,
+   "gv-plain": 2
+  },
+  "zh-flex-hours": {
+   "gv-grav-base": 0,
+   "gv-plain": 2
+  },
+  "zh-insurance-gap": {
+   "gv-grav-base": 2,
+   "gv-plain": 1
+  },
+  "zh-sick-pay": {
+   "gv-grav-base": 2,
+   "gv-plain": 1
+  }
+ },
+ "hedge_markers": {
+  "gv-grav-base first": 41,
+  "gv-grav-base third": 13,
+  "gv-plain first": 39,
+  "gv-plain third": 12
+ }
+}
