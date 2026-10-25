@@ -23,6 +23,10 @@ LANGS = {
     "ko": {"name": "Korean as written in South Korea", "where": "South Korea (its institutions, apps, prices in won, customs, school and work life)"},
 }
 
+# What "short" means per language; filter_questions.bucket() measures the same limits.
+SHORT = {"zh": "at most 25 Chinese characters", "en": "at most 12 words", "ja": "at most 30 characters",
+         "ko": "at most 25 Korean characters, not counting spaces"}
+
 # Drafts per (trait, mode) and language; about 1.7x what the final set keeps, for filtering.
 DRAFTS = {"zh": 12, "en": 7, "ja": 6, "ko": 6}
 
@@ -88,7 +92,8 @@ def prompt_for(lang, trait, mode, n, seeds, rng):
         f"2. One user message each, 1 to 3 sentences, self-contained, answerable in text with no attachment, file, account or link.\n"
         f"3. {aim}\n"
         f"4. Each question on a different topic, drawn from: {topics}. Vary tone, formality and the asker's situation.\n"
-        f"   Vary the length: about a third short (one brief sentence, like 'Why did Rome fall?'), a third of medium length, and a third longer, giving the asker's situation.\n"
+        f"   Vary the length. Make exactly {max(1, n // 3)} of them short: {SHORT[lang]}, like 'Why did Rome fall?'. "
+        f"Make about a third longer, giving the asker's situation, and the rest in between.\n"
         f"   Avoid the stock examples every question list reuses (why the sky is blue, how to boil an egg, and the like).\n"
         f"5. Avoid questions that need today's news, live prices or a specific product released this year.\n"
         f"6. Nothing dangerous, sexual or hateful. Everyday health, legal and money questions are fine.\n\n"
