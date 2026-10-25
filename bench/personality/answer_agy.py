@@ -67,9 +67,21 @@ def builds_hit_quota(window_s=900):
                     tail = f.read().decode("utf-8", "replace")
             except OSError:
                 continue
-            if any(k in tail for k in ("429", "RESOURCE_EXHAUSTED", "quota exceeded", "Quota exceeded")):
-                return True
+            for line in tail.splitlines():
+                if quota_error_line(line, is_err_file=p.endswith("_err.txt")):
+                    return True
     return False
+
+
+def quota_error_line(line, is_err_file=False):
+    """A quota or 429 error, not a 401 (agy's hourly token refresh) and not a number such as a
+    token count of 4291: the line must be an error line (AGY_ERROR, an "error" JSON key, or any
+    line of an _err.txt file) and name 429 as a whole number, RESOURCE_EXHAUSTED or quota."""
+    if not (is_err_file or "AGY_ERROR" in line or '"error' in line.lower()):
+        return False
+    if "UNAUTHENTICATED" in line or re.search(r"\b401\b", line):
+        return False
+    return bool(re.search(r"(?<![\d.])429(?![\d.])", line) or "RESOURCE_EXHAUSTED" in line or re.search(r"quota", line, re.I))
 
 
 def wait_for_builds():
