@@ -1846,6 +1846,15 @@ def measure_rule_leak(o, name, Q):
 
 # ------------------------------------------------------------------------------------ spend and hours
 
+def d5_total(records_now, records_at_stage2, balance_before, balance_after):
+    """Total DeepSeek spend for D5: the larger of the usage records (since the pilots) and the records
+    at stage 2 plus the account balance drop since stage 2. The two spans must match, so a deleted
+    usage file after stage 2 cannot hide spend. None if any input is missing."""
+    if not all(finite(x) for x in (records_now, records_at_stage2, balance_before, balance_after)):
+        return None
+    return max(records_now, records_at_stage2 + (balance_before - balance_after))
+
+
 def measure_spend(o, ledger, F=None):
     usd = 0.0
     found = False
@@ -1883,10 +1892,10 @@ def measure_spend(o, ledger, F=None):
             after = json.loads(BALANCE_AFTER.read_text(encoding="utf-8")).get("usd")
         except ValueError:
             after = None
-    drop = (before - after) if finite(before) and finite(after) else None
+    total = d5_total(usd if found else None, (F or {}).get("deepseek_records_usd_at_stage2"), before, after)
     o.note("D5.records_usd", usd if found else None)
-    o.note("D5.balance_drop_usd", drop)
-    o.put("D5.deepseek_usd", max(usd, drop) if found and drop is not None else None)
+    o.note("D5.balance_drop_usd", (before - after) if finite(before) and finite(after) else None)
+    o.put("D5.deepseek_usd", total)
     peak = 0
     n = 0
     for r in ledger:
@@ -2235,6 +2244,9 @@ def self_test():
     tr = {"T1": [("s2", "s2")] * 8 + [("s2", "s1"), ("s1", "s2")], "T2": [("s1", "s1")] * 8 + [("s1", "s2"), ("s2", "s1")]}
     assert kappa_strat(tr) < kappa([x for v in tr.values() for x in v])
     assert direction([("s1", "s1")] * 29, 30) is None and direction([("s1", "s1")] * 30, 30) == 1.0
+    # D5: records since the pilots against records at stage 2 plus the balance drop since.
+    assert d5_total(45.0, 30.0, 80.0, 55.0) == 55.0 and d5_total(45.0, 30.0, 80.0, 70.0) == 45.0
+    assert d5_total(45.0, None, 80.0, 70.0) is None and d5_total(None, 30.0, 80.0, 70.0) is None
     # Separator lines: the list kept without its markers.
     assert format_shape("费用——每晚约五百日元。\n交通——地铁十分钟。\n这是一句普通的话。")["sep_lines"] == 2
     print("measure_all self-test: ok")

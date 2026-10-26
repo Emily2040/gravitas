@@ -2,13 +2,14 @@
 
 Owner: the verifier owner (builds nothing in this benchmark). Gates: `GATES.md`. This file records the freeze and says how it is checked. `verify.py` reads the current freeze commit from the line below; D4 fails as "metric missing" until it is filled in.
 
-Stage-1 freeze commit: `cc42b583d8b8a694944733c1aa6694384c99bd9f`
+Stage-1 freeze commit: recorded in the next commit of this file
 
 ## History
 
 - **Stage 1, 2026-10-25:** commit `ec91a8d5e5e3b831693ea470302f09d888fe5671` (recorded in 66b5ed7), after the builder's three fixes in 25d1f9a. Superseded by stage 1b; nothing on held-out had run.
 - **Stage 1b, 2026-10-25:** commit `35518d190e30f5682bacc2008be2a34744d68f4d` (recorded in 09f0653), a re-freeze before any held-out run, after the second cheapest-pass review (`bench/reviews/CHEAPEST_PASS_2.md`, 6ec2d96) and Emily's approval of lingua-py. Decisions on every review item are in GATES.md. Superseded by stage 1c; nothing on held-out had run.
-- **Stage 1c, 2026-10-26 (this freeze):** commit `cc42b583d8b8a694944733c1aa6694384c99bd9f`, the D3 amendment, written before the stage-2 freeze and before any held-out result, on the coordinator's instruction. Text and reasons in GATES.md, "D3 amendment".
+- **Stage 1c, 2026-10-26:** commit `cc42b583d8b8a694944733c1aa6694384c99bd9f`, the D3 amendment, written before the stage-2 freeze and before any held-out result, on the coordinator's instruction. Text and reasons in GATES.md, "D3 amendment". Superseded by stage 1d; nothing on held-out had run.
+- **Stage 1d, 2026-10-26 (this freeze):** D5 compared the usage records since the pilots with the balance drop since stage 2, two different spans, so records deleted after stage 2 could hide spend. D5 now takes the larger of the records since the pilots and the records at stage 2 (`deepseek_records_usd_at_stage2`, measured by the verifier's own instrument when the data are frozen) plus the balance drop. Found while writing the stage-2 record, before it was committed. The commit is named at the top.
 
 ## What changed in stage 1c (the D3 amendment)
 
@@ -47,7 +48,7 @@ Stage-1 freeze commit: `cc42b583d8b8a694944733c1aa6694384c99bd9f`
 
 - On the real data, P1 passes for ql and native; every other gate fails as missing until stage 2, as it should.
 
-## Frozen files and their sha256 at the freeze commit (stage 1c)
+## Frozen files and their sha256 at the freeze commit (stage 1c, replaced by stage 1d's when recorded)
 
 Computed from the commit's own blobs (`git show <commit>:<path>`); line endings as stored. VERIFIER_FREEZE.md is the one file left out.
 
@@ -149,7 +150,7 @@ D4 requires `git diff <freeze commit> -- bench/personality bench/env/requirement
 **What I do:**
 
 1. Check every sample against the recipe and stop if any is short or differs.
-2. Write `bench/freeze/FREEZE_DATA.json` (outside the frozen folder) with: `set`; `files` = sha256 of the question files, `report.json`, the rating batch, every `samples/*` file, `labels/native_controls.jsonl`, the controls batch, `overlays/lean.yml`, `rules/base/*.md`; `external_files` = sha256 of `W:\AgentData\dsh_home\profiles\gv-plain\` and `gv-grav\` `cordis.patch.yml`, `cordis.yml`, `package.json`, `pnpm-workspace.yaml` and `pnpm-lock.yaml` where present, and of lingua's `RECORD` in the venv; `ledger_prefix` = the line count of `ledger.jsonl` and the sha256 of those lines (the ledger's first N lines joined by newlines, as `measure_all.measure_data_freeze` reads them); `agy_config` = a tree hash of each home's `.gemini/config`; `grav_link_head`; `rules_base`; `pre_existing_judging` = the pilot judging folders (exempt from D3's tuning check); `judging_at_stage2` = every judging folder that exists then (S0 scans them all for held-out questions); `deepseek_balance_before_usd`.
+2. Write `bench/freeze/FREEZE_DATA.json` (outside the frozen folder) with: `set`; `files` = sha256 of the question files, `report.json`, the rating batch, every `samples/*` file, `labels/native_controls.jsonl`, the controls batch, `overlays/lean.yml`, `rules/base/*.md`; `external_files` = sha256 of `W:\AgentData\dsh_home\profiles\gv-plain\` and `gv-grav\` `cordis.patch.yml`, `cordis.yml`, `package.json`, `pnpm-workspace.yaml` and `pnpm-lock.yaml` where present, and of lingua's `RECORD` in the venv; `ledger_prefix` = the line count of `ledger.jsonl` and the sha256 of those lines (the ledger's first N lines joined by newlines, as `measure_all.measure_data_freeze` reads them); `agy_config` = a tree hash of each home's `.gemini/config`; `grav_link_head`; `rules_base`; `pre_existing_judging` = the pilot judging folders (exempt from D3's tuning check); `judging_at_stage2` = every judging folder that exists then (S0 scans them all for held-out questions); `deepseek_balance_before_usd`; `deepseek_records_usd_at_stage2` (the verifier's own spend measure at that moment).
 3. Commit that file alone. Its commit time is the stage-2 time that S0 and D6 use.
 
 ## What the builder must do before and during the first real run
