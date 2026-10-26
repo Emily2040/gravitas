@@ -57,9 +57,14 @@ MIN_PROSE_CHARS = 20
 SLICE_MIN = {"C7": {"deepseek": 200, "gemini": 60}, "N1": {"deepseek": 60, "gemini": 25}, "N7": {"deepseek": 25, "gemini": 8}}
 CLAUDE_MIN_PER_TRAIT = 30
 B5_MIN_TWO_SIDED = 30
+# Per trait: 40 hoc questions x 2 set pairs when no candidate is confirmed (80), x 4 when one is (160).
+B5T_MIN_SHARED = 80
 CLAUDE_PROJECTS = Path(os.environ.get("GP_CLAUDE_PROJECTS", "C:/Users/emily/.claude/projects"))
 BALANCE_AFTER = REPO / "bench" / "freeze" / "BALANCE_AFTER.json"
 ELO_PER_SHARE = SCALE / 0.25  # about 695 Elo per unit of favourable share at even odds
+# D3 amendment (2026-10-26): the decision rules the verifier can recompute, by the sha256 of the
+# candidate's DECISION.md. A candidate whose rule is not here fails D3a (decision not recomputed).
+DECISION_RULES = {"bottomline": "218c0c10da7e2e9876b9721b794566887af1ca0e95c867de0fb272b736c72168"}
 B5_MIN_SHARED = 100
 
 # WIN_CRITERIA's instruments, never metrics.py's: the round-one hedge list, the extended list and the
@@ -593,6 +598,8 @@ def compute(boot=1000):
     # Candidate (N14) before anything that needs the candidate's arm names.
     cand_name = measure_one_look(o, ledger, set(sample_ids["heldout"]), Q, sample_ids, F)
     step(o, measure_s0, o, ledger, set(sample_ids["heldout"]), F)
+    designed = step(o, measure_candidate_amendment, o, ledger, Q, cand_name) or (None, None)
+    base_only = designed[1] == 0 and o.m.get("D3a.heldout_consistent") == 1
     cand_arms = {"deepseek": f"ds-grav:{cand_name}", "gemini": f"gm-grav:{cand_name}"} if cand_name else {}
 
     # Which arm answers which questions.
@@ -619,14 +626,14 @@ def compute(boot=1000):
     step(o, measure_rules, o, A, lists, cand_name, cand_arms, F, qrows, ledger)
 
     # Judging.
-    V, jobs_by_set = step(o, measure_judging, o, Sx, cand_arms, A, ledger) or ([], {})
+    V, jobs_by_set = step(o, measure_judging, o, Sx, cand_arms, A, ledger, base_only) or ([], {})
     labels = step(o, load_labels, o, ledger, sample_ids, qrows, A, cand_arms) or {}
     step(o, measure_judges, o, V, jobs_by_set, A)
     routing = step(o, route, o, V) or {}
     step(o, measure_results, o, V, A, sample_ids, cand_arms, routing, labels, boot)
     step(o, measure_text, o, A, sample_ids, cand_arms, qrows, labels.get("slices"))
     step(o, measure_label_gates, o, labels, sample_ids, cand_arms, A, V)
-    step(o, measure_rule_leak, o, cand_name, Q)
+    step(o, measure_rule_leak, o, designed[0] or cand_name, Q)
     step(o, measure_spend, o, ledger, F)
     step(o, measure_provenance, o, ledger, cand_name, jobs_by_set)
     step(o, measure_order, o, ledger, set(sample_ids["heldout"]), jobs_by_set)
@@ -718,6 +725,148 @@ def measure_one_look(o, ledger, heldout_ids, Q, sample_ids, F):
     return name
 
 
+def tuning_verdicts(set_name):
+    """(jobs, verdict rows for bt, unparsed or mismatched count, rows) for one DeepSeek tuning set,
+    each verdict re-parsed from its raw reply."""
+    d = DATA / "judging" / set_name
+    jobs = {j["job"]: j for j in jl(d / "jobs.jsonl") or [] if "job" in j}
+    rows = jl(d / "deepseek.jsonl") or []
+    out, bad = [], 0
+    for r in rows:
+        j = jobs.get(r.get("job"))
+        v = judge.parse_verdict(r.get("raw"))
+        if j is None or v is None or v != r.get("verdict"):
+            bad += 1
+            continue
+        out.append({"qid": j["qid"], "trait": j["trait"], "left": j["left"], "right": j["right"],
+                    "winner": {"A": j["left"], "B": j["right"], "TIE": None}[v]})
+    return jobs, out, bad, len(rows)
+
+
+def decide_bottomline(base_v, cand_v, name):
+    """DECISION.md of `bottomline` (sha 218c0c10...): fit base and candidate verdicts together with
+    the frozen bt.py anchored on ds-grav; CONFIRM only if Bottom-Line Summary's candidate-minus-base
+    lower bound is above 0 and no other judged trait has its whole interval on the bad side of 0
+    (up for Slop and Sycophantic, down for the rest)."""
+    r = bt.ratings(base_v + cand_v, "ds-grav", boot=1000)
+    res = {}
+    for t in TRAITS8:
+        if t not in r or f"ds-grav:{name}" not in r[t]["systems"]:
+            return None, res
+        res[t] = bt.diff(r, t, f"ds-grav:{name}", "ds-grav")
+    ok = res["Bottom-Line Summary"]["lo"] > 0
+    for t in TRAITS8:
+        if t == "Bottom-Line Summary":
+            continue
+        worse = res[t]["lo"] > 0 if t in DOWN else res[t]["hi"] < 0
+        ok = ok and not worse
+    return ok, res
+
+
+DECIDERS = {"bottomline": decide_bottomline}
+
+
+def measure_candidate_amendment(o, ledger, Q, heldout_cand):
+    """D3a and D3r (amendment of 2026-10-26). Exactly one candidate was designed (its rule folder,
+    answers, launches and judging jobs name one candidate, in any split), frozen before its first run,
+    and tuned under a decision rule recorded in the ledger; the verifier recomputes that rule from the
+    candidate's DeepSeek tuning verdicts; the held-out outcome is the one the rule gives: confirmed and
+    run under the original D3, or not confirmed and never touching held-out. Returns (name, confirm)."""
+    tuning_ids = {r["id"] for r in Q["tuning"]}
+    names = {d.name for d in (DATA / "rules").glob("*") if d.is_dir() and d.name != "base"}
+    for d in (DATA / "answers").glob("*"):
+        m = re.match(r"^(?:ds-grav|gm-grav|raw-rule)_(.+)$", d.name)
+        if m:
+            names.add(m.group(1))
+    for r in ledger:
+        arm = str(r.get("arm") or "")
+        if r.get("kind") == "answer-launch" and ":" in arm:
+            names.add(arm.split(":", 1)[1])
+    dirs = [d for d in (DATA / "judging").glob("*") if d.is_dir()]
+    jobs_of = {d.name: [j for j in jl(d / "jobs.jsonl") or [] if "job" in j] for d in dirs}
+    for js in jobs_of.values():
+        for j in js:
+            for s_ in (j.get("left"), j.get("right")):
+                if s_ and ":" in s_:
+                    names.add(s_.split(":", 1)[1])
+    o.put("D3a.candidates_designed", len(names))
+    o.note("D3a.candidates_designed", sorted(names))
+    if len(names) != 1:
+        return None, None
+    name = next(iter(names))
+    rd = DATA / "rules" / name
+    try:
+        frozen = json.loads((rd / "FROZEN").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        frozen = {}
+    rules = frozen.get("rules") or {}
+    rules_ok = bool(rules) and all(rules.get(f"{g}.md") == sha_file(rd / f"{g}.md") for g in GLANG.values())
+    fl = [r for r in ledger if r.get("kind") == "rule-freeze" and r.get("name") == name]
+    dl = [r for r in ledger if r.get("kind") == "rule-decision-rule" and r.get("name") == name]
+    dec_sha = sha_file(rd / "DECISION.md")
+    o.put("D3a.artefacts_ok", rules_ok and len(fl) == 1 and fl[0].get("rules") == rules and len(dl) == 1 and dl[0].get("sha256") == dec_sha
+          and dec_sha is not None)
+    t_freeze = parse_time(fl[0].get("time")) if len(fl) == 1 else None
+    t_rule = parse_time(dl[0].get("time")) if len(dl) == 1 else None
+    starts = [r["start"] for r in ledger if r.get("kind") == "answer-launch" and str(r.get("arm", "")).endswith(":" + name) and finite(r.get("start"))]
+    o.put("D3a.frozen_before_runs", (t_freeze < min(starts)) if t_freeze and starts else None)
+    # The candidate's DeepSeek tuning set (ds-plain against ds-grav:NAME) and its base twin on the same jobs.
+    cand_arm = f"ds-grav:{name}"
+    cand_sets = [n for n, js in jobs_of.items() if any({j.get("left"), j.get("right")} == {"ds-plain", cand_arm} for j in js)]
+    ok_sets, base_v, cand_v, cset = False, None, None, None
+    if len(cand_sets) == 1:
+        cset = cand_sets[0]
+        cj = jobs_of[cset]
+        key = lambda j: (j.get("qid"), j.get("trait"))
+        ck = {key(j) for j in cj}
+        twins = [n for n, js in jobs_of.items() if n != cset and js and all({j.get("left"), j.get("right")} == {"ds-plain", "ds-grav"} for j in js)
+                 and {key(j) for j in js} == ck]
+        judges_ok = set(judge_files(DATA / "judging" / cset)) == {"deepseek"}
+        ledger_ok = True
+        for n_ in [cset] + twins[:1]:
+            b_ = [r for r in ledger if r.get("kind") == "judge-build" and r.get("name") == n_]
+            r_ = [r for r in ledger if r.get("kind") == "judge-run" and r.get("name") == n_ and r.get("judge") == "deepseek"]
+            ledger_ok = ledger_ok and len(b_) == 1 and len(r_) == 1 and r_[0].get("out_sha256") == sha_file(DATA / "judging" / n_ / "deepseek.jsonl")
+        if twins:
+            _, base_v, bad_b, n_b = tuning_verdicts(twins[0])
+            _, cand_v, bad_c, n_c = tuning_verdicts(cset)
+            cover = len(cand_v) / len(cj) if cj else 0
+            ok_sets = (judges_ok and ledger_ok and all(j.get("qid") in tuning_ids for j in cj) and not bad_b and not bad_c
+                       and cover >= 0.98 and len(base_v) / max(1, len(jobs_of[twins[0]])) >= 0.98)
+        o.note("D3a.tuning_sets", {"candidate": cset, "base": twins[:1]})
+        b_c = [parse_time(r.get("time")) for r in ledger if r.get("kind") == "judge-build" and r.get("name") == cset]
+        run_c = [parse_time(r.get("time")) for r in ledger if r.get("kind") == "judge-run" and r.get("name") == cset]
+        # D3r: the rule was in the ledger before the candidate's tuning set was built, so before any of
+        # its tuning verdicts could exist.
+        o.put("D3r.rule_before_tuning_judging", (t_rule < min(b_c)) if t_rule and b_c else None)
+        o.note("D3r.times", {"decision_rule": dl[0].get("time") if dl else None, "tuning_build": [r.get("time") for r in ledger
+               if r.get("kind") == "judge-build" and r.get("name") == cset]})
+    o.put("D3a.tuning_sets_ok", ok_sets)
+    # Recompute the decision.
+    confirm = None
+    if ok_sets and DECISION_RULES.get(name) == dec_sha and name in DECIDERS:
+        confirm, res = DECIDERS[name](base_v, cand_v, name)
+        o.note("D3a.decision", {"confirm": confirm, "candidate_minus_base": res})
+    o.put("D3a.decision_recomputed", confirm is not None)
+    if confirm is None:
+        return name, None
+    o.put("D3a.decision_confirm", int(confirm))
+    log = git("log", "--format=%ct", "--reverse", "--", f"bench/confirm/{name}.json")
+    t_confirm = int(log.split()[0]) if log and log.strip() else None
+    touched = (o.m.get("N14.candidates") or 0) > 0
+    confirmed_actual = t_confirm is not None or touched
+    o.put("D3a.outcome_matches", int(confirm) == int(confirmed_actual))
+    if confirm:
+        consistent = heldout_cand == name and o.m.get("N14.candidates") == 1 and o.m.get("N14.confirm_before_heldout") == 1 \
+            and o.m.get("N14.confirm_rules_match") == 1
+    else:
+        consistent = o.m.get("N14.candidates") == 0 and t_confirm is None
+    o.put("D3a.heldout_consistent", consistent)
+    times = [t for t in [t_rule, t_confirm] + run_c if t is not None]
+    o.detail["decision_time"] = max(times) if times else None
+    return name, int(confirm)
+
+
 def measure_s0(o, ledger, heldout_ids, F):
     """S0: nothing touched a held-out question before the held-out set was frozen."""
     t2 = stage2_time()
@@ -725,7 +874,8 @@ def measure_s0(o, ledger, heldout_ids, F):
         return
     n = sum(1 for r in ledger if r.get("kind") == "answer-launch" and r.get("qid") in heldout_ids
             and finite(r.get("start")) and r["start"] < t2)
-    for d in (F or {}).get("pre_existing_judging") or []:
+    # Every judging folder that existed at stage 2 (the record lists them), pilots and tuning sets alike.
+    for d in (F or {}).get("judging_at_stage2") or (F or {}).get("pre_existing_judging") or []:
         n += sum(1 for j in jl(DATA / "judging" / d / "jobs.jsonl") or [] if j.get("qid") in heldout_ids)
     o.put("S0.heldout_touched_before_freeze", n)
 
@@ -882,7 +1032,7 @@ def judge_files(d):
     return out
 
 
-def measure_judging(o, Sx, cand_arms, A, ledger):
+def measure_judging(o, Sx, cand_arms, A, ledger, base_only=False):
     """V: one row per parsed verdict {set, judge, qid, lang, trait, s1, s2, left, right, winner}."""
     V, jobs_by_set = [], {}
     qlang = {r["id"]: r["lang"] for s in Sx.values() for r in s["rows"] if "lang" in r}
@@ -896,7 +1046,7 @@ def measure_judging(o, Sx, cand_arms, A, ledger):
     mism_text = 0
     for name, spec in SM.active_sets().items():
         rows = Sx[spec["sample"]]["rows"]
-        exp = SM.expected_jobs(name, rows, cand_arms)
+        exp = SM.expected_jobs(name, rows, cand_arms, skip_missing_cand=base_only)
         d = DATA / "judging" / name
         if exp is None:
             continue
@@ -1079,11 +1229,11 @@ def measure_judges(o, V, jobs_by_set, A):
     for t in TRAITS8:
         pt = by_t[t]
         o.put(f"B5t.{t}.n", len(pt))
-        o.put(f"B5t.{t}.kappa", kappa(pt) if len(pt) >= B5_MIN_SHARED else None)
-        o.put(f"B5t.{t}.direction", direction(pt, B5_MIN_TWO_SIDED) if len(pt) >= B5_MIN_SHARED else None)
+        o.put(f"B5t.{t}.kappa", kappa(pt) if len(pt) >= B5T_MIN_SHARED else None)
+        o.put(f"B5t.{t}.direction", direction(pt, B5_MIN_TWO_SIDED) if len(pt) >= B5T_MIN_SHARED else None)
         # DeepSeek's favourable share for the Gravitas arm minus Claude's, on this trait (B5t, B6m).
         lt = [fav(a, a["s2"]) - fav(b, a["s2"]) for a, b in M if a["trait"] == t]
-        o.put(f"B5t.{t}.lean", float(np.mean(lt)) if len(lt) >= B5_MIN_SHARED else None)
+        o.put(f"B5t.{t}.lean", float(np.mean(lt)) if len(lt) >= B5T_MIN_SHARED else None)
     # B6a (reported only): does DeepSeek lean towards DeepSeek-written answers? ds-plain against gm-plain.
     Mx = matched(V, ["ho-xf"], ["hoc-xf"])
     if Mx:
@@ -1376,8 +1526,9 @@ def measure_results(o, V, A, sample_ids, cand_arms, R, labels, boot):
                 if "Slop" not in unreliable and s_src != "unreliable" else None
             o.put(f"N5.{p}.{a}.hi", (res["hi"] + corr["Slop"]) if res and res["hi"] is not None else None)
             o.note(f"N5.{p}.{a}", res)
+    n_arms = 2 * (1 + bool(cand_arms))
     for t in TRAITS8:
-        o.put(f"B5t.{t}.claude_min_n", min(claude_n[t]) if len(claude_n[t]) == 4 else None)
+        o.put(f"B5t.{t}.claude_min_n", min(claude_n[t]) if len(claude_n[t]) == n_arms else None)
 
 
 _LANG_CACHE = {}
@@ -1954,8 +2105,10 @@ def measure_order(o, ledger, heldout_ids, jobs_by_set):
     qls = [t_of("labels-import", n) for n in ("ql", "ql2")]
     o.put("P2.labels_before_heldout", all(t is not None for t in qls) and first_ho is not None and max(qls) < first_ho
           if first_ho is not None and all(t is not None for t in qls) else None)
-    ct = o.detail.get("confirm_time")
-    o.put("P2.confirm_before_cal_claude", (ct < cal_cl) if ct and cal_cl else None)
+    # The candidate's decision (its tuning verdicts, its decision rule, and CONFIRM if any) came before
+    # Claude's calibration labels, so Claude's verdicts could not inform the tuning (D3 amendment).
+    dt = o.detail.get("decision_time")
+    o.put("P2.decision_before_cal_claude", (dt < cal_cl) if dt and cal_cl else None)
     builds = [parse_time(r.get("time")) for r in ledger if r.get("kind") == "judge-build" and r.get("name") in SM.SETS
               and r.get("name") not in SM.CAL_SETS]
     builds = [t for t in builds if t is not None]

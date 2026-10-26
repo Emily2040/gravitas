@@ -2,12 +2,19 @@
 
 Owner: the verifier owner (builds nothing in this benchmark). Gates: `GATES.md`. This file records the freeze and says how it is checked. `verify.py` reads the current freeze commit from the line below; D4 fails as "metric missing" until it is filled in.
 
-Stage-1 freeze commit: `35518d190e30f5682bacc2008be2a34744d68f4d`
+Stage-1 freeze commit: recorded in the next commit of this file
 
 ## History
 
 - **Stage 1, 2026-10-25:** commit `ec91a8d5e5e3b831693ea470302f09d888fe5671` (recorded in 66b5ed7), after the builder's three fixes in 25d1f9a. Superseded by stage 1b; nothing on held-out had run.
-- **Stage 1b, 2026-10-25 (this freeze):** commit `35518d190e30f5682bacc2008be2a34744d68f4d`, a re-freeze before any held-out run, after the second cheapest-pass review (`bench/reviews/CHEAPEST_PASS_2.md`, 6ec2d96) and Emily's approval of lingua-py. Decisions on every review item are in GATES.md.
+- **Stage 1b, 2026-10-25:** commit `35518d190e30f5682bacc2008be2a34744d68f4d` (recorded in 09f0653), a re-freeze before any held-out run, after the second cheapest-pass review (`bench/reviews/CHEAPEST_PASS_2.md`, 6ec2d96) and Emily's approval of lingua-py. Decisions on every review item are in GATES.md. Superseded by stage 1c; nothing on held-out had run.
+- **Stage 1c, 2026-10-26 (this freeze):** the D3 amendment, written before the stage-2 freeze and before any held-out result, on the coordinator's instruction; the commit is named at the top. Text and reasons in GATES.md, "D3 amendment".
+
+## What changed in stage 1c (the D3 amendment)
+
+- The original D3 needed a confirmed candidate on held-out, so an honest rejection of the one candidate failed it and every candidate gate failed as missing. New gates: **D3a** (exactly one candidate designed and tuned under a recorded decision rule; the verifier recomputes the rule; the held-out outcome is the one it gives) and **D3r** (the rule in the ledger before the candidate's tuning set was built). When D3a passes and measures "not confirmed", the candidate's gates print N/A and the original D3 prints as failing and SUPERSEDED; otherwise nothing is excused. P2's "CONFIRM before cal0's Claude labels" became "the candidate's decision before cal0's Claude labels"; the candidate's orderings and agy-home check moved to P2cand and D4cand. The B5t per-trait minimum is 80 shared comparisons (two Claude set pairs when only base runs). S0 scans every judging folder that existed at stage 2 (`judging_at_stage2`), not only the pilots. 234 gates.
+- **The candidate `bottomline` on today's data:** D3a passes; the recomputed decision is NOT CONFIRMED (Admits Uncertainty -33.9 [-59.6, -9.9]; Bottom-Line Summary +54.3 [+28.0, +82.3]), matching analysis/bt-cand-vs-base.json. **D3r fails**: the rule's ledger line (10:22:09) is 51 seconds after `judge-build tune-ds-cand` (10:21:18); the batch had started at 10:21:50 and, by the builder's account, returned its first result at 10:22:04.9, before DECISION.md was written at 10:22:08.99. DECISION.md's header ("written 10:25, before any tune-ds-cand verdict existed") is contradicted by the ledger and the file time. The final report will show D3r failing for this reason.
+- Tests: all self-tests pass, including the base-only cases (D3 superseded, candidate gates N/A, a missing candidate metric excused only under base-only, and nothing excused when D3a fails or its decision is missing). Synthetic runs: base-only (69 gates N/A, D3 superseded, D3a and D3r pass, the swap sets work from the base pair, every other outcome as in the clean run); a fake rejection (the candidate passes its own rule but is dropped: D3a fails on outcome and held-out consistency, nothing is excused, 90 gates fail); a late rule (D3r fails, nothing else changes).
 
 ## What changed in stage 1b
 
@@ -41,6 +48,8 @@ Stage-1 freeze commit: `35518d190e30f5682bacc2008be2a34744d68f4d`
 - On the real data, P1 passes for ql and native; every other gate fails as missing until stage 2, as it should.
 
 ## Frozen files and their sha256 at the freeze commit
+
+Stage 1c's table replaces this one when the commit after the freeze records it. Stage 1b's table, for the record:
 
 Computed from the commit's own blobs (`git show <commit>:<path>`); line endings as stored. VERIFIER_FREEZE.md is the one file left out.
 
@@ -108,12 +117,12 @@ D4 requires `git diff <freeze commit> -- bench/personality bench/env/requirement
 **What I do:**
 
 1. Check every sample against the recipe and stop if any is short or differs.
-2. Write `bench/freeze/FREEZE_DATA.json` (outside the frozen folder) with: `set`; `files` = sha256 of the question files, `report.json`, the rating batch, every `samples/*` file, `labels/native_controls.jsonl`, the controls batch, `overlays/lean.yml`, `rules/base/*.md`; `external_files` = sha256 of `W:\AgentData\dsh_home\profiles\gv-plain\` and `gv-grav\` `cordis.patch.yml`, `cordis.yml`, `package.json`, `pnpm-workspace.yaml` and `pnpm-lock.yaml` where present, and of lingua's `RECORD` in the venv; `ledger_prefix` = the line count of `ledger.jsonl` and the sha256 of those lines (the ledger's first N lines joined by newlines, as `measure_all.measure_data_freeze` reads them); `agy_config` = a tree hash of each home's `.gemini/config`; `grav_link_head`; `rules_base`; `pre_existing_judging` = the judging folders that exist then; `deepseek_balance_before_usd`.
+2. Write `bench/freeze/FREEZE_DATA.json` (outside the frozen folder) with: `set`; `files` = sha256 of the question files, `report.json`, the rating batch, every `samples/*` file, `labels/native_controls.jsonl`, the controls batch, `overlays/lean.yml`, `rules/base/*.md`; `external_files` = sha256 of `W:\AgentData\dsh_home\profiles\gv-plain\` and `gv-grav\` `cordis.patch.yml`, `cordis.yml`, `package.json`, `pnpm-workspace.yaml` and `pnpm-lock.yaml` where present, and of lingua's `RECORD` in the venv; `ledger_prefix` = the line count of `ledger.jsonl` and the sha256 of those lines (the ledger's first N lines joined by newlines, as `measure_all.measure_data_freeze` reads them); `agy_config` = a tree hash of each home's `.gemini/config`; `grav_link_head`; `rules_base`; `pre_existing_judging` = the pilot judging folders (exempt from D3's tuning check); `judging_at_stage2` = every judging folder that exists then (S0 scans them all for held-out questions); `deepseek_balance_before_usd`.
 3. Commit that file alone. Its commit time is the stage-2 time that S0 and D6 use.
 
 ## What the builder must do before and during the first real run
 
-Before any held-out run, in this order:
+Before any held-out run, in this order (if the candidate is not confirmed, skip everything about it: no CONFIRM file, no candidate held-out runs, no ho-*-cand, hoc-*-cand or chal-*-cand sets; build swap-ds and swap-gm with the base pair only, `--pairs ds-plain~ds-grav --swap` and `--pairs gm-plain~gm-grav --swap`; export n3marks and n4 without `--name`):
 
 1. Run `samples.py build v1` again (adds ql270), then stage 2.
 2. **ql2:** `samples.py export ql2` (270 prompts) to Claude in batches `DATA/labels/ql2.batchN.prompts.jsonl`, one Sonnet 5.5 subagent per batch whose whole first message is `samples.py wrapper ql2 <n> <input> <output>`, the transcript copied to `DATA/labels/transcripts/` with a `labeller-transcript` ledger line, the raws imported once as `DATA/labels/ql2.jsonl` with one `labels-import` line (name `ql2`). Every Claude label from now on follows the same scheme (P1); never re-run a batch.

@@ -378,9 +378,11 @@ def sha256_file(p):
     return hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else None
 
 
-def expected_jobs(set_name, sample_rows, cand_arms):
+def expected_jobs(set_name, sample_rows, cand_arms, skip_missing_cand=False):
     """The exact jobs judge.py build must produce for a frozen set: same ids, order and judge as
-    judge.build computes them (h() and assign_judge() imported from the frozen judge.py)."""
+    judge.build computes them (h() and assign_judge() imported from the frozen judge.py).
+    With skip_missing_cand (D3a measured "no candidate confirmed"), candidate pairs are left out of
+    a set that also has a base pair (swap-ds, swap-gm); a set of candidate pairs only is None."""
     import judge
     spec = SETS[set_name]
     pairs = []
@@ -388,8 +390,12 @@ def expected_jobs(set_name, sample_rows, cand_arms):
         if s2.startswith("CAND:"):
             s2 = cand_arms.get(s2.split(":", 1)[1])
             if not s2:
+                if skip_missing_cand:
+                    continue
                 return None
         pairs.append((s1, s2))
+    if not pairs:
+        return None
     jobs = []
     for q in sample_rows:
         for s1, s2 in pairs:

@@ -279,7 +279,7 @@ def build_gates():
       "copied verdicts; direction over at least 30 two-sided pairs")
     for t in TRAITS8:
         A(f"B5t.{t}", f"Can the {t} result be trusted from the judge it uses, without moving to a friendlier judge?", [routed(t)],
-          "coordinator 2026-10-25; review 2: 'disagrees badly' = kappa < 0.40 or direction < 0.75 on >= 100 shared comparisons; "
+          "coordinator 2026-10-25; review 2: 'disagrees badly' = kappa < 0.40 or direction < 0.75 on >= 80 shared comparisons; "
           "re-source to Claude only when Claude is no friendlier")
     for p in PLATS:
         for a in ARMS:
@@ -400,20 +400,32 @@ def build_gates():
       [EQ("N11.judged_text_mismatch", 0), EQ("N11.ledger_bad_lines", 0)] + [EQ(f"N11.labels.{n}.ok", 1) for n in LABEL_FILES], "red-team N11")
     A("D3", "Did the held-out split get one look, by one candidate confirmed in advance, with no outside judge used in tuning?",
       [EQ("N14.candidates", 1), EQ("N14.confirm_before_heldout", 1), EQ("N14.confirm_rules_match", 1), EQ("N14.tuning_outside_judge_rows", 0),
-       EQ("N14.cal_slice_candidate_jobs", 0)], "GATES_SPEC D3, red-team N14 and N10")
+       EQ("N14.cal_slice_candidate_jobs", 0)], "GATES_SPEC D3, red-team N14 and N10; superseded by D3a when D3a measures no candidate confirmed")
+    A("D3a", "Was exactly one candidate designed and tuned under a recorded decision rule, and is the held-out outcome the one that rule gives?",
+      [EQ("D3a.candidates_designed", 1), EQ("D3a.artefacts_ok", 1), EQ("D3a.frozen_before_runs", 1), EQ("D3a.tuning_sets_ok", 1),
+       EQ("D3a.decision_recomputed", 1), EQ("D3a.outcome_matches", 1), EQ("D3a.heldout_consistent", 1),
+       EQ("N14.tuning_outside_judge_rows", 0), EQ("N14.cal_slice_candidate_jobs", 0)],
+      "D3 amendment, 2026-10-26: 'no candidate confirmed, base only' is a valid outcome only if the verifier's recomputation of the "
+      "frozen decision rule says not confirmed and the candidate never touched held-out")
+    A("D3r", "Was the decision rule recorded before any of the candidate's tuning verdicts could exist?",
+      [EQ("D3r.rule_before_tuning_judging", 1)],
+      "D3 amendment, 2026-10-26: the rule's ledger line before the candidate tuning set's judge-build line", one_sided="an order has no second bound")
     A("D4", "Is this the verifier, and are these the data, profiles and homes, that were frozen?",
       [EQ("D4.code_changed_files", 0), EQ("D4.data_mismatch", 0), EQ("D4.ledger_prefix_ok", 1), EQ("D4.agy_config_mismatch", 0),
-       EQ("D4.external_mismatch", 0), EQ("D4.judge_model_ok", 1), EQ("D4.cand_home_ok", 1)],
-      "red-team D4; review 2: the DSH profiles (model line), lean.yml, every judge call on deepseek-flash, candidate homes = base homes")
+       EQ("D4.external_mismatch", 0), EQ("D4.judge_model_ok", 1)],
+      "red-team D4; review 2: the DSH profiles (model line), lean.yml, every judge call on deepseek-flash")
+    A("D4cand", "Is each candidate agy home its base home apart from the rule file?", [EQ("D4.cand_home_ok", 1)], "review 2")
     for u in P1_UNITS:
         A(f"P1.{u}", f"Did every {u} label come from one call of the named model on the frozen prompts, unedited?",
           [EQ(f"P1.{u}.batches_ok", 1.0), EQ(f"P1.{u}.coverage", 1.0)],
           "review 2: from the subagent transcripts (Claude: frozen wrapper, Sonnet 5.5, one agent per batch, the raw file equals its Write, "
           "the import equals the raws) or judge_agy's ledger and transcript (critic: one Gemini 3.8 Flash run per job)")
     A("P2", "Were the outside labels made before anyone could see what they needed to be?",
-      [EQ("P2.cal_claude_before_deepseek", 1)] + [EQ(f"P2.hoc_{x}_before_ho", 1) for x in ("ds-base", "ds-cand", "gm-base", "gm-cand", "xf")]
-      + [EQ("P2.labels_before_heldout", 1), EQ("P2.confirm_before_cal_claude", 1), EQ("P2.calibration_before_heldout_judging", 1)],
-      "review 2", one_sided="an order has no second bound")
+      [EQ("P2.cal_claude_before_deepseek", 1)] + [EQ(f"P2.hoc_{x}_before_ho", 1) for x in ("ds-base", "gm-base", "xf")]
+      + [EQ("P2.labels_before_heldout", 1), EQ("P2.decision_before_cal_claude", 1), EQ("P2.calibration_before_heldout_judging", 1)],
+      "review 2; D3 amendment (the candidate's decision, confirmed or not, before cal0's Claude labels)", one_sided="an order has no second bound")
+    A("P2cand", "Were Claude's labels on the candidate's held-out comparisons made before DeepSeek's?",
+      [EQ(f"P2.hoc_{x}_before_ho", 1) for x in ("ds-cand", "gm-cand")], "review 2", one_sided="an order has no second bound")
     A("D5", "Did DeepSeek stay inside Emily's cap, off-peak?", [R("D5.deepseek_usd", 0, 50), EQ("D5.peak_launches", 0)],
       "Emily's lean plan, 2026-10-25; spend is the larger of the usage records and the account balance drop Emily reads")
     A("D6", "Did every Gemini answer come from one Gemini 4 Argon model and one agy version?",
@@ -423,19 +435,48 @@ def build_gates():
 
 # ------------------------------------------------------------------------------------------- report
 
+def is_cand_gate(gid):
+    """Gates that measure the confirmed candidate (its arms, sets and homes)."""
+    return ".cand" in gid or "-cand" in gid or gid in ("P2cand", "D4cand")
+
+
+def base_only(m, gates):
+    """D3 amendment: True only if D3a passes and measures that the candidate was not confirmed."""
+    g = next((x for x in gates if x.id == "D3a"), None)
+    if g is None or g.run(m)[0] != "PASS":
+        return False
+    try:
+        return val(m, "D3a.decision_confirm") == 0
+    except Missing:
+        return False
+
+
 def run_all(m, gates=None):
+    """(gate, status, lines). Under the D3 amendment's base-only outcome, the candidate's gates are
+    N/A and the original D3 is reported as failing but SUPERSEDED; neither counts in the verdict."""
+    gates = gates or build_gates()
+    bo = base_only(m, gates)
     out = []
-    for g in gates or build_gates():
+    for g in gates:
         status, lines = g.run(m)
+        if bo and is_cand_gate(g.id):
+            status, lines = "N/A", ["not applicable: no candidate confirmed (D3a)"] + lines
+        elif bo and g.id == "D3":
+            status, lines = "SUPERSEDED", ["original D3 fails: no candidate confirmed; superseded by D3a"] + lines
         out.append((g, status, lines))
     return out
 
 
 def print_report(results, errors=(), detail=None):
-    n_fail = 0
+    n_fail = n_na = 0
     for g, status, lines in results:
         tag = status if status != "PASS" else "PASS"
-        if any(l.startswith("metric missing") for l in lines):
+        if status == "SUPERSEDED":
+            tag = "FAIL, SUPERSEDED by D3a"
+        elif status == "N/A":
+            tag = "N/A"
+            n_na += 1
+        elif any(l.startswith("metric missing") for l in lines):
             tag = "FAIL (metric missing)"
         print(f"[{tag}] {g.id}: {g.question}")
         for l in lines:
@@ -445,7 +486,9 @@ def print_report(results, errors=(), detail=None):
         n_fail += status == "FAIL"
     for e in errors:
         print(f"[measure error] {e}")
-    print(f"\n{len(results)} gates: {len(results) - n_fail} pass, {n_fail} fail")
+    n_sup = sum(1 for _, st, _ in results if st == "SUPERSEDED")
+    print(f"\n{len(results)} gates: {len(results) - n_fail - n_na - n_sup} pass, {n_fail} fail, {n_na} not applicable (no candidate confirmed), "
+          f"{n_sup} superseded")
     print("VERDICT: " + ("every gate passes" if n_fail == 0 else "NOT VERIFIED (a failed or missing gate fails the run)"))
     return n_fail
 
@@ -561,6 +604,20 @@ def self_test():
     assert st == "FAIL" and any("under half" in l for l in lines), lines  # an arm that always searches escapes N6 no more
     mm.update({"N6.gemini.cand.zh.g_n": 3, "N6.gemini.cand.zh.p_n": 5, "N6.gemini.cand.zh.g_count": 0, "N6.gemini.cand.zh.p_count": 1})
     assert next(x for x in gates if x.id == "N6.gemini.cand").run(mm)[0] == "PASS"
+    # D3 amendment: base-only applies only when D3a passes AND it measures "not confirmed".
+    bo = dict(full, **{"D3a.decision_confirm": 0})
+    res = {g.id: st for g, st, _ in run_all(bo, gates)}
+    assert res["D3"] == "SUPERSEDED" and res["C1.deepseek.cand"] == "N/A" and res["D1.judging.ho-ds-cand"] == "N/A" and res["P2cand"] == "N/A"
+    assert res["C1.deepseek.base"] == "PASS" and res["D3a"] == "PASS" and res["P2"] == "PASS" and res["N9"] == "PASS"
+    no = dict(bo)
+    no.pop("C.deepseek.cand.all.T.lo")  # a candidate metric that does not exist is excused only by base-only
+    assert {g.id: st for g, st, _ in run_all(no, gates)}["C1.deepseek.cand"] == "N/A"
+    for broken in ({"D3a.outcome_matches": 0}, {"D3a.heldout_consistent": 0}, {"D3a.decision_recomputed": 0}, {"D3a.candidates_designed": 2}):
+        r2 = {g.id: st for g, st, _ in run_all(dict(no, **broken), gates)}
+        assert r2["D3a"] == "FAIL" and r2["C1.deepseek.cand"] == "FAIL" and r2["D3"] == "PASS", broken  # nothing is excused
+    nod = dict(bo)
+    nod.pop("D3a.decision_confirm")
+    assert {g.id: st for g, st, _ in run_all(nod, gates)}["C1.deepseek.cand"] == "PASS"  # no measured decision: no exemption
     print(f"self-test 3: {len(holes)} named holes from CHEAPEST_PASS.md fail as missing; zero-plain ratios, N6 'not measurable', "
           "B5t's friendlier-judge rule and B6b's debiasing behave")
     print(f"verify self-test: ok ({len(gates)} gates)")
