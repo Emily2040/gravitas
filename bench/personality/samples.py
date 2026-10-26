@@ -82,23 +82,22 @@ SIZES = {
 # changes this to "cal1" (judged on cal15b, which nobody has seen); cal0's numbers stay on record.
 CAL_SET = "cal0"
 CAL_SETS = ("cal0", "cal1")
-# Stage 1f (2026-10-26, after K0 failed on cal0): calibration on the questions that provoke each trait.
-# calp88 is every tuning question written to invite one of the 8 judged traits, outside cal15 and
-# cal15b (cal15b stays reserved for a rubric revision). DeepSeek and Claude judge it on all 8 traits
-# before any held-out judging; K0a reads each trait's ties on the questions that invite it, and B5t
-# pools it with the held-out Claude check.
+# Stage 1f (2026-10-26, after K0 failed on cal0) added calp: every tuning question written to invite
+# one of the 8 judged traits, outside cal15 and cal15b, judged on all 8 traits. Stage 1g reverted the
+# gates built on it (K0a, the B4 and B5t changes): calp is REPORTED ONLY, no gate depends on it, and
+# its DeepSeek half is not run.
 CALP = "calp"
 CALP_N = 88
-# Claude's extra look at Sycophantic on held-out (stage 1f): the held-out questions that invite
-# Sycophantic or Constructive Pushback (the two cells where DeepSeek finds sycophancy differences in
-# tuning, tie 0.38 and 0.69 against 0.83 elsewhere), not in hoc40, judged on Sycophantic only on the
-# DeepSeek pair. It feeds B5t's agreement pool for Sycophantic and nothing else.
+# Stage 1f also added hoc-syco: the held-out questions that invite Sycophantic or Constructive
+# Pushback, not in hoc40, judged by Claude on Sycophantic only on the DeepSeek pair. Reported only
+# since stage 1g, like calp.
 HOCS = "hoc-syco"
 HOCS_CELLS = [("Sycophantic", "invite"), ("Constructive Pushback", "invite")]
 HOCS_N = 14
 CAL_FAMILY = CAL_SETS + (CALP,)
+REPORTED_ONLY = (CALP, HOCS)
 # Samples written after the stage-2 data freeze: build() writes their files but leaves them out of
-# samples/index.json, which stays byte-identical to the frozen one (gate S checks them instead).
+# samples/index.json, which stays byte-identical to the frozen one (reported only, in no gate).
 POST_STAGE2_SAMPLES = ("calp88", "hocs14")
 N4_PRIORITY = [("Truthful", "invite"), ("Constructive Pushback", "invite"), ("Sycophantic", "invite")]
 NATIVE_CONTROLS = 6  # per language: literal machine translations of another language's seed
@@ -140,10 +139,10 @@ SETS = {
              "all_judges": ["deepseek", "claude"]},
     "cal1": {"sample": "cal15b", "pairs": [("ds-plain", "ds-grav")], "judges": {"deepseek": 1.0}, "swap": False,
              "all_judges": ["deepseek", "claude"]},
-    # Stage 1f. Claude imported BEFORE DeepSeek runs, as cal0; both before any held-out judging build.
+    # Stage 1f; reported only since stage 1g (no gate depends on it; its DeepSeek half is not run).
     "calp": {"sample": "calp88", "pairs": [("ds-plain", "ds-grav")], "judges": {"deepseek": 1.0}, "swap": False,
              "all_judges": ["deepseek", "claude"]},
-    # Stage 1f. Claude imported before ho-ds-base's DeepSeek run, as the other hoc sets.
+    # Stage 1f; reported only since stage 1g. If built, Claude only, before ho-ds-base's DeepSeek run.
     "hoc-syco": {"sample": "hocs14", "pairs": [("ds-plain", "ds-grav")], "judges": {"claude": 1.0}, "swap": False,
                  "traits": ["Sycophantic"]},
 }
@@ -173,6 +172,11 @@ def wrapper_text(kind, n, input_path, output_path):
 def active_sets():
     """Every frozen set except the calibration set not in use (see CAL_SET)."""
     return {k: v for k, v in SETS.items() if k not in CAL_SETS or k == CAL_SET}
+
+
+def gated_sets():
+    """The active sets the gates read: all but the reported-only ones (stage 1g)."""
+    return {k: v for k, v in active_sets().items() if k not in REPORTED_ONLY}
 
 # ------------------------------------------------------------------------------------------ prompts
 
