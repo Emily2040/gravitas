@@ -82,6 +82,24 @@ SIZES = {
 # changes this to "cal1" (judged on cal15b, which nobody has seen); cal0's numbers stay on record.
 CAL_SET = "cal0"
 CAL_SETS = ("cal0", "cal1")
+# Stage 1f (2026-10-26, after K0 failed on cal0): calibration on the questions that provoke each trait.
+# calp88 is every tuning question written to invite one of the 8 judged traits, outside cal15 and
+# cal15b (cal15b stays reserved for a rubric revision). DeepSeek and Claude judge it on all 8 traits
+# before any held-out judging; K0a reads each trait's ties on the questions that invite it, and B5t
+# pools it with the held-out Claude check.
+CALP = "calp"
+CALP_N = 88
+# Claude's extra look at Sycophantic on held-out (stage 1f): the held-out questions that invite
+# Sycophantic or Constructive Pushback (the two cells where DeepSeek finds sycophancy differences in
+# tuning, tie 0.38 and 0.69 against 0.83 elsewhere), not in hoc40, judged on Sycophantic only on the
+# DeepSeek pair. It feeds B5t's agreement pool for Sycophantic and nothing else.
+HOCS = "hoc-syco"
+HOCS_CELLS = [("Sycophantic", "invite"), ("Constructive Pushback", "invite")]
+HOCS_N = 14
+CAL_FAMILY = CAL_SETS + (CALP,)
+# Samples written after the stage-2 data freeze: build() writes their files but leaves them out of
+# samples/index.json, which stays byte-identical to the frozen one (gate S checks them instead).
+POST_STAGE2_SAMPLES = ("calp88", "hocs14")
 N4_PRIORITY = [("Truthful", "invite"), ("Constructive Pushback", "invite"), ("Sycophantic", "invite")]
 NATIVE_CONTROLS = 6  # per language: literal machine translations of another language's seed
 CRITIC_PER_TRAIT = 12
@@ -122,6 +140,12 @@ SETS = {
              "all_judges": ["deepseek", "claude"]},
     "cal1": {"sample": "cal15b", "pairs": [("ds-plain", "ds-grav")], "judges": {"deepseek": 1.0}, "swap": False,
              "all_judges": ["deepseek", "claude"]},
+    # Stage 1f. Claude imported BEFORE DeepSeek runs, as cal0; both before any held-out judging build.
+    "calp": {"sample": "calp88", "pairs": [("ds-plain", "ds-grav")], "judges": {"deepseek": 1.0}, "swap": False,
+             "all_judges": ["deepseek", "claude"]},
+    # Stage 1f. Claude imported before ho-ds-base's DeepSeek run, as the other hoc sets.
+    "hoc-syco": {"sample": "hocs14", "pairs": [("ds-plain", "ds-grav")], "judges": {"claude": 1.0}, "swap": False,
+                 "traits": ["Sycophantic"]},
 }
 
 # The frozen first message of every Claude labelling subagent, by kind. The verifier rebuilds it
@@ -343,6 +367,18 @@ def build_samples(heldout, tuning, seeds):
     put("native48", *take(gen_ho, SIZES["native48"], "native48"))
     put("cal15", *take(gen_tu, SIZES["cal15"], "cal15"))
     put("cal15b", *take(gen_tu, SIZES["cal15b"], "cal15b", exclude=[r["id"] for r in S["cal15"]["rows"]]))
+    # Stage 1f: provoked calibration (tuning) and Claude's extra Sycophantic check (held-out).
+    cal_ids = {r["id"] for r in S["cal15"]["rows"]} | {r["id"] for r in S["cal15b"]["rows"]}
+    invites = {(t, "invite") for t in TRAITS8}
+    # Emily's seeds are included here (30 of the 88): A9 is done, and they are the questions most
+    # likely to provoke a trait; DeepSeek already judged all 88 in tuning (tune-ds-base).
+    calp = sorted([r for r in tuning if (r.get("trait"), r.get("mode")) in invites and r["id"] not in cal_ids],
+                  key=lambda r: hkey("calp88", r["id"]))
+    put("calp88", calp, {"all": CALP_N - len(calp)} if len(calp) < CALP_N else {})
+    hoc_ids = {r["id"] for r in S["hoc40"]["rows"]}
+    hocs = sorted([r for r in gen_ho if (r.get("trait"), r.get("mode")) in set(HOCS_CELLS) and r["id"] not in hoc_ids],
+                  key=lambda r: hkey("hocs14", r["id"]))
+    put("hocs14", hocs, {"all": HOCS_N - len(hocs)} if len(hocs) < HOCS_N else {})
     # Seeds for the forced choice (Emily's own questions, written natively; tuning only).
     by_lang = defaultdict(list)
     for s in seeds:
@@ -426,6 +462,9 @@ def build(setname):
         with open(p, "w", encoding="utf-8", newline="\n") as f:
             for r in s["rows"]:
                 f.write(json.dumps(r, ensure_ascii=False) + "\n")
+        if name in POST_STAGE2_SAMPLES:
+            print(f"{name}: {len(s['rows'])} rows, sha256 {sha256_file(p)} (not in index.json, which is frozen at stage 2)")
+            continue
         index["samples"][name] = {"n": len(s["rows"]), "by_lang": {l: sum(1 for r in s["rows"] if r.get("lang") == l) for l in LANGS},
                                   "shortfall": s["short"], "sha256": sha256_file(p)}
     (out / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -449,7 +488,12 @@ def load_plan():
         "swapc order swaps (4 questions x 2 pairs x 8 traits x 2 orders)": n["swapc4"] * 2 * T * 2,
         "N3 key points (24) and marks (24 x 8 arms)": n["n3_24"] + n["n3_24"] * 8,
         "N4 web check (12 x 3 arms x 2 platforms)": (n["n4ds12"] + n["n4gm12"]) * 3,
+        "calp provoked calibration (88 tuning questions x 8 traits), stage 1f": CALP_N * T,
+        "hoc-syco (14 held-out questions x Sycophantic), stage 1f": HOCS_N,
     }
+    # The candidate's share of the above, not spent when no candidate is confirmed (D3a, base only).
+    claude_cand = {"hoc-ds-cand, hoc-gm-cand": 2 * n["hoc40"] * T, "N3 marks on the two candidate arms": 2 * n["n3_24"],
+                   "N4 on the candidate arms": n["n4ds12"] + n["n4gm12"]}
     gemini = {"blind critic on cal0 (12 per trait), inside the 130 runs left": CRITIC_PER_TRAIT * T}
     ho_ds = 510
     deepseek = {
@@ -460,10 +504,12 @@ def load_plan():
         "aa-gm (40 x 2 pairs x 8)": n["gmaa40"] * 2 * T,
         "swap-ds + swap-gm (24 x 2 pairs x 8 x 2 orders, each)": 2 * n["swap24"] * 2 * T * 2,
         "cal0 (120)": n["cal15"] * T,
+        "calp (88 x 8), stage 1f": CALP_N * T,
         "chal-ds-base + chal-ds-cand (510 x 1 each)": 2 * ho_ds,
         "chal-gm-base + chal-gm-cand (150 x 1 each)": 2 * n["gm150"],
     }
-    return {"claude": claude, "claude_total": sum(claude.values()), "gemini_flash": gemini,
+    return {"claude": claude, "claude_total": sum(claude.values()), "claude_cand_part": claude_cand,
+            "claude_base_only_total": sum(claude.values()) - sum(claude_cand.values()), "gemini_flash": gemini,
             "gemini_flash_total": sum(gemini.values()), "deepseek": deepseek, "deepseek_total": sum(deepseek.values())}
 
 
@@ -684,8 +730,25 @@ def self_test():
     assert all("{n}" in t and "{input}" in t and "{output}" in t for t in WRAPPERS.values())
     assert set(WRAPPER_OF.values()) <= set(WRAPPERS)
     assert len(ids("aa150")) == 150 and not S["aa150"]["short"]
+    # Stage 1f: the provoked calibration and the extra Sycophantic check follow their recipes (seeds
+    # are empty here, so tuning rows are all generated).
+    T8 = TRAITS8 + ["Other"]
+    rows2 = [{"id": f"r{l}{i}", "lang": l, "trait": T8[i % len(T8)], "mode": ("invite", "neutral")[(i // len(T8)) % 2],
+              "source": "deepseek"} for l in LANGS for i in range(90)]
+    tun2 = [r for i, r in enumerate(rows2) if i % 3 == 0]
+    ho2 = [r for i, r in enumerate(rows2) if i % 3 != 0]
+    S2 = build_samples(ho2, tun2, seeds_rows())
+    ids2 = lambda k: {r["id"] for r in S2[k]["rows"]}
+    tun_ids2 = {r["id"] for r in tun2}
+    assert ids2("calp88") and ids2("calp88") <= tun_ids2 and not ids2("calp88") & (ids2("cal15") | ids2("cal15b"))
+    assert all(r["trait"] in TRAITS8 and r["mode"] == "invite" for r in S2["calp88"]["rows"])
+    assert ids2("calp88") == {r["id"] for r in tun2 if r["trait"] in TRAITS8 and r["mode"] == "invite"} - ids2("cal15") - ids2("cal15b")
+    assert ids2("hocs14") and not ids2("hocs14") & tun_ids2 and not ids2("hocs14") & ids2("hoc40")
+    assert all((r["trait"], r["mode"]) in HOCS_CELLS for r in S2["hocs14"]["rows"])
+    assert [r["id"] for r in build_samples(ho2, tun2, seeds_rows())["calp88"]["rows"]] == [r["id"] for r in S2["calp88"]["rows"]]
     lp = load_plan()
-    assert lp["claude_total"] <= 2700, lp["claude_total"]
+    # Base only (D3a measured no candidate confirmed): about 3,000 Claude verdicts, less the 160 of the pilot.
+    assert lp["claude_base_only_total"] <= 2700, lp["claude_base_only_total"]
     assert lp["gemini_flash_total"] <= 130
     print("samples self-test: ok")
 

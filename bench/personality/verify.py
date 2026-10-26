@@ -22,7 +22,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from samples import CAL_SET, GUARD4, LANGS, TRAITS8, TRANSPARENCY3, active_sets  # noqa: E402
+from samples import CAL_SET, CALP, GUARD4, HOCS, LANGS, TRAITS8, TRANSPARENCY3, active_sets  # noqa: E402
 
 SETS = active_sets()
 
@@ -32,11 +32,11 @@ ROLES = ("plain", "base", "cand", "plain_aa", "grav_aa")
 SCOPES = ("all",) + tuple(LANGS)
 SLICE_MIN = {"C7": {"deepseek": 200, "gemini": 60}, "N1": {"deepseek": 60, "gemini": 25}, "N7": {"deepseek": 25, "gemini": 8}}
 SAMPLE_NAMES = ["heldout", "ql240", "ql270", "gm150", "hoc40", "xf32", "swapc4", "swap24", "gmaa40", "aa150", "n3_24", "n4ds12", "n4gm12",
-                "native48", "cal15", "cal15b", "native_seeds", "native_control_sources"]
+                "native48", "cal15", "cal15b", "native_seeds", "native_control_sources", "calp88", "hocs14"]
 LABEL_FILES = ["ql", "ql2", "n3points", "n3marks", "n4", "native"]
 SEAT_SETS = ["ho-ds-base", "ho-ds-cand", "ho-gm-base", "ho-gm-cand", "ho-xf", "hoc-ds-base", "hoc-ds-cand", "hoc-gm-base", "hoc-gm-cand", "hoc-xf"]
 P1_UNITS = ["ql", "ql2", "native", "n3points", "n3marks", "n4", CAL_SET, "hoc-ds-base", "hoc-ds-cand", "hoc-gm-base", "hoc-gm-cand",
-            "hoc-xf", "swapc", "critic"]
+            "hoc-xf", "swapc", "critic", CALP, HOCS]
 
 
 class Missing(Exception):
@@ -173,19 +173,23 @@ def EQ(key, value):
 
 
 def routed(t):
-    """B5t: DeepSeek kept, or re-sourced to Claude only when Claude is no friendlier, or unreliable."""
-    kk, dk, lk, nk = f"B5t.{t}.kappa", f"B5t.{t}.direction", f"B5t.{t}.lean", f"B5t.{t}.claude_min_n"
+    """B5t: DeepSeek kept, or re-sourced to Claude only when Claude is no friendlier, or unreliable.
+    Stage 1f: agreement is Gwet's AC1 over the held-out check pooled with the calibration (and
+    hoc-syco for Sycophantic); direction over at least 10 two-sided pairs of that pool."""
+    kk, dk, lk, nk = f"B5t.{t}.ac1", f"B5t.{t}.direction", f"B5t.{t}.lean", f"B5t.{t}.claude_min_n"
+    hk = f"B5t.{t}.ac1_held_out"
 
     def fn(v):
-        if v[kk] >= 0.40 and v[dk] >= 0.75:
-            return True, f"{t}: kappa {v[kk]:.3f} >= 0.40 and direction {v[dk]:.3f} >= 0.75: DeepSeek verdicts used"
+        if v[kk] >= 0.40 and v[hk] >= 0.40 and v[dk] >= 0.75:
+            return True, (f"{t}: AC1 {v[kk]:.3f} (held-out alone {v[hk]:.3f}) >= 0.40 and direction {v[dk]:.3f} >= 0.75: "
+                          "DeepSeek verdicts used")
         if v[lk] >= -0.05 and v[nk] >= 30:
-            return True, (f"{t}: kappa {v[kk]:.3f}, direction {v[dk]:.3f}: DeepSeek disagrees badly; Claude is no friendlier "
+            return True, (f"{t}: AC1 {v[kk]:.3f} (held-out alone {v[hk]:.3f}), direction {v[dk]:.3f}: DeepSeek disagrees badly; Claude is no friendlier "
                           f"(DeepSeek's lean {v[lk]:+.3f} >= -0.05): RE-SOURCED to Claude ({v[nk]:.0f} comparisons at fewest)")
         why = (f"Claude is the friendlier judge (DeepSeek's lean {v[lk]:+.3f} < -0.05)" if v[lk] < -0.05
                else f"Claude has only {v[nk]:.0f} comparisons (< 30)")
-        return False, f"{t}: kappa {v[kk]:.3f}, direction {v[dk]:.3f}: DeepSeek disagrees badly and {why}: UNRELIABLE"
-    return Custom([kk, dk, lk, nk], fn, t, {kk: 0.6, dk: 0.9, lk: 0.0, nk: 40}, {kk: 0.1, dk: 0.5, lk: -0.2, nk: 40})
+        return False, f"{t}: AC1 {v[kk]:.3f} (held-out alone {v[hk]:.3f}), direction {v[dk]:.3f}: DeepSeek disagrees badly and {why}: UNRELIABLE"
+    return Custom([kk, dk, lk, nk, hk], fn, t, {kk: 0.6, dk: 0.9, lk: 0.0, nk: 40, hk: 0.6}, {kk: 0.1, dk: 0.5, lk: -0.2, nk: 40, hk: 0.1})
 
 
 def debias(key, free, label):
@@ -268,10 +272,16 @@ def build_gates():
     for name in SEAT_SETS:
         A(f"B3.{name}", f"Did the Gravitas arm get a lucky seat in {name}?",
           [R(f"B3.{name}.seat_z", -3.5, 3.5), R(f"B3.{name}.min_trait_p", 0.001, 1.0)], "red-team B3; 3.5 standard errors of a fair coin")
-    for j in ("deepseek", "claude"):
-        A(f"B4.{j}", f"Is {j} discriminating, neither always tying nor never?",
-          [R(f"B4.{j}.tie", 0.02, 0.50), R(f"B4.{j}.max_trait_tie", 0, 0.80)],
-          "GATES_SPEC B4 (pilot tie shares 0.06 / 0.16 / 0.14); a trait judged TIE 80% of the time carries no result")
+    A("B4.deepseek", "Is deepseek discriminating, neither always tying nor never, and does it decide each trait where the question "
+      "invites it?", [R("B4.deepseek.tie", 0.02, 0.60), R("B4.deepseek.max_provoked_tie", 0, 0.80)],
+      "GATES_SPEC B4; stage 1f (2026-10-26, before any held-out judging): the per-trait ceiling is read on the questions written to "
+      "invite the trait (at least 8 each), since a tie is the right verdict where nothing invites it (tuning: Sycophantic 0.83 overall, "
+      "0.38 where invited); overall ceiling 0.60 (the stage-1b definitions ask for TIE when neither answer differs; cal0 Claude 0.475, "
+      "DeepSeek 0.35; tuning DeepSeek 0.36 and 0.45)",
+      one_sided="the provoked ceiling has no floor: never tying where a trait is invited is no fault; the overall floor stays")
+    A("B4.claude", "Is claude discriminating, neither always tying nor never?", [R("B4.claude.tie", 0.02, 0.60)],
+      "GATES_SPEC B4; stage 1f: Claude's per-trait ties where the trait is invited are K0a's (calp), since hoc40 holds 0 to 4 such "
+      "questions per trait; its per-trait shares on hoc are reported")
     A("B5", "Does the cheap DeepSeek judge agree with Claude on the comparisons C uses (plain against Gravitas)?",
       [R("B5.kappa_strat", 0.40, 0.90), R("B5.direction", 0.75, 1.0)],
       "trait-stratified kappa (review 2); pilot outside-outside (Claude-Gemini) stratified 0.51 on all pairs and 0.38 on plain against "
@@ -279,8 +289,10 @@ def build_gates():
       "copied verdicts; direction over at least 30 two-sided pairs")
     for t in TRAITS8:
         A(f"B5t.{t}", f"Can the {t} result be trusted from the judge it uses, without moving to a friendlier judge?", [routed(t)],
-          "coordinator 2026-10-25; review 2: 'disagrees badly' = kappa < 0.40 or direction < 0.75 on >= 80 shared comparisons; "
-          "re-source to Claude only when Claude is no friendlier")
+          "coordinator 2026-10-25; review 2: re-source to Claude only when Claude is no friendlier. Stage 1f: 'disagrees badly' = "
+          "AC1 < 0.40 or direction < 0.75, over at least 80 held-out and 90 calibration comparisons (cal0, calp; hoc-syco for "
+          "Sycophantic) with at least 10 two-sided pairs; kappa collapses when one judge ties nearly every comparison of a trait "
+          "(cal0 Sycophantic: exact 13/15, kappa 0.00, AC1 0.86); the lean stays on the held-out check")
     for p in PLATS:
         for a in ARMS:
             A(f"B6b.{p}.{a}", f"Would the win survive removing DeepSeek's extra favour for the Gravitas arm ({p}, {a})?",
@@ -295,7 +307,17 @@ def build_gates():
       [R("K0.kappa_strat", 0.40, 0.90), R("K0.deepseek.max_trait_tie", 0, 0.80), R("K0.claude.max_trait_tie", 0, 0.80),
        R("K0.critic_agreement", 0.60, 0.97)],
       "QUALITY_LOOP 2 and 9.2; stratified kappa as B5; the critic is Gemini 3.8 Flash with the trait name only: pilot Claude-Gemini exact "
-      "agreement on plain against Gravitas 0.69 less two standard errors at 96 = 0.60; above 0.97 means copied")
+      "agreement on plain against Gravitas 0.69 less two standard errors at 96 = 0.60; above 0.97 means copied; "
+      "superseded by K0a (stage 1f, 2026-10-26) once K0's metrics exist")
+    A("K0a", "Was the rubric calibrated on its final wording before the real run: do the judges agree, does each decide every trait "
+      "where the question invites it, and does the blind critic agree?",
+      [R("K0a.kappa_strat", 0.40, 0.90), R("K0a.deepseek.max_provoked_tie", 0, 0.80), R("K0a.claude.max_provoked_tie", 0, 0.80),
+       R("K0a.deepseek.tie", 0.02, 0.60), R("K0a.claude.tie", 0.02, 0.60), R("K0.critic_agreement", 0.60, 0.97)],
+      "K0 amendment, 2026-10-26: cal0 holds no question that invites Sycophantic, where a tie is the right verdict; the calibration "
+      "is cal0 plus calp (every tuning question that invites a judged trait, 88), K0's tie ceiling (0.80, unchanged) is read per "
+      "trait on the questions that invite it (at least 6 each), the overall tie share is its companion (0.02 to 0.60, as B4), and the "
+      "critic stays on cal0",
+      one_sided="the provoked ceiling has no floor: never tying where a trait is invited is no fault; the overall floor stays")
     # ---------------------------------------------------------------- C. results
     for p in PLATS:
         for a in ARMS:
@@ -421,7 +443,8 @@ def build_gates():
           "review 2: from the subagent transcripts (Claude: frozen wrapper, Sonnet 5.5, one agent per batch, the raw file equals its Write, "
           "the import equals the raws) or judge_agy's ledger and transcript (critic: one Gemini 3.8 Flash run per job)")
     A("P2", "Were the outside labels made before anyone could see what they needed to be?",
-      [EQ("P2.cal_claude_before_deepseek", 1)] + [EQ(f"P2.hoc_{x}_before_ho", 1) for x in ("ds-base", "gm-base", "xf")]
+      [EQ("P2.cal_claude_before_deepseek", 1), EQ("P2.calp_claude_before_deepseek", 1), EQ("P2.hoc_syco_before_ho", 1)]
+      + [EQ(f"P2.hoc_{x}_before_ho", 1) for x in ("ds-base", "gm-base", "xf")]
       + [EQ("P2.labels_before_heldout", 1), EQ("P2.decision_before_cal_claude", 1), EQ("P2.calibration_before_heldout_judging", 1)],
       "review 2; D3 amendment (the candidate's decision, confirmed or not, before cal0's Claude labels)", one_sided="an order has no second bound")
     A("P2cand", "Were Claude's labels on the candidate's held-out comparisons made before DeepSeek's?",
@@ -473,8 +496,21 @@ def run_all(m, gates=None):
             status, lines = "SUPERSEDED", ["original D3 FAIL: no candidate confirmed; superseded by D3a"] + lines
         elif g.id == "D5" and d5_measured(m):
             status, lines = "SUPERSEDED", [f"original D5 {status} on the 50 USD cap; superseded by D5a (cap raised to 60 USD, 2026-10-26)"] + lines
+        elif g.id == "K0" and k0_measured(m):
+            status, lines = "SUPERSEDED", [f"original K0 {status} on cal0's ties over all questions; superseded by K0a (provoked "
+                                           "calibration, 2026-10-26)"] + lines
         out.append((g, status, lines))
     return out
+
+
+def k0_measured(m):
+    """The K0 amendment applies once K0's own metrics exist (with none, K0 fails as missing)."""
+    try:
+        for k in ("K0.kappa_strat", "K0.deepseek.max_trait_tie", "K0.claude.max_trait_tie", "K0.critic_agreement"):
+            val(m, k)
+        return True
+    except Missing:
+        return False
 
 
 def d5_measured(m):
@@ -564,10 +600,11 @@ def self_test():
     print(f"self-test 2: {len(gates)} gates go green, red, and fail as missing when a key is absent, None, NaN, infinite or a bool")
     # The union of greens passes everything; this is the base for the named holes below.
     res = run_all(full, gates)
-    assert all(st == "PASS" or (g.id == "D5" and st == "SUPERSEDED") for g, st, _ in res), [g.id for g, st, _ in res if st != "PASS"]
+    assert all(st == "PASS" or (g.id in ("D5", "K0") and st == "SUPERSEDED") for g, st, _ in res), [g.id for g, st, _ in res if st != "PASS"]
     # Routing gates report RE-SOURCED rather than a plain pass when the judge fails but Claude can stand in.
     rs = dict(full)
-    rs.update({"B5t.Truthful.kappa": 0.1, "B5t.Truthful.direction": 0.6, "B5t.Truthful.lean": 0.0, "B5t.Truthful.claude_min_n": 40})
+    rs.update({"B5t.Truthful.ac1": 0.1, "B5t.Truthful.direction": 0.6, "B5t.Truthful.lean": 0.0, "B5t.Truthful.claude_min_n": 40,
+               "B5t.Truthful.ac1_held_out": 0.6})
     g = next(x for x in gates if x.id == "B5t.Truthful")
     st, lines = g.run(rs)
     assert st == "PASS" and "RE-SOURCED" in lines[0], lines
@@ -590,7 +627,11 @@ def self_test():
         ("a ratio with plain hedges at 0 is NaN or infinite", "C6.gemini.base.ko.first.p", "C6.gemini.base"),
         ("collect() drops unparsed verdicts: parse share read over assigned jobs", "B1.ho-ds-base.deepseek.parsed_share", "B1.ho-ds-base.deepseek"),
         ("a panel judge with no verdicts vanishes from B1-B4", "B4.claude.tie", "B4.claude"),
-        ("B5 skips traits with fewer shared comparisons", "B5t.Sycophantic.kappa", "B5t.Sycophantic"),
+        ("B5 skips traits with fewer shared comparisons", "B5t.Sycophantic.ac1", "B5t.Sycophantic"),
+        ("a trait with fewer than 10 two-sided pairs has no direction", "B5t.Sycophantic.direction", "B5t.Sycophantic"),
+        ("a trait with fewer than 6 provoked calibration comparisons has no ceiling", "K0a.claude.max_provoked_tie", "K0a"),
+        ("calp never judged", "K0a.kappa_strat", "K0a"),
+        ("a trait with fewer than 8 provoked held-out comparisons has no ceiling", "B4.deepseek.max_provoked_tie", "B4.deepseek"),
         ("D1 counts the records present, not the frozen list", "D1.gemini.cand.ok_share", "D1.gemini.cand"),
         ("D2 counts the records present", "D2.deepseek.grav_aa.ok_share", "D2.deepseek.grav_aa"),
         ("D3 counts candidates in rules/, not the arms seen", "N14.candidates", "D3"),
@@ -642,11 +683,39 @@ def self_test():
     assert rr["D5"][0] == "SUPERSEDED" and "FAIL" in rr["D5"][1][0] and rr["D5a"][0] == "PASS", rr["D5"]
     assert {g.id: st for g, st, _ in run_all(dict(full, **{"D5.deepseek_usd": 61.0}), gates)}["D5a"] == "FAIL"
     assert {g.id: st for g, st, _ in run_all(dict(full, **{"D5.peak_launches": 1}), gates)}["D5a"] == "FAIL"
+    # K0 amendment (stage 1f): the original K0 is reported but superseded by K0a once K0's metrics exist;
+    # K0a fails on a judge that ties where the trait is invited, or ties (or never ties) overall.
+    k0 = dict(full, **{"K0.claude.max_trait_tie": 1.0, "K0.deepseek.max_trait_tie": 0.8667})
+    rk = {g.id: (st, ls) for g, st, ls in run_all(k0, gates)}
+    assert rk["K0"][0] == "SUPERSEDED" and "FAIL" in rk["K0"][1][0] and rk["K0a"][0] == "PASS", rk["K0"]
+    k0m = dict(k0)
+    k0m.pop("K0.claude.max_trait_tie")
+    assert {g.id: st for g, st, _ in run_all(k0m, gates)}["K0"] == "FAIL"  # no K0 metrics: nothing superseded, K0 fails as missing
+    for broken in ({"K0a.claude.max_provoked_tie": 0.85}, {"K0a.deepseek.max_provoked_tie": 0.81}, {"K0a.claude.tie": 0.65},
+                   {"K0a.deepseek.tie": 0.0}, {"K0a.kappa_strat": 0.35}, {"K0.critic_agreement": 0.5}):
+        assert {g.id: st for g, st, _ in run_all(dict(k0, **broken), gates)}["K0a"] == "FAIL", broken
+    k0x = dict(k0)
+    k0x.pop("K0a.claude.max_provoked_tie")
+    assert {g.id: st for g, st, _ in run_all(k0x, gates)}["K0a"] == "FAIL"
+    for broken in ({"B4.deepseek.max_provoked_tie": 0.85}, {"B4.deepseek.tie": 0.65}, {"B4.deepseek.tie": 0.01}):
+        assert {g.id: st for g, st, _ in run_all(dict(full, **broken), gates)}["B4.deepseek"] == "FAIL", broken
+    assert {g.id: st for g, st, _ in run_all(dict(full, **{"B4.claude.tie": 0.55}), gates)}["B4.claude"] == "PASS"
+    # B5t on AC1: a high AC1 with a reversed direction is still 'disagrees badly'.
+    rs = dict(full, **{"B5t.Sycophantic.ac1": 0.86, "B5t.Sycophantic.direction": 0.5, "B5t.Sycophantic.lean": 0.0,
+                       "B5t.Sycophantic.claude_min_n": 40})
+    st, lines = next(x for x in gates if x.id == "B5t.Sycophantic").run(rs)
+    assert st == "PASS" and "RE-SOURCED" in lines[0], lines
+    # Calibration agreement cannot hide a held-out disagreement: a low held-out AC1 alone re-sources.
+    rs.update({"B5t.Sycophantic.direction": 0.9, "B5t.Sycophantic.ac1_held_out": 0.3})
+    st, lines = next(x for x in gates if x.id == "B5t.Sycophantic").run(rs)
+    assert st == "PASS" and "RE-SOURCED" in lines[0], lines
+    rs.pop("B5t.Sycophantic.ac1_held_out")
+    assert next(x for x in gates if x.id == "B5t.Sycophantic").run(rs)[0] == "FAIL"
     nod = dict(bo)
     nod.pop("D3a.decision_confirm")
     assert {g.id: st for g, st, _ in run_all(nod, gates)}["C1.deepseek.cand"] == "PASS"  # no measured decision: no exemption
     print(f"self-test 3: {len(holes)} named holes from CHEAPEST_PASS.md fail as missing; zero-plain ratios, N6 'not measurable', "
-          "B5t's friendlier-judge rule and B6b's debiasing behave")
+          "B5t's friendlier-judge rule and B6b's debiasing behave; K0 is superseded by K0a only when measured")
     print(f"verify self-test: ok ({len(gates)} gates)")
 
 

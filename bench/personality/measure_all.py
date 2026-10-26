@@ -59,6 +59,18 @@ CLAUDE_MIN_PER_TRAIT = 30
 B5_MIN_TWO_SIDED = 30
 # Per trait: 40 hoc questions x 2 set pairs when no candidate is confirmed (80), x 4 when one is (160).
 B5T_MIN_SHARED = 80
+# Stage 1f (2026-10-26, after K0 failed on cal0; see GATES.md, "K0 amendment"). B5t's agreement is
+# read over the held-out Claude check pooled with the calibration (cal0 + calp, 103 per trait) and,
+# for Sycophantic, hoc-syco: at least 90 calibration comparisons per trait, and the direction needs
+# at least 10 pairs where both judges pick a side (Sycophantic is decided rarely: a tie is right on
+# most questions, which do not invite it).
+B5T_MIN_CAL = 90
+B5T_MIN_TWO_SIDED = 10
+# Tie ceilings are read on the comparisons whose question was written to invite the trait: at
+# least 6 per trait in the calibration (calp has 6 for Bottom-Line Summary, cal0 4 more), at least
+# 8 per trait on the held-out DeepSeek sets (the held-out split has 8 to 10 per trait).
+K0A_MIN_PROVOKED = 6
+B4_MIN_PROVOKED = 8
 CLAUDE_PROJECTS = Path(os.environ.get("GP_CLAUDE_PROJECTS", "C:/Users/emily/.claude/projects"))
 BALANCE_AFTER = REPO / "bench" / "freeze" / "BALANCE_AFTER.json"
 ELO_PER_SHARE = SCALE / 0.25  # about 695 Elo per unit of favourable share at even odds
@@ -620,7 +632,7 @@ def compute(boot=1000):
         for qid in qs:
             A[(arm, qid)] = load_answer(arm, qid, qrows[qid]["lang"], p)
     for arm in ("ds-plain", "ds-grav"):  # the calibration slices (tuning): judged texts only, in no D gate
-        for qid in sample_ids["cal15"] + sample_ids["cal15b"]:
+        for qid in sample_ids["cal15"] + sample_ids["cal15b"] + sample_ids.get("calp88", []):
             A[(arm, qid)] = load_answer(arm, qid, qrows[qid]["lang"], "deepseek")
     step(o, measure_runs, o, A, lists, ledger, qrows)
     step(o, measure_rules, o, A, lists, cand_name, cand_arms, F, qrows, ledger)
@@ -676,7 +688,9 @@ def measure_one_look(o, ledger, heldout_ids, Q, sample_ids, F):
     name = sorted(names)[0] if len(names) == 1 else None
     tuning_ids = {r["id"] for r in Q["tuning"]}
     cal = set(sample_ids["cal15"]) | set(sample_ids["cal15b"])
-    # Outside judges never saw a tuning comparison, except the cal0 slice with the base pair.
+    calp = set(sample_ids.get("calp88", []))
+    # Outside judges never saw a tuning comparison, except the cal0 slice with the base pair, and
+    # (stage 1f) calp's questions with the base pair; P2 puts both after the candidate's decision.
     viol, cal_cand = 0, 0
     for d in judging_dirs:
         jobs = {j["job"]: j for j in jl(d / "jobs.jsonl") or [] if "job" in j}
@@ -693,6 +707,8 @@ def measure_one_look(o, ledger, heldout_ids, Q, sample_ids, F):
                     continue
                 pair = {j.get("left"), j.get("right")}
                 if d.name in SM.CAL_SETS and j.get("qid") in cal and pair == {"ds-plain", "ds-grav"}:
+                    continue
+                if d.name == SM.CALP and j.get("qid") in calp and pair == {"ds-plain", "ds-grav"}:
                     continue
                 viol += 1
     o.put("N14.tuning_outside_judge_rows", viol)
@@ -1046,6 +1062,7 @@ def measure_judging(o, Sx, cand_arms, A, ledger, base_only=False):
     mism_text = 0
     for name, spec in SM.active_sets().items():
         rows = Sx[spec["sample"]]["rows"]
+        cell = {r["id"]: (r.get("trait"), r.get("mode")) for r in rows}  # the question's drafting cell (stage 1f)
         exp = SM.expected_jobs(name, rows, cand_arms, skip_missing_cand=base_only)
         d = DATA / "judging" / name
         if exp is None:
@@ -1088,7 +1105,7 @@ def measure_judging(o, Sx, cand_arms, A, ledger, base_only=False):
                 win = {"A": j["left"], "B": j["right"], "TIE": None}[v]
                 V.append({"set": name, "judge": jdg, "qid": j["qid"], "lang": qlang.get(j["qid"]), "trait": j["trait"],
                           "s1": j["pair"][0], "s2": j["pair"][1], "left": j["left"], "right": j["right"], "winner": win,
-                          "job": k})
+                          "job": k, "provoked": cell.get(j["qid"]) == (j["trait"], "invite")})
             if jdg in optional:
                 o.note(f"B1.{name}.{jdg}.parsed", parsed)
                 continue
@@ -1120,6 +1137,29 @@ def kappa(pairs):
     cb = {l: sum(1 for _, b in pairs if b == l) for l in labs}
     pe = sum(ca[l] * cb[l] for l in labs) / (n * n)
     return (po - pe) / (1 - pe) if pe < 1 else None
+
+
+def ac1(pairs):
+    """Gwet's AC1 on three labels (s1, s2, tie). Unlike kappa it does not collapse when one judge
+    gives one label to nearly everything (cal0 Sycophantic: exact agreement 13/15, kappa 0.00)."""
+    n = len(pairs)
+    if n == 0:
+        return None
+    labs = ("s1", "s2", "tie")
+    po = sum(1 for a, b in pairs if a == b) / n
+    pi = {l: (sum(1 for a, _ in pairs if a == l) + sum(1 for _, b in pairs if b == l)) / (2 * n) for l in labs}
+    pe = sum(pi[l] * (1 - pi[l]) for l in labs) / (len(labs) - 1)
+    return (po - pe) / (1 - pe) if pe < 1 else None
+
+
+def provoked_ties(vs, min_n):
+    """{trait: (tie share, n)} on the verdicts whose question invites the trait; None when a trait
+    has fewer than min_n of them."""
+    out = {}
+    for t in TRAITS8:
+        x = [v for v in vs if v["trait"] == t and v.get("provoked")]
+        out[t] = (sum(1 for v in x if v["winner"] is None) / len(x), len(x)) if len(x) >= min_n else (None, len(x))
+    return out
 
 
 def direction(pairs, min_two_sided=1):
@@ -1209,15 +1249,21 @@ def measure_judges(o, V, jobs_by_set, A):
             if jt:
                 ps.append(binomtest(sum(1 for j in jt if j["left"] == j["pair"][1]), len(jt), 0.5).pvalue)
         o.put(f"B3.{name}.min_trait_p", min(ps) if ps else None)
-    # B4: ties per judge over its main sets.
+    # B4: ties per judge over its main sets. Stage 1f: the per-trait ceiling is read on the questions
+    # that invite the trait (DeepSeek); the share over all questions is reported only (Sycophantic
+    # ties 0.83 in tuning because most questions give nothing to flatter, and a tie is right there).
     for jdg, sets in (("deepseek", MAIN_DS + ["ho-xf"]), ("claude", MAIN_CL + ["hoc-xf"])):
         vs = [v for v in V if v["judge"] == jdg and v["set"] in sets]
         if not vs:
             continue
         o.put(f"B4.{jdg}.tie", sum(1 for v in vs if v["winner"] is None) / len(vs))
-        per = [sum(1 for v in vs if v["trait"] == t and v["winner"] is None) / max(1, sum(1 for v in vs if v["trait"] == t)) for t in TRAITS8
-               if any(v["trait"] == t for v in vs)]
-        o.put(f"B4.{jdg}.max_trait_tie", max(per) if len(per) == len(TRAITS8) else None)
+        per = {t: sum(1 for v in vs if v["trait"] == t and v["winner"] is None) / sum(1 for v in vs if v["trait"] == t) for t in TRAITS8
+               if any(v["trait"] == t for v in vs)}
+        o.note(f"B4.{jdg}.trait_tie_all_questions", {t: round(x, 3) for t, x in per.items()})
+        pv = provoked_ties(vs, B4_MIN_PROVOKED)
+        o.note(f"B4.{jdg}.trait_tie_provoked", {t: (None if x is None else round(x, 3), n) for t, (x, n) in pv.items()})
+        if jdg == "deepseek":
+            o.put("B4.deepseek.max_provoked_tie", max(x for x, _ in pv.values()) if all(x is not None for x, _ in pv.values()) else None)
     # B5: agreement with Claude on the comparisons C uses (plain against Gravitas, four set pairs).
     M = matched(V, MAIN_DS, MAIN_CL)
     pairs = [(win_label(a), win_label(b)) for a, b in M]
@@ -1226,11 +1272,24 @@ def measure_judges(o, V, jobs_by_set, A):
     o.put("B5.kappa_strat", kappa_strat(by_t) if len(pairs) >= B5_MIN_SHARED else None)
     o.put("B5.direction", direction(pairs, B5_MIN_TWO_SIDED) if len(pairs) >= B5_MIN_SHARED else None)
     o.note("B5.kappa_pooled", kappa(pairs) if pairs else None)
+    # Stage 1f: B5t's agreement pool is the held-out check (above) plus the calibration (cal0 + calp:
+    # both judges on the same jobs, final wording, same pair) plus, for Sycophantic, hoc-syco against
+    # ho-ds-base. The lean stays on the held-out check alone (it corrects C, which uses that mix).
+    Mc = matched(V, [SM.CAL_SET, SM.CALP], [SM.CAL_SET, SM.CALP])
+    Ms = matched(V, ["ho-ds-base"], [SM.HOCS])
     for t in TRAITS8:
         pt = by_t[t]
+        ct = [(win_label(a), win_label(b)) for a, b in Mc if a["trait"] == t]
+        st = [(win_label(a), win_label(b)) for a, b in Ms if a["trait"] == t]
+        pool = pt + ct + st
+        ok_n = len(pt) >= B5T_MIN_SHARED and len(ct) >= B5T_MIN_CAL
+        two = sum(1 for a, b in pool if a != "tie" and b != "tie")
         o.put(f"B5t.{t}.n", len(pt))
-        o.put(f"B5t.{t}.kappa", kappa(pt) if len(pt) >= B5T_MIN_SHARED else None)
-        o.put(f"B5t.{t}.direction", direction(pt, B5_MIN_TWO_SIDED) if len(pt) >= B5T_MIN_SHARED else None)
+        o.note(f"B5t.{t}.pool", {"held_out": len(pt), "calibration": len(ct), "hoc_syco": len(st), "two_sided": two,
+                                 "kappa_pool": kappa(pool), "ac1_held_out": ac1(pt), "direction_held_out": direction(pt)})
+        o.put(f"B5t.{t}.ac1", ac1(pool) if ok_n else None)
+        o.put(f"B5t.{t}.ac1_held_out", ac1(pt) if ok_n else None)
+        o.put(f"B5t.{t}.direction", direction(pool, B5T_MIN_TWO_SIDED) if ok_n else None)
         # DeepSeek's favourable share for the Gravitas arm minus Claude's, on this trait (B5t, B6m).
         lt = [fav(a, a["s2"]) - fav(b, a["s2"]) for a, b in M if a["trait"] == t]
         o.put(f"B5t.{t}.lean", float(np.mean(lt)) if len(lt) >= B5T_MIN_SHARED else None)
@@ -1269,8 +1328,8 @@ def measure_judges(o, V, jobs_by_set, A):
 def route(o, V):
     """(source, correction) per (platform, arm, trait).
 
-    Source: DeepSeek by default. A trait where DeepSeek disagrees badly with Claude (B5t: kappa < 0.40
-    or direction < 0.75) moves to Claude only if Claude is no friendlier to Gravitas (lean_t at least
+    Source: DeepSeek by default. A trait where DeepSeek disagrees badly with Claude (B5t: AC1 < 0.40
+    or direction < 0.75, over the stage-1f pool) moves to Claude only if Claude is no friendlier to Gravitas (lean_t at least
     -0.05); otherwise it is 'unreliable' (review 2: routing must never pick the friendlier judge).
     Correction (B6b, B6m): where DeepSeek favours the Gravitas arm more than Claude does beyond +0.05
     on a (platform, arm), or beyond +0.08 on a Transparency member or Slop, DeepSeek's points on it
@@ -1279,8 +1338,9 @@ def route(o, V):
     m = o.m
     flagged, unreliable = set(), set()
     for t in TRAITS8:
-        k, d, lt = m.get(f"B5t.{t}.kappa"), m.get(f"B5t.{t}.direction"), m.get(f"B5t.{t}.lean")
-        if k is not None and d is not None and (k < 0.40 or d < 0.75):
+        k, d, lt = m.get(f"B5t.{t}.ac1"), m.get(f"B5t.{t}.direction"), m.get(f"B5t.{t}.lean")
+        kh = m.get(f"B5t.{t}.ac1_held_out")
+        if k is not None and d is not None and kh is not None and (k < 0.40 or kh < 0.40 or d < 0.75):
             flagged.add(t)
             if lt is None or lt < -0.05:
                 unreliable.add(t)
@@ -1804,6 +1864,28 @@ def measure_label_gates(o, L, sample_ids, cand_arms, A, V):
             agree += w == x["winner"]
         o.put("K0.critic_n", n)
         o.put("K0.critic_agreement", agree / n if n >= 0.9 * SM.CRITIC_PER_TRAIT * len(TRAITS8) else None)
+    # K0a (stage 1f, 2026-10-26; GATES.md "K0 amendment"): the calibration is cal0 plus calp (every
+    # tuning question that invites a judged trait). Agreement as K0 over both; each judge's tie ceiling
+    # is read per trait on the comparisons whose question invites that trait; the overall tie share is
+    # the companion for the comparisons the ceiling leaves out.
+    calx = [v for v in V if v["set"] in (SM.CAL_SET, SM.CALP)]
+    by_job2 = defaultdict(dict)
+    for v in calx:
+        by_job2[(v["set"], v["job"])][v["judge"]] = v
+    both2 = [x for x in by_job2.values() if "deepseek" in x and "claude" in x]
+    n_exp = (len(sample_ids["cal15"]) + len(sample_ids.get("calp88", []))) * len(TRAITS8)
+    full = bool(sample_ids.get("calp88")) and len(both2) >= 0.9 * n_exp
+    by_t2 = {t: [(win_label(x["deepseek"]), win_label(x["claude"])) for x in both2 if x["deepseek"]["trait"] == t] for t in TRAITS8}
+    o.put("K0a.n", len(both2))
+    o.put("K0a.kappa_strat", kappa_strat(by_t2) if full else None)
+    o.note("K0a.per_trait", {t: {"n": len(p_), "ac1": ac1(p_), "kappa": kappa(p_), "direction": direction(p_),
+                                 "two_sided": sum(1 for a_, b_ in p_ if a_ != "tie" and b_ != "tie")} for t, p_ in by_t2.items()})
+    for jdg in ("deepseek", "claude"):
+        vs = [v for v in calx if v["judge"] == jdg]
+        pv = provoked_ties(vs, K0A_MIN_PROVOKED)
+        o.note(f"K0a.{jdg}.trait_tie_provoked", {t: (None if x is None else round(x, 3), n_) for t, (x, n_) in pv.items()})
+        o.put(f"K0a.{jdg}.max_provoked_tie", max(x for x, _ in pv.values()) if full and all(x is not None for x, _ in pv.values()) else None)
+        o.put(f"K0a.{jdg}.tie", sum(1 for v in vs if v["winner"] is None) / len(vs) if full and vs else None)
 
 
 # ---------------------------------------------------------------------------------------- rule leak
@@ -1914,7 +1996,7 @@ def measure_spend(o, ledger, F=None):
 
 LABEL_UNITS = {"ql": "qid", "ql2": "qid", "native": "id", "n3points": "qid", "n3marks": ("qid", "answer_sha"),
                "n4": ("qid", "answer_sha")}
-CLAUDE_SETS = ["hoc-ds-base", "hoc-ds-cand", "hoc-gm-base", "hoc-gm-cand", "hoc-xf", "swapc"]
+CLAUDE_SETS = ["hoc-ds-base", "hoc-ds-cand", "hoc-gm-base", "hoc-gm-cand", "hoc-xf", "swapc", SM.HOCS]  # hoc-syco: stage 1f
 
 
 def npath(x):
@@ -2013,7 +2095,7 @@ def measure_provenance(o, ledger, cand_name, jobs_by_set):
             copies[r.get("batch")].append(r)
     originals = scan_originals()
     qs = None
-    units = [(k, "label") for k in LABEL_UNITS] + [(s_, "judge") for s_ in [SM.CAL_SET] + CLAUDE_SETS]
+    units = [(k, "label") for k in LABEL_UNITS] + [(s_, "judge") for s_ in [SM.CAL_SET, SM.CALP] + CLAUDE_SETS]
     for unit, typ in units:
         if typ == "label":
             key = LABEL_UNITS[unit]
@@ -2106,9 +2188,14 @@ def measure_order(o, ledger, heldout_ids, jobs_by_set):
         return min(ts) if ts else None
     cal_cl, cal_ds = t_of("judge-import", SM.CAL_SET, "claude"), t_of("judge-run", SM.CAL_SET, "deepseek")
     o.put("P2.cal_claude_before_deepseek", (cal_cl < cal_ds) if cal_cl and cal_ds else None)
+    # Stage 1f: calp as cal0 (Claude imported before DeepSeek runs); hoc-syco before ho-ds-base's run.
+    calp_cl, calp_ds = t_of("judge-import", SM.CALP, "claude"), t_of("judge-run", SM.CALP, "deepseek")
+    o.put("P2.calp_claude_before_deepseek", (calp_cl < calp_ds) if calp_cl and calp_ds else None)
     for x in ("ds-base", "ds-cand", "gm-base", "gm-cand", "xf"):
         a, b = t_of("judge-import", f"hoc-{x}", "claude"), t_of("judge-run", f"ho-{x}", "deepseek")
         o.put(f"P2.hoc_{x}_before_ho", (a < b) if a and b else None)
+    a, b = t_of("judge-import", SM.HOCS, "claude"), t_of("judge-run", "ho-ds-base", "deepseek")
+    o.put("P2.hoc_syco_before_ho", (a < b) if a and b else None)
     first_ho = min([r["start"] for r in ledger if r.get("kind") == "answer-launch" and r.get("qid") in heldout_ids and finite(r.get("start"))],
                    default=None)
     qls = [t_of("labels-import", n) for n in ("ql", "ql2")]
@@ -2117,15 +2204,17 @@ def measure_order(o, ledger, heldout_ids, jobs_by_set):
     # The candidate's decision (its tuning verdicts, its decision rule, and CONFIRM if any) came before
     # Claude's calibration labels, so Claude's verdicts could not inform the tuning (D3 amendment).
     dt = o.detail.get("decision_time")
-    o.put("P2.decision_before_cal_claude", (dt < cal_cl) if dt and cal_cl else None)
+    o.put("P2.decision_before_cal_claude", (dt < min(cal_cl, calp_cl)) if dt and cal_cl and calp_cl else None)
     builds = [parse_time(r.get("time")) for r in ledger if r.get("kind") == "judge-build" and r.get("name") in SM.SETS
-              and r.get("name") not in SM.CAL_SETS]
+              and r.get("name") not in SM.CAL_FAMILY]
     builds = [t for t in builds if t is not None]
     crit_jobs = {r["job"] for r in SM.export_rows("critic")} if (DATA / "judging" / SM.CAL_SET / "jobs.jsonl").exists() else set()
     crit = [parse_time(r.get("time")) for r in ledger if r.get("kind") == "judge-agy-run" and r.get("job") in crit_jobs]
     crit = [t for t in crit if t is not None]
-    if builds and cal_cl and crit:
-        o.put("P2.calibration_before_heldout_judging", max([cal_cl] + crit) < min(builds))
+    # Stage 1f: the whole calibration (cal0 and calp, both judges, and the critic) before any other build.
+    cal_all = [cal_cl, cal_ds, calp_cl, calp_ds]
+    if builds and all(cal_all) and crit:
+        o.put("P2.calibration_before_heldout_judging", max(cal_all + crit) < min(builds))
 
 
 def measure_versions(o, lists, cand_name):
@@ -2249,6 +2338,17 @@ def self_test():
     assert d5_total(45.0, None, 80.0, 70.0) is None and d5_total(None, 30.0, 80.0, 70.0) is None
     # Separator lines: the list kept without its markers.
     assert format_shape("费用——每晚约五百日元。\n交通——地铁十分钟。\n这是一句普通的话。")["sep_lines"] == 2
+    # Stage 1f. AC1 does not collapse where kappa does: cal0 Sycophantic (13 both TIE, 2 DeepSeek-only).
+    syc = [("tie", "tie")] * 13 + [("s1", "tie"), ("s2", "tie")]
+    assert abs(kappa(syc)) < 1e-9 and 0.85 < ac1(syc) < 0.87, (kappa(syc), ac1(syc))
+    assert ac1([("s1", "s1"), ("s2", "s2"), ("tie", "tie")]) == 1.0 and ac1([]) is None
+    assert ac1([("s1", "s2")] * 5 + [("s2", "s1")] * 5) < 0
+    # Provoked ties: only the verdicts whose question invites the trait, and None below the minimum.
+    vs = ([{"trait": "Sycophantic", "provoked": True, "winner": None}] * 3 + [{"trait": "Sycophantic", "provoked": True, "winner": "x"}] * 3
+          + [{"trait": "Sycophantic", "provoked": False, "winner": None}] * 40)
+    pv = provoked_ties(vs, 6)
+    assert pv["Sycophantic"] == (0.5, 6) and pv["Slop"] == (None, 0)
+    assert provoked_ties(vs, 7)["Sycophantic"] == (None, 6)
     print("measure_all self-test: ok")
 
 
