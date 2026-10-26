@@ -128,10 +128,20 @@ Results computed from Claude only have about 40 questions behind them, so their 
 | D3r | Was the decision rule recorded before any of the candidate's tuning verdicts could exist? | ledger time of the rule's `rule-decision-rule` line against the candidate tuning set's `judge-build` line | rule first | D3 amendment; one-sided |
 | D4 | Is this the verifier, and are these the data and profiles, that were frozen? | `git diff <freeze commit>` over `bench/personality`, `bench/env/requirements-lingua.txt`, WIN_CRITERIA.md and round three's verdict.py, plus untracked files; sha256 of every stage-2 data file (with `overlays/lean.yml`); the ledger's first N lines; agy home config trees; external files (DSH profiles, lingua's installed RECORD); every DeepSeek judge call on deepseek-flash | 0; 0; true; 0; 0; true | red-team D4; review 2 |
 | D4cand | Is each candidate agy home its base home apart from the rule file? | tree hash of each candidate home's `.gemini/config` without the rule, against the base home's | true | review 2 |
-| D5 | Did DeepSeek stay inside the cap, off-peak? | total spend = the larger of the usage records since the pilots (batches and DSH streams at off-peak prices, plus web calls) and the records at stage 2 plus the account balance drop since stage 2 (Emily's readings: stage 2 and BALANCE_AFTER.json); DSH launches and DeepSeek judge runs at peak hours | 0 to 50 USD; 0 | Emily's lean plan; review 2 (the balance is the one instrument nobody's records can undercount); stage 1d (both terms cover the same span) |
+| D5 | Did DeepSeek stay inside the original 50 USD cap, off-peak? (reported, superseded by D5a once measured) | total spend = the larger of the usage records since the pilots (batches and DSH streams at off-peak prices, plus web calls) and the records at stage 2 plus the account balance drop since stage 2 (Emily's readings: stage 2 and BALANCE_AFTER.json); DSH launches and DeepSeek judge runs at peak hours | 0 to 50 USD; 0 | Emily's lean plan; review 2 (the balance is the one instrument nobody's records can undercount); stage 1d (both terms cover the same span) |
 | D6 | One Gemini 4 Argon model and one agy version? | model in every gm run's init event; versions in every agy home's per-run logs after stage 2 | one model starting gemini-4-argon; one version | brief; review 2 |
 
-Gates in all: 234 (`verify.py --list`).
+| D5a | Did DeepSeek stay inside Emily's raised cap, off-peak? | as D5 | 0 to 60 USD; 0 peak launches | D5 amendment, 2026-10-26 (below) |
+
+Gates in all: 235 (`verify.py --list`).
+
+## D5 amendment (2026-10-26, before any held-out run)
+
+**Why.** D5 bounded DeepSeek spend at 50 USD, Emily's cap for the lean plan. On 2026-10-26, with 29.94 USD spent and the plan projected at 57 to 73 USD, the coordinator asked her about going over 50 and recommended 60. She answered "Yes that's ok spend more". The coordinator operates that as a 60 USD cap (`spend.py --cap 60`, and ask her before passing 60), recorded in the shared notes before her stage-2 balance reading and before any held-out run.
+
+**The amendment.** D5a = D5 with the spend bound 0 to 60 USD; the peak-hours half (0 peak launches) is unchanged. The original D5 (0 to 50) stays in the report with its own result, marked SUPERSEDED by D5a once D5's metrics exist; with no metrics, both fail as missing.
+
+**Reading her words.** Her answer carries no figure. 60 is the cap the coordinator recommended and operates, and it sits at the low end of the 57 to 73 she was shown, so it reads her answer no more loosely than that; it is not the top of the range. If she names a figure, that replaces 60 in another dated amendment, made before the final verify and only with her words.
 
 ## D3 amendment (2026-10-26, before the stage-2 freeze and before any held-out result)
 

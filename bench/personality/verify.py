@@ -426,8 +426,16 @@ def build_gates():
       "review 2; D3 amendment (the candidate's decision, confirmed or not, before cal0's Claude labels)", one_sided="an order has no second bound")
     A("P2cand", "Were Claude's labels on the candidate's held-out comparisons made before DeepSeek's?",
       [EQ(f"P2.hoc_{x}_before_ho", 1) for x in ("ds-cand", "gm-cand")], "review 2", one_sided="an order has no second bound")
-    A("D5", "Did DeepSeek stay inside Emily's cap, off-peak?", [R("D5.deepseek_usd", 0, 50), EQ("D5.peak_launches", 0)],
-      "Emily's lean plan, 2026-10-25; spend is the larger of the usage records and the account balance drop Emily reads")
+    A("D5", "Did DeepSeek stay inside Emily's cap, off-peak? (original cap, 50 USD)", [R("D5.deepseek_usd", 0, 50), EQ("D5.peak_launches", 0)],
+      "Emily's lean plan, 2026-10-25; spend is the larger of the usage records and the records at stage 2 plus the balance drop; "
+      "superseded by D5a (cap amendment, 2026-10-26) once D5's metrics exist")
+    A("D5a", "Did DeepSeek stay inside Emily's raised cap, off-peak? (60 USD)",
+      [Custom(["D5.deepseek_usd"], lambda v: (0 <= v["D5.deepseek_usd"] <= 60,
+                                              f"D5.deepseek_usd = {v['D5.deepseek_usd']:.4g}  (bound: 0 <= x <= 60)"),
+              "raised cap", {"D5.deepseek_usd": 25.0}, {"D5.deepseek_usd": 65.0}),
+       EQ("D5.peak_launches", 0)],
+      "D5 amendment, 2026-10-26: Emily's 'Yes that's ok spend more' to a projection of 57-73 USD against 50, read as the 60 USD cap the "
+      "coordinator recommended and operates (spend.py --cap 60; ask her before passing 60)")
     A("D6", "Did every Gemini answer come from one Gemini 4 Argon model and one agy version?",
       [EQ("D6.gm_model_ok", 1), EQ("D6.agy_versions", 1)], "brief")
     return G
@@ -462,9 +470,21 @@ def run_all(m, gates=None):
         if bo and is_cand_gate(g.id):
             status, lines = "N/A", ["not applicable: no candidate confirmed (D3a)"] + lines
         elif bo and g.id == "D3":
-            status, lines = "SUPERSEDED", ["original D3 fails: no candidate confirmed; superseded by D3a"] + lines
+            status, lines = "SUPERSEDED", ["original D3 FAIL: no candidate confirmed; superseded by D3a"] + lines
+        elif g.id == "D5" and d5_measured(m):
+            status, lines = "SUPERSEDED", [f"original D5 {status} on the 50 USD cap; superseded by D5a (cap raised to 60 USD, 2026-10-26)"] + lines
         out.append((g, status, lines))
     return out
+
+
+def d5_measured(m):
+    """The D5 amendment applies once D5's spend and peak metrics exist (with none, D5 fails as missing)."""
+    try:
+        val(m, "D5.deepseek_usd")
+        val(m, "D5.peak_launches")
+        return True
+    except Missing:
+        return False
 
 
 def print_report(results, errors=(), detail=None):
@@ -472,7 +492,8 @@ def print_report(results, errors=(), detail=None):
     for g, status, lines in results:
         tag = status if status != "PASS" else "PASS"
         if status == "SUPERSEDED":
-            tag = "FAIL, SUPERSEDED by D3a"
+            first = lines[0] if lines else ""
+            tag = ("PASS" if " PASS" in first.split(";")[0] else "FAIL") + ", SUPERSEDED by " + first.rsplit("superseded by ", 1)[-1].split(" ")[0]
         elif status == "N/A":
             tag = "N/A"
             n_na += 1
@@ -543,7 +564,7 @@ def self_test():
     print(f"self-test 2: {len(gates)} gates go green, red, and fail as missing when a key is absent, None, NaN, infinite or a bool")
     # The union of greens passes everything; this is the base for the named holes below.
     res = run_all(full, gates)
-    assert all(st == "PASS" for _, st, _ in res), [g.id for g, st, _ in res if st != "PASS"]
+    assert all(st == "PASS" or (g.id == "D5" and st == "SUPERSEDED") for g, st, _ in res), [g.id for g, st, _ in res if st != "PASS"]
     # Routing gates report RE-SOURCED rather than a plain pass when the judge fails but Claude can stand in.
     rs = dict(full)
     rs.update({"B5t.Truthful.kappa": 0.1, "B5t.Truthful.direction": 0.6, "B5t.Truthful.lean": 0.0, "B5t.Truthful.claude_min_n": 40})
@@ -615,6 +636,12 @@ def self_test():
     for broken in ({"D3a.outcome_matches": 0}, {"D3a.heldout_consistent": 0}, {"D3a.decision_recomputed": 0}, {"D3a.candidates_designed": 2}):
         r2 = {g.id: st for g, st, _ in run_all(dict(no, **broken), gates)}
         assert r2["D3a"] == "FAIL" and r2["C1.deepseek.cand"] == "FAIL" and r2["D3"] == "PASS", broken  # nothing is excused
+    # D5 amendment: the original 50 USD gate is reported but superseded by D5a once D5's metrics exist.
+    sp = dict(full, **{"D5.deepseek_usd": 57.0})
+    rr = {g.id: (st, ls) for g, st, ls in run_all(sp, gates)}
+    assert rr["D5"][0] == "SUPERSEDED" and "FAIL" in rr["D5"][1][0] and rr["D5a"][0] == "PASS", rr["D5"]
+    assert {g.id: st for g, st, _ in run_all(dict(full, **{"D5.deepseek_usd": 61.0}), gates)}["D5a"] == "FAIL"
+    assert {g.id: st for g, st, _ in run_all(dict(full, **{"D5.peak_launches": 1}), gates)}["D5a"] == "FAIL"
     nod = dict(bo)
     nod.pop("D3a.decision_confirm")
     assert {g.id: st for g, st, _ in run_all(nod, gates)}["C1.deepseek.cand"] == "PASS"  # no measured decision: no exemption

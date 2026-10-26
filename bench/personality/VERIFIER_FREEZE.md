@@ -2,14 +2,15 @@
 
 Owner: the verifier owner (builds nothing in this benchmark). Gates: `GATES.md`. This file records the freeze and says how it is checked. `verify.py` reads the current freeze commit from the line below; D4 fails as "metric missing" until it is filled in.
 
-Stage-1 freeze commit: `05b278ade19c4e11d88a0b4217a43b06f96c245a`
+Stage-1 freeze commit: recorded in the next commit of this file
 
 ## History
 
 - **Stage 1, 2026-10-25:** commit `ec91a8d5e5e3b831693ea470302f09d888fe5671` (recorded in 66b5ed7), after the builder's three fixes in 25d1f9a. Superseded by stage 1b; nothing on held-out had run.
 - **Stage 1b, 2026-10-25:** commit `35518d190e30f5682bacc2008be2a34744d68f4d` (recorded in 09f0653), a re-freeze before any held-out run, after the second cheapest-pass review (`bench/reviews/CHEAPEST_PASS_2.md`, 6ec2d96) and Emily's approval of lingua-py. Decisions on every review item are in GATES.md. Superseded by stage 1c; nothing on held-out had run.
 - **Stage 1c, 2026-10-26:** commit `cc42b583d8b8a694944733c1aa6694384c99bd9f`, the D3 amendment, written before the stage-2 freeze and before any held-out result, on the coordinator's instruction. Text and reasons in GATES.md, "D3 amendment". Superseded by stage 1d; nothing on held-out had run.
-- **Stage 1d, 2026-10-26 (this freeze):** D5 compared the usage records since the pilots with the balance drop since stage 2, two different spans, so records deleted after stage 2 could hide spend. D5 now takes the larger of the records since the pilots and the records at stage 2 (`deepseek_records_usd_at_stage2`, measured by the verifier's own instrument when the data are frozen) plus the balance drop. Found while writing the stage-2 record, before it was committed. Commit `05b278ade19c4e11d88a0b4217a43b06f96c245a`.
+- **Stage 1d, 2026-10-26:** D5 compared the usage records since the pilots with the balance drop since stage 2, two different spans, so records deleted after stage 2 could hide spend. D5 now takes the larger of the records since the pilots and the records at stage 2 (`deepseek_records_usd_at_stage2`, measured by the verifier's own instrument when the data are frozen) plus the balance drop. Found while writing the stage-2 record, before it was committed. The stage-2 data record (165dcc7) was written against this verifier and needs no change for later stages, which touch no data. Commit `05b278ade19c4e11d88a0b4217a43b06f96c245a`.
+- **Stage 1e, 2026-10-26 (this freeze):** the D5 amendment. Emily raised the DeepSeek cap ("Yes that's ok spend more", in answer to a projection of 57-73 USD against 50); the coordinator operates it as 60 USD. New gate D5a (0 to 60 USD, 0 peak launches); the original D5 (50 USD) is reported with its result and marked SUPERSEDED once measured. Made before any held-out run; cal0 had been built and exported, nothing judged. Text in GATES.md, "D5 amendment". The commit is named at the top.
 
 ## What changed in stage 1c (the D3 amendment)
 
