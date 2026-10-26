@@ -2,14 +2,14 @@
 
 Owner: the verifier owner (builds nothing in this benchmark). Gates: `GATES.md`. This file records the freeze and says how it is checked. `verify.py` reads the current freeze commit from the line below; D4 fails as "metric missing" until it is filled in.
 
-Stage-1 freeze commit: recorded in the next commit of this file
+Stage-1 freeze commit: `05b278ade19c4e11d88a0b4217a43b06f96c245a`
 
 ## History
 
 - **Stage 1, 2026-10-25:** commit `ec91a8d5e5e3b831693ea470302f09d888fe5671` (recorded in 66b5ed7), after the builder's three fixes in 25d1f9a. Superseded by stage 1b; nothing on held-out had run.
 - **Stage 1b, 2026-10-25:** commit `35518d190e30f5682bacc2008be2a34744d68f4d` (recorded in 09f0653), a re-freeze before any held-out run, after the second cheapest-pass review (`bench/reviews/CHEAPEST_PASS_2.md`, 6ec2d96) and Emily's approval of lingua-py. Decisions on every review item are in GATES.md. Superseded by stage 1c; nothing on held-out had run.
 - **Stage 1c, 2026-10-26:** commit `cc42b583d8b8a694944733c1aa6694384c99bd9f`, the D3 amendment, written before the stage-2 freeze and before any held-out result, on the coordinator's instruction. Text and reasons in GATES.md, "D3 amendment". Superseded by stage 1d; nothing on held-out had run.
-- **Stage 1d, 2026-10-26 (this freeze):** D5 compared the usage records since the pilots with the balance drop since stage 2, two different spans, so records deleted after stage 2 could hide spend. D5 now takes the larger of the records since the pilots and the records at stage 2 (`deepseek_records_usd_at_stage2`, measured by the verifier's own instrument when the data are frozen) plus the balance drop. Found while writing the stage-2 record, before it was committed. The commit is named at the top.
+- **Stage 1d, 2026-10-26 (this freeze):** D5 compared the usage records since the pilots with the balance drop since stage 2, two different spans, so records deleted after stage 2 could hide spend. D5 now takes the larger of the records since the pilots and the records at stage 2 (`deepseek_records_usd_at_stage2`, measured by the verifier's own instrument when the data are frozen) plus the balance drop. Found while writing the stage-2 record, before it was committed. Commit `05b278ade19c4e11d88a0b4217a43b06f96c245a`.
 
 ## What changed in stage 1c (the D3 amendment)
 
@@ -48,15 +48,15 @@ Stage-1 freeze commit: recorded in the next commit of this file
 
 - On the real data, P1 passes for ql and native; every other gate fails as missing until stage 2, as it should.
 
-## Frozen files and their sha256 at the freeze commit (stage 1c, replaced by stage 1d's when recorded)
+## Frozen files and their sha256 at the freeze commit (stage 1d)
 
-Computed from the commit's own blobs (`git show <commit>:<path>`); line endings as stored. VERIFIER_FREEZE.md is the one file left out.
+Computed from the commit's own blobs (`git show <commit>:<path>`); line endings as stored. VERIFIER_FREEZE.md is the one file left out. Earlier stages' tables are in this file's git history.
 
 | file | sha256 |
 |---|---|
 | `bench/env/requirements-lingua.txt` | `a8296bfa0aae4a0e1386e258f27cd429333ff2c5647e18d1f528a44f57aafea1` |
 | `bench/personality/CHEAPEST_PASS.md` | `4fa87e00bede8aa567983a51a6510f52518ae832588afc23775f7dd193a12c6b` |
-| `bench/personality/GATES.md` | `3a1f5a6f34d5d5acbc2e691f9e5cec2a7742bb3a42f51df964deb798b15864f1` |
+| `bench/personality/GATES.md` | `42492551a4e6fa603bd30f6f5aa4480da14e0e187786e23525355f8b437cdcdf` |
 | `bench/personality/GATES_SPEC.md` | `7d5b2e54aba1b5dbc82ed556bc864ee23a92952d16ee0e298583c8ec6d622c2b` |
 | `bench/personality/answer_agy.py` | `8f6042e7a2459e498222816c3535e828390db0e968f8597cdb9f3448dca4217a` |
 | `bench/personality/answer_dsh.py` | `86dca4ebbac14705631d37d981352b77b472ac8ff011e3ab27cc5a2709393d06` |
@@ -71,7 +71,7 @@ Computed from the commit's own blobs (`git show <commit>:<path>`); line endings 
 | `bench/personality/judge.py` | `14c8322037a125543c65619b2541aecacf16eb9fa56b100a03609e1fdbc4ace2` |
 | `bench/personality/judge_agy.py` | `05675825e04b564614fe331f63a25bb1de65aa3b37887f7f0ac546a0780be716` |
 | `bench/personality/ledger.py` | `db610d69765b063cbde03644503f7b6714cc4e7410e3fec77f760b79d3acd3e3` |
-| `bench/personality/measure_all.py` | `7969e8b739db5d834c51900e4b20d1851e5ad81b32d3d2fde4341aaefbda4e7c` |
+| `bench/personality/measure_all.py` | `58b9498a1272b5b513d00af1eb511bbcc777968c4dd5fac50c540c02e8566487` |
 | `bench/personality/metrics.py` | `7a791cfdb8b1e127ff29946d3f2e0ec1051c604b61f388bdc8a333297971dcfc` |
 | `bench/personality/plan_cost.py` | `b9428be79a010d5d8a7538a8069efcdc83643856063321ddc0a9aec57c85fb91` |
 | `bench/personality/samples.py` | `761fa984443dfcfd41adb7edb7bdf9b44161dbbda71c151fb5a5d81b00c22ca7` |
@@ -79,40 +79,6 @@ Computed from the commit's own blobs (`git show <commit>:<path>`); line endings 
 | `bench/personality/spend.py` | `ae553569b7f2ed15941a7c29901777690190b07041ca55295dd7359e6353b5dc` |
 | `bench/personality/traits.json` | `8c474cfc7794969b390b07de56be02cb73773dae0daa4770d31c648a6a28c039` |
 | `bench/personality/verify.py` | `ef8225ca63c7e248900c7e9a2f9ba880bd3e0a5d492cb99043c0f1e85556c967` |
-| `docs/dsh-ab/WIN_CRITERIA.md` | `4121b286662755f55ee73f5d15c1d4025e73640417a0a6f1fbfd44c654a3939e` |
-| `docs/dsh-ab/round-three/verdict.py` | `8e85a5655ab957662d1b311e0ee94e105f606d15ee9baddd1ccaa9bbbcac1595` |
-
-### Stage 1b's table, for the record
-
-Computed from the commit's own blobs (`git show <commit>:<path>`); line endings as stored. VERIFIER_FREEZE.md is the one file left out.
-
-| file | sha256 |
-|---|---|
-| `bench/env/requirements-lingua.txt` | `a8296bfa0aae4a0e1386e258f27cd429333ff2c5647e18d1f528a44f57aafea1` |
-| `bench/personality/CHEAPEST_PASS.md` | `4fa87e00bede8aa567983a51a6510f52518ae832588afc23775f7dd193a12c6b` |
-| `bench/personality/GATES.md` | `3e8186a3f6c7e893e9cf0b9809d479884ab8c272761b974b8b8a8bfcf3d0f805` |
-| `bench/personality/GATES_SPEC.md` | `7d5b2e54aba1b5dbc82ed556bc864ee23a92952d16ee0e298583c8ec6d622c2b` |
-| `bench/personality/answer_agy.py` | `8f6042e7a2459e498222816c3535e828390db0e968f8597cdb9f3448dca4217a` |
-| `bench/personality/answer_dsh.py` | `86dca4ebbac14705631d37d981352b77b472ac8ff011e3ab27cc5a2709393d06` |
-| `bench/personality/answer_raw.py` | `dd3c3952b4701cb55e0da9ee56d0f9948d587761062a2e8415f70f4d3daed571` |
-| `bench/personality/answer_stats.py` | `6387d34d15356c0e6cb8ec8e9ed2acdf3521a5208ed46ccb53a9e8b70b2b1387` |
-| `bench/personality/bt.py` | `910f03a876a1e93b9ac05bef2d062ee83a73eb9bb65c6a52106de2e83d765862` |
-| `bench/personality/calibrate.py` | `d47690a40158955cd88ad54e2c26c246be0521be47bb0f9dcb91fcaa726b5fd8` |
-| `bench/personality/dsh/llm-batch.mjs` | `14375526a9d59e56fb1b6793f15ec66d758414afe0ded0cf904aa109c86e2259` |
-| `bench/personality/dshbatch.py` | `e61ebf9cff76937a5de7299c7a8af9b3c4a4be1d0fe726b8c9b0606fe06e73f0` |
-| `bench/personality/filter_questions.py` | `0795e248691ac229e9fff7f3890da4e9ddfb07a2619629ddb83d6fdbe18647f6` |
-| `bench/personality/gen_questions.py` | `2b7d1c61ed5d364c1c06721331a4b9b62de9af466c978c47e4789ae6bfcadf5d` |
-| `bench/personality/judge.py` | `14c8322037a125543c65619b2541aecacf16eb9fa56b100a03609e1fdbc4ace2` |
-| `bench/personality/judge_agy.py` | `05675825e04b564614fe331f63a25bb1de65aa3b37887f7f0ac546a0780be716` |
-| `bench/personality/ledger.py` | `db610d69765b063cbde03644503f7b6714cc4e7410e3fec77f760b79d3acd3e3` |
-| `bench/personality/measure_all.py` | `ea9a71058eab13de59f4e7c7e70e56c40dccaf7fb3007821a0d7d7565204a1b0` |
-| `bench/personality/metrics.py` | `7a791cfdb8b1e127ff29946d3f2e0ec1051c604b61f388bdc8a333297971dcfc` |
-| `bench/personality/plan_cost.py` | `b9428be79a010d5d8a7538a8069efcdc83643856063321ddc0a9aec57c85fb91` |
-| `bench/personality/samples.py` | `a86bc498338a0c1586141b63b953eae02af5422b96707c23e7619be4b7b4ac00` |
-| `bench/personality/seeds.json` | `e3f780648541d42fcf8e81b3c20131344bbc49c724dfc9f0ce2da1f1e9afdc92` |
-| `bench/personality/spend.py` | `ae553569b7f2ed15941a7c29901777690190b07041ca55295dd7359e6353b5dc` |
-| `bench/personality/traits.json` | `8c474cfc7794969b390b07de56be02cb73773dae0daa4770d31c648a6a28c039` |
-| `bench/personality/verify.py` | `ee60c0d74213b25a9f9dba09bdeb1c00f8fd1666816a409e856d67798e64468e` |
 | `docs/dsh-ab/WIN_CRITERIA.md` | `4121b286662755f55ee73f5d15c1d4025e73640417a0a6f1fbfd44c654a3939e` |
 | `docs/dsh-ab/round-three/verdict.py` | `8e85a5655ab957662d1b311e0ee94e105f606d15ee9baddd1ccaa9bbbcac1595` |
 
