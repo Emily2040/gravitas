@@ -2,7 +2,7 @@
 
 Owner: the verifier owner (builds nothing in this benchmark). Gates: `GATES.md`. This file records the freeze and says how it is checked. `verify.py` reads the current freeze commit from the line below; D4 fails as "metric missing" until it is filled in.
 
-Stage-1 freeze commit: recorded in the next commit of this file
+Stage-1 freeze commit: `94b1802525a59dc2e29e45cb9a84de8232fc2fdd`
 
 ## History
 
@@ -10,7 +10,7 @@ Stage-1 freeze commit: recorded in the next commit of this file
 - **Stage 1b, 2026-10-25:** commit `35518d190e30f5682bacc2008be2a34744d68f4d` (recorded in 09f0653), a re-freeze before any held-out run, after the second cheapest-pass review (`bench/reviews/CHEAPEST_PASS_2.md`, 6ec2d96) and Emily's approval of lingua-py. Decisions on every review item are in GATES.md. Superseded by stage 1c; nothing on held-out had run.
 - **Stage 1c, 2026-10-26:** commit `cc42b583d8b8a694944733c1aa6694384c99bd9f`, the D3 amendment, written before the stage-2 freeze and before any held-out result, on the coordinator's instruction. Text and reasons in GATES.md, "D3 amendment". Superseded by stage 1d; nothing on held-out had run.
 - **Stage 1d, 2026-10-26:** D5 compared the usage records since the pilots with the balance drop since stage 2, two different spans, so records deleted after stage 2 could hide spend. D5 now takes the larger of the records since the pilots and the records at stage 2 (`deepseek_records_usd_at_stage2`, measured by the verifier's own instrument when the data are frozen) plus the balance drop. Found while writing the stage-2 record, before it was committed. The stage-2 data record (165dcc7) was written against this verifier and needs no change for later stages, which touch no data. Commit `05b278ade19c4e11d88a0b4217a43b06f96c245a`.
-- **Stage 1e, 2026-10-26 (this freeze):** the D5 amendment. Emily raised the DeepSeek cap ("Yes that's ok spend more", in answer to a projection of 57-73 USD against 50); the coordinator operates it as 60 USD. New gate D5a (0 to 60 USD, 0 peak launches); the original D5 (50 USD) is reported with its result and marked SUPERSEDED once measured. Made before any held-out run; cal0 had been built and exported, nothing judged. Text in GATES.md, "D5 amendment". The commit is named at the top.
+- **Stage 1e, 2026-10-26 (this freeze):** the D5 amendment. Emily raised the DeepSeek cap ("Yes that's ok spend more", in answer to a projection of 57-73 USD against 50); the coordinator operates it as 60 USD. New gate D5a (0 to 60 USD, 0 peak launches); the original D5 (50 USD) is reported with its result and marked SUPERSEDED once measured. Made before any held-out run; cal0 had been built and exported, nothing judged. Text in GATES.md, "D5 amendment". Commit `94b1802525a59dc2e29e45cb9a84de8232fc2fdd`.
 
 ## What changed in stage 1c (the D3 amendment)
 
@@ -49,7 +49,7 @@ Stage-1 freeze commit: recorded in the next commit of this file
 
 - On the real data, P1 passes for ql and native; every other gate fails as missing until stage 2, as it should.
 
-## Frozen files and their sha256 at the freeze commit (stage 1d)
+## Frozen files and their sha256 at the freeze commit (stage 1e)
 
 Computed from the commit's own blobs (`git show <commit>:<path>`); line endings as stored. VERIFIER_FREEZE.md is the one file left out. Earlier stages' tables are in this file's git history.
 
@@ -57,7 +57,7 @@ Computed from the commit's own blobs (`git show <commit>:<path>`); line endings 
 |---|---|
 | `bench/env/requirements-lingua.txt` | `a8296bfa0aae4a0e1386e258f27cd429333ff2c5647e18d1f528a44f57aafea1` |
 | `bench/personality/CHEAPEST_PASS.md` | `4fa87e00bede8aa567983a51a6510f52518ae832588afc23775f7dd193a12c6b` |
-| `bench/personality/GATES.md` | `42492551a4e6fa603bd30f6f5aa4480da14e0e187786e23525355f8b437cdcdf` |
+| `bench/personality/GATES.md` | `a39df9a566aff942c13e55adba6444e3bb54d84477724835debde284d5b253ac` |
 | `bench/personality/GATES_SPEC.md` | `7d5b2e54aba1b5dbc82ed556bc864ee23a92952d16ee0e298583c8ec6d622c2b` |
 | `bench/personality/answer_agy.py` | `8f6042e7a2459e498222816c3535e828390db0e968f8597cdb9f3448dca4217a` |
 | `bench/personality/answer_dsh.py` | `86dca4ebbac14705631d37d981352b77b472ac8ff011e3ab27cc5a2709393d06` |
@@ -79,7 +79,7 @@ Computed from the commit's own blobs (`git show <commit>:<path>`); line endings 
 | `bench/personality/seeds.json` | `e3f780648541d42fcf8e81b3c20131344bbc49c724dfc9f0ce2da1f1e9afdc92` |
 | `bench/personality/spend.py` | `ae553569b7f2ed15941a7c29901777690190b07041ca55295dd7359e6353b5dc` |
 | `bench/personality/traits.json` | `8c474cfc7794969b390b07de56be02cb73773dae0daa4770d31c648a6a28c039` |
-| `bench/personality/verify.py` | `ef8225ca63c7e248900c7e9a2f9ba880bd3e0a5d492cb99043c0f1e85556c967` |
+| `bench/personality/verify.py` | `4ae32ff94b3534c674cbcdf007e526b1777d6de413dda5ab99586f2d49ddb727` |
 | `docs/dsh-ab/WIN_CRITERIA.md` | `4121b286662755f55ee73f5d15c1d4025e73640417a0a6f1fbfd44c654a3939e` |
 | `docs/dsh-ab/round-three/verdict.py` | `8e85a5655ab957662d1b311e0ee94e105f606d15ee9baddd1ccaa9bbbcac1595` |
 
