@@ -2,7 +2,7 @@
 
 Owner: the verifier owner (builds nothing in this benchmark). Gates: `GATES.md`. This file records the freeze and says how it is checked. `verify.py` reads the current freeze commit from the line below; D4 fails as "metric missing" until it is filled in.
 
-Stage-1 freeze commit: recorded in the next commit of this file
+Stage-1 freeze commit: `b9a4a283bdc629dca20f63c7ec7d8edc09432ad2`
 
 ## History
 
@@ -12,7 +12,7 @@ Stage-1 freeze commit: recorded in the next commit of this file
 - **Stage 1d, 2026-10-26:** D5 compared the usage records since the pilots with the balance drop since stage 2, two different spans, so records deleted after stage 2 could hide spend. D5 now takes the larger of the records since the pilots and the records at stage 2 (`deepseek_records_usd_at_stage2`, measured by the verifier's own instrument when the data are frozen) plus the balance drop. Found while writing the stage-2 record, before it was committed. The stage-2 data record (165dcc7) was written against this verifier and needs no change for later stages, which touch no data. Commit `05b278ade19c4e11d88a0b4217a43b06f96c245a`.
 - **Stage 1e, 2026-10-26:** the D5 amendment. Emily raised the DeepSeek cap ("Yes that's ok spend more", in answer to a projection of 57-73 USD against 50); the coordinator operates it as 60 USD. New gate D5a (0 to 60 USD, 0 peak launches); the original D5 (50 USD) is reported with its result and marked SUPERSEDED once measured. Made before any held-out run; cal0 had been built and exported, nothing judged. Text in GATES.md, "D5 amendment". Commit `94b1802525a59dc2e29e45cb9a84de8232fc2fdd`. Superseded by stage 1f; nothing on held-out had run.
 - **Stage 1f, 2026-10-26:** the K0 amendment. K0 failed on cal0 on one trait, Sycophantic (ties: DeepSeek 13 of 15, Claude 15 of 15), because cal15 holds no question that invites it; DeepSeek's tuning verdicts on the final wording tie Sycophantic 0.83 over all questions and 0.38 where it is invited. No definition changed and no cal1: a provoked calibration (calp, 88 tuning questions, both judges) and K0a replace K0's tie ceiling; B4 and B5t, which would have failed the same way on held-out, are changed before any held-out judging; hoc-syco adds 14 Claude verdicts on Sycophantic. The original K0 stays in the report, FAIL, SUPERSEDED by K0a. Text in GATES.md, "K0 amendment". Commit `201d20e532104bdede9ff058f0d687b4f9ce8be0`. **Reverted in part** before any held-out launch: K0a, the B4 change and the B5t change loosened gates with results in view (the independent review and my own disclosure agree), so K0, B4 and B5t are back in their stage-1e form and K0's FAIL stands; calp and hoc-syco are reported only. The stage-1g freeze follows. Text in GATES.md, "Stage 1f, and its revert". Revert commit `3dd1da536f29af3b27afab437a3cc812db6a5fc0`.
-- **Stage 1g, 2026-10-31 (this freeze, the last):** tightening only, on the coordinator's approval of four items from the independent review of stage 1f, made before any held-out answer launch. D4 gains a freeze guard (a `verifier-freeze` ledger line; no commit to the frozen files, GATES.md, VERIFIER_FREEZE.md or `bench/freeze` after the first held-out answer launch, BALANCE_AFTER.json aside; FREEZE_DATA.json equal to its first commit); D5a checks both balance readings; route() never treats a missing input as trusted (landed with the revert); new gate D7 fails any judging step on a held-out question outside the gated frozen sets. 236 gates. After this freeze nothing in the verifier changes. Text in GATES.md, "Stage 1g". The commit is named at the top.
+- **Stage 1g, 2026-10-31 (this freeze, the last):** tightening only, on the coordinator's approval of four items from the independent review of stage 1f, made before any held-out answer launch. D4 gains a freeze guard (a `verifier-freeze` ledger line; no commit to the frozen files, GATES.md, VERIFIER_FREEZE.md or `bench/freeze` after the first held-out answer launch, BALANCE_AFTER.json aside; FREEZE_DATA.json equal to its first commit); D5a checks both balance readings; route() never treats a missing input as trusted (landed with the revert); new gate D7 fails any judging step on a held-out question outside the gated frozen sets. 236 gates. After this freeze nothing in the verifier changes. Text in GATES.md, "Stage 1g". Commit `b9a4a283bdc629dca20f63c7ec7d8edc09432ad2`.
 
 ## What changed in stage 1g (the last freeze)
 
@@ -68,7 +68,7 @@ Stage-1 freeze commit: recorded in the next commit of this file
 
 - On the real data, P1 passes for ql and native; every other gate fails as missing until stage 2, as it should.
 
-## Frozen files and their sha256 at the freeze commit (stage 1f)
+## Frozen files and their sha256 at the freeze commit (stage 1g)
 
 Computed from the commit's own blobs (`git show <commit>:<path>`); line endings as stored. VERIFIER_FREEZE.md is the one file left out. Earlier stages' tables are in this file's git history.
 
@@ -76,7 +76,7 @@ Computed from the commit's own blobs (`git show <commit>:<path>`); line endings 
 |---|---|
 | `bench/env/requirements-lingua.txt` | `a8296bfa0aae4a0e1386e258f27cd429333ff2c5647e18d1f528a44f57aafea1` |
 | `bench/personality/CHEAPEST_PASS.md` | `4fa87e00bede8aa567983a51a6510f52518ae832588afc23775f7dd193a12c6b` |
-| `bench/personality/GATES.md` | `c0c0b95257a72f8844d632d9e8d5fcdad6e43d2cda6794691ab060a8473e4a07` |
+| `bench/personality/GATES.md` | `d44499781f70d65d7ed9c3fe8ac5a31999dfc53c4702bb3f75fea8bbf72f0770` |
 | `bench/personality/GATES_SPEC.md` | `7d5b2e54aba1b5dbc82ed556bc864ee23a92952d16ee0e298583c8ec6d622c2b` |
 | `bench/personality/answer_agy.py` | `8f6042e7a2459e498222816c3535e828390db0e968f8597cdb9f3448dca4217a` |
 | `bench/personality/answer_dsh.py` | `86dca4ebbac14705631d37d981352b77b472ac8ff011e3ab27cc5a2709393d06` |
@@ -91,14 +91,14 @@ Computed from the commit's own blobs (`git show <commit>:<path>`); line endings 
 | `bench/personality/judge.py` | `14c8322037a125543c65619b2541aecacf16eb9fa56b100a03609e1fdbc4ace2` |
 | `bench/personality/judge_agy.py` | `05675825e04b564614fe331f63a25bb1de65aa3b37887f7f0ac546a0780be716` |
 | `bench/personality/ledger.py` | `db610d69765b063cbde03644503f7b6714cc4e7410e3fec77f760b79d3acd3e3` |
-| `bench/personality/measure_all.py` | `b6a158c5388a1c79419a0808d39286edd47398f9d7841507f493bd37450949cf` |
+| `bench/personality/measure_all.py` | `3b4e0f1ba02dee24ab1b7b7f77c78b2678a015aac5d20bc1c5064584ef0c82ff` |
 | `bench/personality/metrics.py` | `7a791cfdb8b1e127ff29946d3f2e0ec1051c604b61f388bdc8a333297971dcfc` |
 | `bench/personality/plan_cost.py` | `b9428be79a010d5d8a7538a8069efcdc83643856063321ddc0a9aec57c85fb91` |
-| `bench/personality/samples.py` | `e765f6073e16e57b7f3996abee7a2e91bfe625d566e134239b55f7efdb695a95` |
+| `bench/personality/samples.py` | `839cb2996cdc025a0af1f91f93778d4420f76fd126f3de8e8a8a81c071444e1b` |
 | `bench/personality/seeds.json` | `e3f780648541d42fcf8e81b3c20131344bbc49c724dfc9f0ce2da1f1e9afdc92` |
 | `bench/personality/spend.py` | `ae553569b7f2ed15941a7c29901777690190b07041ca55295dd7359e6353b5dc` |
 | `bench/personality/traits.json` | `8c474cfc7794969b390b07de56be02cb73773dae0daa4770d31c648a6a28c039` |
-| `bench/personality/verify.py` | `f7350b58b8b7952f3fe4578a372a9ea8d6cdbead64cb8bf271c1f5c8751e3db7` |
+| `bench/personality/verify.py` | `a91f0b5bc6360faaa582608bf0f5a9e608ac8d9f064e29b68def7c19901ba057` |
 | `docs/dsh-ab/WIN_CRITERIA.md` | `4121b286662755f55ee73f5d15c1d4025e73640417a0a6f1fbfd44c654a3939e` |
 | `docs/dsh-ab/round-three/verdict.py` | `8e85a5655ab957662d1b311e0ee94e105f606d15ee9baddd1ccaa9bbbcac1595` |
 
