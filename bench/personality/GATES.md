@@ -48,6 +48,8 @@ DeepSeek judges every held-out comparison (cheap, the tuning judge). Claude Sonn
 
 Results computed from Claude only have about 40 questions behind them, so their intervals are wide; C11 is not debiased (a count of questions); the A/A margins stay DeepSeek-measured.
 
+**A missing input never routes as trusted (stage 1g).** A trait with any B5t input missing (kappa, direction or lean) is UNRELIABLE, and so is every DeepSeek-sourced trait of a (platform, arm) whose B6b lean is missing, or any cell the routing did not produce. Their C metrics are then missing, never computed as if DeepSeek had passed.
+
 ## A. Question set: a fair, native, multilingual test never tuned on
 
 | id | question it stands for | measurement | bounds | source, or why one-sided |
@@ -126,14 +128,29 @@ Results computed from Claude only have about 40 questions behind them, so their 
 | D3 | One look at held-out, by one candidate confirmed in advance, no outside judge in tuning? | candidate names from answer folders, launches and jobs on held-out; first CONFIRM commit before the first held-out launch or build; its rule hashes equal the rule files; non-DeepSeek verdict rows on tuning questions outside the calibration sets; candidate jobs on the calibration slices | 1; true; true; 0; 0 | red-team N14, N10. Reported beside D3a; when D3a measures "not confirmed", D3 is printed as failing and SUPERSEDED |
 | D3a | Was exactly one candidate designed and tuned under a recorded decision rule, and is the held-out outcome the one that rule gives? | see "D3 amendment" below | all true; 0; 0 | D3 amendment, 2026-10-26 |
 | D3r | Was the decision rule recorded before any of the candidate's tuning verdicts could exist? | ledger time of the rule's `rule-decision-rule` line against the candidate tuning set's `judge-build` line | rule first | D3 amendment; one-sided |
-| D4 | Is this the verifier, and are these the data and profiles, that were frozen? | `git diff <freeze commit>` over `bench/personality`, `bench/env/requirements-lingua.txt`, WIN_CRITERIA.md and round three's verdict.py, plus untracked files; sha256 of every stage-2 data file (with `overlays/lean.yml`); the ledger's first N lines; agy home config trees; external files (DSH profiles, lingua's installed RECORD); every DeepSeek judge call on deepseek-flash | 0; 0; true; 0; 0; true | red-team D4; review 2 |
+| D4 | Is this the verifier, and are these the data and profiles, that were frozen? | `git diff <freeze commit>` over `bench/personality`, `bench/env/requirements-lingua.txt`, WIN_CRITERIA.md and round three's verdict.py, plus untracked files; sha256 of every stage-2 data file (with `overlays/lean.yml`); the ledger's first N lines; agy home config trees; external files (DSH profiles, lingua's installed RECORD); every DeepSeek judge call on deepseek-flash. Stage 1g: the commit VERIFIER_FREEZE.md names equals the last `verifier-freeze` ledger line before the first held-out answer launch; the commits touching those paths or `bench/freeze` (BALANCE_AFTER.json aside) dated, by author or committer time, after that launch; FREEZE_DATA.json on disk against its first commit (line endings aside) | 0; 0; true; 0; 0; true; true; 0; true | red-team D4; review 2; stage 1g (review of stage 1f, finding 1): a re-freeze after held-out results, or an edited data record, otherwise passes D4 once the freeze line is updated |
 | D4cand | Is each candidate agy home its base home apart from the rule file? | tree hash of each candidate home's `.gemini/config` without the rule, against the base home's | true | review 2 |
 | D5 | Did DeepSeek stay inside the original 50 USD cap, off-peak? (reported, superseded by D5a once measured) | total spend = the larger of the usage records since the pilots (batches and DSH streams at off-peak prices, plus web calls) and the records at stage 2 plus the account balance drop since stage 2 (Emily's readings: stage 2 and BALANCE_AFTER.json); DSH launches and DeepSeek judge runs at peak hours | 0 to 50 USD; 0 | Emily's lean plan; review 2 (the balance is the one instrument nobody's records can undercount); stage 1d (both terms cover the same span) |
 | D6 | One Gemini 4 Argon model and one agy version? | model in every gm run's init event; versions in every agy home's per-run logs after stage 2 | one model starting gemini-4-argon; one version | brief; review 2 |
 
-| D5a | Did DeepSeek stay inside Emily's raised cap, off-peak? | as D5 | 0 to 60 USD; 0 peak launches | D5 amendment, 2026-10-26 (below) |
+| D5a | Did DeepSeek stay inside Emily's raised cap, off-peak? | as D5; stage 1g: the balance before in FREEZE_DATA.json equals the last `balance-reading` ledger line before the stage-2 commit (today 80.0 USD, 12:26:49); BALANCE_AFTER.json equals its last commit (line endings aside) and holds a finite `usd` and a non-empty `source` | 0 to 60 USD; 0 peak launches; true; true; true | D5 amendment, 2026-10-26 (below); stage 1g (review of stage 1f, finding 5): both balance readings were numbers in files nobody compared |
+| D7 | Was every judging step that touched a held-out question one of the frozen sets? | judging folders (every row with a job), judge batch files, judge ledger lines (a ledger-only step counts unless its questions file holds no held-out question) and agy judge runs, each against the gated frozen sets; a reported-only set (calp, hoc-syco) may hold only its own frozen held-out jobs, with no DeepSeek verdict or batch | 0 | stage 1g (review of stage 1f, finding 8): a "peek" set under another name passed every gate; one-sided (a count of violations) |
 
-Gates in all: 235 (`verify.py --list`).
+Gates in all: 236 (`verify.py --list`).
+
+## Stage 1g (2026-10-31, before any held-out launch): tightening only, the last freeze
+
+The coordinator approved four changes from the independent review of stage 1f, each of which makes passing harder, and said that after them nothing in the verifier changes:
+1. **Freeze guard (D4).** A `verifier-freeze` ledger line names the stage-1g freeze commit. D4 fails if VERIFIER_FREEZE.md names another commit than the last such line before the first held-out answer launch, if any commit touching the frozen files, GATES.md, VERIFIER_FREEZE.md or `bench/freeze` (BALANCE_AFTER.json aside) is dated after that launch, or if FREEZE_DATA.json differs from its first commit.
+5. **Balance readings (D5a).** The balance before must equal the ledger's reading; BALANCE_AFTER.json must be committed and say where the figure came from.
+7. **Missing routing inputs (route()).** Missing makes the C metric missing, never DeepSeek-trusted. This landed in the revert commit, which restored route().
+8. **No peek sets (D7).** A judging step on a held-out question under a name that is not a gated frozen set fails.
+
+Each has a red case in the self-tests: `verify.py --self-test` for the gates (and every gate still fails on empty metrics), and `measure_all.py --self-test` for the measurements, on a temporary git repo, ledger and data folder.
+
+**The review's other items.** Findings 2, 3 and 4 and notes 10, 14 and 15 concern K0a, the B4 change and the B5t change, which are reverted. Finding 6 (P1.calp, a labeller's Grep on its own input) no longer counts: calp is reported only. Note 9: calp's DeepSeek half is not run. Notes 11, 12, 13, 16 and 17 change no gate; they are known limits below.
+
+## D5 amendment (2026-10-26, before any held-out run)
 
 ## Stage 1f, and its revert (2026-10-26, before any held-out launch)
 
@@ -147,8 +164,6 @@ Gates in all: 235 (`verify.py --list`).
 - B5t is kappa and direction on the held-out check alone, direction over at least 30 two-sided pairs among 80 comparisons per trait (base only). At cal0's rates, expect Truthful (about 27 two-sided pairs), and possibly Answer First (about 32), to fail as missing direction, and Sycophantic certainly.
 - Sycophantic is reported as FAIL and dropped, and Transparency (which has Sycophantic as a member) is reported unverified. That is done in the write-up; the verifier drops nothing.
 - **calp and hoc-syco are reported only.** They stay frozen sets and samples so their numbers can be read, but no gate's pass or fail depends on them: no B1, D1.judging, P1, P2 or S gate is built for them, their judged-text check is noted apart from N11, and calp's DeepSeek half is not run. Two stage-1f measurements stay because they protect rather than loosen: calp's Claude rows on tuning questions are exempt from N14 (as cal0's are), and where calp's Claude labels exist P2 requires them after the candidate's decision.
-
-## D5 amendment (2026-10-26, before any held-out run)
 
 **Why.** D5 bounded DeepSeek spend at 50 USD, Emily's cap for the lean plan. On 2026-10-26, with 29.94 USD spent and the plan projected at 57 to 73 USD, the coordinator asked her about going over 50 and recommended 60. She answered "Yes that's ok spend more". The coordinator operates that as a 60 USD cap (`spend.py --cap 60`, and ask her before passing 60), recorded in the shared notes before her stage-2 balance reading and before any held-out run.
 
@@ -282,3 +297,4 @@ Applied overall and per language where it can be measured: 1 (C1, C2, C8), 2 (N1
 - Peak-hour use is checked at launch level; the cap itself is checked against the account balance.
 - N7 on Gemini (8 open questions) and A9 per language (12 pairs) are weak gates and are called so.
 - The B5 and K0 kappa floor rests on a 29-comparison pilot on the pair C uses.
+- From the stage-1f review (notes that change no gate): the "invite" class is the question's drafting label, never compared with Claude's question labels (note 11); D3a was written after the rejection it judges, the rejection is robust (Admits Uncertainty's whole interval below 0), D3r's anchor is the tuning build rather than the earlier rule freeze, and the base-only exemption does not depend on D3r (note 12); the 60 USD cap was set when only the base-only spend branch remained (note 13); P2 orders each hoc import only against its own ho run, so swap-ds verdicts on hoc40 questions can exist first (note 17).

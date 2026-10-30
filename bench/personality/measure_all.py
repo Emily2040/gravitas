@@ -642,9 +642,187 @@ def compute(boot=1000):
     step(o, measure_spend, o, ledger, F)
     step(o, measure_provenance, o, ledger, cand_name, jobs_by_set)
     step(o, measure_order, o, ledger, set(sample_ids["heldout"]), jobs_by_set)
+    ho_all = {r["id"] for r in Q["heldout"]}
+    step(o, measure_freeze_guard, o, ledger, ho_all)  # stage 1g, item 1
+    step(o, measure_unlisted, o, ledger, ho_all, Sx, cand_arms, base_only)  # stage 1g, item 8
     step(o, measure_versions, o, lists, cand_name)
     step(o, measure_frozen_inputs, o, cand_name)
     return o
+
+
+# ------------------------------------------------------------------- stage 1g: freeze guard (D4, D5a, D7)
+# Paths whose commits after the first held-out answer launch fail D4 (stage 1g, item 1). The one
+# exception is BALANCE_AFTER.json, read after the last run.
+GUARD_PATHS = ["bench/personality", "bench/env/requirements-lingua.txt", "docs/dsh-ab/WIN_CRITERIA.md",
+               "docs/dsh-ab/round-three/verdict.py", "bench/freeze"]
+GUARD_EXEMPT = {"bench/freeze/BALANCE_AFTER.json"}
+
+
+def git_bytes(*args, cwd=None):
+    try:
+        r = subprocess.run(["git", "-C", str(cwd or REPO)] + list(args), capture_output=True, timeout=60)
+        return r.stdout if r.returncode == 0 else None
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+
+
+def same_text(blob, path):
+    """Committed bytes against a file on disk, line endings aside (the repo checks JSON out as LF,
+    and a CRLF copy written by hand would otherwise differ from its own commit)."""
+    path = Path(path)
+    if blob is None or not path.exists():
+        return None
+    return blob.replace(b"\r\n", b"\n") == path.read_bytes().replace(b"\r\n", b"\n")
+
+
+def first_heldout_launch(ledger, heldout_ids):
+    """The earliest held-out answer launch: its start, or its ledger line's time if earlier."""
+    ts = []
+    for r in ledger:
+        if r.get("kind") == "answer-launch" and r.get("qid") in heldout_ids:
+            ts += [t for t in (r.get("start"), parse_time(r.get("time"))) if finite(t)]
+    return min(ts) if ts else None
+
+
+def freeze_guard(repo, ledger, heldout_ids, named_commit):
+    """Item 1. {freeze_line_ok, commits_after_first_launch, freeze_data_unchanged} plus notes.
+    - the last `verifier-freeze` ledger line before the first held-out answer launch (or the last
+      one, while there is none) names the commit VERIFIER_FREEZE.md names;
+    - no commit touching GUARD_PATHS (BALANCE_AFTER.json aside) has an author or commit date after
+      the first held-out answer launch; with no launch yet, none can, and the count is 0;
+    - bench/freeze/FREEZE_DATA.json on disk equals the blob of its first commit."""
+    out = {}
+    t1 = first_heldout_launch(ledger, heldout_ids)
+    out["first_heldout_launch"] = t1
+    lines = [(parse_time(r.get("time")), r.get("commit")) for r in ledger if r.get("kind") == "verifier-freeze"]
+    lines = sorted((t, c) for t, c in lines if t is not None and (t1 is None or t < t1))
+    out["freeze_line_ok"] = (lines[-1][1] == named_commit) if named_commit and lines else (False if named_commit else None)
+    log = git("log", "--format=%H %at %ct", "--", *GUARD_PATHS, cwd=repo)
+    if log is None:
+        out["commits_after_first_launch"] = None
+    else:
+        after = []
+        for line in log.splitlines():
+            parts = line.split()
+            if len(parts) != 3 or t1 is None or max(int(parts[1]), int(parts[2])) <= t1:
+                continue
+            names = git("diff-tree", "-r", "-m", "--no-commit-id", "--name-only", parts[0], cwd=repo) or ""
+            touched = {f for f in names.splitlines() if f.strip() and f not in GUARD_EXEMPT
+                       and any(f == g or f.startswith(g + "/") for g in GUARD_PATHS)}
+            if touched:
+                after.append(parts[0][:10])
+        out["commits_after_first_launch"] = len(after)
+        out["commits_after_list"] = after
+    rel = "bench/freeze/FREEZE_DATA.json"
+    first = git("log", "--format=%H", "--reverse", "--", rel, cwd=repo)
+    h = first.split()[0] if first and first.strip() else None
+    blob = git_bytes("show", f"{h}:{rel}", cwd=repo) if h else None
+    out["freeze_data_unchanged"] = same_text(blob, Path(repo) / rel)
+    return out
+
+
+def measure_freeze_guard(o, ledger, heldout_ids):
+    g = freeze_guard(REPO, ledger, heldout_ids, freeze_commit())
+    for k in ("freeze_line_ok", "commits_after_first_launch", "freeze_data_unchanged"):
+        o.put(f"D4.{k}", g.get(k))
+    o.note("D4.first_heldout_launch", g.get("first_heldout_launch"))
+    o.note("D4.commits_after_list", g.get("commits_after_list"))
+
+
+def balance_checks(repo, ledger, F, t2, after_path):
+    """Item 5. The balance before in the stage-2 record equals the last `balance-reading` ledger line
+    before the stage-2 commit; BALANCE_AFTER.json equals its last commit and names its source."""
+    out = {}
+    before = (F or {}).get("deepseek_balance_before_usd")
+    pre = [r for r in ledger if r.get("kind") == "balance-reading" and t2 is not None and parse_time(r.get("time")) is not None
+           and parse_time(r.get("time")) < t2]
+    last = max(pre, key=lambda r: parse_time(r.get("time"))) if pre else None
+    if F is None or t2 is None:
+        out["balance_before_ok"] = None
+    else:
+        out["balance_before_ok"] = bool(last is not None and finite(before) and finite(last.get("usd")) and abs(before - last["usd"]) < 1e-9)
+    after_path = Path(after_path)
+    if not after_path.exists():
+        out["balance_after_committed"] = out["balance_after_source"] = None
+        return out
+    rel = after_path.resolve().relative_to(Path(repo).resolve()).as_posix()
+    h = git("log", "-1", "--format=%H", "--", rel, cwd=repo)
+    h = h.strip() if h else None
+    blob = git_bytes("show", f"{h}:{rel}", cwd=repo) if h else None
+    out["balance_after_committed"] = bool(same_text(blob, after_path))
+    try:
+        doc = json.loads(after_path.read_text(encoding="utf-8"))
+    except ValueError:
+        doc = {}
+    src = doc.get("source") if isinstance(doc, dict) else None
+    out["balance_after_source"] = isinstance(src, str) and bool(src.strip()) and finite(doc.get("usd"))
+    return out
+
+
+def unlisted_heldout(data, ledger, heldout_ids, gated, listed, recipe_of):
+    """Item 8. Sources (judging folders, judge batch files, judge ledger lines, agy judge runs) that
+    hold a job on a held-out question without being a gated frozen set. A listed but ungated set
+    (reported only, or the unused calibration set) may hold held-out jobs only if they are in its
+    frozen recipe and no DeepSeek verdict or batch exists for it. Returns the offending sources."""
+    data = Path(data)
+    bad = set()
+    qid = lambda job: str(job).split("|", 1)[0]
+
+    def jobs_in(name):
+        ids = set()
+        d = data / "judging" / name
+        for f in d.glob("*.jsonl") if d.is_dir() else []:
+            for r in jl(f) or []:
+                if isinstance(r, dict) and r.get("job"):
+                    ids.add(str(r["job"]))
+        for f in (data / "batches").glob(f"judge-{name}.*.jsonl"):
+            for r in jl(f) or []:
+                if isinstance(r, dict) and r.get("id"):
+                    ids.add(str(r["id"]))
+        return ids
+
+    def ds_exists(name):
+        return (data / "judging" / name / "deepseek.jsonl").exists() or any((data / "batches").glob(f"judge-{name}.*.jsonl"))
+
+    names = {d.name for d in (data / "judging").glob("*") if d.is_dir()}
+    for f in (data / "batches").glob("judge-*.jsonl"):
+        m = re.match(r"^judge-(.+?)\.(in|out)\.jsonl$", f.name)
+        if m:
+            names.add(m.group(1))
+    led_names = {r.get("name") for r in ledger if str(r.get("kind", "")).startswith("judge-") and r.get("kind") != "judge-agy-run" and r.get("name")}
+    for name in sorted(names | led_names):
+        if name in gated:
+            continue
+        ids = jobs_in(name)
+        if name in led_names and not (data / "judging" / name).is_dir() and not ids:
+            # a judging step in the ledger whose jobs are gone: count it unless its questions hold no held-out id
+            qf = [r.get("questions") for r in ledger if r.get("name") == name and r.get("kind") == "judge-build" and r.get("questions")]
+            qs = {x.get("id") for f in qf for x in (jl(f) or []) if isinstance(x, dict)} if qf else None
+            if qs is None or qs & heldout_ids:
+                bad.add(f"ledger:{name}")
+            continue
+        ho = {j for j in ids if qid(j) in heldout_ids}
+        if not ho:
+            continue
+        if name in listed and ho <= recipe_of(name) and not ds_exists(name):
+            continue
+        bad.add(name)
+    for r in ledger:
+        if r.get("kind") == "judge-agy-run" and qid(r.get("job")) in heldout_ids:
+            bad.add("judge-agy-run")
+    return sorted(bad)
+
+
+def measure_unlisted(o, ledger, heldout_ids, Sx, cand_arms, base_only):
+    def recipe_of(name):
+        spec = SM.SETS.get(name)
+        if not spec or spec["sample"] not in Sx:
+            return set()
+        exp = SM.expected_jobs(name, Sx[spec["sample"]]["rows"], cand_arms, skip_missing_cand=base_only)
+        return {j["job"] for j in exp or []}
+    bad = unlisted_heldout(DATA, ledger, heldout_ids, set(SM.gated_sets()), set(SM.SETS), recipe_of)
+    o.put("D7.unlisted_heldout_judging", len(bad))
+    o.note("D7.unlisted", bad)
 
 
 def step(o, fn, *args):
@@ -1969,6 +2147,9 @@ def measure_spend(o, ledger, F=None):
         except ValueError:
             after = None
     total = d5_total(usd if found else None, (F or {}).get("deepseek_records_usd_at_stage2"), before, after)
+    # Stage 1g, item 5: the two balance readings are themselves checked.
+    for k, v in balance_checks(REPO, ledger, F, stage2_time(), BALANCE_AFTER).items():
+        o.put(f"D5.{k}", v)
     o.note("D5.records_usd", usd if found else None)
     o.note("D5.balance_drop_usd", (before - after) if finite(before) and finite(after) else None)
     o.put("D5.deepseek_usd", total)
@@ -2345,7 +2526,115 @@ def self_test():
     pv = provoked_ties(vs, 6)
     assert pv["Sycophantic"] == (0.5, 6) and pv["Slop"] == (None, 0)
     assert provoked_ties(vs, 7)["Sycophantic"] == (None, 6)
+    self_test_1g()
     print("measure_all self-test: ok")
+
+
+def self_test_1g():
+    """Stage 1g red cases on real measurements: a temporary git repo, ledger and data folder."""
+    import tempfile
+    # Item 7: route() with nothing measured routes every cell to 'unreliable', never to DeepSeek.
+    o = Out()
+    R = route(o, [])
+    assert R and all(v == ("unreliable", 0.0) for v in R.values()), R
+    o = Out()
+    for t in TRAITS8:
+        o.put(f"B5t.{t}.kappa", 0.6)
+        o.put(f"B5t.{t}.direction", 0.9)
+        o.put(f"B5t.{t}.lean", 0.0)
+    o.put("B6b.deepseek.base.lean", 0.0)
+    R = route(o, [])
+    assert R[("deepseek", "base", "Slop")] == ("deepseek", 0.0) and R[("gemini", "base", "Slop")] == ("unreliable", 0.0), R
+    o.m.pop("B5t.Slop.lean")
+    assert route(o, [])[("deepseek", "base", "Slop")] == ("unreliable", 0.0)
+    o.put("B5t.Slop.lean", 0.0)
+    o.put("B5t.Truthful.kappa", 0.1)  # disagrees badly, Claude no friendlier: re-sourced, not unreliable
+    assert route(o, [])[("deepseek", "base", "Truthful")] == ("claude", 0.0)
+
+    def run(cwd, *args, date=None):
+        env = dict(os.environ)
+        if date is not None:
+            env.update(GIT_AUTHOR_DATE=f"{date} +0000", GIT_COMMITTER_DATE=f"{date} +0000")
+        subprocess.run(["git", "-C", str(cwd)] + list(args), check=True, capture_output=True, env=env)
+
+    def stamp(t):
+        return datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S%z")
+
+    with tempfile.TemporaryDirectory() as tmp:
+        repo = Path(tmp) / "repo"
+        (repo / "bench" / "personality").mkdir(parents=True)
+        (repo / "bench" / "freeze").mkdir(parents=True)
+        run(repo, "init", "-q")
+        run(repo, "config", "user.email", "t@example.com")
+        run(repo, "config", "user.name", "t")
+        fd = repo / "bench" / "freeze" / "FREEZE_DATA.json"
+        fd.write_text('{"deepseek_balance_before_usd": 80.0}\n', encoding="utf-8", newline="\n")
+        run(repo, "add", "-A")
+        run(repo, "commit", "-q", "-m", "stage 2", date=1790000500)
+        (repo / "bench" / "personality" / "verify.py").write_text("x = 1\n", encoding="utf-8", newline="\n")
+        run(repo, "add", "-A")
+        run(repo, "commit", "-q", "-m", "freeze", date=1790001000)
+        c1 = subprocess.run(["git", "-C", str(repo), "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+        led = [{"time": stamp(1790000400), "kind": "balance-reading", "usd": 80.0, "source": "Emily"},
+               {"time": stamp(1790001100), "kind": "verifier-freeze", "commit": c1},
+               {"time": stamp(1790002000), "kind": "answer-launch", "qid": "h1", "start": 1790002000}]
+        g = freeze_guard(repo, led, {"h1"}, c1)
+        assert g["freeze_line_ok"] and g["commits_after_first_launch"] == 0 and g["freeze_data_unchanged"], g
+        # Item 1, red: the named commit is not the last freeze line before the launch; a later freeze line does not count.
+        assert freeze_guard(repo, led + [{"time": stamp(1790003000), "kind": "verifier-freeze", "commit": "0" * 40}], {"h1"}, "0" * 40)["freeze_line_ok"] is False
+        assert freeze_guard(repo, [r for r in led if r["kind"] != "verifier-freeze"], {"h1"}, c1)["freeze_line_ok"] is False
+        # Item 1, red: a commit to the frozen files after the launch; BALANCE_AFTER.json alone is exempt.
+        (repo / "bench" / "freeze" / "BALANCE_AFTER.json").write_text('{"usd": 60.0, "source": "Emily"}\n', encoding="utf-8", newline="\n")
+        run(repo, "add", "-A")
+        run(repo, "commit", "-q", "-m", "after", date=1790003000)
+        assert freeze_guard(repo, led, {"h1"}, c1)["commits_after_first_launch"] == 0
+        (repo / "bench" / "personality" / "GATES.md").write_text("changed\n", encoding="utf-8", newline="\n")
+        run(repo, "add", "-A")
+        run(repo, "commit", "-q", "-m", "late gate change", date=1790004000)
+        assert freeze_guard(repo, led, {"h1"}, c1)["commits_after_first_launch"] == 1
+        # Item 1, red: FREEZE_DATA.json edited on disk, or edited and recommitted, differs from its first commit.
+        fd.write_text('{"deepseek_balance_before_usd": 99.0}\n', encoding="utf-8", newline="\n")
+        assert freeze_guard(repo, led, {"h1"}, c1)["freeze_data_unchanged"] is False
+        run(repo, "add", "-A")
+        run(repo, "commit", "-q", "-m", "edit freeze data", date=1790000600)
+        assert freeze_guard(repo, led, {"h1"}, c1)["freeze_data_unchanged"] is False
+        # Item 5: the balance before must equal the last reading before stage 2; the after file must be committed and sourced.
+        ba = repo / "bench" / "freeze" / "BALANCE_AFTER.json"
+        b5 = balance_checks(repo, led, {"deepseek_balance_before_usd": 80.0}, 1790000500, ba)
+        assert b5 == {"balance_before_ok": True, "balance_after_committed": True, "balance_after_source": True}, b5
+        assert balance_checks(repo, led, {"deepseek_balance_before_usd": 81.0}, 1790000500, ba)["balance_before_ok"] is False
+        assert balance_checks(repo, led, {"deepseek_balance_before_usd": 80.0}, 1790000300, ba)["balance_before_ok"] is False  # reading after stage 2
+        ba.write_text('{"usd": 70.0, "source": "Emily"}\n', encoding="utf-8", newline="\n")  # edited, not committed
+        assert balance_checks(repo, led, {}, 1790000500, ba)["balance_after_committed"] is False
+        ba.write_text('{"usd": 70.0}\n', encoding="utf-8", newline="\n")
+        run(repo, "add", "-A")
+        run(repo, "commit", "-q", "-m", "no source", date=1790005000)
+        b5 = balance_checks(repo, led, {}, 1790000500, ba)
+        assert b5["balance_after_committed"] is True and b5["balance_after_source"] is False, b5
+        # Item 8: an unlisted judging folder, batch file, ledger-only step or agy run on a held-out question.
+        data = Path(tmp) / "data"
+        for name, jobs in (("ho-ds-base", ["h1|Slop|a|b|0"]), ("tune-x", ["t1|Slop|a|b|0"]), ("hoc-syco", ["h1|Sycophantic|a|b|0"])):
+            (data / "judging" / name).mkdir(parents=True)
+            (data / "judging" / name / "jobs.jsonl").write_text("".join(json.dumps({"job": j}) + "\n" for j in jobs), encoding="utf-8")
+        (data / "batches").mkdir(parents=True)
+        gated, listed = {"ho-ds-base"}, {"ho-ds-base", "hoc-syco", "calp"}
+        recipe = lambda n: {"h1|Sycophantic|a|b|0"} if n == "hoc-syco" else set()
+        assert unlisted_heldout(data, [], {"h1"}, gated, listed, recipe) == []
+        (data / "judging" / "peek").mkdir()
+        (data / "judging" / "peek" / "jobs.jsonl").write_text(json.dumps({"job": "h1|Truthful|a|b|0"}) + "\n", encoding="utf-8")
+        assert unlisted_heldout(data, [], {"h1"}, gated, listed, recipe) == ["peek"]
+        (data / "batches" / "judge-peek2.out.jsonl").write_text(json.dumps({"id": "h1|Truthful|a|b|0"}) + "\n", encoding="utf-8")
+        assert unlisted_heldout(data, [], {"h1"}, gated, listed, recipe) == ["peek", "peek2"]
+        (data / "judging" / "hoc-syco" / "deepseek.jsonl").write_text(json.dumps({"job": "h1|Sycophantic|a|b|0"}) + "\n", encoding="utf-8")
+        assert "hoc-syco" in unlisted_heldout(data, [], {"h1"}, gated, listed, recipe)  # a reported-only set judged by DeepSeek
+        (data / "judging" / "hoc-syco" / "deepseek.jsonl").unlink()
+        (data / "judging" / "calp").mkdir()
+        (data / "judging" / "calp" / "jobs.jsonl").write_text(json.dumps({"job": "h1|Slop|a|b|0"}) + "\n", encoding="utf-8")
+        assert "calp" in unlisted_heldout(data, [], {"h1"}, gated, listed, recipe)  # outside its recipe
+        led8 = [{"time": stamp(1), "kind": "judge-build", "name": "gone"}, {"time": stamp(2), "kind": "judge-agy-run", "job": "h1|Slop|a|b|0"}]
+        bad = unlisted_heldout(data, led8, {"h1"}, gated, listed, recipe)
+        assert "ledger:gone" in bad and "judge-agy-run" in bad, bad
+
 
 
 def main():

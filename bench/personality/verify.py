@@ -412,8 +412,12 @@ def build_gates():
       "D3 amendment, 2026-10-26: the rule's ledger line before the candidate tuning set's judge-build line", one_sided="an order has no second bound")
     A("D4", "Is this the verifier, and are these the data, profiles and homes, that were frozen?",
       [EQ("D4.code_changed_files", 0), EQ("D4.data_mismatch", 0), EQ("D4.ledger_prefix_ok", 1), EQ("D4.agy_config_mismatch", 0),
-       EQ("D4.external_mismatch", 0), EQ("D4.judge_model_ok", 1)],
-      "red-team D4; review 2: the DSH profiles (model line), lean.yml, every judge call on deepseek-flash")
+       EQ("D4.external_mismatch", 0), EQ("D4.judge_model_ok", 1), EQ("D4.freeze_line_ok", 1), EQ("D4.commits_after_first_launch", 0),
+       EQ("D4.freeze_data_unchanged", 1)],
+      "red-team D4; review 2: the DSH profiles (model line), lean.yml, every judge call on deepseek-flash; stage 1g (review of stage "
+      "1f, finding 1): the freeze commit equals the last verifier-freeze ledger line before the first held-out answer launch, no "
+      "commit touching the frozen files, GATES.md, VERIFIER_FREEZE.md or bench/freeze (BALANCE_AFTER.json aside) is dated after "
+      "that launch, and FREEZE_DATA.json equals its first commit")
     A("D4cand", "Is each candidate agy home its base home apart from the rule file?", [EQ("D4.cand_home_ok", 1)], "review 2")
     for u in P1_UNITS:
         A(f"P1.{u}", f"Did every {u} label come from one call of the named model on the frozen prompts, unedited?",
@@ -433,9 +437,14 @@ def build_gates():
       [Custom(["D5.deepseek_usd"], lambda v: (0 <= v["D5.deepseek_usd"] <= 60,
                                               f"D5.deepseek_usd = {v['D5.deepseek_usd']:.4g}  (bound: 0 <= x <= 60)"),
               "raised cap", {"D5.deepseek_usd": 25.0}, {"D5.deepseek_usd": 65.0}),
-       EQ("D5.peak_launches", 0)],
+       EQ("D5.peak_launches", 0), EQ("D5.balance_before_ok", 1), EQ("D5.balance_after_committed", 1), EQ("D5.balance_after_source", 1)],
       "D5 amendment, 2026-10-26: Emily's 'Yes that's ok spend more' to a projection of 57-73 USD against 50, read as the 60 USD cap the "
-      "coordinator recommended and operates (spend.py --cap 60; ask her before passing 60)")
+      "coordinator recommended and operates (spend.py --cap 60; ask her before passing 60); stage 1g (review of stage 1f, finding 5): "
+      "the balance before equals the last balance-reading ledger line before stage 2, and BALANCE_AFTER.json equals its last commit "
+      "and names its source")
+    A("D7", "Was every judging step that touched a held-out question one of the frozen sets?", [EQ("D7.unlisted_heldout_judging", 0)],
+      "stage 1g (review of stage 1f, finding 8): judging folders, judge batch files, judge ledger lines and agy judge runs; a "
+      "reported-only set may hold only its own frozen held-out jobs and no DeepSeek verdict", one_sided="a count of violations; zero is the honest value")
     A("D6", "Did every Gemini answer come from one Gemini 4 Argon model and one agy version?",
       [EQ("D6.gm_model_ok", 1), EQ("D6.agy_versions", 1)], "brief")
     return G
@@ -642,11 +651,21 @@ def self_test():
     assert rr["D5"][0] == "SUPERSEDED" and "FAIL" in rr["D5"][1][0] and rr["D5a"][0] == "PASS", rr["D5"]
     assert {g.id: st for g, st, _ in run_all(dict(full, **{"D5.deepseek_usd": 61.0}), gates)}["D5a"] == "FAIL"
     assert {g.id: st for g, st, _ in run_all(dict(full, **{"D5.peak_launches": 1}), gates)}["D5a"] == "FAIL"
+    # Stage 1g red cases (items 1, 5 and 8; item 7 is measure_all's, see its self-test).
+    reds = [("D4", {"D4.freeze_line_ok": 0}), ("D4", {"D4.commits_after_first_launch": 1}), ("D4", {"D4.freeze_data_unchanged": 0}),
+            ("D5a", {"D5.balance_before_ok": 0}), ("D5a", {"D5.balance_after_committed": 0}), ("D5a", {"D5.balance_after_source": 0}),
+            ("D7", {"D7.unlisted_heldout_judging": 1})]
+    for gid, broken in reds:
+        st, lines = next(x for x in gates if x.id == gid).run(dict(full, **broken))
+        assert st == "FAIL" and not any(l.startswith("metric missing") for l in lines), (gid, broken, st)
+        mm = dict(full)
+        mm.pop(next(iter(broken)))
+        assert next(x for x in gates if x.id == gid).run(mm)[0] == "FAIL", (gid, "missing")
     nod = dict(bo)
     nod.pop("D3a.decision_confirm")
     assert {g.id: st for g, st, _ in run_all(nod, gates)}["C1.deepseek.cand"] == "PASS"  # no measured decision: no exemption
     print(f"self-test 3: {len(holes)} named holes from CHEAPEST_PASS.md fail as missing; zero-plain ratios, N6 'not measurable', "
-          "B5t's friendlier-judge rule and B6b's debiasing behave")
+          "B5t's friendlier-judge rule and B6b's debiasing behave; stage 1g's D4, D5a and D7 checks fail red and missing")
     print(f"verify self-test: ok ({len(gates)} gates)")
 
 
