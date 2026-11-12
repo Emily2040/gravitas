@@ -25,12 +25,20 @@ the JavaScript it would run is checked with Node instead, when Node is found.
 The .sh cases run under the same bash; its hook edit uses the first Python that
 runs, so under Git Bash it edits hooks.json as it would on Linux, and its Python
 is also run on its own against what install.py writes.
+
+The cases where something is in the way (failures, below) run on every system. On Windows the
+obstacle is the one a person meets there: a program holding a file open, or a rule on a folder.
+On a Mac and on Linux it is the file's or folder's mode, as after an install made with sudo.
+Before a case asserts anything, the shell that runs the installer tries the same step without
+the obstacle, which must work, and with it, which must not. An obstacle that does not stop that
+shell on this machine gives a SKIP line that says what was measured, never a PASS or a FAIL.
 """
 import ctypes
 import json
 import os
 import re
 import shutil
+import stat
 import subprocess
 import sys
 import tempfile
@@ -163,6 +171,105 @@ def my_sid():
     return r.stdout.decode("ascii", "replace").strip().split(",")[-1].strip('"')
 
 
+def shell_name(kind):
+    return "cmd" if kind == "cmd" else "Git Bash" if os.name == "nt" else "bash"
+
+
+STEP = {"move": "move the folder", "read": "read the file", "add": "add a folder to it"}
+
+
+def shell_can(kind, what, path, spare):
+    """Whether the shell that runs this installer can do one step now: read the file at path, add a
+    folder to the folder at path, or move the folder at path into the folder spare. It undoes what
+    it does. bash gets the paths as arguments and cmd gets them inside quotes, so their spaces,
+    ampersands and brackets are not parsed."""
+    if kind == "cmd":
+        line = {"read": 'type "{0}" >nul 2>&1',
+                "add": 'mkdir "{0}\\.gravitas-probe" 2>nul && rmdir "{0}\\.gravitas-probe"',
+                "move": 'move "{0}" "{1}\\moved" >nul 2>&1 && move "{1}\\moved" "{0}" >nul 2>&1'}[what]
+        r = subprocess.run('cmd /d /s /c "%s"' % line.format(path, spare),
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    else:
+        script = {"read": 'cat -- "$1" >/dev/null',
+                  "add": 'mkdir -- "$1/.gravitas-probe" && rmdir -- "$1/.gravitas-probe"',
+                  "move": 'mv -- "$1" "$2/moved" && mv -- "$2/moved" "$1"'}[what]
+        r = subprocess.run([BASH, "-c", script, "probe", path, spare],
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    return r.returncode == 0
+
+
+class Blocked:
+    """One thing in the way of an install, with a measurement that it is in the way.
+
+    what is "move" (the folder at path cannot be moved out of its parent), "read" (the file at path
+    cannot be read) or "add" (nothing can be added to the folder at path). control is whether the
+    installer's shell could do the step before the obstacle was there; stops is whether it no
+    longer can. Record the result with case(), below, which trusts neither without the other."""
+
+    LABEL = {("nt", "move"): "a program holding a file of the folder open",
+             ("nt", "read"): "a file held open with no sharing",
+             ("nt", "add"): "an icacls rule against adding folders",
+             ("posix", "move"): "mode 555 on the folder",
+             ("posix", "read"): "mode 000 on the file",
+             ("posix", "add"): "mode 555 on the folder"}
+
+    def __init__(self, lab, kind, what, path):
+        self.lab, self.kind, self.what, self.path = lab, kind, what, path
+        self.label = self.LABEL["nt" if os.name == "nt" else "posix", what]
+        self.control = self.stops = False
+        self.undo = None
+
+    def put(self):
+        if os.name != "nt":
+            mode = stat.S_IMODE(os.stat(self.path).st_mode)
+            os.chmod(self.path, 0 if self.what == "read" else 0o555)
+            self.undo = lambda: os.chmod(self.path, mode)
+        elif self.what == "add":
+            sid = my_sid()
+            subprocess.run(["icacls", self.path, "/deny", "*%s:(AD)" % sid], stdout=subprocess.DEVNULL)
+            self.undo = lambda: subprocess.run(["icacls", self.path, "/remove:d", "*%s" % sid],
+                                               stdout=subprocess.DEVNULL)
+        else:
+            held = (Held(self.path, share=0) if self.what == "read"
+                    else Held(os.path.join(self.path, "plugin.json")))
+            self.undo = lambda: held.__exit__()
+
+    def __enter__(self):
+        spare = self.lab.spare()
+        self.control = shell_can(self.kind, self.what, self.path, spare)
+        self.put()
+        try:
+            self.stops = not shell_can(self.kind, self.what, self.path, spare)
+        except BaseException:
+            self.undo()
+            raise
+        return self
+
+    def __exit__(self, *exc):
+        self.undo()
+
+    def case(self, name, ok, detail=""):
+        """The case's result, when the obstacle was measured to be one. A step that fails with nothing
+        in the way means this test's own check is wrong, which is a FAIL. An obstacle that does not
+        stop the shell is a SKIP that says so: the installer met no error, so it has nothing to report."""
+        shell = shell_name(self.kind)
+        if not self.control:
+            case(name, False, "with nothing in the way, %s could not %s, so this test's own check is wrong"
+                 % (shell, STEP[self.what]))
+        elif not self.stops:
+            skip(name, "%s does not stop %s on this machine: with it there, %s could still %s"
+                 % (self.label, shell, shell, STEP[self.what]))
+        else:
+            case(name, ok, detail)
+
+
+def marked_files(root):
+    """How many files and folders under root carry the Mac's download mark, com.apple.quarantine."""
+    r = subprocess.run(["xattr", "-r", root], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+    return sum(1 for ln in r.stdout.decode("utf-8", "replace").splitlines()
+               if ln.rstrip().endswith("com.apple.quarantine"))
+
+
 class Lab:
     """Throwaway folders: an unzipped download, reference installs, and fresh homes."""
 
@@ -191,6 +298,12 @@ class Lab:
         self.n += 1
         path = os.path.join(self.root, "%s %d 王小明 & é!" % (label, self.n))
         os.makedirs(path)
+        return path
+
+    def spare(self):
+        """An empty folder on the same disk as the homes, for a check that moves a folder and back."""
+        path = os.path.join(self.root, "spare")
+        os.makedirs(path, exist_ok=True)
         return path
 
     def command(self, kind, home, ui="en", where=None, env=None):
@@ -674,81 +787,106 @@ def behaviour(lab, kind):
          "names it" % p,
          code == 0 and same and os.path.isfile(script) and "could not be removed for you" in out, out[-500:])
 
-    if os.name == "nt":
-        failures(lab, kind)
+    failures(lab, kind)
 
 
 def failures(lab, kind):
-    """What a running Antigravity, a virus scanner or a locked-down folder does to an install."""
+    """What a running Antigravity, a virus scanner, a locked-down folder or an install made with sudo
+    does to an install, and two installs at the same moment. See Blocked for how each obstacle is made
+    and measured."""
     p = "%s:" % kind
-    # Antigravity running: it holds plugin.json open, so the installed folder cannot be moved.
+    nt = os.name == "nt"
+    # The installed plugin cannot be moved. On Windows, Antigravity is running and holds plugin.json
+    # open. On a Mac or Linux the folder's mode forbids it, as when another account owns the folder.
     home = lab.home()
     lab.run(kind, home, "1")
-    with Held(os.path.join(plugin(home), "plugin.json")):
+    with Blocked(lab, kind, "move", plugin(home)) as b:
         code, out = lab.run(kind, home, "1")
     stuck = "Antigravity is probably still running" if kind == "cmd" else "This folder could not be moved"
-    case("%s with Antigravity holding the installed plugin, it exits 1, says why, and the old plugin and "
-         "the rest of the home are as they were" % p,
-         code == 1 and stuck in out and "nothing was changed" in out
-         and not differences(lab.ref["en"], home), out[-600:])
+    b.case("%s with %s, it exits 1, says why, and the old plugin and the rest of the home are as they were"
+           % (p, "Antigravity holding the installed plugin" if nt else
+              "an installed plugin that cannot be moved (mode 555, as after an install with sudo)"),
+           code == 1 and stuck in out and "nothing was changed" in out
+           and (kind == "cmd" or shows(out, plugin(home), kind))
+           and not differences(lab.ref["en"], home), out[-600:])
 
     # A beta 1 skill moves only after the plugin has; when the plugin cannot move, both stay.
     home = lab.home()
     lab.run(kind, home, "1")
     os.makedirs(os.path.join(home, ".gemini", "config", "skills", "gravitas"))
     before = tree(home)
-    with Held(os.path.join(plugin(home), "plugin.json")):
+    with Blocked(lab, kind, "move", plugin(home)) as b:
         code, out = lab.run(kind, home, "2")
-    case("%s when the plugin cannot move, a beta 1 skill is not moved either" % p,
-         code == 1 and tree(home) == before, out[-400:])
+    b.case("%s when the plugin cannot move, a beta 1 skill is not moved either" % p,
+           code == 1 and tree(home) == before, out[-400:])
 
-    # A virus scanner holding a file of the download: the copy fails before anything is moved.
+    # A file of the download that cannot be read: the copy fails before anything is moved. On Windows
+    # a virus scanner holds it; on a Mac or Linux its mode forbids reading.
     scanned = lab.unzipped("scanned %s" % kind)
     home = lab.home()
     lab.run(kind, home, "1")
-    with Held(os.path.join(scanned, "dist", "en", "gravitas", "skills", "gravitas", "SKILL.md"), share=0):
+    with Blocked(lab, kind, "read", os.path.join(scanned, "dist", "en", "gravitas", "skills", "gravitas",
+                                                 "SKILL.md")) as b:
         code, out = lab.run(kind, home, "1", where=scanned)
-    case("%s when a file of the download cannot be read, it exits 1 and the installed plugin is untouched"
-         % p, code == 1 and "Copying Gravitas failed" in out and not differences(lab.ref["en"], home),
-         out[-400:])
+    b.case("%s when a file of the download cannot be read, it exits 1 and the installed plugin is untouched"
+           % p, code == 1 and "Copying Gravitas failed" in out and not differences(lab.ref["en"], home),
+           out[-400:])
 
     # A plugins folder this account cannot add to: found before anything is moved.
     home = lab.home()
     lab.run(kind, home, "1")
     plugins = os.path.dirname(plugin(home))
-    sid = my_sid()
-    subprocess.run(["icacls", plugins, "/deny", "*%s:(AD)" % sid], stdout=subprocess.DEVNULL)
-    try:
+    with Blocked(lab, kind, "add", plugins) as b:
         code, out = lab.run(kind, home, "1")
-    finally:
-        subprocess.run(["icacls", plugins, "/remove:d", "*%s" % sid], stdout=subprocess.DEVNULL)
-    case("%s when the plugins folder cannot be added to, it exits 1, names the folder, and the old "
-         "plugin is still installed" % p,
-         code == 1 and "could not be put into this folder" in out and shows(out, plugins, kind)
-         and not differences(lab.ref["en"], home), out[-500:])
+    b.case("%s when the plugins folder cannot be added to, it exits 1, names the folder, and the old "
+           "plugin is still installed" % p,
+           code == 1 and "could not be put into this folder" in out and shows(out, plugins, kind)
+           and not differences(lab.ref["en"], home), out[-500:])
 
-    # A ZIP that was not unblocked: every unzipped file carries the download mark.
-    marked = lab.unzipped("marked %s" % kind)
-    for d, _, names in os.walk(os.path.join(marked, "dist")):
-        for n in names:
-            with open(os.path.join(d, n) + ":Zone.Identifier", "w") as fh:
-                fh.write("[ZoneTransfer]\nZoneId=3\n")
-    home = lab.home()
-    code, out = lab.run(kind, home, "1", where=marked)
-    carrying = []
-    for d, _, names in os.walk(plugin(home)):
-        for n in names:
-            try:
-                with open(os.path.join(d, n) + ":Zone.Identifier"):
-                    carrying.append(n)
-            except OSError:
-                pass
-    if kind == "cmd":
-        case("%s files unzipped with the download mark are installed without it" % p,
-             code == 0 and not carrying and not differences(lab.ref["en"], home), brief(carrying))
-    else:
-        skip("%s files unzipped with the download mark" % p,
-             "only the .cmd clears the Windows mark; on a Mac or Linux the ZIP carries none")
+    # A ZIP that was not unblocked: every unzipped file carries the download mark. Windows keeps it in
+    # a stream beside the file and only the .cmd clears it. macOS keeps it in com.apple.quarantine and
+    # only the .command clears it. Linux has no such mark, so there is no case for it there.
+    if nt:
+        marked = lab.unzipped("marked %s" % kind)
+        for d, _, names in os.walk(os.path.join(marked, "dist")):
+            for n in names:
+                with open(os.path.join(d, n) + ":Zone.Identifier", "w") as fh:
+                    fh.write("[ZoneTransfer]\nZoneId=3\n")
+        home = lab.home()
+        code, out = lab.run(kind, home, "1", where=marked)
+        carrying = []
+        for d, _, names in os.walk(plugin(home)):
+            for n in names:
+                try:
+                    with open(os.path.join(d, n) + ":Zone.Identifier"):
+                        carrying.append(n)
+                except OSError:
+                    pass
+        if kind == "cmd":
+            case("%s files unzipped with the download mark are installed without it" % p,
+                 code == 0 and not carrying and not differences(lab.ref["en"], home), brief(carrying))
+        else:
+            skip("%s files unzipped with the download mark" % p,
+                 "only the .cmd clears the Windows mark; the Mac's own mark is tested on a Mac")
+    elif sys.platform == "darwin" and kind == "command":
+        name = "%s files unzipped with the Mac's download mark are installed without it" % p
+        marked = lab.unzipped("marked %s" % kind)
+        source = os.path.join(marked, "dist", "en", "gravitas")
+        subprocess.run(["xattr", "-rw", "com.apple.quarantine", "0081;00000000;Safari;", source],
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        plain = os.path.join(lab.root, "plain copy %s" % kind)
+        subprocess.run(["cp", "-R", source, plain], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        wrote, kept = marked_files(source), marked_files(plain)
+        home = lab.home()
+        code, out = lab.run(kind, home, "1", where=marked)
+        left = marked_files(plugin(home))
+        if not wrote or not kept:
+            skip(name, "the mark is not in the way on this machine: %d files and folders of the download "
+                       "took it, and a plain cp -R of them kept it on %d" % (wrote, kept))
+        else:
+            case(name + " (a plain cp -R keeps it on %d of %d)" % (kept, wrote),
+                 code == 0 and not left and not differences(lab.ref["en"], home),
+                 "%d installed files and folders still carry it; %s" % (left, out[-300:]))
 
     # Two windows answering at the same moment, over an existing install.
     bad = []

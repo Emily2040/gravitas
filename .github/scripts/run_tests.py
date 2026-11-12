@@ -34,6 +34,13 @@ ALLOWED = [
     # The download mark exists on Windows alone, and there only the .cmd clears it, so the
     # .command and .sh cases skip it under Git Bash. Seen in the first Windows run, 2026-11-12.
     ("windows", "only the .cmd clears the Windows mark"),
+    # test_installers.py measures each obstacle before it asserts. On GitHub's Windows Server 2025
+    # runner these two do not stop Git Bash, which reads the held file and adds to the denied folder
+    # (run 43157361928, 2026-11-12), so the .command and .sh cases built on them skip there. The same
+    # cases run on the macOS and Linux jobs, where a skip is not allowed. The third obstacle, a file
+    # held open in a folder that is then moved, does stop Git Bash, so its skip is not listed.
+    ("windows", "a file held open with no sharing does not stop Git Bash"),
+    ("windows", "an icacls rule against adding folders does not stop Git Bash"),
 ]
 
 
@@ -137,10 +144,32 @@ def self_test():
          judge_scripts([("t.py", 0, "SKIP hook  -- Windows only\n" + ok)], "win32"), True),
         ("the download-mark skip passes on Windows",
          judge_scripts([("t.py", 0, "SKIP sh: files unzipped with the download mark  -- only the .cmd clears "
-                                    "the Windows mark; on a Mac or Linux the ZIP carries none\n" + ok)], "win32"), False),
+                                    "the Windows mark; the Mac's own mark is tested on a Mac\n" + ok)], "win32"), False),
         ("the download-mark skip fails on Linux, where it never prints",
          judge_scripts([("t.py", 0, "SKIP sh: files unzipped with the download mark  -- only the .cmd clears "
-                                    "the Windows mark; on a Mac or Linux the ZIP carries none\n" + ok)], "linux"), True),
+                                    "the Windows mark; the Mac's own mark is tested on a Mac\n" + ok)], "linux"), True),
+        ("an obstacle measured not to stop Git Bash is an allowed skip on Windows",
+         judge_scripts([("t.py", 0, "SKIP sh: when a file of the download cannot be read  -- a file held "
+                                    "open with no sharing does not stop Git Bash on this machine: with it "
+                                    "there, Git Bash could still read the file\n" + ok)], "win32"), False),
+        ("an obstacle that does not stop cmd fails on Windows",
+         judge_scripts([("t.py", 0, "SKIP cmd: when a file of the download cannot be read  -- a file held "
+                                    "open with no sharing does not stop cmd on this machine: with it "
+                                    "there, cmd could still read the file\n" + ok)], "win32"), True),
+        ("the held-plugin obstacle not stopping Git Bash fails on Windows",
+         judge_scripts([("t.py", 0, "SKIP sh: with Antigravity holding the installed plugin  -- a program "
+                                    "holding a file of the folder open does not stop Git Bash on this "
+                                    "machine: with it there, Git Bash could still move the folder\n" + ok)],
+                       "win32"), True),
+        ("an obstacle that does not stop bash fails on Linux",
+         judge_scripts([("t.py", 0, "SKIP sh: when the plugins folder cannot be added to  -- mode 555 on "
+                                    "the folder does not stop bash on this machine: with it there, bash "
+                                    "could still add a folder to it\n" + ok)], "linux"), True),
+        ("the Mac's download mark not taking fails on macOS",
+         judge_scripts([("t.py", 0, "SKIP command: files unzipped with the Mac's download mark are "
+                                    "installed without it  -- the mark is not in the way on this machine: "
+                                    "0 files and folders of the download took it, and a plain cp -R of "
+                                    "them kept it on 0\n" + ok)], "darwin"), True),
         ("no Node tests in the tree passes", judge_node(False, False, 0, ""), False),
         ("Node tests without node fails", judge_node(True, False, 0, ""), True),
         ("a Node run with no counts fails", judge_node(True, True, 0, ""), True),
