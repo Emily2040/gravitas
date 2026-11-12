@@ -38,7 +38,7 @@ test('manifest: a DSH bundle with no dependencies, versioned with the plugin', (
   assert.ok(pkg.keywords.includes('dsh-plugin'))
   const pluginJson = JSON.parse(readFileSync(path.join(REPO, 'plugin', 'plugin.json'), 'utf8'))
   assert.equal(pkg.version, pluginJson.version, 'package.json and plugin/plugin.json carry the same version')
-  for (const f of ['dsh/index.js', 'dsh/lib/', 'dsh/platform/', 'dsh/locale/*.json', 'dsh/icon.svg', 'dsh/cordis.patch.yml', 'dist/', 'LICENSE']) {
+  for (const f of ['dsh/index.js', 'dsh/lib/', 'dsh/platform/', 'dsh/locale/*.json', 'dsh/icon.png', 'dsh/cordis.patch.yml', 'dist/', 'LICENSE']) {
     assert.ok(pkg.files.includes(f), `files lists ${f}`)
   }
 })
@@ -91,12 +91,15 @@ test('language: config wins, then the system locale, then English', () => {
   assert.throws(() => plugin.resolveLanguage('zh'), /language must be/)
   assert.throws(() => plugin.readConfig({ langauge: 'ja' }), /unknown config key/)
   assert.throws(() => plugin.readConfig({ alwaysOnRule: 'yes' }), /true or false/)
+  assert.throws(() => plugin.readConfig({ updateCheck: 'no' }), /updateCheck must be true or false/)
+  assert.equal(plugin.readConfig({}).updateCheck, true)
+  assert.equal(plugin.readConfig({ updateCheck: false }).updateCheck, false)
 })
 
 for (const lang of plugin.LANGUAGES) {
   test(`${lang}: skill, rule and platform note load and fit`, async () => {
     const { ctx, sections, provider } = fakeCtx()
-    await plugin.apply(ctx, { language: lang, alwaysOnRule: true })
+    await plugin.apply(ctx, { language: lang, alwaysOnRule: true, updateCheck: false })
     const list = await provider().list()
     assert.deepEqual(list.map((c) => c.name), ['gravitas'])
     assert.equal(list[0].rank, BUNDLED_SKILL_RANK)
@@ -121,7 +124,7 @@ for (const lang of plugin.LANGUAGES) {
 
 test('rule can be turned off', async () => {
   const { ctx, sections } = fakeCtx()
-  await plugin.apply(ctx, { language: 'en', alwaysOnRule: false })
+  await plugin.apply(ctx, { language: 'en', alwaysOnRule: false, updateCheck: false })
   assert.equal(sections.length, 0)
 })
 
@@ -142,8 +145,10 @@ test('locales and icon are present for the Plugins page', () => {
     const meta = JSON.parse(readFileSync(path.join(REPO, 'dsh', 'locale', `${l}.json`), 'utf8')).meta
     assert.ok(meta.title && meta.description.length > 20, l)
   }
-  const icon = readFileSync(path.join(REPO, 'dsh', 'icon.svg'), 'utf8')
-  assert.ok(icon.startsWith('<svg') && statSync(path.join(REPO, 'dsh', 'icon.svg')).size < 256 * 1024)
+  // DSH shows SVG, PNG, JPEG or WebP icons up to 256 KiB and keeps its default artwork for anything else.
+  const icon = readFileSync(path.join(REPO, 'dsh', 'icon.png'))
+  assert.ok(icon.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a])), 'icon is a PNG')
+  assert.ok(icon.length > 1024 && icon.length < 256 * 1024, `icon is ${icon.length} bytes`)
 })
 
 test('the skill frontmatter in every language parses with its nested metadata', () => {

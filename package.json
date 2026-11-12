@@ -11,11 +11,11 @@
   },
   "type": "module",
   "main": "./dsh/index.js",
-  "icon": "./dsh/icon.svg",
+  "icon": "./dsh/icon.png",
   "exports": {
     ".": "./dsh/index.js",
     "./locale/*.json": "./dsh/locale/*.json",
-    "./icon": "./dsh/icon.svg",
+    "./icon": "./dsh/icon.png",
     "./package.json": "./package.json"
   },
   "files": [
@@ -23,7 +23,7 @@
     "dsh/lib/",
     "dsh/platform/",
     "dsh/locale/*.json",
-    "dsh/icon.svg",
+    "dsh/icon.png",
     "dsh/cordis.patch.yml",
     "dist/",
     "LICENSE",

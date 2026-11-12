@@ -14,12 +14,19 @@
 # agent-preset-registry row has (the web bundle). The headless bundle has
 # none, so there they disable themselves and only the skill and the rule load.
 #
-# To change the language or turn the rule off, override the dsh-gravitas row
-# in your profile's cordis.patch.yml, restating its whole config:
+# Once a day the plugin asks GitHub for the latest Gravitas release (one request
+# to api.github.com, nothing about you sent). When a newer one is out, the agent
+# says so once, at the end of its first reply in a conversation, with the step
+# to update. updateCheck: false turns the check and the notice off.
+#
+# To change the language, turn the rule off or turn the update check off,
+# override the dsh-gravitas row in your profile's cordis.patch.yml, restating
+# its whole config:
 #   - id: dsh-gravitas
 #     config:
 #       language: zh-CN        # auto, en, zh-CN, ja or ko
 #       alwaysOnRule: true
+#       updateCheck: true
 
 - insert:
     - id: preset-gravitas-inspector
@@ -110,3 +117,4 @@
       config:
         language: auto
         alwaysOnRule: true
+        updateCheck: true
