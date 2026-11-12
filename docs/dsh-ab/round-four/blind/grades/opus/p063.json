@@ -1,0 +1,47 @@
+{
+ "pair": "p063",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 7,
+  "useful": 6,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"신청 기한: 이직일 다음날부터 12개월 안에 수급자격 신청\" is misleading. The 12 months is the period in which benefits are paid (제48조), not a filing deadline, so applying late cuts the days paid. A never warns about this, and its order \"체불임금 회수 → 수급자격 신청\" can push the application back.",
+   "\"이직확인서를 회사가 안 써주면 고용센터에 발급 요청하면 됩니다\" is loosely put. The 고용센터 can press the company, but the key point is that the application can go in without the form; judged from own knowledge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"임금체불확인서(회사 발급)\" is wrong. The 체불임금등·사업주 확인서 comes from the labor office (노동관서) after a complaint, not from the employer; judged from own knowledge.",
+   "\"실업급여가 끝난 뒤 잔여분을 받을 수 있으니 지금 미리 신청해 두세요\" (국민취업지원제도) is wrong or unverifiable. There is no 'remaining portion' of 구직촉진수당, and people receiving 구직급여, or within 6 months of it ending, can be excluded (per the key).",
+   "조기재취업수당 \"대기기간 후 12개월 이상 계속 고용되면 남은 수급일수의 절반\" leaves out a required condition: the person must re-employ with at least half of the 소정급여일수 still left. The key also puts the timing at 14 days after filing, not \"대기기간 후\"."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "missing",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start: 별표2 lists 2개월 이상 임금체불 as a valid reason to quit and still claim. Neither gives the 60-day test, and neither asks how many days each payment was late. B states plainly that late-paid months still count as 체불, which is exactly the user's case. B also tells the user to apply this week because 늦을수록 손해 and mentions 조기재취업수당, so it undoes the user's plan to find a job first. A frames the 12 months as a deadline and puts 체불 recovery ahead of applying. B makes two factual slips (it says the 체불확인서 comes from the employer, and it says 구직촉진수당 can be collected later as a 'remaining portion') and runs longer than the 'short' request asked for. Neither answer gives benefit amounts, 150/180 days, 고용24, 간이대지급금 or 생계비 융자. On balance B is slightly more useful for this user's situation."
+}

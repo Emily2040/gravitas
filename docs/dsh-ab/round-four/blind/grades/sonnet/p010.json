@@ -1,0 +1,53 @@
+{
+ "pair": "p010",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "少額訴訟は「費用も数万円程度です」: 12万円の請求なら手数料は数千円規模で、数万円は過大(キーの新制度では訴額10万円まで書面3,500円)。",
+   "「壁紙（クロス）の張り替えは原則として貸主負担」: 言い過ぎ。ガイドラインは通常損耗なら貸主負担、故意・過失の毀損なら借主負担(経過年数を考慮)としており、クロス張替え一般が貸主負担とは書いていない。",
+   "「通常損耗について納得していないが、早期解決のため例外的に応じる」と一文を残せば「納得して払った」と認定されるのを防げる: 根拠のない断定。",
+   "「多くの場合、内訳を求められた時点で請求額は下がります」: 根拠のない経験則。",
+   "民法90条で争える: キーにない追加の法的根拠。軽微。",
+   "「民法上の原状回復義務に…含まれないのが判例・通説」: 2020年4月施行の民法621条ただし書きで明文化済み。条文に触れず、判例・通説とだけ書くのは不正確。",
+   "法テラスは「無料法律相談の紹介」とだけ書いているが、収入・資産要件がある。軽微。"
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "「7年住んでいるなら残存価値はゼロ、つまり更新の必要があっても借主負担分は生じません」: 残存価値は1円の下限があり、故意・過失の毀損なら耐用年数後も工事費・人件費を請求されうる。日焼けには当てはまるが、一般論としては言い過ぎ。",
+   "残存価値の式「取得価額×(1−経過年数÷耐用年数)」に1円の下限がなく、7年では負の値になる点に触れていない。軽微。",
+   "「立会いの「確認書」は現状記録としてなら署名可」: 実務上の助言。署名内容次第では不利になりうるが、ある程度の根拠はある。軽微。",
+   "「宅建業者を所管する都道府県の担当窓口」を相談先に挙げる: 管理会社が宅建業者とは限らない。軽微。"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers refuse to write the 了承 email at the start and give a non-consent reply instead. Both state that ordinary wear and sunburn are the landlord's burden, that the 耐用年数 of 6 years leaves almost no residual value after 7 years, and that approving the deduction leaves a 2万円 shortfall. B is more complete and more accurate. It cites 民法621条ただし書き, says a bare 「原状回復」 clause is not enough for a 通常損耗 特約, and asks for the 特約条項 and how it was explained. It adds 立会い, photo records, and not signing a 精算書 before seeing the breakdown, and it names 188. A does not cite 621条 (it calls the rule \"判例・通説\"), omits 立会い and photos, and does not ask for the clause text. A also adds an unsupported claim that a 少額訴訟 costs \"数万円程度\" and a dubious reservation-sentence tip, and it offers to rewrite a 了承 email. Neither answer covers the ㎡ and one-wall limit or the 全額返還 principle with 622条の2, and neither cites the 最判 or ガイドライン別表1. B is somewhat longer, but that does not outweigh its better coverage."
+}

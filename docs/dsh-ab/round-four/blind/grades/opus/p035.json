@@ -1,0 +1,46 @@
+{
+ "pair": "p035",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"계약 후 이사 사이에 설정되는 경우가 많습니다\" — a claim about how often this happens, with no source given; unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 6,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"확정일자는 주민센터에서 무료\" — wrong: per the key, a confirmed date costs 600원 when you visit in person (500원 through the internet registry).",
+   "\"운영시간을 놓치면 정부24 전입신고와 인터넷등기소 확정일자로 대체하세요\" — offered as an equal substitute, but an internet-registry confirmed date requested after 18:00 Friday is granted on the next working day, 10-26 (Mon). The filing date for an out-of-hours 정부24 전입신고 is unverified, so this fallback can cost the same-day priority.",
+   "\"빌라는 근저당이 잡힌 경우가 적지 않아\" — a claim about how common this is, with no source given; unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "correct",
+   "5": "wrong",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers open by correcting the agent's claim. Each explains that 전입신고 gives only 대항력, that 우선변제권 needs 확정일자, and that 대항력 starts the next day. Neither mentions 최우선변제 or 임대차 신고. A says outright that 전입신고 belongs on moving day, not \"시간 날 때\", and explains the risk of delay. It gets the 600원 fee right and adds keeping 주민등록 until the deposit comes back. B gets the fee wrong (\"무료\"). B also suggests 정부24 and the internet registry as an after-hours substitute without warning that a request after Friday 18:00 gets Monday's date, which undercuts the key's advice to visit in person during office hours. B's check before the balance payment and its account-name checks are good additions, but they do not outweigh its factual and safety errors."
+}

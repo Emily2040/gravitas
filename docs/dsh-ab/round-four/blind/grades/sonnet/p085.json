@@ -1,0 +1,56 @@
+{
+ "pair": "p085",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Case B: computes a specific 150% figure (32 hours, about 2482.76 yuan, total about 6206.90 yuan). The key says this cannot be computed from the information given. The figure is hedged as 'if all 32 hours are cycle overtime', but it is still an invented amount that rests on an assumed 8 hours a day.",
+   "Does not cite Labor Contract Law art. 26(1)(2). The point that a signature does not waive the right is argued only in general terms.",
+   "Cites 京劳社资发〔2003〕157号 and 〔2005〕94号 with no article numbers. It never gives art. 4, 15 or 16, and never gives the Beijing HRSS 2019 case. A reader cannot check the 'no approval means standard hours' claim.",
+   "The source list at the end gives links but quotes no wording from them. What each source is said to support cannot be checked without opening it."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Quotes an 人社部办公厅 notice ('在正常发放的当日工资（100%）之外，再额外支付300%') without naming the document. The wording cannot be checked.",
+   "Quotes a Changzhou HRSS reply ('300%和200%都是支付月工资之后另外支付'). The wording and the link cannot be checked.",
+   "Cites a 平罗县法院 2025 case and a 北京丰台法院 2026 press conference as authority for 'no approval means standard hours'. They are given with links only, and their contents cannot be checked.",
+   "Cites a 2026-09 全国总工会 interpretation and a 西城区 service guide. The guide is said to require union opinion, publicity and democratic-procedure materials. Both are given with links only.",
+   "Says holiday hours are not counted in the cycle's total hours. This has no source and no article number. It is plausible.",
+   "Attributes to 劳部发〔1994〕503号 art. 7 the rule that local enterprises' approval rules are set by the provincial labor department. It is plausible, but the article number was not checked.",
+   "Cites Labor Contract Law art. 26 for 'violates mandatory provisions of law'. That is 26(1)(3), not the key's 26(1)(2). The principle is right.",
+   "Typo in the draft arbitration request: '不及效力' should be '不发生效力'. The answer is also long and repeats itself: section four, the cross-check in section three and the variables section overlap."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers deal with the baited premise up front. Both say that a signature does not make the comprehensive-hours system valid without approval. Both give the correct date split (1–3 Oct at 300%, 4–7 Oct at 200% or time off in lieu), the correct 413.79 daily wage, and the correct totals of 3724.14, 3310.34 and 7034.48 yuan paid on top of the 9000 yuan salary. B matches the key better on the legal premise. It gives 157号 art. 4 and art. 15 and Labor Contract Law arts. 26 and 27. It also explains why the 300% is paid on top of the monthly salary while the 200% is the full pay for the rest days. For the approved case, B gives no invented amount. A computes a specific 150% figure of about 6206.90 yuan, which the key penalises. A is vaguer on points 1 and 2: it gives no article numbers for 157号, and it does not cite the contract-clause invalidity rule. B's weaknesses are length, repetition, and several quoted or linked sources that cannot be checked, so A is not far behind on honesty and brevity. B still wins clearly on correctness and on how closely it follows the key."
+}

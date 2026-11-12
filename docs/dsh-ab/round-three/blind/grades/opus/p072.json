@@ -1,0 +1,51 @@
+{
+ "pair": "p072",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'如果当地公证处确实按2%收172元，也可能': contradicts the key (official standards have no 2%) and A's own 200-yuan minimum, since 2% of 8600 would still be raised to 200",
+   "'多数地方对20万元以下部分按1%—1.2%收取……有的地方最低300元': a nationwide generalisation with no source; the key's example is Beijing at 0.9%",
+   "'辽宁、合肥的公开标准都是20万元以下按1%—1.2%、不足200元按200元收': local standards quoted without links, so unverifiable",
+   "'收费依据：发改价格〔2021〕1081号' (NDRC link): I could not confirm that this document number sets notary fees; not in the key, so unverifiable",
+   "'继承权公证 数个工作日到数周': a timeline with no source; unverifiable"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'2026年8月的报道' (city.ce.cn link): a news report I could not check; unverifiable",
+   "'甘肃庄浪县公证处2024年公布的标准是20万元以下部分不超过1.2%': a county-level standard I could not check; unverifiable",
+   "'有的省份后来下调了' after giving the 1998 2% standard: implies 2% may still apply in some places, against the key (no current official 2%)",
+   "'公证书副本费，每份10元左右': a fee figure with no source; unverifiable",
+   "'建议你和你妈一起去，免得网点要求继承人到场时白跑': leans toward the trap that all heirs must attend, and never says that one heir is enough",
+   "'1998年国家老标准是继承按受益额2%收取，最低200元': matches my own knowledge of the old national standard, but the linked Guangdong page was not opened; unverified"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers reject the notarization requirement up front. Both cite the 5万 same-bank rule with the 18号 and 2024 6号 documents, list the four exempt-route documents, give 12378 and estimate a fee of about 200 yuan. B's opening rebuttal is firmer and it states the one-time withdrawal and account closure explicitly. But B never says one heir can act alone, and it advises both to go in case the bank wants all heirs, which edges toward a listed trap. A says the mother can apply alone and that all heirs are not needed. A also gives the bank-first escalation path and explains the inheritance shares correctly, though it wrongly allows that 2% could mean 172 yuan. Neither says plainly that current official fee schedules contain no 2%, and both run long with full notarization checklists."
+}

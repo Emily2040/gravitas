@@ -1,0 +1,49 @@
+{
+ "pair": "q012",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Henan hukou-place replacement takes '一般 2 至 3 周': this generalises from one county guide. I opened the Zhongmu guide, which says 15 working days within Henan, so the province-wide norm cannot be verified.",
+   "Temporary ID back home '很多地方当场可取': cannot be verified. The rule is issuance within 3 days.",
+   "'多数户籍窗口只在工作日办': a generalisation with no source.",
+   "'按 2024 年须知' (the self-service machine list): the date of that notice is not shown."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "The station's paper temporary travel certificate is '免费，当日乘车有效': there is no official basis for this (it is a trap the key lists), and the article it cites says nothing about fee or validity.",
+   "'广州从2017年3月起就能给外省户籍人员换、补身份证': the start date cannot be verified.",
+   "'广州2016年起就支持异地挂失申报': cannot be verified. I did not open the linked Panyu page.",
+   "'现在连首次申领都跨省通办': cannot be verified, and it is beyond what was asked.",
+   "Photo receipt '约20–30元': prices vary by place, so this figure cannot be verified.",
+   "Says to bring one ID from a list (户口簿/居住证/驾驶证/护照/社保卡): the Liwan Public Security notice lists only the photo receipt for non-Guangzhou applicants, so this is an extra requirement.",
+   "Temporary ID back home '通常当场或3日内可取': the 'on the spot' part cannot be verified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers start by correcting both false beliefs: the card can be replaced in Guangzhou, and the 12306 electronic certificate or the station police window gets the user onto the train. Both also give the right figures: 40 yuan, a 60-day legal limit, Guangzhou's 40 days, and a 10-yuan temporary ID valid 3 months that waits about 5 working days for the hukou place to issue it. I checked the Liwan and Baiyun notices on the web: they confirm Guangzhou's 40 days and the 40-yuan fee, and that the photo receipt is the only listed material. The 2026-10-05 CCTV/gmw article A cites confirms 6 uses a month and 24 hours. The Zhongmu county guide (15 working days) also checks out, so A's sources hold up. B falls into one of the key's traps by saying the paper certificate is free and valid that day, with no basis. B also adds unverified dates and an extra ID requirement, and its table and to-do list repeat earlier content, making it notably longer. A is tighter and makes no trap claims."
+}

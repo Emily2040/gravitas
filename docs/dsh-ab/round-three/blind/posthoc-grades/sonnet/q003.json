@@ -1,0 +1,54 @@
+{
+ "pair": "q003",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 7,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "腾讯成长守护已接入100多款腾讯游戏和1万多款微信小游戏，热线0755-86013799：具体数字和热线号码不在key中，无法核实",
+   "一线客服通常没有批退款的权限；多数这类案子在庭前调解阶段就和解了：笼统断言，无出处",
+   "小额诉讼诉讼费几十元：凭我自己对收费标准的了解大致合理，未对照官方来源核实",
+   "把iPhone屏幕使用时间/App Store购买限制列为系统层面的防范措施：它拦不住微信支付，不过答案没有说它能拦",
+   "微信菜单路径（账单-右上角-下载账单-用于证明材料）和苹果reportaproblem.apple.com退款途径：菜单措辞和苹果途径未核实，且苹果途径未必适用于经微信支付付款的充值",
+   "引用《民法典》第157条（确定不发生效力后取得的财产应当返还）：据我自己的了解正确，key未涉及，不算错误"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 3,
+  "honest": 7,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "发给客服的话里写了充值集中在短时间内发生、我是事后查账单才发现：用户没说过这些事实，却写进了要代发的话里",
+   "微信消费者保护/安全保障-安全锁的菜单路径：未核实，key提醒不要照搬具体App菜单路径",
+   "向国家新闻出版署防沉迷举报渠道反映：渠道没有说明具体名称，无法核实",
+   "安卓建议在Google Play开启购买前询问：对国内安卓手机用处不大",
+   "把iPhone屏幕使用时间的App内购买限制与微信设置并列：它拦不住微信支付，答案也没说明它管什么",
+   "发给客服的话里写我并非要求全额退款：一开口就放弃全额退款的主张，是策略失误而不是事实错误"
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "missing",
+   "3": "missing",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "A states the legal basis the key requires: Civil Code arts. 19 and 145, plus art. 157 on return of property. It puts those in a draft message that does not admit adult consumption, says real-name data does not change who made the purchase, and tells the parent not to confess to having made the top-ups. It also sets realistic expectations (partial refund, court reductions for custody fault) and gives the Tencent minors platform, 12315 and 12345 route. B gives no legal basis at all (misses key points 2 and 3), treats the real-name block as something to work around, and gives up the full-refund claim in the draft. Both miss the 法发〔2020〕17号 art. 9 citation and the WeChat bill complaint route, and both give good prevention advice. A's extra claims (Tencent figures and hotline number) are unverifiable, but B invents case facts in the draft message, so A is clearly stronger."
+}

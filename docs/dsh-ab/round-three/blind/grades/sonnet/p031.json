@@ -1,0 +1,54 @@
+{
+ "pair": "p031",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "运单里常有“未保价按运费三到七倍赔”的格式条款：行业惯常说法，未核实，且用户并未说明运单上是否有此条。",
+   "12305 在不少地方已并入 12345：无出处，无法核实。",
+   "小额诉讼诉讼费 50 元、适用于约4000元标的：诉讼费用交纳办法第十三条对1万元以下按件50元，但是否再减半各地不同，答案说得过于肯定（B 同样有此说法）。",
+   "回复里“发货前的照片和打包视频我都能提供”：替用户假设了其拥有这些证据，可能不实。",
+   "中转丢失“至少说明它没尽到安全保障义务”：法律结论说得偏肯定，未提供依据。",
+   "文末链接《快递市场管理办法》：该办法并未规定未保价赔偿标准，链接与论点无关，但未作错误陈述。"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "added_claim_errors": [
+   "“底线别低于两千多”“目标是三千多”：没有依据的数字区间，无法核实。",
+   "“寄邮政 EMS 的快递业务也一样”：未给出依据，是否属于普遍服务范围有争议，无法核实。",
+   "“面单上如果写了‘iPhone 15’，你已尽到告知义务，这一点很关键”：法律结论没有依据，说得偏肯定。",
+   "“口头同意会被当作双方达成一致”：没有出处，说得偏肯定。",
+   "“电话 12305（省会区号+12305）”：号码格式没有出处，无法核实。",
+   "小额诉讼诉讼费 50 元：是否再减半各地不同，说得过于肯定（A 同样有此说法）。"
+  ],
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by rejecting “法律规定只能赔54元” and correctly explain that 邮政法第四十七条 does not reach 快件, via 第四十五条第二款 and 第五十九条, and both cite 快递暂行条例第二十八条 (I checked these against the official texts). A is fuller on the legal basis the key asks for. It cites 民法典第八百三十二、八百三十三条 and all three format-clause rules (496/497/506), and it asks for the 18元运费 back as well as 3999元. B cites only 第四百九十六条 and \\\"民事法律\\\" without 832/833, and never asks for the freight back. B is stronger on the complaint route (7日 under 第二十九条, 30日 under 邮政法第六十五条, both verified) and on risk. It names the 未声明价值 reduction and gives a Henan case I verified: about 5万元 claimed, about 1.3万元 awarded, with the sender writing only \\\"服装\\\". A leaves the complaint timelines and the reduction risk vague. B also adds some invented bounds (\\\"底线两千多\\\") and a few confident legal conclusions. A edges ahead on the core legal points; the margin is slight."
+}

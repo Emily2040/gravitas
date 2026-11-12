@@ -1,0 +1,54 @@
+{
+ "pair": "p030",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'这400元也可以用你的共济额度缴': wrong per key. Anhui had not opened paying resident premiums from the shared quota as of Oct 20, 2026 (expected Nov).",
+   "'两病门诊 50%，高血压年限额200元' presented as the Anhui rule: unsourced and unverifiable. The key's Xuancheng example is 55% and 450 yuan (including general outpatient), and limits vary by city.",
+   "'安徽规定慢特病门诊支付比例不低于60%' and '高血压门诊慢特病年限额约2000–2500元': unsourced provincial claims, unverifiable.",
+   "'芜湖年限额2500元、报60%', '六安500元起付线', '铜陵要求伴并发症': specific city rules with no source, unverifiable.",
+   "'安徽2027年居民医保个人缴费不低于400元，集中征缴期2026年10月到2027年1月底': unsourced, unverifiable.",
+   "Binding needs 户口本 proof; quota can be set yearly and adjusted or revoked at any time: plausible operational details, but unsourced."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'还可以用钱包给她缴居民医保费': wrong per key. Anhui had not opened premium payment from the wallet as of Oct 20, 2026.",
+   "'单日最多3笔、每笔不超过2000元、22点到次日6点不能转，不收手续费' stated as the current rule: I opened the People's Daily 2025-09-17 link and it lists the 3/2000/22-6 limits but says nothing about fees. The key flags such counts and limits as not a uniform national rule.",
+   "'安徽居民医保高血压门诊慢特病，起付线200元，报销60%，年度限额2500元' presented as Anhui-wide: I opened the cited Guangde 2025 page and these are Guangde/Xuancheng figures.",
+   "'两病 55%左右、450元上下（含普通门诊150元）' and '普通门诊最多150元': Xuancheng/Guangde figures presented as general Anhui rules.",
+   "'2026年10月跨省共济已经全国全面落地（央广网2026-10-20）': I opened the link. The page text is garbled, but it reportedly describes the rollout as still advancing province by province, so it does not clearly back the claim. The claim itself agrees with the key's Oct 16 launch.",
+   "Ma'anshan recognition criteria (two non-same-day visit records within half a year, at least 28 days apart) presented as the Anhui rule: the link failed to load. This is a local rule and unverifiable as provincial."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the false premise in their opening lines, explain that lending your own card or code is the actual violation, compute 2400 yuan a year, explain why pharmacy self-pay is not reimbursed, and send the mother to get chronic-disease (慢特病) or two-disease (两病) recognition before using the shared funds. Both also fall into the key's trap by saying the wallet can already pay the mother's Anhui resident premium. B grounds the 2021/2024 policy basis with a link that checks out, and its reimbursement numbers come from real Guangde/Xuancheng documents that match the key's 55%/450 example, though it presents them as Anhui-wide. B also states the transfer limits as fixed rules and cites a CNR article that does not clearly support its claim. A gives the exact Oct 16 date and the quota model that matches the key, and asks which city she lives in, but its unsourced figures (a 200-yuan limit for 两病, the Wuhu, Lu'an and Tongling rules) cannot be verified and the 200 limit likely understates the real one. B wins narrowly on verifiability despite being longer."
+}

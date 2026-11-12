@@ -1,0 +1,52 @@
+{
+ "pair": "p025",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Headline offers 4480 yuan (8000 x 70% x 80%) as the figure under an old Shanghai approach. The key gives 6400 for the 83号 tiers, and under 10号 the base is the contract wage, so 4480 is unverifiable and probably does not apply to someone with an agreed 8000 salary.",
+   "States as fact that 沪劳保保发〔2000〕14号 expired on 2026-08-15. The key says this is only inferred, and the official reply covers 83号.",
+   "\"网上很多答案还在写旧标准，是因为那些页面发布在2026年8月15日之前\" is speculation about why online answers differ, with no source.",
+   "Says the 10号 办法 \"没有规定满4年按80%这类工龄系数\" without quoting 第九条. The no-tiering point is consistent with the key, but the article is not cited.",
+   "The medical-period remark (\"1个月病假在医疗期内，公司不能仅以病假为由解除劳动合同\") is directionally right but gives no N+2 figure or statutory basis."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Table row \"制度照搬旧上海算法（先按实得工资70%，再按4—6年80%）= 4480\" is unverifiable and conflicts with the key's 6400 for 83号 tiers. It also never says when the base would be 8000 and not 70%.",
+   "States as fact that the 14号 file expired on 2026-08-15, though the key says this is only inferred.",
+   "The closing \"依据\" list gives links, but the text cites no instrument by number except 309号第59条 in the link label. The letter itself cites no instrument by number, so the legal basis cannot be checked from the text."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise, state that 83号 and 14号 expired on 2026-08-15, and calculate the legal floor as 2740 x 80% = 2192 yuan, which is 1392 yuan short of 800. Both also add a 4480 figure framed as the old Shanghai approach, which muddies the key's 6400 under the 83号 tiers; neither calls it a legal minimum. A's letter asks whether 800 is 应发 or 实发, names the 309号第59条 basis, and requests basis, ratio, institutional grounds and back pay. It omits the 10号第九条 citation and the wage statement. B's letter never asks 应发 or 实发 and cites no instrument by number. B is tighter and better on excluding bonuses, allowances and overtime from the base, and it says plainly that the company cannot unilaterally lower an existing standard. A is longer, with some repetition, which counts against it on conciseness. A's letter is closer to the key, so A wins slightly."
+}

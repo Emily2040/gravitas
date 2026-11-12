@@ -1,0 +1,54 @@
+{
+ "pair": "p034",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 6,
+  "concise": 8,
+  "added_claim_errors": [
+   "'근로복지공단 소액체당금' is the old name of 간이대지급금, and the condition '회사가 사실상 도산했다면' is wrong: 간이대지급금 can be claimed while the business is still operating.",
+   "'어느 기준으로 봐도 요건에 해당할 가능성이 높고' never states the 60-day total-delay-days criterion; hedged by '아예 못 받으셨다면', so low severity.",
+   "Lists 구직촉진수당 (월 50만원, 최대 6개월) in the same ordered list as 구직급여 without saying it can be excluded while receiving 구직급여; the cue '자격을 확인하세요' softens it.",
+   "'고용24에서 수급자격 신청' omits 구직신청, the online education and the 고용센터 visit, so the procedure is incomplete.",
+   "The 1350 link is cited as the basis; it is a checkable link, but I did not open it and cannot say how far it supports the text."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "missing",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'7~9월 석 달이면 이 요건을 넘고' is an overclaim: the test is total delayed or unpaid days (60 or more), not the number of months, so a few days late each month may fall short. Partly offset by asking at the end whether any pay was received.",
+   "'2년 근무면 150일분이 나오고' leaves out that age 50 or over, or a disability, gives 180 days.",
+   "'이 기간은 회사 사정으로 늘어나지 않아요' is an odd, unsupported phrasing; the claim is unverifiable as written.",
+   "'진정 결과는 실업급여 심사에도 도움이 됩니다' has no source and depends on the case.",
+   "조기재취업수당 is given as '남은 급여의 절반, 12개월 이상 근무 시' without the condition of at least half the 소정급여일수 remaining.",
+   "The imaeil article and 1350 links are cited as the basis; they are checkable links, but I did not open them and cannot say how far they support the text.",
+   "생계비 융자 is not mentioned."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise in the first sentence, cite 시행규칙 별표 2 ('이직 전 1년 이내 2개월 이상 임금체불') and tell her to apply now. B also gives the 12 months from the day after leaving, 150 days of benefit, 66,048 to 68,100 won a day, about 1.98 to 2.04 million won a month (30-day basis) and about 10 million won in total, all of which recompute correctly. It adds 비과세, 간이대지급금 up to 10 million won, 연 20% 지연이자 and 조기재취업수당, and says that looking for work early costs her nothing. A has no amounts, no 소정급여일수 and no 조기재취업수당. It also gives wrong or outdated advice on 소액체당금 and '도산'. Neither explains the 60-day day-count test, and B's '석 달이면 이 요건을 넘고' is less careful than A's conditional '아예 못 받으셨다면', but B asks whether she received part of the pay. B is longer than the requested 짧게, but it gives far more usable information, so B wins clearly."
+}

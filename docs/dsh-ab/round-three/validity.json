@@ -1,0 +1,570 @@
+{
+ "invalid": [],
+ "flagged": [
+  "zh-deceased-deposit.gv-grav.r1",
+  "zh-express-lost.gv-grav-nocheck.r1",
+  "zh-express-lost.gv-grav.r1",
+  "zh-driving-points.gv-grav-nocheck.r1",
+  "zh-id-card-lost.gv-plain.r1",
+  "zh-game-refund.gv-plain.r2",
+  "zh-game-refund.gv-grav.r2",
+  "en-car-warranty.gv-plain.r2",
+  "zh-driving-points.gv-grav-nocheck.r2"
+ ],
+ "runs": {
+  "zh-medical-family.gv-grav.r1": {
+   "exit": 0,
+   "chars": 1935,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    3
+   ],
+   "left": [
+    1
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "zh-medical-family.gv-grav-nocheck.r1": {
+   "exit": 0,
+   "chars": 2566,
+   "problems": [],
+   "notes": []
+  },
+  "zh-medical-family.gv-plain.r1": {
+   "exit": 0,
+   "chars": 2206,
+   "problems": [],
+   "notes": []
+  },
+  "zh-resignation.gv-grav-nocheck.r2": {
+   "exit": 0,
+   "chars": 2769,
+   "problems": [],
+   "notes": []
+  },
+  "zh-resignation.gv-grav.r2": {
+   "exit": 0,
+   "chars": 3089,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    7
+   ],
+   "left": [
+    1
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "zh-resignation.gv-plain.r2": {
+   "exit": 0,
+   "chars": 3567,
+   "problems": [],
+   "notes": []
+  },
+  "en-social-security.gv-grav.r1": {
+   "exit": 0,
+   "chars": 3616,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    23
+   ],
+   "left": [
+    27
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "en-social-security.gv-grav-nocheck.r1": {
+   "exit": 0,
+   "chars": 4067,
+   "problems": [],
+   "notes": []
+  },
+  "en-social-security.gv-plain.r1": {
+   "exit": 0,
+   "chars": 3977,
+   "problems": [],
+   "notes": []
+  },
+  "zh-deceased-deposit.gv-grav-nocheck.r2": {
+   "exit": 0,
+   "chars": 1864,
+   "problems": [],
+   "notes": []
+  },
+  "zh-deceased-deposit.gv-plain.r2": {
+   "exit": 0,
+   "chars": 3237,
+   "problems": [],
+   "notes": []
+  },
+  "zh-deceased-deposit.gv-grav.r2": {
+   "exit": 0,
+   "chars": 2300,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    2
+   ],
+   "left": [
+    0
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "zh-medical-family.gv-plain.r2": {
+   "exit": 0,
+   "chars": 2242,
+   "problems": [],
+   "notes": []
+  },
+  "zh-medical-family.gv-grav.r2": {
+   "exit": 0,
+   "chars": 2590,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    4
+   ],
+   "left": [
+    2
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "zh-medical-family.gv-grav-nocheck.r2": {
+   "exit": 0,
+   "chars": 1901,
+   "problems": [],
+   "notes": []
+  },
+  "zh-deceased-deposit.gv-grav-nocheck.r1": {
+   "exit": 0,
+   "chars": 1866,
+   "problems": [],
+   "notes": []
+  },
+  "zh-deceased-deposit.gv-plain.r1": {
+   "exit": 0,
+   "chars": 2368,
+   "problems": [],
+   "notes": []
+  },
+  "zh-deceased-deposit.gv-grav.r1": {
+   "exit": 0,
+   "chars": 2704,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    5
+   ],
+   "left": [
+    1
+   ],
+   "problems": [],
+   "notes": [
+    "meta wording: 核对"
+   ]
+  },
+  "zh-id-card-lost.gv-grav.r2": {
+   "exit": 0,
+   "chars": 2197,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    7
+   ],
+   "left": [
+    0
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "zh-id-card-lost.gv-grav-nocheck.r2": {
+   "exit": 0,
+   "chars": 1609,
+   "problems": [],
+   "notes": []
+  },
+  "zh-id-card-lost.gv-plain.r2": {
+   "exit": 0,
+   "chars": 2322,
+   "problems": [],
+   "notes": []
+  },
+  "zh-express-lost.gv-grav-nocheck.r1": {
+   "exit": 0,
+   "chars": 1910,
+   "problems": [],
+   "notes": [
+    "meta wording: 修订"
+   ]
+  },
+  "zh-express-lost.gv-grav.r1": {
+   "exit": 0,
+   "chars": 1781,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    5
+   ],
+   "left": [
+    0
+   ],
+   "problems": [],
+   "notes": [
+    "meta wording: 核对"
+   ]
+  },
+  "zh-express-lost.gv-plain.r1": {
+   "exit": 0,
+   "chars": 1024,
+   "problems": [],
+   "notes": []
+  },
+  "en-flight-refund.gv-grav.r1": {
+   "exit": 0,
+   "chars": 1980,
+   "drafts": 1,
+   "steered": 0,
+   "revisions": 0,
+   "listed": [
+    0
+   ],
+   "left": [],
+   "problems": [],
+   "notes": []
+  },
+  "en-flight-refund.gv-grav-nocheck.r1": {
+   "exit": 0,
+   "chars": 1956,
+   "problems": [],
+   "notes": []
+  },
+  "en-flight-refund.gv-plain.r1": {
+   "exit": 0,
+   "chars": 1855,
+   "problems": [],
+   "notes": []
+  },
+  "zh-driving-points.gv-grav.r1": {
+   "exit": 0,
+   "chars": 1546,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    1
+   ],
+   "left": [
+    0
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "zh-driving-points.gv-plain.r1": {
+   "exit": 0,
+   "chars": 1832,
+   "problems": [],
+   "notes": []
+  },
+  "zh-driving-points.gv-grav-nocheck.r1": {
+   "exit": 0,
+   "chars": 2381,
+   "problems": [],
+   "notes": [
+    "meta wording: 核对"
+   ]
+  },
+  "en-car-warranty.gv-plain.r1": {
+   "exit": 0,
+   "chars": 2056,
+   "problems": [],
+   "notes": []
+  },
+  "en-car-warranty.gv-grav.r1": {
+   "exit": 0,
+   "chars": 2759,
+   "drafts": 1,
+   "steered": 0,
+   "revisions": 0,
+   "listed": [
+    0
+   ],
+   "left": [],
+   "problems": [],
+   "notes": []
+  },
+  "en-car-warranty.gv-grav-nocheck.r1": {
+   "exit": 0,
+   "chars": 2807,
+   "problems": [],
+   "notes": []
+  },
+  "zh-game-refund.gv-grav.r1": {
+   "exit": 0,
+   "chars": 4272,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    13
+   ],
+   "left": [
+    5
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "zh-game-refund.gv-grav-nocheck.r1": {
+   "exit": 0,
+   "chars": 2378,
+   "problems": [],
+   "notes": []
+  },
+  "zh-game-refund.gv-plain.r1": {
+   "exit": 0,
+   "chars": 2088,
+   "problems": [],
+   "notes": []
+  },
+  "zh-id-card-lost.gv-plain.r1": {
+   "exit": 0,
+   "chars": 2207,
+   "problems": [],
+   "notes": [
+    "meta wording: 核对"
+   ]
+  },
+  "zh-id-card-lost.gv-grav-nocheck.r1": {
+   "exit": 0,
+   "chars": 1603,
+   "problems": [],
+   "notes": []
+  },
+  "zh-id-card-lost.gv-grav.r1": {
+   "exit": 0,
+   "chars": 2007,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    2
+   ],
+   "left": [
+    0
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "en-flight-refund.gv-grav-nocheck.r2": {
+   "exit": 0,
+   "chars": 2079,
+   "problems": [],
+   "notes": []
+  },
+  "en-flight-refund.gv-grav.r2": {
+   "exit": 0,
+   "chars": 1746,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    1
+   ],
+   "left": [
+    0
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "en-flight-refund.gv-plain.r2": {
+   "exit": 0,
+   "chars": 1517,
+   "problems": [],
+   "notes": []
+  },
+  "zh-game-refund.gv-grav-nocheck.r2": {
+   "exit": 0,
+   "chars": 2877,
+   "problems": [],
+   "notes": []
+  },
+  "zh-game-refund.gv-plain.r2": {
+   "exit": 0,
+   "chars": 4979,
+   "problems": [],
+   "notes": [
+    "meta wording: 核对"
+   ]
+  },
+  "zh-game-refund.gv-grav.r2": {
+   "exit": 0,
+   "chars": 4174,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    32
+   ],
+   "left": [
+    15
+   ],
+   "problems": [],
+   "notes": [
+    "meta wording: 核对"
+   ]
+  },
+  "en-car-warranty.gv-grav-nocheck.r2": {
+   "exit": 0,
+   "chars": 3510,
+   "problems": [],
+   "notes": []
+  },
+  "en-car-warranty.gv-grav.r2": {
+   "exit": 0,
+   "chars": 4072,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    1
+   ],
+   "left": [
+    0
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "en-car-warranty.gv-plain.r2": {
+   "exit": 0,
+   "chars": 2524,
+   "problems": [],
+   "notes": [
+    "meta wording: revised"
+   ]
+  },
+  "en-social-security.gv-grav.r2": {
+   "exit": 0,
+   "chars": 3857,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    20
+   ],
+   "left": [
+    14
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "en-social-security.gv-plain.r2": {
+   "exit": 0,
+   "chars": 3092,
+   "problems": [],
+   "notes": []
+  },
+  "en-social-security.gv-grav-nocheck.r2": {
+   "exit": 0,
+   "chars": 4346,
+   "problems": [],
+   "notes": []
+  },
+  "zh-driving-points.gv-grav.r2": {
+   "exit": 0,
+   "chars": 2307,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    2
+   ],
+   "left": [
+    1
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "zh-driving-points.gv-grav-nocheck.r2": {
+   "exit": 0,
+   "chars": 2217,
+   "problems": [],
+   "notes": [
+    "meta wording: 核对"
+   ]
+  },
+  "zh-driving-points.gv-plain.r2": {
+   "exit": 0,
+   "chars": 2659,
+   "problems": [],
+   "notes": []
+  },
+  "zh-resignation.gv-grav-nocheck.r1": {
+   "exit": 0,
+   "chars": 3400,
+   "problems": [],
+   "notes": []
+  },
+  "zh-resignation.gv-plain.r1": {
+   "exit": 0,
+   "chars": 4033,
+   "problems": [],
+   "notes": []
+  },
+  "zh-resignation.gv-grav.r1": {
+   "exit": 0,
+   "chars": 2762,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    6
+   ],
+   "left": [
+    0
+   ],
+   "problems": [],
+   "notes": []
+  },
+  "zh-express-lost.gv-grav-nocheck.r2": {
+   "exit": 0,
+   "chars": 1684,
+   "problems": [],
+   "notes": []
+  },
+  "zh-express-lost.gv-plain.r2": {
+   "exit": 0,
+   "chars": 1596,
+   "problems": [],
+   "notes": []
+  },
+  "zh-express-lost.gv-grav.r2": {
+   "exit": 0,
+   "chars": 1423,
+   "drafts": 1,
+   "steered": 1,
+   "revisions": 1,
+   "listed": [
+    5
+   ],
+   "left": [
+    0
+   ],
+   "problems": [],
+   "notes": []
+  }
+ }
+}

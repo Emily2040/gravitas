@@ -1,0 +1,49 @@
+{
+ "pair": "p071",
+ "winner": "A",
+ "margin": "decisive",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "Credit is 'typically good for about a year' and 'at least a year is roughly the standard anyway': wrong for a credit offered in lieu of a refund under the DOT rule, which must last at least 5 years (key point 4).",
+   "Quotes the final rule as saying the obligation 'applies irrespective of the reason for a cancellation': quoted wording not checked here; the key only supports 'regardless of the reason'.",
+   "Says airlines must tell you about the refund before offering a credit: plausible under the 2024 rule but not in the key, so unverified.",
+   "A DOT complaint 'usually unblocks it': unsupported generalisation about how often it works.",
+   "Credit is 'tied to your name, can't be cashed out': generic claim about United credits, not verified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 4,
+  "trap": 5,
+  "honest": 5,
+  "useful": 5,
+  "concise": 6,
+  "added_claim_errors": [
+   "United's credits 'often run about 12 months from the original ticket date' and 'some require you to fly before expiry': unverifiable, and contradicts the 5-year minimum for a credit in lieu of a refund.",
+   "Draft message asks for validity of 'at least 12 months from the date it is issued': asks for less than the 5 years the law requires.",
+   "The note says the message 'pins the clock to the issue date' right after saying credits run from the original ticket date: internally inconsistent.",
+   "Weather 'only means they don't owe you a hotel or meals': plausible for US domestic flights but not in the key and not sourced.",
+   "Draft says 'I'm writing to accept a travel credit': accepting forfeits the cash refund the person is owed.",
+   "Calls the refund version the one 'United is more likely to owe you': understates a legal entitlement that the answer itself says applies."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "wrong",
+   "5": "wrong"
+  }
+ },
+ "reasons": "Both answers catch the false premise at the start and cite the 2024 DOT final rule (89 FR 32760), the 7-business-day card refund and the original payment method. Answer A then acts on it: it tells the person not to take the credit and drafts a short message that declines it and asks for the $412 refund under 14 CFR part 260. Answer B drafts the message the person asked for, accepting a credit, and pushes the refund version to a closing note. It also asks for only 12 months of validity and says credits run about a year from the original ticket date, which contradicts the 5-year minimum. A also gets the validity point wrong, saying a year is the default, but that error does not undermine its advice. B's error leaves the person asking for less than the law requires, in a message that gives up the refund."
+}

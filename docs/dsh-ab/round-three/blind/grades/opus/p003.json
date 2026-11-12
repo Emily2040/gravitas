@@ -1,0 +1,52 @@
+{
+ "pair": "p003",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "Opening says the remaining 4 points clear only if 'no new points are added later' (之后不再新增记分): wrong. Under Art. 15, clearing needs only fewer than 12 points and fines paid; new points don't block it.",
+   "'7 日内点【前往考试】': the exam window is unverifiable. Media and local reports differ between 7 calendar days and 7 working days, and the key doesn't cover it.",
+   "Says 代学代考 can get you '列入黑名单' (blacklisted): loose. Art. 31 sets fines of up to 1000/2000 yuan, and Art. 26(5) bars applying for 3 cycles. The rule doesn't use a blacklist term (checked gov.cn text of 公安部令第163号).",
+   "Button names 【网上学习考试】【提交学习】【前往考试】【网办进度】 are unverifiable and vary by region (the answer does hedge this)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'并处 1000–2000 元罚款（第三十一条）' is wrong. Art. 31 says a fine of up to 1000 yuan for the driver's fraud and up to 2000 yuan for a stand-in. There is no 1000 floor (checked gov.cn text of 公安部令第163号).",
+   "'连考试一起，理论下限 5 小时' is an arithmetic error. Using its own figure of 10–15 min per exam, the floor is about 4 h (180+60 min). 5 h is the ceiling, with full 20-min exams.",
+   "Its per-session 50–70 min and 6-session 5–7 h figures don't match its own parts, which add up to 45–65 min and 4.5–6.5 h (it rounds up).",
+   "'学完后 7 个工作日内考' is unverifiable. Sources differ between 7 calendar days and 7 working days.",
+   "'人脸识别一般给 2 次机会，两次不过本次作废' is unverifiable and has no source.",
+   "The '首页驾驶证卡片上的可减分' entry is an unverifiable button name."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying the 10 points can't all be removed: the cap is 6, which leaves 4. Both explain clearing, give the 3 hours of online study plus exams, and lay out workable 12123 steps. B tackles both false premises in its first lines and lists all five legal grounds for refusing an application from Art. 26 correctly, while A leaves out the drunk-driving, hit-and-run and point-trading bars. B also correctly adds that full-score study lasts 7 or 30 days and that reduction credit can't be saved in advance. However, B is much longer, misstates the Art. 31 fine as a 1000–2000 yuan range, and mislabels 5 hours as the 'theoretical floor'. A is tighter and makes fewer number mistakes, but its opening wrongly implies that new points would stop the 4 from clearing. On balance, B's fuller coverage of the key points edges it ahead, but only slightly."
+}

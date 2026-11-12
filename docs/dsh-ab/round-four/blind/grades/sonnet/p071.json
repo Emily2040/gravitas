@@ -1,0 +1,57 @@
+{
+ "pair": "p071",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Adds about 54 yuan for 大病保险 and 长护险 on top of 3,315.69 and gives a total of about 3,370 yuan. The key says these are deducted from the personal account credited back, with no extra cash. The answer then says the net outlay is lower, which muddles it.",
+   "Says '按现行口径，也不会缩短重新参保后的等待期'. The key says it is unverified whether 补缴 exempts the waiting period. This is stated as settled, with no 'ask 经办' hedge.",
+   "Quotes the Hangzhou rule as '中断缴费4个月及以上，重新参保后从参保缴费次次月起享受待遇'. The key says 'third natural month from resumed payment'. The result is the same (2027-01), but the quoted wording is unverified.",
+   "Gives the phone number 0571-89583017 as a Hangzhou 医保 line. It is not in the key and cannot be checked.",
+   "Cites a Linping district and a Xiaoshan district Q&A as 依据. Their content cannot be verified from the packet.",
+   "Adds an off-topic aside that the 摇车牌 / 买房 连续社保 rule is different and 补缴 generally does not count as continuous. This is not in the key and cannot be checked.",
+   "Says the threshold has no separate continuous-payment requirement and never says Hangzhou requires staying insured until retirement (办法第八条). This is a mild over-simplification.",
+   "Omits the 443.75 yuan/month 延缴 option and the fact that retirement-time 补缴 does not go into the personal account."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Cites '国家医保局口径：断缴3个月内补缴不设等待期、可追溯待遇' as a general national rule. The key says this comes from 医保办发〔2021〕43号第十一条 and covers only cross-region transfers or switches between 职工 and 居民 insurance. It is used only to say she is outside the window, so the verdict is still right.",
+   "Gives specific operating steps (浙里办, 浙里医保, 我要参保, 职工参保登记, 浙江税务社保缴费) and a document list (补缴申请表, 补缴超过1个月通常要去窗口). None of this is in the key and it cannot be checked.",
+   "Says 'Hangzhou 报销比例不跟连续年限挂钩' and 'retirement 待遇 does not look at years beyond 20'. Neither is in the key and neither can be checked.",
+   "Says the 办法 does not explicitly say whether 补缴 removes the waiting period. The hedge itself is fine, but 'the 办法 does not say' is an unverifiable claim about the text.",
+   "Never says the new employer cannot 补缴 2026-04 to 10 for her, which the key requires. It only warns about third-party 挂靠 and about 衔接 between 灵活就业 and 单位参保."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying the 8 years are not wiped. Both separate 累计 years from 连续 years, give the 10-year actual and 20-year cumulative retirement rule, and compute 473.67 x 7 = 3,315.69, the 2026-12-31 deadline, and the 2027-01 resumption of benefits. All of this matches the key. B is slightly better for three reasons. It hedges whether 补缴 removes the 11-12月 waiting period and says to ask 12393 or 经办, as the key requires, while A asserts that it does not. It gives the full 不补 fallback (743.60 one-time, 5,205.20, and 443.75/month 延缴 at 3,106.25), a self-check formula, and the point that retirement needs ongoing insurance. A has the key's 'new employer cannot 补缴 for you' point, which B lacks. A also misses the 延缴 option, adds an unverifiable phone number, an off-topic 摇号 aside, and about 54 yuan of extra cash fees that conflict with the key. Both are longer than the key's 'moderate length', and B is the longer of the two."
+}

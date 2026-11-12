@@ -1,0 +1,52 @@
+{
+ "pair": "p046",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "Cites the 2021 notary-fee guidance as '1058号文'. The NDRC page says it is 发改价格〔2021〕1081号 (opened zfxxgk.ndrc.gov.cn id=18208), so the number is wrong",
+   "Says 18号文 第一条 sets the 1万元 limit that banks may raise to 5万元. The gov.cn text puts the limit in Article 2; Article 1 only drops the notarization rule",
+   "'2%是很多地方早年的老标准' is unverifiable and gives no source",
+   "Says the 2021 NDRC/MoJ document 'required lower notary fees' and made places switch to tiered rates. That document is about how notary prices are set, so this description is unverifiable",
+   "Says 'some branches require all heirs to attend or sign'. Unsupported, and it runs against the key (paying one heir is enough)",
+   "The 庄浪 fee table (1.2%/1%/0.8%/0.5%/0.1%) is one county's figures, offered as a typical structure. Unverifiable from the answer (link not opened)",
+   "'公证书副本费10元/份' is unverifiable"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'多数地方20万元以下部分按1%—1.2%收取' is unverifiable, and Beijing's current rate (per the key) is 0.9%",
+   "'有的地方最低300元' is unverifiable",
+   "Says 辽宁 and 合肥 both publish 1%—1.2% with a 200元 minimum. No link or document number is given, so this is unverifiable",
+   "'如果当地公证处确实按2%收172元，也可能' lends credence to the 2% premise. The key says no official standard uses 2%",
+   "'数个工作日到数周' for notarization time is unverifiable (minor)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the 'must notarize' premise. Both cite 银保监办发〔2021〕18号 and 金规〔2024〕6号 with the 5万元 same-legal-entity limit, list the four materials, and give 12378. A has some verified extra detail: the one-time withdrawal with account closure, and the 丧葬费/抚恤金 exclusion. It also splits the inheritance shares correctly. But A is very long, gives the fee document's number wrongly (1058 instead of 1081), and hints that some branches require all heirs to attend. B is tighter, cites the fee guidance correctly, applies the 200元 minimum directly, and says all heirs need not attend. B's weak spots are that it mentions account closure only in passing and treats the 2% figure as 'possible'."
+}

@@ -1,0 +1,50 @@
+{
+ "pair": "p036",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "Cites an August 2026 report (city.ce.cn link): could not be checked, and the URL is dated in the future relative to most sources",
+   "Notarial certificate copy fee of about 10 yuan per copy: no source given, unverifiable",
+   "Says you and your mom should go together 'in case the branch requires heirs to be present': implies all heirs may need to attend, against the key (the bank pays one heir)",
+   "Gives the 1998 2%, 200-yuan-minimum standard as the basis of the fee estimate: from my own knowledge the old national standard probably was 2%, but the key says current official standards have no 2%, so presenting it as a live option is misleading"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "'Some branches require all first-order heirs to sign': contradicts the key, which says the bank pays one heir and not all heirs need to attend",
+   "Calls 1.2% the rate in 'some provinces': its own source is one county notary office in Gansu (Zhuanglang), so this overgeneralizes",
+   "'Some places may charge up to 300 yuan': unverifiable, no source",
+   "Quotes '5万元以下免交公证书' from an August 2026 report: unverifiable quoted wording",
+   "'In your case there are generally no other fees' and the copy fee of about 10 yuan each: unverifiable",
+   "'You don't need the card password': not in the key; plausible but unsourced"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word for word the same. Both open by correcting the 'notarization is required' premise using the 50,000-yuan rule in 金规〔2024〕6号. Both list the four exemption documents, note that all accounts at the same bank are added together and that the account is closed after a one-time withdrawal, and give 12378 as the fallback. Both also include an unnecessary, long notarization-materials section, and both still run 2% arithmetic instead of saying plainly that no current official standard uses 2%. B states more clearly that 2% is not a national rate. But B adds more unsupported claims: some branches requiring all first-order heirs to sign (the trap the key names), 1.2% as a rate in 'some provinces' when the source is one county, and a fee of up to 300 yuan. A attributes its sources more precisely and cites 18号文 by link, so it wins narrowly."
+}

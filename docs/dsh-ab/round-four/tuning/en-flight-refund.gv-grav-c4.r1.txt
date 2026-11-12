@@ -1,0 +1,29 @@
+**The agent gave you the wrong rule, and it costs you $412 if you take the credit.** Weather excuses a lot for an airline — hotels, meals, rebooking — but not this. Under [14 CFR 260.6(a)(1)](https://www.law.cornell.edu/cfr/text/14/260.6), when a flight is cancelled and you decline the rebooking, you're entitled to a full refund of the fare to your original form of payment, nonrefundable ticket and weather included. You declined it in effect: the meeting was that day and you drove home. And a credit offered *instead of* that refund must be valid at least five years, not one ([§260.6(c)(2)](https://www.law.cornell.edu/cfr/text/14/260.6)) — so "at least a year" is asking for less than you already have. If you want the cash, use the second message; if you'd rather have the credit anyway, the first one is what you asked for.
+
+**Credit version**
+
+> Subject: Travel credit for cancelled flight UA [number], ORD–DEN, [date]
+>
+> Hello,
+>
+> My flight UA [number] from Chicago O'Hare to Denver on [date] was cancelled that morning because of thunderstorms. I was rebooked onto a flight the following afternoon, but my meeting was that day, so I did not travel.
+>
+> I am accepting a travel credit for the full ticket value of $412 rather than a refund. Please confirm in writing that the credit is valid for at least five years from the date of issue, as required for a credit offered in lieu of a refund under 14 CFR 260.6(c)(2), and tell me how to apply it.
+>
+> Thank you,
+> [Name] · MileagePlus [number] · Confirmation [record locator] · Ticket [number]
+
+**Refund version**
+
+> Subject: Refund request for cancelled flight UA [number], ORD–DEN, [date]
+>
+> Hello,
+>
+> My flight UA [number] from Chicago O'Hare to Denver on [date] was cancelled because of thunderstorms. I did not accept the rebooking to the following afternoon because my meeting was that day, and I did not travel.
+>
+> I am requesting a refund of the full ticket price, $412, to my original form of payment. Under 14 CFR 260.6(a)(1), a passenger who declines rebooking after a cancellation is entitled to a refund regardless of the cause of the cancellation, so the weather does not affect this request. Please confirm receipt and when the refund will be issued.
+>
+> Thank you,
+> [Name] · MileagePlus [number] · Confirmation [record locator] · Ticket [number]
+
+Send either through United's customer care form or the refund request page, and keep the confirmation. One caution: if a credit has already landed in your account, don't redeem any of it until you've decided — spending it is the clearest way to accept it.

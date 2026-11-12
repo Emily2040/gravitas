@@ -1,0 +1,50 @@
+{
+ "pair": "p020",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"如果 800 元是扣完个人社保、公积金后的实发金额……公司可能刚好达到下限，并没有差额\": takes the minority reading (2192 as gross) and does not say it is disputed; the key's majority view is that take-home pay must not fall below 2192, so this would still be illegal",
+   "\"也可以在 1 年内申请劳动仲裁\": oversimplified; a wage-arrears claim made while still employed is not bound by the one-year limit, which runs from leaving the job (Arbitration Law Art. 27)",
+   "\"这份文件和沪劳保保发〔2000〕14号已于 2026年8月15日 到期失效\": states as fact that 14号 lapsed, but the key says that lapse is only presumed, with no official statement"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 8,
+  "honest": 5,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"基数要先按正常工资的70%计算，所以按旧口径是 8000×70%×80%=4480元，并非6400元\": wrong. The 70% base applied only when neither the employment contract nor a collective contract set a monthly wage (old Shanghai wage-payment rules, Art. 9). With a contract wage of 8000, the old 83号 tier gives 8000×80%=6400, as the key says",
+   "\"按旧口径补3680元\": comes from the wrong 4480 figure",
+   "Table row \"旧规满4年（2026年8月15日前）| 8000×70%×80% | 4480元\": the same invented rule, presented as the standard old calculation"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "wrong",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 'company decides / can pay nothing' premise at the start. Both explain that 83号 lapsed on 2026-08-15, and both give the floor as 2740×80%=2192, a shortfall of 1392. B's main error is a 70% base discount it applies to everyone: it puts the old 4-year tier at 4480 instead of 6400, and the error carries into its table and its shortfall figures. A does not work out 6400 or give the base and daily formula. A also leans toward the minority reading on take-home pay without saying it is disputed, and it oversimplifies the arbitration time limit. Even so, A's message to HR asks whether 800 is gross or take-home pay and asks for the deduction details, which B's message leaves out. A is accurate on the core numbers and B is not, so A wins clearly."
+}

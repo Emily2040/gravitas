@@ -1,0 +1,52 @@
+{
+ "pair": "p072",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says most places charge 1%-1.2% for inheritance notarization under 200,000 yuan: overgeneralised. The key gives Beijing at 0.9%, and Shanghai is 0.8% in search results.",
+   "Says Liaoning and Hefei publish standards of 1%-1.2% with a 200 yuan minimum: unverifiable. A web search found neither province's standard.",
+   "Cites 发改价格〔2021〕1081号 as the fee basis for 1%-1.2%: the document is a fee-pricing guidance (value-based top tier capped at 0.5%) and does not state those rates, so the citation does not support the claim.",
+   "Says some places set a 300 yuan minimum: unverifiable.",
+   "Says notarization takes several working days to several weeks: unverifiable estimate.",
+   "Leaves open that a notary may charge 2% (172 yuan) and advises 200-300 yuan: hedges on a rate the key says is not in official standards. The total is close to the key's 200 yuan maximum."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Cites a news report dated August 2026 (city.ce.cn) as saying 5万元 allows withdrawal without a notarial certificate: unverifiable. The page returned a 504 error when I opened it.",
+   "Says the counter's 'must notarize' came from the old rules and is outdated: speculation about what the teller meant.",
+   "Says a notarial certificate copy costs about 10 yuan each: unverifiable.",
+   "Says notarization is handled at the heir's residence or where the deposit is held: unverified, and the 武汉 link was not checked.",
+   "Frames 2% as the 1998 national standard: true (计价费〔1998〕814号, 2% with a 200 yuan minimum), but it leaves the impression that 2% was once official and may still apply in some provinces, where the key says current official standards have no 2%.",
+   "Advises going together in case the branch wants the heirs present: hedges toward the 'all heirs must attend' trap, though it never says they must."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague"
+  }
+ },
+ "reasons": "Both answers open by correcting the premise: 8600 yuan is far below the 5万元 simplified-withdrawal limit under 金规〔2024〕6号, so no inheritance notarization is needed. Both list the four required materials and give 12378. A states that the mother can apply alone and that all heirs need not attend, and it gives a bank-first escalation path (branch manager, bank customer service, then 12378). B is vaguer on who must go, suggesting both attend. B is clearer that the withdrawal is one-time with the account closed, which A states only as 'account closed after withdrawal'. On the fee, both land near 200 yuan and neither accepts 2% as real. A overgeneralises with 'most places 1%-1.2%' (Beijing 0.9%, Shanghai 0.8%) and cites a document that does not support it. B correctly sources the old 2% as the 1998 national rate, but that still leaves 2% sounding official. Both are too long and give notarization materials a full section, with B slightly longer and more link-heavy. A edges ahead on key-point coverage."
+}

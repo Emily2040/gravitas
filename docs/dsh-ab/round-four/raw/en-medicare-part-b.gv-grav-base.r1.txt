@@ -1,0 +1,29 @@
+**Don't enroll in Part B this month.** Based on what you've told me — still working full time, covered by your employer's **active** group plan, employer has ~400 employees — you can delay Part B and avoid the lifetime penalty. Your coworker is quoting the general rule; the exception for active employees at a 20+ employee employer is the part that applies to you.
+
+Enrolling now would cost **$202.90 a month in 2026** — about **$2,435 a year** — for coverage that pays *second* to your employer plan. It wouldn't cancel or replace your employer coverage; you'd just be paying for a secondary layer years before you need it. Nothing closes this month: free Part A can be added anytime, and Part B gets an **8-month penalty-free window** after you stop working.
+
+**Why you can wait:** For active employees (and spouses) at an employer with 20+ employees, the group plan is primary and Medicare is secondary. Medicare.gov's sign-up tool asks exactly the 20-employee question, and its answer for your situation is to sign up within **8 months after you stop working** (or lose coverage, whichever comes first) — not at 65. The 10%-per-year penalty is real and lifelong, but it only counts months when you *didn't* have qualifying employer coverage. ([Medicare.gov: Working past 65](https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65), [when to sign up](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-can-i-sign-up-for-medicare))
+
+**What to do this month:**
+
+1. **Hold the application.** Don't submit the Part B request. If you've already submitted it, call Social Security now — you may be able to withdraw before it's processed. If it's already active, you can terminate Part B with Form CMS-1763, but that's not a clean undo: re-enrolling later can be restricted and premiums aren't refunded. Check with SSA before doing that.
+
+2. **Get four answers in writing from HR/benefits.** Email is fine — you want a record:
+   - Is my coverage *active-employee group coverage based on current employment* — not retiree coverage or COBRA?
+   - Does the plan require employees 65+ to enroll in Medicare Part A and/or Part B?
+   - Does the plan reduce or "carve out" benefits for employees who are Medicare-eligible but not enrolled? Ask for the plan's Medicare coordination section or SPD.
+   - Is the prescription drug coverage "creditable" — at least as good as Part D? Keep the annual notice.
+
+3. **If the answers are "no requirement, no carve-out" — the likely case:** Keep your employer plan exactly as it is. Enroll in **premium-free Part A** now, unless #4 applies. It's free if you've paid Medicare taxes for 40 quarters, and it can serve as secondary hospital coverage. Skip Part B, Part D, Medicare Advantage, and Medigap for now.
+
+4. **If you have an HSA, pause before enrolling in anything.** Medicare enrollment — even free Part A — makes you ineligible to contribute to an HSA, and Part A can be retroactive up to 6 months. Talk to payroll and stop contributions first.
+
+5. **Check whether you're already on Social Security.** If you are, you may be auto-enrolled in Parts A and B at 65; to delay Part B you'd need to decline it using the instructions that come with the card.
+
+6. **Calendar the real deadline.** When you stop working (or lose coverage, whichever is first), you have 8 months to enroll in Part B. Enroll the month before you retire to avoid a gap. You'll need **Form CMS-L564**, signed by your employer, plus pay stubs/W-2s as backup. If you miss the 8 months, you'd wait for the General Enrollment Period (Jan 1–Mar 31) and could owe the penalty. ([Sign-up forms](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/ready-to-sign-up-for-part-a-part-b))
+
+7. **If you do enroll this month** — because the plan requires it or carves out benefits — Part B starts November 1, 2026. The premium is **$202.90/month** (higher if your 2024 income exceeded $109,000 single / $218,000 joint), and the deductible is **$283**. Your employer plan still pays first. ([2026 premium notice](https://www.govinfo.gov/content/pkg/FR-2025-11-19/html/2025-20251.htm), [Medicare costs](https://www.medicare.gov/basics/costs/medicare-costs))
+
+**When your coworker would be right:** retiree coverage or COBRA, an employer under 20 employees, or not actively working. In those cases Medicare is primary, and missing your Initial Enrollment Period can trigger the 10%-per-year penalty for as long as you have Part B. ([Penalty rules](https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties))
+
+For a free, unbiased second opinion on the plan documents, your state SHIP program deals with this exact question: [shiphelp.org](https://www.shiphelp.org/).

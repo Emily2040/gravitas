@@ -1,0 +1,47 @@
+{
+ "pair": "p065",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"계약 후 이사 사이에 설정되는 경우가 많습니다\": a claim about how often this happens, with no source given",
+   "확정일자 안내 links to an Ulsan Nam-gu dong office page for a Seoul villa. The 600원 fee and documents are the same nationwide, so this is a weak source rather than a wrong one."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 9,
+  "added_claim_errors": [
+   "전입신고 \"계약서 명의자 본인이\": the law does not require the person named on the contract to file it personally (a household member or an authorised proxy can), so this is overstated",
+   "\"대항력은 신고 다음 날 0시부터\": leaves out that 인도 (actually moving in) is also required. The next-day timing itself is right.",
+   "Offers 정부24 for 전입신고 and 인터넷등기소 for 확정일자 with no warning that an after-hours filing may take effect on the next working day (Monday). That undercuts its own advice to go to the 주민센터 on Friday during the day."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers reject the agent's premise at the start: 전입신고 gives only 대항력, and 우선변제권 also needs 확정일자. Both also say the filing must not be put off. Neither mentions that 최우선변제 does not apply to a 2억 원 deposit, and neither covers the 임대차 신고 obligation. A is more legally complete. It says 대항력 needs both 점유 and 전입, gives the documents and the 600원 fee, and warns not to move 주민등록 until the deposit is returned. Its sequence leaves out 잔금, though, and does not tie the registry check to it. B is shorter and fits the request's \"짧게\". Its sequence also matches the key better (check the registry right before 잔금, then pay). But it suggests online options without a timing caveat and adds the overstated rule that the contract holder must file in person. Overall A's more complete protection advice wins narrowly."
+}

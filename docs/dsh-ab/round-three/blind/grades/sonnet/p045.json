@@ -1,0 +1,57 @@
+{
+ "pair": "p045",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Table gives the 两病 annual cap as 200 yuan as if it were the Anhui figure, with no city named. Caps vary by city (key's Xuancheng example is 450; the Guzhen page I opened gives 360), so the generic 200 is wrong or unverifiable.",
+   "Says the 400 yuan 2027 居民医保 premium 'can also be paid with your 共济额度' as a flat fact. The key says Anhui had not opened this as of 10-20 (expected November), so this is the baited error.",
+   "Says Anhui requires 慢特病 outpatient payment of at least 60% as a province-wide rule; I could not verify it.",
+   "Says 六安 has a 500 yuan deductible and 铜陵 requires a complication for resident hypertension; I could not verify either.",
+   "Says Anhui's centralized collection runs October 2026 to the end of January 2027; I could not verify it.",
+   "Says binding a relative needs 户口本 or similar proof of relationship, and that 慢特病 needs a 二级及以上 hospital diagnosis certificate; neither could be verified.",
+   "The 慢特病 row gives the limit as 2000-2500 yuan; Wuhu 2500 and 60% checked out on its official page, but the 2000 end is not tied to a named city in the table."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the 共济额度 is temporarily frozen once set and returns to the account when the relationship ends; I could not verify the freezing mechanics.",
+   "Says binding fails if the mother's 居民医保 for the year is unpaid or her benefits are abnormal; I could not verify it.",
+   "Says the Anhui premium (not lower than 400 yuan) can be tried with 医保钱包. It is hedged ('可以试着'), but the key says Anhui had not opened this yet.",
+   "The 门慢 row (350 deductible, 60%) names no city. The Guzhen page I opened matches it (350 deductible, 60%, hypertension limit 2000), but the table does not say which city it is.",
+   "Says the 门慢 condition is two non-same-day visits at least 28 days apart in the last half year; the source is a hospital website and I could not verify it.",
+   "Says 12393 is the Suzhou 医保 hotline, citing a link; I did not open it.",
+   "The 门慢 row says about 1200 reimbursed against a computed 1230 (self-pay 1170 against about 1200). The rounding is disclosed, so it is only loose.",
+   "Closing line 'about 1200 yuan reimbursable' is fairly firm, though it is conditional on 门慢 approval and on the stated local variation."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the baited premise, separate legal 家庭共济 from 冒名使用 of the card or code, and compute 2400 yuan correctly. B's added facts check out: the Suzhou guide says 江苏医保云 covers 本省参保 family only, so cross-province needs 医保钱包; Wuhu 2500 yuan at 60% is on the official page; the Guzhen page matches 两病 360, 门慢 350 deductible and 60%, and 一级及以下. B also says caps vary by city, gives checkable links, and states that the 共济额度 cannot go to a third person. A gives a generic 200 yuan 两病 cap that I could not match to any source (the pages I opened say 360 and 450). A also states flatly that the 共济额度 can pay the Anhui 居民医保 premium, which the key says is not yet open. A omits the no-transfer rule and the resale/cash-out misuse. A is somewhat shorter, but B is more accurate and more actionable, though longer."
+}

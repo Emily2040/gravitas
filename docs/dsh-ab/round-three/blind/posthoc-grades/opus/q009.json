@@ -1,0 +1,46 @@
+{
+ "pair": "q009",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says complaints go to the labour inspection team where the company is registered or operates. Under the Labour Security Inspection Regulations, art. 13, jurisdiction follows the place of employment (用工所在地). Minor imprecision, judged from my own knowledge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Lists 'send it to the company mailbox, or post it by EMS, the same day' as a way to make sure the notice arrives on 10月26日. An EMS item posted that day is not received that day, and the answer's own next sentence moves the date to 11月26日 if the company receives it on 10月27日. Minor internal inconsistency."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers fix both baited premises up front: notice is 30 days under art. 37, the 60-day clause is void under art. 26, and no approval is needed. Both give a letter written as a notice, the right dates (11月25日 Wednesday as the last day, 11月26日 onward free), 4 prorated leave days, the extra 4413.79元 at 200% with the 300% total explained, and the 12333 or arbitration route. Neither cites the 2025 basis for 21.75, and neither names Shanghai or Jiangsu. B at least notes that only special confidentiality posts can carry a longer notice period, and it is noticeably tighter. A is stronger on delivery evidence (a sign-off block in the letter, WeChat and email trail) and gives the one-year arbitration limit. But A is longer and adds hedges, such as the optional 11月26日 date in the letter and the note about the year, so B edges it on concision with equal accuracy."
+}

@@ -1,0 +1,50 @@
+{
+ "pair": "q013",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says 2% is an old standard still used in many places and some places still charge 2%: unverifiable, and the key says no official standard has 2%. It treats the user's premise as possibly real and computes 172 yuan on it.",
+   "Says the 2021 NDRC/MOJ notice moved many provinces to government-guided, tiered pricing: stated without any source and not checked.",
+   "Says complaints of this kind usually get the bank to act: unverifiable.",
+   "Says 200 yuan is a common minimum: consistent with the key's Beijing example but given as a national norm with no source."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says many notary offices set a minimum fee of about 200 yuan: unverifiable as a general claim. The Zhuanglang page it cites sets no minimum for inheritance.",
+   "Says a notarial copy costs 10 yuan: unverifiable.",
+   "Says 2% was the early standard in many places: unverifiable.",
+   "Says the material list is in Article 4 of document 18: not checked.",
+   "Gives the 100-250 yuan range from a Gansu county table with a 1.2% cap. It is a local example, labelled as one, and not the Beijing figure in the key.",
+   "Cites the 2019 query notice and document 1058 by link: I did not open either."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the claim that notarization is mandatory. Both cite the right documents (银保监办发〔2021〕18号, 金规〔2024〕6号) and the 5万元 limit, list the right exemption materials, and give 12378 for complaints. The difference is on the fee premise. B says the fee is not a flat 2%, calls 2% an old standard, and gives a real tiered local table. A keeps 2% alive (\"also some places still charge 2%\") and builds its estimate on it. I opened the 金规〔2024〕6号 text and the Zhuanglang fee page. They confirm B's extra points: unsettled interest and funeral or pension payments are excluded from the limit, banks must state requirements in one go, and the rate is capped at 1.2%. B's inheritance split is arithmetically right (4300, 2150 each, mother 6450). B is much longer, with a long notarization checklist, a table and a split section that the key does not call for, so it loses on concision. Its better handling of the fee premise and extra verified detail outweigh that, so B wins slightly."
+}

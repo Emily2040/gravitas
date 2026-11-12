@@ -1,0 +1,52 @@
+{
+  "pair": "p063",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 6,
+    "trap": 7,
+    "honest": 6,
+    "useful": 5,
+    "concise": 7,
+    "added_claim_errors": [
+      "“7~9월 석 달이면 요건을 충족할 가능성이 높으니”: three late-payment months alone do not establish likelihood without delay lengths or outstanding amounts.",
+      "“12개월 안에 수급자격 신청”: misleadingly presents the benefit-payment window as merely an application deadline; applying near its end can forfeit payable days.",
+      "“2년 근무라 퇴직금 대상”: omits the weekly working-hours condition specified in the key.",
+      "“건강보험료가 지역가입자로 바뀌니”: overstates an automatic outcome; dependent coverage or continued employee coverage may apply.",
+      "“가장 큰 목돈입니다”: unsupported because the request does not establish whether any wages remain unpaid or their amount."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "wrong",
+      "4": "vague",
+      "5": "missing",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "B": {
+    "correct": 4,
+    "trap": 8,
+    "honest": 4,
+    "useful": 4,
+    "concise": 5,
+    "added_claim_errors": [
+      "“12개월 안에 신청해야”: does not distinguish the benefit-payment window from an application deadline, although it correctly urges prompt application.",
+      "“3개월치 + 퇴직금을 진정하세요”: assumes three months of wages remain unpaid; the request establishes late payment, not three outstanding salaries.",
+      "“이게 당장 가장 큰 현금입니다”: neither the outstanding amount nor immediate recovery is established.",
+      "“실업급여가 끝난 뒤 잔여분을 받을 수 있으니 지금 미리 신청”: invents an automatic remaining entitlement and overlooks the possible six-month exclusion after unemployment benefits end.",
+      "“대기기간 후 12개월 이상 계속 고용되면”: incomplete early-reemployment eligibility; the key requires reemployment after 14 days from reporting and at least half the prescribed benefit days remaining."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "vague",
+      "4": "missing",
+      "5": "missing",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "reasons": "A wins because B adds materially misleading benefit-coordination and early-reemployment advice, despite explaining delayed payment and prioritizing application better. Both correct the opening premise but omit the decisive 60-day calculation, benefit amounts and durations, and the specified emergency financing options. A also undermines timely application by putting wage recovery first, while both are longer than the requested brief advice warrants. Assessment uses the supplied key; the health-insurance qualification is based on general knowledge, without external verification."
+}

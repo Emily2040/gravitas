@@ -1,0 +1,51 @@
+{
+ "pair": "p003",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Study sessions 'single time generally not less than 5 minutes': not stated on the Tongliao page A cites (I opened it); unverified local rule.",
+   "Button names such as 前往学习, 提交学习, 前往考试, 网办进度 and 'face recognition before and after the exam': unverifiable UI and process detail, varies by version and province.",
+   "One-point-per-day pacing and 6-day schedule, and 'if the system allows 2 per day': speculation about daily limits with no source (hedged, minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Exam 'within 7 working days after study': the Tongliao page I opened says 7 days without 'working'; unverifiable.",
+   "Substitute study fine '1000-2000 yuan (Article 31)': Article 31 says up to 1000 yuan for falsifying and up to 2000 yuan for substitutes; there is no 1000 minimum, so the range is wrong.",
+   "'Theoretical floor 5 hours' with exam: contradicts B's own table (3h study + 60 min minimum exam = 4h, 4.5h with application).",
+   "Per-round total '50-70 minutes' does not match the table rows (30+10+5 = 45 to 30+20+15 = 65 minutes); slight arithmetic looseness.",
+   "App labels 在线申请, 去学习, 去考试, and the home-page driver card showing 可减分: unverifiable UI wording.",
+   "'Face recognition usually gives 2 chances, two failures void the attempt' and 'each day 2-3 rounds, done in 2-3 days': unverifiable, no source."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers catch the baited premise at the very start. Both give the 6-point cap, the 4-point remainder, the 8-point risk after reducing, the automatic clearing at cycle end, and correct online-study specifics (30 minutes, 20 questions, 18 correct, 2 retakes). A's time arithmetic is right (3h study, 5h with exams). B states the law more concretely: it names Order No. 163, quotes Article 25 accurately (checked on gov.cn), cites Article 15 for clearing, and lists the application conditions in full, including the recent-three-cycle records and the two-full-point-education rule (Article 26, verified). A's conditions list is incomplete, and neither answer covers mixing methods under the 6-point cap or that the service is free. B is clearly longer and padded with extras. It also adds a few shaky details: a 1000-2000 yuan fine range, '7 working days', and a '5 hour theoretical floor' that contradicts its own table. A is leaner and carries fewer unverifiable additions. B's fuller coverage of the key points and its citations edge out A's concision."
+}

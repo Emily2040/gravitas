@@ -1,0 +1,52 @@
+{
+  "pair": "p064",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 10,
+    "honest": 6,
+    "useful": 6,
+    "concise": 4,
+    "added_claim_errors": [
+      "“大病保险等可能另计几十元”：key specifies deductions from credited personal-account funds, not additional cash; the amount is unsupported.",
+      "“目前仅支持线下办理”：this procedural restriction is not established by the packet.",
+      "“购房、落户等‘连续社保’资格也会重置（补缴一般不算连续）”：the packet does not establish these separate eligibility rules.",
+      "Recommending补缴 for imminent childbirth, home purchase or settlement implies benefits that the packet does not establish.",
+      "“纯粹为了退休，不用补”“3,300元花得不太值”：too categorical without knowing the user's retirement date or future contribution history."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "vague",
+      "5": "wrong",
+      "6": "vague",
+      "7": "vague",
+      "8": "vague"
+    }
+  },
+  "B": {
+    "correct": 8,
+    "trap": 10,
+    "honest": 8,
+    "useful": 8,
+    "concise": 6,
+    "added_claim_errors": [
+      "“可能另扣大病保险等几十元”：the amount is unsupported; the answer does not clarify that deductions come from credited personal-account funds.",
+      "“通过‘浙里办’搜‘医保补缴’或‘灵活就业参保’”：the packet does not verify this application route for the requested retroactive payment.",
+      "“买房、落户、车牌摇号……那些会受断缴影响”：the packet does not establish these separate eligibility rules."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "vague",
+      "5": "vague",
+      "6": "correct",
+      "7": "vague",
+      "8": "vague"
+    }
+  },
+  "reasons": "Both immediately reject the clearing-of-eight-years premise and correctly explain the waiting period; the arithmetic checks out, including 473.67×7=3,315.69 and the equivalent two-year and twelve-year shortfalls. B wins by stating the new employer cannot cover the gap, providing retirement payment rates, and making the decision depend more appropriately on time remaining before retirement. Both omit the requirement to remain enrolled and contributing in Hangzhou until retirement, incompletely state their assumptions, and leave parts of the no-payment comparison unstated; A also adds more unsupported advice and repetition. Unsupported additions were assessed against the packet only, without external verification."
+}

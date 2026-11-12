@@ -1,0 +1,55 @@
+{
+  "pair": "p058",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+    "correct": 6,
+    "trap": 9,
+    "honest": 6,
+    "useful": 6,
+    "concise": 3,
+    "added_claim_errors": [
+      "\"Scholarships do not\" count as compensation is overbroad: W-2 scholarship income and certain taxable graduate/postdoctoral stipends qualify. See [IRS Publication 970](https://www.irs.gov/publications/p970).",
+      "\"The limits may rise with inflation, which would shorten the schedule\" is unsupported: future limits are unannounced, and even $8,000 × 4 = $32,000 still requires five years.",
+      "\"Complete the transfer by December 31, 2026 to count against the 2026 limit\" contradicts the key's April 15, 2027 federal deadline, subject to provider processing.",
+      "\"Some plans take two to four weeks\" supplies an unverified processing range without identifying a plan.",
+      "\"K-12 tuition (up to $10,000 a year)\" is outdated for 2026; the federal limit is $20,000. See [IRS Topic 313](https://www.irs.gov/taxtopics/tc313)."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "wrong",
+      "3": "correct",
+      "4": "vague",
+      "5": "missing",
+      "6": "correct",
+      "7": "wrong",
+      "8": "vague"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 9,
+    "honest": 6,
+    "useful": 6,
+    "concise": 5,
+    "added_claim_errors": [
+      "\"Subtract that too\" after taking the minimum of all limits can understate eligibility: with ample wages, $3,000 eligible funds and $2,000 other IRA contributions, the maximum is min($5,500, $3,000) = $3,000, not $1,000.",
+      "\"Scholarships ... do not\" count as compensation is overbroad: qualifying W-2 scholarship income and certain taxable graduate/postdoctoral stipends count. See [IRS Publication 970](https://www.irs.gov/publications/p970).",
+      "The late-2025 survey's \"30 states\" and detailed state classifications remain unverified here and do not establish 2026 treatment; current [Colorado guidance](https://tax.colorado.gov/income-tax-topics-collegeinvest-contribution-subtraction) explicitly treats these rollovers as nonqualifying.",
+      "\"He is 22\" is not established; someone born in 2004 could still be 21 on the packet's date.",
+      "\"Completed by December 31, 2026\" and \"if you miss it, it becomes a 2027 rollover\" contradict the key's April 15, 2027 federal deadline, subject to provider processing.",
+      "\"Form 1099-Q to you as account owner\" is wrong for this direct rollover: the designated beneficiary is the recipient. See [IRS Form 1099-Q instructions](https://www.irs.gov/pub/irs-pdf/i1099q.pdf)."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "correct",
+      "4": "vague",
+      "5": "vague",
+      "6": "correct",
+      "7": "wrong",
+      "8": "vague"
+    }
+  },
+  "reasons": "B narrowly wins because it explicitly accounts for other IRA contributions and is less repetitive; A discusses only other Roth contributions and undermines its five-year schedule with unsupported shortening. Both immediately reject the $48,000 premise, but both give the wrong federal deadline and omit the $40,500 excess calculation and Roth-side 6% excise consequences. B adds a reporting error and a flawed order of operations, while A adds an outdated K-12 limit; neither fully satisfies the key. I recomputed the arithmetic and opened the official IRS and Colorado sources linked above, plus [S. 5550](https://www.govinfo.gov/content/pkg/BILLS-119s5550is/html/BILLS-119s5550is.htm), which supports B's introduction date, proposed change and initial committee referral."
+}

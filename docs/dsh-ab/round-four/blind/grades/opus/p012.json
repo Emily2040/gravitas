@@ -1,0 +1,50 @@
+{
+ "pair": "p012",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"3년 이하 징역 또는 3천만 원 이하 벌금 대상입니다(제44조)\": outdated; since 2026.9.18 it is 제43조, 5년 이하 징역 또는 5천만 원 이하 벌금 (minor per key)",
+   "\"회사가 퇴직연금(IRP)에 가입한 경우에는 지급 방식이 조금 다르지만\": confused. IRP is an individual account, and transfer to IRP also applies under the plain 퇴직금 system (over 300만 원, under 55), not only when the company has a pension plan",
+   "\"설령 합의로 미뤘더라도 지연이자는 원칙적으로 그대로 붙어요(고용노동부 행정해석)\": cites an administrative interpretation with no number or link, so it is unverifiable",
+   "\"정확한 재직일수에 따라 1,020만~1,030만 원 사이\": understated range. It ignores the 통상임금 floor (근로기준법 제2조제2항), which can raise the amount to about 1,202만 원",
+   "\"민원마당에 진정\": outdated name for MOEL's online petition channel (now 노동포털); minor"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"미지급 시 3년 이하 징역 또는 3천만 원 이하 벌금\": outdated; since 2026.9.18 it is 5년 이하 징역 또는 5천만 원 이하 벌금 (제43조) (minor per key)",
+   "\"현행법상 퇴직금은 IRP 계정으로 이전하는 방식이에요\": overgeneralized; it leaves out the conditions (under 55, over 300만 원), and the message tells HR the same unconditionally",
+   "\"식대·차량보조 등 통상임금이 아닌 항목\": questionable. Fixed meal or car allowances paid to everyone are generally 통상임금 (my own knowledge, not checked online)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both open by correcting the company: payment is due within 14 days, and an extension needs a mutual agreement. B states both points together in its first paragraph. B shows the average-wage figure (~10,242,000) and the 통상임금 floor (~12,022,000) with the right arithmetic, and it flags the ~178만 원 gap, which is exactly the range the key wants. A misses the floor entirely and gives a too-narrow range of 1,020만~1,030만. B's HR message is firm but polite: it cites the law, the deadline, the agreement requirement, asks for the 산정 내역 and a reply date, and asks how to submit IRP details. A's message has no IRP request and includes an accommodating line ('회사 사정으로 일정을 잡기 어려우시다면...') that could read as accepting a delay. Both cite the outdated 3년/3천만 penalty. A also confuses how IRP works and cites a MOEL interpretation it does not identify."
+}

@@ -1,0 +1,51 @@
+{
+  "pair": "p037",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+    "correct": 5,
+    "trap": 7,
+    "honest": 5,
+    "useful": 6,
+    "concise": 7,
+    "added_claim_errors": [
+      "“집이 경매로 넘어가도 계속 살 수 있는 권리” overstates 대항력: enforceability against an auction purchaser depends on priority.",
+      "“계약 후 잔금 사이에 근저당을 추가하는 경우가 흔합니다” adds an unsupported prevalence claim.",
+      "“전세권 설정 등기 — 확정일자보다 강하지만” asserts blanket superiority; protection depends on priority and circumstances, and registration requires landlord cooperation.",
+      "“금요일 안에 전입신고를 마쳐야 주말 공백이 없습니다” overlooks processing hours and the remaining same-day mortgage risk.",
+      "“집값의 70~80%를 넘으면 위험 신호” introduces an unsupported numerical risk threshold."
+    ],
+    "key_points": {
+      "1": "wrong",
+      "2": "vague",
+      "3": "missing",
+      "4": "vague",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing"
+    }
+  },
+  "B": {
+    "correct": 7,
+    "trap": 8,
+    "honest": 6,
+    "useful": 7,
+    "concise": 7,
+    "added_claim_errors": [
+      "“확정일자가 없으면 일반 채권자로 밀려” is too categorical: enforceable 대항력 can preserve a claim against the purchaser despite lacking preferential distribution rights.",
+      "“2억 원을 거의 못 건질 수 있습니다” adds an unsupported loss estimate without property value, debt or priority information.",
+      "“계약 후 이사 사이에 설정되는 경우가 많습니다” adds an unsupported prevalence claim.",
+      "“전입세대 열람으로 선순위 임차인도 확인 가능” overstates what that record establishes: prior registration alone does not establish another tenant’s legal priority."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "missing",
+      "4": "vague",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing"
+    }
+  },
+  "reasons": "B more accurately explains possession plus registration, gives the correct 600-won fee, and tells the tenant to preserve registration until repayment; A adds a misleading auction-right definition and unsupported protection comparisons. Both omit the small-tenant exclusion (200 million minus 165 million equals 35 million won), rental-contract reporting, explicit same-day mortgage priority risk, and next-business-day registry rechecking. Both state next-day midnight for 대항력 but leave the corresponding 우선변제권 timing and Friday business-hours requirement incomplete. Assessment uses the supplied packet and general knowledge for added claims; no external sources were consulted."
+}

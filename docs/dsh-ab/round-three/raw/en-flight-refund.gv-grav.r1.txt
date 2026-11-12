@@ -1,0 +1,28 @@
+**Before you send it: the agent told you the wrong rule.** Under the DOT's refund rule, a cancellation entitles you to a refund to your original payment method if you don't take the replacement flight — and the reason for the cancellation doesn't matter, weather included ([Final Rule, 89 FR 32760](https://www.govinfo.gov/content/pkg/FR-2024-04-26/html/2024-07177.htm)). United's own position that weather changes this is not correct; weather only means they don't owe you a hotel or meals. The $412 can go back on your card, typically within 7 business days for a credit card.
+
+A travel credit is optional, not mandatory. Accepting it generally means giving up the cash, so decide that before you send. If you still want the credit, this is the message — it pins the clock to the issue date, which matters because United's credits often run about 12 months from the *original ticket* date, and some require you to fly before the expiry rather than just book.
+
+---
+
+**Subject:** Travel credit request — cancelled flight UA [flight number], [date]
+
+Hello,
+
+My flight UA [flight number] from Chicago O'Hare to Denver on [date] was cancelled due to thunderstorms. I was rebooked for the following afternoon, but I could not use that flight, so I did not travel. I'm writing to accept a travel credit for the full ticket value of $412.
+
+Please confirm in writing that:
+
+- The credit is for the full $412 I paid, including taxes and fees.
+- It is valid for at least 12 months from the date it is issued, and I can book travel at any point during that period.
+- It is issued in my name and linked to my MileagePlus account [number].
+
+Please send the credit details and expiration date to [email address].
+
+Thank you,
+[Full name]
+Confirmation [code]
+[Phone]
+
+---
+
+If you'd rather have the $412 back instead, change "travel credit" to "refund to my original form of payment" and delete the validity bullet — that's the whole letter, and it's the version United is more likely to owe you.

@@ -1,0 +1,58 @@
+{
+ "pair": "q019",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "'$2,400 becomes $1,751 (in 2027 dollars)': this silently adds the 3.6% COLA (1,690 x 1.036). The key gives about $1,690, and the December 2026 COLA does not apply to someone first eligible in 2027 (my own knowledge). This is the key's COLA side-claim trap.",
+   "'First check lands in May, so only nine payments fall in the year': May to December is eight payments. With whole-check withholding of the April to July benefits, almost nothing arrives until about September (key).",
+   "'Actual 2027 total is $47,538' and 'net about $9,500 in benefits': this overstates 2027 cash. It spreads the $6,220 across nine checks instead of withholding whole checks; about four deposits (about $7,000) actually arrive.",
+   "'Roughly $134/month extra federal in 2027, $168/month at full-year rates': these are computed on gross benefits before the earnings-test withholding, and withheld benefits are not taxable income. Overstated and unverifiable.",
+   "The 12-month 'Monthly average' table (SS net $1,232.51, total $4,399.17 a month, $52,790 a year) contradicts its own nine-payment statement and is misleading.",
+   "'Roughly $1,170/month less': this compares against the 12-payment $4,399 figure, not the stated actual 2027 average of $3,961 (which would be about $1,606 less). The arithmetic is internally inconsistent.",
+   "'I put a full one-pager in social-security-2027-budget.md': it refers to a file the person does not have, so this cannot be verified.",
+   "'First week of entitlement is April': there is no 'first week' concept. Entitlement is monthly.",
+   "'Give up about $735/month for life': this rests on COLA-inflated figures (2,486 - 1,751)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "wrong",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'Claiming at 62 is 60 months early... equals a 30% reduction': this contradicts its own later statement that entitlement starts April 2027, which means 59 months and 29.58% (key). The approximation is acceptable but inconsistent.",
+   "'x 1.036 (2027 COLA) = about $1,740 in 2027 dollars': this adds the 3.6% COLA as certain. That COLA does not apply to someone first eligible in 2027, and the key gives about $1,690. This is the key's side-claim trap.",
+   "'If you waited until you stopped working, or until 67, you'd lock in roughly $2,486 a month': stopping work before 67 would still leave a reduced benefit. The $2,486 figure is also COLA-inflated.",
+   "'Your first payment would arrive in May': under the earnings test the April to July checks are withheld, so the first deposit comes about September. Its own 'four actual deposits' line partly corrects this.",
+   "The SSA 2027 COLA fact sheet link returned 403 when I opened it. The figures it cites ($25,560 for 2027, $24,480 for 2026) match the key. I opened the POMS RS 00615.015 link and it confirms the 'age 62 throughout the entire month' rule."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct both premises at the start. Both get the earnings test right ($25,560 limit, $12,440 excess, $6,220 withheld), and both fall into the COLA trap ($1,751 and $1,740 instead of about $1,690). A has the more precise reduction (April, 59 months, 29.58%). But its 2027 budget is wrong: it says the first check comes in May and that nine payments arrive in 2027, it never mentions whole-check withholding, and it computes tax on gross benefits. Together these overstate 2027 benefit cash by about $2,500. B explains whole-check withholding and correctly expects about four deposits (about $7,000) in 2027. Its full-year federal tax estimate checks out, and it handles Medicare correctly. Its errors are smaller: a 60-month figure that contradicts its own April start, and a confusing 'first payment in May' line. Neither answer suggests checking with my Social Security or SSA's calculators."
+}

@@ -1,0 +1,48 @@
+{
+  "pair": "p035",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 8,
+    "honest": 6,
+    "useful": 7,
+    "concise": 6,
+    "added_claim_errors": [
+      "“확정일자가 없으면 일반 채권자로 밀려” overstates the consequence: lack of preferential distribution does not eliminate protection through opposability.",
+      "“계약 후 이사 사이에 설정되는 경우가 많습니다” adds an unsupported prevalence claim.",
+      "“전입세대 열람으로 선순위 임차인도 확인 가능” overstates what that record establishes; it alone does not establish tenants’ payment priority."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "missing",
+      "4": "correct",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing"
+    }
+  },
+  "B": {
+    "correct": 5,
+    "trap": 8,
+    "honest": 5,
+    "useful": 6,
+    "concise": 7,
+    "added_claim_errors": [
+      "“확정일자는 주민센터에서 무료” is wrong: the packet specifies a 600-won visit fee.",
+      "“운영시간…을 놓치면…인터넷등기소 확정일자로 대체하세요” misleadingly presents an after-hours substitute without explaining that Friday applications after 18:00 receive Monday issuance.",
+      "“빌라는 근저당이 잡힌 경우가 적지 않아” adds an unsupported prevalence claim."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "missing",
+      "4": "vague",
+      "5": "wrong",
+      "6": "vague",
+      "7": "missing"
+    }
+  },
+  "reasons": "A wins because it correctly gives the 600-won fee and next-day midnight timing, while B gives a false fee and potentially harmful Friday after-hours advice. Both reject the central premise, but neither covers the Seoul small-deposit exclusion, rental reporting, same-day mortgage priority risk, or next-working-day registry recheck. A is longer than requested and overstates the consequences of lacking a fixed date; B provides a clearer balance-payment sequence. Added claims were assessed against the packet and general knowledge; no external sources were checked."
+}

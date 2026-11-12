@@ -1,0 +1,57 @@
+{
+ "pair": "q019",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 5,
+  "trap": 9,
+  "honest": 6,
+  "useful": 5,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says 2027 has nine Social Security payments. April to November benefits paid May to December make eight, and with whole-check withholding far fewer arrive in 2027.",
+   "$2,400 becomes $1,751 'in 2027 dollars' silently adds the 3.6% COLA as certain; the key figure is about $1,690.",
+   "Spreads the $6,220 withholding evenly over the year ($1,232.51 net a month, about $9,500 net benefits in 2027). SSA withholds whole monthly checks, so almost nothing arrives until about September and 2027 benefits are about $6,760.",
+   "Compares $5,567 with $4,399 and calls it about $1,170 a month less, while also stating the actual 2027 average is $3,961. These are inconsistent; $5,567 minus $3,961 is $1,606.",
+   "Federal tax of about $134 a month for 2027 and $168 a month at full-year rates is unsourced. It looks overstated; my own estimate is roughly $80 a month of added tax at the 12% bracket.",
+   "Says 'first week of entitlement is April', which is meaningless wording.",
+   "Opens by saying a full one-pager was saved in social-security-2027-budget.md; this is an unverifiable file reference the reader cannot see."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Applies a 3.6% 2027 COLA as certain ($1,680 becomes $1,740; $2,486 at 67). The key lists this as a side-claim trap, though B cites an SSA fact-sheet link.",
+   "Says 60 months early and a flat 30% reduction, but later says the first eligible month is April 2027, which is 59 months and 29.58%. Internally inconsistent but within the accepted approximation.",
+   "Says whole-check withholding is 'roughly 3.6 checks' and 'about eight payments a year'. Whole-month withholding is four months, and 'eight a year' sits oddly beside its own four deposits in 2027.",
+   "Run-rate table shows a flat -$518 a month withholding and a -$320 federal tax estimate; this is unsourced, though my own estimate (single filer, 85% taxable, standard deduction) gives about $320, so it is plausible.",
+   "Opening line says the two errors 'cut your Social Security income by more than a third'. Loose: the permanent cut is 30%, about 27.5% with its COLA, and the 2027 cash cut is far larger.",
+   "POMS RS 00615.015 citation for the 'whole month' age rule was not opened. The URL format and the rule are plausible and match the key."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers open by correcting both premises: 40 credits is only eligibility, and the earnings test applies. Both get the 2027 test right: $25,560 limit, $12,440 excess, $6,220 withheld. Both say withheld benefits are credited back at FRA. B handles the 2027 cash flow much better. It says SSA withholds whole checks, that only about four deposits (about $7,000) land in 2027, that the first payment is May, and that Medicare Part B starts at 65. A spreads the withholding evenly, claims nine payments in 2027 and puts net 2027 benefits at about $9,500, so its budget misleads on the main thing she asked. A's reduction is more precise (59 months, 29.58%), but both then add an unstated or certain 3.6% COLA, which is a listed trap. Neither suggests checking figures with SSA calculators or my Social Security, and neither covers the first-year monthly rule. B is somewhat longer, with FICA and 35-year tangents, but is more actionable and has checkable SSA links."
+}

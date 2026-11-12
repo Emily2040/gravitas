@@ -1,0 +1,49 @@
+{
+ "pair": "p007",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "The letter states '单笔多为648元档位' as fact, outside the 【】 placeholders. The user only said 6480 yuan over 十几次 (about 400-650 each), so this detail is invented, and it goes against A's own advice to '只写真实发生的事'.",
+   "'开启指纹或面容支付' contradicts the key, which says to turn fingerprint and face payment off.",
+   "The date placeholder says 【2025年X月X日】, but the top-ups happened last month, in 2026. Minor template error.",
+   "The NetEase parental platform URL 'jiazhang.163.com' was not checked and comes with no source. Judged from my own knowledge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 4,
+  "added_claim_errors": [
+   "'多数渠道有时间限制' cannot be verified and hints at a deadline. The key says there is no statutory deadline.",
+   "It assumes every game company has a '未成年人充值退款专员' and an '未成年人退款专线', and that only that role can re-examine a case. This is unverifiable.",
+   "The WeChat 安全锁 path '我 → 服务 → 钱包 → 客服中心 → 常用工具 → 消费者保护 → 安全保障 → 安全锁' is very specific and backed only by a gmw.cn news link. It may not match the current app, and the key flags copied menu paths. The tip '支付宝在安全中心里找安全锁' is also unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers reject the 'real-name = adult, no refund' claim at the start. Both cite Civil Code articles 19, 145 and 157 and the SPC opinion (II) by its correct title, though neither gives the document number 法发〔2020〕17号 or 第9条. Both lay out a sound complaint path. B states the correction more plainly ('不是法律结论'). It also explains the fault-sharing reduction and evidence building in a way that matches the key. Its prevention advice fits the key fully: turn off password-free and biometric payment, delete the child's enrolled fingerprints, and note that WeChat youth mode does not limit payments. B also cites the 未成年人网络保护条例 correctly and links its sources so they can be checked. A tells the parent to turn fingerprint or face payment on, against the key, and puts an invented '多为648元档位' detail into the letter. B's weaknesses are that it is longer, it has a vague 'channels have time limits' line, it includes an unverified long menu path, and its letter admits the parent's negligence in writing. Those keep the margin slight."
+}

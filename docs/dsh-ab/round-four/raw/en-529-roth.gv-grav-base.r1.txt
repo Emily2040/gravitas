@@ -1,0 +1,37 @@
+**You can't move $48,000 this year — and you can't ever move all of it.** The 529-to-Roth rollover is real (SECURE 2.0, Section 126), but it has a hard lifetime cap and an annual cap, and your plan runs into both.
+
+## The limits that decide this
+
+| Rule | What it means for you |
+|---|---|
+| **$35,000 lifetime cap per beneficiary** | The most you can ever roll over is $35,000, across all his 529 accounts. Not indexed for inflation. |
+| **Annual Roth limit** | $7,500 for 2026 (under age 50). The rollover counts against it, not on top of it. |
+| **Earned income** | He must have earned income at least equal to the amount rolled over. No income, no rollover that year. |
+| **15-year account age** | Opened 2004, so met — unless you changed the beneficiary at some point, which can restart the clock. |
+| **5-year contribution rule** | Money contributed in the last five years, and the earnings on it, is ineligible. The eligible amount may be under $48,000. |
+| **Direct transfer** | Trustee-to-trustee only. A check to him and a contribution is not a rollover. |
+| **Roth ownership** | The Roth must be in his name; he must be the 529 beneficiary. |
+| **Income limits** | Do not apply to this rollover — only the annual amount and his earned income. |
+
+So the realistic path is **$7,500 this year**, then roughly $7,500 a year until the $35,000 cap is used — about five years. At least $13,000 of the $48,000 can never be rolled over.
+
+## Steps
+
+1. **Get the 529 facts.** Call the plan and ask for: the account opening date, whether he has been the beneficiary since 2004, the contribution dates and amounts (especially the last five years), the current balance, and whether the plan processes 529-to-Roth rollovers and what form it requires.
+2. **Confirm his 2026 earned income.** W-2 wages, self-employment net earnings, etc. The rollover cannot exceed it. If he has none, this waits.
+3. **Set the 2026 number.** The smallest of: $7,500; his 2026 earned income; and the portion of the 529 that has been in the account at least five years.
+4. **Have him open a Roth IRA** in his own name at a custodian that accepts 529 rollovers. Get the account number and the custodian's transfer instructions.
+5. **Submit the plan's direct trustee-to-trustee rollover form**, with the Roth account number and custodian. Do not have the 529 send him a check — that becomes a non-qualified withdrawal (tax plus 10% penalty on earnings) and an excess Roth contribution (6% excise tax per year).
+6. **Finish by December 31, 2026** so it counts against the 2026 limit. Confirm both the 529 plan and the Roth custodian processed it.
+7. **Keep the paper trail:** the 1099-Q from the 529, Form 5498 (Box 10) from the Roth custodian, and the plan statements.
+8. **Repeat each year** — 2027, 2028, and so on — until the $35,000 lifetime cap is used, subject to his earned income each year. If he also contributes to a Roth from his paycheck, the $7,500 is the combined cap, not extra room.
+9. **Decide the rest.** At least $13,000 stays in the 529. Options: graduate school, change the beneficiary to a future grandchild, student loan repayment up to $10,000 lifetime, K-12 tuition, or a non-qualified withdrawal (earnings taxed plus 10% penalty; contributions come out tax-free).
+
+## Check before you start
+
+- **State tax.** Some states don't treat the rollover as a qualified 529 distribution and may recapture prior deductions or tax the earnings. Ask the plan or a tax advisor about your state.
+- **The 5-year rule.** If you contributed in 2021–2026, that money isn't eligible. The plan may not track it for you; you may need your own records.
+- **Beneficiary changes.** If you ever changed the beneficiary, the 15-year clock may have restarted. Confirm.
+- **Plan rules and timing.** Not every 529 plan has its rollover process running smoothly yet. Ask for the form and expected timeline, and start soon — December is a busy month for processors.
+
+Sources: [Savingforcollege.com — 529 to Roth IRA rollover rules (updated Aug. 2026)](https://www.savingforcollege.com/article/roll-over-529-plan-funds-to-a-roth-ira), [IRAR — 2025–2026 IRA contribution limits](https://www.iraresources.com/ira-contribution-limits).

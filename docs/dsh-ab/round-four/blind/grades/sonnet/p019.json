@@ -1,0 +1,49 @@
+{
+ "pair": "p019",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 7,
+  "useful": 5,
+  "concise": 8,
+  "added_claim_errors": [
+   "「雇い入れから6か月たつと法律上の有給休暇が付きます」は8割出勤の要件を落としており、無条件のように読める(不正確)",
+   "「付与日数は就業規則か給与明細で確認できます」は、給与明細に有給日数が載るかは職場次第で、根拠のない言い切り(未検証)",
+   "LINE文面が有給の請求になっておらず、「代わりに入れる日…対応します」と穴埋めを申し出ているため、欠勤扱いで処理されても文面上は矛盾しない(誤りではないが前提訂正と噛み合わない)"
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "missing",
+   "6": "missing",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "「所定労働日の8割以上」は、法律上は「全労働日」の8割(軽微な言い換え)",
+   "LINE本文で法律の説明をやや詳しく述べており、LINEとしては少し長く説明的(誤りではない)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "B corrects the premise at the start. It cites the two requirements (6 months of continuous service and 80% attendance) and the correct 5 days for 3 days a week. It also notes that 10/1 has already passed. Its LINE draft asks for the day as 「有給休暇として」 with a date placeholder, in a polite and non-confrontational tone. It adds a short fallback line, a mention of the labor standards office and consultation corner, and the limit on the employer's right to change the leave date. B's cited Shizuoka Labor Bureau page loads and covers Article 39. A also corrects the premise and notes the proportional grant. But it leaves out the 80% condition and the 5 days, and does not mention the employer's right to change the date. Its default draft is a plain request for the day off, with 有給 only as an optional add-on and an offer to make up the shift. That is close to the 欠勤扱い framing the key penalizes. B is clearly more useful and complete, and a little longer."
+}

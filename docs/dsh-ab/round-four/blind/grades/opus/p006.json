@@ -1,0 +1,53 @@
+{
+ "pair": "p006",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"我能不能以灵活就业身份补3–9月\": wrong months. She stopped paying after March and resumes in November, so the gap is April to October (4–10月), which A itself counts as 7 months elsewhere.",
+   "\"另加大病、长护险几十元\": implies extra cash on top of 3,316. Per the key, the individual's major-illness and long-term-care premiums are deducted from the re-credited personal account, not paid separately.",
+   "\"省内换工作不用转移，跨省才需要办医保关系转移接续\": unverifiable. Intra-Zhejiang transfer rules are outside what the key verified, and A gives no source.",
+   "\"杭州的报销比例只看医院等级和费用段，不看连续缴了几年\": not covered by the key and no specific source given; plausible but unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"国家医保局的口径也是：断缴3个月以内补缴，才不设等待期、可追溯待遇\": presented as a general national rule. Per the key, 43号文 Art. 11 covers only cross-region transfers or switching between employee and resident schemes with a gap of 3 months or less. The conclusion that it does not apply to her is still right.",
+   "\"补缴超过1个月通常要去医保经办窗口，带身份证、居住证或户口本、就业登记材料、补缴申请表\": unverifiable procedural detail with no source.",
+   "浙里办 → \"浙里医保\" → 我要参保 → 职工参保登记（灵活就业）, and paying through \"浙江税务社保缴费\": unverifiable app navigation steps.",
+   "\"如果…近期可能看病、生育：建议补\": misleading. Medical costs in the back-paid months are not reimbursed, and B itself says the waiting period probably still applies, so back-paying does not help with near-term medical use.",
+   "\"杭州退休医保待遇不看20年以上的年限\" and \"杭州职工医保的报销比例不跟连续年限挂钩\": not covered by the key and no specific source given; plausible but unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers reject the \"cleared after 3 months\" premise in the first line, explain the third-natural-month waiting period correctly (Nov and Dec not covered, resumes January 2027), and give 473.67 yuan/month and about 3,316 yuan for 7 months with the end-2026 deadline. B covers more of the key: it gives both gaps (24 months for the 10 years in Hangzhou, 144 months for the 20-year total), the retirement-time costs (743.60/month, 5,205.20 for 7 months, monthly deferral at 443.75), and the assumptions behind its numbers (all 8 years in Hangzhou, whether March was paid). It also applies the eligibility rules to her case, concluding she must use the residence permit plus employment registration route. A is tighter, but it names the wrong months in its suggested hotline question (\"3–9月\") and suggests the major-illness and care premiums are paid on top. It also skips the 24-month gap, the retirement-time cost figures and most of the assumptions. B's weak points are its length, a national \"3-month window\" rule stated more broadly than the source supports, and some unverified app and counter steps. These cost less than A's missing points."
+}

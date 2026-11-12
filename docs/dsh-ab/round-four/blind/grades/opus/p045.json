@@ -1,0 +1,47 @@
+{
+ "pair": "p045",
+ "winner": "A",
+ "margin": "decisive",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Quotes the employer's right as limited to 「業務の正常な運営を妨げる場合」; the statute (and the Shizuoka Labour Bureau page A itself links, which I opened) says 「事業の正常な運営」. Minor misquote."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 5,
+  "honest": 7,
+  "useful": 5,
+  "concise": 6,
+  "added_claim_errors": [
+   "Tells her to check the day is treated as 「事前に承認された休暇」 rather than 欠勤. There is no such legal category: leave that is not paid leave (or a special leave set by the work rules) is still an unpaid absence, so the advice misleads.",
+   "「直前だと時季変更権の余地が広がります」: a plausible reading of case law, stated without support (judged from my own knowledge, not checked)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "wrong",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers start by correcting the manager and give the right figures: paid leave is granted on October 1 after six months, it is 5 days, and she must have attended at least 80% of her workdays. Neither explicitly calls it the reduced (proportional) grant for part-timers. A's LINE message asks to take a specific date as paid leave, politely and without confrontation. A also gives a reply to use if the manager refuses again and says the shop can only move the date, not refuse it. B's correction ends at the explanation: it tells her not to raise paid leave in the LINE at all. Its main and short messages are plain requests for a day off that offer to make up the shift, which leaves the manager's wrong premise in place, and it adds an invented category, 「事前に承認された休暇」. Point 7 is the deliverable the key centres on, and A gets it right while B gets it wrong, so A wins decisively."
+}

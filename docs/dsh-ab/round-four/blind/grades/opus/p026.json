@@ -1,0 +1,49 @@
+{
+ "pair": "p026",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"회사가 사실상 도산했다면 근로복지공단 소액체당금\": uses the old name (renamed 간이대지급금 in 2021), and the 도산 condition is wrong. 간이대지급금 does not require insolvency.",
+   "\"신청은 퇴사 다음 날부터 12개월 이내\": imprecise. The 12 months is the 수급기간 (제48조), so a late claim loses days. A 150-day entitlement needs filing within about 208 days.",
+   "\"구직촉진수당(월 50만원, 최대 6개월)\": the 2026 amount is unverified (the key does not penalize it, but it needs checking). It is listed as a source alongside 구직급여 even though receiving 구직급여 can exclude it."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 6,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "\"워크넷 구직등록 후 관할 고용센터에 수급자격을 신청\": wrong. 워크넷 has ended and was merged into 고용24.",
+   "\"7~9월 석 달이면 요건을 넘습니다\": overstated. The test is 60 days of total delay or nonpayment, not the number of late months, and a late-paid month may fall short.",
+   "\"'자발적 퇴사'로 보지 않고\": imprecise. Legally it is still 자기 사정 이직, but 정당한 사유 lifts the bar (제58조 제2호 다목).",
+   "\"퇴사 후 14일 안에 청산하지 않으면 바로 진정할 수 있습니다\": misleading. Wages already overdue can be reported right away, with no need to wait 14 days."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "wrong",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "wrong",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the false premise in their first line and cite 별표 2. Neither gives the 60-day test, the 150/180-day entitlement or any benefit amounts. A hedges correctly (\"가능성이 높고\", final call by 고용센터, conditioned on full nonpayment). B states flatly that three months \"요건을 넘습니다\", which is the overstatement the key penalizes. B also sends the user to 워크넷, a wrong procedural step the key lists by name. B's advantages are that it covers late-paid months, gives accurate 간이대지급금 details (1,000만원), and adds the duty to report day work and the 조기재취업수당. A's mistakes are smaller: the outdated 소액체당금 name with a wrong 도산 condition, and the loose \"12개월 이내\" phrasing. On balance A is slightly ahead because it avoids both of the key's explicit penalties."
+}

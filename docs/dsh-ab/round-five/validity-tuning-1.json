@@ -1,0 +1,256 @@
+{
+ "rule_files": [],
+ "round": [],
+ "invalid": [],
+ "flagged": [
+  "en-529-roth.gv-grav-c5.r1",
+  "en-fsa-rollover.gv-grav-c5.r1",
+  "en-medicare-part-b.gv-grav-c5.r1",
+  "ja-medical-deduction.gv-grav-c5.r1",
+  "ja-part-time-leave.gv-grav-c5.r1",
+  "ko-jeonse-protection.gv-grav-c5.r1",
+  "ko-severance-pay.gv-grav-c5.r1",
+  "zh-flex-hours.gv-grav-c5.r1",
+  "zh-insurance-gap.gv-grav-c5.r1",
+  "zh-sick-pay.gv-grav-c5.r1"
+ ],
+ "final_attempt_invalid": [],
+ "runs": {
+  "en-529-roth.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 5455,
+   "shell": 1,
+   "shell_errors": 0,
+   "web": 17,
+   "web_network_errors": 0,
+   "web_pages": 11,
+   "web_search": 6,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 1,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [
+    "1 shell results hit constrained language mode",
+    "1 fetched pages returned HTTP 4xx/5xx"
+   ],
+   "rerun": false
+  },
+  "en-fsa-rollover.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 2958,
+   "shell": 1,
+   "shell_errors": 0,
+   "web": 15,
+   "web_network_errors": 1,
+   "web_pages": 11,
+   "web_search": 4,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 4,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [
+    "1 of 15 web results failed with a network error",
+    "1 shell results hit constrained language mode",
+    "4 fetched pages returned HTTP 4xx/5xx"
+   ],
+   "rerun": false
+  },
+  "en-medicare-part-b.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 5525,
+   "shell": 1,
+   "shell_errors": 0,
+   "web": 18,
+   "web_network_errors": 0,
+   "web_pages": 12,
+   "web_search": 6,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 4,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [
+    "1 shell results hit constrained language mode",
+    "4 fetched pages returned HTTP 4xx/5xx"
+   ],
+   "rerun": false
+  },
+  "ja-medical-deduction.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 1623,
+   "shell": 1,
+   "shell_errors": 0,
+   "web": 18,
+   "web_network_errors": 0,
+   "web_pages": 14,
+   "web_search": 4,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 1,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [
+    "1 shell results hit constrained language mode",
+    "1 fetched pages returned HTTP 4xx/5xx"
+   ],
+   "rerun": false
+  },
+  "ja-part-time-leave.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 1115,
+   "shell": 1,
+   "shell_errors": 0,
+   "web": 3,
+   "web_network_errors": 0,
+   "web_pages": 2,
+   "web_search": 1,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 1,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [
+    "1 shell results hit constrained language mode",
+    "1 fetched pages returned HTTP 4xx/5xx"
+   ],
+   "rerun": false
+  },
+  "ja-wallpaper-restoration.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 1520,
+   "shell": 0,
+   "shell_errors": 0,
+   "web": 0,
+   "web_network_errors": 0,
+   "web_pages": 0,
+   "web_search": 0,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 0,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [],
+   "rerun": false
+  },
+  "ko-jeonse-protection.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 1144,
+   "shell": 1,
+   "shell_errors": 0,
+   "web": 6,
+   "web_network_errors": 0,
+   "web_pages": 4,
+   "web_search": 2,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 1,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [
+    "1 shell results hit constrained language mode",
+    "1 fetched pages returned HTTP 4xx/5xx"
+   ],
+   "rerun": false
+  },
+  "ko-severance-pay.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 1847,
+   "shell": 3,
+   "shell_errors": 0,
+   "web": 9,
+   "web_network_errors": 0,
+   "web_pages": 7,
+   "web_search": 2,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 0,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [
+    "3 shell results hit constrained language mode"
+   ],
+   "rerun": false
+  },
+  "ko-unemployment-quit.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 1201,
+   "shell": 0,
+   "shell_errors": 0,
+   "web": 9,
+   "web_network_errors": 0,
+   "web_pages": 6,
+   "web_search": 3,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 0,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [],
+   "rerun": false
+  },
+  "zh-flex-hours.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 3072,
+   "shell": 1,
+   "shell_errors": 0,
+   "web": 23,
+   "web_network_errors": 0,
+   "web_pages": 14,
+   "web_search": 9,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 3,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [
+    "1 shell results hit constrained language mode",
+    "3 fetched pages returned HTTP 4xx/5xx"
+   ],
+   "rerun": false
+  },
+  "zh-insurance-gap.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 1955,
+   "shell": 1,
+   "shell_errors": 0,
+   "web": 38,
+   "web_network_errors": 7,
+   "web_pages": 27,
+   "web_search": 11,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 4,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [
+    "7 of 38 web results failed with a network error",
+    "1 shell results hit constrained language mode",
+    "4 fetched pages returned HTTP 4xx/5xx"
+   ],
+   "rerun": false
+  },
+  "zh-sick-pay.gv-grav-c5.r1": {
+   "exit": "0",
+   "chars": 1424,
+   "shell": 1,
+   "shell_errors": 0,
+   "web": 35,
+   "web_network_errors": 1,
+   "web_pages": 25,
+   "web_search": 10,
+   "web_search_errors": 0,
+   "account_errors": 0,
+   "fetch_non2xx": 2,
+   "rule_records": 1,
+   "problems": [],
+   "notes": [
+    "1 of 35 web results failed with a network error",
+    "1 shell results hit constrained language mode",
+    "2 fetched pages returned HTTP 4xx/5xx"
+   ],
+   "rerun": false
+  }
+ }
+}

@@ -1,0 +1,55 @@
+{
+  "pair": "p082",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 8,
+    "honest": 7,
+    "useful": 7,
+    "concise": 7,
+    "added_claim_errors": [
+      "“20-employee threshold ... lets you delay Part B” conflates primary-payer rules with SEP eligibility; employer size is not an SEP condition.",
+      "“Some do; most don't” asserts an unsupported prevalence of employer enrollment requirements.",
+      "“If you're not on Social Security, nothing is automatic” overlooks automatic enrollment through Railroad Retirement benefits (assessed from my own knowledge).",
+      "“CMS-L564 form (your employer fills it out)” incorrectly assigns the whole form to the employer; the applicant completes Section A."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "vague",
+      "3": "correct",
+      "4": "vague",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing",
+      "8": "vague"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 7,
+    "honest": 6,
+    "useful": 6,
+    "concise": 5,
+    "added_claim_errors": [
+      "“Exception ... employer with 20+ employees” incorrectly makes employer size a condition of the penalty-free SEP.",
+      "“A few plans do for certain employee classes” adds an unsupported claim about prevalence and employee classifications.",
+      "Automatic enrollment “effective your birthday month” omits the earlier start for someone born on the first of the month.",
+      "“If you're not on Social Security, nothing happens automatically” overlooks Railroad Retirement benefits (assessed from my own knowledge).",
+      "“Coverage generally starts the month after Social Security processes your form” incorrectly ties coverage commencement to processing rather than the applicable enrollment and effective-date rules.",
+      "“Medigap guaranteed-issue window” conflates Medigap open enrollment with distinct guaranteed-issue rights.",
+      "“You'll have paid the premiums and re-enrolling later is more complicated” is an unsupported blanket claim; timing and continued SEP eligibility matter."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "vague",
+      "3": "correct",
+      "4": "vague",
+      "5": "vague",
+      "6": "correct",
+      "7": "missing",
+      "8": "wrong"
+    }
+  },
+  "reasons": "Both immediately reject the coworker's premise, but both blur the employer-size distinction and omit the IEP-ending exception. A gives the correct 2026 premium, a correctly rounded annual cost ($202.90 × 12 = $2,434.80), and the Part D enrollment deadline; B substitutes a broad premium range and adds an incorrect coverage-start rule. B supplies better explicit drug-coverage and HSA guidance, but its additional procedural claims and repetition make A more reliable overall. Neither fully explains the later application routes or the HSA contribution-stop timing."
+}

@@ -1,0 +1,47 @@
+{
+ "pair": "p028",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "「付与日や日数は就業規則にも書いてある」 - 就業規則の記載内容は職場次第で、断定は根拠なし（軽微）",
+   "「『欠勤扱いで構いません』と書くとあとから有給に戻すのが面倒」 - 根拠なしの助言（軽微）",
+   "「できれば今週中に」 - 法律上の期限はなく、根拠のない目安（法的主張ではない）",
+   "「店側が変更できるのは本当に忙しくて回らないときだけ」 - 第39条第5項の「事業の正常な運営を妨げる場合」の言い換えとしてやや緩い（条文・時季変更権の語は出ていない）"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the premise. Both give 10月1日 as the grant date and 5日 as the number of days, and both mention the 8割 condition. Neither gives the roughly 63-day estimate. B is slightly better on four points. It states that giving a reason is optional (A does not). It words the 時季変更 limit as in the law: 「業務の正常な運営を妨げる場合」 only, and blanket refusal is not allowed. It supplies a polite follow-up message in case the manager denies again. It gives a Shizuoka Labor Bureau link that I opened, and the page does cover Article 39, part-time workers and the 3日/週 table. B's weaknesses are that the LINE draft is long and explains the law to the manager, and that it does not name 比例付与 or the 30時間未満 test. A's LINE draft is shorter and more natural, and it names 比例付与. But A says the 有給 lines can be dropped, which weakens the main goal of requesting 有給 on a specific date. A also adds a few unsupported tips, such as 「今週中に」 and 「就業規則にも書いてある」. The margin is slight."
+}

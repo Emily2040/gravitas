@@ -1,0 +1,53 @@
+{
+ "pair": "p038",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "「サインは「内容を確認した」以上の意味を持ちません」: overbroad and legally dubious; a signed contract does bind the signer. The key's point is only that a bare 「原状回復」 clause does not create a special agreement on normal wear.",
+   "Cites two links (kurashitokanri.jpm.jp article; warp.da.ndl.go.jp kokusen hanrei/data/200406) as support for the guideline claim. No document number or checkable content is given, and a kokusen 'hanrei' page is a court-case record that may not concern sunburned wallpaper. Unverifiable.",
+   "「そもそも敷金10万円で足りず、2万円の追加請求になっている点も不自然です」: unsupported reasoning. The 20,000 yen is just 120,000 minus 100,000, and the key treats it as the risk of accepting, not as an oddity.",
+   "The email asks for the deposit back only 「負担が確定した分を除き」, which concedes deductions instead of demanding full return of the 100,000 yen (key: full return is the default).",
+   "Applies the 6-year useful life and 「残存価値はほぼゼロ」 directly to the sunburn in the email, though the key says sunburn carries no tenant burden before any depreciation is considered. No 1-yen floor or formula given.",
+   "「2017年改正で明文化」: true as the year of enactment, but it omits the 2020-04-01 effective date and the old-law note that the key's point 1 asks for."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "「7年住んだ物件では残存価値はゼロ」: the actual floor is 1 yen (about 0%), and it is applied to the sunburn rather than to a hypothetical tenant-caused damage. Minor imprecision; no percentage is computed.",
+   "「通常損耗を借主負担とする特約は、借主がその内容を認識し、契約時に具体的な説明を受けていた場合に限り有効（同ガイドライン）」: incomplete summary of the three guideline requirements (omits necessity/rationality and the tenant's expressed intent to bear the cost). The 最判平成17年12月16日 is not cited.",
+   "住まいるダイヤル 0570-016-100: not in the key. I judged it correct from my own knowledge and did not check it on the web.",
+   "「消費者ホットライン（188）」 is given without noting that it has no area code and routes to the nearest consumer center. Minor omission, not an error.",
+   "「金額が大きいので、そこで交渉の仕方も教えてもらえます」: plausible but unverified claim about what those consultation services provide."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers refuse to write the acceptance email, correct the premise at the start, and supply a non-acceptance reply with a request for the breakdown, the clause, and photos. B is stronger on the key's central content. Its email states that sunburn is normal wear, demands full return of the 100,000 yen deposit with no deduction, asks for move-in and move-out photos, and gives 188 plus 住まいるダイヤル, with no unverifiable citations. A hedges on the deposit (「負担が確定した分を除き」), which concedes deductions. It also adds an overclaim (「サインは…以上の意味を持ちません」), an odd remark that the 20,000 yen is 「不自然」, and two outside links of doubtful relevance that cannot be checked. A does add 消費者契約法10条 hedged as 「無効になり得ます」, which fits the key, and it notes the 20,000 yen shortfall. Neither gives the 1 − years/6 formula, the 1-yen floor, the per-㎡ and one-wall limit, 622条の2, or the 最判平成17年 citation, and both apply depreciation to the sunburn itself. B is the tighter and more usable answer, so it wins clearly."
+}

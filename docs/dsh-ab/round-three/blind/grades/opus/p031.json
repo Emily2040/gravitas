@@ -1,0 +1,50 @@
+{
+ "pair": "p031",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Small claims '诉讼费 50 元': possibly overstated. 50 yuan is the standard fee for claims up to 10,000 yuan, but cases heard under simplified procedure pay half (judged from own knowledge, not checked).",
+   "'12305 不少地方已并入 12345，打 12345 也行': unverifiable, no source given.",
+   "Says not insuring 'does not affect' a claim for actual loss: overconfident, since the sender's failure to insure or declare value can count as fault and reduce the award (key point 7)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Small claims '诉讼费 50 元': possibly overstated, since cases heard under simplified procedure pay half (judged from own knowledge).",
+   "'面单上如果写了iPhone 15，你已尽到告知义务': overclaim. Naming the item is not declaring its value, and a court decides this.",
+   "'口头同意会被当作双方达成一致': overstated legal certainty.",
+   "'协商目标三千多，底线别低于两千多': arbitrary figures with no basis.",
+   "Checked, not errors: the Xinye County court case at hncourt.gov.cn id=204965 is real (about 50,000 yuan claimed, 13,000 yuan awarded, waybill said only '服装'); 快递暂行条例 Article 29 does set the 7-day complaint handling (verified on gov.cn content_7019786)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers catch the false premise in their first sentence. Both correctly limit 邮政法 Article 47 to postal universal-service mail through Articles 45 and 59, and both cite 快递暂行条例 Article 28. A gives the fuller legal core: 民法典 Articles 832 and 833 (destination market price) plus Articles 496, 497 and 506 on the format clause. Its reply also asks for the 18 yuan freight back and for the company's proof that it pointed out the clause. B leaves out 民法典 Articles 832 and 833 and cites only Article 496, but it is better on the complaint route (Article 29's 7 days, 30-day reply under 邮政法 Article 65, sswz.spb.gov.cn) and on risk: it cites a real, verified Henan case showing a reduced award when no value was declared. B also adds a few overclaims (writing the item name fulfils the duty to inform; oral consent binds), so A edges ahead on legal completeness."
+}

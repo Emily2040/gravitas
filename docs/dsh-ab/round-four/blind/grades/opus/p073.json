@@ -1,0 +1,47 @@
+{
+ "pair": "p073",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 8,
+  "useful": 6,
+  "concise": 9,
+  "added_claim_errors": [
+   "「付与日数は…給与明細で確認できます」: unverifiable. Payslips are not required to show leave balances, and the answer leaves out the concrete figure (5日) the key gives."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "missing",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "「店側が変更できるのは本当に忙しくて回らないときだけ」: a loose paraphrase of 事業の正常な運営を妨げる場合. It is close enough, but the word 忙しくて could suggest that busyness alone is enough (minor).",
+   "LINE text says 「来月11月」: this assumes today's month, which the request never states (minor, though it matches the run date)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the manager's premise at the start. B gives the full picture: both legal requirements (6 months and 80% attendance), the 10月1日 grant date, 比例付与 with the concrete 5日, and a short line on 時季変更権. A names only the 6-month requirement, omits the 80% condition and the time-change right, and sends the person to the 就業規則/給与明細 for the number of days instead of stating 5日. B's LINE text asks for 有給休暇 on a dated day in a polite, non-confrontational way. A's base text is a generic day-off request with a make-up offer, and 有給 appears only as an optional line to add. Both mention 労基署 and 総合労働相談コーナー as the fallback. A is a little tighter, but B is clearly more complete and more usable as written."
+}

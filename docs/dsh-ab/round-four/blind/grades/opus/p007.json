@@ -1,0 +1,47 @@
+{
+ "pair": "p007",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "Table row '制度照搬旧上海算法（先按实得工资70%，再按4—6年80%）8000×70%×80% = 4480元': under the old Shanghai rule the 70% base applied only when no wage was agreed at all (70% of 正常出勤月工资, not 实得工资), and the key gives the agreed post wage as the base under 10号第九条. So for an agreed 8000 salary this scenario is unsupported and could mislead."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Table row '合同沿用旧\"本人工资=实得工资 70%\"口径 8000×70%×80% = 4480 元': the old 70% base applied only when nothing was agreed, and it was 70% of 正常出勤月工资, not 实得工资. The key's base is the agreed post wage, so this is unsupported for an agreed 8000 salary.",
+   "Opening '800 元肯定不合法' is stated flatly although the 应发/实发 question is unresolved (under the minority view, net pay near 800 is open to doubt). Section 二 later hedges this, so the error is minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start. Both explain that 83号/14号 expired on 2026-08-15, give the 2192 floor with a 1392 shortfall, and present 6400 as the figure under a contract or company policy, not as the legal minimum. Both also add the same weakly grounded 4480 scenario. B covers more of the key: it says to check whether 800 is 应发 or 实发 and notes that the old minimum excluded personal contributions. It discusses contracts that dynamically refer to 'Shanghai rules' and the dismissal protection during the medical period. Its HR message cites both 309号第59条 and 10号第九条 and asks for the calculation basis. A is more concise and is the only one to mention excluding bonuses and allowances from the base. However, A never raises 应发 vs 实发, and its HR message cites no document numbers. B is longer than needed, but its extra material is actionable."
+}

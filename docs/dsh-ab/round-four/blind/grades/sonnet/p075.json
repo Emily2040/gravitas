@@ -1,0 +1,56 @@
+{
+ "pair": "p075",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "'the 15-year clock restarts for the new beneficiary' (in the change-beneficiary option) is stated as settled. The key says no IRS guidance exists and the point is unresolved; this is a major deduction. Elsewhere A hedges with 'can restart'.",
+   "'to count for 2026 the money needs to land in the Roth by December 31, 2026' and 'a January arrival may count against 2027' treat December as the deadline. A rollover designated for 2026 can be made through April 15, 2027, though plans vary. Minor error.",
+   "'If the annual limit rises with inflation, this compresses to four or five years' is doubtful. Limits move in $500 steps, and at $8,000 a year it still takes five years.",
+   "'Most do by 2026, but not all' (plans supporting the rollover) is unverifiable.",
+   "Never addresses what happens to the excess if all $48,000 were moved in 2026: no 6% excise tax and no taxable earnings plus 10% on the non-qualifying part. The headline says 'tax mess' without the specifics.",
+   "The 1099-Q claim (Box 4b, code 1 in Box 7) matches the IRS Form 1099-Q instructions page I fetched, where Box 7 codes are optional. The Form 5498 Box 10 claim matches the key. I list no error for either."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "'Complete the transfer by December 31, 2026 to count against the 2026 limit' treats December as the deadline. A rollover designated for 2026 can run to April 15, 2027, though plans vary. Minor error, softened by 'Before December is fine'.",
+   "'K-12 tuition (up to $10,000 a year)' is out of date for 2026. From my own knowledge, the July 2025 law raised the K-12 cap to $20,000 a year starting in 2026. Minor error, off the main topic.",
+   "'The limits may rise with inflation, which would shorten the schedule' is doubtful, since at $8,000 a year it still takes five years.",
+   "'Some plans also require a signature guarantee' and 'Some plans take two to four weeks' are plan-specific and unverifiable, but plausible and marked as 'some'.",
+   "Never addresses what happens to the excess if all $48,000 were moved in 2026: no 6% excise tax and no taxable earnings plus 10% on the non-qualifying part. It only says $7,500 is the most to move this year.",
+   "'The earnings follow the Roth 5-year and age-59½ rules' is a side claim the key lists as not verified, and it is not plainly wrong."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start. Both give the $7,500 annual cap, the earned-income limit, the $35,000 lifetime cap with $13,000 unreachable, and a five-year schedule ending with $5,000 in 2030. Both require a direct transfer into the son's own Roth, cover the 5-year and 15-year tests and the Roth income-limit bypass, and flag state tax. Both miss the 6% excise and 10% consequences of moving all $48,000, and both wrongly give December 31 as the deadline for a 2026 rollover. A has a major deduction because it states as fact that a beneficiary change restarts the 15-year clock, which the key says is unresolved. A is also much longer, with repeated traps, CPA questions and extra sections. A does add the correct 1099-Q and 5498 Box 10 detail and a student-loan arithmetic example. B stays closer to the key's moderate length and hedges the 15-year point correctly. B's only added error is a stale K-12 cap, a minor point."
+}

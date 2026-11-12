@@ -1,0 +1,54 @@
+{
+ "pair": "p030",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says the supplement is \"另加大病、长护险几十元\" on top of 473.67元/月. The key says these personal premiums are deducted from the supplemented personal-account funds, with no extra cash. Wrong or unverifiable.",
+   "Tells her to ask 12393 whether she can \"补3–9月\". The gap is 4–10月 (March was paid). The month range is wrong.",
+   "Says 连续缴费年限 \"断缴3个月以上会重新计算\" as a rule that affects the waiting period. The key ties \"连续参保年数重新计算\" to 居民医保, and Hangzhou's waiting period comes from 中断参保. The framing is loose and unverified for 职工医保.",
+   "\"杭州的报销比例只看医院等级和费用段,不看连续缴了几年\" is not covered by the key and cannot be checked from the answer.",
+   "Says \"到退休年龄就能享受退休医保\" and omits the requirement to keep contributing in Hangzhou until retirement. Minor omission.",
+   "Gives only the cumulative gap (\"还差12年\") and never states the 24-month gap in actual Hangzhou contribution."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Says 补缴 \"一般也不能免除上面那2个月等待期\". The key marks a waiting-period waiver after 补缴 as unverified, so this is a mildly firm claim, though softened with \"一般\".",
+   "\"7个月年限以后随时能缴回来\" is loose. The retirement-time top-up has a specific payment (743.60元/月, 5,205.20元 for 7 months) that is not given.",
+   "Cites no document number, only the generic 《杭州市基本医疗保障办法》 and 2026年1月1日, so the basis for the correction is thinner than the key's.",
+   "Does not mention the retirement condition of contributing in Hangzhou until retirement. Omission, not stated as an error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by rejecting the clearing myth, correctly describe the Hangzhou rule (waiting until the third natural month after resuming, so about January 2027), and give 473.67元/月 and about 3,316元 for 7 months, with the same-year limit and no reimbursement for the supplemented months. B states both retirement gaps (12 years cumulative, 2 years actual in Hangzhou) and flags the \"if all 8 years were in Hangzhou\" assumption, which the key requires. A gives only the 12-year gap and never states the 24-month actual gap or the Hangzhou assumption. A adds two errors: the supplement \"另加大病、长护险几十元\", which contradicts the key's deduction from the personal account, and the wrong months \"补3–9月\". B's one weak claim is \"一般也不能免除\" the waiting period, which is a mild overassertion. A has the document number 杭政函〔2025〕88号, more concrete eligibility conditions and a more honest hedge on the waiting-period waiver. Neither covers the new-employer-cannot-pay point or the 743.60元/月 retirement top-up. B edges ahead on accuracy and key-point coverage."
+}

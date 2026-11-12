@@ -1,0 +1,49 @@
+{
+ "pair": "p025",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Attributes the expiry of both 83号 and 14号 to the 上海人社局答复; per the key, the official reply confirmed only 83号, and 14号's expiry is a presumption with no explicit official statement. Overstated.",
+   "Opening line \"如果劳动合同或公司制度沿用旧上海口径，可能是 4480 元\" maps the old Shanghai approach to 8000×70%×80%. The 70% base was only a fallback when no wage was agreed, and with an agreed 8000 wage the old rules gave 6400. Section 2 adds that condition, but the headline figure misleads.",
+   "Says in the present tense that the base is 70% of normal wage when the contract is silent. The key cites 10号第九条 only as contract wage with a 2740 floor, so whether the new rules keep the 70% fallback is unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 9,
+  "added_claim_errors": [
+   "Table row \"制度照搬旧上海算法（先按实得工资70%，再按4—6年80%）\" = 4480 calls a 70% base the old Shanghai algorithm. Under the old rules the 70% base (of 正常出勤月工资, not 实得工资) applied only when no wage was agreed at all, and with an agreed 8000 wage the result was 6400. Misleading.",
+   "The HR letter attributes the 80%-of-minimum floor to \"上海现行规定\". The floor comes from national 劳部发〔1995〕309号第59条, not a current Shanghai rule. Minor misattribution."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers get the core right: 83号 and 14号 lapsed on 2026-08-15, the September floor is 2740×80%=2192 (1392 short of 800), 6400 applies only if the contract or company rules say so, and both name 12333, labour inspection and arbitration. Both also add a questionable 4480 figure (70% base × 80%); A at least states that the 70% base applies only when no wage was agreed. B corrects the '公司说了算' premise more directly in its first line and is tighter. A covers more of the key: it raises 应发 vs 实发 and asks HR about it, cites 309号第59条 by name in the letter, and asks for base, ratio and the rule relied on. B never raises 应发/实发 and its letter cites only vague '上海现行规定'. A's better coverage of points 6 and 7 outweighs B's edge on trap handling and concision."
+}

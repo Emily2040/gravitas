@@ -1,0 +1,55 @@
+{
+ "pair": "p078",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"Medicare.gov's sign-up tool asks exactly the 20-employee question\" is a claim about a checked source; it is unverifiable beyond the links given",
+   "\"plus pay stubs/W-2s as backup\" for the CMS-L564 filing is unverifiable and not in the key",
+   "\"If you've already submitted it, call Social Security now - you may be able to withdraw before it's processed\" is an unverified procedural step",
+   "\"re-enrolling later can be restricted\" after CMS-1763 termination is stated loosely and unverified",
+   "The govinfo link labelled \"2026 premium notice\" gives a document number that was not opened; the $202.90 and $283 figures themselves match the key"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Premium given only as \"roughly $185-$210/month, set annually\" instead of the 2026 figure of $202.90; vague, not wrong",
+   "\"Sign up for Part D ... at the same time\" as Part B differs from the key's 2-full-months-after-coverage-ends rule; imprecise, not harmful",
+   "\"coverage generally starts the month after Social Security processes your form\" is loosely worded and not verified",
+   "The \"Medicare.gov HSA note\" is cited to the Working-past-65 page; whether that page has the HSA note is unverifiable",
+   "\"Medigap guaranteed-issue window (6 months from Part B enrollment)\" is loose wording for the Medigap open enrollment period, though the substance is right",
+   "Asking HR whether the company has 20+ employees is redundant when the asker already said about 400; harmless"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the coworker's premise: don't enroll in Part B this month, because active-employee coverage at a 20+ employee employer gives an 8-month penalty-free window after work or coverage ends. Both correctly flag the HSA problem with free Part A, including the 6-month backdating, and both tell the asker to decline Part B if auto-enrolled through Social Security. Neither states the exception that there is no SEP if the job or coverage ends during the IEP. A gives the exact 2026 numbers ($202.90 a month, about $2,435 a year, $283 deductible, income thresholds), says the employer plan pays first, and tells the asker what to do if the application is already submitted. B is stronger at retirement time, covering Part D, Medigap and CMS-L564, but only gives a vague premium range ($185-$210). B is also a bit longer and repeats itself. The difference is small, so A wins slightly on precision and actionability for someone about to enroll."
+}

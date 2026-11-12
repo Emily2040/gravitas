@@ -1,0 +1,51 @@
+{
+ "pair": "p090",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 8,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"임금체불확인서(회사 발급)\": wrong. The 체불임금등·사업주 확인서 is issued by the labour office (근로감독관), not by the employer.",
+   "국민취업지원제도: \"실업급여가 끝난 뒤 잔여분을 받을 수 있으니 지금 미리 신청해 두세요\": unverifiable. Per the key, people still receiving 구직급여, or within 6 months after it ends, can be excluded from 구직촉진수당.",
+   "조기재취업수당 \"대기기간 후 12개월 이상 계속 고용되면 남은 수급일수의 절반\": incomplete. It leaves out the condition that at least half of the 소정급여일수 must remain at re-employment (and that the claim comes 14 days after filing)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "missing",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 6,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"7~9월 석 달이면 요건을 넘게 충족\": overclaim. The test is a cumulative 60 days of full delay or non-payment, not a count of late months, so three late months may not qualify.",
+   "생계비 융자 \"연 1.5%\" with no date given: in October 2026 the temporary rate is 1.0% until 10/31, and 1.5% applies from November. The 1% guarantee fee is also left out.",
+   "\"지연이자까지 한 번에 청구되고\" through a 노동청 진정: unverifiable and doubtful. Late-payment interest is not normally enforced through a 진정.",
+   "\"반려되면 이의제기 → 심사청구 순\": unverifiable. The formal remedies are 심사청구 and then 재심사청구, and no formal 이의제기 stage is shown.",
+   "\"회사가 '자발적 사직'으로 올리면 1차로 반려될 수 있어요\": unverifiable procedural claim.",
+   "\"이직일부터 12개월 안이지만\": imprecise. The period runs from the day after leaving, and it is the 수급기간, so applying late loses benefit days. The phrasing suggests waiting costs nothing."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start, and neither gives the 60-day test or any benefit amounts. A hedges the outcome ('가능성이 높습니다'), says late-paid months count as 체불, tells the person to file now because waiting costs days, and adds the 조기재취업수당 and the rule that income during 수급 must be reported. It is weakened by saying the 체불확인서 comes from the employer, a doubtful 국민취업지원 claim, and no 생계비 융자. B gives the right 150/180 days, routes filing through 고용24, and gives useful 생계비 융자 details. But it says three months 'over-satisfies' the requirement, gives the loan rate without the current date, implies filing can wait, and suggests short-term work with no warning about reporting it. On balance A is slightly safer and closer to the key's best-answer shape."
+}

@@ -1,0 +1,51 @@
+{
+ "pair": "p009",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Button path (更多 -> 学习教育业务 -> 学法减分, 去学习, 去考试, 网办进度) stated as fact; province-specific app wording, unverifiable",
+   "Says 6 rounds fit in a week ('一周内做完时间够'); no official review-time data, so unverifiable",
+   "'Max 5 hours' counts each exam at the 20-minute cap, one pass only; arithmetic is right (6x30=180, 6x20=120) but it is not a hard maximum once retakes count (the answer says so itself)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Per-round 'application, review and face check about 5 minutes' and 'exam 10-15 minutes' are unsourced guesses; the key says there is no official review-time figure",
+   "Button names such as 网办进度, 业务待办, 前往学习, 提交学习, 前往考试 are province-specific app wording stated as fact",
+   "'学完后7个工作日内要参加考试, 超时学习记录作废': the Beijing page says the exam must be applied for within 7 working days; 'record voided' was not found verbatim",
+   "'满12分...考科目一': Article 18 only says 7 days of study; the subject-one wording is not in that article (Article 21 refers to a test on laws and regulations)",
+   "Plan of 2 rounds a day over 2-3 days is a feasibility claim with no source; B itself says it depends on the system",
+   "Long: the weekly schedule and pitfalls sections go beyond what was asked"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers lead with the 6-point cap (10 down to 4), reject the 'no longer afraid of deductions' premise (8 more points reaches 12, then licence seizure and full-score study), explain the clearing rule, and give 3 hours of study as the base figure. I checked Articles 17, 18, 25, 26 and 27 of order 163 on gov.cn and the Beijing exam rules. B's extra specifics hold up: 7-day full-score study, the two-full-score-records bar on applying, 60 seconds per question, retake within 24 hours up to 2 times, no banking study time, and the blacklist with a 3-cycle ban for fraud. B also covers on-site study (1 hour for 2 points) and says points cannot be saved up, but it omits the public-activity route, mixing and no fee. A omits every other method, which is a gap against key 5, and gives only a vague 'retake per page prompt'. A is tighter, more honest about review time, and its arithmetic is right. B is noticeably longer and gives some guessed per-round timings. B wins slightly on completeness and actionability, and A on concision."
+}

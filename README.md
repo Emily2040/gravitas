@@ -117,6 +117,7 @@ Gravitas takes its language from your system: Chinese, Japanese or Korean when t
   config:
     language: en        # auto, en, zh-CN, ja or ko
     alwaysOnRule: true  # false keeps only the skill
+    claimCheck: false   # true: before each reply, list unsourced figures back to the model once (experimental)
 ```
 
 To remove it, run `dsh plugin --profile web remove dsh-gravitas`.
@@ -126,7 +127,7 @@ Two requests to try:
 - *Audit the login code in this repository for every way to skip the permission check, with the file and line for each.* The skill directs the agent to send read-only inspectors through the code and to have a checker reproduce each finding before it reports.
 - *Check every figure in this market report against its original source.* The skill directs inspectors to find the sources and a refuter to try to break each match, and figures without a source are reported as unconfirmed.
 
-These are examples of requests, not test records. I checked the DSH version by starting DSH 0.2.1-rc.2 on Windows 11 and reading back its skill list, its system prompt and its tools in all four languages. The graded results on this page were all measured on Antigravity; graded runs on DSH have not been done yet.
+These are examples of requests, not test records. I checked the DSH version by starting DSH 0.2.1-rc.2 on Windows 11 and reading back its skill list, its system prompt and its tools in all four languages. The graded results on this page were all measured on Antigravity. On DSH I have started blind A/B rounds against plain DSH on deepseek-flash; the latest is [round three](docs/dsh-ab/round-three/README.md): Gravitas won the votes (26 to 13) and added fewer wrong claims, but its answers were longer and left more points vague than plain's, so it did not pass my frozen criteria yet.
 
 ---
 

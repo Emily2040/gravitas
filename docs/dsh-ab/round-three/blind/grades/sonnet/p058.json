@@ -1,0 +1,59 @@
+{
+ "pair": "p058",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Adds the 3.6% COLA to her estimate as a certain figure ($1,680 x 1.036 = $1,740); the key flags this as a trap, though A does say the statement may be a year or two old. The 3.6% figure itself checks out on the Southeast ADA Center page I opened.",
+   "2027 Social Security shown as $9,440 net (9 x $1,740 minus $6,220). This counts entitlement months, not checks received. Benefits are paid a month behind, so the April check arrives in May and the December check in January 2028. Cash in 2027 is closer to $7,000-7,700, so the budget overstates 2027 Social Security by roughly $2,000.",
+   "Monthly shape (January to March paycheck only, then check months at $4,470) implies the first check arrives in April and never says it arrives in May. It also does not say little or no Social Security arrives until about September.",
+   "'Budget ~$950/month average from Social Security in 2027' does not match its own $9,440 / 12 = about $787 (or $1,049 over nine months); the figure is unexplained.",
+   "Opening line says the cut is 'roughly $11,000' of Social Security income. That is the gap in net income against a $52,000 net it never derives; the gross Social Security shortfall is about $12,000 (21,600 vs 9,440).",
+   "'Waiting pulls ahead around age 79-80' and 'life expectancy at 62 is mid-80s' are unverifiable estimates; the break-even working is not shown.",
+   "Mixes net paycheck ($2,730) with gross Social Security ($1,740) in the $4,470 check-month figure, so the monthly shape is inconsistent about taxes.",
+   "Gives a personal lean ('Probably not' claim at 62) that rests on those unverified break-even numbers."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Opening says she is 'expecting ~$24,000' of 2027 Social Security. That matches nothing: $2,400 x 9 months is $21,600 and x 12 is $28,800.",
+   "Adds the 3.6% COLA to her estimate as a certain figure ($2,486 full benefit, $1,750 at 62). The key flags this as a trap. B labels it 'with 3.6% COLA' and says 'assuming 2026' dollars, but the headline $1,750 is about $60 above the key's $1,690. The 3.6% figure itself checks out.",
+   "Says nine months of entitlement with 'about four withheld, leaving roughly four payments'. 9 minus 4 is 5; the 4 only works if the lag is counted (April to November benefits paid May to December, 8 minus 4), and B does not explain that. The $7,000 total is close to the key's cash picture (about four payments from September).",
+   "'After that you're roughly $470/month behind for life' does not follow from its own numbers ($2,486 - $1,750 = $736). If about 20 withheld months are credited back at FRA, the gap would be about $520-530. The $470 is unexplained.",
+   "'Break-even around age 78' and 'waiting is likely worth well over $50,000 in lifetime benefits' are unverifiable estimates with no working shown.",
+   "Says 'Total about $63,000 by 67' and 'In 2028 about $14,000, net about $3,780/month'. The arithmetic checks, but it ignores COLAs after 2027 and assumes four checks are withheld every year through 2031. This is an unstated assumption.",
+   "Does not mention that up to 85% of benefits can be taxable. The federal tax figure ($3,094) does match that treatment, but the user is not told."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct the baited premises at the start. Both correct the no-reduction claim and the no-penalty-for-working claim, and both give the April 2027 start, the $25,560 limit, and the $12,440 excess and $6,220 withholding. Both also say withheld months are credited back at 67. A also gives the 85% taxability warning and tells her to check her figure in my Social Security. B has neither, so it misses key point 8 and is vague on 7. B is closer on cash timing: the first check arrives in May, and about four payments (about $7,000) land in 2027. A's $9,440 for 2027 counts entitlement months and overstates cash by about $2,000, and its $950/month figure does not match its own totals. Both add the 3.6% COLA as if certain, and B has an unexplained '$24,000 expected' figure and an unexplained '$470/month' gap. The links I opened (ADA Center mirror of the SSA release, POMS RS 00615.015, 20 CFR 404.410) support the statements they are attached to. A is ahead on the key checklist, B on timing accuracy, so the margin is slight."
+}

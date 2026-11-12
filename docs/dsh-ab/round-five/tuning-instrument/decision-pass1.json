@@ -1,0 +1,1945 @@
+{
+ "pass": 1,
+ "created": "2026-10-26T09:28:22+11:00",
+ "rule_sha256": "6da489caa8e452928dfb99139a1646e570eb9b0d4e914f8c4d148e0965436922",
+ "grades_file_sha256": "dca373e041be919abd94617fdb5d371f69d9ba7338a45d3e62dec9c115432519",
+ "prompt_sha256": "5d52cfe13c1bbcae0a089a8090bb41438f85b2daaf452d9c87bf0b34245c522e",
+ "issues": [],
+ "validity": {
+  "path": "W:\\AgentData\\logs\\gravitas-dsh-ab5\\validity-tuning-1.json",
+  "invalid_after_rerun": 0,
+  "invalid_count": 0,
+  "still_invalid": [],
+  "pending": [],
+  "issues": []
+ },
+ "rd": {
+  "regex_runs": [],
+  "RD": 0,
+  "notes": [
+   "no regex hits in any run and no hand file; RD = 0"
+  ],
+  "thinking_truncated_events": 35,
+  "hits": {}
+ },
+ "earliest_pass1_run": "2026-10-26T09:04:32+11:00",
+ "calibration_used": "calibration3",
+ "integrity": [],
+ "stop_ask_emily": false,
+ "retest": {
+  "calibration2": {
+   "lkp_same": 145,
+   "lkp_total": 168,
+   "flat_status_same": 147,
+   "kp_same": 342,
+   "kp_total": 364,
+   "metric_change": {
+    "gv-grav-base r1": {
+     "F": 4,
+     "K": -4,
+     "C": -1,
+     "V": 1,
+     "M": 0,
+     "W": 0,
+     "AW": 0,
+     "AU": 0,
+     "S": -1,
+     "SP": 0,
+     "SR": -1,
+     "PC": 0
+    },
+    "gv-grav-base r2": {
+     "F": 3,
+     "K": -3,
+     "C": -2,
+     "V": 2,
+     "M": 0,
+     "W": 0,
+     "AW": 0,
+     "AU": 4,
+     "S": 1,
+     "SP": -2,
+     "SR": 1,
+     "PC": 0
+    },
+    "gv-plain r1": {
+     "F": 2,
+     "K": -2,
+     "C": 2,
+     "V": -1,
+     "M": 0,
+     "W": -1,
+     "AW": 1,
+     "AU": -1,
+     "S": 1,
+     "SP": 1,
+     "SR": 1,
+     "PC": 0
+    },
+    "gv-plain r2": {
+     "F": 4,
+     "K": -4,
+     "C": 2,
+     "V": -3,
+     "M": 0,
+     "W": 1,
+     "AW": 2,
+     "AU": -13,
+     "S": 0,
+     "SP": 0,
+     "SR": 1,
+     "PC": 0
+    }
+   }
+  },
+  "calibration3": {
+   "lkp_same": 149,
+   "lkp_total": 168,
+   "flat_status_same": 151,
+   "kp_same": 345,
+   "kp_total": 364,
+   "metric_change": {
+    "gv-grav-base r1": {
+     "F": 1,
+     "K": -1,
+     "C": -1,
+     "V": 1,
+     "M": 0,
+     "W": 0,
+     "AW": 0,
+     "AU": 2,
+     "S": -2,
+     "SP": 1,
+     "SR": -1,
+     "PC": 0
+    },
+    "gv-grav-base r2": {
+     "F": -1,
+     "K": 1,
+     "C": -2,
+     "V": 2,
+     "M": 0,
+     "W": 0,
+     "AW": 4,
+     "AU": 3,
+     "S": 0,
+     "SP": -1,
+     "SR": 1,
+     "PC": 0
+    },
+    "gv-plain r1": {
+     "F": 0,
+     "K": 0,
+     "C": 0,
+     "V": 1,
+     "M": 0,
+     "W": -1,
+     "AW": -1,
+     "AU": 1,
+     "S": 0,
+     "SP": -1,
+     "SR": 1,
+     "PC": 0
+    },
+    "gv-plain r2": {
+     "F": 5,
+     "K": -5,
+     "C": 2,
+     "V": -2,
+     "M": 0,
+     "W": 0,
+     "AW": 1,
+     "AU": -4,
+     "S": -1,
+     "SP": 1,
+     "SR": -1,
+     "PC": 0
+    }
+   }
+  }
+ },
+ "groups": {
+  "c5": {
+   "F": 19,
+   "K": 18,
+   "C": 54,
+   "V": 27,
+   "M": 6,
+   "W": 4,
+   "AW": 8,
+   "AU": 61,
+   "S": 3,
+   "SP": 6,
+   "SR": 3,
+   "PC": 12,
+   "F_lang": {
+    "zh": 5,
+    "en": 5,
+    "ja": 3,
+    "ko": 6
+   },
+   "M_lang": {
+    "zh": 1,
+    "en": 1,
+    "ja": 1,
+    "ko": 3
+   },
+   "PC_all": 10,
+   "per_case_F": {
+    "en-529-roth": 3,
+    "en-fsa-rollover": 2,
+    "en-medicare-part-b": 0,
+    "ja-medical-deduction": 2,
+    "ja-part-time-leave": 0,
+    "ja-wallpaper-restoration": 1,
+    "ko-jeonse-protection": 3,
+    "ko-severance-pay": 2,
+    "ko-unemployment-quit": 1,
+    "zh-flex-hours": 1,
+    "zh-insurance-gap": 3,
+    "zh-sick-pay": 1
+   },
+   "H1": {
+    "value": 0.5445684474568389,
+    "exact": "7843901982815/14403886268928"
+   },
+   "H2": {
+    "value": 0.2286185796329398,
+    "exact": "56473615955/247021112832"
+   },
+   "H3": {
+    "value": 0.48443388341906574,
+    "exact": "934243502667725555/1928526336915096204"
+   },
+   "CD": {
+    "value": 4.623605546884877,
+    "exact": "1553583918667133285090125/336011345023549837405491"
+   },
+   "BL": 26,
+   "WF": 133,
+   "UX": 0,
+   "vis": {
+    "en-529-roth": 5291,
+    "en-fsa-rollover": 2847,
+    "en-medicare-part-b": 5423,
+    "ja-medical-deduction": 1530,
+    "ja-part-time-leave": 1073,
+    "ja-wallpaper-restoration": 1470,
+    "ko-jeonse-protection": 1078,
+    "ko-severance-pay": 1793,
+    "ko-unemployment-quit": 1179,
+    "zh-flex-hours": 2861,
+    "zh-insurance-gap": 1753,
+    "zh-sick-pay": 1370
+   },
+   "per_case_text": {
+    "en-529-roth": {
+     "vis": 5291,
+     "H1": {
+      "value": 0.916590284142988,
+      "exact": "1000/1091"
+     },
+     "H2": {
+      "value": 0.18331805682859761,
+      "exact": "200/1091"
+     },
+     "H3": {
+      "value": 0.18331805682859761,
+      "exact": "200/1091"
+     },
+     "CD": {
+      "value": 1.512001512001512,
+      "exact": "8000/5291"
+     },
+     "BL": 0,
+     "WF": 11,
+     "UX": 0
+    },
+    "en-fsa-rollover": {
+     "vis": 2847,
+     "H1": 0,
+     "H2": {
+      "value": 0.3380662609871535,
+      "exact": "500/1479"
+     },
+     "H3": {
+      "value": 0.3380662609871535,
+      "exact": "500/1479"
+     },
+     "CD": {
+      "value": 3.5124692658939236,
+      "exact": "10000/2847"
+     },
+     "BL": 2,
+     "WF": 11,
+     "UX": 0
+    },
+    "en-medicare-part-b": {
+     "vis": 5423,
+     "H1": {
+      "value": 0.7239819004524887,
+      "exact": "160/221"
+     },
+     "H2": {
+      "value": 0.36199095022624433,
+      "exact": "80/221"
+     },
+     "H3": {
+      "value": 0.18099547511312217,
+      "exact": "40/221"
+     },
+     "CD": {
+      "value": 3.3191960169647796,
+      "exact": "18000/5423"
+     },
+     "BL": 2,
+     "WF": 12,
+     "UX": 0
+    },
+    "ja-medical-deduction": {
+     "vis": 1530,
+     "H1": 0,
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 4.57516339869281,
+      "exact": "700/153"
+     },
+     "BL": 5,
+     "WF": 14,
+     "UX": 0
+    },
+    "ja-part-time-leave": {
+     "vis": 1073,
+     "H1": 0,
+     "H2": 0,
+     "H3": {
+      "value": 1.7937219730941705,
+      "exact": "400/223"
+     },
+     "CD": {
+      "value": 3.7278657968313142,
+      "exact": "4000/1073"
+     },
+     "BL": 3,
+     "WF": 2,
+     "UX": 0
+    },
+    "ja-wallpaper-restoration": {
+     "vis": 1470,
+     "H1": {
+      "value": 0.6578947368421053,
+      "exact": "25/38"
+     },
+     "H2": 0,
+     "H3": {
+      "value": 0.6578947368421053,
+      "exact": "25/38"
+     },
+     "CD": {
+      "value": 2.0408163265306123,
+      "exact": "100/49"
+     },
+     "BL": 0,
+     "WF": 0,
+     "UX": 0
+    },
+    "ko-jeonse-protection": {
+     "vis": 1078,
+     "H1": 0,
+     "H2": 0,
+     "H3": {
+      "value": 0.8741258741258742,
+      "exact": "125/143"
+     },
+     "CD": {
+      "value": 4.638218923933209,
+      "exact": "2500/539"
+     },
+     "BL": 0,
+     "WF": 4,
+     "UX": 0
+    },
+    "ko-severance-pay": {
+     "vis": 1793,
+     "H1": 0,
+     "H2": 0,
+     "H3": {
+      "value": 1.0828370330265296,
+      "exact": "2000/1847"
+     },
+     "CD": {
+      "value": 10.03904071388734,
+      "exact": "18000/1793"
+     },
+     "BL": 5,
+     "WF": 7,
+     "UX": 0
+    },
+    "ko-unemployment-quit": {
+     "vis": 1179,
+     "H1": 0,
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 12.72264631043257,
+      "exact": "5000/393"
+     },
+     "BL": 2,
+     "WF": 6,
+     "UX": 0
+    },
+    "zh-flex-hours": {
+     "vis": 2861,
+     "H1": {
+      "value": 0.9765625,
+      "exact": "125/128"
+     },
+     "H2": {
+      "value": 0.3255208333333333,
+      "exact": "125/384"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 4.194337644180356,
+      "exact": "12000/2861"
+     },
+     "BL": 1,
+     "WF": 14,
+     "UX": 0
+    },
+    "zh-insurance-gap": {
+     "vis": 1753,
+     "H1": {
+      "value": 2.557544757033248,
+      "exact": "1000/391"
+     },
+     "H2": {
+      "value": 1.5345268542199488,
+      "exact": "600/391"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 2.2818026240730176,
+      "exact": "4000/1753"
+     },
+     "BL": 6,
+     "WF": 27,
+     "UX": 0
+    },
+    "zh-sick-pay": {
+     "vis": 1370,
+     "H1": {
+      "value": 0.702247191011236,
+      "exact": "125/178"
+     },
+     "H2": 0,
+     "H3": {
+      "value": 0.702247191011236,
+      "exact": "125/178"
+     },
+     "CD": {
+      "value": 2.9197080291970803,
+      "exact": "400/137"
+     },
+     "BL": 0,
+     "WF": 25,
+     "UX": 0
+    }
+   }
+  },
+  "base r1": {
+   "F": 24,
+   "K": 17,
+   "C": 65,
+   "V": 21,
+   "M": 2,
+   "W": 3,
+   "AW": 9,
+   "AU": 63,
+   "S": 2,
+   "SP": 5,
+   "SR": 3,
+   "PC": 12,
+   "F_lang": {
+    "zh": 6,
+    "en": 6,
+    "ja": 4,
+    "ko": 8
+   },
+   "M_lang": {
+    "zh": 0,
+    "en": 1,
+    "ja": 0,
+    "ko": 1
+   },
+   "PC_all": 10,
+   "per_case_F": {
+    "en-529-roth": 2,
+    "en-fsa-rollover": 3,
+    "en-medicare-part-b": 1,
+    "ja-medical-deduction": 1,
+    "ja-part-time-leave": 1,
+    "ja-wallpaper-restoration": 2,
+    "ko-jeonse-protection": 2,
+    "ko-severance-pay": 3,
+    "ko-unemployment-quit": 3,
+    "zh-flex-hours": 1,
+    "zh-insurance-gap": 4,
+    "zh-sick-pay": 1
+   },
+   "H1": {
+    "value": 0.5468069158002561,
+    "exact": "350640106230849748925/641250313591380364872"
+   },
+   "H2": {
+    "value": 0.5508667140345521,
+    "exact": "285835892970705200/518883943589985519"
+   },
+   "H3": {
+    "value": 0.44657447514605203,
+    "exact": "13353325075/29901675573"
+   },
+   "CD": {
+    "value": 4.822785513614213,
+    "exact": "319727237254911828788440164725/66295139261813672557184240337"
+   },
+   "BL": 29,
+   "WF": 126,
+   "UX": 0,
+   "vis": {
+    "en-529-roth": 3991,
+    "en-fsa-rollover": 2735,
+    "en-medicare-part-b": 4602,
+    "ja-medical-deduction": 1590,
+    "ja-part-time-leave": 747,
+    "ja-wallpaper-restoration": 1619,
+    "ko-jeonse-protection": 1409,
+    "ko-severance-pay": 2556,
+    "ko-unemployment-quit": 1201,
+    "zh-flex-hours": 3029,
+    "zh-insurance-gap": 2288,
+    "zh-sick-pay": 2260
+   },
+   "per_case_text": {
+    "en-529-roth": {
+     "vis": 3991,
+     "H1": {
+      "value": 1.1907597046915932,
+      "exact": "5000/4199"
+     },
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 1.5033826108744675,
+      "exact": "6000/3991"
+     },
+     "BL": 0,
+     "WF": 4,
+     "UX": 0
+    },
+    "en-fsa-rollover": {
+     "vis": 2735,
+     "H1": 0,
+     "H2": {
+      "value": 0.3519887363604365,
+      "exact": "1000/2841"
+     },
+     "H3": {
+      "value": 0.3519887363604365,
+      "exact": "1000/2841"
+     },
+     "CD": {
+      "value": 3.290676416819013,
+      "exact": "1800/547"
+     },
+     "BL": 3,
+     "WF": 2,
+     "UX": 0
+    },
+    "en-medicare-part-b": {
+     "vis": 4602,
+     "H1": {
+      "value": 0.6335797254487856,
+      "exact": "600/947"
+     },
+     "H2": {
+      "value": 0.21119324181626187,
+      "exact": "200/947"
+     },
+     "H3": {
+      "value": 0.42238648363252373,
+      "exact": "400/947"
+     },
+     "CD": {
+      "value": 2.3902651021295087,
+      "exact": "5500/2301"
+     },
+     "BL": 3,
+     "WF": 11,
+     "UX": 0
+    },
+    "ja-medical-deduction": {
+     "vis": 1590,
+     "H1": 0,
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 3.7735849056603774,
+      "exact": "200/53"
+     },
+     "BL": 1,
+     "WF": 15,
+     "UX": 0
+    },
+    "ja-part-time-leave": {
+     "vis": 747,
+     "H1": 0,
+     "H2": {
+      "value": 1.3175230566534915,
+      "exact": "1000/759"
+     },
+     "H3": {
+      "value": 2.635046113306983,
+      "exact": "2000/759"
+     },
+     "CD": {
+      "value": 8.032128514056225,
+      "exact": "2000/249"
+     },
+     "BL": 1,
+     "WF": 0,
+     "UX": 0
+    },
+    "ja-wallpaper-restoration": {
+     "vis": 1619,
+     "H1": {
+      "value": 0.5889281507656066,
+      "exact": "500/849"
+     },
+     "H2": {
+      "value": 0.5889281507656066,
+      "exact": "500/849"
+     },
+     "H3": {
+      "value": 0.5889281507656066,
+      "exact": "500/849"
+     },
+     "CD": {
+      "value": 2.4706609017912293,
+      "exact": "4000/1619"
+     },
+     "BL": 2,
+     "WF": 1,
+     "UX": 0
+    },
+    "ko-jeonse-protection": {
+     "vis": 1409,
+     "H1": 0,
+     "H2": 0,
+     "H3": {
+      "value": 1.3605442176870748,
+      "exact": "200/147"
+     },
+     "CD": {
+      "value": 8.516678495386799,
+      "exact": "12000/1409"
+     },
+     "BL": 6,
+     "WF": 8,
+     "UX": 0
+    },
+    "ko-severance-pay": {
+     "vis": 2556,
+     "H1": {
+      "value": 0.3698224852071006,
+      "exact": "125/338"
+     },
+     "H2": {
+      "value": 0.3698224852071006,
+      "exact": "125/338"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 6.651017214397496,
+      "exact": "4250/639"
+     },
+     "BL": 5,
+     "WF": 13,
+     "UX": 0
+    },
+    "ko-unemployment-quit": {
+     "vis": 1201,
+     "H1": 0,
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 9.159034138218152,
+      "exact": "11000/1201"
+     },
+     "BL": 1,
+     "WF": 8,
+     "UX": 0
+    },
+    "zh-flex-hours": {
+     "vis": 3029,
+     "H1": {
+      "value": 0.9262117937635073,
+      "exact": "3000/3239"
+     },
+     "H2": {
+      "value": 0.9262117937635073,
+      "exact": "3000/3239"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 3.301419610432486,
+      "exact": "10000/3029"
+     },
+     "BL": 0,
+     "WF": 17,
+     "UX": 0
+    },
+    "zh-insurance-gap": {
+     "vis": 2288,
+     "H1": {
+      "value": 1.6233766233766234,
+      "exact": "125/77"
+     },
+     "H2": {
+      "value": 2.435064935064935,
+      "exact": "375/154"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 5.244755244755245,
+      "exact": "750/143"
+     },
+     "BL": 4,
+     "WF": 33,
+     "UX": 0
+    },
+    "zh-sick-pay": {
+     "vis": 2260,
+     "H1": {
+      "value": 1.2290045063498567,
+      "exact": "3000/2441"
+     },
+     "H2": {
+      "value": 0.40966816878328555,
+      "exact": "1000/2441"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 3.5398230088495577,
+      "exact": "400/113"
+     },
+     "BL": 3,
+     "WF": 14,
+     "UX": 0
+    }
+   }
+  },
+  "base r2": {
+   "F": 15,
+   "K": 23,
+   "C": 58,
+   "V": 22,
+   "M": 8,
+   "W": 3,
+   "AW": 9,
+   "AU": 76,
+   "S": 4,
+   "SP": 6,
+   "SR": 4,
+   "PC": 12,
+   "F_lang": {
+    "zh": 3,
+    "en": 5,
+    "ja": 3,
+    "ko": 4
+   },
+   "M_lang": {
+    "zh": 0,
+    "en": 3,
+    "ja": 1,
+    "ko": 4
+   },
+   "PC_all": 10,
+   "per_case_F": {
+    "en-529-roth": 2,
+    "en-fsa-rollover": 1,
+    "en-medicare-part-b": 2,
+    "ja-medical-deduction": 2,
+    "ja-part-time-leave": 0,
+    "ja-wallpaper-restoration": 1,
+    "ko-jeonse-protection": 1,
+    "ko-severance-pay": 2,
+    "ko-unemployment-quit": 1,
+    "zh-flex-hours": 1,
+    "zh-insurance-gap": 1,
+    "zh-sick-pay": 1
+   },
+   "H1": {
+    "value": 0.5883639058428207,
+    "exact": "49917120786240895/84840555803190408"
+   },
+   "H2": {
+    "value": 0.24985967900617048,
+    "exact": "3004498625/12024743796"
+   },
+   "H3": {
+    "value": 0.3849400094182078,
+    "exact": "362125/940731"
+   },
+   "CD": {
+    "value": 4.699529886399933,
+    "exact": "242676953110999861361289829871065/51638559382990142474578704361116"
+   },
+   "BL": 23,
+   "WF": 110,
+   "UX": 0,
+   "vis": {
+    "en-529-roth": 5679,
+    "en-fsa-rollover": 2418,
+    "en-medicare-part-b": 4855,
+    "ja-medical-deduction": 1296,
+    "ja-part-time-leave": 1238,
+    "ja-wallpaper-restoration": 2018,
+    "ko-jeonse-protection": 925,
+    "ko-severance-pay": 2138,
+    "ko-unemployment-quit": 1244,
+    "zh-flex-hours": 2767,
+    "zh-insurance-gap": 1508,
+    "zh-sick-pay": 2094
+   },
+   "per_case_text": {
+    "en-529-roth": {
+     "vis": 5679,
+     "H1": {
+      "value": 1.174299614158698,
+      "exact": "7000/5961"
+     },
+     "H2": {
+      "value": 0.33551417547391377,
+      "exact": "2000/5961"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 2.1130480718436346,
+      "exact": "4000/1893"
+     },
+     "BL": 0,
+     "WF": 8,
+     "UX": 0
+    },
+    "en-fsa-rollover": {
+     "vis": 2418,
+     "H1": {
+      "value": 0.3985651654045436,
+      "exact": "1000/2509"
+     },
+     "H2": {
+      "value": 0.7971303308090872,
+      "exact": "2000/2509"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 2.0678246484698097,
+      "exact": "2500/1209"
+     },
+     "BL": 0,
+     "WF": 2,
+     "UX": 0
+    },
+    "en-medicare-part-b": {
+     "vis": 4855,
+     "H1": 0,
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 2.47167868177137,
+      "exact": "2400/971"
+     },
+     "BL": 3,
+     "WF": 6,
+     "UX": 0
+    },
+    "ja-medical-deduction": {
+     "vis": 1296,
+     "H1": 0,
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 1.5432098765432098,
+      "exact": "125/81"
+     },
+     "BL": 2,
+     "WF": 4,
+     "UX": 0
+    },
+    "ja-part-time-leave": {
+     "vis": 1238,
+     "H1": 0,
+     "H2": 0,
+     "H3": {
+      "value": 1.567398119122257,
+      "exact": "500/319"
+     },
+     "CD": {
+      "value": 6.462035541195476,
+      "exact": "4000/619"
+     },
+     "BL": 4,
+     "WF": 1,
+     "UX": 0
+    },
+    "ja-wallpaper-restoration": {
+     "vis": 2018,
+     "H1": {
+      "value": 0.4819277108433735,
+      "exact": "40/83"
+     },
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 4.955401387512389,
+      "exact": "5000/1009"
+     },
+     "BL": 1,
+     "WF": 0,
+     "UX": 0
+    },
+    "ko-jeonse-protection": {
+     "vis": 925,
+     "H1": 0,
+     "H2": 0,
+     "H3": {
+      "value": 3.051881993896236,
+      "exact": "3000/983"
+     },
+     "CD": {
+      "value": 4.324324324324325,
+      "exact": "160/37"
+     },
+     "BL": 0,
+     "WF": 3,
+     "UX": 0
+    },
+    "ko-severance-pay": {
+     "vis": 2138,
+     "H1": {
+      "value": 0.4470272686633885,
+      "exact": "1000/2237"
+     },
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 7.483629560336763,
+      "exact": "8000/1069"
+     },
+     "BL": 6,
+     "WF": 15,
+     "UX": 0
+    },
+    "ko-unemployment-quit": {
+     "vis": 1244,
+     "H1": 0,
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 12.057877813504824,
+      "exact": "3750/311"
+     },
+     "BL": 0,
+     "WF": 6,
+     "UX": 0
+    },
+    "zh-flex-hours": {
+     "vis": 2767,
+     "H1": {
+      "value": 1.9736842105263157,
+      "exact": "75/38"
+     },
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 3.9754246476328152,
+      "exact": "11000/2767"
+     },
+     "BL": 1,
+     "WF": 11,
+     "UX": 0
+    },
+    "zh-insurance-gap": {
+     "vis": 1508,
+     "H1": {
+      "value": 1.243781094527363,
+      "exact": "250/201"
+     },
+     "H2": {
+      "value": 1.8656716417910448,
+      "exact": "125/67"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 4.641909814323608,
+      "exact": "1750/377"
+     },
+     "BL": 2,
+     "WF": 26,
+     "UX": 0
+    },
+    "zh-sick-pay": {
+     "vis": 2094,
+     "H1": {
+      "value": 1.3410818059901655,
+      "exact": "3000/2237"
+     },
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 4.2979942693409745,
+      "exact": "1500/349"
+     },
+     "BL": 4,
+     "WF": 28,
+     "UX": 0
+    }
+   }
+  },
+  "plain r1": {
+   "F": 15,
+   "K": 24,
+   "C": 60,
+   "V": 25,
+   "M": 6,
+   "W": 0,
+   "AW": 8,
+   "AU": 69,
+   "S": 3,
+   "SP": 2,
+   "SR": 2,
+   "PC": 12,
+   "F_lang": {
+    "zh": 5,
+    "en": 0,
+    "ja": 4,
+    "ko": 6
+   },
+   "M_lang": {
+    "zh": 0,
+    "en": 2,
+    "ja": 1,
+    "ko": 3
+   },
+   "PC_all": 8,
+   "per_case_F": {
+    "en-529-roth": 0,
+    "en-fsa-rollover": 0,
+    "en-medicare-part-b": 0,
+    "ja-medical-deduction": 3,
+    "ja-part-time-leave": 0,
+    "ja-wallpaper-restoration": 1,
+    "ko-jeonse-protection": 1,
+    "ko-severance-pay": 3,
+    "ko-unemployment-quit": 2,
+    "zh-flex-hours": 2,
+    "zh-insurance-gap": 2,
+    "zh-sick-pay": 1
+   },
+   "H1": {
+    "value": 0.5301856132672652,
+    "exact": "68608957479384478105/129405543572905060032"
+   },
+   "H2": {
+    "value": 0.49983071956789726,
+    "exact": "67977731098547885/136001506984833798"
+   },
+   "H3": {
+    "value": 0.197588978796223,
+    "exact": "21338455/107994156"
+   },
+   "CD": {
+    "value": 4.1695207420093485,
+    "exact": "1685900187308435541067737135365/404339081545371387099056174946"
+   },
+   "BL": 21,
+   "WF": 82,
+   "UX": 0,
+   "vis": {
+    "en-529-roth": 5763,
+    "en-fsa-rollover": 2953,
+    "en-medicare-part-b": 4684,
+    "ja-medical-deduction": 1464,
+    "ja-part-time-leave": 1100,
+    "ja-wallpaper-restoration": 1891,
+    "ko-jeonse-protection": 675,
+    "ko-severance-pay": 2281,
+    "ko-unemployment-quit": 835,
+    "zh-flex-hours": 2491,
+    "zh-insurance-gap": 2691,
+    "zh-sick-pay": 2292
+   },
+   "per_case_text": {
+    "en-529-roth": {
+     "vis": 5763,
+     "H1": {
+      "value": 0.4918032786885246,
+      "exact": "30/61"
+     },
+     "H2": {
+      "value": 0.6557377049180327,
+      "exact": "40/61"
+     },
+     "H3": {
+      "value": 0.16393442622950818,
+      "exact": "10/61"
+     },
+     "CD": {
+      "value": 1.5616866215512755,
+      "exact": "3000/1921"
+     },
+     "BL": 0,
+     "WF": 14,
+     "UX": 0
+    },
+    "en-fsa-rollover": {
+     "vis": 2953,
+     "H1": {
+      "value": 0.6329113924050633,
+      "exact": "50/79"
+     },
+     "H2": {
+      "value": 0.9493670886075949,
+      "exact": "75/79"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 3.72502539790044,
+      "exact": "11000/2953"
+     },
+     "BL": 4,
+     "WF": 2,
+     "UX": 0
+    },
+    "en-medicare-part-b": {
+     "vis": 4684,
+     "H1": 0,
+     "H2": {
+      "value": 0.20525451559934318,
+      "exact": "125/609"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 2.134927412467976,
+      "exact": "2500/1171"
+     },
+     "BL": 1,
+     "WF": 2,
+     "UX": 0
+    },
+    "ja-medical-deduction": {
+     "vis": 1464,
+     "H1": {
+      "value": 0.6009615384615384,
+      "exact": "125/208"
+     },
+     "H2": 0,
+     "H3": 0,
+     "CD": 0,
+     "BL": 2,
+     "WF": 8,
+     "UX": 0
+    },
+    "ja-part-time-leave": {
+     "vis": 1100,
+     "H1": 0,
+     "H2": 0,
+     "H3": {
+      "value": 1.7123287671232876,
+      "exact": "125/73"
+     },
+     "CD": {
+      "value": 0.9090909090909091,
+      "exact": "10/11"
+     },
+     "BL": 3,
+     "WF": 3,
+     "UX": 0
+    },
+    "ja-wallpaper-restoration": {
+     "vis": 1891,
+     "H1": {
+      "value": 0.49480455220188024,
+      "exact": "1000/2021"
+     },
+     "H2": 0,
+     "H3": {
+      "value": 0.49480455220188024,
+      "exact": "1000/2021"
+     },
+     "CD": {
+      "value": 3.1729243786356425,
+      "exact": "6000/1891"
+     },
+     "BL": 1,
+     "WF": 0,
+     "UX": 0
+    },
+    "ko-jeonse-protection": {
+     "vis": 675,
+     "H1": 0,
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 8.88888888888889,
+      "exact": "80/9"
+     },
+     "BL": 1,
+     "WF": 0,
+     "UX": 0
+    },
+    "ko-severance-pay": {
+     "vis": 2281,
+     "H1": 0,
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 7.89127575624726,
+      "exact": "18000/2281"
+     },
+     "BL": 4,
+     "WF": 5,
+     "UX": 0
+    },
+    "ko-unemployment-quit": {
+     "vis": 835,
+     "H1": 0,
+     "H2": {
+      "value": 1.1098779134295227,
+      "exact": "1000/901"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 11.976047904191617,
+      "exact": "2000/167"
+     },
+     "BL": 1,
+     "WF": 0,
+     "UX": 0
+    },
+    "zh-flex-hours": {
+     "vis": 2491,
+     "H1": {
+      "value": 1.0355540214014498,
+      "exact": "3000/2897"
+     },
+     "H2": {
+      "value": 1.7259233690024163,
+      "exact": "5000/2897"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 2.8101164191087915,
+      "exact": "7000/2491"
+     },
+     "BL": 0,
+     "WF": 11,
+     "UX": 0
+    },
+    "zh-insurance-gap": {
+     "vis": 2691,
+     "H1": {
+      "value": 2.703616086515715,
+      "exact": "8000/2959"
+     },
+     "H2": {
+      "value": 1.3518080432578574,
+      "exact": "4000/2959"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 2.6012634708286884,
+      "exact": "7000/2691"
+     },
+     "BL": 3,
+     "WF": 30,
+     "UX": 0
+    },
+    "zh-sick-pay": {
+     "vis": 2292,
+     "H1": {
+      "value": 0.4025764895330113,
+      "exact": "250/621"
+     },
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 4.363001745200698,
+      "exact": "2500/573"
+     },
+     "BL": 1,
+     "WF": 7,
+     "UX": 0
+    }
+   }
+  },
+  "plain r2": {
+   "F": 19,
+   "K": 19,
+   "C": 56,
+   "V": 25,
+   "M": 7,
+   "W": 3,
+   "AW": 13,
+   "AU": 57,
+   "S": 1,
+   "SP": 6,
+   "SR": 7,
+   "PC": 12,
+   "F_lang": {
+    "zh": 7,
+    "en": 4,
+    "ja": 4,
+    "ko": 4
+   },
+   "M_lang": {
+    "zh": 0,
+    "en": 2,
+    "ja": 1,
+    "ko": 4
+   },
+   "PC_all": 9,
+   "per_case_F": {
+    "en-529-roth": 2,
+    "en-fsa-rollover": 2,
+    "en-medicare-part-b": 0,
+    "ja-medical-deduction": 3,
+    "ja-part-time-leave": 1,
+    "ja-wallpaper-restoration": 0,
+    "ko-jeonse-protection": 1,
+    "ko-severance-pay": 2,
+    "ko-unemployment-quit": 1,
+    "zh-flex-hours": 1,
+    "zh-insurance-gap": 3,
+    "zh-sick-pay": 3
+   },
+   "H1": {
+    "value": 0.4654877467328979,
+    "exact": "16052268737944554575/34484836283253502938"
+   },
+   "H2": {
+    "value": 0.395640932332079,
+    "exact": "1101272593548925/2783515312881171"
+   },
+   "H3": {
+    "value": 0.3961124386337661,
+    "exact": "238345744998955127370175/601712346678723207782946"
+   },
+   "CD": {
+    "value": 3.8248862298732944,
+    "exact": "272769543969869306212974694975/71314420240652557145917551966"
+   },
+   "BL": 29,
+   "WF": 93,
+   "UX": 0,
+   "vis": {
+    "en-529-roth": 8662,
+    "en-fsa-rollover": 2998,
+    "en-medicare-part-b": 3238,
+    "ja-medical-deduction": 2003,
+    "ja-part-time-leave": 1081,
+    "ja-wallpaper-restoration": 1562,
+    "ko-jeonse-protection": 1065,
+    "ko-severance-pay": 2765,
+    "ko-unemployment-quit": 1101,
+    "zh-flex-hours": 4284,
+    "zh-insurance-gap": 1694,
+    "zh-sick-pay": 1251
+   },
+   "per_case_text": {
+    "en-529-roth": {
+     "vis": 8662,
+     "H1": {
+      "value": 0.7572479446127217,
+      "exact": "1750/2311"
+     },
+     "H2": 0,
+     "H3": {
+      "value": 0.1081782778018174,
+      "exact": "250/2311"
+     },
+     "CD": {
+      "value": 1.8471484645578389,
+      "exact": "8000/4331"
+     },
+     "BL": 1,
+     "WF": 11,
+     "UX": 0
+    },
+    "en-fsa-rollover": {
+     "vis": 2998,
+     "H1": {
+      "value": 0.3179650238473768,
+      "exact": "200/629"
+     },
+     "H2": {
+      "value": 0.6359300476947536,
+      "exact": "400/629"
+     },
+     "H3": {
+      "value": 0.3179650238473768,
+      "exact": "200/629"
+     },
+     "CD": {
+      "value": 2.66844563042028,
+      "exact": "4000/1499"
+     },
+     "BL": 1,
+     "WF": 1,
+     "UX": 0
+    },
+    "en-medicare-part-b": {
+     "vis": 3238,
+     "H1": 0,
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 2.7794935145151327,
+      "exact": "4500/1619"
+     },
+     "BL": 0,
+     "WF": 7,
+     "UX": 0
+    },
+    "ja-medical-deduction": {
+     "vis": 2003,
+     "H1": {
+      "value": 1.3507429085997298,
+      "exact": "3000/2221"
+     },
+     "H2": {
+      "value": 0.9004952723998199,
+      "exact": "2000/2221"
+     },
+     "H3": {
+      "value": 0.45024763619990993,
+      "exact": "1000/2221"
+     },
+     "CD": {
+      "value": 0.9985022466300549,
+      "exact": "2000/2003"
+     },
+     "BL": 3,
+     "WF": 8,
+     "UX": 0
+    },
+    "ja-part-time-leave": {
+     "vis": 1081,
+     "H1": 0,
+     "H2": 0,
+     "H3": {
+      "value": 0.8547008547008547,
+      "exact": "100/117"
+     },
+     "CD": {
+      "value": 4.6253469010175765,
+      "exact": "5000/1081"
+     },
+     "BL": 5,
+     "WF": 0,
+     "UX": 0
+    },
+    "ja-wallpaper-restoration": {
+     "vis": 1562,
+     "H1": 0,
+     "H2": {
+      "value": 0.5984440454817475,
+      "exact": "1000/1671"
+     },
+     "H3": {
+      "value": 0.5984440454817475,
+      "exact": "1000/1671"
+     },
+     "CD": {
+      "value": 4.481434058898848,
+      "exact": "3500/781"
+     },
+     "BL": 1,
+     "WF": 0,
+     "UX": 0
+    },
+    "ko-jeonse-protection": {
+     "vis": 1065,
+     "H1": 0,
+     "H2": 0,
+     "H3": {
+      "value": 0.8488964346349746,
+      "exact": "500/589"
+     },
+     "CD": {
+      "value": 7.511737089201878,
+      "exact": "1600/213"
+     },
+     "BL": 2,
+     "WF": 1,
+     "UX": 0
+    },
+    "ko-severance-pay": {
+     "vis": 2765,
+     "H1": {
+      "value": 0.33489618218352313,
+      "exact": "500/1493"
+     },
+     "H2": 0,
+     "H3": 0,
+     "CD": {
+      "value": 5.424954792043399,
+      "exact": "3000/553"
+     },
+     "BL": 8,
+     "WF": 7,
+     "UX": 0
+    },
+    "ko-unemployment-quit": {
+     "vis": 1101,
+     "H1": 0,
+     "H2": 0,
+     "H3": {
+      "value": 0.8347245409015025,
+      "exact": "500/599"
+     },
+     "CD": {
+      "value": 9.082652134423252,
+      "exact": "10000/1101"
+     },
+     "BL": 5,
+     "WF": 1,
+     "UX": 0
+    },
+    "zh-flex-hours": {
+     "vis": 4284,
+     "H1": {
+      "value": 0.8487163165711861,
+      "exact": "4000/4713"
+     },
+     "H2": {
+      "value": 0.6365372374283895,
+      "exact": "1000/1571"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 2.100840336134454,
+      "exact": "250/119"
+     },
+     "BL": 1,
+     "WF": 25,
+     "UX": 0
+    },
+    "zh-insurance-gap": {
+     "vis": 1694,
+     "H1": {
+      "value": 1.976284584980237,
+      "exact": "500/253"
+     },
+     "H2": {
+      "value": 1.976284584980237,
+      "exact": "500/253"
+     },
+     "H3": 0,
+     "CD": {
+      "value": 1.1806375442739079,
+      "exact": "1000/847"
+     },
+     "BL": 1,
+     "WF": 11,
+     "UX": 0
+    },
+    "zh-sick-pay": {
+     "vis": 1251,
+     "H1": 0,
+     "H2": 0,
+     "H3": {
+      "value": 0.7401924500370096,
+      "exact": "1000/1351"
+     },
+     "CD": {
+      "value": 3.1974420463629096,
+      "exact": "4000/1251"
+     },
+     "BL": 1,
+     "WF": 21,
+     "UX": 0
+    }
+   }
+  }
+ },
+ "outcome": 6,
+ "outcome_text": "not moved, and a trigger or RD >= 3: ABANDON",
+ "abandon_checks": [
+  {
+   "name": "PC <= 10",
+   "value": 12,
+   "op": "<=",
+   "bound": 10,
+   "bound_expr": "",
+   "result": false,
+   "holds": false
+  },
+  {
+   "name": "runs still invalid after their rerun >= 1",
+   "value": 0,
+   "op": ">=",
+   "bound": 1,
+   "bound_expr": "",
+   "result": false,
+   "holds": false
+  },
+  {
+   "name": "median Lv < 0.70",
+   "value": {
+    "value": 0.8670204888238792,
+    "exact": "3459860/3990517"
+   },
+   "op": "<",
+   "bound": {
+    "value": 0.7,
+    "exact": "7/10"
+   },
+   "bound_expr": "",
+   "result": false,
+   "holds": false
+  },
+  {
+   "name": "M >= M-bar-b + 6",
+   "value": 6,
+   "op": ">=",
+   "bound": 11,
+   "bound_expr": "5 + 6",
+   "result": false,
+   "holds": false
+  }
+ ],
+ "moved": {
+  "name": "F <= Fb_min - 1",
+  "value": 19,
+  "op": "<=",
+  "bound": 14,
+  "bound_expr": "15 - 1",
+  "result": false
+ },
+ "triggers": {
+  "O1": {
+   "label": "length",
+   "checks": [
+    {
+     "name": "median Lv > 1.00",
+     "value": {
+      "value": 0.8670204888238792,
+      "exact": "3459860/3990517"
+     },
+     "op": ">",
+     "bound": 1,
+     "bound_expr": "",
+     "result": false
+    },
+    {
+     "name": "median Lb > 1.05",
+     "value": {
+      "value": 0.9758248760516032,
+      "exact": "4609543/4723740"
+     },
+     "op": ">",
+     "bound": {
+      "value": 1.05,
+      "exact": "21/20"
+     },
+     "bound_expr": "",
+     "result": false
+    }
+   ],
+   "join": "and",
+   "result": false,
+   "fires": false
+  },
+  "O2": {
+   "label": "spraying",
+   "checks": [
+    {
+     "name": "S >= 3",
+     "value": 3,
+     "op": ">=",
+     "bound": 3,
+     "bound_expr": "",
+     "result": true
+    }
+   ],
+   "join": "or",
+   "result": true,
+   "fires": true
+  },
+  "O3": {
+   "label": "conditional density",
+   "checks": [
+    {
+     "name": "CD > 1.5 x CD-bar-b",
+     "value": {
+      "value": 4.623605546884877,
+      "exact": "1553583918667133285090125/336011345023549837405491"
+     },
+     "op": ">",
+     "bound": {
+      "value": 7.141736550010609,
+      "exact": "1207353938128648342105843889859639041840744860273211022480815/169056073361716869560735515804500475613221071679907525014128"
+     },
+     "bound_expr": "1.5 x 4.761",
+     "result": false
+    },
+    {
+     "name": "BL > 1.5 x BL-bar-b",
+     "value": 26,
+     "op": ">",
+     "bound": 39,
+     "bound_expr": "1.5 x 26",
+     "result": false
+    }
+   ],
+   "join": "or",
+   "result": false,
+   "fires": false
+  },
+  "O4": {
+   "label": "blur",
+   "checks": [
+    {
+     "name": "K - K-bar-b < 0.5 x (F-bar-b - F)",
+     "value": -2,
+     "op": "<",
+     "bound": {
+      "value": 0.25,
+      "exact": "1/4"
+     },
+     "bound_expr": "0.5 x (19.500 - 19)",
+     "result": true
+    },
+    {
+     "name": "V > V-bar-p + 2",
+     "value": 27,
+     "op": ">",
+     "bound": 27,
+     "bound_expr": "25 + 2",
+     "result": false
+    },
+    {
+     "name": "M > M-bar-p",
+     "value": 6,
+     "op": ">",
+     "bound": {
+      "value": 6.5,
+      "exact": "13/2"
+     },
+     "bound_expr": "",
+     "result": false
+    }
+   ],
+   "join": "or",
+   "result": true,
+   "fires": true
+  },
+  "O5": {
+   "label": "hedges",
+   "checks": [
+    {
+     "name": "H1 > H1b_max",
+     "value": {
+      "value": 0.5445684474568389,
+      "exact": "7843901982815/14403886268928"
+     },
+     "op": ">",
+     "bound": {
+      "value": 0.5883639058428207,
+      "exact": "49917120786240895/84840555803190408"
+     },
+     "bound_expr": "",
+     "result": false
+    },
+    {
+     "name": "H2 > H2b_max",
+     "value": {
+      "value": 0.2286185796329398,
+      "exact": "56473615955/247021112832"
+     },
+     "op": ">",
+     "bound": {
+      "value": 0.5508667140345521,
+      "exact": "285835892970705200/518883943589985519"
+     },
+     "bound_expr": "",
+     "result": false
+    },
+    {
+     "name": "H3 > H3b_max",
+     "value": {
+      "value": 0.48443388341906574,
+      "exact": "934243502667725555/1928526336915096204"
+     },
+     "op": ">",
+     "bound": {
+      "value": 0.44657447514605203,
+      "exact": "13353325075/29901675573"
+     },
+     "bound_expr": "",
+     "result": true
+    }
+   ],
+   "join": "or",
+   "result": true,
+   "fires": true
+  },
+  "O6": {
+   "label": "unverified claims and safe picks",
+   "checks": [
+    {
+     "name": "AU > 1.10 x AUp_max",
+     "value": 61,
+     "op": ">",
+     "bound": {
+      "value": 75.9,
+      "exact": "759/10"
+     },
+     "bound_expr": "1.10 x 69",
+     "result": false
+    },
+    {
+     "name": "SP >= 2",
+     "value": 6,
+     "op": ">=",
+     "bound": 2,
+     "bound_expr": "",
+     "result": true
+    },
+    {
+     "name": "SR >= 1",
+     "value": 3,
+     "op": ">=",
+     "bound": 1,
+     "bound_expr": "",
+     "result": true
+    }
+   ],
+   "join": "or",
+   "result": true,
+   "fires": true
+  }
+ },
+ "rd_check": {
+  "name": "RD <= 2",
+  "value": 0,
+  "op": "<=",
+  "bound": 2,
+  "bound_expr": "",
+  "result": true
+ },
+ "lv": [
+  {
+   "value": 0.7335875216637782,
+   "exact": "10582/14425"
+  },
+  {
+   "value": 0.9568139808435557,
+   "exact": "5694/5951"
+  },
+  {
+   "value": 1.3690987124463518,
+   "exact": "319/233"
+  },
+  {
+   "value": 0.8826074415921547,
+   "exact": "3060/3467"
+  },
+  {
+   "value": 0.9839523154516276,
+   "exact": "2146/2181"
+  },
+  {
+   "value": 0.8514335360556038,
+   "exact": "980/1151"
+  },
+  {
+   "value": 1.239080459770115,
+   "exact": "539/435"
+  },
+  {
+   "value": 0.7106619104240983,
+   "exact": "1793/2523"
+  },
+  {
+   "value": 1.2179752066115703,
+   "exact": "1179/968"
+  },
+  {
+   "value": 0.8445756457564576,
+   "exact": "5722/6775"
+  },
+  {
+   "value": 0.7995438996579247,
+   "exact": "3506/4385"
+  },
+  {
+   "value": 0.7733559130680214,
+   "exact": "2740/3543"
+  }
+ ],
+ "lb": [
+  {
+   "value": 1.0943123061013444,
+   "exact": "5291/4835"
+  },
+  {
+   "value": 1.1049873859887445,
+   "exact": "5694/5153"
+  },
+  {
+   "value": 1.1468753304430581,
+   "exact": "10846/9457"
+  },
+  {
+   "value": 1.0602910602910602,
+   "exact": "510/481"
+  },
+  {
+   "value": 1.0811083123425693,
+   "exact": "2146/1985"
+  },
+  {
+   "value": 0.8083585372559802,
+   "exact": "2940/3637"
+  },
+  {
+   "value": 0.9237360754070265,
+   "exact": "1078/1167"
+  },
+  {
+   "value": 0.763953983809118,
+   "exact": "1793/2347"
+  },
+  {
+   "value": 0.9644171779141104,
+   "exact": "786/815"
+  },
+  {
+   "value": 0.9872325741890959,
+   "exact": "2861/2898"
+  },
+  {
+   "value": 0.9236037934668072,
+   "exact": "1753/1898"
+  },
+  {
+   "value": 0.6293063849333945,
+   "exact": "1370/2177"
+  }
+ ],
+ "action": "ABANDON"
+}

@@ -1,0 +1,53 @@
+{
+ "pair": "p057",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'대항력은 신고 다음 날 0시부터라 오전에 끝내는 게 좋아요': the next-day-0:00 rule does not depend on morning versus afternoon, so the stated reason does not support the advice. It also never ties the timing to Friday/10-24 or says the priority right starts the same way.",
+   "HUG return-guarantee conditions (90% limit, later of balance date or move-in date, half the contract term) are cited to property.ambitstock.com, a non-official third-party page. The figures match the key, but the source is not official and I did not open it.",
+   "'생활법령정보(2026. 9. 15. 기준)' and the other cited links (law.go.kr, easylaw.go.kr, ulsannamgu.go.kr) are checkable, but I did not open them, so the dated-source statement is unverified.",
+   "'보증금을 올려 재계약하면 확정일자를 다시 받아야': roughly right in general (the increased portion), but stated without the increase-only qualifier and not covered by the key.",
+   "'2억을 거의 못 받을 수 있어요': hyperbolic, and not conditioned on any prior mortgage amount; the key does not support the size of the loss."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "'근저당과 선순위 임차인 보증금 합계가 집값의 70~80%를 넘으면 위험 신호': an unsourced rule-of-thumb threshold, not in the key and not tied to any official figure.",
+   "'(선택) 전세권 설정 등기 — 확정일자보다 강하지만': omits that it needs the landlord's cooperation (민법 제621조) and that it ranks only from the registration date, behind any existing mortgage. This is the one step the tenant cannot do alone.",
+   "'계약 후 잔금 사이에 근저당을 추가하는 경우가 흔합니다': a frequency claim with no source.",
+   "'HUG·SGI' 반환보증 '전입신고·확정일자 후 신청 가능': the HUG condition matches the key, but the SGI condition and the 'only after' timing are unverified.",
+   "'대항력(집이 경매로 넘어가도 계속 살 수 있는 권리)': oversimplified, since a prior mortgage can extinguish it at auction.",
+   "'등기부등본 재발급' and bringing a '잔금 영수증' to the 전입신고: loose wording, since a receipt is not required to file and the register is viewed or issued, not 're-issued'."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers correct the realtor's claim in the first line and give the 대항력 versus 우선변제권/확정일자 distinction. Neither mentions that 2억 is above the Seoul 소액임차인 line (1억 6,500만), the 14-day deadline and fine, or the same-day mortgage risk. A states outright that delaying the 전입신고 delays 대항력 and that both steps must be done on move-in day. It also gives the visit documents (신분증, 계약서 원본), the 600원 fee, the 6천만 원 / 30-day 임대차 신고 duty, keeping residence through the term, and correct HUG conditions. B has the better Friday-to-weekend line on the 다음 날 0시 effect and is shorter, but it omits the fee, the 임대차 신고 and the duty to stay through the term. It also adds an optional 전세권 step without noting that it needs the landlord's consent. A is longer than the 'short' list requested and gives a morning rationale that does not follow, which is why the margin is only slight."
+}

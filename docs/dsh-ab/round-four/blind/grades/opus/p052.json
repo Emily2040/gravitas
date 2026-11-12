@@ -1,0 +1,44 @@
+{
+ "pair": "p052",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'3년 이하 징역 또는 3천만 원 이하 벌금(같은 법 제44조 제1호)': outdated; from 2026.9.18 the penalty is 제43조, 5 years or 50 million won (key treats this as a minor deduction)",
+   "'같은 법 제17조 제3항' cited as the basis for the 20% late interest: unverifiable/misapplied; for a 퇴직금제도 the basis is 근로기준법 제37조 and its enforcement decree",
+   "'재직기간 3년 2개월 ≈ 1,155일': slightly off; the key has about 1,158 days (small effect on the amount)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers corrected both false premises at the very start: payment is due within 14 days under 제9조, and an extension needs the two parties' agreement. A's daily-wage figure (107,608.70원) is exact, but it gives about 1,022만 as the amount and never mentions the ordinary-wage floor, which can lift the payment to about 1,202만. A also doesn't advise calling 1350. B computes the ordinary-wage floor (126,316원/day, about 1,200만), points to the payslip and start/end dates, and lists online 진정, 1350 and the local labor office. However, B cites the outdated 3-year/30-million penalty, gives a doubtful 제17조 제3항 citation, and runs longer. A's message to HR is clearer and safer: it says outright \"지급기일 연장에 합의한 사실이 없다\" and uses the current penalty. B's message invites delay (\"일정을 맞추기 어려우시다면…협의하고자\"), and its second version is soft. B covers more of the key points, so it wins by a slight margin."
+}

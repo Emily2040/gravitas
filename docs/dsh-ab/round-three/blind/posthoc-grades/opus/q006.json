@@ -1,0 +1,48 @@
+{
+ "pair": "q006",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'公司...不能延长到60天' stated as an absolute rule: true for Zhejiang, but it skips the Shanghai/Jiangsu exception that lets employers agree up to 6 months with employees under confidentiality duties (judged from the key).",
+   "'邮件进入公司邮箱...都算送达' overstates it: whether email counts as delivery is disputed in practice (own knowledge). Minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "'如果属于公司违法解除...N约为2个月工资（24,000元）' is imprecise: unlawful dismissal pays compensation of 2N (Art. 87), which is 48,000, not N (own knowledge).",
+   "Omits the Shanghai/Jiangsu exception, the same gap as A (judged from the key)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 60-day and approval premises at the very start, write the letter as a notice, give 11月25日 as the last day (free from 11月26日), and reach 4 days and 4,413.79元 extra by the 200% reading. I recomputed every figure and all are correct: 329 days, 4.51 days, 551.72元, 6,620.69元, 8,275.86元 and 5,517.24元. B gives fuller citations: Art. 25, 民法典 Art. 201, and Zhejiang's 5-day wage settlement rule, Art. 19, which I verified on gov.cn. That makes B's key point 4 more complete than A's. A is noticeably shorter and adds no questionable claims. B adds off-topic material: a 5-day alternative calculation and an economic-compensation scenario, where N for unlawful dismissal is imprecise. The key penalises excessive length, so that tips it slightly to A."
+}

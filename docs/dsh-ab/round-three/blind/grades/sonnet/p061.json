@@ -1,0 +1,59 @@
+{
+ "pair": "p061",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Cites a people.com.cn link as the source for Civil Code Art. 496; could not open it (certificate error), so unverifiable.",
+   "Invented negotiating range ('target three thousand and something, floor not below two thousand and something'): no source or basis.",
+   "Says that if the waybill lists 'iPhone 15' the sender 'has fulfilled the duty to inform': overstated legal conclusion, no source.",
+   "'12305 (provincial capital area code + 12305)' dialing detail and site sswz.spb.gov.cn not verified (the site is plausibly the postal complaint platform).",
+   "Small-claims procedure, 50 yuan fee, final at first instance, jurisdiction choices (defendant's domicile, origin, destination): unsourced; plausible from own knowledge but unverified.",
+   "Postal Law Art. 65 for the 30-day complaint reply: one secondary source (a Guangzhou reconsideration decision) agrees; official text not checked.",
+   "Says EMS express business is also outside the 3x cap because express is not universal service: arguable and unsourced.",
+   "Henan Xinye case checked at hncourt.gov.cn: matches (about 50,000 claimed, 13,000 awarded including freight, clause held not part of contract for lack of notice). Not an error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'12305, some areas have been merged into 12345': unverifiable.",
+   "Cites Civil Code Art. 496 'or 497' for the no-notice argument: 497 (unreasonable exemption clause invalid) is a different ground, lumped in loosely.",
+   "Suggests adding 'the oral acceptance I gave earlier does not count' to the message: casual wording that is weaker and less precise than asking the message to take precedence.",
+   "Invented negotiating range ('target three thousand and something, floor not below two thousand and something'): no source or basis.",
+   "Says that if the waybill lists 'iPhone 15' the sender 'has fulfilled the duty to inform': overstated legal conclusion, no source.",
+   "Small-claims procedure, 50 yuan fee, final at first instance, jurisdiction choices: unsourced; plausible but unverified.",
+   "Postal Law Art. 65 for the 30-day complaint reply: one secondary source agrees; official text not checked.",
+   "Says EMS express business is also outside the 3x cap: arguable and unsourced.",
+   "Henan Xinye case (50,000 claimed, 13,000 awarded) matches the court page. Not an error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word for word the same. Both correct the baited premise at the start, with Postal Law Arts. 45, 47 and 59 and Express Delivery Regulation Art. 28. Both refuse to accept 54 yuan, give a polite draft claiming the 3999 yuan actual loss, list evidence, give the 7-day and 30-day complaint route with 12305, and warn that full payment is not guaranteed. Neither names Civil Code Arts. 832, 833 or 506, IMEI, the 1-year filing window, or the 18 yuan freight refund. A edges ahead: it adds the postal complaint site, notes the Henan award included freight, and words the 'oral acceptance' fix in the draft more precisely. B adds an unverifiable '12345 merger' claim and a looser 'that doesn't count' phrasing, though it mentions Art. 497 alongside 496. Both are longer than ideal."
+}

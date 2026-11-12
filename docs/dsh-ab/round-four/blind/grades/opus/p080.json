@@ -1,0 +1,47 @@
+{
+ "pair": "p080",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "「社会保険料控除 約20〜40万円（国民年金・国保など）」: the request gives neither the amount nor the insurance type. The answer presents this assumed range in its table as fact and uses it to reach a firm 所得税0円.",
+   "「所得税は0円…医療費控除で所得税は戻りません」 is stated as certain, but the answer never says to check the 源泉徴収税額 field on the 源泉徴収票, and it does not give the about-850円 fallback for the case where some tax was withheld.",
+   "「領収書・レシートを保管（…通院の電車・バス代）」: train and bus fares usually come with no receipt. The key asks for a record of date and amount instead (minor).",
+   "「令和8年度税制改正は2025年12月の閣議決定に基づくもの」 frames the 74万/104万 figures as resting on a cabinet decision. The key treats them as enacted and already shown in NTA No.1410 (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "「2027年2月16日〜3月15日に確定申告」 tells the user to file in the regular filing period. A refund return for 2026 can be filed from 2027-01-01 and for five years after (to 2031-12-31). The answer mentions neither, which hits the key's penalty for limiting the refund return to the 3/15 deadline."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "wrong"
+  }
+ },
+ "reasons": "Both answers open by correcting the 10万円 premise with the 5% rule. Both compute 180万−74万=106万, a 5万3,000円 threshold and a 1万7,000円 deduction, and both put the real gain in resident tax at about 1,700円. B is better hedged on income tax: it says 0円 is likely and gives the 850円 fallback. B also names the 医療費控除の明細書 and the 2026 payment-year cutoff. A states 所得税0円 flatly, based on an assumed social insurance range of 20〜40万円, and never says to check the 源泉徴収税額 field. B, however, tells the user to file 2027年2月16日〜3月15日 and never mentions that a refund return can be filed from January 1 for five years, which is one of the key's penalties. A gets the timing right with 1〜3月 and 5年遡れる, and points out that a 住民税申告 alone is enough, so A edges ahead."
+}

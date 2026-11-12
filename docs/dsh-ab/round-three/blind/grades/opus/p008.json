@@ -1,0 +1,59 @@
+{
+ "pair": "p008",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 6,
+  "honest": 6,
+  "useful": 7,
+  "concise": 4,
+  "added_claim_errors": [
+   "Customer-service letter states '单笔最高648元' and '单次花648元' as fact, not as a placeholder. The user never gave per-payment amounts, so this is an invented figure.",
+   "'你上次被拒，是因为只说了“是我儿子充的”' is an invented account of what the user told customer service.",
+   "'按全额退款来期望并不现实' plus a letter saying '我不要求全额退款' and proposing 50%. This contradicts the key: the user can ask for a full refund first, and courts do sometimes order full refunds.",
+   "'诉讼费50元' for small claims: under 诉讼费用交纳办法 Art. 16 the simplified-procedure fee is halved, so 25 yuan (judged from my own knowledge).",
+   "'普通客服没有退款权限，走普通对话必然收到模板回复' and '这个数正好落在行业退费标准里，客服有权限批' are unverifiable generalizations.",
+   "'退款到账通常伴随封号或道具回收…团体标准里明确允许' is unverifiable. So is the claim that the 互联网协会调解工作委员会 is the mediation channel named in the standard.",
+   "'微信 → 我 → 设置 → 青少年模式' uses an outdated name and path. WeChat Pay's official manual now has 我→设置→更多→未成年人模式, which A also leaves out for setting payment limits.",
+   "The 安全锁 path '钱包 → 消费者保护 → 安全保障 → 安全锁' and 腾讯客服 公众号 '发“未成年消费”' are specific app steps I could not verify.",
+   "The letter's quote of 工作指引 第27条 ('应认定无效，网络经营者应当返还款项') is a paraphrase written as if it were the provision's text. The guideline itself is real (法办〔2026〕76号, released 2026-03-18, checked via news.cn and chinanews reports)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 7,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "'你上次被拒，是因为只说了“是我儿子充的”' is an invented account of what the user told customer service.",
+   "'按全额退款来期望并不现实' plus a letter saying '我不要求全额退款' and proposing 50%. This contradicts the key: ask for full first; full refunds do happen.",
+   "'诉讼费50元' for small claims: the simplified-procedure fee is halved, so 25 yuan (judged from my own knowledge).",
+   "'普通客服没有退款权限，走普通对话必然收到模板回复' and '这个数正好落在行业退费标准里，客服有权限批' are unverifiable generalizations.",
+   "'退款到账通常伴随封号或道具回收…团体标准里明确允许' and the 调解工作委员会 being the standard's named mediation channel are unverifiable.",
+   "网易 '客服 95163611': a web search found no source tying this number to NetEase's parent platform, so it is unverifiable.",
+   "The 安全锁 path through '钱包 → 客服中心 → 消费者保护' and 'Apple 服务扣费/华为数字商品付款服务 on the same page' are not backed by the cited manual pages, so they are unverifiable.",
+   "The 工作指引 第27条 link points to a law firm's news digest (tahota.com), not an official source. The document is real (法办〔2026〕76号), but the letter's quoted wording is a paraphrase."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "The two answers are almost the same text. Both correct the user's '认了' and argue that real-name registration does not show who actually paid. Both rely on the real 2026 SPC 工作指引 Art. 27 rather than the key's 法发〔2020〕17号第9条, give no WeChat-bill '对订单有疑惑' route, and wrongly tell the user that a full refund is unrealistic, writing the letter to cap the request at 50%. B is a bit better. It drops A's invented '单笔最高648元' from the letter, and its WeChat paths (自动续费, 免密支付, and 未成年人模式 with per-transaction and daily payment limits) match the official WeChat Pay manual it links. A uses the outdated 青少年模式 path. B's only extra unverifiable item is the NetEase phone number. Both are far longer than the key's '篇幅适中'."
+}

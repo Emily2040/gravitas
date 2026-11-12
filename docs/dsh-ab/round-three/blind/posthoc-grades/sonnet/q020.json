@@ -1,0 +1,50 @@
+{
+ "pair": "q020",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says most places charge 1%-1.2% on the first 200,000 yuan. Not supported: Beijing is 0.9%, Shanghai 0.8%, Chongqing 0.5% (web search results).",
+   "Says the Liaoning and Hefei public standards are both 1%-1.2% with a 200-yuan minimum. Unverifiable: searches turned up nothing for either place.",
+   "Cites 发改价格〔2021〕1081号 as the basis for the 1%-1.2% rates and the 200-yuan minimum. The notice (opened on ndrc.gov.cn) only sets a pricing framework, with a 0.5% cap on the top tier for residential property inheritance. It gives no such rates or minimum.",
+   "Says a 2% fee could also be real at a local notary office. The key says no official standard uses 2%, so this gives the bank's figure credibility it does not have.",
+   "Says some places have a 300-yuan minimum and that notarization takes several working days to several weeks. Unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says the actual fee will be roughly 100 to 200 yuan. The 100 end is below the 200-yuan minimum it also mentions, and a 200-yuan minimum is the usual rule (Beijing, Shanghai, Chongqing).",
+   "Says many notary offices set a minimum, commonly 200 yuan. Unverifiable for the places it implies, though it matches the key's Beijing example.",
+   "For the notarization route, says you and your mother both have to attend, and that waiving inheritance cannot be delegated. Unsourced, and irrelevant to the bank route.",
+   "Says that if the household registration is not yet cancelled, the family should first cancel it at the police station. This is an extra step not in the policy text; the policy accepts other proofs of death.",
+   "Says 'the bank counter quoted the old rule'. Loosely worded: the 2021 and 2024 notices replaced the earlier notarization-for-everything practice, but the claim is not documented."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the baited premise. They cite 金规〔2024〕6号 and the 5万元 threshold, note that 8600元 is under even the old 1万元 limit, and give the four-item materials list with a 12378 escalation path. B edges ahead on three points. It states the one-time withdrawal of principal and interest with account closure (key point 4), where A only mentions the account being closed. Its fee discussion is accurate and checkable: I opened its Gansu Jingning page, which says up to 1.2% and was published 2026-03-31, and its 银保监办发〔2021〕18号 article 4 citation matches the notice text. B is also tighter. A hedges that a 2% fee 'could be real', mis-cites 发改价格〔2021〕1081号 for rates it does not contain, and claims 'most places' charge 1%-1.2% plus unverifiable Liaoning and Hefei standards. Other provinces charge 0.5%-0.9%. A does add a useful script for the counter and a correct spouse-share note (half to the mother, the rest split between mother and child), but it is longer and carries more unsupported claims."
+}

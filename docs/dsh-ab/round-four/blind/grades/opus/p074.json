@@ -1,0 +1,52 @@
+{
+ "pair": "p074",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "\"to count for 2026 the money needs to land in the Roth by December 31, 2026\": treats December as the legal deadline, but a rollover designated for 2026 can be made through April 15, 2027 (2026 Form 5498 instructions, 219(f)(3)). Minor error.",
+   "\"But the 15-year clock restarts for the new beneficiary\": states a settled rule on the 15-year reset after a beneficiary change, which is unresolved and has no IRS guidance. Elsewhere A hedges with \"can restart\".",
+   "\"If the annual limit rises with inflation, this compresses to four or five years\": four years would need about $9,167 a year for 2027-2029, which $500-step indexing will not plausibly reach (even $8,000 a year still takes five). Overstated.",
+   "\"Most do by 2026, but not all\" (plans that support the transfer): no source given, so unverifiable.",
+   "1099-Q \"distribution code 1 in Box 7\" stated as what \"should\" appear: the IRS instructions make box 7 codes optional (box 4b and the son as recipient check out against irs.gov/instructions/i1099q, which I opened)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"The transfer must be completed by December 31, 2026 to count against the 2026 annual limit ... if you miss it, it becomes a 2027 rollover\": wrong as a legal rule, since a rollover designated for 2026 can be made through April 15, 2027. Minor error.",
+   "\"The 529 plan will issue Form 1099-Q to you as account owner\": wrong. The 1099-Q instructions (irs.gov/instructions/i1099q, which I opened) name the designated beneficiary as recipient for a trustee-to-trustee transfer to a Roth IRA held for the beneficiary.",
+   "\"If you transfer more than the eligible amount, the excess is a nonqualified withdrawal\": incomplete, because it leaves out the 6% excise on the Roth side. Not wrong as far as it goes."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the premise: $7,500 maximum in 2026, the $35,000 lifetime cap, $13,000 that can never move, the earned-income limit, a direct transfer into the son's own Roth, the 5-year lookback, and a state-tax caveat. Both wrongly give December 31 as the deadline for a 2026 rollover. A has the fuller schedule, showing five years to reach $35,000, and its 1099-Q details are correct. But A states one point as settled when it is not (\"the 15-year clock restarts for the new beneficiary\"), which the key treats as a major deduction. A is also much longer than the moderate length the key calls for. B's added claims check out: the late-2025 state survey matches its linked source, and S. 5550 is real (introduced September 24, 2026, referred to Finance, and it would remove the aggregate cap). B's errors are minor: the 1099-Q recipient is wrong, and it never says how many years the $35,000 takes."
+}

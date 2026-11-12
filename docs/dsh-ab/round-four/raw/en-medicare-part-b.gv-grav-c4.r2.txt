@@ -1,0 +1,29 @@
+**Don't enroll in Part B this month.** Your coworker's warning is real for someone without qualifying coverage, but it doesn't fit you. You're still working, your coverage is through your current employer, and the company has about 400 employees — well over Medicare's 20-employee threshold. That lets you delay Part B with no late-enrollment penalty, then enroll later in an 8-month Special Enrollment Period.
+
+**What to do this month**
+
+1. **Hold the Part B application — don't submit it.** If you've already sent it, call Social Security at 1-800-772-1213 and ask about withdrawing it before it takes effect.
+
+2. **Get four answers from HR/benefits, in writing:**
+   - Is my coverage a group health plan based on *current employment* — not retiree coverage or COBRA?
+   - Does the company have 20 or more employees for Medicare's working-aged rules? (It should — about 400.)
+   - Does the plan *require* me to enroll in Part A and/or Part B at 65?
+   - Is the prescription drug coverage "creditable" — at least as good as Medicare Part D?
+
+3. **Decide on Part A, with one HSA caveat.** Most people get premium-free Part A, and enrolling now is often sensible. But if you have a Health Savings Account and are contributing, don't enroll in Part A yet: entitlement to Part A ends HSA eligibility, and Part A can be retroactive up to 6 months. Stop contributions first and coordinate with payroll.
+
+4. **Save proof of coverage.** Ask HR for a letter stating your coverage start date and that it's based on current employment. You'll need it when you enroll in Part B later. Keep the annual creditable-coverage notices too.
+
+5. **Calendar your Special Enrollment Period.** It runs 8 months from when you stop working *or* lose coverage, whichever comes first. If you want Medicare to start when the job coverage ends, apply the month before you retire.
+
+6. **Don't count on COBRA.** If you retire and take COBRA, the 8-month window still runs from when employment or coverage ends — COBRA doesn't extend it.
+
+7. **Check for auto-enrollment.** If you're already receiving Social Security, you may be automatically enrolled in Parts A and B. If a Medicare card arrives and you want to delay B, contact Social Security to decline it. If you're not on Social Security, nothing happens automatically.
+
+8. **Get free help if you want it.** Your local SHIP counselor can walk through this with you: [shiphelp.org](https://www.shiphelp.org).
+
+**Why the 20-employee number matters:** At 20 or more employees, the employer plan is primary for working-aged employees and Medicare is secondary, so delaying Part B is safe. Under 20, Medicare is primary and you'd want to enroll at 65. You're at 400, so you're in the first group.
+
+The Part B penalty — 10% of the standard premium for each full 12-month period you could have had Part B but didn't, lasting as long as you have Part B — is avoided as long as you enroll during that 8-month Special Enrollment Period.
+
+Sources: [Medicare.gov — Working past 65](https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65) and [Medicare.gov — When can I sign up for Medicare?](https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-can-i-sign-up-for-medicare).

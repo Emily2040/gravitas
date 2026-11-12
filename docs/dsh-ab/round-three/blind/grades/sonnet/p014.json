@@ -1,0 +1,52 @@
+{
+ "pair": "p014",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "'实际通常3—4周，大约11月下旬到12月初': unverifiable experience claim, and internally inconsistent (3-4 weeks from about Oct 23 is mid-November, not late Nov to early Dec)",
+   "Temporary ID '实际大约一周': unverifiable, and it does not fit 5 working days for the household-registry step plus Guangzhou issuance afterwards",
+   "'提前1.5小时到站': specific unsourced advice",
+   "Return trip to Henan '上千元' ticket cost and '至少两天请假': unsourced estimates",
+   "Station paper temporary proof '免费': no official basis (the key flags this as a trap); shared with B",
+   "12306 menu path (温馨服务 > 临时身份证明), QR refresh 60 s, 30-minute re-verification: unsourced UI details; shared with B",
+   "'广州微警务' > 户政预约 path and 粤居码 self-service usage: unverified; shared with B",
+   "Photo receipt '20—30元': local estimate, the key says it varies by place; shared with B",
+   "Report-loss step '免费，几分钟' and '领新证时交回旧证': unverified; shared with B"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Station paper temporary proof '免费': no official basis (the key flags this as a trap); shared with A",
+   "12306 menu path (温馨服务 > 临时身份证明), QR refresh 60 s, 30-minute re-verification: unsourced UI details; shared with A",
+   "'广州微警务' > 户政预约 path and 粤居码 self-service usage: unverified; shared with A",
+   "Photo receipt '20—30元': local estimate, the key says it varies by place; shared with A",
+   "Report-loss step '免费，几分钟' and '领新证时交回旧证': unverified; shared with A"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "The two answers are nearly identical in structure and substance. Both correct both baited premises at the very start: no need to return to the household-registration place, and 12306 electronic temporary proof or the station paper proof for the 10/31 trip. Both give 40 yuan, 10 yuan for the temporary ID with 3-month validity, the 5-working-day household-registry step, and the point that the temporary ID may not arrive before 10/31. Both put the Guangzhou limit at 40 days; I opened the Liwan police page they cite and it confirms 40 days and the 40 yuan fee. Neither states the statutory 60-day limit or the 30-day extension. Both also call the paper proof free, which the key warns has no official basis. B is slightly better because its arithmetic is shown and right (40 days from 10/23 is early December; 5 working days from 10/23 is 10/30). A adds more unverifiable specifics (3-4 weeks, 1.5 hours early, 上千元, about a week for the temporary ID) and its timeline is internally inconsistent."
+}

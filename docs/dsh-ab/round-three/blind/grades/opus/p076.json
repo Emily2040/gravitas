@@ -1,0 +1,49 @@
+{
+ "pair": "p076",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 《浙江省企业工资支付管理办法》第19条 for the 5-day wage settlement rule: the rule matches the key, but I could not verify the article number (link given, web fetch was unavailable).",
+   "Suggests optionally dating the letter 11月26日 'to avoid 差一天' and adds 'if it is not actually 2026, shift the dates': not a legal error, but it muddies the earliest date it just stated (11月25日)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "'杭州市区劳动人事争议仲裁委员会': not the formal name of any body. Jurisdiction sits with the municipal or district commission where the contract is performed or the employer is located, so this is imprecise.",
+   "'它可能想按严重违纪开除你，反过来赖掉年假钱': under 实施办法第十二条, unused-leave pay is owed on any termination, so a dismissal would not lawfully cancel it. The implication is misleading.",
+   "'在仲裁和诉讼中基本都被认定无效': an unsourced generalization. It is broadly true for an ordinary employee in Zhejiang, but it ignores the Shanghai/Jiangsu confidentiality exception."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 60-day and approval premises at the start. Both give a letter written as a notice (通知), the earliest date of 11月25日 with work at the new employer from 26日, 4 days of leave, and 4,413.79元 framed as 200% on top of pay already received, plus 12333 and arbitration. Neither mentions the Shanghai/Jiangsu exception or the 324号 document, and neither cites the 2025 basis for 21.75. Both computations recheck: 329 days, 4.51 days, 551.72元 per day, 4,413.79元. B edges ahead: it cites 民法典第二百零一条 and the exact 实施办法 articles (10, 11, 12, 18) for the date and leave calculations, and it is more compact. A pads with a repeated summary, a 5-day alternative and a 38条 detour, and blurs the 11月25日 date by suggesting 26日. B's small slips (the arbitration commission's name, the hint that a dismissal would forfeit leave pay) are minor."
+}

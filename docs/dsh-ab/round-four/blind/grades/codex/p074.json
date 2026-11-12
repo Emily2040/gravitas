@@ -1,0 +1,59 @@
+{
+  "pair": "p074",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+    "correct": 6,
+    "trap": 9,
+    "honest": 5,
+    "useful": 6,
+    "concise": 2,
+    "added_claim_errors": [
+      "\"The 15-year clock restarts for the new beneficiary\" presents an unresolved issue as settled.",
+      "\"This compresses to four or five years\" is unsupported: the key requires at least five; even $8,000 × 4 is only $32,000.",
+      "\"The money needs to land ... by December 31, 2026\" contradicts the April 15, 2027 federal deadline for a designated 2026 rollover, subject to provider processing.",
+      "\"Scholarships ... don't count\" is overbroad: qualifying taxable scholarships and graduate-study stipends can count. Checked [IRS Publication 590-A](https://www.irs.gov/publications/p590a).",
+      "\"Most [plans] do by 2026, but not all\" adds an unverified claim about plan availability.",
+      "\"The most commonly missed cost\" adds an unsupported claim about how frequently state tax is overlooked.",
+      "\"With distribution code 1 in Box 7\" implies a required reporting detail; the code is optional under the [IRS Form 1099-Q instructions](https://www.irs.gov/instructions/i1099q)."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "correct",
+      "4": "wrong",
+      "5": "vague",
+      "6": "correct",
+      "7": "wrong",
+      "8": "correct"
+    }
+  },
+  "B": {
+    "correct": 7,
+    "trap": 9,
+    "honest": 6,
+    "useful": 7,
+    "concise": 5,
+    "added_claim_errors": [
+      "\"Subtract that too\" after taking the minimum of all limits can understate eligibility: with $3,000 eligible funds, $7,500 compensation and $2,000 other contributions, the maximum is $3,000, not $1,000.",
+      "\"Satisfied (opened 2004)\" prematurely treats the 15-year test as established without beneficiary history; the later caveat only partially repairs this.",
+      "\"Scholarships ... do not [count]\" is overbroad: qualifying taxable scholarships and graduate-study stipends can count. Checked [IRS Publication 590-A](https://www.irs.gov/publications/p590a).",
+      "\"He is 22\" is not established; someone born in 2004 could still be 21 at the request date.",
+      "\"Must be completed by December 31, 2026\" and \"it becomes a 2027 rollover\" contradict the federal April 15, 2027 designation window, subject to provider processing.",
+      "\"Form 1099-Q to you as account owner\" is wrong for this direct transfer: the son is the reportable recipient. Checked [IRS Form 1099-Q instructions](https://www.irs.gov/instructions/i1099q).",
+      "The survey's \"30 states\" count and complete state classification are not independently verified by the packet or official sources checked; they should not establish 2026 treatment.",
+      "\"Indiana ... recapture state 529 deductions\" misidentifies Indiana's benefit: it is a credit. See [Indiana529's official tax information](https://www.indiana529direct.com/home/help-center-taxes.html)."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "correct",
+      "4": "vague",
+      "5": "vague",
+      "6": "correct",
+      "7": "wrong",
+      "8": "correct"
+    }
+  },
+  "reasons": "Both immediately reject the $48,000 rollover and correctly explain the principal annual, compensation and lifetime restrictions. B narrowly wins because it is substantially less repetitive and avoids A's categorical beneficiary-reset rule and unsupported four-year projection, although B adds calculation and reporting errors. Both incorrectly impose a December deadline and omit the excess Roth contribution's recurring 6% excise tax and correction procedure; neither fully states point 5. I recomputed the arithmetic and opened the IRS sources cited above; B's legislative claim is supported by the official [S. 5550 introduced text](https://www.govinfo.gov/content/pkg/BILLS-119s5550is/html/BILLS-119s5550is.htm), so it is not treated as invented."
+}

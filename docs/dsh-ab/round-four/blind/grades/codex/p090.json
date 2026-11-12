@@ -1,0 +1,55 @@
+{
+  "pair": "p090",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 5,
+    "trap": 7,
+    "honest": 5,
+    "useful": 5,
+    "concise": 4,
+    "added_claim_errors": [
+      "“12개월 안에 신청” misstates the benefit-payment window as merely an application deadline; applying near its end can forfeit benefits.",
+      "“임금체불확인서(회사 발급)” introduces an unverified company-issued document requirement.",
+      "“3개월치 + 퇴직금” assumes all three months remain unpaid; the request establishes late payment, not three unpaid salaries.",
+      "“실업급여가 끝난 뒤 잔여분…지금 미리 신청” invents a residual job-seeking allowance entitlement and ignores the possible six-month exclusion after unemployment benefits.",
+      "“대기기간 후 12개월 이상 계속 고용되면” omits the early-reemployment allowance requirements of reemployment after 14 days from reporting and at least half the benefit days remaining."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "vague",
+      "4": "missing",
+      "5": "missing",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "B": {
+    "correct": 4,
+    "trap": 4,
+    "honest": 3,
+    "useful": 4,
+    "concise": 3,
+    "added_claim_errors": [
+      "“이의제기 → 심사청구 순” presents an unverified mandatory appeal sequence.",
+      "“고용24에서 수급자격 신청” omits the training and employment-center visit specified by the key.",
+      "“이직일부터 12개월 안” uses the wrong starting point and presents the payment window as an application deadline.",
+      "“3개월치 월급” assumes three salaries remain unpaid, although the request only establishes payment delays.",
+      "“퇴직금(2년 근무면 발생)” omits the weekly working-hours eligibility condition.",
+      "“지연이자까지 한 번에 청구” asserts an all-in-one labor-complaint procedure not established by the packet.",
+      "“연 1.5%” omits the temporary 1.0% rate applicable in October 2026 and does not identify November as its effective period.",
+      "“생계비 융자까지 받으면 석 달은 확보됩니다” guarantees a living-cost runway without knowing eligibility, approval, expenses, or payment timing."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "vague",
+      "4": "vague",
+      "5": "missing",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "reasons": "A corrects the premise immediately and preserves uncertainty, whereas B explicitly treats three late-payment months as satisfying eligibility without the required day-count test. B supplies useful benefit durations, but its incorrect loan-rate timing and unsupported three-month financial assurance weaken its practical advice. A also contains substantial errors about follow-on allowances and early-reemployment eligibility. Against the supplied key, both omit benefit amounts, inadequately explain application procedures, and substantially exceed the requested brevity."
+}

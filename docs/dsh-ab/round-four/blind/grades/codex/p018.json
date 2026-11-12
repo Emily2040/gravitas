@@ -1,0 +1,57 @@
+{
+  "pair": "p018",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+    "correct": 6,
+    "trap": 9,
+    "honest": 5,
+    "useful": 6,
+    "concise": 4,
+    "added_claim_errors": [
+      "“10월 4일이 기한”: asserts an exact deadline despite unresolved retirement-date and holiday calculations.",
+      "“같은 법 제17조에 따라 연 20%”: cites the wrong legal basis for this severance-payment interest; the key identifies Labor Standards Act Article 37 and Enforcement Decree Article 17.",
+      "“상여·연장수당이 전혀 없어서”: the request excludes bonuses, but does not exclude overtime pay.",
+      "“실무에서는 두 방식이 갈리므로…협의”: misleadingly presents the ordinary-wage floor as a negotiable alternative rather than a mandatory rule when applicable.",
+      "“고용노동부…도…해석합니다”: the ministry attribution lacks a checkable interpretation citation; the packet establishes the Ministry of Government Legislation interpretation.",
+      "“퇴직소득세·지방소득세 약 20만~25만 원”: exceeds the key’s estimated 94,000–141,000 won and incorrectly implies tax withholding upon IRP transfer.",
+      "“3년 이하 징역 또는 3천만 원 이하 벌금”: outdated; the key gives five years or 50 million won from September 18, 2026.",
+      "“기한을 넘기면…지연이자가 붙습니다”: omits the statutory circumstances in which interest is temporarily excluded."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "vague",
+      "6": "vague",
+      "7": "correct"
+    }
+  },
+  "B": {
+    "correct": 7,
+    "trap": 9,
+    "honest": 7,
+    "useful": 7,
+    "concise": 6,
+    "added_claim_errors": [
+      "“10월 4일이 법정 기한…21일”: the subtraction is correct, but the exact legal deadline is not established.",
+      "“식대·차량보조 등 통상임금이 아닌 항목”: categorically excludes allowances whose ordinary-wage status cannot be determined from the packet.",
+      "“금액이 조금 달라질”: understates the possible change from the assumed upper estimate; the key’s endpoints differ by about 1.78 million won.",
+      "“고용노동부(1350)…에…진정”: conflates the counseling number with the complaint-filing channels.",
+      "“3년 이하 징역 또는 3천만 원 이하 벌금”: outdated; the key gives five years or 50 million won from September 18, 2026.",
+      "“현행법상 퇴직금은 IRP 계정으로 이전”: omits the age-based exception, although the user’s age is unknown.",
+      "“하루 약 6,600원씩 늘어요”: arithmetic is reasonable, but the statement omits statutory interest exclusions."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "vague",
+      "6": "vague",
+      "7": "correct"
+    }
+  },
+  "reasons": "Both immediately reject the employer’s premise and provide acceptable approximate calculations, including the ordinary-wage floor; the arithmetic was independently recomputed. B wins because A additionally gives incorrect tax guidance, cites the wrong interest provision, and presents the mandatory wage floor as negotiable. Both assert an unjustifiably exact deadline, repeat outdated penalties, omit several necessary calculation checks, and provide overly long text-message drafts."
+}

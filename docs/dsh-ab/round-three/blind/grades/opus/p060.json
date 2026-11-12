@@ -1,0 +1,57 @@
+{
+ "pair": "p060",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "$1,751 'in 2027 dollars': quietly adds the 3.6% COLA to the statement estimate as if certain (a listed trap). The key gives about $1,690.",
+   "'first check lands in May, so only nine payments fall in the year': checks paid May to December make 8 in calendar 2027. Nine is the count of benefit months, and December's benefit is paid in January 2028.",
+   "Treats withholding as a smooth $518/month cut ($1,232 net SS per month). SSA withholds whole checks, so little or nothing arrives in the first months.",
+   "Budget table's annual SS gross of $21,010 and total of $52,790 assume 12 months of benefits in 2027, which cannot happen. The answer corrects this only afterward.",
+   "About $134/month extra federal tax in 2027 is figured on gross benefits including withheld amounts. Withheld benefits are not taxable that year, so this is overstated (my own calculation: about $80/month).",
+   "Points to a file 'social-security-2027-budget.md' that the reader cannot see (unverifiable)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "'The 3.6% COLA for January 2027 lifts it to $2,486; 70% of that is $1,740': adds the COLA to her estimate as certain (a listed trap). The key gives about $1,690.",
+   "Uses a 60-month, 70% reduction even though it says entitlement starts April 2027. That is 59 months, a 29.58% reduction, so the answer contradicts itself.",
+   "'you'll lose that $6,220 every year until March 2032': the limit changes every year, and the year she reaches FRA uses a higher limit with $1 withheld for every $3. It is not a fixed $6,220.",
+   "'roughly three and a half of them get swallowed' contradicts its own statement that whole checks are withheld (it would be 4 checks, with the excess repaid later). Minor.",
+   "Federal tax estimate of $323/month assumes 12 months of net benefits, but 2027 has only 8 checks. It overstates 2027 tax a little, though it is labelled an estimate.",
+   "'Waiting to 67 would pay $2,486' leaves out COLAs through 2032. Minor.",
+   "Checked on the web: POMS RS 00615.101 (5/9 and 5/12 reduction formula) and RS 00615.015 (day of birth) say what B claims. The SSA 2027 factsheet link returned 403, but its $25,560 matches the key."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct both premises at the start and get the 2027 earnings test right ($25,560 limit, $12,440 over, $6,220 withheld). Both fall into the COLA trap, so their monthly benefit comes out at about $1,740 to $1,751 instead of about $1,690. A gets the exact 59-month, 29.58% reduction and adds the SSA-521 withdrawal option, but it miscounts the 2027 payments (nine instead of eight). It also spreads withholding evenly across months, and its 2027 tax figure is built on benefits that were withheld. B uses a 70% reduction that conflicts with its own April start. Still, it correctly says SSA withholds whole checks and that eight checks arrive in 2027, notes that Medicare does not start at 62, gives a take-home figure with FICA and tax checked by arithmetic, and cites POMS sections that say what it claims. Neither shows a month-by-month budget or points her to SSA's calculators."
+}

@@ -1,0 +1,27 @@
+Before you send anything — the agent had that backwards.
+
+Under the DOT refund rule ([14 CFR part 260](https://www.law.cornell.edu/cfr/text/14/part-260), in effect since late 2024), a flight cancelled **for any reason, including weather**, entitles you to a cash refund to your original payment method if you don't take the rebooking ([summary of the rule](https://komonews.com/news/consumer/new-rule-will-soon-require-airlines-to-provide-automatic-refunds-when-flights-are-canceled-department-of-transportation-rules-immediate-transportation-secretary-pete-buttigieg-flight-changes-domestic-international-dot)). The weather carve-out covers things like hotels and meals, not your fare. So the $412 is very likely refundable in cash, and accepting a credit is generally treated as choosing the alternative — which ends the refund right.
+
+Your call. If you still want the credit, here's the message:
+
+```
+Subject: Travel credit — cancelled UA flight, ORD–DEN, [date]
+
+Hello,
+
+My Chicago O'Hare–Denver flight on [date] (confirmation [code]) was cancelled
+because of thunderstorms, and the rebooking offered was for the next afternoon.
+I did not travel. I'd like to accept a travel credit for the $412 fare.
+
+Please confirm in writing the credit amount, that it is valid for at least 12
+months from today's date, and the expiration date and any restrictions that apply.
+
+Thank you,
+[Name]
+[Phone / email]
+[MileagePlus number, if you have one]
+```
+
+I worded the expiry as "12 months from today's date" on purpose: United's credits usually run about a year from the **original ticket date**, not the cancellation date, so a plain "one year" can come up short.
+
+If you'd rather ask for the $412 back in cash, say so and I'll write that version instead.

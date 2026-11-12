@@ -1,0 +1,59 @@
+{
+ "pair": "p039",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 5,
+  "honest": 5,
+  "useful": 7,
+  "concise": 3,
+  "added_claim_errors": [
+   "Letter says the payment used the password the son had memorised, and that the son registered, logged in and operated. The user never said this, so it is an invented fact in a complaint letter, not bracketed as a fill-in.",
+   "Says the 50% / 3240 yuan request falls within the industry refund standard and that customer service has authority to approve it. Unverifiable; no source shows front-line staff can approve it.",
+   "Presents the China Internet Association minors' gaming consumption group standard as in force, with a 30%-70% fault ratio, account bans allowed on refund, and a mediation channel. A web search found only the May 2024 draft for comment and no final version. The draft also reports 100% platform liability where the game fails to enforce spending limits, which A omits.",
+   "Cites the SPC working guideline on civil cases involving minors, Article 27, as saying top-ups by minors aged 8+ 'should be found invalid and refunded'. The guideline is real (SPC, 18 March 2026, 39 articles), but I could not confirm the article number. Reports say the refund is limited to the part not matching the minor's age and intelligence, so A overstates it. A cites it through a non-official site (tahota.com).",
+   "Cites Article 44 of the Regulations on the Online Protection of Minors for limits on per-transaction and daily spending and no paid services unsuited to capacity. The gist matches, but the article number and the second clause could not be confirmed; the clause appears in the 2022 draft.",
+   "Says small-claims court fee is 50 yuan. Simplified procedure is charged at half under the fee measures, so the real fee may differ. Unverifiable as stated.",
+   "Says Tencent games go through the 'Tencent Customer Service' public account for a minor-spending appeal with a call-back. Unverifiable; the key names the Tencent minors parent service platform instead.",
+   "Gives NetEase customer service number 95163611, a WeChat wallet 'security lock' path (customer service > consumer protection > security), and 'Me > Settings > More > minors mode'. These numbers and menu paths are unverifiable and may not match the app; the key lists app menu paths as a trap.",
+   "Says 'you were refused last time because you only said it was your son' and that 'refund usually comes with ban or item recall'. Both are assumptions about the user's earlier exchange and industry practice, stated without a source.",
+   "Claims a 5-working-day reply deadline plus a threat of 12315 complaint and litigation. These are only a suggested demand, not a legal deadline, and A does not label them as such."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the Tencent family guardianship platform covers 100+ Tencent games and 10,000+ WeChat mini-games. Unverifiable statistic.",
+   "Says most such cases settle at the pre-trial mediation stage. Unverifiable generalisation.",
+   "Gives the bill path 'Bill > top right > Download bill > for proof' for an e-sealed transaction record. The feature exists, but the exact menu path and wording are unverified.",
+   "Lists 'Payment settings > Deduction services' (扣费服务) as the place to turn off auto-renew. The menu wording may differ by version; B hedges by telling the user to search 'passwordless payment' if it is not found.",
+   "Offers the iPhone Screen Time purchase restriction as a system-level fix without saying it does not stop WeChat Pay, which is how most Chinese mobile-game top-ups are paid (the key lists this as a trap). B does not claim it blocks WeChat Pay.",
+   "Gives Tencent hotline 0755-86013799 and names the Shenzhen Tencent Tianyou Technology company as an example merchant. Plausible but not checked by me.",
+   "Says courts 'usually' find the guardian at fault and order partial rather than full return. Consistent with the key but gives no source or percentages."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers move the user from 'I accepted it' to 'accepting guardian fault is not waiving the refund', and both cite Civil Code Articles 19 and 145. Neither says outright that no rule makes real-name registration equal adult spending, and neither cites the SPC notice 法发〔2020〕17号 Article 9. A cites a different, real 2026 SPC guideline, so I scored key point 3 vague for A and missing for B. B's letter fits the key better. It asks for the money back, accepts a partial refund only as a fallback, and does not name a figure. It also tells the user not to say 'I did the top-up'. A's letter invents facts (the son remembered the password), gives up on a full refund and asks for 50% (3240 yuan), and leans on a group standard that exists only as a 2024 draft. A is also much longer, with many unverifiable phone numbers and menu paths. A does a few things better. It refutes 'real-name means adult' more directly, and it warns that iOS Screen Time cannot block WeChat Pay. It also lists the WeChat Pay 95017 complaint route that B omits. Those do not outweigh A's invented facts, its lowball ask, its unverified standard and its padding."
+}

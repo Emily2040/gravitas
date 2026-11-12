@@ -1,0 +1,48 @@
+{
+ "pair": "q016",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第27条: that is the old number; since 2025-06-01 the rule is 第二十八条 (the key treats this as a small error)",
+   "'通常到这一步，理赔口径会松动不少': a general claim about how couriers respond, with no support",
+   "The fallback line has the user state '寄件时并未向我充分提示说明' as fact, though the user never said whether a prompt was shown"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "'诉讼费50元' for small claims: under 《诉讼费用交纳办法》 simple and small-claims cases pay half the fee, so about 25 yuan (judged from my own knowledge)",
+   "'12305 不少地方已并入12345': not verified; how far the merger has gone differs by place",
+   "'运单里未保价按运费三到七倍赔': a generalization about industry terms with no source; plausible but not checked"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the false 'Postal Law caps it at 3x' premise at the start. B is more exact: it names Postal Law arts. 47, 45(2), 59 and 84, uses the current 《快递暂行条例》第二十八条 and Civil Code arts. 832/833, and gives the format-clause articles 496/497/506. I opened B's three official links and they check out. B's reply to the courier asks clearly for 3999 yuan plus the 18-yuan fee back, and B adds a useful evidence list and complaint path. A cites the old art. 27, gives no Civil Code article numbers, and its reply asks only for 'a proportion' of the loss. A does handle the risk of a reduced award (because the parcel was not insured) better, and it is shorter. B is long and has a small error on the court fee, but it covers the key points much more fully."
+}

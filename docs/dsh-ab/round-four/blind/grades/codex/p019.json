@@ -1,0 +1,45 @@
+{
+  "pair": "p019",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+    "correct": 5,
+    "trap": 7,
+    "honest": 6,
+    "useful": 5,
+    "concise": 8,
+    "added_claim_errors": [
+      "「欠勤にすると、その日は丸ごと無給になります」：職場の賃金規定が不明なため、必ず全額無給になるとの断定は裏付け不足。",
+      "「付与日数は就業規則か給与明細で確認できます」：給与明細に有給日数が記載されるとは限らず、この職場で確認できるかは不明。"
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "correct",
+      "3": "correct",
+      "4": "vague",
+      "5": "missing",
+      "6": "missing",
+      "7": "vague",
+      "8": "correct"
+    }
+  },
+  "B": {
+    "correct": 9,
+    "trap": 10,
+    "honest": 9,
+    "useful": 9,
+    "concise": 6,
+    "added_claim_errors": [],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "correct",
+      "7": "correct",
+      "8": "correct"
+    }
+  },
+  "reasons": "Bは冒頭で前提を訂正し、10月1日・5日・8割出勤という具体的条件を示して、有給取得を明記したLINEを作成しています。Aも前提を訂正していますが、8割条件と5日という日数を欠き、主文面では有給申請を避けて追加文に委ねています。Bは比例付与の説明が明示的でなく、LINE本文と補足も長めですが、利用者が権利を踏まえて行動できる点で明確に優れています。"
+}

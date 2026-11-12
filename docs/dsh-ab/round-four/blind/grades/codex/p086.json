@@ -1,0 +1,50 @@
+{
+  "pair": "p086",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 9,
+    "trap": 10,
+    "honest": 10,
+    "useful": 8,
+    "concise": 7,
+    "added_claim_errors": [],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "correct",
+      "7": "correct",
+      "8": "missing"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 9,
+    "honest": 6,
+    "useful": 6,
+    "concise": 6,
+    "added_claim_errors": [
+      "\"Grace period: you can incur expenses through March 15\" treats the maximum as guaranteed; plans may provide a shorter period.",
+      "\"All $1,900 is gone December 31\" ignores the run-out period for submitting claims for eligible expenses already incurred.",
+      "\"$1,220–$1,240 still forfeits\" mixes 2025 and 2026 caps; the 2026 maximum produces $1,220, and a lower plan cap could produce a larger loss.",
+      "\"Spend roughly $1,240+\" overstates the required spend at the 2026 maximum carryover: $1,900 − $680 = $1,220.",
+      "\"Run-out period, often ~90 days\" adds an unsupported frequency claim; the packet establishes only a plan-specific deadline.",
+      "\"The Summary Plan Description states all three\" guarantees document contents without checking this plan's documents.",
+      "\"December slots fill fast\" is an unverified generalization about appointment availability."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "wrong",
+      "4": "wrong",
+      "5": "vague",
+      "6": "correct",
+      "7": "correct",
+      "8": "vague"
+    }
+  },
+  "reasons": "A corrects the premise immediately, calculates the $1,220 spend-down correctly, and preserves plan-specific qualifications. B mixes prior-year figures into its recommendation, guarantees the maximum grace period, and incorrectly places forfeiture at December 31 despite the claims run-out period. Both explain the prepayment restriction and provide useful eligible purchases, but neither explains using the 2027 election and full day-one coverage for March dental work; both are longer than a quick plan needs. Evaluation used the packet, independently recomputed arithmetic, and general knowledge for ordinary additional eligibility and HSA-portability statements; no external sources were opened."
+}

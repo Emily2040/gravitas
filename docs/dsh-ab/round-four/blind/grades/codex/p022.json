@@ -1,0 +1,53 @@
+{
+  "pair": "p022",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 9,
+    "honest": 7,
+    "useful": 8,
+    "concise": 7,
+    "added_claim_errors": [
+      "\"Most don't\" require Medicare enrollment: this prevalence claim is unsupported by the packet or an accompanying source.",
+      "\"If you're not on Social Security, nothing is automatic\": overbroad; Railroad Retirement benefits can also trigger automatic enrollment.",
+      "\"CMS-L564 form (your employer fills it out)\": incomplete procedural instruction; the applicant completes Section A and the employer completes Section B."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "correct",
+      "4": "vague",
+      "5": "vague",
+      "6": "correct",
+      "7": "missing",
+      "8": "vague"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 7,
+    "honest": 6,
+    "useful": 6,
+    "concise": 6,
+    "added_claim_errors": [
+      "\"Years before you need it\": invents a retirement timeline and assumes secondary coverage has no present value.",
+      "\"Premiums aren't refunded\": unsupported categorical claim about terminating Part B; the packet does not establish this refund rule.",
+      "\"Skip ... Part D\" after checking only enrollment requirements and carve-outs: unsafe if HR reports that the drug coverage is not creditable.",
+      "\"You'll need ... plus pay stubs/W-2s as backup\": presents supplementary evidence as required even with completed employer certification.",
+      "\"Your coworker would be right\" for an employer under 20 employees: wrong; employer size determines payer order, not eligibility for the employment-based SEP.",
+      "\"Not actively working\" means the coworker is right: overbroad; coverage through a spouse's current employment can qualify."
+    ],
+    "key_points": {
+      "1": "wrong",
+      "2": "vague",
+      "3": "correct",
+      "4": "vague",
+      "5": "vague",
+      "6": "wrong",
+      "7": "missing",
+      "8": "vague"
+    }
+  },
+  "reasons": "A corrects the immediate misconception and provides a more reliable checklist; B explicitly confuses the 20-employee payer rule with SEP eligibility and recommends skipping Part D without conditioning that advice on creditable coverage. Both omit the IEP-ending exception, the Medigap enrollment clock, precise HSA contribution timing, and the retirement application routes. Both correctly round $202.90 × 12 = $2,434.80 to about $2,435. Assessment uses the supplied key and, for Railroad Retirement automatic enrollment, general knowledge; no external sources were opened."
+}

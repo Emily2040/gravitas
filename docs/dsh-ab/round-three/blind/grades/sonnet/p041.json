@@ -1,0 +1,54 @@
+{
+ "pair": "p041",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Hedge that some branches may require all first-order heirs to be present: the key says the bank pays one heir, and the opened text of yinbaojianbanfa 2021 No.18 has no all-heirs rule, so this is unverifiable and cuts against the key.",
+   "Death proof 'any one of hospital certificate, police deregistration or cremation certificate is enough': unverifiable; No.18 only says death proof or similar materials.",
+   "Lost card can still be handled by ID-number lookup: unverifiable branch practice.",
+   "Notary fee example is the Gansu Jingning County rate (up to 1.2% under 200k), plus minimum fee 'commonly about 200' and 'prepare two or three hundred yuan': local and unverifiable; the key's Beijing standard gives at most 200 for 8600 yuan.",
+   "Says the 2% 'differs from many local published standards' and 'may be an old statement': hedged, where the key says no official standard has 2%.",
+   "Escalation steps (ask for written refusal, contact the superior branch operations department): unverifiable procedural advice, not contradicted by the key.",
+   "Says the exemption process does not require proof the grandparents have died: plausible since No.18 lists no such item, but not checked against any bank's practice."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Hedge that some branches may require all first-order heirs to be present: the key says the bank pays one heir, and the opened text of No.18 has no all-heirs rule, so this is unverifiable and cuts against the key.",
+   "Death proof 'any one of hospital certificate, police deregistration or cremation certificate is enough': unverifiable; No.18 only says death proof or similar materials.",
+   "Lost card can still be handled by ID-number lookup: unverifiable branch practice.",
+   "Notary fee example is the Gansu Jingning County rate (up to 1.2% under 200k), plus minimum fee 'commonly about 200' and 'prepare two or three hundred yuan': local and unverifiable; the key's Beijing standard gives at most 200 for 8600 yuan.",
+   "Says the 2% 'differs from many local published standards' and 'may be an old statement': hedged, where the key says no official standard has 2%.",
+   "Escalation steps (ask for written refusal, contact the superior branch operations department): unverifiable procedural advice, not contradicted by the key.",
+   "Says the exemption process does not require proof the grandparents have died: plausible since No.18 lists no such item, but not checked against any bank's practice."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word-for-word identical. Both open by correcting the premise (8600 yuan is far below the 50,000 yuan notarization-free line of Jin Gui 2024 No.6, and below the old 10,000 line), list the correct four exemption materials, require withdrawing everything and closing the account, and give the 12378 escalation route. I opened both gov.cn notices: the 'should handle per this notice' quote and the 10,000 and 50,000 limits are accurate. Both share the same flaws: a hedge that some branches may want all heirs present, a one-county (Gansu Jingning, 1.2%) fee example instead of a standard like Beijing's, 'two or three hundred yuan' where the key's example gives at most 200, a soft 'differs from many local standards' on the 2%, and a long notarization section the person did not need. The only real difference is that B links 12378 to an official gov.cn announcement, which I opened and which names 12378 as the banking and insurance consumer complaint hotline. A names it as the financial regulator's hotline without a link. That gives B a slight edge in checkability."
+}

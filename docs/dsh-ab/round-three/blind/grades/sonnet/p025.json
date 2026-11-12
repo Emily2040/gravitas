@@ -1,0 +1,57 @@
+{
+ "pair": "p025",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Adds the 3.6% January 2027 COLA to her $2,400 as certain ($2,486, then $1,740 a month). The key lists this as a side-claim trap, and it makes the figure differ from the key's $1,690.",
+   "Says claiming at 62 pays 70% and cites '60 months gives exactly 168/240'. Her start is April 2027, which is 59 months early, so the factor is 70.42% (29.58% reduction). This is a minor inconsistency with its own April-start statement.",
+   "Compares against '$14,660' (12 x $1,740 minus $6,220), but in 2027 she gets only about 8 checks. The smoothed $1,222 a month for 12 months in the table and the annualised $323 a month tax estimate also overstate 2027 Social Security.",
+   "Says 'roughly three and a half' checks get swallowed. SSA withholds whole checks, so about four (April to July benefits) with the excess repaid. The $7,700 net for 2027 is right: 8 x $1,740 - $6,220 = $7,700.",
+   "POMS citations (RS 00615.101, RS 00615.015), the 2027 SSA factsheet link and the IRS 2026 bracket link are given as checkable links but I did not open them, so they are unverified. The 2026 figures ($16,100 standard deduction, 10% to $12,400, 12% to $50,400) match my own knowledge.",
+   "Says 'about 40% more per month' at 67. $2,486 / $1,740 = 1.43, so about 43%, which is acceptable as an approximation."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the real figure is 'about $1,740/month less before tax'. $5,567 - $4,389 = $1,178, so this is wrong. The 'roughly $1,500 less after' figure is also unsupported.",
+   "Says 'Calendar 2027 will deliver about $9,400 from Social Security'. Only about 8 checks arrive in 2027 (May to December): 8 x $1,740 - $6,220 = $7,700. $9,400 matches counting 9 months, which contradicts its own 'paid in May' statement.",
+   "Says dropping to about $25,500 would let her 'come out roughly even on cash while working 30% fewer hours'. Dropping from $38,000 to $25,500 loses $12,500 of wages and regains only $6,220 of benefits, a net loss of about $6,280. Also $25,560 / $38,000 means about 33% fewer hours, not 30%.",
+   "Adds the 3.6% COLA as an uplift to $2,486 and $1,740 a month. It is hedged with 'about', but the key lists it as a side-claim trap.",
+   "Says to 'budget $500-900/month' for health insurance until 65. This is an unsourced, unverifiable range.",
+   "Compares against '$14,660' for calendar 2027, which is an annualised 12-month figure, and smooths $1,222 a month across 12 months in the table. In 2027 she gets only about 8 checks.",
+   "Cites the SSA 2027 factsheet, POMS RS 00615.015 and the SSA reduction-table page. I did not open them, so they are unverified. The reduction-table URL is a real SSA page by my own knowledge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers catch both false premises at the start. Both get the April 2027 start, the roughly 30% reduction, the $25,560 limit and the $6,220 withholding. Both also share the same weaknesses: the 3.6% COLA is added as a given, the monthly table is smoothed over 12 months instead of showing the paycheck-only months, the first-year monthly rule is skipped, and neither points her to SSA's calculators or my Social Security. They differ on arithmetic and side-claims. A's $1,180 shortfall and $7,700 for 2027 are correct, and its note that dropping hours is a net $6,220 loss is correct. B states a $1,740 monthly shortfall (it is $1,178), puts 2027 Social Security at $9,400 (it is about $7,700), and says cutting hours would leave her 'roughly even on cash' (it is a net loss of about $6,200). B is closer on 'about four checks withheld' and says 'up to 85%', but its three numeric or logical errors make it less trustworthy. A is clearly better."
+}

@@ -1,0 +1,7 @@
+# Round five, candidate: current best plus change 5 ("plainly" keeps what was found).
+- id: dsh-gravitas
+  config:
+    language: ko
+    alwaysOnRule: true
+    claimCheck: false
+    ruleFile: W:/AgentData/logs/gravitas-dsh-ab5/rules/change5/ko.md

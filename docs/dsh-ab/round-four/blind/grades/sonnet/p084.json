@@ -1,0 +1,57 @@
+{
+ "pair": "p084",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"另加大病、长护险几十元\": the key says the personal share of 大病/长护 is deducted from the 补划 personal-account funds, not paid as extra cash.",
+   "\"先问……我能不能以灵活就业身份补3–9月\": the gap is April–October (March was paid), so the month range is inconsistent with the 7 months used elsewhere.",
+   "\"你已有8年，还差12年，正常上班到退休只会超过，不会不够\": assumes all 8 years are in Hangzhou and that she keeps paying there until retirement; the 24-month gap in actual Hangzhou years is never stated.",
+   "\"杭州的报销比例只看医院等级和费用段，不看连续缴了几年\": not covered by the key; unverified.",
+   "No 743.60 yuan/month (5,205.20 for 7 months) retirement lump-sum figure, so the cost of not topping up is not quantified.",
+   "Does not say the new employer cannot pay the April-October months."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "\"合计约3,370元\" and \"约3,850元\" (8 months) add the 大病/长护 personal share as extra cash; the key says it is deducted from the 补划 personal-account funds, so the cash is 3,315.69 yuan. The answer then says net outlay is \"略低于3,370元\", which is self-contradictory.",
+   "\"长护险（45元/年）\": the 45 yuan/year figure is not in the key; unverified. The 48 yuan/year 大病 figure matches the key.",
+   "\"按现行口径，也不会缩短重新参保后的等待期\": stated as certain; the key says whether 补缴 exempts the waiting period is unverified.",
+   "\"0571-89583017\": a phone number given with no checkable source; unverifiable.",
+   "\"门槛看的是累计年限，没有另外的连续缴费年限要求\": overstates; Hangzhou also requires continued payment in the city until retirement (办法第八条).",
+   "\"摇车牌或买房，非杭州户籍的连续社保……补缴一般不算连续\": outside the request and key; unverified.",
+   "Length is well beyond what is needed: extra sections on 摇号 and an offer to compute by age, which the key penalises as over-long."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying the 8 years are not wasted, split cumulative from continuous years, and give the correct waiting-period consequence (11月 and 12月 not reimbursed, resuming January 2027). Both give 473.67 yuan/month and 3,315.69 yuan for 7 months (A rounds to about 3,316). B covers more of the key: the 144-month cumulative gap and the 24-month Hangzhou gap, the explicit 2026-12-31 deadline, that the new employer cannot back-pay, 补缴 months are not reimbursed, the 743.60 yuan/month (about 5,205) retirement lump sum, and the Hangzhou-years and 户籍/居住证 assumptions. A leaves out the retirement lump-sum figure, the new-employer point and the explicit assumptions. A also says \\\"另加大病、长护险几十元\\\" and cites \\\"3–9月\\\", and it advises \\\"不建议补\\\" on the premise that she keeps working in Hangzhou to retirement. B's main flaws are the 3,370 total that adds the 大病/长护 share as extra cash, a definite claim about the waiting period that the key says is unverified, an unsourced phone number, and excess length. A is tighter and hedges the waiting-period question better, but B's fuller and mostly accurate coverage gives it a clear edge."
+}

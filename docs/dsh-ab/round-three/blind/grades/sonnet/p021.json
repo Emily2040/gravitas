@@ -1,0 +1,49 @@
+{
+ "pair": "p021",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Learning must be 'each time at least 5 minutes', and the app 'randomly captures photos while you learn'. I did not check these against an official source and the packet does not cover them. B repeats the 5-minute figure, and the Beijing rules it cites probably contain it.",
+   "The 12123 guide link (beijing.gov.cn/fuwu/bmfw/bmjy/202602/t20260228_4545529.html) was not opened, so it is unverifiable. The gov.cn rule-text link is correct (I opened it).",
+   "The 'seen on the page' wording for the 'go to exam' and 'view 网办进度' buttons is unverifiable. It is Beijing-style interface text presented as general."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "The time table assumes 2–5 minutes per application and 5–20 minutes per exam. These are the answer's own estimates and not official figures. The headline says 4–5 hours while the table totals 3h42m–5h30m, so the two are slightly inconsistent.",
+   "'3 failed exams, or a lapsed exam window, means re-studying 30 minutes' is not covered by the key or by the Beijing exam page I opened. It is unverifiable.",
+   "'Face verification before the exam' and 'switching screens or covering the camera may void study time' are unverified interface and enforcement details.",
+   "'7 working days to take the exam' and 'blacklist, barred for 3 scoring cycles' are Beijing rules that the answer labels as local. I checked them on the Beijing traffic bureau operation page, so they hold, though they are local rather than national."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying 10 points cannot all be removed (max 6, down to 4), and both give the 3 hours of study. Both explain the clear-at-cycle-end rule with the fine-paid condition and the risk of reaching 12 points again, and both give correct 12123 steps. Both omit key point 5 (the on-site and public-benefit routes, mixing, and that it is free). B is stronger on the key: it cites Article 25 and Order 163 and states the retake rule (24 hours, 2 retakes), which I confirmed on the Beijing bureau page. Its eligibility list also includes the 'two or more full-score education records' condition, which I confirmed in Article 26. B adds verified local details (Shenzhen reply, 7 working days) and an accurate list of 9-point violations. A is tighter and has a clean 'up to 5 hours' upper bound, but it leaves retakes vague and cites no article for the 6-point cap. B's main weakness is length and an inconsistent time headline, so the margin is slight."
+}

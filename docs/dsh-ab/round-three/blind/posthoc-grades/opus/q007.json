@@ -1,0 +1,47 @@
+{
+ "pair": "q007",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says cheating on the study or exam is fined 1000-2000 yuan under Article 31. Order 163 Article 31, checked on the gov.cn gazette page, says up to 1,000 yuan for falsifying and up to 2,000 yuan for sitting in for someone. There is no minimum.",
+   "The time table does not add up. Its own parts come to 45-65 min per round and 4.5-6.5 h for 6 rounds, but the table states about 50-70 min and 5-7 h.",
+   "Calls 5 hours the theoretical lower bound with exams included. The real floor is 3 h of study plus exam time, so about 4 h if each exam takes 10 min. 5 h is closer to the upper end.",
+   "Says you can do 2-3 rounds a day and finish 6 points in 2-3 days. The review time has no official figure. The answer hedges this with 'if all goes well', but the figure is still unverifiable.",
+   "Says you can tap a '可减分' button on the licence card on the home page. This button name is unverifiable.",
+   "Says face recognition usually gives 2 tries and two failures void the round. This is unverifiable; the Beijing official guide does not say it."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by catching the trap: at most 6 points can be cleared, 4 remain, and losing 8 more means 12 points and the full-points course. Both also cover every key point. B frames the clearing rule better. It says outright that the 10 points would clear on the clearing date anyway, and that studying only widens the safety margin from 2 points to 8. A frames it as '6 cleared plus 4 cleared on the date'. B's added details check out against Order 163 on gov.cn and the Beijing traffic police guide: fines of up to 1,000 and up to 2,000 yuan, retakes within 24 hours, the exam within 7 working days, at least 5 minutes per session. A misstates the fine as a 1000-2000 yuan range, its time table does not add up, it calls 5 hours the lower bound, and it is longer and more padded."
+}

@@ -1,0 +1,56 @@
+{
+ "pair": "p040",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "The template says the child paid with 'the payment password he remembered' and that he registered and logged in himself. The user said neither, so these are invented facts put in her mouth.",
+   "It cites the 2026 Supreme People's Court 工作指引 art. 27 (real: 法办〔2026〕76号) but paraphrases it as '8周岁以上…应认定无效，网络经营者应当返还款项'. The article text I opened has no 八周岁 or 法定代理人 wording and does not say who returns the money. The wording attributed to the source is inexact.",
+   "It presents the 中国互联网协会 团体标准 as an established standard that 'suggests 30%-70%' and 'expressly allows' account bans after a refund. My search found only a May 2024 draft for comment, and the 30-70% was the game company's share when the guardian is at fault. Overstated.",
+   "'这个数正好落在行业退费标准里，客服有权限批' and '普通客服没有退款权限' are unverifiable.",
+   "The hotlines 0755-86013799 (腾讯成长守护) and 95163611 (网易) are unverifiable. Search results showed the Tencent number only masked as 0755-860*****.",
+   "The 5-working-day reply deadline and the 50% (3240元) demand are the writer's choices, not rules. The advice also opens by saying full refund is unrealistic, which weakens the claim before it starts.",
+   "The 安全锁 path (我→服务→钱包→客服中心→消费者保护→安全保障→安全锁) is unverified. The 免密支付, 自动续费 and 未成年人模式 paths matched WeChat's official manual pages that I opened.",
+   "It lists '中国互联网协会调解工作委员会' as a mediation route. Unverified, and apparently drawn from the draft standard.",
+   "'你上次被拒，是因为只说了是我儿子充的' assumes what the user said to the customer service, which she did not say."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 4,
+  "honest": 8,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "The advice says the platform 'will likely block with adult real-name' and that the focus should not be to dispute the real-name. This accepts the baited premise in practice and never tells the user that no rule makes real-name proof of adult spending. It is a framing error, not a factual one.",
+   "It calls WeChat's mode 青少年模式. The official manual calls it 未成年人模式, so this is a minor outdated name.",
+   "The iPhone Screen Time paths are given with no warning that they do not stop WeChat Pay direct payment, which is how most mobile games take payment. A reader may think this blocks the spending.",
+   "The 安全锁 path (我→服务→钱包→消费者保护/安全保障→安全锁) is unverified. The 免密支付/自动扣款 path matches WeChat's manual.",
+   "'向国家新闻出版署防沉迷举报渠道反映' is plausible but not verified. It is not a refund route."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "missing",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "A corrects the baited premise at the start. It says guardian fault affects how much is refunded, not whether the top-up is valid, and its message to customer service argues that real-name does not prove who made the payments. It cites 民法典 arts. 19, 145 and 157, a real 2026 Supreme People's Court 工作指引 (art. 27), and 未成年人网络保护条例 art. 44, which I checked. It lacks the key's 法发〔2020〕17号 art. 9. It also covers evidence, the 95017 and 12315 complaint routes, litigation, and a prevention setup that warns Screen Time cannot stop WeChat Pay. Its flaws are length, a few invented facts in the template (the password detail), and an overstated draft standard with unverifiable hotlines. B is shorter and more careful, but it never states that the real-name rule has no legal basis. It gives no legal ground at all (the key's points 2 and 3 are missing). Its message to the game company is more of an appeal, and it does not caveat iOS Screen Time against WeChat Pay. A's much stronger legal framing outweighs its padding."
+}

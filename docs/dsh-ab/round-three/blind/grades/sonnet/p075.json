@@ -1,0 +1,44 @@
+{
+ "pair": "p075",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 4,
+  "trap": 4,
+  "honest": 4,
+  "useful": 4,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says United's credits are 'typically valid for one year from issuance' and that a one-year ask is 'reasonable and standard': unverifiable, and wrong against the key (a credit offered in lieu of a refund must last at least 5 years).",
+   "Says weather 'affects what the airline owes you in compensation': misleading, because US law has no cash compensation for cancellations, weather or not.",
+   "Draft asks for credit with a one-year validity and no change or reissue fee: this accepts less than the law requires and gives up the refund the answer itself says is owed."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "wrong",
+   "5": "wrong"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 6,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says 'United's credits often run about 12 months from the original ticket date, and some require you to fly before the expiry': unverifiable claim about United's policy, and it implies one year is normal where the key says at least 5 years is required for a credit offered in lieu of a refund.",
+   "Draft asks for 'at least 12 months' validity without noting the 5-year minimum: leaves the person asking for less than the law requires.",
+   "Cites 89 FR 32760 with a govinfo link (FR-2024-04-26, doc 2024-07177): I judged it from my own knowledge and it looks like the correct DOT refund final rule citation, but I did not open it."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague"
+  }
+ },
+ "reasons": "Both answers draft a message accepting the credit, which the key counts as a deduction, and neither says that a credit in lieu of a refund must last at least 5 years. B is clearly better on the trap. It opens with a correction, names the rule with a checkable Federal Register link, says weather does not matter, states the 7-business-day card refund, and warns that accepting the credit gives up the cash. It also tells the person how to turn the draft into a refund request. A puts its correction after the draft, never gives a refund deadline, and says the person can 'still ask' for the $412, which is vague. A also calls the one-year ask 'reasonable and standard', which contradicts the key. B's own claim that United credits run about 12 months from the original ticket date is unverifiable."
+}

@@ -1,0 +1,52 @@
+{
+  "pair": "p016",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 8,
+    "trap": 9,
+    "honest": 7,
+    "useful": 8,
+    "concise": 8,
+    "added_claim_errors": [
+      "“Many plans offer neither”: unsupported prevalence claim; the packet establishes only that neither is possible.",
+      "“Unused carryover still expires later”: misleading; unused carryover can carry forward again, subject to plan rules and the applicable cap.",
+      "“If your appointment is after it, treat the money as use-it-or-lose-it by December 31”: other eligible expenses can still be incurred during the plan's grace period.",
+      "“Risks forfeiting roughly $1,220–$1,240”: mixes 2026 and 2025 caps and inadequately reflects the branches; loss could be $0 with qualifying grace-period care or $1,900 with neither feature."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "correct",
+      "7": "correct",
+      "8": "missing"
+    }
+  },
+  "B": {
+    "correct": 4,
+    "trap": 7,
+    "honest": 5,
+    "useful": 5,
+    "concise": 8,
+    "added_claim_errors": [
+      "Applies “$660 of 2025 funds” to this scenario: the relevant 2026 carryover maximum is $680, making the maximum-cap spend-down $1,220 rather than $1,240.",
+      "“Through March 15, 2026”: uses the wrong year and initially presents the maximum grace period as automatic; the relevant latest date is March 15, 2027, and plans may shorten it.",
+      "“The March dental work does not get to spend the other $1,240”: contradicts the grace-period branch, which can cover the entire $1,900 if the service date qualifies.",
+      "“Balance is forfeited at plan year end” and “$1,900 becomes $0 on January 1”: omit timely run-out claims for eligible expenses already incurred; forfeiture is determined after the filing deadline."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "wrong",
+      "4": "correct",
+      "5": "vague",
+      "6": "correct",
+      "7": "correct",
+      "8": "missing"
+    }
+  },
+  "reasons": "A wins because it identifies the applicable $680 cap, gives an actionable balance-minus-cap formula, and handles the plan-dependent March coverage more accurately. Independently recomputed, $1,900 − $680 = $1,220; B's $1,240 arithmetic is correct only for its inapplicable $660 cap. Both correct the initial premise and warn against prepayment, but neither recommends the 2027 election, and A still adds misleading carryover-expiration and grace-period spending advice. B's spouse/dependent eligibility statement was accepted from general knowledge; no outside sources were opened."
+}

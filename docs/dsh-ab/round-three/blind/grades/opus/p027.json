@@ -1,0 +1,56 @@
+{
+ "pair": "p027",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 3,
+  "added_claim_errors": [
+   "Says public cases award 50% to 100% back, 'mostly around 70%', and that negotiated settlements are usually lower: unverifiable statistics. The law-firm link is offered only in general terms.",
+   "Says admitting 'I made the payment' would make the refund 'go straight to zero': stated with more certainty than the evidence supports.",
+   "Rebuttal line 'the burden of proof can't rest only on the parent' could mislead the user. The key says the parent has to prove the child made the payments.",
+   "Says 'WeChat itself has no single-payment limit switch': unverifiable.",
+   "Gives many exact WeChat menu paths (wallet safety lock via 消费者保护→安全保障, amount privacy 'on the same page', login device management): unverifiable and may not match the current app. The key flags copied menu paths as a trap.",
+   "Names a 'miHoYo growth care platform' (米哈游成长关爱平台): name unverifiable.",
+   "Suggests asking support to change the account's real-name registration to the child so minor limits apply: unverifiable that platforms allow this.",
+   "2024 China Internet Society draft standard (100% platform liability, 30–70% split): I opened the gmw.cn link and it is accurate, so this is not an error. Noted only for completeness."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Letter calls the unratified payments '无效' (void). Under Civil Code Art. 145 they are pending and become 'not effective' (不发生效力) once ratification is refused, so the wording is imprecise.",
+   "Says 'most channels have time limits, the sooner the better': a vague, unverifiable deadline claim. The key says there is no legal deadline.",
+   "Says WeChat teen mode 'does not restrict payment': unverifiable.",
+   "Gives an exact WeChat safety-lock path (客服中心→常用工具→消费者保护→安全保障→安全锁): unverifiable, though it cites a gmw.cn link.",
+   "Assumes each payment was 'a few hundred yuan': not stated in the request.",
+   "I recomputed 6480 × 70% = 4536 and it is correct. Regulation on the Protection of Minors Online Arts. 43–44: matches my own knowledge, so these are not errors."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers reject the 'real-name means adult top-up' excuse at the start. Both cite Civil Code Arts. 19 and 145, and both draft a letter that asks for a full refund without admitting the spending was by an adult. B also cites the Supreme People's Court Guidance (II) on minors' paid games, which A leaves out. B also includes the WeChat Pay 'question this order / complain about merchant' step in the complaint route, which A lacks. A is very long, with two letter versions and many exact menu paths that are hard to check, and its rebuttal line about the burden of proof cuts against what the key says. A's extra sources check out, and it keeps a firmer stance against conceding. B is more complete on the key points and closer to the right length, though its letter states a 70% floor up front and admits the parent's custody fault."
+}

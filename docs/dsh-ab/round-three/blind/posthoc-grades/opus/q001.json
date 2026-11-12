@@ -1,0 +1,56 @@
+{
+ "pair": "q001",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 6,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says the son can 'also use the wallet to pay her resident premium': the key says Anhui had not opened premium payment by 共济 as of 10-20 (expected November), so this is the flagged trap.",
+   "'单日最多3笔、每笔不超过2000元、22点到次日6点不能转' is given as the current rule (hedged with 以App为准): the key flags transaction counts and limits stated as national rules; not verifiable for wallet 2.0.",
+   "'安徽居民医保高血压门诊慢特病，起付线200元/年，报销60%，年度限额2500元' is stated as Anhui-wide but drawn from Guangde and Xuancheng pages; the key says it varies by city.",
+   "Ma'anshan certification criteria (two outpatient visits at least 28 days apart within six months) are presented as Anhui-wide: a local rule, unverifiable.",
+   "Two-diseases rate '55%左右，年限额450元（含普通门诊150元）' is a Xuancheng-type figure presented as general.",
+   "'2026年安徽个人缴费400元': unverifiable.",
+   "Describes 共济 as transferring money ('转账') into the mother's own wallet; the key describes setting up a 共济 relationship with a quota, so the mechanism is uncertain.",
+   "'江苏医保云只能绑江苏参保的家人': unverifiable beyond the link given."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says '江苏已在首批支持范围内，你还可以用共济额度直接给母亲缴安徽居民医保的个人参保费……政策明确允许': the key says Anhui had not opened this as of 10-20 (expected November), so this is the flagged trap.",
+   "'8000 ÷ 2400 ≈ 3年3个月': 3.33 years is about 3 years 4 months.",
+   "The table is labelled as Tongling 2025, but the chronic-disease row uses Wuhu (2500 cap, 60%) and Huoshan (500 deductible) figures, so cities are mixed.",
+   "Tongling two-diseases rule '报销50%，年限额200元': a local figure, unverifiable.",
+   "Procedural details '签署个人承诺书' and '亲情账户里切换出她的医保码': unverifiable.",
+   "Quoted phrase '还有赖于当地定点医药机构的配合' has no source attached: unverifiable quote."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the premise that family use counts as 套保, separate 冒名就医 from lawful 共济, compute 2400 yuan, explain that buying at a pharmacy is not reimbursed, and steer the mother to two-diseases or chronic-disease registration. Both fall into the premium-payment trap by saying Anhui premiums can already be paid from the 共济 quota. A also states transfer count limits as rules and presents Xuancheng and Guangde chronic-disease parameters as if they applied across Anhui. B labels its reimbursement figures as specific city examples, matches the key's 共济-quota mechanism and the NHSA 10-21 Q&A, and gives a range instead of one hard figure. B has a small arithmetic slip (3 years 3 months instead of 4) and mixes cities in its table, but overall it is a little more careful and a little shorter."
+}

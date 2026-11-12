@@ -1,0 +1,49 @@
+{
+ "pair": "p066",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Source labelled '浙江省年休假意见：除正常工资外，额外支付2倍' links to a commercial HR library (hrlib.ciic-cloud.cn), not an official text, so it cannot be checked as a provincial rule",
+   "'官方政策解读' attributed to a nys.gov.cn page: whether this is an official labour-law interpretation can't be checked from the answer",
+   "Cites《浙江省企业工资支付管理办法》第19条 for the 5-day wage settlement: the 5-day rule matches the key, but the key gives no article number and I did not verify it"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'如果你实际不是2026年，把年份和日期整体顺延即可': moving to another year does not keep the same weekdays or the date arithmetic, so this advice is unclear and slightly misleading",
+   "Cites《浙江省企业工资支付管理办法》第19条 for the 5-day wage settlement: the 5-day rule matches the key, but the key gives no article number and I did not verify it"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 60-day and approval premises at the start, citing Art. 37 and Art. 26. Both call the wage deduction illegal under Art. 25, and both reach the key's numbers: 11月25日 (or leaving from the 26th), 4 days, 551.72 yuan per day, and 4413.79 yuan extra after explaining that the 300% already includes normal pay. Neither mentions the Shanghai/Jiangsu exception, the 324号 document, or the 2025 basis for 21.75. B's letter is a little more practical: it has a receipt block and rejects the 60-day clause in writing. B also warns that the company can schedule the leave and cancel out the payout, while A's letter actually asks the company to schedule the leave. A gives slightly more legal detail on deductions (Art. 90 and the 20% cap) but leans on one commercial source labelled as a provincial opinion. Both are long, so the gap is small."
+}

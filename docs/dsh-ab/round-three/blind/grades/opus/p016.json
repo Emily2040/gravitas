@@ -1,0 +1,57 @@
+{
+ "pair": "p016",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Adds the 3.6% January 2027 COLA to her estimate as certain ($1,740; $2,486 at 67). The key flags this as a trap: a COLA from before her eligibility year does not raise her starting benefit.",
+   "Says '60 months early', but its own April 2027 start date makes it 59 months (29.58%). The 30% figure is within the key's acceptable approximation.",
+   "'Your first payment would arrive in May. Then SSA holds back checks' is misleading. Under the earnings test the April-July benefits are withheld first, so no May deposit arrives.",
+   "'If you waited until you stopped working, or until 67, you'd lock in roughly $2,486' is wrong. Claiming when she stops work but before 67 is still reduced, and the $2,486 figure depends on the COLA error.",
+   "Says that married filing jointly could drop the federal tax line 'possibly to near zero'. That is overstated: with no spouse income, the tax is still about $1,300 a year (my own computation)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "States as certain that the 3.6% January 2027 COLA 'lifts it to $2,486', so 70% gives $1,740. This is the COLA trap named in the key.",
+   "Says '60 months gives exactly 168/240', but its own April 2027 start makes it 59 months (29.58%).",
+   "Says 'first month of entitlement April 2027, paid in May' without noting that the earnings test withholds those first checks.",
+   "'Eight checks in calendar 2027, roughly three and a half swallowed, about $7,700' is wrong. SSA withholds whole checks (about 4, April-July), so about $6,960 arrives in 2027 (Sept-Dec), with the excess refunded later. The figure also contradicts the answer's own whole-check statement.",
+   "The table labeled 'Monthly, 2027' shows $1,222 of Social Security received every month. In fact none arrives January-August 2027.",
+   "'You'll lose that $6,220 every year until March 2032' is overstated. The limit rises each year, and the FRA year uses the higher limit.",
+   "'Every dollar between $25,560 and $38,000 buys you 50 cents of benefit' has it backwards: each dollar earned there costs 50 cents of benefit.",
+   "'Waiting to 67 would pay $2,486' depends on the COLA error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "wrong",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct both premises at the start and get the main numbers right: April 2027 start, roughly a 30% cut, the $25,560 limit, $6,220 withheld, and withheld months credited back at 67. Both fall into the COLA trap, and neither suggests checking her figures with SSA's calculators or her my Social Security account. A labels its table as an annualized run-rate and correctly says 2027 will bring about four deposits totaling about $7,000. B presents a smooth $1,222 a month as the 2027 figure and then miscounts the whole-check withholding (3.5 checks, $7,700). B also reverses the 50-cent explanation. B adds useful health-insurance and W-4V notes, but A's 2027 cash picture is more accurate, so A wins narrowly."
+}

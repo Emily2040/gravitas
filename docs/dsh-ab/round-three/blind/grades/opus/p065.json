@@ -1,0 +1,45 @@
+{
+ "pair": "p065",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Names a body called '杭州市区劳动人事争议仲裁委员会'. I searched the web and found no official page under that name, so it is unverifiable and may be the wrong forum name (the competent body depends on the district where the contract is performed or the employer is located).",
+   "Says the 60-day and approval clauses are '在仲裁和诉讼中基本都被认定无效'. This is a broad claim about case outcomes with no source. It also ignores the Shanghai and Jiangsu exceptions for employees with confidentiality duties, although it holds for Zhejiang."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 60-day and approval premises in their first lines, citing Articles 37, 26 and 25. Both draft the letter as a notice, not an application. Both reach the key's numbers: last day 25 November (Wednesday), 26 November at the new job, 329/365×5 rounded down to 4 days, 551.72 yuan a day, and 4,413.79 yuan as the extra 200% (I rechecked the arithmetic). Neither mentions the Shanghai/Jiangsu exception. A's letter states the delivery date in its text, and every claim A adds that goes beyond the key (Art. 89, the 2N damages for wrongful dismissal, free arbitration, the leave-cannot-lapse rule) checks out. B is somewhat tighter, but it adds an arbitration-body name I could not verify and an unsourced claim about case outcomes. A wins slightly on reliability, even though it runs longer."
+}

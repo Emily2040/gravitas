@@ -1,0 +1,50 @@
+{
+ "pair": "p014",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"같은 법 제17조에 따라 연 20%의 지연이자\": wrong citation. The delay interest comes from 근로기준법 제37조 and 시행령 제17조, not 퇴직급여법 제17조. The same wrong citation is repeated in the HR message.",
+   "\"퇴직소득세·지방소득세 약 20만~25만 원\": wrong. For about 1,024만~1,202만 with 4 service years, the tax including local tax is about 9.4만~14.1만 (I recomputed this). Also, with an IRP transfer nothing is withheld when the money is paid.",
+   "\"3년 이하 징역 또는 3천만 원 이하 벌금\": outdated. Since 2026.9.18 the penalty under 제43조 is up to 5 years or 5천만 원 (minor, per the key).",
+   "\"고용노동부와 법제처도 퇴직금 산정에 이 조항이 적용된다고 해석\": no document number or link is given. The key supports the substance (법제처-26-0209)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"퇴직금 미지급은 3년 이하 징역 또는 3천만 원 이하 벌금 (퇴직급여법 제44조)\": outdated. Since 2026.9.18 it is 제43조, up to 5 years or 5천만 원. This also contradicts B's opening claim that it used the law in force in October 2026 (minor, per the key).",
+   "\"퇴직소득세가 원천징수되어\": imprecise. With an IRP transfer, which B itself describes, nothing is withheld when the money is paid (소득세법 제146조②).",
+   "HR message says \"세전 약 1,020만 원\": this contradicts B's own calculation (1,024만, up to 1,202만) and understates the claim to HR.",
+   "\"법제처 해석(2026. 5. 26.)\": I cannot verify the date, though a moleg.go.kr link is given and the key confirms 26-0209."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the company at the start: the deadline is 14 days, and an extension needs the worker's agreement. Both give the 1,024만~1,202만 range with the ordinary-wage floor and point to 1350 and a petition to the labour office. B's arithmetic matches the key exactly (1,158 days, 1,024만 and 1,202만), it cites the right source for the 20% delay interest (근로기준법 제37조), and it links its sources. A cites the delay interest to the wrong article (퇴직급여법 제17조), puts that wrong citation in the HR message, and roughly doubles the retirement tax (20만~25만 vs about 9만~14만). B's main weakness is that its HR message states 1,020만, below its own figures. Both cite the outdated 3-year/3천만 penalty."
+}

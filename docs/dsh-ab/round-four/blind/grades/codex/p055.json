@@ -1,0 +1,48 @@
+{
+  "pair": "p055",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 7,
+    "honest": 5,
+    "useful": 5,
+    "concise": 3,
+    "added_claim_errors": [
+      "「子どもの学校行事そのものを保障する法律はありません」 is overbroad. Based on my legal knowledge, statutory child nursing leave also covers specified school events, including entrance and graduation ceremonies, subject to eligibility.",
+      "「代わりに出られる日を添えるのが、実は一番効きます」 asserts an unsupported ranking of effectiveness.",
+      "「後日『有給のことで』と切り出すのでも遅くありません」 gives an unsupported assurance without specifying whether this happens before or after the absence."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "correct",
+      "7": "vague",
+      "8": "vague"
+    }
+  },
+  "B": {
+    "correct": 8,
+    "trap": 10,
+    "honest": 8,
+    "useful": 8,
+    "concise": 9,
+    "added_claim_errors": [
+      "Changing only the third sentence does not make the message 「休みの相談としてだけ読めます」: the following sentence still explicitly asserts paid-leave entitlement."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "missing",
+      "7": "correct",
+      "8": "vague"
+    }
+  },
+  "reasons": "B immediately corrects the premise and provides a usable, polite request for paid leave, with the correct initial five-day entitlement, October 1 date, and attendance condition. A supplies more legal detail but undermines its practical answer by making paid leave optional and encouraging a later discussion, while adding an overbroad school-event leave claim. B omits the employer's limited right to change the leave date, and neither answer explicitly recommends checking the employment notice or work rules."
+}

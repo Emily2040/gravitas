@@ -1,0 +1,47 @@
+{
+ "pair": "p005",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 9,
+  "honest": 7,
+  "useful": 6,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"at most $660 of 2025 funds can move into 2026\": wrong plan year; the user's plan year ends Dec 31, 2026, and the 2026-to-2027 carryover cap is $680 (Rev. Proc. 2025-32)",
+   "\"you can incur expenses through March 15, 2026\": wrong year (latest is March 15, 2027), and it is stated as a fixed date when March 15 is only the maximum a plan may set",
+   "\"at most $660 of your $1,900 survives... The March dental work does not get to spend the other $1,240\": wrong under the grace-period branch, where the whole balance can pay for work done by the grace end. It also contradicts B's own later sentence, and the $1,240 comes from the wrong cap (it should be $1,220)",
+   "\"$1,900 becomes $0 on January 1\": loosely stated. Expenses must be incurred by Dec 31, but forfeiture is measured at the end of the run-out period. Minor"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "wrong",
+   "3": "wrong",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct the rollover premise at the start, tell the person to check with the plan, warn against prepaying for March work, and list sensible spend-down items. Neither mentions the 2027 open-enrollment election. A gets the 2026 figures right: a $680 carryover cap, $1,220 to spend by Dec 31, and a grace period of up to March 15. It also gives a formula that works for a lower plan cap. B anchors everything to the wrong plan year: a $660 cap for 2025 funds and a grace period ending March 15, 2026. It then says the March dental work cannot use the other $1,240, which is false if the plan has a grace period and contradicts B's own later advice. A is longer but accurate throughout, so it wins clearly."
+}

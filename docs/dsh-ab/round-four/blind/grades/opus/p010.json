@@ -1,0 +1,49 @@
+{
+ "pair": "p010",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "「国土交通省…ガイドラインでは、壁紙（クロス）の張り替えは原則として貸主負担」(repeated in the email): overbroad. The guideline assigns the cost by cause (tenant-caused damage and nicotine stains are the tenant's), so it does not say wallpaper replacement is the landlord's cost in principle",
+   "「少額訴訟（60万円以下）：…費用も数万円程度です」: wrong. The filing fee for a claim around 10–12万円 is a few thousand yen, not several tens of thousands",
+   "「民法上の原状回復義務に…含まれないのが判例・通説です」: outdated basis. Since 2020-04-01 this is written into 民法621条, which the answer never cites (minor)",
+   "「多くの場合、内訳を求められた時点で請求額は下がります」: unverifiable generalization",
+   "「②…一文を残す…後から『納得して払った』と認定されるのを防げます」: unverifiable legal assurance, and the answer offers to draft an acceptance email anyway"
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "「民法621条ただし書きにより、通常の使用に伴う損耗および経年変化は原状回復義務の対象外」(in the email): mis-cited. The exclusion is in 621条's parenthetical clause. The ただし書 covers damage the tenant is not responsible for",
+   "「7年住んでいるなら残存価値はゼロ、つまり更新の必要があっても借主負担分は生じません」: overstated. The residual value is 1円, not zero, and for intentional or negligent damage the tenant can still be charged work and labor costs after the 6-year useful life"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers reject the acceptance email in their opening lines and give a reply asking for a breakdown instead. B is the stronger of the two. It cites 民法621条 explicitly and gives the depreciation formula (1 − years ÷ 6 → zero after 7 years). It also covers the move-out walk-through, dated photos, not signing a settlement, and 188. A rests on 判例・通説 without citing 621. Its email says wallpaper replacement is the landlord's cost 原則として, which is too broad and gives the management company an easy rebuttal. It also gets the small-claims fee badly wrong (数万円) and offers to write an acceptance version anyway. Neither answer states the ㎡/one-face scope rule or explicitly demands the full 10万円 deposit back. B's own slips (calling the exclusion a ただし書き, and saying residual value is exactly zero) are minor."
+}

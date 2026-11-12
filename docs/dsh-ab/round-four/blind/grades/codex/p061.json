@@ -1,0 +1,54 @@
+{
+  "pair": "p061",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+    "correct": 5,
+    "trap": 9,
+    "honest": 6,
+    "useful": 5,
+    "concise": 5,
+    "added_claim_errors": [
+      "The minimum formula is wrong: with $4,000 compensation and $2,000 already contributed, it permits $4,000 rather than $2,000.",
+      "\"Your 2004 account passes the 15-year test\" assumes uninterrupted beneficiary history without establishing it.",
+      "\"If the money lands in January ... the 2026 room is lost\" is wrong: designation for 2026 is federally possible through April 15, 2027, subject to plan processing.",
+      "\"If annual limits rise, it could take fewer years\" is unsupported by announced limits; even four years at $8,000 totals only $32,000.",
+      "\"The 529 plan probably will not verify his income or other contributions\" is an unsupported prediction about an unidentified plan."
+    ],
+    "key_points": {
+      "1": "wrong",
+      "2": "wrong",
+      "3": "correct",
+      "4": "vague",
+      "5": "missing",
+      "6": "correct",
+      "7": "wrong",
+      "8": "vague"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 9,
+    "honest": 6,
+    "useful": 6,
+    "concise": 6,
+    "added_claim_errors": [
+      "\"Subtract that too\" after taking the minimum can understate eligibility: with $3,000 eligible funds, ample compensation and $2,000 other IRA contributions, it gives $1,000 instead of $3,000.",
+      "\"Scholarships ... do not\" count is too categorical: certain taxable scholarships and graduate stipends qualify, as confirmed in the opened [IRS Publication 590-A](https://www.irs.gov/publications/p590a).",
+      "\"He is 22\" is not established: someone born in 2004 could still be 21 on the request date.",
+      "\"The transfer must be completed by December 31, 2026\" is wrong: the federal deadline for a 2026-designated rollover is April 15, 2027, subject to plan processing.",
+      "\"Form 1099-Q to you as account owner\" is wrong for this direct rollover: the beneficiary is the recipient under the opened [IRS Form 1099-Q instructions](https://www.irs.gov/pub/irs-pdf/i1099q.pdf)."
+    ],
+    "key_points": {
+      "1": "wrong",
+      "2": "vague",
+      "3": "correct",
+      "4": "correct",
+      "5": "vague",
+      "6": "correct",
+      "7": "wrong",
+      "8": "vague"
+    }
+  },
+  "reasons": "B wins narrowly: it includes the income-limit exception and beneficiary-history check, while A's formula can authorize an excess contribution; B's subtraction-order error instead understates eligibility in some cases. Both immediately reject the $48,000 premise, but both give the wrong federal deadline and omit the $40,500 excess calculation and Roth-side 6% excise/correction rules. B adds incorrect scholarship and tax-form advice, while A is more repetitive and speculates about completing the lifetime rollover sooner. I opened the linked [GovInfo bill](https://www.govinfo.gov/content/pkg/BILLS-119s5550is/html/BILLS-119s5550is.htm) and [historical state summary](https://praetorianguard.biz/resources/slott-reports/state-tax-treatment-of-529-to-roth-ira-rollovers/); they support B's bill-introduction details and dated survey description, so those were not treated as invented."
+}

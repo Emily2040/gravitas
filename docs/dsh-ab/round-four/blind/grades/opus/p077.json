@@ -1,0 +1,49 @@
+{
+ "pair": "p077",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "800元若为实发：'公司可能刚好达到下限，并没有差额' — takes the minority view (2192 counted before personal contributions) without saying it is disputed; the key's majority view is that take-home pay must still be at least 2192, so 800 would still be illegal",
+   "'沪劳保保发〔2000〕14号已于2026年8月15日到期失效' stated as certain; the key says 14号's lapse is only presumed and nothing official confirms it",
+   "'也可以在1年内申请劳动仲裁' — imprecise: a wage-arrears claim made while still employed is not bound by the one-year limit, which runs from leaving (劳动争议调解仲裁法第27条)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Table row '制度照搬旧上海算法（先按实得工资70%，再按4—6年80%）8000×70%×80%=4480元' mischaracterizes the old rule: the 70% base was a fallback only when nothing set the base, and it was 70% of the normal attendance wage, not 实得工资. The key does not cover this; judged from my own knowledge of the 2016 Shanghai wage payment rules",
+   "'83号文、14号文已在2026年8月15日到期' presents 14号's lapse as certain; the key says it is only presumed"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 'company decides' premise at the start, say 83号 has expired, and give the right legal floor of 2740 × 80% = 2192 with a shortfall of 1392. B states the 6400 figure, which applies only if the company's own rules set 80%, and keeps it apart from the legal floor. B also notes that bonuses and allowances come out of the base, and its message to HR asks for the base, the ratio and the clause relied on. B never raises whether the 800 is gross or take-home pay. A does raise gross versus take-home, in its analysis and in the HR message. But it then tells the worker the company 'may owe nothing' if 800 is take-home, which contradicts the key's majority view and could push them to drop a valid claim. A also leaves out the 6400 figure and the rules for the base and daily rate. Overall B's flaws are smaller and its numbers are more complete, so B wins narrowly."
+}

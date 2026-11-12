@@ -1,0 +1,47 @@
+{
+  "pair": "p041",
+  "winner": "A",
+  "margin": "slight",
+  "A": {
+    "correct": 7,
+    "trap": 7,
+    "honest": 7,
+    "useful": 7,
+    "concise": 6,
+    "added_claim_errors": [
+      "“소액체당금” uses the outdated name for 간이대지급금; linking the advice to insolvency misleadingly narrows when the user should investigate it."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "vague",
+      "4": "vague",
+      "5": "missing",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 6,
+    "honest": 6,
+    "useful": 6,
+    "concise": 7,
+    "added_claim_errors": [
+      "“7~9월 석 달이면 요건을 충족할 가능성이 높으니” infers likely eligibility from the number of late months without knowing the delayed days or unpaid amounts.",
+      "“2년 근무라 퇴직금 대상입니다” omits the required weekly working-hours condition.",
+      "“퇴직 후 건강보험료가 지역가입자로 바뀌니” is categorical; general knowledge allows exceptions such as dependent status or continued employee coverage.",
+      "“첫 입금까지 몇 주 걸립니다” gives an unverified payment timeline; the packet establishes only the seven-day waiting period."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "wrong",
+      "4": "vague",
+      "5": "missing",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "reasons": "Both immediately correct the voluntary-resignation premise, but neither explains the decisive 60-day calculation or the alternative unpaid-wage thresholds. A narrowly wins because it recommends applying this week and makes its nonpayment example conditional, whereas B infers eligibility from three late months and ends by placing wage recovery before applying. Both omit benefit amounts, age-dependent payment durations and livelihood loans, and describe the 12-month period without explaining that delayed applications can forfeit payable days. Assessment uses the packet, with general knowledge explicitly identified for B’s health-insurance claim; no external sources were checked."
+}

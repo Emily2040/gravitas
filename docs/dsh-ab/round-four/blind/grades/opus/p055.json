@@ -1,0 +1,48 @@
+{
+ "pair": "p055",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 7,
+  "useful": 6,
+  "concise": 5,
+  "added_claim_errors": [
+   "「子どもの学校行事そのものを保障する法律はありません（子の看護休暇は病気・けがの看護…）」: outdated, from my own knowledge. Since the April 2025 amendment, 子の看護等休暇 also covers 入園・入学式 and 卒園式 for children up to the end of 3rd grade, so some school events are protected.",
+   "Opens with 「文面はこれで大丈夫です」 although the user gave no draft. Incoherent opener, not a factual claim, but it misleads.",
+   "The LINE says 「急なお願いで恐れ入ります」 for an event next month. A minor framing error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 9,
+  "added_claim_errors": [
+   "The LINE states 「10月1日から有給休暇が付与されています」 as fact, but the grant depends on 8割 attendance. Slight overstatement inside the message itself (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "missing",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "B corrects the premise in its first sentence. It gives the 10月1日 grant date, the 5-day figure and the 8割 condition. Its LINE asks politely, with a date, to take 有給休暇, which is the deliverable the key asks for. A also corrects the premise, and it covers more of the law (比例付与 by name, 時季変更権). But its main LINE only asks for an ordinary day off and leaves out 有給, and A even suggests holding the 有給 topic back, so in practice it half-accepts the manager's premise. A is also longer, opens with an incoherent 「文面はこれで大丈夫です」, and adds an outdated claim that no law protects school events. B's gaps are that it skips 時季変更権 and never uses the term 比例付与. Those are omissions, not errors, so B wins clearly."
+}

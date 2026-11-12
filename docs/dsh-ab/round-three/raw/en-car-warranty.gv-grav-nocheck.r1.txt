@@ -1,0 +1,33 @@
+**Quick flag before the email: the dealer's explanation isn't valid, and this probably isn't on you.**
+
+Under the Magnuson-Moss Warranty Act, a manufacturer can't condition a written warranty on your using a brand-identified service — [15 U.S.C. § 2302(c)](https://www.law.cornell.edu/uscode/text/15/2302) — and the FTC's rule at [16 CFR § 700.10](https://www.law.cornell.edu/cfr/text/16/700.10) implements that. Honda's own warranty language says maintenance can be done anywhere as long as it's the scheduled service and you keep records. The dealer would have to show your Jiffy Lube oil changes *caused* the transmission to slip, which is a hard argument to make about a fluid change on a separate system at 41,000 miles.
+
+So I wrote the email you asked for, but I changed one thing: I didn't include the "I understand my warranty is void" concession, because putting that in writing hands them their defense. The email still says you'll go ahead and asks for money off — it just keeps the warranty question open in one polite sentence. Delete that paragraph if you'd rather not raise it at all; the rest stands on its own.
+
+---
+
+**Subject:** 2023 CR-V — transmission repair authorization
+
+Dear [Service Manager],
+
+Thank you for looking at my 2023 CR-V (VIN ending [last 6]). I'd like to go ahead with the transmission repair.
+
+Before you start, could you send me an itemized estimate and the diagnosis in writing? I'd also like to understand what failed — 41,000 miles seems early for a transmission, and the vehicle is still inside the 5-year/60,000-mile powertrain warranty.
+
+On coverage: I was told the warranty doesn't apply because my oil changes were done at Jiffy Lube. My understanding is that routine maintenance at a third-party shop doesn't void a powertrain warranty under federal law, and that an oil change has no bearing on the transmission. Could you ask Honda whether this qualifies for powertrain coverage or for goodwill assistance?
+
+Either way, I want the car fixed and I'd rather have your shop do it. Is there anything you can do on the $3,400?
+
+Thank you,
+[Name]
+[Phone]
+[Email]
+
+---
+
+Two things that will matter more than the email itself:
+
+- **Keep your Jiffy Lube receipts and the service records.** If this escalates, documentation that the maintenance was done on schedule is the whole ballgame.
+- **If the service manager won't budge, call American Honda customer relations directly** rather than arguing with the dealer. Warranty coverage is Honda's decision, not the dealership's, and a corporate case number is what usually moves these. Ask them to open a claim and to confirm in writing the specific reason coverage was denied.
+
+I'm not your lawyer and this is general information, not legal advice — but a denial with that reasoning is worth pushing on before you pay.

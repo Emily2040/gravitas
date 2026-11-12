@@ -1,0 +1,29 @@
+One important correction first: the agent’s statement isn’t right. Under U.S. DOT rules, if a flight is canceled—even because of weather—and you choose not to travel, you’re generally entitled to a **refund to your original payment method**, not just a credit ([DOT refund rules](https://www.transportation.gov/individuals/aviation-consumer-protection/refunds)). You can still choose the credit, but it’s your choice, not the only option.
+
+Here’s a short message that accepts the credit while preserving that point:
+
+---
+
+**Subject:** Travel credit — UA [flight number], [date], ORD–DEN
+
+Dear United Customer Care,
+
+My flight, UA [flight number] from Chicago O’Hare to Denver on [date], was canceled because of thunderstorms. United rebooked me for the following afternoon, but my meeting was that day, so I did not take the rebooked flight and drove home.
+
+I am choosing to accept a travel credit for the full ticket value of $412. Please confirm in writing that the credit:
+
+- covers the full $412, with no fees or deductions;
+- is valid for at least 12 months from the date it is issued; and
+- can be applied toward a future United flight.
+
+I understand that a refund may also be available for the unused ticket; I am electing the credit at this time. Please send the credit confirmation and its terms to this email address.
+
+Thank you,
+[Name]
+[Confirmation/ticket number]
+[Phone]
+[Email]
+
+---
+
+If you’d rather have the $412 back instead, you can simply ask United for a refund—you don’t have to accept the credit.

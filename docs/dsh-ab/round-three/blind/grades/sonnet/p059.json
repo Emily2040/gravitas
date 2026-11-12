@@ -1,0 +1,48 @@
+{
+ "pair": "p059",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Paper temporary travel proof at the station is stated as free; the key says there is no official basis for that",
+   "12306 QR code refreshes every 60 seconds and needs face re-verification after 30 minutes on the page; unverifiable detail, no checkable source for it",
+   "Self-service machines work with the Yue Ju code, need no appointment, and some sites are open 24 hours; not on the Liwan page I opened, unverified",
+   "Photo receipt costs 20-30 yuan and is available the same day; local estimate, unverifiable",
+   "Lists Tianjin among provinces not yet open for self-service; the Liwan page I opened lists Hunan, Hubei, Jiangxi, Shanghai, Heilongjiang, Qinghai and Xinjiang without Tianjin, so it may come from the Huadu page that I did not check",
+   "Says a Henan-office replacement would not be much faster than Guangzhou; vague, and Zhengzhou's guide gives 15 working days for in-province applications"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Paper temporary travel proof at the station is stated as free; the key says there is no official basis for that",
+   "Mailing fee of 18 yuan within province and 20 yuan outside; not on the Liwan page I opened, unverified",
+   "Self-service machines are for people 16 or older and any machine in the city can be used; unverified",
+   "Photo costs about 20-40 yuan; local estimate, unverifiable"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers correct the two false premises in their opening lines. Both say a replacement can be done in Guangzhou, and that 12306's e-certificate (24 hours, 6 per month) or a station paper proof gets the user on the train on 10/31 without going home. Both give 40 yuan for the replacement, 10 yuan and 3 months for the temporary ID, and the 5-working-day wait for the household-registration office, so the temporary ID is unlikely to arrive before 10/31. Both also say the paper proof is free, which the key flags as unsupported, and neither gives the 60-day legal limit; both give Guangzhou's 40 days instead. I confirmed on the Liwan page that 40 days and the 40 yuan fee are real. I confirmed on the Zhengzhou page that the in-province limit is 15 working days, so B's quoted figure holds, and the date arithmetic in both answers checks out. B edges ahead because it names the July 2017 nationwide rollout, states the 20 yuan renewal fee, says to apply for the e-certificate within 24 hours of travel, and tells the user to ask at the counter whether the temporary ID can be ready by 10/31. It is also a little tighter. A has more unverifiable 12306 and self-service details and repeats itself with a table and extra sections, though it is very actionable."
+}

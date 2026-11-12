@@ -1,0 +1,54 @@
+{
+ "pair": "p062",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'If the money lands in January, it generally counts for 2027, and the 2026 room is lost' and the 'Confirm the deposit before December 31' step treat December 31 as the federal deadline. The key says a rollover designated for 2026 can be made through April 15, 2027, though plans vary. Minor error.",
+   "'If annual limits rise, it could take fewer years' is speculative. At $8,000 x 4 = $32,000 it still takes five years, and later limits are not announced.",
+   "'the 529 plan probably will not verify his income or other contributions', and the signature-guarantee and letter-of-acceptance requirements, are plan-specific guesses. They are hedged, not stated as fact.",
+   "The 'Sources' line gives IRS links (Topic 313, Pub 590-A, 529(c)(3)(E)). These are checkable and consistent with the key, and the answer does not claim to have checked them."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Step 6, 'Finish by December 31, 2026 so it counts against the 2026 limit', presents December 31 as the cutoff. The key allows designation through April 15, 2027, though plans vary. Minor error.",
+   "A check to the son 'becomes ... an excess Roth contribution (6% excise tax per year)' is overstated. An indirect deposit within his limit is a regular contribution, not necessarily an excess.",
+   "'If you contributed in 2021-2026, that money isn't eligible' is imprecise. Only contributions within five years before the transfer date are excluded, so early-2021 money can qualify for a late-2026 transfer.",
+   "'unless you changed the beneficiary ... which can restart the clock', repeated in the checklist, leans toward treating the reset as real. The key says this is unresolved with no IRS guidance, though the answer says 'can' and 'Confirm'.",
+   "'Not every 529 plan has its rollover process running smoothly yet' and 'December is a busy month for processors' are unverifiable generalities.",
+   "The sources are secondary pages (Savingforcollege.com 'updated Aug. 2026', IRAR). The links are checkable, but there are no IRS or statute citations."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise in the first sentence, give the $7,500 annual cap, the $35,000 lifetime cap and the $13,000 that stays out, require a direct transfer into the son's own Roth, apply the 5-year rule, pass the 2004 account on the 15-year test, and warn about state tax. Both make the same minor deadline error by treating December 31 as the cutoff, and neither describes the consequences of forcing all $48,000 in, such as the $40,500 excess and the 6% excise tax. A is a little stronger on specifics. It lists the 'smallest of' formula including the subtraction of other IRA contributions, shows the five-year arithmetic (2026-2029 at $7,500, then $5,000 in 2030), and cites IRS sources. B is somewhat tighter and mentions that Roth income limits do not apply, but it gives no arithmetic, overstates the 'excess contribution' consequence of a check, and relies on secondary sources. A is also longer, and its explicit 'January counts for 2027' claim is a slightly more pointed deadline error, so the margin is slight."
+}

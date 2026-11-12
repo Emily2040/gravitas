@@ -1,0 +1,53 @@
+{
+ "pair": "p011",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Cites 劳部发〔1997〕271号第4条 with quoted wording “另外支付” and “一般不安排补休”: not checked, unverifiable.",
+   "Bullet 5, “公司若主张按补假日折算,只会把某一天的300%和200%对调,7天总额不变”: speculative and unsupported, and it blurs that 10月3日 (Saturday) is plainly a statutory holiday.",
+   "Under the approval scenario, “多数情况下拿不到这么多”: a speculative generalisation with no source.",
+   "Fengtai court case (“批准期限届满没续的,也自动回到标准工时”): the linked source was not opened and the details are unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "Puts “安排劳动者在法定休假日工作的,按300%” in quotation marks as Beijing regulation text. I opened the gov.cn text of Article 16: it says “应当按照本规定第十四条第(三)项的规定支付加班工资”, so this is a paraphrase presented as a quote.",
+   "Works out a figure for the approved scenario: “按这4天32小时全超时粗算约2,482.76元” and “大约在3,724～6,207元之间”. The key says this cannot be computed from the information given. The 6,207 ceiling also assumes 8-hour days, so it is not a real upper bound.",
+   "“北京丰台法院2026年的案例解读”: the 2026 date and case details were not checked, unverifiable.",
+   "Says “公司有两处说错了” but then lists three numbered items. This is a presentation slip, not a legal error.",
+   "Gives 21.75 and 413.79 with no stated basis (人社部发〔2025〕2号), so the figure is unsourced."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by rejecting “签了就没办法”, reach 7,034.48 元 (3,724.14 + 3,310.34) paid on top of the 9,000 元 salary, and mention 补休 for the 4 rest days. They also both say 300% still applies to the 3 statutory days even with an approval. A is better sourced. It cites 劳动法第39条, 京劳社资发〔2003〕157号 article numbers, the Beijing HRSS 2019 position that 岗位审批 decides the matter, and 人社部发〔2025〕2号 for 21.75. It also gives Beijing wage regulation Articles 16 and 14(3), whose content I confirmed on gov.cn. It does not give an invented figure for the approved scenario. B misquotes the regulation, gives a speculative approved-scenario range (2,482.76 and 3,724–6,207), and omits the 21.75 basis and the 157 article numbers. B does add 劳动合同法第26条, “仲裁不收费” and the limitation-period note, which A lacks. Neither mentions that the 9月20日 and 10月10日 make-up days are ordinary working days. A is slightly longer."
+}

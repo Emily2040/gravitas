@@ -1,0 +1,56 @@
+{
+ "pair": "p027",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Fengtai court case said to hold that an expired approval returns to standard hours (批准期限届满没续的，也自动回到标准工时): link given but not opened, so unverifiable.",
+   "劳部发〔1997〕271号第4条 quoted as saying 另外支付 and 一般不安排补休: wording not in the key and not checked; plausible from my own knowledge.",
+   "考勤记录单位有保存义务: no source or document number given, so unverifiable.",
+   "Point 5, that a company calling Oct 3 a 补假日 would only swap one day between 300% and 200% with the total unchanged: the answer's own gloss, not covered by the key."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 4,
+  "added_claim_errors": [
+   "劳部发〔1994〕503号第7条 said to leave local approval measures to the provincial labour authority: unverified.",
+   "Quote attributed to 人社部办公厅的相关通知 (在正常发放的当日工资（100%）之外，再额外支付300%): the notice is not identified, so unverifiable.",
+   "Quote attributed to the Changzhou HR bureau (300%和200%都是支付月工资之后另外支付): not checked, so unverifiable.",
+   "Citations to a Pingluo court case (2025), a Fengtai court press conference (2026), a national trade union reading (2026-09) and a Beijing HR Q&A: links given but not opened, so unverifiable.",
+   "法定节假日的工时不计入综合计算周期的总工时: no source, not in the key; plausible from my own knowledge but unverified.",
+   "京劳社资发〔2005〕94号 said to set a full administrative-licence procedure: the 10-working-day figure matches the key, but the rest is unverified.",
+   "10月应发约 9,000 + 7,034.48 = 16,034.48元: arithmetic right, but it assumes the overtime pay lands in the same month's payroll, which is not established.",
+   "Cross-check figures 8,275.86 and 1,241.38 are arithmetically fine (recomputed). 劳动合同法第85条加付赔偿金50%-100% and the 15-day suit period are correct to my knowledge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start (no approval means the 综合工时 clause has no effect, and signing does not waive overtime pay). Both also state that 1 to 3 October is 300% even with an approval, and both reach 3,724.14 + 3,310.34 = 7,034.48 yuan. I recomputed the arithmetic: 9000/21.75 = 413.79, and every figure checks out in both answers. A cites 人社部发〔2025〕2号 for 21.75, as the key does. It is much tighter and carries fewer unverifiable source claims, though it skips the 9/20 and 10/10 working days and the free-arbitration and verify-the-approval steps. B covers more of the key: the 补班日, asking the company to show the approval, free arbitration, and the explanation that the 300% is paid on top of the 9,000 yuan. But it is roughly twice as long, repeats itself (a second cross-check, a sixth section of variables, an offer to draft a letter) and adds many hard-to-verify citations and quotes. Coverage and concision roughly cancel out, so A wins slightly on concision and honesty. I judged the unverified claims from my own knowledge and did not open any links."
+}

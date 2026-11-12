@@ -1,0 +1,56 @@
+{
+  "pair": "p001",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 9,
+    "honest": 6,
+    "useful": 7,
+    "concise": 3,
+    "added_claim_errors": [
+      "“3년 이하 징역 또는 3천만 원 이하 벌금 … 제44조”: outdated; the key specifies Article 43 and five years/50 million won from September 18, 2026.",
+      "“같은 법 제17조 제3항” as the basis for delayed severance interest is misplaced; the key identifies Labor Standards Act Article 37 and Enforcement Decree Article 17. The unconditional wording also omits statutory exclusions.",
+      "“문자를 보내두는 것 자체가 … 증거” and “합의했다는 말을 막을 수 있습니다”: sending a message does not itself establish that no extension agreement existed.",
+      "“330만 ÷ 209 × 8”: assumes a 209-hour monthly schedule without establishing or explicitly stating that condition.",
+      "“퇴직소득세를 공제한 실수령액은 이보다 적습니다”: fails to distinguish cash payment or withdrawal from IRP transfer, for which withholding is deferred.",
+      "“미리 만들어두면 지급이 빨라집니다”: an unsupported assurance that opening an IRP account will accelerate payment."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "vague",
+      "4": "correct",
+      "5": "vague",
+      "6": "vague",
+      "7": "correct"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 8,
+    "honest": 4,
+    "useful": 6,
+    "concise": 5,
+    "added_claim_errors": [
+      "“10월 4일이 기한”: asserts an exact deadline despite unresolved retirement-date and holiday calculations identified in the key.",
+      "“같은 법 제17조” as the basis for delayed severance interest is misplaced; the key identifies Labor Standards Act Article 37 and Enforcement Decree Article 17. The unconditional wording also omits statutory exclusions.",
+      "“상여·연장수당이 전혀 없어서”: the request excludes bonuses, but does not establish that overtime allowances were absent.",
+      "“330만 ÷ 209 × 8”: assumes a 209-hour monthly schedule without establishing or explicitly stating that condition.",
+      "“고용노동부와 법제처도 … 해석합니다”: the underlying rule matches the key, but the claimed institutional interpretations are not accompanied by a checkable interpretation link or document number.",
+      "“실무에서는 두 방식이 갈리므로 … 협의”: misleadingly presents the calculation basis as negotiable; the higher ordinary-wage floor is mandatory when applicable.",
+      "“퇴직소득세·지방소득세 약 20만~25만 원”: contradicts the key’s estimated 94,000–141,000 won and incorrectly implies withholding upon IRP transfer.",
+      "“3년 이하 징역 또는 3천만 원 이하 벌금”: outdated; the key specifies five years/50 million won from September 18, 2026."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "vague",
+      "6": "vague",
+      "7": "correct"
+    }
+  },
+  "reasons": "Both answers immediately reject the employer’s premise and explain the ordinary-wage floor, but A wins because B adds an unsupported exact deadline, an incorrect tax estimate, and misleading negotiation advice. Independently recomputed arithmetic supports both approximate estimates; B’s roughly 10.23 million won follows its rounded service duration, while A provides a less specific range. Both omit important verification details, and neither message fully satisfies the requested IRP guidance; A is substantially overlong and its escalation language weakens the requested courteous tone. Findings rely on the supplied key, with routine additional procedural statements assessed from general knowledge; no external sources were opened."
+}

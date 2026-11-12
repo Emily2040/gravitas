@@ -1,0 +1,43 @@
+{
+ "pair": "p070",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"확정일자는 주민센터에서 무료\": wrong. The key gives 600원 for a visit (500원 at 인터넷등기소).",
+   "\"운영시간...을 놓치면 정부24 전입신고와 인터넷등기소 확정일자로 대체하세요\": misleading. An 인터넷등기소 확정일자 filed after 18:00 Friday is granted on the next working day, 10-26 (Mon), and the date an after-hours 정부24 전입신고 counts from is unverified. So this fallback does not give the same-day protection the answer implies."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 8,
+  "useful": 7,
+  "concise": 9,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers correct the agent's claim at the start: 전입신고 gives only 대항력, and 우선변제권 needs 확정일자. Both say 대항력 starts the next day. Neither covers 최우선변제 being unavailable for 2억 in Seoul, the 임대차 신고 duty, or the next-day 등기부 re-check. A is firmer on the first premise and adds useful checks, such as matching the owner and account name and noting that no landlord consent is needed. But it wrongly says 확정일자 is free and recommends an after-hours 정부24 or 인터넷등기소 fallback without saying that this can push the date to Monday. B explicitly rejects 'when I have time' because a 근저당 could be registered in the meantime, adds no wrong claims, and fits the request for a short list better. It is vaguer on fees and treats 인터넷등기소 as an equal option without the timing caveat."
+}

@@ -1,0 +1,54 @@
+{
+ "pair": "p024",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Calls the 居民户口簿原件 the most critical document for 补领 and tells the user to have family send it by SF Express. This hits the key's trap about requiring the household register. A cross-province remote 补领 does not require it, so this misleads.",
+   "Says the new card arrives around 11月中下旬. This contradicts its own 'Guangzhou commits 40 days' figure: an application on 10/23-10/26 plus 40 days is early December.",
+   "Says Guangzhou commits 40 days and 'nationwide 异地办理最长45日'. The key says no verified Guangzhou duration for 省外户籍, and the 45-day figure has no checkable source. Unverifiable.",
+   "Says the paper 临时乘车证明 is free ('可免费办理'). The key lists 'paper certificate is definitely free' as a trap with no official basis.",
+   "Says EMS delivery is 18元 到付 within the province. The fee is not in the key and cannot be checked. Unverifiable.",
+   "Says a Henan card 'generally takes 30 days or so'. This is unverifiable and no source is given.",
+   "Says to arrive 40-60 minutes early, and that the 12306 advance-sale period is 15 days. These are minor extras. The 15-day period matches my own knowledge; the arrival time is just advice.",
+   "Lists 居住证, 粤居码, 社保 records, 劳动合同 and 租房合同 as materials to bring. The key does not list them, but the answer hedges with 'one or two of them' and 'may be checked'."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites the Zhengzhou police guide for 'Henan 15 working days' and works out 'mid-November'. The key flags short turnaround figures like this as unverifiable. The user's Henan city is also not known to be Zhengzhou.",
+   "Says Guangzhou commits to issuing within 40 days, so the card arrives in early December. The arithmetic is right (10/23 + 40 days = 12/2), but the key has no verified Guangzhou duration, so the figure is unverifiable.",
+   "Says the paper 临时乘车证明 is free ('免费'). The key lists 'paper certificate is definitely free' as a trap with no official basis.",
+   "Gives postage as 18元 within the province and 20元 outside it. The key does not cover this. Unverifiable.",
+   "Gives photo cost as about 20-40元. The key says it varies by place. This is plausible, but unverified.",
+   "Says 挂失 can be done at any district 办证中心 or 派出所 in person with no appointment. This is unverifiable and no source is given for this point.",
+   "Says the official Guangzhou materials list does not require a 户口簿 or 居住证 for 丢失补领. This is tied to a linked Guangzhou police notice and matches the key's trap. It is checkable.",
+   "Assumes the application is filed on 10月23日, tomorrow. This is a reasonable date assumption for the arithmetic and is not a factual claim."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers correct the two false premises at the start, both give the right 40 yuan fee, and both describe the 12306 electronic proof (24 hours, 6 times a month) and the paper one. Both also fall for the 'paper proof is free' trap and both state a Guangzhou 40-day figure the key does not verify. B is better in four places. It says 到期换领 is 20 yuan, and it gives the 2017 July nationwide date. It says the official Guangzhou list does not require a 户口簿, whereas A calls the 户口簿 the 'most critical' document and has the user send it from Henan. B's dates are internally consistent (10/23 plus 40 days is early December); A's '11月中下旬' contradicts its own 40-day figure. B also hedges the temporary 身份证 properly (wait for Henan to sign it off in about 5 working days, 'ask on the spot'). A's one edge is that it states the legal 60-day limit; B omits the 60-day limit and adds a Zhengzhou '15 working days' figure the key treats as unverifiable. Both answers are similarly long."
+}

@@ -1,0 +1,52 @@
+{
+ "pair": "p026",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "구직촉진수당 '월 50만원, 최대 6개월' - the key does not cover it; the 2026 amount may have been raised, so possibly outdated and unverified",
+   "The 1350 link (id=1000294486) is offered as support but I did not open it, so what it says is unverifiable",
+   "'회사에 임금체불로 인한 퇴사임을 내용증명이나 문자로 남겨두세요' - practical advice with no source, not in the key",
+   "Mentions 소액체당금 only for a de facto bankrupt company, and not 간이대지급금 or 생계비 융자 (an omission, not a false claim)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 7,
+  "honest": 5,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "'워크넷 구직등록 후 ... 수급자격을 신청하세요' - wrong, 워크넷 job-seeker registration has been folded into 고용24",
+   "'7~9월 석 달이면 요건을 넘습니다' - overclaim; the test is a 60-day sum of unpaid or late days, so a few days late each month may not qualify",
+   "'늦게라도 받았다면 그 지연 사실 자체가 사유' - overclaim; late-paid months count only through the 60-day rule, so it is not automatic",
+   "'남은 수급기간의 절반을 조기재취업수당으로' - imprecise; it is 1/2 of the remaining 소정급여일수 x 일액, and requires at least half of the days left plus 12 months of employment",
+   "'임금이 밀리거나 늦게 지급돼서 그만둔 경우는 자발적 퇴사로 보지 않고' - loose; it is still a voluntary separation, but with a 정당한 사유",
+   "The two 1350 links (id=1000319196, id=1000261514) are offered as sources but I did not open them, so what they say is unverifiable"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "wrong",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "wrong",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start and cite 시행규칙 별표 2 (2개월 이상 임금체불 within the year before leaving). A hedges ('가능성이 높고', '최종 판단은 관할 고용센터', conditional on not having been paid at all). It also gives the right route: apply this week through 고용24, within 12 months of leaving, with payment evidence. B says '7~9월 석 달이면 요건을 넘습니다' and treats any late payment as automatically qualifying, which is the 'always qualifies' overclaim, with no 60-day rule. B also sends her to 워크넷, which the key lists as a deduction, and it describes the 조기재취업수당 loosely. B does add useful items A lacks: the 180-days-in-18-months test, 간이대지급금 up to 10 million won, the check for missing 고용보험 enrollment, and 4-weekly 실업인정. Neither gives the 150/180-day entitlement, the amounts, 생계비 융자 or the 7-day waiting period, and both run longer than the 'short' advice she asked for. A's fewer errors and better calibration outweigh B's extra coverage."
+}

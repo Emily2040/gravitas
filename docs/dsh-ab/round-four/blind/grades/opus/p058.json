@@ -1,0 +1,50 @@
+{
+ "pair": "p058",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"K-12 tuition (up to $10,000 a year)\": out of date for 2026. OBBBA raised the K-12 limit to $20,000 a year from 2026 (checked by web search: JPMorgan, Chase and the SC Treasurer).",
+   "\"Complete the transfer by December 31, 2026 to count against the 2026 limit\": December treated as the legal deadline. Per the key, a rollover designated for 2026 can be made through April 15, 2027 (minor error).",
+   "\"Opened in 2004, so this is satisfied — unless the account was rolled over to a different 529 plan or the beneficiary was changed\": presents a reset of the 15-year clock after a rollover or beneficiary change as the rule. The key says this is unresolved. It is softened by \"Ask the plan to confirm\"."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"The 529 plan will issue Form 1099-Q to you as account owner\": wrong. The IRS Form 1099-Q instructions (irs.gov/instructions/i1099q, opened) name the designated beneficiary as recipient for a direct trustee-to-trustee transfer to a Roth IRA maintained for the beneficiary.",
+   "\"The transfer must be completed by December 31, 2026 to count against the 2026 annual limit ... if you miss it, it becomes a 2027 rollover\": December treated as the legal deadline. Per the key, a 2026-designated rollover is allowed through April 15, 2027 (minor error).",
+   "\"He is 22\": stated as fact, but someone born in 2004 could still be 21 in late 2026 (trivial)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise in their first lines. Both give the $7,500 annual cap, the earned-income limit, the reduction for his other IRA contributions, the $35,000 lifetime cap and the $13,000 shortfall, and both insist on a direct transfer into the son's own Roth. A adds a five-year schedule (2026-2030), which B lacks, but A never explains what happens to any excess. It also gives an outdated K-12 limit of $10,000 and treats a reset of the 15-year clock after a beneficiary change or plan rollover as close to settled. B hedges the 15-year reset properly (\"may restart\", \"confirm the clock carried over\") and gives a partial consequence for an excess transfer (a nonqualified withdrawal). Its state survey and its S. 5550 citation both checked out when I opened the sources. B's own errors are naming the parent as the Form 1099-Q recipient and the December 31 deadline, which A shares. Overall the two are close, and B edges ahead on hedging and checkable sourcing."
+}

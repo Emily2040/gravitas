@@ -1,0 +1,52 @@
+{
+ "pair": "p087",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"可能另扣大病保险等几十元\": the key says the personal 大病保险/长护险 amounts are deducted from the 补划 personal-account funds with no extra cash, so this contradicts it, and the \"几十元\" figure is unverified.",
+   "\"最好在11月新单位增员前\"办理补缴: no source or reason is given for this timing, so it is unverifiable.",
+   "\"通过浙里办搜医保补缴或灵活就业参保，或打12393\": the channels are plausible but unverified.",
+   "The closing tip that 买房、落户、车牌摇号 count \"连续社保\" and are hit by the gap: not tied to any source, off-topic padding, and the rules were not checked."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"补缴...记入累计年限\": the key says the supplement counts as 实际缴费年限. This is imprecise but not contradictory.",
+   "\"7个月年限以后随时能缴回来\": overstates, because the later top-up is only through 一次性补缴 or 延缴 at retirement, and no amounts or conditions are given.",
+   "The cited links (m.163.com dy article, bendibao page) are secondary sources, and their content was not verified against the answer's claims.",
+   "\"你离退休还远\" is assumed, not known, and the advice not to 补 depends on it."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers open by correcting the premise (8 years are not wiped out; cumulative versus continuous years). Both give the 3-month meaning, the 第三个自然月 waiting period (January 2027), the 10-year and 20-year retirement thresholds with the 2-year and 12-year gaps, and 473.67 x 7, about 3,316 yuan, with the 12月31日 deadline and no reimbursement for the supplemented months. A is clearly more complete on the later key points. It gives the 户籍/居住证 eligibility rule and notes the employer cannot back-pay April to October. It gives the 743.60 and 443.75 yuan retirement top-up figures and gives the exact 3,315.69. It also handles the assumption that the 8 years were all in Hangzhou, and says to confirm with the 经办 office. B is tighter but only gestures at eligibility, at the cost of not paying later (no top-up figures), and at the employer limit. A's cost is some padding (the 买房/摇号 tip) and one slip about extra 大病保险 cash. B's lead in concision does not outweigh A's coverage."
+}

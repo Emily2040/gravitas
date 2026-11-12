@@ -1,0 +1,51 @@
+{
+ "pair": "p035",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第二十七条 for unpriced-parcel compensation: this is the old article number. Since 2025-06-01 it is 第二十八条, a minor error per the key.",
+   "Cites 《快递暂行条例》第二十八条 for the 7-day complaint handling: correct under the pre-2025 numbering, but outdated after the renumbering (my own judgement), and inconsistent with the current text.",
+   "'全额3999元有明确依据': overstated. Civil Code 833 values the loss at the destination market price, and an uninsured sender may be found partly at fault, so full recovery has no clear basis.",
+   "'实务中这类案子常以部分金额和解': an unverifiable generalization with no source."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第二十七条: this is the old article number. Since 2025-06-01 it is 第二十八条, a minor error per the key. The linked rmzxw.com.cn page is an unofficial copy of the 2018 version.",
+   "'协商通常落在几百到接近实际价值之间': an unverifiable settlement range with no source.",
+   "The header '这一句值3945元' overclaims. The arithmetic is right (3999-54=3945), but the header implies the difference is recoverable, which B itself later says is not guaranteed.",
+   "The draft reply says '退款记录都在' and thanks the agent for '这几天帮忙跟进'. Both invent facts the user never stated: no refund to the buyer is mentioned, and no multi-day follow-up is mentioned.",
+   "'对方客服的权限通常就卡在限额附近': an unverifiable generalization."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers reject the 邮政法 three-times-freight premise at the outset and correctly explain 第四十七条/第四十五条/第五十九条. Both cite the old 第二十七条 of the 快递暂行条例. B covers more of the legal substance: Civil Code 833 (destination market price), 497 alongside 496, and an honest statement that court practice is inconsistent and full recovery is not guaranteed. B also gives the concrete 12305 route with the 30-day statutory reply under 邮政法第六十五条. A's draft is firmer and more complete as a demand: it asks for 3999 plus a refund of the 18-yuan freight. A also gives a clearer evidence checklist and the 7-day complaint window. However, A overstates that full 3999 has a 'clear basis'. B's draft invents a refund record and a multi-day follow-up, which the user would need to edit out. On balance, B edges ahead on legal accuracy and risk calibration."
+}

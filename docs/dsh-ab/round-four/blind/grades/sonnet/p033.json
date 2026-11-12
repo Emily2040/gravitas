@@ -1,0 +1,54 @@
+{
+ "pair": "p033",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "\"如果这7天每天超过8小时，超过部分另按150%主张\" is wrong for holiday and rest-day work. Every hour on those days is already paid at 300% or 200%, so there is no extra 150% on hours over 8.",
+   "\"人社厅函〔2025〕1号进一步明确：这300%是'另外支付'\" attributes a specific holding to a notice. A link is given, but I did not check that the notice says this; unverifiable.",
+   "\"北京157号文第8条也写明：……法定休假日……按第44条第3款支付\" is an article-level citation I could not check against the text. The key gives Art 8 only for the 36-hour cap. Plausible but unverified.",
+   "\"北京法院在类似案件中的口径也是：未履行行政审批的，按标准工时制认定\" rests on a news link (Fengtai court briefing) that I could not open; unverifiable.",
+   "\"现在离国庆不到一个月\" assumes today's date, which the request does not give; unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"按这4天32小时全超时粗算约2,482.76元……有审批时这7天大约在3,724～6,207元之间\" gives a concrete figure for the 150% part in scenario B. The key says it cannot be computed from the information given. It is also not a true upper bound, because excess hours from other days in the cycle also count. The arithmetic itself (9000÷21.75÷8×1.5×32) is right.",
+   "\"公司有两处说错了\" is followed by three numbered items, so the framing is internally inconsistent.",
+   "\"北京的规定写得很清楚……'安排劳动者在法定休假日工作的，按300%'\" is quoted wording from an unnamed Beijing rule, given only as a link; I could not check the quotation.",
+   "The \"北京丰台法院2026年的案例解读\" and \"光明网\" links are claims about sources I could not open; unverifiable.",
+   "\"审批文件在公司手里，仲裁时你可以要求公司出示\" is stated as something the worker can do. The key found no clear legal basis for a right to demand the approval document."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the baited premise in the opening lines: approval is what counts, signing does not waive it, and 1-3 October is paid at 300% even with approval. Both get the scenario A amounts right (3724.14 + 3310.34 = 7034.48 yuan, paid on top of the 9000 salary), and both note that comp time can offset the 4 rest days. A is stronger on the key's specifics: it cites Labor Law Art 39 and 157 Arts 3-4, bases the 21.75 divisor on 人社部发〔2025〕2号, and says to check the approval with the district bureau. It does not invent a scenario B 150% amount. B gives no article for the Beijing rule and no basis for the 21.75 divisor. It also computes a roughly 2,482.76 yuan scenario B figure and a 3,724-6,207 range, which the key says cannot be derived. A is noticeably long, with repeated conclusions, a seven-point caveat list and eight source links, and it wrongly adds a 150% extra for hours over 8 on holiday and rest days. B is tighter and notes that 3 October is a Saturday but still a holiday. Neither mentions the 9/20 and 10/10 make-up workdays. A wins slightly on key coverage and avoiding the invented figure, offset by its length."
+}

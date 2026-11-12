@@ -1,0 +1,49 @@
+{
+ "pair": "p018",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"같은 법 제17조에 따라 연 20%의 지연이자\" (repeated in the HR text as \"근로자퇴직급여 보장법 제17조에 따른 지연이자\"): wrong legal basis. The key puts severance delay interest under 근로기준법 제37조 and 시행령 제17조, not 퇴직급여법 제17조. Putting a wrong article in a message to HR weakens it.",
+   "\"퇴직소득세·지방소득세 약 20만~25만 원\": overstated. My own recomputation with 4 years of service (근속연수공제 400만, 환산급여공제) gives about 9.4만 to 14.1만 won including local tax, matching the key. Also, after an IRP transfer nothing is withheld at payment.",
+   "\"3년 이하 징역 또는 3천만 원 이하 벌금\": outdated. From 2026.9.18 퇴직급여법 제43조 sets 5년/5천만 원 (minor deduction).",
+   "\"고용노동부와 법제처도 퇴직금 산정에 이 조항이 적용된다고 해석합니다\": no link or document number. The 법제처 part matches the key; the 고용노동부 interpretation is unverified.",
+   "\"퇴직금은 원칙적으로 IRP 계정으로 이전\": leaves out the under-55 condition (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"3년 이하 징역 또는 3천만 원 이하 벌금\": outdated. From 2026.9.18 퇴직급여법 제43조 sets 5년/5천만 원 (minor deduction).",
+   "\"현행법상 퇴직금은 IRP 계정으로 이전하는 방식\": leaves out the under-55 condition (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the company at the start: the deadline is 14 days, and an extension needs a mutual agreement. Both also give the 1,024만 to 1,202만 range from the ordinary-wage floor. B's figures are exact (1,158 days, 12,022,000 and 10,242,000 won, a 178만 gap, 21 days overdue, about 6,600 won a day in interest). A rounds the service period to 3.17 years and gets 1,023만 and 1,200만. B's HR text is closer to the key: it asks for the breakdown, asks how to send IRP details, and stays non-threatening. A's text cites the wrong article (퇴직급여법 제17조) for delay interest and leaves out IRP. A also adds a wrong tax estimate (20만 to 25만). Both repeat the old penalty amounts, and neither gives a full checklist of facts to confirm."
+}

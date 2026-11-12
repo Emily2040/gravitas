@@ -1,0 +1,51 @@
+{
+  "pair": "p076",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 10,
+    "honest": 7,
+    "useful": 7,
+    "concise": 4,
+    "added_claim_errors": [
+      "The 'smallest of' formula is wrong when compensation is below $7,500 and other IRA contributions exist: $4,000 compensation minus $2,000 contributed leaves $2,000, but its formula permits $4,000."
+    ],
+    "key_points": {
+      "1": "wrong",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "vague",
+      "6": "correct",
+      "7": "vague",
+      "8": "wrong"
+    }
+  },
+  "B": {
+    "correct": 5,
+    "trap": 10,
+    "honest": 4,
+    "useful": 5,
+    "concise": 2,
+    "added_claim_errors": [
+      "'The 15-year clock restarts for the new beneficiary' presents an unresolved issue as settled.",
+      "'The money needs to land ... by December 31, 2026' incorrectly makes December the federal deadline; a designated 2026 rollover can qualify through April 15, 2027, subject to plan processing.",
+      "'This compresses to four or five years' is unsupported: future limits are unannounced, and even $8,000 annually yields only $32,000 over four years.",
+      "'Scholarships ... don't count' is too categorical: certain taxable graduate or postdoctoral fellowship and stipend payments qualify as IRA compensation, based on my own knowledge.",
+      "'Most do by 2026, but not all' adds an unverified claim about how widely plans support these transfers.",
+      "'The most commonly missed cost' adds an unsupported ranking of state-tax mistakes."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "correct",
+      "4": "wrong",
+      "5": "vague",
+      "6": "correct",
+      "7": "wrong",
+      "8": "correct"
+    }
+  },
+  "reasons": "Both immediately reject the $48,000 rollover and correctly calculate the $13,000 lifetime shortfall. A wins because B adds a false federal deadline, a settled beneficiary-reset rule, and an unsupported four-year schedule. However, A's operational formula can authorize an excess contribution when compensation is low, despite its earlier correct description. Neither fully explains the consequences and correction rules for the $40,500 minimum excess; both are unnecessarily long, especially B."
+}

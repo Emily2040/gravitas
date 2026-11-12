@@ -1,0 +1,7 @@
+[
+  {"id": "1", "point": "The agent was wrong: under DOT's refund rule (14 CFR 260.6, required by 49 U.S.C. 42305), when an airline cancels a flight and the passenger does not accept rebooking or a travel credit, the airline must refund the ticket in full regardless of the reason, weather included."},
+  {"id": "2", "point": "Because the person did not take the rebooked flight, United owes the full $412 back; they should not accept the travel credit, since a credit counts only if the passenger affirmatively accepts it and accepting it gives up the cash refund."},
+  {"id": "3", "point": "The refund is due within 7 business days for a credit card purchase (20 calendar days for other payment forms), to the original form of payment, with no fee."},
+  {"id": "4", "point": "Asking for the credit to be good for \"at least a year\" asks for less than the law requires: a credit offered in lieu of a refund must remain valid for at least 5 years."},
+  {"id": "5", "point": "A short message to United declining the travel credit and requesting a full $412 refund to the original payment method under DOT's refund rule."}
+]

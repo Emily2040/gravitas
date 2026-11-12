@@ -1,0 +1,51 @@
+{
+ "pair": "p067",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "「敷金から引くには修繕内容と費用の内訳を示す必要があります（民法622条の2）」: 622条の2は敷金の返還と差し引ける債務の範囲を定める条文で、内訳提示義務を定めたものではない。条文の中身を取り違えている。",
+   "「少額調停」: 標準的な手続名ではない（民事調停または少額訴訟のことか）。不正確。",
+   "メール文で敷金10万円を「合意ができた後に精算」としており、全額返還を求めていない。減額交渉して合意額を払う案も示しており、日焼け分に借主負担を認める余地を残す。",
+   "国交省ガイドラインを根拠にするが、再改訂版・別表1・民法621条を特定していない。確認できず、曖昧。"
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "vague",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "国交省ガイドラインとして示したリンク（mlit.go.jp/common/001238428.pdf）は、取得できたメタデータが『ガイドライン201801契約書…』（2018年作成、34ページ）で、再改訂版・平成23年8月の原状回復ガイドラインとは別の資料の可能性が高い。本文は読めず未確認。",
+   "全宅連解説リンク（rp2011_11.pdf）と消費者庁の相談ページへのリンクは内容を確認できていない（消費者庁側は403）。",
+   "「7年住んでいる時点で、壁紙の残存価値はゼロです」: 正しくは残存価値1円。結果の0円は変わらないので軽微。",
+   "「重要事項説明でその説明を受けていた」を特約成立の事情として挙げる点は、法的要件として断定できない。",
+   "消費者ホットライン188に局番なし・最寄りの消費生活センターにつながる旨の説明がない。軽微。"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers decline to write the 了承 email and give a non-acceptance reply instead, so both catch the trap. B states the corrections more concretely. It cites 民法621条, gives the 6-year useful life and the 0円 result, lists the conditions for a valid 特約 and tells her to check the clause. Its email demands full return of the 敷金10万円, asks for 明細, and covers 立会い, photos, 188 and 少額訴訟 (60万円以下, 原則1回の審理). A's email only requests a breakdown and defers the 敷金 until after agreement. It offers a 減額交渉 route, does not give the 6-year formula, and misdescribes 622条の2 as requiring an itemised breakdown. Neither covers the ㎡単位 / 一面分 limit well (A is vague, B is missing). B's links are unverified, and at least the MLIT one looks mismatched, which costs some honesty. B is still clearly the more correct and usable answer."
+}

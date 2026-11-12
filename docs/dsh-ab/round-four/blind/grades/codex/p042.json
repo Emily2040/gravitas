@@ -1,0 +1,61 @@
+{
+  "pair": "p042",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+    "correct": 4,
+    "trap": 3,
+    "honest": 3,
+    "useful": 4,
+    "concise": 3,
+    "added_claim_errors": [
+      "“7~9월 석 달이면 요건을 넘게 충족”: three delayed paydays do not establish the required delay duration or unpaid amount.",
+      "“피보험단위기간 6개월”: the requirement is 180 insured qualifying days, not six calendar months.",
+      "“이직일부터 12개월”: the period starts the day after separation.",
+      "“이의제기 → 심사청구 순”: an obligatory two-stage sequence is not established by the packet or a specific supporting citation.",
+      "“3개월치 월급”: the request does not establish that three months of wages remain unpaid.",
+      "“퇴직금(2년 근무면 발생)”: omits the weekly working-hours qualification.",
+      "“지연이자까지 한 번에 청구”: a labor-office complaint does not itself establish recovery of statutory interest; the asserted procedure needs confirmation.",
+      "“연 1.5%”: omits the temporary 1.0% rate applicable through October 31, 2026.",
+      "“생계비 융자까지 받으면 석 달은 확보”: eligibility, payment timing, expenses and available funds are unknown, so three months of coverage cannot be guaranteed.",
+      "“회사가 문 닫으면 회수율이 뚝 떨어지니”: the asserted sharp reduction in recovery is unsupported."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "vague",
+      "4": "wrong",
+      "5": "missing",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "B": {
+    "correct": 5,
+    "trap": 3,
+    "honest": 4,
+    "useful": 5,
+    "concise": 5,
+    "added_claim_errors": [
+      "“자발적 퇴사로 보지 않고”: a justified voluntary resignation can qualify; it does not cease to be voluntary.",
+      "“7~9월 석 달이면 요건을 넘습니다”: counts affected months instead of establishing delay duration or unpaid amount.",
+      "“아직 못 받았다면 더 확실”: an unspecified unpaid amount and duration do not establish eligibility.",
+      "“워크넷 구직등록”: obsolete; registration is through 고용24.",
+      "“석 달치 임금”: three months of outstanding wages are not established by the request.",
+      "“퇴직금(2년 근무면 발생)”: omits the weekly working-hours qualification.",
+      "“지연이자를 함께 청구”: recovery of interest through the stated labor-office procedure needs confirmation.",
+      "“4주마다 실업인정”: presents a common schedule as universal; recognition intervals can vary.",
+      "“빨리 재취업하면 … 절반”: omits the initial 14-day restriction, at least half the benefit days remaining, and 12 months of employment."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "vague",
+      "4": "vague",
+      "5": "missing",
+      "6": "wrong",
+      "7": "vague"
+    }
+  },
+  "reasons": "Both challenge the voluntary-resignation premise immediately, but both incorrectly treat three late-payment months as sufficient without checking delay days or unpaid amounts. B narrowly wins through the exact 180-day requirement, simplified wage-payment assistance and reporting advice for temporary work; its obsolete Worknet instruction and incomplete early-reemployment allowance advice remain substantial defects. A supplies useful benefit durations but adds an incorrect current loan rate and an unsupported guarantee of three months of living expenses; neither provides benefit amounts, and both exceed the requested brevity. Assessment uses the supplied key and general procedural knowledge for claims it does not cover; no external sources were opened."
+}

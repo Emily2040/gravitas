@@ -1,0 +1,51 @@
+{
+ "pair": "p024",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "「7年住んでいるなら残存価値はゼロ」: 定額法には下限の1円があり、正確には「1円（≒0%）」。軽微な不正確さ。",
+   "「書面で同意すると債務を認めた記録が残り、後から覆すのが難しくなります」: 法的帰結を一般論として断定しており、出典なし（根拠は検証不能）。",
+   "「相談実績が非常に多い分野です」: 数字・出典なしの主張で検証不能。",
+   "日焼けの黄ばみに経過年数の減価計算（耐用年数6年、残存価値ゼロ）を当てて説明している。日焼けは通常損耗であり計算以前に負担義務がない、という整理にはなっていない（軽微）。"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "「サインは『内容を確認した』以上の意味を持ちません」: 署名した契約書には拘束力があり、言い過ぎ。特約が明記されていれば別になりうる。",
+   "国交省ガイドラインの根拠として、民間の管理会社系ブログ（kurashitokanri.jpm.jp）を「国交省ガイドライン関連の解説」として挙げている。一次資料ではなく、内容を確認できなかった。",
+   "「国民生活センターの相談事例」としてkokusen.go.jp/hanrei/data/200406.html（NDLアーカイブ）を挙げている。hanreiは判例欄で、「相談事例」というラベルと内容の一致は確認できず検証不能。",
+   "「民法621条は…（2017年改正で明文化）」: 改正の公布年としては正しいが、施行は2020年4月1日で、施行日や旧法契約の扱いには触れていない。",
+   "「少額でも相談は無料です」: 188の通話料などの条件に触れておらず、断定がやや強め（軽微）。"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers refuse to write the acceptance email at the start and correct the premise: 民法621条, 日焼けは経年変化で貸主負担, 耐用年数6年で残存価値ほぼゼロ. Both supply a non-accepting reply that asks for the 内訳 and the contract clause. B's reply also cites the MLIT guideline, asks for return of the 敷金10万円, and mentions 立会い photos and 188, and B is shorter. A's reply never asks for the 敷金 back or cites the guideline, and neither answer covers the ㎡/one-wall scope. A is stronger on the legal standard for a special agreement (具体的な説明・認識・合意) and on the risk of written consent to the 2万円, and it hedges its claims more carefully. B overstates that signing means no more than having read the contract, and it leans on secondary links I could not verify, so it loses on honesty. B's email is closer to the key's recommended reply and the answer is tighter, but A is more reliable, so the margin is slight."
+}

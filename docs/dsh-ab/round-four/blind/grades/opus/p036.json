@@ -1,0 +1,50 @@
+{
+ "pair": "p036",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 8,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"The Part B late-enrollment penalty ... applies to people who go without creditable coverage\": wrong framing. The Part B SEP depends on a group health plan based on current employment, not on 'creditable coverage' (a Part D term). Retiree or COBRA coverage can be creditable for drugs and still not protect against the Part B penalty.",
+   "Ties the no-penalty delay to the plan being 'well above the 20-employee threshold': imprecise. Employer size decides which plan pays first, not whether the SEP exists (minor).",
+   "Says to apply at retirement with 'CMS-40B plus CMS-L564' and gives no Part A caveat. CMS-40B is only for people who already have Part A, and A itself tells HSA holders to defer Part A.",
+   "\"CMS-L564, completed by your employer\": partly wrong. The enrollee fills in Section A and the employer fills in Section B.",
+   "\"Sign up for Part D within 63 days\": imprecise. The Part D SEP runs 2 full months after coverage ends; 63 days is the gap that triggers the penalty (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"Well over Medicare's 20-employee threshold. That lets you delay Part B with no late-enrollment penalty\": imprecise. Employer size is not a condition of the SEP; it decides which plan pays first. B's later under-20 explanation is right in practice (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers catch the bad premise at the start and correctly say the asker can delay Part B through the 8-month SEP. Neither gives the $202.90 premium, the Medigap clock or the exception for coverage that ends during the IEP. B is more accurate where money is at stake: it warns that Part A can be backdated up to 6 months, which matters for HSA contributions, and it explains correctly what the 20-employee line does. A frames the Part B penalty around 'creditable coverage', which is wrong for Part B. A also recommends CMS-40B with no caveat about needing Part A, says the employer completes CMS-L564 alone, and gives a 63-day Part D deadline. A is stronger on the retirement paperwork (it names CMS-L564) and on Part D waiting without penalty, but B has fewer errors overall."
+}

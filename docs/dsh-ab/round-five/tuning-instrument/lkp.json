@@ -1,0 +1,34 @@
+{
+ "source": "W:/AgentData/logs/gravitas-dsh-ab5/design/tuning-decision-rule.md, section LIMITED KEY POINTS (LKP)",
+ "rule_sha256": "6da489caa8e452928dfb99139a1646e570eb9b0d4e914f8c4d148e0965436922",
+ "note": "The 42 limited key points of the round-five tuning rule, by round-four case name. Ids are the ids in W:/AgentData/logs/gravitas-dsh-ab4/keypoints/<case>.json. short_names maps the rule's names to the case names.",
+ "count": 42,
+ "short_names": {
+  "en-529": "en-529-roth",
+  "en-fsa": "en-fsa-rollover",
+  "en-medicare": "en-medicare-part-b",
+  "ja-medical": "ja-medical-deduction",
+  "ja-part": "ja-part-time-leave",
+  "ja-wallpaper": "ja-wallpaper-restoration",
+  "ko-jeonse": "ko-jeonse-protection",
+  "ko-severance": "ko-severance-pay",
+  "ko-unemployment": "ko-unemployment-quit",
+  "zh-flex": "zh-flex-hours",
+  "zh-insurance": "zh-insurance-gap",
+  "zh-sick": "zh-sick-pay"
+ },
+ "lkp": {
+  "en-529-roth": ["1", "4", "7", "8"],
+  "en-fsa-rollover": ["2", "3", "4", "5"],
+  "en-medicare-part-b": ["1", "5", "6", "7"],
+  "ja-medical-deduction": ["1", "2", "4", "7"],
+  "ja-part-time-leave": ["3", "5", "6"],
+  "ja-wallpaper-restoration": ["3", "4", "5"],
+  "ko-jeonse-protection": ["2", "4", "5"],
+  "ko-severance-pay": ["2", "4", "6"],
+  "ko-unemployment-quit": ["2", "4", "5"],
+  "zh-flex-hours": ["3", "6", "7"],
+  "zh-insurance-gap": ["3", "4", "5", "6"],
+  "zh-sick-pay": ["2", "4", "5", "6"]
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "pair": "p050",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第27条: outdated number. Since 2025-06-01 it is Art. 28 (key: a minor error).",
+   "'如果是EMS/中国邮政，第47条原则上可能适用': imprecise. Art. 47 covers only registered items inside universal service, and EMS express falls outside it (Art. 45 para 2).",
+   "'小额诉讼…诉讼费几十元': not sourced. It is plausible from my own knowledge (50 yuan, halved, for a claim under 10k), and the key does not cover it."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "Cites 《快递暂行条例》第27条: outdated number. Since 2025-06-01 it is Art. 28 (key: a minor error).",
+   "'通常到这一步，理赔口径会松动不少': unverifiable claim about how claims usually play out.",
+   "The scripted follow-up has the user say '寄件时并未向我充分提示说明'. The user never said this, so it is an unverified fact put in the user's mouth."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers catch the false 'Postal Law caps it at 3x' premise at the start, and both cite the outdated Art. 27. A gives the concrete legal basis: Postal Law Art. 84's definition, Art. 47 para 3, Civil Code 496/506 and 832/833. Its reply clearly asks for the 3999 actual loss and the freight refund, and it gives a thorough evidence list and the company-complaint-then-12305 path with the 7-day rule. B's reply admits fault, asks only for a discretionary increase, leaves out the freight refund and the Civil Code articles, and has the user assert facts the user never stated. B is shorter and states the fault-reduction risk better. Even so, A is much more correct and usable, though longer than it needs to be."
+}

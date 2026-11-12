@@ -1,0 +1,54 @@
+{
+ "pair": "p088",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "Quotes 劳部发〔1997〕271号第4条 as saying 另外支付不低于300% and 一般不安排补休; the wording is not in the key and I did not verify it, so it is unverifiable.",
+   "Describes a 北京丰台法院 case (unapproved comprehensive-hours clause void, expired approval reverts to standard hours) and a Beijing HR bureau page. A link is given but the details are unverified. The HR bureau page matches the key's 2019 case.",
+   "Says 10月3日恰逢周六 and the company may 按补假日折算, swapping a 300% day with a 200% day. This is confusing and unnecessary, because the key treats 3日 as a statutory holiday. The total stays 7034.48, so the arithmetic is not wrong.",
+   "Says 考勤记录单位有保存义务 without any source.",
+   "Treats 没审批 as established fact. It never suggests checking whether the company holds an approval covering the dispatcher role, which the key's next step asks for."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 京劳社资发〔2005〕94号 as part of Beijing's administrative-permit regime. I could not verify the number or what it covers, so it is unverifiable.",
+   "Gives a specific scenario-B figure: if all 32 hours are cycle overtime, about 2482.76, total about 6206.90. The arithmetic checks (413.7931 x 1.5 x 32 = 2482.76), but the key says the 150% amount cannot be computed from the facts given. The figure is hedged as a maximum, so this is a minor deduction.",
+   "Suggests 近12个月平均应发工资 as the overtime base. This is an unsourced argument and may not match Beijing's rule of using the contract-agreed wage.",
+   "Gives retaliation (2N damages) and 加付50%至100%赔偿金 without citing articles. These are plausible but unverified, and they lengthen the answer beyond what was asked.",
+   "Does not state the basis for 21.75 (人社部发〔2025〕2号), though the 413.79 figure is right."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the baited premise at the start. Both reach the key's figures (413.79 daily wage; 3724.14 + 3310.34 = 7034.48, paid on top of the 9000 salary). Both say the 300% holiday pay survives even a valid comprehensive-hours approval. A cites the 2025 No. 2 basis for 21.75, 157号 articles 15-18, and the Beijing HR bureau principle more specifically. A omits the make-up-day clarification, any step to verify whether an approval exists, the free arbitration point, and a clear scenario-B result. B names 9月20日 and 10月10日 as make-up workdays, gives the scenario-B floor of 3724.14, and tells her to ask the company for the approval document or check with 12333. B also covers evidence, negotiation, complaint, free arbitration and the limitation period. B is longer, adds a hypothetical 150% figure that the key discourages, and does not state the 21.75 basis. Overall B covers more of the key's actionable points, so it wins by a slight margin."
+}

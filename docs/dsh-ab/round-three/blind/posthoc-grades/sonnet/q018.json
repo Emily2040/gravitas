@@ -1,0 +1,57 @@
+{
+ "pair": "q018",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the 共济 funds can also pay the mother's 居民医保 personal premium; the key says Anhui had not opened that as of 10-20 (expected November), so this is a listed trap and wrong",
+   "Table range '约1200-2000' for 慢特病 and headline '0-2000元' are wide, and the upper end rests on speculation that Hefei's cap 'may approach 2000'; unverifiable",
+   "Hefei 70%/360元 and Tongling 50%/200元 for 两病 are not in the key; links given but I could not open them (web fetch failed)",
+   "Wuhu 2026 慢特病 60%, cap 2500, deductible 300 gives 1260; the arithmetic (2400-300)x0.6=1260 is right, but the policy figures are unverified",
+   "Alipay mini-program / counter route and '2.0 额度冻结、实时结算' are plausible but unverified",
+   "'很多集采降压药月费可降到十几元到几十元' is an unsourced generalisation",
+   "Cited links (china.com.cn, sina.com.cn, hospital site) could not be checked"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Table gives 两病 reimbursement 360元 with no stated source; the text cites Wuhu 350元 and Bengbu 普通门诊 180元, so 360 is unlabelled and inconsistent with its own examples",
+   "Headline '居民医保报1230元,家里承担1170元' uses Bengbu figures (deductible 350, 60%, cap 2000); arithmetic (2400-350)x0.6=1230 is right and it is labelled as Bengbu, but it is a fairly firm number resting on assumptions (慢特病 approval, all drugs on catalogue, pharmacy qualifies)",
+   "'如果苏州要求账户先保留2000元' is an unverifiable Suzhou rule, though hedged with 'if'",
+   "'2024年12月在苏州启动跨省共济;2025年1月安徽已全省开通' fits the key's 'before March 2025', but I could not open the cited NHSA pages to confirm exact dates",
+   "Penalty wording (退回资金、暂停联网结算3到12个月、骗保罚2到5倍) matches my knowledge of the 条例 (Articles 40-41); the article number is not given",
+   "'签个人承诺书' and '亲情账户出示妈妈的医保码' are plausible app steps but unverified",
+   "Bengbu and Wuhu limits and deductibles are cited with links I could not check",
+   "'2024年7月' for the 近亲属 expansion is plausible but unverified"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both open by correcting the premise and give the right distinction that the money can be shared but the card or code cannot. Both compute 2400 yuan a year, say pharmacy purchases are generally not reimbursed, and give city-labelled examples with a deductible and cap. A gives the document numbers, 医保发〔2025〕35号 and the 2026-10-16 national launch, so it is stronger on key points 1 and 2. But A also says 共济 funds can pay the mother's 居民医保 premium, which the key lists as a trap because Anhui had not opened that, and it offers a wide 0-2000 range partly on speculation. B has no named trap errors, correctly spells out the 条例 consequences for 冒名就医, and asks for the mother's city. It does lack the national rollout details and gives a firmer 1230 headline, taken from Bengbu, plus an unsourced 360 figure and a hedged 2000-retention claim. Net: a slight edge to B."
+}

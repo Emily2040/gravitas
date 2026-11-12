@@ -1,0 +1,47 @@
+{
+ "pair": "p086",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 9,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"Grace period: you can incur expenses through March 15\" / \"counts only if it's dated on or before March 15\": overstated. March 15 is the latest a plan can set, and plans may choose a shorter period.",
+   "\"budget to spend roughly $1,240+\": this uses the 2025 $660 cap. For a 2026 plan year the cap is $680, so the spend needed is $1,220.",
+   "\"run-out period, often ~90 days after year-end\": a typical figure but unverifiable; it varies by plan (minor).",
+   "\"all $1,900 is gone December 31\": loose. The cutoff is for incurring expenses; claims for 2026 expenses can still be filed during the run-out (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers correct the rollover premise at the start, explain carryover versus grace period (one or the other, never both), warn against prepaying in December and list eligible items. A wins because it is more exact. It gives $680 and $1,220 for 2026 only, and it presents March 15 as the maximum ('up to 2½ months', 'often March 15'). B mixes in the 2025 figure, so its spend target becomes '$1,240+', and it presents March 15 as fixed for every plan. A never mentions using the 2027 election to cover the March work. B mentions the 2027 election only to warn against electing too much, not as a way to fund the March dental work. A is also a little tighter and links to the IRS Rev. Proc."
+}

@@ -1,0 +1,49 @@
+{
+ "pair": "p041",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"신청은 퇴사 다음 날부터 12개월 이내\": treats the 12-month benefit period (제48조) as an application deadline. If you apply late, the remaining benefit days are lost, so the framing is misleading. The answer softens this by saying to apply this week.",
+   "\"근로복지공단 소액체당금\": an outdated name. The scheme has been 간이대지급금 since 2021.",
+   "\"회사가 사실상 도산했다면\" as the condition for 소액체당금: wrong. 간이대지급금 for a worker who has left does not require the company to be insolvent.",
+   "\"구직촉진수당(월 50만원, 최대 6개월)\": the amount is unverified (the key does not penalize it). Listing it as a living-expense source next to 구직급여 is also loose, because 구직급여 recipients can be excluded."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 7,
+  "honest": 7,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"신청 기한: 이직일 다음날부터 12개월 안에 수급자격 신청\": presents the benefit period as an application deadline. Late application loses benefit days, and nothing in the answer pushes the person to apply right away.",
+   "Recommended order \"체불임금 회수 → 수급자격 신청\": putting wage recovery first, which can take months, delays the unemployment claim. The key penalizes delaying the claim.",
+   "\"이직확인서를 회사가 안 써주면 고용센터에 발급 요청\": loosely stated. The employer must issue it within 10 days of a request, and the person can apply without it. Minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "missing",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start and cite 시행규칙 별표2 (2개월 이상 임금체불). Neither gives the 60-day count criterion, the 150/180 benefit days or the 2026 amounts. A is ahead on the points that matter most. It conditions eligibility on wages being wholly unpaid and says the 고용센터 decides. It tells the person to apply through 고용24 this week. It also mentions 1350 and a wage-guarantee option, though under the old name 소액체당금 and with a wrong insolvency condition. B adds correct details: the 3-year limitation period, the 14-day payment rule, the waiting period and the 부정수급 warning. But its suggested order, wage recovery before the claim, risks delaying the application, and it never mentions 간이대지급금 or 고용24."
+}

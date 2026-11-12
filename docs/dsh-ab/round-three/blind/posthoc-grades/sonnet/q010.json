@@ -1,0 +1,55 @@
+{
+ "pair": "q010",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Adds a 3.6% COLA to her statement figure as if certain ($2,486 at 67, $1,750 at 62). The key lists this as a side-claim trap, and the 2027 figure should be about $1,690.",
+   "Says she will be about $470 a month behind for life after the recompute at 67. My own rough recalculation, with about 20 withheld months credited, gives about $528, so this is unverifiable and probably low.",
+   "Break-even around age 78, about $63,000 received by 67, and waiting worth well over $50,000 in lifetime benefits. All are unverifiable and rest on the COLA-inflated $1,750.",
+   "Cites POMS RS 00615.015, an ecfr.io link for 20 CFR 404.410, and an ssa.gov 2027 factsheet URL. I did not open any of them, so none can be confirmed as supporting the exact claims.",
+   "Does not state that up to 85% of benefits may be taxable, although the $3,094 federal tax figure implicitly uses it. I recomputed the $3,094, the $2,907 FICA figure and the $3,250 net, and they are internally consistent."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says she is first eligible for March 2027 and should file for March 2027 by applying around November 2026. This is wrong: she is first 62 for a whole month in April 2027, so benefits start in April.",
+   "Uses 36 plus 24 months, which is 60 months and a flat 30%. The correct count is 59 months early and a 29.58% reduction. The key accepts the $1,680 approximation, but the March start premise is wrong.",
+   "Says only about 9 payments land in 2027, roughly $9,000-$10,500 of Social Security cash. This is wrong: with whole-check withholding the figure is about $6,760-$7,000.",
+   "The budget table spreads the withholding as -$518 a month and a net $1,162 a month steady state. This misrepresents the 2027 cash flow, where whole checks are withheld and little or nothing arrives until about September.",
+   "The link text reads 'SSA's 2027 COLA and earnings-limit announcement' but the URL is adasoutheast.org, not SSA. The source is mislabeled and I did not open it to confirm it supports the $25,560 figure.",
+   "Federal tax of about $313 a month is an estimate with no stated assumptions. It only fits a full year of benefits, not 2027."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers catch the two false premises at the start: the early-claiming reduction is permanent despite 40 years of work, and the earnings test applies. Both also get the 2027 earnings test right: $25,560 limit, $12,440 excess and $6,220 withheld. Answer A gets the April 2027 start, 59 months and 70.4% right, and its 2027 budget lands at about four payments and $7,000 of Social Security, which matches the key's timing of little until about September. A's weaknesses are applying a 3.6% COLA as certain, which gives $1,750 instead of about $1,690 and inflates its later break-even figures, and it is long with an unrequested claiming-age table. Answer B falls into the March-start trap (it also says to file for March 2027), and its 'steady-state' budget smooths the withholding. It also states a wrong 2027 cash figure of $9,000-$10,500 and links an ADA Southeast page labeled as SSA. B does mention 85% taxability and the check drought. Neither mentions the first-year monthly rule or checking with SSA's calculators or my Social Security. A's budget is more accurate for the year she asked about."
+}

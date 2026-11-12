@@ -1,0 +1,51 @@
+{
+ "pair": "p053",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says a company dismissal before the leave date could mean compensation of about 4 months' wages for 2 years of service. This is speculative and assumes exactly N=2 (2 x 2 months); it is hedged with '约', so unverifiable rather than wrong.",
+   "Suggests the 'no overtime pay' wording may mean unpaid overtime that supports a 第三十八条 constructive-dismissal claim. This is a conditional aside, not a claim about the facts, and it adds length.",
+   "Cites 《民法典》第二百零一条 through a Guangdong Justice Department reply link instead of the code itself. The article is correctly applied, but the source is second-hand."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Cites 《工资支付暂行规定》第十六条 for a 20% monthly deduction cap with a minimum-wage floor. I believe the article is accurate (from my own knowledge, not checked online), but it conflicts with the key's framing under 第十五条 (wages can only be deducted as the law allows). It also sits awkwardly beside 'only through arbitration'.",
+   "Says the company chooses between making you take the leave and paying cash, and 'it is not you who picks'. This is overstated: 《职工带薪年休假条例》第五条 requires the employer to take the employee's wishes into account.",
+   "Says an EMS return slip and delivery record count as proof of delivery when the company refuses to accept. This is generally accepted in practice but unsourced, so unverifiable.",
+   "Says the arbitration limitation period for earlier years' leave runs 'from the end of the leave year or from departure, varying by region'. This is vague and unsourced."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by rejecting the 60-day and approval clauses. Both give 25 November 2026 (last working day) and 26 November as the first free day. Both work the leave out correctly: 329 days, 4.51 rounds down to 4 days, 551.72 yuan a day, and 4,413.79 yuan as the extra 200% with the 300% breakdown shown. Both write the letter as a notice and give delivery-evidence steps. Neither mentions the Shanghai and Jiangsu exceptions, the Zhejiang position, 劳办发〔1995〕324号 or 人社部发〔2025〕2号. A covers more of the key's legal basis: 第二十五条 (违约金 only for service period and non-compete), 《民法典》第二百零一条 with the day-by-day count, and 实施办法 第十一条, 第十二条 and 第十八条. I checked 第十至十二条 and 第十八条 against gov.cn and A's statements, including the written-waiver point, are right. B skips 第二十五条 and 第二百零一条, and its 第十六条 20% cap muddies the \"wage deduction is illegal\" point. Both are long. A adds some speculative extras but flags its assumptions. The gap is slight, in A's favour."
+}

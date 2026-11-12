@@ -1,0 +1,56 @@
+{
+ "pair": "p048",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Exam '20分钟' time limit: not in key; plausible and backed by a cited Beijing link, but not verified here",
+   "'每次不少于5分钟' minimum per study session: not in key; a local-guide detail, unverifiable as a national rule",
+   "Art. 26 paraphrase includes vehicles '未注销' (not deregistered): the key gives only 'overdue inspection'; may not match the article's wording",
+   "'一周内做完时间够': implies it can be done within the week; review time has no official figure (hedged: 'review and retakes take extra time')",
+   "12123 operating-guide link dated 2026-02 (beijing.gov.cn/...t20260228_4545529.html): checkable link, but contents not verified"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'在7日内点【前往考试】' (must take the exam within 7 days of finishing study): specific deadline not in key or the national rule; unverifiable",
+   "'每题限时60秒': per-question time limit not in key; unverifiable",
+   "'一般可在24小时内补考': retake time window not in key; unverifiable and possibly reversed (retake after vs within 24 hours)",
+   "'考试前后都有人脸识别': unverifiable app detail",
+   "'每天减1分……6天完成，正好适合这周': leans into the key's trap ('one per day' / 'can surely finish this week'); review time has no official figure, only partly hedged by '若系统允许'",
+   "'建议预留5.5～7小时；补考一次多加约20分钟': invented estimate with no source",
+   "'列入黑名单' as a penalty for proxy study: unverifiable wording; the order revokes the reduction and restores the points",
+   "Eligibility list leaves out the three-cycle bar (drunk driving, hit-and-run, buying or selling points), so a reader may wrongly think they qualify",
+   "Cites thepaper.cn (a media site) as a basis for the procedure: not an official source"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying the reduction is capped at 6 points (10 goes to 4), work out 3 hours of study plus up to 2 hours of exams, explain that the points clear on the reset date anyway, and give the 4+8=12 risk. All their arithmetic checks out. A states the clearing insight more sharply ('even without 学法减分 the 10 points clear; reducing only widens the buffer from 2 to 8'). It also gives the full Art. 26 bar list, including the three-cycle drunk-driving/hit-and-run/point-trading bar, and adds fewer unverifiable specifics. B covers on-site study and public-service activities and the 2-retake limit, all of which A leaves out. But B adds several unsourced procedural specifics (a 7-day exam window, 60 seconds per question, a 24-hour retake window) and a 'one point a day, done this week' schedule that leans into the key's trap. Overall A is slightly more reliable."
+}

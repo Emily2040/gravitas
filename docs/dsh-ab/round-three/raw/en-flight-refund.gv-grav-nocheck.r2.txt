@@ -1,0 +1,28 @@
+Before you send anything: the agent's explanation was wrong, and it's worth $412.
+
+Weather doesn't remove your refund right. Under DOT's refund rule, when a flight is cancelled and you don't take the rebooking, you're entitled to a refund to your original payment method — and DOT states its policy "applies irrespective of the reason for a cancellation" ([final rule, 89 FR 32760](https://www.govinfo.gov/content/pkg/FR-2024-04-26/html/2024-07177.htm)). A next-day-afternoon rebooking is also a "significant change" on its own. So the credit is your choice, not your only option. If you'd rather have the $412 back, don't send the message below — replace the credit paragraph with: *"I am declining the rebooking and request a full refund of $412 to my original form of payment, as required under 14 CFR part 260."*
+
+If you still want the credit, here's the message:
+
+---
+
+**Subject:** Travel credit for cancelled flight UA [flight number], [date] — confirmation [record locator]
+
+Dear United Customer Care,
+
+My flight from Chicago O'Hare to Denver on [date] (confirmation [______]) was cancelled that morning because of thunderstorms. United rebooked me for the following afternoon, but the meeting I was traveling to was that day, so the rebooking didn't work for me and I did not travel.
+
+I'd like to accept a travel credit for the full value of the ticket, $412. Please confirm in writing:
+
+- that the credit is valid for at least 12 months from the date it is issued, not from the original ticket date;
+- the credit code or PIN and its exact expiration date;
+- that I can apply it to any United flight booked on united.com or the United app.
+
+Thank you,
+[Name]
+[MileagePlus number, if you have one]
+[Email and phone]
+
+---
+
+That "from the date it is issued" wording matters: United's Future Flight Credits can expire on a **travel-by** date tied to your original ticket date, so the printed date may be earlier than a year from now ([United travel credits](https://www.united.com/en/us/fly/travel/trip-planning/travel-credit.html)). Get the exact date in writing either way.

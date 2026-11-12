@@ -1,0 +1,46 @@
+{
+ "pair": "p029",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'有的网点可能要求所有第一顺序继承人都到场' and asking for both mother's and child's ID: the 2021 notice names a single applicant and does not require all heirs, so this leans toward the key's trap.",
+   "'不少公证处会设最低收费，常见200元/件左右…准备两三百元': unverifiable as a general figure. The Jingning standard it cites (I opened the gsjn.gov.cn link: 20万元以下不超过1.2%) lists no minimum, and the key gives at most 200元."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'2% 是不少地方还在用的老标准…也有地方仍按 2% 执行': contradicts the key (no official standard uses 2%). A web search turned up a 2013 NDRC/MOF notice that cut the old 2% to at most 1.2%, so a current 2% is unsupported.",
+   "'2021 年国家发改委、司法部发文后，不少省份调整了计价方式': no document is cited, so this is unverifiable. The national cut I found was 2013, by NDRC and the Ministry of Finance.",
+   "Leads its fee section with '按 2% 算：8600 × 2% = 172 元', treating the counter's 2% as a real basis (the arithmetic is right).",
+   "'这种情况投诉通常能推动解决': an unsupported generalization (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "wrong",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the 'must notarize' premise with the 2021 and 2024 notices and the 5万 same-bank limit. Both list the right no-notary materials, the one-time withdrawal and account closure, and the 12378 complaint line. B states the single-applicant rule correctly, adds a script to read at the counter, and flags the transfer-inheritance risk. However, B says some places still charge 2% and cites an unsourced 2021 NDRC/MOJ document, which contradicts the key on the fee point. A calls the 2% figure out of line with published standards and backs this with an official fee example I verified (1.2%, about 103元). A's own weakness is a hedge that some branches may want every heir present. A is also somewhat longer, so it wins only by a slight margin."
+}

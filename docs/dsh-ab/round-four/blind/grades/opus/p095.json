@@ -1,0 +1,46 @@
+{
+ "pair": "p095",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 8,
+  "useful": 6,
+  "concise": 8,
+  "added_claim_errors": [
+   "「付与日数は就業規則か給与明細で確認できます」: the legal minimum is fixed by law (5 days under Enforcement Rule Art. 24-3), and many payslips do not show leave balances, so this deferral is unreliable (minor; judged from my own knowledge)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "missing",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "The LINE draft states 「10月1日から有給休暇が付与されています」 as fact, although the 80% attendance condition is unconfirmed. The main text already says the leave depends on it (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "missing",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the manager's claim at the start. B says plainly 「法律上は誤りです」, while A only says 「正確ではありません」 and hedges with 「可能性が高い」. B gives the specifics from the key: leave granted on 10月1日, 5 days, and the 80% attendance condition. A never states the number of days and sends the person to 就業規則 or 給与明細 instead, and it never mentions the 80% condition. B's LINE draft asks politely to take 有給休暇 on a named date, as the key wants. A's main draft deliberately leaves 有給 out and offers it only as an optional extra line. Neither answer explains the company's right to move the date (時季変更権). Both point to 労働基準監督署 or 総合労働相談コーナー if the manager refuses again."
+}

@@ -1,0 +1,55 @@
+{
+ "pair": "p067",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Liwan notice link (jczgkk path) returns 404 when opened; the working URL uses jczwgk, so the cited source cannot be checked as given. The 40 yuan and 40-day figures do match the working page.",
+   "Says the temporary ID in the hometown route is usually available 'on the spot or within 3 days'. Unverified, close to the key's 'same day' trap; the key says the Guangzhou temporary ID is not same-day.",
+   "Says Henan is not on the extra-wait list (Hunan, Jiangxi, Shanghai, Tianjin, Xinjiang) so the temporary ID 'can be applied for at the same time'. This contradicts its own line that non-Guangzhou hukou holders wait for the hukou place to issue (about 5 working days); the Baiyun page (opened) does not explicitly confirm Henan can file simultaneously.",
+   "Says the paper temporary boarding certificate is free and valid for the day. The key says there is no official basis for 'definitely free'.",
+   "Says the 12306 QR code refreshes every 60 seconds and gives a menu path (Home > Warm service > temporary ID). Unverifiable.",
+   "Says Guangzhou has accepted non-local-hukou replacement since March 2017 and supported remote loss reporting since 2016. Not covered by the key, not checked.",
+   "Says the temporary ID can only be handled at the district centre where the permanent ID was applied for. Unverified.",
+   "Lists the hukou book first among documents to bring (though 'any one ID-verifying document'); the Liwan page lists only the photo receipt for adults.",
+   "Gives photo receipt cost as 20-30 yuan; the key says it varies by place, so this is an unverified estimate."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Calls the original hukou book 'the most critical document' for replacement and tells the user to have family courier it. The Liwan page (opened) lists only the photo receipt for adults; the key lists 'must have the hukou book' as a trap.",
+   "Says the new card arrives 'around mid-to-late November'. This contradicts its own 40-day commitment (applying about Oct 23 plus 40 days is about Dec 2). Its 'about 30 days' for the hometown route is also unverified.",
+   "Says 'nationwide remote handling takes at most 45 days'. Unverified, not in the key.",
+   "Says EMS delivery costs 18 yuan cash-on-delivery within the province. Unverified.",
+   "Says the paper temporary certificate is free and 'usually valid for the day'. The key says there is no official basis for 'definitely free'.",
+   "Says a hometown temporary ID is issued 'within 3 days'. Unverified.",
+   "Says the 12306 advance-sale period is 15 days and gives a menu path ('Warm service' > temporary identity certificate). Unverified here, though plausible.",
+   "Cites a CCTV/gmw article dated 2026-10-05 and a bendibao fee page as sources. Not opened, cannot be checked from the answer."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting both false premises (replacement in Guangzhou, and 12306 e-certificate or station paper certificate for boarding). Both give the correct 40 yuan fee, 10 yuan temporary ID and the 24-hour, 6-per-month limit. A gives more policy specifics (2017 nationwide rollout), answers the hometown case directly, and avoids making the hukou book mandatory. But it is longer and repetitive, contradicts itself on simultaneous temporary-ID application, says 'on the spot or within 3 days' for a hometown temporary ID, and has one broken citation link. B is tighter and gets the temporary-ID timing right (about 5 working days after Henan police issue it, too tight for Oct 30-31). But it calls the hukou book the 'most critical' document and tells the user to courier it, which is a listed key trap, and its 'mid-to-late November' estimate conflicts with its own 40-day figure. The two are close, with A slightly ahead on the trap and specifics and B slightly ahead on concision and temporary-ID timing."
+}

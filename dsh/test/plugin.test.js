@@ -14,14 +14,17 @@ const PRUNER_THRESHOLD = 8192
 
 function fakeCtx() {
   const sections = []
+  const listeners = {}
   let factory
   return {
     sections,
+    listeners,
     provider: () => factory(),
     ctx: {
       skills: { registerProvider: (f) => { factory = f } },
       systemPrompt: { section: (s) => { sections.push(s); return () => {} } },
       effect: (fn) => fn(),
+      on: (name, fn) => { (listeners[name] ??= []).push(fn); return () => {} },
       logger: { warn: (m) => { throw new Error(m) } },
     },
   }
@@ -91,6 +94,9 @@ test('language: config wins, then the system locale, then English', () => {
   assert.throws(() => plugin.resolveLanguage('zh'), /language must be/)
   assert.throws(() => plugin.readConfig({ langauge: 'ja' }), /unknown config key/)
   assert.throws(() => plugin.readConfig({ alwaysOnRule: 'yes' }), /true or false/)
+  assert.throws(() => plugin.readConfig({ claimCheck: 'on' }), /claimCheck must be true or false/)
+  assert.equal(plugin.readConfig({}).claimCheck, false, 'the claim check is opt-in')
+  assert.equal(plugin.readConfig({ claimCheck: true }).claimCheck, true)
 })
 
 for (const lang of plugin.LANGUAGES) {
@@ -119,10 +125,140 @@ for (const lang of plugin.LANGUAGES) {
   })
 }
 
+test('ruleFile: your own rule replaces the built-in one; the DSH tool note is still appended', async () => {
+  const { mkdtempSync, writeFileSync, rmSync } = await import('node:fs')
+  const { tmpdir } = await import('node:os')
+  const dir = mkdtempSync(path.join(tmpdir(), 'gravitas-rule-'))
+  const file = path.join(dir, 'AGENTS.md')
+  writeFileSync(file, '# My rule\n\nLead with the decision.\n')
+  try {
+    const { ctx, sections } = fakeCtx()
+    await plugin.apply(ctx, { language: 'en', alwaysOnRule: true, ruleFile: file })
+    assert.equal(sections.length, 1)
+    assert.match(sections[0].text, /^# My rule\n\nLead with the decision\.\n\n/)
+    assert.ok(sections[0].text.includes('DeepSeek Harness'), 'tool note appended')
+    // GRAVITAS_RULE_LOG records the hash of the exact text placed in the system prompt.
+    const log = path.join(dir, 'rule.jsonl')
+    process.env.GRAVITAS_RULE_LOG = log
+    try {
+      const again = fakeCtx()
+      await plugin.apply(again.ctx, { language: 'en', alwaysOnRule: true, ruleFile: file })
+      const rec = JSON.parse(readFileSync(log, 'utf8').trim())
+      const { createHash } = await import('node:crypto')
+      assert.equal(rec.sha256, createHash('sha256').update(again.sections[0].text).digest('hex'))
+      assert.equal(rec.ruleFile, file)
+      assert.equal(rec.language, 'en')
+    } finally {
+      delete process.env.GRAVITAS_RULE_LOG
+    }
+    assert.throws(() => plugin.readConfig({ ruleFile: 'relative/AGENTS.md' }), /absolute path/)
+    assert.throws(() => plugin.readConfig({ ruleFile: 7 }), /absolute path/)
+  } finally {
+    rmSync(dir, { recursive: true, force: true })
+  }
+})
+
 test('rule can be turned off', async () => {
   const { ctx, sections } = fakeCtx()
   await plugin.apply(ctx, { language: 'en', alwaysOnRule: false })
   assert.equal(sections.length, 0)
+})
+
+/** A fake root session and agent, and a way to feed it session events. */
+function fakeTurn(listeners, { origin } = {}) {
+  const session = { id: 's1', header: { origin } }
+  const steered = []
+  const agent = { session, steer: (m) => steered.push(m) }
+  const emit = (type, data, extra = {}) => listeners['session/event'].forEach((fn) => fn(session, { type, data, ...extra }))
+  const stop = (turn) => Promise.all(listeners['agent/turn-stopping'].map((fn) => fn({ agent, turn, signal: { aborted: false } })))
+  return { session, agent, steered, emit, stop }
+}
+const text = (t) => [{ type: 'text', text: t }]
+
+test('claim check: steers once with the unsupported specifics, then lets the revision close the turn', async () => {
+  const { ctx, listeners } = fakeCtx()
+  await plugin.apply(ctx, { language: 'zh-CN', alwaysOnRule: true, claimCheck: true })
+  const t = fakeTurn(listeners)
+  t.emit('turn/start', { turn: 1 })
+  t.emit('user/message', { role: 'user', content: text('我月薪6525元，国庆加班怎么算？'), source: { kind: 'user' } })
+  t.emit('tool/result', { turn: 1, message: { content: text('劳动法第四十四条：支付不低于工资的百分之三百的工资报酬。21.75') } }, { surfaceOp: 'append' })
+  t.emit('assistant/message', { turn: 1, step: 2, message: { content: text('日工资 6525 ÷ 21.75 = 300元，依据第四十四条。可打 020-12345678 咨询。') } })
+  await t.stop(1)
+  assert.equal(t.steered.length, 1)
+  const m = t.steered[0]
+  assert.equal(m.role, 'user')
+  assert.equal(m.source.kind, plugin.CLAIM_CHECK_KIND)
+  assert.ok(m.id && m.source.summary.length <= 120)
+  const body = m.content[0].text
+  assert.match(body, /020-12345678/)
+  assert.doesNotMatch(body, /6525|21\.75|300元|第四十四条/, 'supported and computed specifics are not listed')
+  assert.match(body, /完整的最终回复/)
+  t.emit('assistant/message', { turn: 1, step: 3, message: { content: text('日工资 6525 ÷ 21.75 = 300元。可打当地12333问。') } })
+  await t.stop(1)
+  assert.equal(t.steered.length, 1, 'one steer per turn')
+})
+
+test('claim check: an echoed shell line, a file the model wrote, or a subagent report is not evidence', async () => {
+  const { ctx, listeners } = fakeCtx()
+  await plugin.apply(ctx, { language: 'en', alwaysOnRule: true, claimCheck: true })
+  const t = fakeTurn(listeners)
+  t.emit('turn/start', { turn: 1 })
+  t.emit('user/message', { role: 'user', content: text('Who do I call?'), source: { kind: 'user' } })
+  t.emit('tool/call', { turn: 1, callId: 'c1', name: 'pwsh', arguments: JSON.stringify({ command: 'Write-Output "1-800-555-0100"' }) })
+  t.emit('tool/result', { turn: 1, message: { toolCallId: 'c1', content: text('1-800-555-0100') } }, { surfaceOp: 'append' })
+  t.emit('tool/call', { turn: 1, callId: 'c2', name: 'write', arguments: JSON.stringify({ path: 'notes.txt', content: 'fee $95' }) })
+  t.emit('tool/call', { turn: 1, callId: 'c3', name: 'read', arguments: JSON.stringify({ path: 'notes.txt' }) })
+  t.emit('tool/result', { turn: 1, message: { toolCallId: 'c3', content: text('fee $95') } }, { surfaceOp: 'append' })
+  t.emit('user/message', { role: 'user', content: text('Its closing message: the line is 1-800-555-0199'), source: { kind: 'subagent-settled' } })
+  t.emit('assistant/message', { turn: 1, step: 4, message: { content: text('Call 1-800-555-0100 or 1-800-555-0199; the fee is $95.') } })
+  await t.stop(1)
+  assert.equal(t.steered.length, 1)
+  const body = t.steered[0].content[0].text
+  for (const s of ['1-800-555-0100', '1-800-555-0199', '$95']) assert.ok(body.includes(s), s)
+})
+
+test('claim check: GRAVITAS_CLAIM_LOG records the draft check and what the revision still lacks', async () => {
+  const { mkdtempSync, readFileSync: read, rmSync } = await import('node:fs')
+  const { tmpdir } = await import('node:os')
+  const dir = mkdtempSync(path.join(tmpdir(), 'gravitas-claims-'))
+  const file = path.join(dir, 'claims.jsonl')
+  process.env.GRAVITAS_CLAIM_LOG = file
+  try {
+    const { ctx, listeners } = fakeCtx()
+    await plugin.apply(ctx, { language: 'en', alwaysOnRule: true, claimCheck: true })
+    const t = fakeTurn(listeners)
+    t.emit('turn/start', { turn: 1 })
+    t.emit('user/message', { role: 'user', content: text('My ticket was $412.'), source: { kind: 'user' } })
+    t.emit('assistant/message', { turn: 1, step: 1, message: { content: text('Call 1-800-555-0100 for the $412.') } })
+    await t.stop(1)
+    t.emit('assistant/message', { turn: 1, step: 2, message: { content: text('Ask the airline for the $412.') } })
+    await t.stop(1)
+    const rows = read(file, 'utf8').trim().split('\n').map((l) => JSON.parse(l))
+    assert.deepEqual(rows.map((r) => [r.phase, r.flagged.length]), [['draft', 1], ['revision', 0]])
+    assert.equal(rows[0].steered, true)
+    assert.equal(rows[0].flagged[0].raw, '1-800-555-0100')
+  } finally {
+    delete process.env.GRAVITAS_CLAIM_LOG
+    rmSync(dir, { recursive: true, force: true })
+  }
+})
+
+test('claim check: no steer when every specific is supported, for subagents, or when switched off', async () => {
+  const quiet = async (config, origin, answer) => {
+    const { ctx, listeners } = fakeCtx()
+    await plugin.apply(ctx, { language: 'en', alwaysOnRule: true, claimCheck: true, ...config })
+    if (!listeners['agent/turn-stopping']) return 0
+    const t = fakeTurn(listeners, { origin })
+    t.emit('turn/start', { turn: 1 })
+    t.emit('user/message', { role: 'user', content: text('My ticket was $412.'), source: { kind: 'user' } })
+    t.emit('assistant/message', { turn: 1, step: 1, message: { content: text(answer) } })
+    await t.stop(1)
+    return t.steered.length
+  }
+  assert.equal(await quiet({}, undefined, 'Ask for the $412 back.'), 0)
+  assert.equal(await quiet({}, 'subagent', 'Call 1-800-555-0100.'), 0)
+  assert.equal(await quiet({ claimCheck: false }, undefined, 'Call 1-800-555-0100.'), 0)
+  assert.equal(await quiet({}, undefined, 'Call 1-800-555-0100.'), 1)
 })
 
 test('platform notes name the same tools in every language', () => {

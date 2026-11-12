@@ -1,0 +1,57 @@
+{
+ "pair": "p062",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Adds the 3.6% January COLA to her age-62 estimate ($1,680 to $1,740) as certain. The key flags this as a trap, and COLAs do not apply before her eligibility year, so it inflates every Social Security figure.",
+   "'Budget ~$950/month average from Social Security in 2027' does not match its own $9,440 total ($9,440/12 is about $787).",
+   "'Cut your 2027 Social Security income by roughly $11,000': by its own figures the Social Security shortfall is $21,600 - $9,440 = $12,160. $11,000 is the net total gap.",
+   "'~$52,000 you were expecting' is not explained and only works as a net figure. Gross would be $38,000 + $21,600 = $59,600.",
+   "'About $2,900/month in 2032 dollars' if she waits to 67 is an unverifiable projection that assumes about 3.9% a year in COLAs.",
+   "'Permanent cut ends up... roughly 22%' is unverifiable. It depends on how many months get withheld through 2031, which needs her to keep working.",
+   "Break-even 'around age 79-80' is stated as fact but is unsourced (judged from my own knowledge as plausible).",
+   "The $25,560 limit is cited to adasoutheast.org, a third-party page, not SSA. The number matches the key."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Adds the 3.6% January COLA to her age-62 estimate ($1,680 x 1.036 = $1,740) as certain. The key flags this as a trap, and COLAs do not apply before her eligibility year.",
+   "'Budget ~$950/month average from Social Security in 2027' does not match its own $9,440 total ($9,440/12 is about $787).",
+   "'Cut your 2027 Social Security income by roughly $11,000': by its own figures the Social Security shortfall is $21,600 - $9,440 = $12,160. $11,000 is the net total gap.",
+   "Break-even 'around age 79-80' is unsourced, though hedged as 'on my arithmetic'.",
+   "The $25,560 limit is cited to adasoutheast.org, a third-party page, not SSA. The number matches the key."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word for word the same. Both correct both premises at the start, use the April 2027 start, the $25,560 limit and $6,220 withheld, say that withheld months are credited back at 67, and note the 85% tax exposure. Both fall into the same COLA trap ($1,740 instead of about $1,690) and share the inconsistent $950-a-month and $11,000 figures. B wins narrowly: it drops A's unverifiable extras ($2,900 a month in 2032 dollars, the 'roughly 22%' permanent cut), hedges the break-even age, shows its arithmetic, and labels the $52,000 as net. Neither gives a true month-by-month table or mentions the first-year monthly rule."
+}

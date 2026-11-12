@@ -1,0 +1,49 @@
+{
+ "pair": "p061",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the small-claims filing fee is 50 yuan: likely wrong. Small claims runs under the simple procedure, and 诉讼费用交纳办法 Art. 16 halves the fee, which usually makes it 25 yuan (judged from my own knowledge).",
+   "Details of the Henan Xinye case (about 50,000 yuan claimed, form said 'clothing', 13,000 yuan awarded including freight): a link is given, but I did not open it, so the figures are unverified.",
+   "Says writing 'iPhone 15' on the waybill fully meets the duty to disclose: overstated. Value was still not declared, so a court could still reduce the award."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 10,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 民法典 第四百九十六条或第四百九十七条 for the duty to point out the format term: loose. Art. 497 makes unfair exemption clauses invalid; the duty to point out and explain is in Art. 496 alone.",
+   "Says 12305 has been merged into 12345 in some regions: no source given, unverifiable.",
+   "Says the small-claims filing fee is 50 yuan: likely wrong. Small claims runs under the simple procedure, and 诉讼费用交纳办法 Art. 16 halves the fee, which usually makes it 25 yuan (judged from my own knowledge).",
+   "Details of the Henan Xinye case (50,000 yuan claimed, 13,000 yuan awarded): a link is given, but I did not open it, so the figures are unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word for word the same. Both catch the false premise in the first line, correctly explain that the Postal Law's Art. 47 triple-postage cap does not apply to express parcels (Arts. 45 and 59), cite 快递暂行条例 Art. 28, write a polite but firm reply asking for 3999 yuan, and warn that a court may cut the award. Neither cites Civil Code Arts. 832/833 or Art. 506, and neither mentions the one-year deadline for filing a complaint. A comes out slightly ahead for three reasons. It cites Art. 496 accurately, where B writes '496 or 497'. It gives the national postal complaint website (sswz.spb.gov.cn) as a second route. B instead adds an unsourced claim that 12305 has been merged into 12345 in some regions."
+}

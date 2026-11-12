@@ -1,0 +1,51 @@
+{
+ "pair": "p065",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 7,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites a Ulsan Nam-gu dong page and a scourt.go.kr PDF as sources for the fee and the next-day 0:00 rule. I did not open either link, so the support is unverified, and the Ulsan page is a local office for a Seoul home.",
+   "\"확정일자가 없으면 일반 채권자로 밀려 2억 원을 거의 못 건질 수 있습니다\" overstates the outcome. The loss depends on the auction price and the senior claims.",
+   "Step 1 \"나가기 전·도착 직후\" puts the registry re-check right after arrival and never ties it to 잔금. That leaves out the key's \"잔금 전 열람, 변동 시 보류\". A new 근저당 found after paying cannot be undone.",
+   "\"하루 늦으면 그 사이 근저당·경매가 들어올 수 있습니다\" is imprecise. The exposure runs from move-in until 0:00 of the day after the filing, and a same-day 근저당 still outranks. The answer does not say this.",
+   "\"HUG·HF ... 전입신고·확정일자 후 신청 가능\" is generally true but loosely stated. It gives no eligibility or timing conditions."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 8,
+  "useful": 7,
+  "concise": 9,
+  "added_claim_errors": [
+   "Step 4 lists 인터넷등기소 as an equal option for 확정일자 \"같은 날\" with no caveat. An application after 18:00 (even after 16:00) on Friday is dated the next business day, Monday 10-26, so the 확정일자 and the 우선변제권 would slip.",
+   "Step 3 allows 정부24 for the 전입신고 with no note that the filing date for an after-hours online filing is unconfirmed.",
+   "\"계약서 명의자 본인이\" for the 전입신고 is a loosely stated condition. Proxy or household-head rules are not mentioned.",
+   "\"HUG·HF 가입 — 이사 직후\" gives no conditions, such as the requirement for 전입+확정일자 first or the deadline."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers fix the first premise (확정일자 is not optional; 전입신고 gives 대항력 only; 우선변제권 needs 확정일자) and the \"시간 날 때\" premise, give the next-day 0:00 timing, and miss both 최우선변제 (2억 is over the 1억 6,500만 Seoul line) and 임대차 신고. B puts both corrections and the Friday-daytime action in its first paragraph. It is the shorter answer, which fits the request for \"짧게\", and it orders the registry check correctly: once in the morning and again just before 잔금 and the keys. A adds useful detail (600원 fee, documents to bring, keep the 주민등록 in place, 전입세대 열람). But it is longer, relies on source links I could not verify (one an Ulsan office page), and never ties the registry check to 잔금. B's weakness is offering 인터넷등기소 and 정부24 as equal options with no after-hours caveat, and it gives no fee. Because the margins are small on both sides, I give B a slight edge for concision, honesty and the correct pre-잔금 sequence."
+}

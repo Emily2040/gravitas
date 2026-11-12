@@ -1,0 +1,55 @@
+{
+ "pair": "p058",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Multiplies $1,680 by 1.036 'for the January COLA' to get $1,740 as if certain. The key lists adding the 3.6% COLA as a trap: for someone first eligible in 2027 it does not clearly apply to her statement estimate.",
+   "Says she gets 'about five' checks and $9,440 in 2027. Benefits are paid a month late and April-July are withheld, so only about four payments (September-December, about $6,800-$7,000) arrive in calendar 2027. The excess is refunded later and December's benefit arrives in January 2028.",
+   "'Budget ~$950/month average from Social Security in 2027' does not match its own $9,440 a year, which is about $787 a month.",
+   "Opens with 'cut your 2027 Social Security income by roughly $11,000', but on its own figures the Social Security cut is $12,160 ($21,600 - $9,440). $11,000 is the gap in net take-home pay.",
+   "Cites the $25,560 limit through adasoutheast.org, a third-party page 'quoting SSA', rather than an official SSA source. The figure is right but the attribution is secondary."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Adds the 3.6% COLA to the statement figure ($2,486, giving $1,750 at 62) and uses it throughout the budget and the claim-age table. It is hedged only with 'Assuming 2026'. The key lists this as a trap; it should be about $1,690.",
+   "'Your first check arrives in May' is wrong for her case. With the earnings test, the first four checks (April-July benefits) are withheld, so the first payment comes about September. The key lists a wrong payment date given as certain as a trap.",
+   "'Roughly $470/month behind for life' after the recalculation at 67 can't be checked. On B's own assumptions (about 20 withheld months credited back) the gap works out nearer $530.",
+   "'Waiting is likely worth well over $50,000 in lifetime benefits' is unsupported. With a gap of about $470 a month and break-even at 78, reaching $50,000 means living to about 87.",
+   "'From 2028 through 2031... four checks withheld' assumes the earnings limit stays fixed. The limit is indexed upward each year, so withholding falls to about three checks. This is a minor approximation.",
+   "Checked: the POMS RS 00615.015 link resolves to 'How the Day of Birth Affects Benefits' and supports the April start. The ssa.gov 2027 fact sheet link returned 403 and could not be opened, but its figure matches the key. 20 CFR 404.410 is correct from my own knowledge."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct both premises at the start, catch the April start date, and get the 2027 earnings test exactly right ($25,560 limit, $12,440 over, $6,220 withheld). Both also wrongly add the 3.6% COLA to her estimate. B's reduction math is more precise (59 months, 70.4%) and its count of four 2027 payments matches the key, but it gives a wrong first-payment month (May), averages Social Security over the year instead of showing which months get nothing, never says that up to 85% of benefits may be taxable, and never tells her to check her my Social Security account. A shows the month-by-month pattern, notes the 85% taxability, points her to my Social Security, and is somewhat shorter. Against that, A overstates the 2027 cash ($9,440, about five checks) and has a small inconsistency in its monthly average. Overall A covers more of the key points, so it wins slightly."
+}

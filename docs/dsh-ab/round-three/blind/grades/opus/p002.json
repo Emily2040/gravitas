@@ -1,0 +1,57 @@
+{
+ "pair": "p002",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 6,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "Says 6480 small-claims suit costs a 50 yuan fee: under the 诉讼费用交纳办法 the 50 yuan fee is halved for simplified procedure, which small claims belongs to, so it is 25 yuan (own knowledge)",
+   "'你上次被拒，是因为只说了是我儿子充的': makes up what the user said to customer service; the request does not say this",
+   "'50%正好落在行业退费标准里，客服有权限批': no source for an industry refund standard or for what customer service may approve",
+   "Presents 中国互联网协会《未成年人网络游戏服务消费管理要求》 as a settled standard recommending 30%-70%: a web search found the 30-70% figure only in press reports of a 2024 征求意见稿 (draft), and there it is the game company's share when a guardian bypassed controls",
+   "'团体标准里明确允许' account bans or item removal after a refund: unverifiable",
+   "Quotes 《人民法院审理涉未成年人民事案件工作指引》第27条 as saying minors' recharges '应认定无效，网络经营者应当返还款项': the document is real (SPC, 2026-03-18; chinanews full text checked) and art. 27 covers game recharges, but it tells courts to weigh the facts case by case, so the quoted wording is a loose paraphrase",
+   "'普通客服没有退款权限，走普通对话必然收到模板回复': an overclaim with no source",
+   "The draft letter says the child used a payment password he had memorised: the user never said how payment was authorised",
+   "网易客服 95163611: a web search could not confirm this number",
+   "'国内手游大多走微信直付': not true on iPhone, where games mostly charge through Apple in-app purchase (own knowledge)",
+   "Tencent route through the '腾讯客服' official account and a 中国互联网协会调解工作委员会 channel: unverifiable; the key names 腾讯未成年人家长服务平台"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says WeChat 青少年模式 (我→设置→青少年模式) '不限制支付': wrong. The WeChat Pay user manual (pay.weixin.qq.com/doc/user/4021838428, opened) says 未成年人模式, at 我→设置→更多→未成年人模式, can set per-transaction and daily WeChat Pay limits; the menu path is also out of date",
+   "'多数渠道有时间限制，越早越好': hints at deadlines without naming any; unverifiable",
+   "'普通客服的权限和口径就是按实名信息判断': an unverifiable generalisation",
+   "WeChat 安全锁 menu path is sourced to a gmw.cn news article, not an official page: minor, unverifiable"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "B corrects the real-name premise in its first sentence. Its letter matches the key: it asks for the full 6480 first and falls back to at least 70% (4536, arithmetic correct), cites 民法典19/145/157 and the SPC 意见（二）, and lays out the key's complaint path, including the WeChat bill's 对此订单有疑问 entry. A has real strengths: it cites a newer and genuine 2026 SPC 工作指引第27条, and its WeChat menu paths check out against the official manual. But A gives up a full refund before negotiating and caps the ask at 50%. It also leaves out 法发〔2020〕17号, invents why the user was refused, presents a draft standard's 30-70% figure as settled, gets the small-claims fee wrong, and is much longer. B's one clear error is saying WeChat's minor mode cannot limit payments."
+}

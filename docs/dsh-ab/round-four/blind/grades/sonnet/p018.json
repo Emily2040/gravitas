@@ -1,0 +1,50 @@
+{
+ "pair": "p018",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 근로자퇴직급여 보장법 제17조 as the basis of the 연 20% 지연이자, both in the explanation and inside the HR text. The key puts it in 근로기준법 제37조 and 시행령 제17조, so the cited article is wrong and would weaken the message if sent as written.",
+   "Says 퇴직소득세·지방소득세 약 20만~25만 원 would be deducted. The key's estimate is about 9.4만~14.1만 원, and nothing is withheld at payout when the money goes to an IRP, so the figure is wrong and contradicts the answer's own IRP statement.",
+   "Says 미지급 시 3년 이하 징역 또는 3천만 원 이하 벌금. The key says this is the old rule and the penalty is 5년/5천만 원 from 2026.9.18 (minor deduction).",
+   "Says 실무에서는 두 방식이 갈리므로 and advises negotiating on 1,200만 원. The claim about practice is unverifiable and no basis is given."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says 미지급 시 3년 이하 징역 또는 3천만 원 이하 벌금. The key says this is the old rule and the penalty is 5년/5천만 원 from 2026.9.18 (minor deduction).",
+   "Counts the 3 months as 6/20~9/19 (퇴직일 taken as 9/20), where the key's labour-portal basis is 6/21~9/20. Both are 92 days and the result is the same, so the effect is negligible.",
+   "Says non-통상임금 items or a different 입사일 would change the amount only 조금. If the pay is partly non-통상임금, the figure could fall to about 1,024만 원, so this understates the range, though 10,242,000 is shown as the no-floor figure.",
+   "The 참고한 자료 list includes a 법제처 interpretation dated 2026. 5. 26. and a 고용노동부 calculator link. Links are given, but the date and content can't be verified here."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the company at the start (14일, extension only by 당사자 간 합의, 10/4 deadline already passed). Both compute the 평균임금 figure (about 1,023만 or 1,024만 원) and the 통상임금 floor (about 1,200만 원), and both land inside the key's 1,024만~1,202만 range. B's arithmetic checks out: 12,022,000 and 10,242,000 give a gap of about 178만 원, 21 days late, and 6,600원 per day on 1,200만 원. B's HR text covers everything the key asks for: 퇴직일, 14일 and the 10/4 deadline, a request for 지급 일정 and 산정 내역, and IRP account guidance, with no wording that reads as agreeing to an extension. A's text omits IRP, cites the wrong statute (제17조 of the 퇴직급여법) for the 지연이자 inside the message itself, and gives a 퇴직소득세 estimate of 20만~25만 원 that is about double the key's figure and conflicts with the IRP no-withholding rule. A does offer a clear 1,023만~1,200만 range and a sensible fallback sequence, but B is more accurate and more directly usable. Both repeat the old 3년/3천만 원 penalty, which costs each only a minor deduction. Neither names the 노동포털, and both treat the open facts (명세서 구성, 퇴직연금 DB/DC, 연차수당) only loosely."
+}

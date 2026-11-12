@@ -1,0 +1,41 @@
+{
+ "pair": "p022",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 6,
+  "honest": 6,
+  "useful": 5,
+  "concise": 8,
+  "added_claim_errors": [
+   "'in effect since late 2024': the rule took effect June 25, 2024; October 28, 2024 was the compliance date (minor imprecision)",
+   "'United's credits usually run about a year from the original ticket date': a claim about United policy with no link, so unverifiable; it also misleads here, because 14 CFR 260.6(c) requires a credit offered in place of a refund to stay valid at least 5 years"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "missing",
+   "5": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "'United's Future Flight Credits can expire on a travel-by date tied to your original ticket date, so the printed date may be earlier than a year from now': this links to United's page, but it misleads in this case, because a credit offered in place of a refund that is owed must stay valid at least 5 years (14 CFR 260.6(c); I checked the Cornell LII text)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "missing",
+   "5": "vague"
+  }
+ },
+ "reasons": "Both answers correct the weather premise at the start, but both then make their main draft a message that accepts the credit. Both also miss that DOT requires credits offered in place of a refund to last at least 5 years. Instead, both treat 'at least 12 months' as a useful ask and add a misleading claim about United's credit expiring within a year. B quotes the final rule accurately; I confirmed 'applies irrespective of the reason for a cancellation' at 89 FR 32760 on govinfo. B also gives a ready sentence to drop into the message that declines and asks for the $412 refund under 14 CFR part 260. A only offers to write a refund version. A does better on one point: it says plainly that accepting the credit ends the refund right, which B leaves out. Neither gives the 7-business-day / 20-calendar-day refund deadlines."
+}

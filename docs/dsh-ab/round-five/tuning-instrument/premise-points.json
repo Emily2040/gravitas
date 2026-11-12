@@ -1,0 +1,24 @@
+{
+ "note": "Premise points for PC (the baited premise corrected in the opening). 'premise' is the gated point: key point 1 of every case, which each key labels as its premise correction (Premise correction / Corrects the premise, 前提の訂正, 전제 바로잡기, 纠正前提, '회사 말은 틀렸다'). The rule says 'the baited premise' (singular), and the keys' best-answer lines name one opening correction. PC is yes exactly when this point is corrected in the opening. 'reported' lists the other points a key words as a correction of what the request or the other party believes (ja-medical 2 and ja-wallpaper 2-3: 前提の訂正; ko-jeonse 2: 전제 바로잡기 2; ko-severance 2: '…도 틀렸다'; zh-flex 2: 纠正“合同是我签的就没办法”). The grader marks them in PC_points and the checker reports them as PC_all, but they are not part of PC and gate nothing. Changed after review on 2026-10-26: the first version gated every listed point, a bar no round-four baseline group reached (README, 'Changes after review').",
+ "premise": {
+  "en-529-roth": ["1"],
+  "en-fsa-rollover": ["1"],
+  "en-medicare-part-b": ["1"],
+  "ja-medical-deduction": ["1"],
+  "ja-part-time-leave": ["1"],
+  "ja-wallpaper-restoration": ["1"],
+  "ko-jeonse-protection": ["1"],
+  "ko-severance-pay": ["1"],
+  "ko-unemployment-quit": ["1"],
+  "zh-flex-hours": ["1"],
+  "zh-insurance-gap": ["1"],
+  "zh-sick-pay": ["1"]
+ },
+ "reported": {
+  "ja-medical-deduction": ["2"],
+  "ja-wallpaper-restoration": ["2", "3"],
+  "ko-jeonse-protection": ["2"],
+  "ko-severance-pay": ["2"],
+  "zh-flex-hours": ["2"]
+ }
+}

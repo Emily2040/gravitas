@@ -1,0 +1,46 @@
+{
+  "pair": "p028",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+    "correct": 9,
+    "trap": 9,
+    "honest": 8,
+    "useful": 8,
+    "concise": 7,
+    "added_claim_errors": [
+      "「付与日や日数は就業規則にも書いてある」 assumes contents of this employer’s rules that the packet does not establish.",
+      "「あとから有給に戻すのが面倒になります」 asserts an administrative difficulty not established by the packet.",
+      "「LINEで残しておくと、『言った言わない』になりません」 overstates what keeping a written record guarantees."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "vague",
+      "7": "correct",
+      "8": "correct"
+    }
+  },
+  "B": {
+    "correct": 9,
+    "trap": 10,
+    "honest": 9,
+    "useful": 9,
+    "concise": 6,
+    "added_claim_errors": [],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "correct",
+      "7": "correct",
+      "8": "correct"
+    }
+  },
+  "reasons": "Both immediately correct the premise and correctly give October 1, five days, and the 80% attendance condition. B narrowly wins because it consistently requests paid leave and states the limits on changing its date more precisely; A invites removal of the paid-leave request and adds unsupported assurances. A explicitly identifies proportional allocation, whereas B leaves that classification implicit despite correctly calculating 15 weekly hours. B is unnecessarily long for LINE and weakens an automatic conditional entitlement with 「付与されている可能性が高い」."
+}

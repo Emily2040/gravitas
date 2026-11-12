@@ -1,0 +1,11 @@
+validity4.py --tuning, run at 20:28 on 2026-10-25 against freeze-start d99f9fd0 (before the revision of change 4):
+en-car-warranty.gv-grav-c4.r1                  ok
+en-flight-refund.gv-grav-c4.r1                 ok  | 1 fetched pages returned HTTP 4xx/5xx
+en-social-security.gv-grav-c4.r1               ok  | 1 shell results hit constrained language mode; 2 fetched pages returned HTTP 4xx/5xx
+zh-resignation.gv-grav-c4.r1                   ok  | 3 of 26 web results failed with a network error; 1 shell results hit constrained language mode; 4 fetched pages returned HTTP 4xx/5xx
+zh-game-refund.gv-grav-c4.r1                   ok
+zh-express-lost.gv-grav-c4.r1                  ok  | 4 fetched pages returned HTTP 4xx/5xx
+6 runs, 0 invalid, 0 invalid after their rerun, 4 flagged
+
+Run again after the revision, the same check marks all six invalid ("rule sha 278cafafaedb is not the gv-grav-c4 rule"),
+as it should: they ran the rule before the revision. Those six runs are tuning evidence only and are not rerun.

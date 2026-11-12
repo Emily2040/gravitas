@@ -1,0 +1,50 @@
+{
+  "pair": "p092",
+  "winner": "A",
+  "margin": "clear",
+  "A": {
+    "correct": 8,
+    "trap": 9,
+    "honest": 7,
+    "useful": 8,
+    "concise": 7,
+    "added_claim_errors": [
+      "“Unused carryover still expires later” implies mandatory expiration; continued carryover can preserve unused funds in subsequent years.",
+      "“Many plans offer neither” is an unsupported prevalence claim."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "correct",
+      "7": "correct",
+      "8": "missing"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 7,
+    "honest": 5,
+    "useful": 6,
+    "concise": 5,
+    "added_claim_errors": [
+      "“Carried into next year (best case) ~$680” misleadingly excludes a grace period preserving access to all $1,900 for timely March care.",
+      "Carryover requires being “still enrolled in the FSA in the new plan year”: presented as universal, although enrollment requirements depend on the plan.",
+      "“If you change jobs, the whole balance ... is gone” omits the FSA COBRA exception.",
+      "“You usually have until March–April to submit receipts” adds an unverified typical deadline; the plan sets its run-out deadline."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "vague",
+      "4": "correct",
+      "5": "correct",
+      "6": "vague",
+      "7": "correct",
+      "8": "missing"
+    }
+  },
+  "reasons": "A provides clearer conditional instructions and explicitly warns that December prepayment cannot cover March services. B initially misframes the maximum carryover as the best possible outcome, then adds unsupported enrollment and job-change restrictions, although it later recognizes the grace-period alternative. The arithmetic is $1,900 − $680 = $1,220; A gives the correct formula but an imprecise concluding range, while B gives the correct subtraction without a clear minimum spend-down instruction. Both omit the 2027 open-enrollment recommendation, and B is unnecessarily long for a quick plan."
+}

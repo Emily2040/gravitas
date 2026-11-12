@@ -1,0 +1,49 @@
+{
+ "pair": "p051",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "「基礎控除104万円（合計所得132万円以下。令和8年分）」: the key (No.1199) gives the 104万円 condition as 合計所得金額489万円以下, not 132万円以下. The conclusion is unaffected because 106万円 is below both thresholds.",
+   "「課税所得が消えるため、ほぼ0円（還付なし）」: stated as fact without asking the person to check the 源泉徴収税額 box on the 源泉徴収票, and it assumes 社会保険料控除 of at least 2万円.",
+   "「e-Taxなら30分ほど」: an unverifiable time estimate, though a minor one."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "It cites 国税庁 No.1128 for a list that includes クリーニング・ホワイトニング and ガソリン代・駐車場代. No.1128 does not list whitening or cleaning, and gasoline and parking come from No.1122, so the citation suggests NTA wording that does not exist (the key says calling whitening 「国税庁が明記」 is wrong).",
+   "「クリーニング」 is listed as not deductible without qualification. 歯石除去 done as insured gum treatment is deductible, so this is misleading.",
+   "「扶養に入っている場合、収入や申告が扶養判定に影響することがあります」 implies that filing could affect dependent status. The key says the medical deduction does not change 合計所得金額 and has no effect on that test.",
+   "「今回は通常の医療費控除が有利です」 calls it a comparison, but dental treatment and travel costs are outside セルフメディケーション税制 altogether, so there is nothing to compare."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 10万円 premise at the start with the 5% test and both get 74万→106万→5万3,000→1万7,000円 right. Both also say the real benefit is about 1,700円 off 住民税 and that the refund window runs five years from 1 January 2027. B explains the filing logic more completely: it says 年末調整 cannot apply the deduction and gives the 850円 income-tax figure with a hedge. A's preparation list is closer to the key, covering 補填 subtraction, receipts not being attached to 明細書, and paying by 31 December. A is also noticeably shorter, which suits the request for 簡単に. A has one wrong statutory condition (104万円 tied to 合計所得132万円以下). B misattributes exclusions to No.1128, overstates 「クリーニング」 as excluded, and adds padding. Overall A edges ahead on usability and concision."
+}

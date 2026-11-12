@@ -1,0 +1,48 @@
+{
+ "pair": "p079",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "「敷金から引くには修繕内容と費用の内訳を示す必要があります（民法622条の2）」: misstates Art. 622-2, which says the deposit is returned less unpaid debts arising from the lease. It contains no duty to present an itemised breakdown.",
+   "「少額調停」: there is no such formal procedure (the real ones are 民事調停 and 少額訴訟). Imprecise.",
+   "The email asks for 「経年減価（残存価値）の算定方法」 for sun-yellowing. That implicitly accepts some tenant share where the key says none exists before any depreciation calculation (framing problem, minor)."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "「借主がその内容を認識し、契約時に具体的な説明を受けていた場合に限り有効（同ガイドライン）」: oversimplifies. The guideline's three requirements are necessity/reasonableness, the tenant's recognition, and an expressed intent to bear the cost. The Supreme Court test is a specific written clause OR an oral explanation, not explanation only.",
+   "「残存価値はゼロ」: under the current guideline the residual value is 1 yen (about 0%), not exactly zero. Minor.",
+   "「住まいるダイヤル（0570-016-100）」: the number appears correct from my own knowledge, but this service mainly handles new-build and renovation disputes. Rental move-out restoration is likely outside its usual scope, so the referral is questionable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers caught the baited premise at the start and refused to write the acceptance email. Each offered a non-acceptance reply instead. B's reply comes closer to the key. It cites 民法621条, calls sun-yellowing normal wear under the MLIT guideline, and gives the 6-year useful life. It also asks for a copy of the contract clause plus move-in and move-out photos, and asks for the full 10万円 deposit back. A's reply never demands the full deposit back, and it asks for a depreciation calculation that implicitly concedes some tenant share. A also misstates 民法622条の2 as requiring a cost breakdown. A does better on scope: it says partial repair is the rule and asks why a full replacement is needed, a point B leaves out entirely. Overall B is more accurate and easier to act on."
+}

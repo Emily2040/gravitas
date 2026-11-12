@@ -1,0 +1,39 @@
+Before the email — one thing worth fixing first, because it's the difference between $3,400 and $0.
+
+**The warranty wasn't voided, and Jiffy Lube oil changes can't void it.** That's not a gray area. Under the Magnuson–Moss Warranty Act, [15 U.S.C. § 2302(c)](https://www.law.cornell.edu/uscode/text/15/2302), a manufacturer may not condition a warranty on your using dealer-branded service. Honda's own owner's manual says it outright: ["service at a dealer is not mandatory to keep your warranties in effect."](https://techinfo.honda.com/rjanisis/pubs/om/CW0707/CW0707O00184A.pdf) A warranty also can't be "voided" in the abstract — at most, coverage for a specific failure can be denied, and only if the aftermarket work caused it. Oil changes don't cause transmission slip, and the dealer would have to show that they did.
+
+So this isn't on you. It's a service-lane denial that usually reverses the moment it's questioned in writing.
+
+**Don't sign the authorization yet.** Once you approve the $3,400, you've given up the leverage you're about to use. Here's an email that asks for the price break you wanted *without* conceding the coverage point:
+
+---
+
+**Subject:** 2023 CR-V — transmission repair, warranty coverage
+
+Dear [Service Manager],
+
+Thank you for the estimate on my 2023 CR-V (VIN [____], [41,0xx] miles). Before I authorize the $3,400 repair, I'd like to ask you to take a second look at the warranty decision.
+
+I was told the powertrain warranty doesn't apply because my oil changes were done at Jiffy Lube rather than here. My understanding is that routine maintenance at an independent shop doesn't affect warranty coverage — 15 U.S.C. § 2302(c) prohibits conditioning coverage on dealer service, and Honda's owner's manual states that dealer service is not required to keep the warranty in effect. Oil changes also have no connection to a transmission fault.
+
+Could you submit this to Honda for powertrain coverage? If there's a specific reason the transmission failure is attributable to the maintenance, I'd appreciate that in writing.
+
+If coverage genuinely isn't available, I'd still like to move forward with the repair — but I'd ask whether there's any flexibility on the $3,400, given the car is a 2023 with 41,000 miles and has been maintained on schedule.
+
+Thank you for your help.
+
+[Name]
+[Phone]
+[Email]
+
+---
+
+**Three things that will decide how this goes:**
+
+1. **Get the denial on paper.** Ask for the warranty denial in writing with the reason stated. Dealers often won't put "customer used Jiffy Lube" in a letter, because it's a Magnuson–Moss violation. If they refuse, that tells you a lot.
+2. **Escalate to Honda corporate if they hold firm.** American Honda Customer Service: **1-800-999-1009**. A dealer's denial isn't Honda's decision; corporate can authorize the repair, and this is a routine call for them.
+3. **Keep your Jiffy Lube receipts.** You'll want to show the work was done on schedule with the right oil.
+
+**One question that genuinely matters:** did Jiffy Lube ever do a *transmission* fluid service — not just oil? If they did, and used a fluid other than Honda HCF-2, Honda has a real causation argument for a CVT failure, and the picture changes. Oil changes alone don't.
+
+If you'd rather just pay and not fight it, cut the second paragraph and change the fourth to "I'd like to go ahead with the repair — is there any flexibility on the $3,400?" But I'd send the version above first. The worst case is they say no, and you're exactly where you are now.

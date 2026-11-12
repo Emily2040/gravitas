@@ -1,0 +1,50 @@
+{
+ "pair": "p029",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 9,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"risks forfeiting roughly $1,220–$1,240\": the $1,240 figure uses the 2025 $660 cap, which does not apply to a 2026 plan year (minor). The line also leaves out the no-feature branch, where all $1,900 is at risk.",
+   "Question 4, whether the full $1,900 is available now or only what has been contributed: the uniform-coverage point is correct, but it is aimed at the current year, where the person already says $1,900 is left, and not at the 2027 election. It is a minor misdirection, not a false claim."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"confirm the office will charge before the 15th\": the test is the date the service is provided, not the date it is charged, so this points to the wrong criterion.",
+   "\"the unused balance on December 31 is forfeited\" / \"$1,220+ evaporates on January 1\": imprecise. Forfeiture is measured after the run-out period, and 2026 claims filed during run-out still count. B elsewhere says run-out is for submitting 2026 receipts.",
+   "\"spending $1,500 on stuff you wouldn't otherwise buy to save $680 is a loss\": muddled. FSA money is already contributed, so spending it before forfeiture costs nothing extra out of pocket, and the $1,500 and $680 figures do not match any branch.",
+   "\"Usually ~90 days after Dec 31\" for run-out: a common plan design but varies by plan. It is hedged, so plausible but unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct the rollover premise plainly at the start, without saying all $1,900 is certainly lost. Both give the $680 carryover cap with about $1,220 forfeited, and both cover the grace-period and no-feature branches and the questions to ask HR. A states the service-date rule and warns against prepaying in December for March work, a major point in the key. B never addresses prepayment, and its \"confirm the office will charge before the 15th\" points to the charge date, which is the wrong test. B has a much fuller list of eligible spend-down items, but it also adds a muddled \"$1,500 to save $680\" argument and says the money is forfeited on Dec 31, ignoring run-out. Neither mentions the 2027 open-enrollment election, and A's $1,240 figure is a minor slip, so A wins narrowly."
+}

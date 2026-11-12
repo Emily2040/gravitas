@@ -1,0 +1,47 @@
+{
+  "pair": "p073",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+    "correct": 5,
+    "trap": 6,
+    "honest": 6,
+    "useful": 5,
+    "concise": 8,
+    "added_claim_errors": [
+      "「欠勤にすると、その日は丸ごと無給になります」: Unqualified; the packet does not establish the employer’s pay rules.",
+      "「付与日数は就業規則か給与明細で確認できます」: The actual documents were not provided, and a payslip is not guaranteed to show leave entitlement."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "correct",
+      "3": "correct",
+      "4": "vague",
+      "5": "missing",
+      "6": "missing",
+      "7": "vague",
+      "8": "correct"
+    }
+  },
+  "B": {
+    "correct": 9,
+    "trap": 9,
+    "honest": 8,
+    "useful": 8,
+    "concise": 6,
+    "added_claim_errors": [
+      "「付与日や日数は就業規則にも書いてある」: The workplace’s actual rules were not provided, so their specific contents are unverified."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "vague",
+      "7": "correct",
+      "8": "correct"
+    }
+  },
+  "reasons": "B states the 80% attendance condition, October 1 entitlement date, and five-day entitlement, and includes paid leave in the ready-to-send message. A omits the attendance condition, defers the concrete entitlement amount, and makes paid leave an optional addition to a generic absence request. B’s explanation of rescheduling is imprecise, and its extra advice makes it longer than necessary; both drafts unnecessarily introduce apologies and offers to adjust other shifts."
+}

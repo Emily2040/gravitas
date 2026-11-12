@@ -1,0 +1,51 @@
+{
+ "pair": "p085",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Scenario B figure \"如果这32小时全部构成周期超时，约2482.76元，合计约6206.90元\": the key deducts for putting a number on the 150% part, which the facts given cannot support. The arithmetic itself is right (51.72×1.5×32), and A does frame it as conditional.",
+   "\"你可以主张按9000元或近12个月平均应发工资作为基数\": Beijing wage-payment rule Art 44 bases overtime pay on the wage in the contract, then on actual normal pay. A 12-month average is not the Beijing rule (judged from my own knowledge).",
+   "Table shows 413.79×300%×3 = 3724.14. Multiplying by the rounded 413.79 gives 3724.11; 3724.14 comes from the unrounded figure. The key accepts both, so this is cosmetic."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "\"人社部办公厅的相关通知也是这个口径：'在正常发放的当日工资（100%）之外，再额外支付300%'\": wording quoted from a ministry notice with no link to or number for that notice; only a Changzhou reply is linked. Unverifiable.",
+   "\"法定节假日的工时不计入综合计算周期的总工时\": not in the key and given no source. Plausible but unverified.",
+   "Cites 《劳动合同法》第26条 for clauses that break mandatory provisions (item 3). The key's basis is item (2), clauses that exempt the employer from liability or exclude the worker's rights. Not false, but a weaker basis.",
+   "Note: I opened 157号 Art 4/8/15, the Fengtai court report (gmw 2026-05-07) and the Sina/ACFTU 2026 explainer. All support what B attributes to them."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by rejecting the 'signed so nothing can be done' premise, split the seven days into 3 statutory (300%) and 4 rest days (200% or time off in lieu), and reach the key's 3724.14 / 3310.34 / 7034.48, paid on top of the 9000 salary. B grounds point 2 in 劳动合同法 Arts 26/27, which A only states loosely. B also cites 157号 Arts 4 and 15 and a 2026 Fengtai court statement, and the ones I opened checked out. A puts a number on the scenario-B 150% portion (2482.76 / 6206.90), which the key penalises even though A frames it as conditional, and suggests an unsupported 12-month-average wage base. A is tighter and gives the scenario-B 300% minimum up front, but B is longer with more padding. B wins slightly on accuracy and sourcing."
+}

@@ -1,0 +1,107 @@
+=== Round-five tuning check, pass 1 ===
+rule: W:\AgentData\logs\gravitas-dsh-ab5\design\tuning-decision-rule.md (sha256 6da489caa8e452928dfb99139a1646e570eb9b0d4e914f8c4d148e0965436922)
+passed calibrations: calibration2 (prompt f9fc3530565d, saved 2026-10-26T08:32:09+11:00), calibration3 (prompt 5d52cfe13c1b, saved 2026-10-26T08:48:33+11:00)
+earliest pass-1 c5 run: 2026-10-26T09:04:32+11:00; calibration that counts for pass 1: calibration3
+
+--- Metrics per group of 12 answers (graded in pass 1) ---
+  group     F         K         C         V         M         W         AW        AU        S         SP        SR        PC        PCall     H1        H2        H3        CD        BL        WF        UX       
+  c5        19        18        54        27        6         4         8         61        3         6         3         12        10        0.545     0.229     0.484     4.624     26        133       0        
+  base r1   24        17        65        21        2         3         9         63        2         5         3         12        10        0.547     0.551     0.447     4.823     29        126       0        
+  base r2   15        23        58        22        8         3         9         76        4         6         4         12        10        0.588     0.250     0.385     4.700     23        110       0        
+  plain r1  15        24        60        25        6         0         8         69        3         2         2         12        8         0.530     0.500     0.198     4.170     21        82        0        
+  plain r2  19        19        56        25        7         3         13        57        1         6         7         12        9         0.465     0.396     0.396     3.825     29        93        0        
+  c5        F by language zh 5 en 5 ja 3 ko 6 | M by language zh 1 en 1 ja 1 ko 3
+  base r1   F by language zh 6 en 6 ja 4 ko 8 | M by language zh 0 en 1 ja 0 ko 1
+  base r2   F by language zh 3 en 5 ja 3 ko 4 | M by language zh 0 en 3 ja 1 ko 4
+  plain r1  F by language zh 5 en 0 ja 4 ko 6 | M by language zh 0 en 2 ja 1 ko 3
+  plain r2  F by language zh 7 en 4 ja 4 ko 4 | M by language zh 0 en 2 ja 1 ko 4
+
+--- c5 per prompt (pass 1) ---
+  case                           F     vis   plain      Lv      Lb
+  en-529-roth                    3    5291 7212.500   0.734   1.094
+  en-fsa-rollover                2    2847 2975.500   0.957   1.105
+  en-medicare-part-b             0    5423    3961   1.369   1.147
+  ja-medical-deduction           2    1530 1733.500   0.883   1.060
+  ja-part-time-leave             0    1073 1090.500   0.984   1.081
+  ja-wallpaper-restoration       1    1470 1726.500   0.851   0.808
+  ko-jeonse-protection           3    1078     870   1.239   0.924
+  ko-severance-pay               2    1793    2523   0.711   0.764
+  ko-unemployment-quit           1    1179     968   1.218   0.964
+  zh-flex-hours                  1    2861 3387.500   0.845   0.987
+  zh-insurance-gap               3    1753 2192.500   0.800   0.924
+  zh-sick-pay                    1    1370 1771.500   0.773   0.629
+  median Lv 0.867, median Lb 0.976
+
+--- Grader retest on the 48 baselines (reported, not gated) ---
+  against calibration2: LKP marks the same 145 of 168; FLAT-or-WRONG status the same 147 of 168; key-point marks the same 342 of 364
+    gv-grav-base r1  change F 4 K -4 C -1 V 1 M 0 W 0 AW 0 AU 0 S -1 SP 0 SR -1 PC 0
+    gv-grav-base r2  change F 3 K -3 C -2 V 2 M 0 W 0 AW 0 AU 4 S 1 SP -2 SR 1 PC 0
+    gv-plain r1      change F 2 K -2 C 2 V -1 M 0 W -1 AW 1 AU -1 S 1 SP 1 SR 1 PC 0
+    gv-plain r2      change F 4 K -4 C 2 V -3 M 0 W 1 AW 2 AU -13 S 0 SP 0 SR 1 PC 0
+  against calibration3: LKP marks the same 149 of 168; FLAT-or-WRONG status the same 151 of 168; key-point marks the same 345 of 364
+    gv-grav-base r1  change F 1 K -1 C -1 V 1 M 0 W 0 AW 0 AU 2 S -2 SP 1 SR -1 PC 0
+    gv-grav-base r2  change F -1 K 1 C -2 V 2 M 0 W 0 AW 4 AU 3 S 0 SP -1 SR 1 PC 0
+    gv-plain r1      change F 0 K 0 C 0 V 1 M 0 W -1 AW -1 AU 1 S 0 SP -1 SR 1 PC 0
+    gv-plain r2      change F 5 K -5 C 2 V -2 M 0 W 0 AW 1 AU -4 S -1 SP 1 SR -1 PC 0
+
+--- RD regex scan of the pass-1 c5 thinking ---
+  runs with hits 0; thinking events marked truncated 35; RD 0
+  note: no regex hits in any run and no hand file; RD = 0
+
+validity (W:\AgentData\logs\gravitas-dsh-ab5\validity-tuning-1.json): still invalid after rerun 0; runs that were invalid at least once 0
+
+--- Baseline numbers (pass 1) ---
+  F   c5 19        | base mean 19.500    min 15        max 24        | plain mean 17        max 19       
+  K   c5 18        | base mean 20        min 17        max 23        | plain mean 21.500    max 24       
+  C   c5 54        | base mean 61.500    min 58        max 65        | plain mean 58        max 60       
+  V   c5 27        | base mean 21.500    min 21        max 22        | plain mean 25        max 25       
+  M   c5 6         | base mean 5         min 2         max 8         | plain mean 6.500     max 7        
+  W   c5 4         | base mean 3         min 3         max 3         | plain mean 1.500     max 3        
+  AW  c5 8         | base mean 9         min 9         max 9         | plain mean 10.500    max 13       
+  AU  c5 61        | base mean 69.500    min 63        max 76        | plain mean 63        max 69       
+  S   c5 3         | base mean 3         min 2         max 4         | plain mean 2         max 3        
+  SP  c5 6         | base mean 5.500     min 5         max 6         | plain mean 4         max 6        
+  SR  c5 3         | base mean 3.500     min 3         max 4         | plain mean 4.500     max 7        
+  PC  c5 12        | base mean 12        min 12        max 12        | plain mean 12        max 12       
+  H1  c5 0.545     | base mean 0.568     min 0.547     max 0.588     | plain mean 0.498     max 0.530    
+  H2  c5 0.229     | base mean 0.400     min 0.250     max 0.551     | plain mean 0.448     max 0.500    
+  H3  c5 0.484     | base mean 0.416     min 0.385     max 0.447     | plain mean 0.297     max 0.396    
+  CD  c5 4.624     | base mean 4.761     min 4.700     max 4.823     | plain mean 3.997     max 4.170    
+  BL  c5 26        | base mean 26        min 23        max 29        | plain mean 25        max 29       
+  WF  c5 133       | base mean 118       min 110       max 126       | plain mean 87.500    max 93       
+  UX  c5 0         | base mean 0         min 0         max 0         | plain mean 0         max 0        
+
+--- Pass 1, checked in the rule's order ---
+1. ABANDON now if any of:
+  [no] PC <= 10: 12 <= 10
+  [no] runs still invalid after their rerun >= 1: 0 >= 1
+  [no] median Lv < 0.70: 0.867 < 0.700
+  [no] M >= M-bar-b + 6: 6 >= 11 (= 5 + 6)
+2. Moved: [no] F <= Fb_min - 1: 19 <= 14 (= 15 - 1)  -> not moved
+   Overshoot triggers (a trigger fires when its condition holds or cannot be computed):
+   O1 length (and): quiet
+    [no] median Lv > 1.00: 0.867 > 1
+    [no] median Lb > 1.05: 0.976 > 1.050
+   O2 spraying (or): FIRES
+    [holds] S >= 3: 3 >= 3
+   O3 conditional density (or): quiet
+    [no] CD > 1.5 x CD-bar-b: 4.624 > 7.142 (= 1.5 x 4.761)
+    [no] BL > 1.5 x BL-bar-b: 26 > 39 (= 1.5 x 26)
+   O4 blur (or): FIRES
+    [holds] K - K-bar-b < 0.5 x (F-bar-b - F): -2 < 0.250 (= 0.5 x (19.500 - 19))
+    [no] V > V-bar-p + 2: 27 > 27 (= 25 + 2)
+    [no] M > M-bar-p: 6 > 6.500
+   O5 hedges (or): FIRES
+    [no] H1 > H1b_max: 0.545 > 0.588
+    [no] H2 > H2b_max: 0.229 > 0.551
+    [holds] H3 > H3b_max: 0.484 > 0.447
+   O6 unverified claims and safe picks (or): FIRES
+    [no] AU > 1.10 x AUp_max: 61 > 75.900 (= 1.10 x 69)
+    [holds] SP >= 2: 6 >= 2
+    [holds] SR >= 1: 3 >= 1
+   RD (runs whose reasoning quotes or applies the sentence): 0
+   [yes] RD <= 2: 0 <= 2
+
+OUTCOME 6: not moved, and a trigger or RD >= 3: ABANDON
+
+wrote W:\AgentData\logs\gravitas-dsh-ab5\tuning-instrument\decision-pass1.json

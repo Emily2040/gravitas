@@ -1,0 +1,49 @@
+{
+ "pair": "p061",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"If the money lands in January, it generally counts for 2027, and the 2026 room is lost\" (and \"Confirm the deposit before December 31\"): wrong per the key. The 2026 Form 5498 instructions and 219(f)(3) allow a rollover designated for 2026 through April 15, 2027, though whether the plan will process it that way varies.",
+   "\"If annual limits rise, it could take fewer years\": not realistic. The key notes that even at $8,000 a year, 4 years gives $32,000 < $35,000. Finishing in four years would need the 2027-2029 limits to average about $9,167, and limits rise in $500 steps."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"The transfer must be completed by December 31, 2026 to count against the 2026 annual limit\": wrong per the key. A rollover designated for 2026 can be made through April 15, 2027 (2026 Form 5498 instructions, 219(f)(3)). The follow-on line \"There is no separate December 31 deadline for the rollover itself\" is muddled.",
+   "\"The 529 plan will issue Form 1099-Q to you as account owner\": wrong. The IRS Form 1099-Q instructions (I opened irs.gov/instructions/i1099q) list the designated beneficiary as the recipient when the money moves trustee-to-trustee into a Roth IRA for the beneficiary.",
+   "\"Scholarships ... do not\" count as earned income: slightly imprecise. Under 219(f)(1), taxable graduate fellowship and stipend payments do count as IRA compensation. Minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers reject the $48,000 premise in the first sentence and give the right limits: $7,500 per year, reduced by compensation and other IRA contributions, and $35,000 for life, so $13,000 can never go in. Both require the son's own Roth, a direct trustee-to-trustee transfer, the 5-year lookback and a state tax check. Both wrongly treat December 31 as the deadline for the 2026 rollover. A is stronger on arithmetic: it shows the five-year schedule (2026-2029 at $7,500, then $5,000 in 2030), but it adds the unrealistic claim that the cap could take fewer years, and it never says what happens if too much is moved. B covers more key points: it says Roth income limits do not apply, says excess money becomes a nonqualified withdrawal, and gives state-by-state details that match its cited source (I opened the page), and its S. 5550 bill reference checks out on govinfo. However, B names the wrong recipient for Form 1099-Q. On balance B edges ahead on coverage."
+}

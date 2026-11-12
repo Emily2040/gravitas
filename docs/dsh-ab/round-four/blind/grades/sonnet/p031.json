@@ -1,0 +1,53 @@
+{
+ "pair": "p031",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"Enroll in Part D or a Medicare Advantage plan within 63 days if your drug coverage isn't creditable\": the condition is inverted. The window after coverage ends applies when creditable coverage is lost; non-creditable drug coverage means Part D should have been taken earlier. The key says 2 full months.",
+   "\"Don't enroll in Part B, Medicare Advantage, or Part D this month\" is unconditional; if the plan's drug coverage turns out not to be creditable, waiting on Part D risks a permanent penalty.",
+   "\"Your coworker's penalty warning doesn't apply to you at 400 employees\" ties the penalty exemption to employer size. The SEP does not depend on size; size decides who pays first (imprecise, minor).",
+   "The KFF, ARPI and Federal Register/govinfo links are given as sources with nothing checkable beyond the URLs. ARPI is not an official source. Unverifiable.",
+   "\"Part B ... covering little your plan doesn't already cover\" and \"mostly duplicates\" depend on the plan and are asserted without evidence (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "The 20-employee threshold is presented as what \"lets you delay Part B with no late-enrollment penalty\". The SEP is not size-conditional; size decides who pays first (imprecise, minor).",
+   "Medicare.gov source links are cited as the basis for the answer, with no way to verify they were consulted. Unverifiable.",
+   "\"Call Social Security at 1-800-772-1213 and ask about withdrawing it before it takes effect\": the number is correct, but the withdrawal procedure is not covered by the key and is unverified.",
+   "\"Enrolling now [in Part A] is often sensible\" omits the 10-year work-history condition and that Part A pays second (minor omission, not an error)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "missing",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start. Both say Part B can wait, with no penalty, through the 8-month SEP; both say the employer plan pays first, that COBRA does not extend the window, and that the Part A/HSA backdating caveat applies. Neither states the exception that there is no SEP if the job or coverage ends during the IEP. A states the key's 2026 figures ($202.90 a month, about $2,435 a year), the Medigap open enrollment tied to Part B, the 63-day Part D point, and that enrolling now is allowed as secondary coverage in some cases, so it covers key points 2 and 6 better than B, which gives no premium, Medigap or Part D guidance. B is tighter, leads with a direct instruction, includes the correct SSA number, and says to apply the month before retiring and to get an employer coverage letter, which is closer to point 8's timing and proof. A is longer and has a muddled Part D condition (non-creditable coverage) and an unconditional \"don't enroll in Part D\". Overall A's greater key coverage and exact numbers outweigh B's concision."
+}

@@ -1,0 +1,55 @@
+{
+ "pair": "p012",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 4,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Message to customer service says 'I don't demand a full refund, ratio negotiable' and 'I admit guardianship negligence': gives up the claim up front; the key says to claim full refund first and accept partial only as a fallback.",
+   "Opens by endorsing the platform's premise ('the platform will most likely block you with adult real-name') and never says that no law or judicial document makes real-name equal adult consumption.",
+   "No legal basis cited (Civil Code arts. 19/145, 法发〔2020〕17号 art. 9): the claim is left as a plea for goodwill.",
+   "WeChat menu path '我→服务→钱包→消费者保护/安全保障→安全锁' and the 青少年模式 steps: exact menu names unverifiable against the current app.",
+   "iPhone Screen Time / App Store in-app purchase block listed as a precaution: it does not stop WeChat Pay (the answer does not claim it does, but it is of limited relevance here)."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "missing",
+   "3": "missing",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "'Published cases mostly return about 70%, range 50% to full' : unverifiable, though it is consistent with the key's 'common 60-80%, also full'.",
+   "Complaint template says 'I immediately changed the payment password after discovery': an invented fact for the user's case, only softened by brackets.",
+   "'微信本身没有单笔限额开关' and the 'amount privacy protection' feature: unverifiable.",
+   "'米哈游成长关爱平台' as a platform name: unverifiable.",
+   "'Helping the child pass face recognition will make the platform cut your refund share': speculative, unsourced.",
+   "2024 China Internet Association draft standard with '100% platform liability / 30-70% when the guardian is at fault': unverifiable from the packet, though links are given.",
+   "Exact WeChat bill-export path and Alipay/phone-brand child-mode menus: unverifiable.",
+   "Cites 民法典 art. 157 for return of property, and says 6480 is '32 times' the 200-yuan monthly cap (actually 32.4): both fine; 'limitation period is three years' is also correct (Civil Code art. 188)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "B opens by calling the customer service line a pretext rather than a legal conclusion and warns the user never to say 'I charged it' or 'I agreed'. It cites Civil Code arts. 19, 145 and 157 and 国新出发〔2019〕34号 correctly, and its message to the platform claims a full refund while accepting a reasonable partial one, which is the key's recommended stance. A concedes the platform's framing, cites no law, tells the platform it is not asking for a full refund, and admits negligence in the message itself. Both give a solid prevention list covering 免密支付, biometric pay, passwords and 成长守护. B misses 法发〔2020〕17号 art. 9 and the WeChat bill 'doubts about this order' complaint route, and it is far too long and padded. A also misses those two points and leaves the Civil Code out entirely. B's substantive accuracy and legal grounding outweigh its length."
+}

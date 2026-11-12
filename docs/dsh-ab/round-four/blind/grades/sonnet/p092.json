@@ -1,0 +1,49 @@
+{
+ "pair": "p092",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"roughly $1,220-$1,240\" forfeited: the $1,240 end uses the 2025 cap of $660; for 2026 it is $1,220 (minor, hedged with \"roughly\")",
+   "\"Unused carryover still expires later\": imprecise, since carried money can itself carry over again up to the cap and only the excess is forfeited (minor)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"the carryover only happens if you're still employed and still enrolled in the FSA in the new plan year\": the job-loss part is right, but \"still enrolled\" is stated as fact when it is plan-dependent and unverified",
+   "\"you usually have until March-April to submit receipts\": typical run-out range, unverifiable as a general claim",
+   "The \"realistic math\" table treats ~$680 carried and ~$1,220 forfeited as the baseline before the grace-period caveat, which could read as near-certain loss (softened by the next paragraph)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start, give the right $680 cap for 2026 (and $660 for 2025), say a plan has carryover or a grace period but not both, and send the person to HR with the right questions. A also gives explicit branch rules (spend at least $1,900 minus the cap; grace period through about March 15, and after that treat the money as use-it-or-lose-it). Unlike B, A states plainly that prepaying for March work does not help because the expense counts on the date of service (key point 6). B only implies this by moving the work into December. B has the fuller list of eligible spend-down items (key point 7) and spells out that run-out only extends filing time. It is longer, with padding such as the junk-purchase trap and a disclaimer. Neither mentions the 2027 open-enrollment election (key point 8). A is tighter and covers more of the key's decision points; B is stronger only on the spend-down list."
+}

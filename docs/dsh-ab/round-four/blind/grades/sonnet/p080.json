@@ -1,0 +1,54 @@
+{
+ "pair": "p080",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Table lists 社会保険料控除 as 約20〜40万円 and concludes 所得税は0円 on that assumed range; the user never gave the premium amount and the 40万円 end is high (unverified assumption stated as fact, only hedged later in the notes)",
+   "Cites TKC and 財務省 pages for the 104万円 basic deduction (62万円 base plus 42万円 special); I did not open these and the figures match the key, so the links are unverifiable by me",
+   "NTA keisan link is a 令和7年分 (2025) page, not 2026; it does support the 5% rule",
+   "Says to check on the 源泉徴収票 that 給与所得控除74万円 and 基礎控除104万円 are reflected; a 源泉徴収票 does not itemise the basic deduction, and it never points to the 源泉徴収税額 column",
+   "Says 2027年1〜3月 for filing without stating the 5-year window for 2026年分 (key point 7 only vaguely covered)",
+   "Says to keep 電車・バス代 receipts; fares usually have no receipt, so a dated and amounted record is what the key asks for",
+   "Says 令和8年度税制改正 rests on a 2025年12月 閣議決定; plausible but not checked"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Tells the user to file 2027年2月16日〜3月15日 and never mentions that a 還付申告 can be filed from 1月1日 for 5 years; the key penalises limiting it to 3月15日",
+   "Never tells the user to check the 源泉徴収票 源泉徴収税額 column to see whether any refund is possible",
+   "Labels NTA No.1119 as 医療費控除の手続; I opened it and its title is 医療費控除に関する手続について, so the label is fine",
+   "Cites a 渋谷区 page on 令和9年度住民税 改正; I did not open it, so it is unverifiable by me, though the 43万円 figure matches the key",
+   "Says 歯列矯正・ホワイトニングなど美容目的は原則対象外; roughly consistent with the key (通達73-4), the wording could be read as excluding all 歯列矯正"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "wrong"
+  }
+ },
+ "reasons": "Both answers open by correcting the 10万円 premise with the 5% rule for 総所得金額等 under 200万円, and both reach 106万円, 5万3,000円 and 1万7,000円 with the 74万円 deduction. Both also say there is no filing obligation but the deduction is still available, and that the real gain is about 1,700円 of 住民税. B gives the more complete income-tax picture: 社会保険料控除 of 2万円 or more brings taxable income to 0, and 850円 is the most it could be if tax remains. A instead asserts 所得税 0円 from an assumed 20〜40万円 of insurance premiums. B names the 医療費控除の明細書 and 5-year retention, and says 住民税 timing depends on the 自治体. B's main error is giving 2/16〜3/15 as the filing window, which the key penalises. A is vague on timing, saying only 2027年1〜3月 plus 5年遡れる for past years. Neither tells the user to check the 源泉徴収税額 column. On balance B is slightly better."
+}

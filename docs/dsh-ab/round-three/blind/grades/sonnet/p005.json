@@ -1,0 +1,49 @@
+{
+ "pair": "p005",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "代学代考查实会'处1000-2000元罚款(第三十一条)': wrong. I checked the gov.cn text of the Measures: the driver who cheated is fined up to 1,000 yuan and a substitute up to 2,000 yuan. There is no 1,000 floor, so this is not a 1,000-2,000 range.",
+   "Time table does not add up: the rows give 270-390 min (4.5-6.5 h), but the text states 5-7 hours and a 'theoretical lower bound of 5 hours'. The per-round '50-70 minutes' also does not match the 45-65 min its components sum to.",
+   "'每天2-3次,2-3天减满6分' and '人脸识别一般给2次机会,两次不过本次作废': unverifiable. Neither is in the key or the Beijing pages I opened. The first also leaves out audit waiting time.",
+   "Gives '首页驾驶证卡片上的可减分' and '去学习/去考试' as exact button names, and '学完后7个工作日内考' as a general rule. The Beijing guide I opened says 前往学习/前往考试, and the 7-working-day limit is a Beijing rule. Region-specific wording is presented as universal."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites the Shenzhen page for 'studying 30 minutes counts as only one exam chance, study time cannot be banked'. The Shenzhen page was not opened by me, so this is unverified. The Beijing pages I opened confirm the 24-hour retake window and the 3-cycle blacklist bar.",
+   "Lists '遮挡号牌、准驾不符' among single violations of 9 points or more. Unverified: I did not check each point value. The arithmetic that a 9-point violation takes 4 points to 12 or more is right.",
+   "Beijing-specific details (7 working days, button names such as 去学习/视频学习/网办进度/历史记录, the blacklist) are stated with a hedge ('以APP内的业务须知为准', '北京为7个工作日'). Low risk."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying 10 points cannot be cleared and the cap is 6 per cycle, and both rebut 'no more worry' with the 4-remaining and 8-more-reaches-12 logic. A covers more key points: the full list of ineligibility conditions, and on-site (1 hour for 2 points) and public-benefit (1 hour for 1 point) learning. A also carries a statutory error, since Art. 31 fines are up to 1,000 yuan for the driver and up to 2,000 yuan for a substitute, not a range of 1,000-2,000. Its time table does not sum to its own 5-7 hour claim. B's arithmetic is exact (222-330 min; 5 h for 10 points; 3 h for 6 points), and its retake and blacklist details match the Beijing pages. It also notes that clearing happens anyway if the person barely drives, which fits the key's point on what 学法减分 is for. B is somewhat tighter but omits the alternative learning modes and the recent-three-cycle disqualifiers. Overall B is slightly more accurate and A is slightly more complete."
+}

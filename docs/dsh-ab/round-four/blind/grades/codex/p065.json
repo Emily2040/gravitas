@@ -1,0 +1,46 @@
+{
+  "pair": "p065",
+  "winner": "A",
+  "margin": "slight",
+  "A": {
+    "correct": 7,
+    "trap": 7,
+    "honest": 6,
+    "useful": 7,
+    "concise": 6,
+    "added_claim_errors": [
+      "“확정일자가 없으면 일반 채권자로 밀려” overgeneralizes: an enforceable tenancy can still protect the tenant against a purchaser; lacking priority distribution does not erase that protection.",
+      "“계약 후 이사 사이에 설정되는 경우가 많습니다” asserts an unsupported frequency.",
+      "“전입세대 열람으로 선순위 임차인도 확인 가능” overstates what residency records establish; they alone do not determine other tenants’ legal priority."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "missing",
+      "4": "vague",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing"
+    }
+  },
+  "B": {
+    "correct": 6,
+    "trap": 8,
+    "honest": 8,
+    "useful": 6,
+    "concise": 9,
+    "added_claim_errors": [
+      "“계약서 명의자 본인이” incorrectly makes personal filing by the named tenant mandatory; authorized proxy filing is possible."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "vague",
+      "3": "missing",
+      "4": "vague",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing"
+    }
+  },
+  "reasons": "A narrowly wins because it explicitly includes actual possession as a condition for 대항력 and warns against transferring registration before repayment; B leaves possession unstated. B is considerably more concise and corrects both premises immediately, whereas A adds unsupported or overstated claims. Both omit the Seoul small-deposit exclusion, same-day mortgage priority risk, precise Friday processing caveat, and lease-reporting obligation, and neither clearly states when both protections become effective. Additional-claim judgments use the supplied key and general legal knowledge; no external sources were checked."
+}

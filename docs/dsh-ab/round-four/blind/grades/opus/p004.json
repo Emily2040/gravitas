@@ -1,0 +1,55 @@
+{
+ "pair": "p004",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "国家医保局的口径也是：断缴3个月以内补缴，才不设等待期、可追溯待遇 - this treats the rule as general. 43号文第十一条 only covers transfers between pooling regions or switching between employee and resident insurance. The answer still concludes correctly that it does not apply to her.",
+   "另可能补扣大病保险48元/年、长护险等几十元 - the key says these premiums are deducted from the back-credited personal-account funds, so no extra cash is due. The wording suggests an extra charge.",
+   "杭州职工医保的报销比例不跟连续年限挂钩 / 连续年限清零在杭州主要影响等待期和生育 - unverifiable. The key says Hangzhou's employee-insurance rules have no reset of continuous years at all.",
+   "补缴超过1个月通常要去医保经办窗口…补缴申请表 - unverifiable procedural detail.",
+   "杭州退休医保待遇不看20年以上的年限 - unverifiable (judged from my own knowledge, plausible)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Cites 《杭州市基本医疗保障办法》第五十五条 for accumulation after a transfer. The article number is unverifiable, and the link goes to a third-party reprint.",
+   "大病保险等可能另计几十元 - contradicts the key. These premiums come out of the back-credited personal-account funds, and no extra cash is paid.",
+   "目前仅支持线下办理，带身份证或市民卡去区医保经办机构 - unverifiable procedural claim.",
+   "购房、落户等连续社保资格也会重置（补缴一般不算连续） - goes beyond the medical-insurance question and is unverifiable.",
+   "Table says employee 连续缴费年限会重新计算 and that it 决定当前待遇. The key says Hangzhou's employee-insurance rules have no such reset; 重新计算 appears only in the resident-insurance rules.",
+   "现行细则明确：应保未保期间可以补缴, sourced to 本地宝 - the source is third-party and 明确 overstates. The key marks back-payment for a period of unemployment as unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers open by rejecting the 清零 premise. Both get the third-natural-month waiting period right (about January 2027), the 10-year-in-Hangzhou plus 20-year-cumulative retirement rule, 473.67 yuan a month, the 2026-12-31 deadline and that medical costs in the back-paid months are not reimbursed. A is more complete and matches the key more closely. It gives the exact 3,315.69, the cost of not paying (743.60 a month or 5,205.20 for a lump sum at retirement, 443.75 a month for deferred payment), a variant for the case where March was also unpaid, and a gap formula she can apply herself. B mentions lump-sum and deferred payment at retirement without figures, does not address whether the new employer could back-pay, and says the 大病 premium may be charged on top. A's main slip is presenting the 3-month no-waiting rule as general national policy. A is longer, but the extra length is mostly usable content."
+}

@@ -1,0 +1,53 @@
+{
+ "pair": "p052",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Quoted wording '应当按照本通知规定办理' attributed to the rule: not found in the notice text I opened (it says the notarization rule no longer applies), so unverifiable as a quote.",
+   "Says some branches may require all first-order heirs to attend, and never plainly says one person is enough: this contradicts the key and partly falls into the 'all heirs must attend' trap.",
+   "Says a lost card can still be handled by having the bank look up the account from an ID number: unverifiable practical claim.",
+   "Says many tellers just missed new-rule training and to escalate to the upper-level bank's operations department: unverifiable.",
+   "Uses Gansu Jingning's 1.2% cap and a 'common' 200-yuan minimum as the fee basis, and guesses 2% is an old rule: the rate is local (the key's Beijing example is 0.9%) and the explanation is speculation. Hedged, so only mildly unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says 2% was an old standard in many places and that a 2021 fee-reduction notice (1058号 link) changed it: unverifiable history; I did not open the fee-notice link.",
+   "Fee table (Gansu Zhuanglang: 1.2%, 1%, 0.8%, 0.5%, 0.1% tiers, 200-yuan minimum, 10 yuan per copy) is local and unverified; the key's Beijing example is 0.9%. B does say it is only an example and that rates vary by place.",
+   "Says some branches require all heirs to attend or sign: contradicts the key, though B first says the mother alone can apply. A partial dip into the trap.",
+   "Opens with 'probably not needed' where the facts are certain: slight under-claim, not an error.",
+   "Says many places accept a commitment letter plus witness testimony in place of the grandparents' death certificates: unverifiable.",
+   "Says no password is needed for simplified withdrawal: unverifiable practical advice.",
+   "Describes the 2019 balance-inquiry notice link: not opened, unverifiable.",
+   "Extra inheritance-share section is not asked for. The arithmetic checks out: 4300 to mother, then 2150 each, so 6450 (75%) and 2150 (25%); 103, 52 and 172 yuan are also right. Verified against the official texts: banks may raise the 1万 limit to at most 5万 (Article 2 of 18号文), the materials are in Article 4, funeral and survivor benefits do not count toward the 5万 limit, and incomplete materials must be flagged all at once (Article 3 of 6号文)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the premise, cite 18号 and 6号 with the 5万 limit from 2024-06-01, note that 8600 yuan clears even the old 1万 limit, give the exemption materials (death certificate, kinship proof, ID, signed commitment letter), say to withdraw everything at once and close the account, and give 12378. B says plainly that the mother alone can apply, and it says 2% is not a fixed rate. A leaves 'who must go' vague and hedges that all heirs may need to attend. Neither mentions the Civil Code article on first-order heirs, and neither says the official standards contain no 2%. B's extra claims (the 5万 ceiling, the funeral-benefit carve-out, the one-time notice duty, Article 4) check out against the official texts, and its share arithmetic is correct. A is somewhat shorter and firmer in its opening, but B has slightly better key-point coverage. Both are too long and give full notary material lists the case does not need, and B is longer."
+}

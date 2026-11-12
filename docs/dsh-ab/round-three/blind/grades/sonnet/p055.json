@@ -1,0 +1,52 @@
+{
+ "pair": "p055",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Lists unopened self-service provinces as Hunan, Hubei, Jiangxi, Shanghai, Tianjin, Heilongjiang, Qinghai, Xinjiang. The Liwan page I opened lists the same set without Tianjin, so Tianjin comes from another district page and is unverified here; Henan's absence is correct.",
+   "Says paper temporary rail proof at the station is free. The key notes there is no official basis for this.",
+   "Says self-service machines need only the 粤居码, no appointment, and some sites are open 24 hours. Unverified.",
+   "Says the 12306 page needs face re-verification after 30 minutes. Unverified.",
+   "Says the old card must be handed in when the new one is issued. Plausible but unsourced.",
+   "Gives no statutory 60-day limit, only the Guangzhou 40 days. The 40 days is confirmed on the Liwan page I opened, counted from submitting the cross-region registration form."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "The Liwan link is mistyped (jczgkk instead of jczwgk) and returns 404 when opened, so the main cited source is not checkable as given.",
+   "Says a temporary ID at the hometown office is usually ready 当场或3日内. The three-day limit has a legal basis (Ministry of Public Security order No. 78), but the trap list flags same-day temporary IDs and the claim is unsourced in the answer.",
+   "Materials list names 户口簿, 居住证, 驾驶证, 护照 and 社保卡, plus contracts and lease. The Liwan page says only the photo receipt is required, so this overstates what is needed.",
+   "Says first-time ID applications can now be done across provinces. Unverified; 2017 sources say first applications still required returning to the hukou place.",
+   "Says the temporary ID takes about 1-2 weeks in Guangzhou. This is an estimate and is not sourced.",
+   "Says the paper temporary rail proof is free and valid for that day's travel. Free is flagged by the key as having no official basis, and day-only validity is unverified.",
+   "Says to bring 户口簿, 驾驶证 and 社保卡 to the station for checking. No basis; the answer itself marks them non-essential.",
+   "Cites a Panyu page for Guangzhou supporting remote loss reporting from 2016. Not opened; unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers correct the two false premises at the start, give 40 yuan and 10 yuan, give 12306 e-proof details (24 hours, 6 per month), and say the temporary ID will likely not arrive by 10/31. A is cleaner on the traps: it says no hukou booklet or residence permit is needed (matching the Liwan page), and it says outright that the temporary ID may not be ready by 10/31. B tells the user to bring several ID documents plus contracts, quotes a same-day-or-3-days temporary ID for the hometown, and has a broken (404) Liwan link. B is better on key point 4, where it states the statutory 60-day limit and A gives only the Guangzhou 40 days. Both are long, and B repeats the hometown route in the opening summary and again in section four. A wins slightly on trap handling and honesty."
+}

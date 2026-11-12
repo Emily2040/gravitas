@@ -1,0 +1,50 @@
+{
+ "pair": "p096",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"18시를 넘겼다면 정부24 전입신고와 인터넷등기소 전자확정일자로 그날 안에 끝내면 됩니다\": the key says an internet-registry 확정일자 requested after 18:00 is dated the next business day (Monday 10-26), so it cannot be finished the same day. The key also treats the date of an after-hours 정부24 전입신고 as unconfirmed, and this answer states it flatly.",
+   "\"이번 주 금요일(10월 30일)\": the key's Friday is 2026-10-23. The date comes from the answer, not the request, and does not match the key. It may only reflect when the answer was written.",
+   "\"평일 18시까지\" for the 주민센터, cited to a 강동구 FAQ link: not checked here. The key only says 'within working hours', so I judge it plausible but unverified.",
+   "\"계약서를 들고 주민센터에서 전입세대 열람을 신청하면 선순위 세입자도 볼 수 있습니다\": not in the key. It matches my own knowledge of the 전입세대 열람 rules, so I judge it plausible.",
+   "\"열쇠를 받아 쓸 수 있으면 인도는 됩니다\": not in the key. It is consistent with the usual reading of 인도, so I judge it plausible."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 8,
+  "useful": 6,
+  "concise": 9,
+  "added_claim_errors": [
+   "Step 3 says 전입신고 should be done \"계약서 명의자 본인이\": not in the key. The required filer is overstated, because the person moving in or a household member can file. I judge this from my own knowledge.",
+   "Steps 3 and 4 list 정부24 and 인터넷등기소 as equal options and say \"전입신고와 같은 날\", with no warning that an online 확정일자 requested after 18:00 is dated the next business day. The opening line steers to a Friday-daytime 주민센터 visit, which limits the harm. This is an omission, not a stated falsehood.",
+   "\"부동산 말은 절반만 맞아요\": the realtor's claim that 확정일자 can be ignored is wrong, so 'half right' is soft framing. The correction follows immediately."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "missing"
+  }
+ },
+ "reasons": "Both answers correct the first premise in the opening: 전입신고 gives only 대항력, and 우선변제권 needs 확정일자. Both say to do 전입신고 and 확정일자 together on Friday during the day, mention 다음 날 0시, and recommend a 등기부 check and HUG/HF 반환보증. Neither covers 최우선변제 (2억 is above the 1억 6,500만 threshold), 임대차 신고, the 14-day deadline and fine, the same-day 근저당 risk, or the next-day 등기부 re-check. A is more actionable. It opens with a firm \"do not follow the realtor\", gives 계약서 원본, 신분증, the 600원 fee and the 18시 closing, and says to hold 잔금 if 근저당 plus 선순위 보증금 nears the house value. It also adds 전입세대 열람 and 이체 확인증. But A's fallback says that after 18시 an online 전입신고 and 인터넷등기소 확정일자 finish \"그날 안에\". The key says this is wrong, because the 확정일자 is dated the next business day, and this is a real harm. B is shorter and has no outright contradiction of the key, but it is thinner. It gives no fee or 신분증, no 잔금-hold rule, and lists the online options without the timing caveat. A's added detail and firmer handling of the trap narrowly outweigh its one clear error."
+}

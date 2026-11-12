@@ -1,0 +1,49 @@
+{
+ "pair": "p083",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"3년 이하 징역 또는 3천만 원 이하 벌금 (근로자퇴직급여 보장법 제44조)\": outdated. Since 2026.9.18 the penalty is 제43조, 5년/5천만 원 (minor deduction per the key).",
+   "\"회사가 퇴직연금(IRP)에 가입한 경우에는 지급 방식이 조금 다르지만\": this confuses IRP with the company's DB/DC plan and implies the IRP transfer applies only to pension members. Under 제9조제2항, a payout over 300만 won to someone under 55 goes to an IRP under the severance-pay system too.",
+   "\"설령 합의로 미뤘더라도 지연이자는 원칙적으로 그대로 붙어요(고용노동부 행정해석)\": cites an unnamed administrative interpretation with no number or link, so it cannot be verified.",
+   "Day count of 1,156 used without explanation (the key has 1,158). The stated range \"1,020만~1,030만 원\" leaves out the ordinary-wage floor (about 1,202만), so 약 1,022만 is presented as nearly fixed (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 10,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"3개월 일수가 90~92일이면 약 1,020만~1,045만 원\": the window from 6/21 to 9/20 is fixed at 92 days, so varying the day count is misleading. The range also leaves out the ordinary-wage floor (about 1,202만), so 약 1,022만 is presented as nearly fixed (minor).",
+   "The HR message states \"제 퇴직금은 세전 약 1,022만 원... 으로 계산됩니다\". Putting a figure that may be low (no ordinary-wage floor) into the message could anchor the company to the lower amount (minor).",
+   "\"상시 5인 이상 사업장의 퇴직금제도라고 가정\" implies that workplaces with fewer than 5 employees are treated differently. Not penalized, because the key leaves eligibility requirements unverified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "missing",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers catch the false premise: the deadline is 14 days and an extension needs the worker's agreement. Both compute about 1,022만 won from the average wage, and neither applies the ordinary-wage floor (about 1,202만). B handles both parts of the premise in its first paragraph. B's message to HR says plainly that the sender never agreed to an extension, asks for the company's calculation, the payment date and whether it went to an IRP, and gives the current penalty (5년/5천만 원, 제43조) with checkable law.go.kr links. A gives the outdated penalty (제44조, 3년/3천만 원) and implies the IRP applies only when the company has a pension plan. A's message also invites a later date \\\"회사 사정으로 일정을 잡기 어려우시다면\\\", which could be read as tolerating delay. A is a bit tighter, but B is more accurate and safer to act on."
+}

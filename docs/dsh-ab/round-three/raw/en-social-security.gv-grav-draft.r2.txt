@@ -1,0 +1,48 @@
+## First, two things in your plan don't work the way you described
+
+**40 years of payments doesn't remove the early-claiming reduction.** Those 40 credits get you *eligible* — they're the entry ticket. The age reduction is separate and actuarial: with a full retirement age of 67, claiming at 62 pays **70% of your full benefit**, permanently. 40 credits changes nothing about that.
+
+**Working while claiming does trigger a penalty** — the retirement earnings test. In 2027 it applies to anyone under FRA, no matter how long they've paid in. You lose **$1 of benefit for every $2 you earn above $25,560** ([SSA 2027 figures](https://www.ssa.gov/news/en/cola/factsheets/2027.html)). The test disappears only at 67, not before.
+
+**And your first check won't be March.** You turn 62 on March 18, so you're not 62 for the whole of March. Your first month of entitlement is **April 2027**, paid in May ([POMS RS 00615.015](https://secure.ssa.gov/poms.nsf/lnx/0300615015)).
+
+## The numbers
+
+Your $2,400 is in today's dollars. The 3.6% COLA for January 2027 lifts it to about $2,486; 70% of that is **$1,740/month** ([reduction table](https://www.ssa.gov/benefits/retirement/planner/agereduction.html)).
+
+Earnings test: $38,000 − $25,560 = $12,440 over → **$6,220 withheld per year** ($518/month).
+
+| Monthly, 2027 | |
+|---|---|
+| Part-time wages (gross) | $3,167 |
+| Social Security, gross | $1,740 |
+| Less earnings-test withholding | −$518 |
+| **Social Security actually received** | **$1,222** |
+| **Total coming in, before income tax** | **≈$4,389** |
+| FICA (already deducted from wages) | −$242 |
+| Federal income tax (estimate) | −$323 |
+| **Estimated take-home** | **≈$3,824** |
+
+You were expecting $3,167 + $2,400 = $5,567. The real figure is about **$1,740/month less** before tax, roughly $1,500 less after.
+
+## What the table doesn't include
+
+- **Health insurance.** At 62 you're not on Medicare yet. If the part-time job doesn't cover you, this is likely your largest single line item — budget $500–900/month until 65.
+- **State income tax**, if your state has one.
+- **Federal tax is an estimate** assuming single filer, standard deduction, no other income. With $38,000 in wages, up to 85% of your benefits become taxable. File a [W-4V](https://www.irs.gov/forms-pubs/about-form-w-4-v) so SSA withholds rather than facing a bill in April.
+
+## Three things worth knowing before you file
+
+**The withholding is lumpy, not smooth.** SSA withholds whole monthly checks. Starting in May 2027, expect roughly four checks to be swallowed entirely before the $6,220 is satisfied. Calendar 2027 will deliver about $9,400 from Social Security, not $14,660.
+
+**It recurs.** As long as you earn $38,000, you'll lose that $6,220 every year until March 2032.
+
+**The withheld money isn't entirely gone.** At 67, SSA recomputes your benefit to credit months when you received nothing (the "adjustment of the reduction factor"), recovering part of it — but not all, and not the 30% age reduction itself.
+
+## The one lever you actually control
+
+That $12,440 of earnings between $25,560 and $38,000 costs you $6,220 in benefits — a **50% effective marginal rate** on that slice. If your job would let you drop to about $25,500, you'd keep the full $20,880 and come out roughly even on cash while working 30% fewer hours. Worth pricing out before you claim.
+
+And the tradeoff on timing: waiting to 67 pays about $2,486 with no earnings test at all — roughly 40% more per month, for life. That's a real cost of claiming now, though if you need the cash flow, that's a legitimate reason.
+
+Give me your filing status and health insurance situation and I'll tighten the take-home figure.

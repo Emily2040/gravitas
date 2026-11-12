@@ -1,0 +1,49 @@
+{
+ "pair": "q014",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 8,
+  "useful": 6,
+  "concise": 7,
+  "added_claim_errors": [
+   "Draft email says 'I'd like to go ahead and authorize the repair' for the full $3,400, which commits the owner to pay and undercuts the warranty claim the answer itself says is probably valid. This is a strategy flaw, not a factual error.",
+   "Hedges the central point ('probably wrong', 'generally can't', 'may be a covered repair') where federal law and Honda's booklet are clear. This understates the answer and is not an error of fact.",
+   "Says a written denial is something 'Honda corporate and possibly your state consumer-protection office can review'. This is vague: no Honda number, no NCDS, no FTC, no attorney general."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Quotes Honda's owner's manual as saying 'service at a dealer is not mandatory to keep your warranties in effect' and links techinfo.honda.com PDF CW0707O00184A. I did not open the link. The file code does not obviously match a 2023 CR-V manual, so the exact wording and model year are unverified. The key confirms that Honda's 2023 booklet says dealer service is not mandatory.",
+   "'It's a service-lane denial that usually reverses the moment it's questioned in writing' is an unsupported generalization.",
+   "'Dealers often won't put \"customer used Jiffy Lube\" in a letter, because it's a Magnuson-Moss violation' is speculation about dealer behavior, stated as fact.",
+   "'Oil changes also have no connection to a transmission fault' and 'Oil changes don't cause transmission slip' are stated absolutely. They are broadly true, but B itself admits a causation argument exists if Jiffy Lube did a CVT fluid service.",
+   "The email asserts the car 'has been maintained on schedule', which the user never said.",
+   "'Corporate can authorize the repair, and this is a routine call for them' is unverifiable. The Honda number 1-800-999-1009 matches the key. The HCF-2 fluid claim is consistent with my own knowledge of Honda CVTs."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague"
+  }
+ },
+ "reasons": "Both answers catch the false premise at the start and name Magnuson-Moss and the causation burden. B states the point firmly and cites 15 U.S.C. 2302(c) and Honda's own manual wording. It also says 'Don't sign the authorization yet', which matches the key's central instruction. B's email asserts the warranty claim, asks for the specific reason in writing and asks that the claim go to Honda, and it keeps the discount ask only as a fallback. B also gives the correct Honda customer service number (1-800-999-1009), though it omits NCDS, FTC and the attorney general. A hedges ('probably', 'generally') and drafts an email that authorizes the $3,400 repair and asks for a discount, with the coverage challenge in a third paragraph. That partly accepts the denial, which the key says to avoid. A gives no escalation numbers. B's extra claims are mostly speculative generalizations and an unverified manual link, which do not outweigh A's weaker handling of key points 2, 4, 5 and 6."
+}

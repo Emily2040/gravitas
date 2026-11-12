@@ -1,0 +1,49 @@
+{
+ "pair": "p039",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 8,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "「直前だと時季変更権の余地が広がります」 is plausible but not sourced; the key only says a change right needs a real obstruction to normal operations.",
+   "「事前に承認された休暇」として扱われているか確認 uses 承認 wording that could suggest approval is required; the key says approval is not a condition for taking annual leave. This is minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "「子の看護休暇は病気・けがの看護」 is outdated. Since the April 2025 revision, 子の看護等休暇 also covers entrance and graduation ceremonies and class closures. The conclusion that ordinary school events are not guaranteed still holds. Judged from my own knowledge, not checked online.",
+   "The draft text assumes 「学校行事」, but the user wrote only 「子どもの行事」. This is minor.",
+   "The 和歌山労働局 link is given as a source. I opened it and it supports the claims about part-timers, the 6-month and 80% requirements, and 3 days a week giving 5 days. This is not an error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start (パートにも有給はある) and give 5 days after 6 months. Both then write a plain 休み request, not a dated 年次有給休暇 request as the key wants. Both also advise against raising 有給 in the same LINE. B is stronger on the key points. It names 比例付与, sets out the date conditions (granted on 10/1 if the 80% condition is met, so usable if next month is October or later), and says the company can only change the timing when the business would be seriously disrupted. It also includes a concrete optional sentence asking to apply paid leave, and its source link checks out. A leaves the grant date, the proportional rule and the time-change right vaguer. It offers three drafts, and its 有給 sentence is only a vague request for a later talk. B's one blemish is the outdated 子の看護休暇 remark."
+}

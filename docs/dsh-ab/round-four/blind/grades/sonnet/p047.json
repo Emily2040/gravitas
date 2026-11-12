@@ -1,0 +1,50 @@
+{
+ "pair": "p047",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Asserts an income-tax refund of about 850 yen (戻る税金は所得税が約850円) without saying the refund is 0 yen if 源泉徴収税額 is 0, and without telling the reader to check the 源泉徴収票.",
+   "「所得税自体が約1,000円と小さいです」 sits next to 「約850円」 and the two figures do not fit together. It also assumes no 社会保険料控除 and gives no basis for it.",
+   "The furusato nozei (ワンストップ特例) and self-medication tax (12,000円超, no combined use) points are mostly correct but were not asked for. They add length to a request for a brief summary.",
+   "The claim that 差額ベッド代 and 健康診断 are excluded is generally right but stated flatly, with no key basis, and it depends on the individual case."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Asserts an income-tax refund of about 850 yen (所得税5%で約850円) with no mention of the 104万円 basic deduction, of withholding being 0, or of checking the 源泉徴収票. The key treats this as a significant omission.",
+   "Gives the filing period as 2027年2月16日〜3月15日 and plans the filing for 2〜3月. It never says a 還付申告 can be filed for 5 years (until 2031年12月31日), so it reads as if filing is tied to 3月15日.",
+   "Cites 「No.1119 医療費控除の手続」 as a source. I could not confirm from my own knowledge that this page number matches that title, so it is unverifiable.",
+   "「10万円の足切りは所得200万円以上の人に適用される」 says 所得 where the legal test is 総所得金額等. This is slightly loose, but it is not wrong in substance."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the baited premise at the start with the 5% rule. Both compute 180万−74万=106万, a 5万3,000円 cutoff and a 1万7,000円 deduction, and both say 医療費控除 cannot be taken through 年末調整. Both also say there is no filing obligation but a 確定申告 is needed to claim the deduction. On point 4 both assert about 850円 of income-tax refund without the withholding-zero caveat, but A at least notes the 2026 basic deduction of 104万円 and that income tax is tiny. On point 7 A states that a 還付申告 can be filed after 3月15日 for up to 5 years. B gives only the 2月16日〜3月15日 period and a 2〜3月 plan, which implies a 3月15日 limit. A is slightly more complete on preparation, with the actual-payment-date rule and the 明細書 with no receipt attachment. Its extras (ふるさと納税, セルフメディケーション) add length. B is tidier, but its No.1119 citation is unverifiable and it misses the 5-year window, so A wins slightly."
+}

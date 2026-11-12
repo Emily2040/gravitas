@@ -1,0 +1,57 @@
+{
+ "pair": "p074",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "\"the 15-year clock restarts for the new beneficiary\" (in the change-beneficiary option) is stated as settled. The key says the reset is unresolved with no IRS guidance. Elsewhere A hedges with \"can restart\".",
+   "\"to count for 2026 the money needs to land in the Roth by December 31, 2026\" and \"a January arrival may count against 2027\" treat December as the deadline. A rollover designated for 2026 can run to April 15, 2027, though plans vary.",
+   "\"If the annual limit rises with inflation, this compresses to four or five years\" is wrong or misleading. At $8,000 a year, four years is only $32,000, so it still takes five.",
+   "\"Most do by 2026, but not all\" (plans supporting 529-to-Roth) is unverifiable.",
+   "\"Several states still don't treat these transfers as a qualified 529 use\" is generic, with no states named and nothing checkable.",
+   "The Sources list (savingforcollege, lockwealthmanagement) is secondary and unverifiable.",
+   "Checked against the IRS 1099-Q instructions page: the Box 4b, code 1 in Box 7 and son-as-recipient details are correct. The answer omits the 6% excess-contribution excise tax on over-transfers."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"The transfer must be completed by December 31, 2026 to count against the 2026 annual limit... if you miss it, it becomes a 2027 rollover\" is wrong as a legal deadline. A rollover designated for 2026 can run to April 15, 2027, and plan handling varies. Only \"finish by December to be safe\" would be fine.",
+   "\"The 529 plan will issue Form 1099-Q to you as account owner\" is wrong. The IRS 1099-Q instructions I opened say the recipient of a QTP-to-Roth trustee-to-trustee transfer is the designated beneficiary (the son).",
+   "The state list (30 states follow federal; Indiana, Louisiana, Massachusetts, Michigan, Minnesota, Utah and Vermont recapture deductions; Colorado, Missouri and New Jersey undecided) comes from one secondary survey (praetorianguard.biz). It is unverifiable and may be stale. California \"earnings plus 2.5% penalty\" is an acceptable reading, and the key treats whole versus earnings as unresolved.",
+   "\"If you transfer more than the eligible amount, the excess is a nonqualified withdrawal — tax and 10% penalty on the earnings\" is loosely framed around the eligible amount rather than the annual cap. It omits the 6% Roth excise tax.",
+   "\"He is 22\" is an assumption, since he could be 21.",
+   "S. 5550 (introduced September 24, 2026, referred to Finance, would eliminate the aggregate limit) checked on govinfo and correct."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "wrong",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start with the $7,500 annual cap, the $35,000 lifetime cap and the $13,000 that can never go, and both give the son-owned Roth, direct-transfer, 5-year and 15-year points. Both miss the 6% excise tax and the full consequences of moving all $48,000 (key point 5, vague), and both state December 31 as the deadline instead of April 15, 2027 (key point 7, wrong). A wins key point 2: it gives the 2026-2030 schedule with $5,000 in 2030, while B only says to repeat yearly. A is penalised for stating \"the 15-year clock restarts for the new beneficiary\" as settled, which the key treats as a major error, for an inflation line that says the schedule could \"compress to four\" years, and for much greater length (CPA questions, a repeated trap list, source links). B hedges the 15-year reset with \"may\", is about half the length, and its only added factual miss is the 1099-Q recipient, which I checked against the IRS instructions and which is wrong. That leaves B ahead by a slight margin."
+}

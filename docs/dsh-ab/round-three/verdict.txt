@@ -1,0 +1,105 @@
+== round-three verdict (criteria.md amended rule, items 1-10) on W:\AgentData\logs\gravitas-dsh-ab3
+== gates
+[PASS] g1_net_votes: Do the graders prefer Gravitas over plain by more than two runs of the same arm differ?
+       bounds: net = gv-grav wins - gv-plain wins (main set, 20 pairs x 2 graders): net > 0 and net > A/A noise floor = max(|net aa-plain|, |net aa-grav|), A/A net = r1-side wins - r2-side wins (10 pairs x 2 graders each)
+       main: 40 votes, gv-grav 26, gv-plain 13, tie 1 -> net +13
+       A/A: aa-plain net -8, aa-grav net -2 -> noise floor 8
+       net votes > 0                                        = 13         need > 0          ok
+       net votes > A/A noise floor                          = 13         need > 8          ok
+[PASS] g2_each_grader: Does each grader, on its own, prefer Gravitas more often than plain?
+       bounds: for opus and for sonnet separately (main set, 20 votes each): gv-grav wins > gv-plain wins
+       opus: 20 votes, gv-grav 13, gv-plain 7, tie 0
+       sonnet: 20 votes, gv-grav 13, gv-plain 6, tie 1
+       opus: gv-grav wins > gv-plain wins                   = 13 vs 7    need wins > losses ok
+       sonnet: gv-grav wins > gv-plain wins                 = 13 vs 6    need wins > losses ok
+[PASS] g3_prompts: Does Gravitas win on more requests than it loses, with the request as the unit?
+       bounds: per case: sum of its 4 main-set votes (+1 gv-grav win, -1 gv-plain win); cases net-positive > cases net-negative (10 cases)
+       cases net-positive 5, net-negative 2, zero 3
+       en-car-warranty +0 en-flight-refund +4 en-social-security +4 zh-deceased-deposit -4 zh-driving-points +0 zh-express-lost +0 zh-game-refund +4 zh-id-card-lost +4 zh-medical-family -3 zh-resignation +4
+       cases net-positive > cases net-negative              = 5 vs 2     need positive > negative ok
+[PASS] g4_mean_scores: Is Gravitas scored at least as well overall, without losing more than half a point on correct or useful?
+       bounds: means over all main-set graded answers per arm (40 each): total(5 scores) gv-grav >= gv-plain; correct gv-grav >= gv-plain - 0.5; useful gv-grav >= gv-plain - 0.5
+       gv-grav  n=40 total 37.42 | correct 7.70 trap 8.55 honest 7.38 useful 7.90 concise 5.90
+       gv-plain n=40 total 35.35 | correct 6.97 trap 7.72 honest 7.25 useful 7.45 concise 5.95
+       mean total gv-grav >= gv-plain                       = 37.425     need >= 35.350    ok
+       mean correct gv-grav >= gv-plain - 0.5               = 7.700      need >= 6.475     ok
+       mean useful gv-grav >= gv-plain - 0.5                = 7.900      need >= 6.950     ok
+[FAIL] g5_key_points: Does Gravitas state the key's must-state points at least as often and as precisely as plain, with no more wrong?
+       bounds: key-point marks over main-set answers per arm, both graders: correct gv-grav >= gv-plain; wrong gv-grav <= gv-plain; vague gv-grav <= gv-plain
+       gv-grav  correct 187 vague 62 wrong 2 missing 13
+       gv-plain correct 183 vague 55 wrong 6 missing 20
+       correct gv-grav >= gv-plain                          = 187        need >= 183       ok
+       wrong gv-grav <= gv-plain                            = 2          need <= 6         ok
+       vague gv-grav <= gv-plain                            = 62         need <= 55        NOT MET
+       -> FAIL: bound not met: vague gv-grav <= gv-plain
+[PASS] g6_wrong_claims: Does Gravitas add fewer claims that both relabellers call wrong?
+       bounds: main-set added-claim notes (both graders) labelled wrong by both relabellers: gv-grav < gv-plain; every note listed once in claim-notes.json and labelled by both relabellers
+       gv-grav  notes 195, wrong by both 26, unverified by at least one (reported, not counted) 121
+       gv-plain notes 189, wrong by both 35, unverified by at least one (reported, not counted) 121
+       wrong added claims gv-grav < gv-plain                = 26         need < 35         ok
+[PASS] g7_trap_under_8: Does Gravitas miss or mishandle the baited premise no more often than plain?
+       bounds: count of trap scores < 8 over main-set answers per arm (40 each): gv-grav <= gv-plain
+       trap < 8: gv-grav 5 of 40, gv-plain 11 of 40
+       trap<8 gv-grav <= gv-plain                           = 5          need <= 11        ok
+[FAIL] g8_length: Are Gravitas answers no longer than plain, without being gutted?
+       bounds: raw/*.txt finals: median chars gv-grav / median chars gv-plain within [0.70, 1.00]; pairs (same case and round) with gv-grav/gv-plain chars < 0.6: at most 2 of 20
+       median chars gv-grav 2448.5, gv-plain 2282.0, ratio 1.073
+       pairs under 0.6: 0 of 20 
+       median chars ratio >= 0.70                           = 1.073      need >= 0.70      ok
+       median chars ratio <= 1.00                           = 1.073      need <= 1.00      NOT MET
+       pairs with ratio < 0.6 at most 2                     = 0          need <= 2         ok
+       -> FAIL: bound not met: median chars ratio <= 1.00
+[PASS] g9_hedging: Are Gravitas answers no more hedged than plain, on the old list and the extended list (no substitution)?
+       bounds: hedge markers per 1000 chars, mean over the 20 finals per arm ('May' + day/year and 不可能 excluded): round-one list gv-grav <= 1.00 x gv-plain; extended list gv-grav <= 1.10 x gv-plain
+       round1                gv-grav 0.675, gv-plain 0.788, ratio 0.856
+       extended              gv-grav 0.397, gv-plain 0.980, ratio 0.405
+       round1_literal_tally  gv-grav 0.675, gv-plain 0.807, ratio 0.836  (reported only: tally.py patterns with no exclusions, comparable to round two)
+       round-one list: gv-grav rate <= 1.00 x gv-plain      = 0.856      need ratio <= 1.00 ok
+       extended list: gv-grav rate <= 1.10 x gv-plain       = 0.405      need ratio <= 1.10 ok
+[PASS] g10_fabricated_sources: When no web page was opened, does Gravitas claim sources no more often than plain?
+       bounds: fabricated-source phrases counted in finals whose run opened no web page (no completed web_fetch/web_search result in raw/*.ndjson): count gv-grav <= count gv-plain
+       gv-grav  runs with no web page 0 of 20, phrases 0 (n/a per 1000 chars, reported only)
+       gv-plain runs with no web page 5 of 20, phrases 0 (0.000 per 1000 chars, reported only)
+       fabricated-source phrases gv-grav <= gv-plain        = 0          need <= 0         ok
+== reported beside the verdict (not gates)
+-- inputs
+  cases: 10 (7 zh, 3 en)
+  blind-map pairs by set: {'aa-grav': 10, 'aa-plain': 10, 'attr': 20, 'main': 20, 'draft': 18}
+  valid grade files: {'opus': 78, 'sonnet': 78} of 78 pairs each; stray grade files (pid not in map): 0
+-- sign tests, main set, two-sided exact binomial on non-tie outcomes (gv-grav vs gv-plain)
+  vote   gv-grav 26, gv-plain 13, tie 1 -> p = 0.0533
+  pair   gv-grav 12, gv-plain 6, tie 2 -> p = 0.2379
+  prompt gv-grav 5, gv-plain 2, tie 3 -> p = 0.4531
+  (pair = sign of the two graders' votes summed; prompt = sign of the 4 votes summed; complete units only)
+-- Cohen's kappa between opus and sonnet on winner
+  main     n=20 kappa 0.683
+  all_sets n=78 kappa 0.685
+-- Chinese and English separately (main set)
+  zh: votes 28, gv-grav 16, gv-plain 11, tie 1, net +5, p = 0.4421; mean total gv-grav 38.46, gv-plain 36.57
+      median chars gv-grav 2303.5 / gv-plain 2282.0 (ratio 1.009); hedges round-one 0.836 / 0.982; extended 0.393 / 1.251
+  en: votes 12, gv-grav 10, gv-plain 2, tie 0, net +8, p = 0.0386; mean total gv-grav 35.00, gv-plain 32.50
+      median chars gv-grav 3187.5 / gv-plain 2290.0 (ratio 1.392); hedges round-one 0.299 / 0.338; extended 0.405 / 0.347
+-- main-set votes split by which answer is longer (raw final chars)
+  grav_longer  votes gv-grav 12, gv-plain 5, tie 1
+  plain_longer votes gv-grav 14, gv-plain 8, tie 0
+  equal        votes gv-grav 0, gv-plain 0, tie 0
+  non-tie votes to the longer answer 20, to the shorter 19 (p = 1.0000)
+-- other pair sets (reported only)
+  aa-plain votes 20: r1 side 6, r2 side 14, tie 0, net -8
+  aa-grav  votes 20: r1 side 9, r2 side 11, tie 0, net -2
+  attr     pairs 20: gv-grav 13, gv-grav-nocheck 26, tie 1, missing/malformed grades 0
+  draft    pairs 18: gv-grav 25, gv-grav-draft 1, tie 10, missing/malformed grades 0
+  main A/B balance: gv-grav is A in 10 of 20 pairs; cases where it is A in both or neither round: none
+-- check telemetry (raw/*.claims.jsonl, raw/*.ndjson)
+  gv-grav runs with a claims log 20 of 20; turns checked 20, steered 18 (fire rate 0.900); draft-vs-final pairs in blind-map 18
+  items listed per draft: mean 6.95; items still flagged when the check is replayed on the revision: mean 3.72 (n=18)
+  what the revisions did with listed items: absent 60, supported 25, derived 3, unsupported 51
+  finals vs logged texts: {'unsteered, equals draft text': 2, 'equals revision text': 18}
+  run validity issues (harness): none
+  steered-run anomalies (graded as they are): zh-deceased-deposit r1: meta wording ['核对']; zh-express-lost r1: meta wording ['核对']; zh-game-refund r2: meta wording ['核对']
+  listed items cut (revision outcome 'absent'): wrong 0.238, right 0.376, unverified 0.800; counts {'right': {'cut': 35, 'kept': 58}, 'wrong': {'kept': 16, 'cut': 5}, 'unverified': {'cut': 20, 'kept': 5}}
+  reading of the check: generic revision pass, not detection (fired in >= 90% of turns and wrong items were not cut more often than right ones)
+  gv-plain         runs 20, steps mean 7.7, tool calls mean 11.0, seconds median 129.0
+  gv-grav          runs 20, steps mean 13.3, tool calls mean 20.1, seconds median 217.5
+  gv-grav-nocheck  runs 20, steps mean 10.3, tool calls mean 16.2, seconds median 142.0
+VERDICT: not shown (failing: g5_key_points, g8_length)

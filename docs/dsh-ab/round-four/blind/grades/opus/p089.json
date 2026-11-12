@@ -1,0 +1,48 @@
+{
+ "pair": "p089",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"이번 주 금요일(10월 30일)\": the key fixes this Friday as 2026-10-23. The date is invented and wrong.",
+   "\"18시를 넘겼다면 정부24 전입신고와 인터넷등기소 전자확정일자로 그날 안에 끝내면 됩니다\": wrong. An 인터넷등기소 확정일자 applied for after 18:00 on Friday is granted on the next working day (Mon 10-26). The answer also states as fact that a 정부24 전입신고 filed out of hours counts that same day, which is unverified.",
+   "\"평일 18시까지\" is stated as the 주민센터's closing time from one 강동구 FAQ link. Hours differ by 동, so this is only loosely supported (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "wrong",
+   "6": "correct",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"대항력은 신고 다음 날 0시부터라 오전에 끝내는 게 좋아요\": the reasoning does not hold. Protection starts at 0:00 the next day whether you file in the morning or the afternoon, so this is a non-sequitur rather than a factual error (minor).",
+   "It cites a third-party commercial site (property.ambitstock.com) as the basis for the HUG conditions \"(2026. 10. 기준)\". That is not an official source. The figures happen to match the key, but the source is weak.",
+   "\"전입신고 확인서\" is not a standard document name. 주민등록등본 or the filing receipt is the usual proof (minor, unverifiable)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers reject the agent's premise in their first lines. Both explain that 전입신고 gives only 대항력, that 우선변제권 needs 확정일자, and that protection starts at 0:00 the next day, so filing must not wait. A is tighter, but it makes two real mistakes. It gives this Friday as 10월 30일 when it is 10-23. It also says that after 18:00 you can still finish the same day through 정부24 and 인터넷등기소, but an online 확정일자 applied for after 18:00 on Friday is only granted on Monday. B makes no hard errors. It adds the 임대차 신고 duty (over 6천만 원, within 30 days), keeping residence and registration for the whole lease, and HUG conditions that match the key. Its weak spots are extra length despite the request for a short list, an illogical \"do it in the morning\" reason, and a non-official HUG source. Neither answer notes that 최우선변제 does not apply to a 2억 deposit in Seoul."
+}

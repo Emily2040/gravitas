@@ -1,0 +1,53 @@
+{
+ "pair": "q008",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 快递暂行条例 第二十七条, in the analysis and in the draft reply. That is the old number: since 2025-06-01 it is 第二十八条 (minor error, per the key).",
+   "\"协商通常落在几百到接近实际价值之间\": an unverifiable generalization about settlement outcomes, with no source.",
+   "The draft reply says \"退款记录都在\", but the user never said the buyer was refunded, and A's own tip says to refund the buyer first. So the draft asserts evidence that may not exist yet.",
+   "\"对方客服的权限通常就卡在限额附近\": an unverifiable generalization about the company's internals (judged from my own knowledge; plausible but unsourced).",
+   "Suggests going straight to 12305 if offered only 54 yuan, without saying a complaint to the company must come first (7-day handling). This is an omission rather than a false claim."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Cites 快递暂行条例 第27条, in the analysis and in the draft reply. That is the old number: since 2025-06-01 it is 第二十八条 (minor error, per the key).",
+   "\"如果是EMS/中国邮政，第47条原则上可能适用\": misleading. Art. 47 covers only registered mail within universal service (Art. 45(1)). EMS express falls outside that scope, so Arts. 45(2) and 59 apply civil law instead.",
+   "Frames Art. 47's limit as depending on who the company is (邮政企业 per Art. 84) rather than on the kind of service (universal-service registered mail). The conclusion is right but the reasoning is incomplete.",
+   "\"《民法典》第832、833条按实际损失赔偿\": loose. Art. 833 applies the agreed amount first; failing that, the market price at the destination on delivery.",
+   "Suggests complaining to 12315 alongside 12305. 12315 is the market-regulation line; express-delivery disputes belong to the postal administration (12305). Questionable channel (judged from my own knowledge).",
+   "\"诉讼费几十元\" and jurisdiction at the shipping or receiving place: consistent with my own knowledge (50 yuan acceptance fee for claims of 10,000 yuan or less; transport-contract jurisdiction at origin, destination or the defendant's domicile). Listed as unverified, not wrong."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers reject the claim that the law caps payment at 3x the fee right at the start, tell the user not to accept it, cite 民法典 832/833 and the format-clause rules, and both use the old article number 27 for the 快递暂行条例. A's legal analysis is more precise: it ties Art. 47 to universal-service registered mail through Arts. 45 and 59. B instead keys the limit to who the company is, and wrongly suggests Art. 47 may apply to EMS. B is more usable as it stands. It gives a full evidence checklist (including the customer service admission and tracking screenshots), states the rule to complain to the company first with its 7-day window, asks in the reply for the 18 yuan freight to be refunded, and warns against signing a waiver or accepting a partial payment without reserving rights. A's draft reply asserts refund records that may not exist yet, and A adds an unsourced range for typical settlements. Overall B's more complete practical coverage outweighs A's sharper reading of the law, by a slight margin."
+}

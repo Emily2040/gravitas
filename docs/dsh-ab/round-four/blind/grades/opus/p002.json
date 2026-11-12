@@ -1,0 +1,49 @@
+{
+ "pair": "p002",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "「クリーニング・ホワイトニング…は対象外（国税庁 No.1128）」: the citation makes it look as if NTA lists these. Whitening is not among NTA's examples, and insured scaling (cleaning done as treatment) is deductible, so 'クリーニング' is overbroad (judged from my own knowledge plus the key)",
+   "「収入や申告が扶養判定に影響することがあります」: filing for the medical deduction does not change 合計所得金額, so the filing itself does not affect dependency status (key)",
+   "Cites secondary sources (LIMO, FP総合研究所, 日経) with links. Not checked; they support the stated figures but are not official sources"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Table puts 「社会保険料控除 約20〜40万円（国民年金・国保など）」 in as fact. The request gives no social insurance amount or type, and the answer assumes national pension or national health insurance for a part-timer. It is an unverifiable assumption that drives the flat 「所得税は0円」",
+   "「源泉徴収票で、給与所得控除74万円…が反映されているか確認」: the 源泉徴収票 shows the amount after the employment-income deduction, not the deduction itself. It also points at the wrong check, since the key wants the 源泉徴収税額 column",
+   "「令和8年度税制改正は2025年12月の閣議決定に基づく」: the reform became law in 2026, so calling it only a cabinet decision is outdated framing (minor)",
+   "Cites TKC, 財務省 and keisan.nta.go.jp URLs. Links are given but not opened"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the 10万円 premise at the top with the 5% rule and get the right figures: 74万, 106万, 5.3万 and 1.7万. Both also say the real benefit is about 1,700円 off residence tax while the income tax refund is likely zero. A matches more key points. It says the deduction cannot be taken through year-end adjustment, gives the 850円 fallback, hedges the zero-refund claim as only likely, and states the 5-year refund window starting 1 January. B has practical points A lacks: you can claim through a residence-tax return alone, receipts are not attached, and insurance reimbursements must be subtracted. But B asserts 所得税0円 from an assumed 20〜40万円 of social insurance and never mentions 850円 or checking the 源泉徴収税額 column. A's errors are minor: it overstates the dental exclusions and suggests filing could affect dependent status. That leaves A slightly ahead."
+}

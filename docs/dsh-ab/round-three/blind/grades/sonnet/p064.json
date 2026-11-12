@@ -1,0 +1,52 @@
+{
+ "pair": "p064",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Bases the 21.75 divisor on 实施办法第十一条 only and never cites 人社部发〔2025〕2号; the 21.75 value is right but the basis is not the current notice (omission, not a wrong number).",
+   "Links 《劳动合同法》 at 12371.cn as its source; I did not open that link, so it is unverifiable by me. The gov.cn 实施办法 text was opened and matches 第十、十一、十二条.",
+   "Adds a wrongful-dismissal compensation estimate ('约4个月工资', 2 x 2 months); the arithmetic is right, but it assumes a scenario the request does not describe."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 4,
+  "added_claim_errors": [
+   "Table writes '4×551.72×3＝6,620.69元'; with 551.72 the product is 6,620.64, so the stated formula is off by 5 fen (6,620.69 only holds with the unrounded daily wage).",
+   "Table writes '4×551.72＝2,206.90元'; the product is 2,206.88, so the stated formula is off by 2 fen.",
+   "Labels 12333 as the '人社咨询和投诉举报热线' and links a 人社部 page; I did not open it, so the wording and link are unverifiable by me.",
+   "Cites a Civil Code 第二百零一条 'quoted in a 广东省司法厅答复' link; I did not open it, and a provincial Q&A page is an odd source for a statute the answer could cite directly.",
+   "Cites 实施办法第十八条 for the calendar-year definition; I checked the gov.cn text and this is correct, so not an error."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers are nearly identical in structure and substance. They correct the 60-day and approval premises at the start and write the letter as a 通知 with the delivery date. They get 11月25日, 4天 and 4,413.79元 right, explain the 200% top-up, and cover 12333 and arbitration. Both omit the same key details: the Shanghai/Jiangsu exceptions and the Hangzhou regulation's repeal (point 1 is only partly covered), 劳办发〔1995〕324号, 工资支付暂行规定第十五条, and 人社部发〔2025〕2号. Both are well over the 'moderate length' the key asks for. B shows more of its working (the 30-day count, the 329-day sum, and a correct 第十八条 cite), but its explicit formulas misstate the products slightly (4×551.72×3 is 6,620.64, not 6,620.69; 4×551.72 is 2,206.88, not 2,206.90). B also adds an odd Guangdong link and is a little longer. A gives the same correct figures without the literal misstatements and is slightly tighter, so A wins by a slight margin."
+}

@@ -1,0 +1,50 @@
+{
+ "pair": "p055",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the paper temporary boarding proof from the station police window is free. No official basis; the cited 12306 rules page gives no fee (a key trap).",
+   "Lists Tianjin as excluded from Guangzhou self-service ID processing. The cited Huadu notice names only Hunan, Hubei, Jiangxi, Shanghai, Heilongjiang, Qinghai and Xinjiang, so Tianjin is unsupported.",
+   "Says self-service needs no appointment and some machines are open 24 hours. Neither is in the cited Huadu notice, so both are unverifiable.",
+   "Says the new card can be mailed or collected at the office. Unverifiable.",
+   "Says the photo receipt usually costs 20-30 yuan. The key says this varies by place, so the range is unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says a temporary ID from the Henan household-registration office is 'usually ready on the spot or within 3 days'. This is the key's same-day temporary-ID trap, and no source is given.",
+   "Says the paper temporary boarding proof is free and valid for that day's travel. No official basis; the cited 12306 page gives no fee (a key trap).",
+   "Its Liwan police link has a typo (jczgkk instead of jczwgk) and returns 404. The 40-day and 40-yuan figures are correct on the real page.",
+   "Says Guangzhou has handled ID replacement for out-of-province residents since March 2017, and that first-time applications are now also handled across provinces. Both unverifiable.",
+   "Says Guangzhou has accepted out-of-area loss reports since 2016. Unverifiable; I did not open the Panyu link.",
+   "Says the temporary ID takes about 1-2 weeks in total. This is the answer's own estimate with no source.",
+   "Says the photo receipt costs about 20-30 yuan. The key says this varies, so the range is unverifiable."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers correct both premises. Both give the 40-yuan replacement fee, the 10-yuan temporary ID and the 12306 e-proof rules (24 hours, 6 a month). I checked on the official Liwan page that its 40-day Guangzhou processing time is real. A corrects the premises cleanly in its first lines. Its other specifics check out against its sources, including the 30-minute re-authentication rule, and its arithmetic is right (40 days from Oct 23 is Dec 2; 5 working days ends Oct 30; total 70-80 yuan). A's flaws: it omits the 60-day legal limit, it adds Tianjin to the self-service exclusion list, and it calls the paper station proof free. B states the 60-day legal limit and correctly lists the provinces that must wait for a temporary ID. But B opens with hometown-processing details that blur the correction, and it falls into two key traps: the paper proof is free, and a temporary ID in Henan is ready on the spot or within 3 days. B is also longer and repeats itself, and its main source link is broken."
+}

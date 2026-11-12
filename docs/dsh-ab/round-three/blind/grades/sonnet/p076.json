@@ -1,0 +1,52 @@
+{
+ "pair": "p076",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the 中国法律服务网 (12348) explicitly answered that a notice period over 30 days is void. A link is given but I did not open it, so this is unverified.",
+   "Adds a 经济补偿 estimate of about 24,000 yuan (2 months) if the 第38条 situations apply. The arithmetic is right and it is caveated, but it brings in a compensation scenario the user did not ask about, and the key lists compensation as a risk area.",
+   "Mentions last year's carried-over unused leave (去年结转未休的年假) as a separate amount. Loosely stated, unverified, and not needed for this request.",
+   "Adds a 5-day alternative calculation (5,517.24 extra). The arithmetic is right (12000/21.75*5*2), but it is padding."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "Says such clauses are 'basically all found invalid in arbitration and litigation' (基本都被认定无效). A generalisation with no source.",
+   "Names the 杭州市区劳动人事争议仲裁委员会. Imprecise: the competent commission depends on where the company is registered or the contract is performed.",
+   "Speculates that the company may try to dismiss you for serious misconduct so it can avoid paying leave pay. This is speculation, not a legal claim.",
+   "Says the daily-wage base is the 应发 wage and cannot be limited to basic pay. This is roughly consistent with 实施办法 第十一条 but is stated without precision."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the 60-day and approval premises up front and write the letter as a 通知 rather than an 申请. Both give 11月25日 (送达当日不计入, 民法典第201条), 4天 (329/365*5=4.51, rounded down), 551.72 yuan per day and 4,413.79 yuan extra (300% includes the 100% already paid). I recomputed all of it. I also opened gov.cn and confirmed that 实施办法 articles 10, 11, 12 and 18 say what both cite, and that 浙江 工资支付管理办法 第19条 sets the 5-day settlement that A cites. Both omit the Shanghai/Jiangsu exception, the Zhejiang/杭州 point, the 324号 document and the 2025 21.75 basis. Neither makes a key-point error or falls for a trap. B is slightly tighter and more aligned with the key: its 解除劳动合同通知书 title, an explicit statement that voluntary resignation has no 经济补偿, and practical handling of the leader's 'stay until January' demand. A is longer, with extra scenarios (24,000 yuan 经济补偿, the 5-day alternative, carried-over leave), though it adds the correct Zhejiang 5-day wage-settlement rule. The margin is slight."
+}

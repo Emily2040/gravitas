@@ -1,0 +1,51 @@
+{
+ "pair": "p064",
+ "winner": "tie",
+ "margin": "slight",
+ "A": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Leave-pay rule cited as 实施办法第十一条 for the 21.75 divisor; the article is real, but it does not name the current basis for 21.75 (人社部发〔2025〕2号). This is a missing citation, not an error.",
+   "gov.cn link for 实施办法 (content_5711300, dated 2022-08-31): plausible republication, but I did not open it, so it is unverifiable.",
+   "'年假过期作废不成立，除非书面提出不休': this simplifies 实施办法第十条 (the employee must give up leave in writing for personal reasons), and local practice on cross-year carryover varies. Broadly right, judged from my own knowledge."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 9,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "Displayed formula '4×551.72×3＝6,620.69' gives 6,620.64 when computed literally, and '4×551.72＝2,206.90' gives 2,206.88. The totals are right only if the unrounded 12000/21.75 is used. This is a minor rounding inconsistency.",
+   "'年假年度按公历年度计算（实施办法第十八条）': I believe 实施办法第十八条 defines 年度 as the calendar year. Judged from my own knowledge, not opened.",
+   "gov.cn and sft.gd.gov.cn links: plausible and checkable, but I did not open them, so they are unverifiable.",
+   "Like A, it does not name 人社部发〔2025〕2号 as the current basis for 21.75. This is a missing citation, not an error."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "A and B are almost the same text. Both correct the 60-day and approval premises at the start and draft the letter as a 解除劳动合同通知书 rather than an application. Both get 11月25日 (11月26日起 at the new job), 4 days, 551.72 and 4,413.79 right, with the 300%-includes-salary point explained. Neither mentions the Shanghai/Jiangsu notice-period exceptions or that the Hangzhou regulation was abolished, and neither cites 劳办发〔1995〕324号. B adds the day-count arithmetic, the calendar-year citation and checkable source links, which makes it more transparent. On the other hand, B is slightly longer, and its displayed multiplications do not exactly match the rounded figures. These offsetting small differences leave it a tie."
+}

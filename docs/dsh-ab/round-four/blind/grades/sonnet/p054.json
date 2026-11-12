@@ -1,0 +1,56 @@
+{
+ "pair": "p054",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"大病保险等可能另计几十元\" contradicts the key: the individual share of 大病保险/长护险 is deducted from the 补划 personal-account funds, not paid in extra cash.",
+   "\"你的年限会从8年变成8年\" is garbled and unclear (the point is that the 7 months simply do not count).",
+   "Cites 《杭州市基本医疗保障办法》第五十五条 for transfer and continued accumulation of years; the article number is not verifiable from the packet, and the key rests on 社保法27条 / 43号文.",
+   "\"目前仅支持线下办理，带身份证或市民卡去区医保经办机构\" is a procedural claim the key does not cover; unverifiable.",
+   "\"购房、落户等'连续社保'资格也会重置（补缴一般不算连续）\" is unverified and likely concerns 养老/社保 rules rather than 医保; not covered by the key.",
+   "Table says 连续缴费年限 \"会重新计算\" for 职工医保; the key says 重新计算 appears only in 居民医保 reward rules. Loose and unsupported.",
+   "\"若是外地户口，这条路可能走不通\" is overstated: a 居住证 plus 就业登记 route exists, though 就业登记 may be hard to meet for someone currently jobless."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"一般也不能免除上面那2个月等待期\" is stated fairly firmly; the key says whether 补缴 waives the waiting period is unverified, so it should read \"unknown, ask the 经办\".",
+   "Says retirement 医保 is enjoyed \"终身\" once 20 years and 10 local years are met, omitting the 办法第八条 requirement to keep contributing in Hangzhou until retirement.",
+   "\"7 个月年限以后随时能缴回来\" is slightly overconfident; the key gives retirement-time lump-sum or monthly continuation with annually changing standards, which B does not mention.",
+   "Says 断缴 only affects \"连续记录和当期待遇\" and cites links generally without article numbers; the legal basis (社保法27条, 43号文12条, scope of 38号文) is not given.",
+   "Does not give the 4,986 base or 9.5% rate behind 473.67, so the 3,316 figure cannot be checked from the answer."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers open by rejecting the 清零 premise (8 years, 96 months kept; the 累计 vs 连续 distinction). Both give the 10-year actual / 20-year cumulative retirement rule with a 12-year (144-month) and 2-year (24-month) gap. Both give 473.67 x 7 ≈ 3,316 yuan, the 12/31/2026 deadline, no reimbursement for the supplemented months, and a waiting period ending around January 2027. Both also recommend not supplementing. A is more actionable and closer to the key: it shows the 4,986 base and 9.5% rate, states the 户籍/居住证/就业登记 eligibility condition, advises confirming with 12393 and the 经办, and keeps waiver of the waiting period as an open question. B is tighter and cleaner, but it leaves eligibility vague, never shows the base or rate, and says a supplement 一般也不能 waive the waiting period, which is unverified. A loses points for length, a garbled sentence, a 另计几十元 claim that contradicts the key, and unverifiable offline-only and 购房 claims. Neither gives the 743.60 / 5,205.20 yuan lump-sum cost of not supplementing, nor notes that the new employer cannot pay the missing months. Net, A is slightly ahead on content coverage and B slightly ahead on concision."
+}

@@ -1,0 +1,56 @@
+Before the budget, I have to flag two things — because as written, the plan doesn't work the way you're describing, and the gap is large.
+
+## Two assumptions that don't hold
+
+**1. Forty years of payments doesn't protect you from the early-claiming reduction.** Work credits only establish *eligibility* (you need 40 quarters; you have them). The age reduction is separate and permanent. Your full retirement age is 67 (born 1960 or later), and claiming at 62 cuts your benefit by **30%** — 5/9 of 1% for each of the first 36 months, then 5/12 of 1% for the next 24.
+
+**2. Working while claiming before FRA triggers the earnings test.** Regardless of work history, SSA withholds **$1 of benefits for every $2** you earn above the annual exempt amount until the month you reach FRA. For 2027 that limit is **$25,560** ($2,130/month) — [SSA's 2027 COLA and earnings-limit announcement](https://adasoutheast.org/cost-of-living-adjustment-cola-information-for-2027/) confirms it. Your $38,000 is well over.
+
+## What you'd actually collect
+
+| Step | Amount |
+|---|---|
+| Benefit at FRA 67 | $2,400 |
+| Age reduction at 62 (30%) | −$720 |
+| **Benefit at 62** | **$1,680/mo** |
+| 2027 wages | $38,000 |
+| Less 2027 exempt amount | −$25,560 |
+| Excess earnings | $12,440 |
+| **Withheld ($1 per $2)** | **−$6,220/yr (≈$518/mo)** |
+| **Net Social Security** | **≈$1,162/mo** |
+
+So instead of $2,400 on top of your paycheck, you're looking at roughly **$1,160 a month** — a shortfall of about $1,240/month versus what you expected.
+
+## 2027 monthly budget (steady-state, today's dollars)
+
+| | Monthly |
+|---|---|
+| Part-time wages (gross) | $3,167 |
+| Social Security (gross) | $1,680 |
+| Earnings-test withholding | −$518 |
+| **Total gross income** | **$4,329** |
+| FICA on wages (7.65%) | −$242 |
+| Federal income tax (est.) | −$313 |
+| **Net spendable** | **≈$3,774** |
+
+From that $3,774 you'd cover housing, food, utilities, transportation, health insurance, and everything else.
+
+Two cautions on the table:
+- **Calendar 2027 is a partial year.** You're first eligible for March 2027, paid in April, so only about 9 payments land in 2027 — roughly **$9,000–$10,500** of Social Security cash that year, not $14,000.
+- **Plan for a check drought.** SSA withholds *whole checks*, not fractions. Getting to $6,220 means roughly the first 4 checks are withheld, so you may see nothing from SSA until late summer 2027. Don't build a budget that assumes a check in April.
+- Health insurance is the wildcard. You're not Medicare-eligible until March 2030, so you need coverage for three years — and this extra income can reduce ACA premium subsidies.
+
+## The part worth reconsidering
+
+Claiming at 62 *while earning $38,000* is the worst combination available: you lock in a permanent 30% cut **and** hand back about a third of each year's benefits. If you keep the job through FRA (March 2032), you'd collect roughly $14,000/year instead of $20,000, and the reduction never goes away.
+
+The withheld money isn't lost forever — at FRA, SSA recomputes your benefit to credit the withheld months (the "adjustment of the reduction factor"). But that only claws back the *withholding*; the 30% early-claiming cut stays for life.
+
+Realistically your options are:
+1. **Wait until FRA (March 2032)** — full $2,400, no earnings test, no withholding. This is the strongest financial choice if you'll keep working.
+2. **Cut earnings below $25,560** and claim at 62 — you keep the full (reduced) $1,680, but you're still 30% down permanently.
+3. **Claim at 62 and stop working** — the reduction is the only cost, but you lose the paycheck.
+
+If you do file for March 2027, apply around November 2026. And have a tax preparer run the numbers — with $38,000 of wages, up to 85% of your benefits become federally taxable, which is why I've penciled in ~$313/month.
+
+Want me to build this as a spreadsheet you can adjust — with your actual expense lines, state tax, and a side-by-side of the 62-vs-67 scenarios?

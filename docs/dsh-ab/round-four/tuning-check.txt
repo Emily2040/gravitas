@@ -1,0 +1,7 @@
+en-car-warranty        c4  2350 | plain  2056 (ratio 1.14) | check-off  2807 | check-on  2759
+en-flight-refund       c4  2586 | plain  1855 (ratio 1.39) | check-off  1956 | check-on  1980
+en-social-security     c4  3333 | plain  3977 (ratio 0.84) | check-off  4067 | check-on  3616
+zh-express-lost        c4  1742 | plain  1024 (ratio 1.70) | check-off  1910 | check-on  1781
+zh-game-refund         c4  2496 | plain  2088 (ratio 1.20) | check-off  2378 | check-on  4272
+zh-resignation         c4  3799 | plain  4033 (ratio 0.94) | check-off  3400 | check-on  2762
+median ratio c4/plain 1.17; median ratio check-off/plain 1.10

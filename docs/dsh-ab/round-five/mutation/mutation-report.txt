@@ -1,0 +1,277 @@
+mutation test of the round-five grading suite (mutation5.py)
+started 2026-10-26T07:22:27; python 3.10.11; 8 parallel jobs; self-test timeout 2400 s
+originals (never written; sha256 checked before and after):
+  grader-prompt5.md      7277ace936a3fe39b2cb6ea0d6f3364874b782beb65b6574a7be5a208949b4fd
+  make_pairs5.py         2ef42f5fc8c8cb5c62c046f32c7bc6b11f0e9cacf787742753947e14e9d9a0e1
+  save_grades5.py        d2ac10d8bd83a687d5676c76ca866e9c38c1c8337262820ffc7dfc8dd49feeed
+  save_labels5.py        bbc7dba981a53697fe0c5df40578d65ba7532225ddb03a1f346c9872f82cb509
+  verdict5-amended.py    95850900c95e1bf23f12e5be5248f10ab4e7edc9413b4b96b86ce8985895472b
+  verdict5.py            53ec336e2777202eeaee8a9c6b9e883ca22792fbf5a6afcf9d1654a00cd1419d  (the frozen sha256)
+mutation5.py sha256 8d57552dfa1ae7fb50412fea1105c0e73ed8a13b9bf65e749a67c9b7abf82f6c
+method: each mutant replaces one exact piece of text in a copy of the script (in its own temporary folder, beside unmodified copies of the other scripts) and runs the copy's --selftest; KILLED = the self-test exits non-zero, SURVIVED = it still passes. A killed mutant that removes a fix shows that the fix's self-test fails without it.
+
+=== verdict5.py (27 mutants)
+baseline (unmutated copy): exit 0, selftest: 249 assertions, 0 failed, 67 s
+V01 KILLED    drop a grader: sonnet's votes are ignored
+              2 assertion(s) failed; first: (b) synthetic win: IMPROVEMENT: yes (36 vs 31 cells, attr net +48 > floor 4)  -- IMPROVEMENT: yes (c5 passes 36 of 36 gate cells, base 31 of 36; attr net +24 vs aa-c5 noise floor 0)
+V02 KILLED    gate 1: net equal to the noise floor passes (> becomes >=)
+              12 assertion(s) failed; first: (e4) net equals the A/A noise floor (opus all ties; aa-plain all r1): main g1_votes[overall] FAILS on its bound  -- PASS all bounds met
+V03 KILLED    gate 1: noise floor from aa-c5 only
+              7 assertion(s) failed; first: (e4) net equals the A/A noise floor (opus all ties; aa-plain all r1): main g1_votes[overall] FAILS on its bound  -- PASS all bounds met
+V04 KILLED    gate 2: a grader with as many losses as wins passes
+              4 assertion(s) failed; first: (e4) net equals the A/A noise floor (opus all ties; aa-plain all r1): main g2_each_grader[overall] FAILS on its bound  -- PASS all bounds met
+V05 KILLED    gate 3: median ratio up to 1.10 passes
+              17 assertion(s) failed; first: (b) synthetic win: base g3_length[overall] FAILS on its bound  -- PASS all bounds met
+V06 KILLED    gate 3: short pairs are those under 0.5, not 0.6
+              2 assertion(s) failed; first: (e2) one en pair under 0.6 (1 of 6 fails en; 1 of 24 passes overall): main g3_length[en] FAILS on its bound  -- PASS all bounds met
+V07 KILLED    gate 3: up to 20% short pairs allowed
+              2 assertion(s) failed; first: (e2) one en pair under 0.6 (1 of 6 fails en; 1 of 24 passes overall): main g3_length[en] FAILS on its bound  -- PASS all bounds met
+V08 KILLED    gate 4: flip 'no more than' into 'fewer than'
+              2 assertion(s) failed; first: (e5) c5 answers graded exactly like plain's (equal counts pass 'no more than' / 'at least'): the other 36 main cells PASS  -- g4_vague_key_points[overall] bound not met: vague gv-grav-c5 <= gv-plain; g4_vague_key_points[
+V09 SURVIVED  gate 5: one relabeller saying wrong is enough (all -> any)  (selftest: 249 assertions, 0 failed)
+              why: Equivalent on every dataset the frozen self-test builds: its two relabellers always give the same label, so 'all say wrong' and 'any says wrong' select the same notes. verdict5-amended.py's self-test has the disagreeing case (e2e) and kills the same mutation there (A13); that scenario also checks that the unmodified verdict5.py, run on it, does not count a note one relabeller calls wrong. verdict5.py and its self-test are frozen and are not changed, so this survivor stays and is a known gap of its self-test.
+V10 KILLED    gate 5: a 'wrong' label without a cite is accepted
+              3 assertion(s) failed; first: (d7) one 'wrong' relabel without a cite (zh): main g5_wrong_added_claims[overall] FAILS as metric missing  -- PASS all bounds met
+V11 KILLED    gate 6: flip the correct comparison
+              57 assertion(s) failed; first: (b) synthetic win: the other 36 main cells PASS  -- g6_correct_wrong_key_points[overall] bound not met: correct gv-grav-c5 >= gv-plain; g6_correct_wrong_key_points[zh] bound not met: correct gv-grav-c5 >= gv-plain; g6_co
+V12 SURVIVED  gate 7: trap threshold 6 instead of 8  (selftest: 249 assertions, 0 failed)
+              why: Not exercised by the frozen self-test: its answers have trap scores 6 or 9 only, so no answer lies between 6 and 8 and the two thresholds count the same answers. verdict5-amended.py's self-test has c5 at 7 against plain at 9 (e2d) and kills the same mutation (A17); in that scenario it also checks that the unmodified verdict5.py fails exactly gate 7 in every scope. verdict5.py and its self-test are frozen and are not changed, so this survivor stays and is a known gap of its self-test.
+V13 KILLED    gate 8: second list allowed 1.20 x plain
+              2 assertion(s) failed; first: (e8) second-list hedging about 1.18x plain (bound 1.10): main g8_hedging[en] FAILS on its bound  -- PASS all bounds met
+V14 KILLED    gate 8: first-list check removed
+              6 assertion(s) failed; first: (e9) first-list hedging about 1.06x plain (bound 1.00): main g8_hedging[overall] FAILS on its bound  -- PASS all bounds met
+V15 KILLED    a missing metric is defaulted to passing
+              111 assertion(s) failed; first: (a) empty input: every main cell FAILS as metric missing (36 cells)  -- g1_votes[overall]; g1_votes[zh]; g1_votes[en]; ... and 33 more
+V16 SURVIVED  a cell with nothing measured passes  (selftest: 249 assertions, 0 failed)
+              why: Unreachable branch: every gate returns finish(c, missing) before adding checks, and adds at least one check otherwise, so no cell reaches finish() with no checks and nothing missing. It is a defensive default; the mutant changes no result.
+V17 KILLED    a missing main-set grade is dropped silently
+              29 assertion(s) failed; first: (d1) one main-set grade removed (ja): main g1_votes[overall] FAILS as metric missing  -- PASS all bounds met
+V18 KILLED    swap the arms of the main comparison
+              68 assertion(s) failed; first: (b) synthetic win: the other 36 main cells PASS  -- g1_votes[overall] bound not met: net votes > 0; net votes > A/A noise floor; g1_votes[zh] bound not met: net votes > 0; net votes > A/A noise floor; g1_votes[en] bound 
+V19 KILLED    the verdict is read from the base table
+              25 assertion(s) failed; first: (b) synthetic win: verdict line is 'VERDICT: win'  -- VERDICT: not a win (failing: g3_length[overall], g3_length[zh], g3_length[en], g
+V20 KILLED    hedging: 'May' as a date is counted as a hedge
+              5 assertion(s) failed; first: pattern en: 'May 5' is a date ('It opened on May 5, 2026.' -> 1)  -- want 0
+V21 KILLED    improvement: attr net equal to the floor counts
+              1 assertion(s) failed; first: (f2) attr net 24 = floor 24: IMPROVEMENT: no  -- IMPROVEMENT: yes (c5 passes 36 of 36 gate cells, base 31 of 36; attr net +24 vs aa-c5 noise floor 24)
+V22 KILLED    a grade whose key-point ids differ from the case's is accepted
+              12 assertion(s) failed; first: (d6) one grade's key_points ids differ from the case's (ko): main g1_votes[overall] FAILS as metric missing  -- PASS all bounds met
+V23 KILLED    a duplicated pair in blind-map is accepted
+              12 assertion(s) failed; first: (d9) a duplicated main pair in blind-map (en): main g1_votes[overall] FAILS as metric missing  -- PASS all bounds met
+V24 KILLED    Japanese finals are counted with the Chinese first list
+              5 assertion(s) failed; first: pattern ja: かもしれ + おそらく ('変わるかもしれません。おそらく大丈夫です。' -> 0)  -- want 2
+V25 KILLED    hedging: 不可能 is counted as 可能
+              4 assertion(s) failed; first: pattern zh: 不可能 is not a hedge ('这不可能。' -> 1)  -- want 0
+V26 KILLED    the A/A noise floor uses one grader
+              20 assertion(s) failed; first: (b) synthetic win: IMPROVEMENT: yes (36 vs 31 cells, attr net +48 > floor 4)  -- IMPROVEMENT: yes (c5 passes 36 of 36 gate cells, base 31 of 36; attr net +48 vs aa-c5 noise floor 0)
+V27 KILLED    gate 5: claim-notes coverage is not checked
+              3 assertion(s) failed; first: (d8) one claim-notes row removed (ja): main g5_wrong_added_claims[overall] FAILS as metric missing  -- PASS all bounds met
+summary verdict5.py: 24 of 27 mutants killed; survivors: V09, V12, V16
+
+=== verdict5-amended.py (67 mutants)
+baseline (unmutated copy): exit 0, selftest: 1113 assertions, 0 failed, 541 s
+A01 KILLED    drop a judge: codex's votes are ignored everywhere
+              10 assertion(s) failed; first: (b) clear win: frozen verdict 'win' on opus+sonnet (codex claim-notes rows left out of its view)  -- VERDICT (as frozen, opus+sonnet): win
+A02 KILLED    gate 1: the sqrt(2) scaling of the noise floor removed (2026-10-25)
+              6 assertion(s) failed; first: (d4) net above the A/A floor but not above sqrt(2) x floor in every scope (8 vs 6 per language, 32 vs 24 overall): main g1_votes[overall] FAILS on its bound  -- PASS all bounds met
+A03 KILLED    gate 1: noise floor from aa-c5 only
+              17 assertion(s) failed; first: (b) clear win: g1[overall] net +72 against floor 8 (x sqrt(2) = 11.3); ties main 0, aa-plain 20, aa-c5 24  -- (72, {'main': 0, 'aa-plain': 20, 'aa-c5': 24})
+A04 SURVIVED  gate 1: the 'net > 0' check removed  (selftest: 1113 assertions, 0 failed)
+              why: Equivalent: the noise floor is a maximum of absolute values, so it is never negative, and 'net > sqrt(2) x floor' (which itself requires net > 0) already implies 'net > 0'. The check is kept because WIN_CRITERIA names both bounds.
+A05 KILLED    gate 2: a judge with as many losses as wins passes
+              4 assertion(s) failed; first: (d2) codex wins exactly as many main pairs as it loses (12 vs 12): gate 2 fails: main g2_each_judge[overall] FAILS on its bound  -- PASS all bounds met
+A06 KILLED    gate 2: codex is not checked on its own
+              0 assertion(s) failed; first: crash: KeyError: 'codex'
+A07 KILLED    gate 3: the pooled 0.70 floor removed
+              1 assertion(s) failed; first: (e1) only the four floor checks fail (raw and visible, pooled and per pair)  -- ['raw: median of pair ratios >= 0.70', 'visible: median of pair ratios >= 0.70']
+A08 KILLED    gate 3: floor lowered to 0.60
+              20 assertion(s) failed; first: (e1) gutted answers: median ratio about 0.64, key points still correct, votes win: main g3_length[overall] FAILS on its bound  -- PASS all bounds met
+A09 KILLED    gate 3: ratio up to 1.10 passes
+              19 assertion(s) failed; first: (b) clear win: base g3_length[overall] FAILS on its bound  -- PASS all bounds met
+A10 KILLED    gate 3: up to 20% short pairs allowed
+              7 assertion(s) failed; first: (e2f) one en pair under 0.6 (1 of 6 fails en; 1 of 24 passes overall): main g3_length[en] FAILS on its bound  -- PASS all bounds met
+A11 KILLED    gate 3: short pairs are those under 0.5, not 0.6
+              5 assertion(s) failed; first: (e2f) one en pair under 0.6 (1 of 6 fails en; 1 of 24 passes overall): main g3_length[en] FAILS on its bound  -- PASS all bounds met
+A12 KILLED    gate 4: flip the vague comparison
+              116 assertion(s) failed; first: (b) clear win: the other 52 main cells PASS  -- g4_vague_key_points[overall] bound not met: vague gv-grav-c5 <= gv-plain; g4_vague_key_points[zh] bound not met: vague gv-grav-c5 <= gv-plain; g4_vague_key_points[en] bound
+A13 KILLED    gate 5: one relabeller saying wrong is enough (all -> any)
+              2 assertion(s) failed; first: (e2e) relabellers disagree: sonnet alone calls c5's notes wrong (not counted), plain's unverified: the other 52 main cells PASS  -- g5_wrong_added_claims[overall] bound not met: wrong added claims gv-grav-c5 <= gv-plain;
+A14 KILLED    gate 5: only sonnet relabels
+              8 assertion(s) failed; first: (b) clear win: frozen verdict 'win' on opus+sonnet (codex claim-notes rows left out of its view)  -- VERDICT (as frozen, opus+sonnet): not a win (failing: g5_wrong_added_claims[overall], g5_wrong_added
+A15 KILLED    gate 6: flip the correct comparison
+              113 assertion(s) failed; first: (b) clear win: the other 52 main cells PASS  -- g6_correct_wrong_key_points[overall] bound not met: correct gv-grav-c5 >= gv-plain; g6_correct_wrong_key_points[zh] bound not met: correct gv-grav-c5 >= gv-plain; g6_correc
+A16 KILLED    gate 6: the wrong-key-points check removed
+              6 assertion(s) failed; first: (e2k) c5 states more key points wrong than plain while it has more correct ones: main g6_correct_wrong_key_points[overall] FAILS on its bound  -- PASS all bounds met
+A17 KILLED    gate 7: trap threshold 6 instead of 8
+              6 assertion(s) failed; first: (e2d) every c5 trap score 7, plain 9 (trap under 8): main g7_trap_under_8[overall] FAILS on its bound  -- PASS all bounds met
+A18 KILLED    gate 8: second list allowed 1.20 x plain
+              6 assertion(s) failed; first: (e2i) second-list hedging just above its bound: main g8_hedging[overall] FAILS on its bound  -- PASS all bounds met
+A19 KILLED    gate 8: first-list check removed
+              6 assertion(s) failed; first: (e2j) first-list hedging just above its bound: main g8_hedging[overall] FAILS on its bound  -- PASS all bounds met
+A20 KILLED    gate 9: as many requests negative as positive passes
+              6 assertion(s) failed; first: (e2b) as many requests net-negative as net-positive (one +, one -, one 0 per language): main g9_requests[overall] FAILS on its bound  -- PASS all bounds met
+A21 KILLED    gate 9: vote-level net instead of the request as the unit
+              12 assertion(s) failed; first: (e2) all net votes from one request per language, the other two net-negative: main g9_requests[overall] FAILS on its bound  -- PASS all bounds met
+A22 KILLED    gate 10: correct and useful may fall 1.0 below plain
+              7 assertion(s) failed; first: (e3) mean useful 1.0 below plain while votes win: main g10_mean_scores[overall] FAILS on its bound  -- PASS all bounds met
+A23 KILLED    gate 10: the useful check removed
+              7 assertion(s) failed; first: (e3) mean useful 1.0 below plain while votes win: main g10_mean_scores[overall] FAILS on its bound  -- PASS all bounds met
+A24 KILLED    gate 10: the mean-total check removed
+              7 assertion(s) failed; first: (e2c) mean total below plain while correct and useful hold: main g10_mean_scores[overall] FAILS on its bound  -- PASS all bounds met
+A25 KILLED    gate 11: citations excuse a phrase from 60 characters away, not 25
+              7 assertion(s) failed; first: excuse rule: an article 26 characters away does not (cite, host, unexcused) = (1, 0, 0)  -- want (0, 0, 1)
+A26 KILLED    gate 11: an opened host excuses phrases whatever the HTTP status
+              7 assertion(s) failed; first: opened hosts: HTTP 403 opens nothing  -- {'www.mhlw.go.jp', 'mhlw.go.jp'}
+A27 KILLED    gate 11: a web_search counts as opening a page
+              1 assertion(s) failed; first: opened hosts: a web_search opens nothing  -- {'mhlw.go.jp', 'www.mhlw.go.jp'}
+A28 KILLED    gate 11: the old rule, phrases counted only in runs that opened no page
+              10 assertion(s) failed; first: (b) clear win: g11 counts every run (24 per arm); unexcused c5 24 vs plain 48, nothing excused  -- (24, 23, 46)
+A29 KILLED    gate 11: a missing event stream is taken as 'no page opened'
+              6 assertion(s) failed; first: (f5) one c5 event stream removed (ja): metric missing: main g11_fabricated_sources[overall] FAILS as metric missing  -- PASS all bounds met
+A30 KILLED    gate 11: the Japanese phrases dropped
+              23 assertion(s) failed; first: fabricated-source pattern: ja によると ('厚生労働省によると、' -> 0)  -- want 1
+A31 KILLED    a missing metric is defaulted to passing
+              452 assertion(s) failed; first: (a) empty input: every main cell FAILS as metric missing (52 cells)  -- g1_votes[overall]; g1_votes[zh]; g1_votes[en]; ... and 49 more
+A32 SURVIVED  a cell with nothing measured passes  (selftest: 1113 assertions, 0 failed)
+              why: Unreachable branch, as V16: no gate calls finish() with no checks and nothing missing, so the defensive 'nothing was measured' default never runs.
+A33 KILLED    swap the arms of the main comparison
+              183 assertion(s) failed; first: (b) clear win: the other 52 main cells PASS  -- g1_votes[overall] bound not met: net votes > 0; net votes > sqrt(2) x A/A noise floor; g1_votes[zh] bound not met: net votes > 0; net votes > sqrt(2) x A/A noise floor; g1_
+A34 KILLED    gate 12: unverifiable claims allowed 1.20 x plain
+              2 assertion(s) failed; first: (e2p) unverifiable claims: c5 82 vs plain 72 unverified by both (ratio 1.14): main g12_unverified_claims[overall] FAILS on its bound  -- PASS all bounds met
+A35 KILLED    the round is a win if either version wins
+              41 assertion(s) failed; first: (c1) every codex grade removed: last line is 'ROUND VERDICT: not a win (as frozen: win; amended: not a win'  -- ROUND VERDICT: win
+A36 KILLED    the frozen view keeps codex's claim-notes rows
+              67 assertion(s) failed; first: (b) clear win: frozen verdict 'win' on opus+sonnet (codex claim-notes rows left out of its view)  -- VERDICT (as frozen, opus+sonnet): not a win (failing: g5_wrong_added_claims[overall], g5_wrong_added
+A37 KILLED    the frozen script's sha256 is not checked
+              2 assertion(s) failed; first: (g2) an altered verdict5.py is not run: frozen 'not a win (frozen verdict not computed: ... sha256)'  -- VERDICT (as frozen, opus+sonnet): win
+A38 KILLED    a missing main-set grade is dropped silently
+              122 assertion(s) failed; first: (c1) every codex grade removed: main g2_each_judge[overall] FAILS as metric missing  -- FAIL bound not met: codex: gv-grav-c5 wins > gv-plain wins
+A39 KILLED    the A/A noise floor uses two judges
+              8 assertion(s) failed; first: (b) clear win: g1[overall] net +72 against floor 8 (x sqrt(2) = 11.3); ties main 0, aa-plain 20, aa-c5 24  -- (72, {'main': 0, 'aa-plain': 12, 'aa-c5': 12})
+A40 KILLED    claim-notes rows from codex are rejected
+              4 assertion(s) failed; first: (b) clear win: the other 52 main cells PASS  -- g5_wrong_added_claims[overall] metric missing: claim-notes.json id 0 malformed (pid/side/grader/note); claim-no; g5_wrong_added_claims[zh] metric missing: claim-notes.json 
+A41 KILLED    improvement: the attr floor without the sqrt(2) scaling
+              1 assertion(s) failed; first: (i1) amended IMPROVEMENT no: attr net +32 not above sqrt(2) x floor 24 = 33.9, nothing missing  -- yes (c5 passes 52 of 52 cells, base 47 of 52; attr net +32 vs sqrt(2) x aa-c5 noise floor 24)
+A42 KILLED    improvement: c5 must pass more cells than base, not as many
+              1 assertion(s) failed; first: (i3) 52 = 52 and attr above floor: IMPROVEMENT yes on both
+A43 KILLED    improvement: missing metrics ignored
+              3 assertion(s) failed; first: (a) empty input: both IMPROVEMENT versions say no (metric missing)
+A44 KILLED    IMPROVEMENT is yes if either version says yes
+              1 assertion(s) failed; first: (i2) amended IMPROVEMENT no (metric missing in the base table); frozen IMPROVEMENT yes
+A45 KILLED    reported A/A vague floor ignores which side is r1
+              1 assertion(s) failed; first: (b) clear win: g4 vague c5 72 vs plain 144, missing 0 vs 0, A/A vague floor 36 reported  -- {'aa-plain': 108, 'aa-c5': 0, 'floor': 108}
+A46 KILLED    gate 5: claim-notes coverage is not checked
+              4 assertion(s) failed; first: (c7) one codex claim-notes row removed (zh): main g5_wrong_added_claims[overall] FAILS as metric missing  -- PASS all bounds met
+A47 KILLED    gate 11: the zh/en phrases dropped
+              30 assertion(s) failed; first: fabricated-source pattern: zh 据…官网 ('据人社部官网，' -> 0)  -- want 1
+A48 KILLED    a frozen-script crash is not caught (the round verdict is never printed)
+              0 assertion(s) failed; first: crash: RuntimeError: simulated crash
+A49 KILLED    gate 4: the missing-key-points check removed (2026-10-25)
+              7 assertion(s) failed; first: (e2l) vague points turned into missing ones: plain (correct, correct, vague, vague, vague), c5 (correct, correct, missing, missing, missing): main g4_vague_key_points[overall] FAILS on its bound  -- PASS all bounds met
+A50 KILLED    gate 3: the per-pair median floor removed (2026-10-25)
+              8 assertion(s) failed; first: (e1) only the four floor checks fail (raw and visible, pooled and per pair)  -- ['raw: pooled median ratio >= 0.70', 'visible: pooled median ratio >= 0.70']
+A51 KILLED    gate 3: visible text not checked (2026-10-25)
+              10 assertion(s) failed; first: (b) clear win: g3 measures raw and visible text, pooled and per pair
+A52 KILLED    visible text keeps list markers
+              8 assertion(s) failed; first: visible text drops markup, rules and blank lines and collapses spaces  -- 'Title\n- Bold item\n2. second\na b\nmany spaces'
+A53 KILLED    gate 8: the third list not gated overall (2026-10-25)
+              4 assertion(s) failed; first: (b) clear win: g8 has the third list, gated overall only
+A54 KILLED    gate 8: the Japanese third list empty
+              1 assertion(s) failed; first: third hedge list: ja でしょう (0)  -- want 1
+A55 KILLED    gate 12: counts wrong-by-both instead of unverified-by-both
+              4 assertion(s) failed; first: (b) clear win: g12 unverified by both c5 72 vs plain 72; A/A differences reported
+A56 KILLED    integrity: a grade file is not compared with its ledger grade
+              34 assertion(s) failed; first: (j5) a grade file replaced by a different valid grade (ko): main g1_votes[overall] FAILS as metric missing  -- PASS all bounds met
+A57 KILLED    integrity: the last valid ledger grade is used, not the first
+              17 assertion(s) failed; first: (j5b) a re-grade received later and written over the first: still fails (the first valid grade is used): main g1_votes[overall] FAILS as metric missing  -- PASS all bounds met
+A58 KILLED    integrity: a logged replace record is ignored
+              2 assertion(s) failed; first: (j5c) a logged replace (with its reason) before the re-grade: passes, and is counted: the other 52 main cells PASS  -- g1_votes[overall] metric missing: blind/grades/codex/p052.json (main ko-card-installment-defense r; g
+A59 KILLED    integrity: the packet's sha256 is not compared with the ledger
+              17 assertion(s) failed; first: (j8) a packet edited after it was graded (en): main g1_votes[overall] FAILS as metric missing  -- PASS all bounds met
+A60 KILLED    integrity: the packaged answer's sha256 is not compared with raw/
+              24 assertion(s) failed; first: (j1) a c5 final edited after it was packaged (zh): main g1_votes[overall] FAILS as metric missing  -- PASS all bounds met
+A61 KILLED    integrity: validity.json may be older than the run files
+              53 assertion(s) failed; first: (j3) a run file newer than validity.json: every cell fails: main g1_votes[overall] FAILS as metric missing  -- PASS all bounds met
+A62 KILLED    integrity: runs listed under 'invalid' are ignored
+              53 assertion(s) failed; first: (j4) validity.json lists a run still due a rerun: every cell fails: main g1_votes[overall] FAILS as metric missing  -- PASS all bounds met
+A63 KILLED    integrity: a missing validity.json passes
+              53 assertion(s) failed; first: (j2) validity.json missing: every cell fails: main g1_votes[overall] FAILS as metric missing  -- PASS all bounds met
+A64 KILLED    integrity: a label is not compared with its ledger label
+              4 assertion(s) failed; first: (j6) a label changed after it was received (ja): main g5_wrong_added_claims[overall] FAILS as metric missing  -- PASS all bounds met
+A65 KILLED    integrity: a blank final's placeholder answer is not recognised
+              2 assertion(s) failed; first: (j10) a plain final still blank after its rerun, packaged as the placeholder: grades stand, the text gates fail: the other 46 main cells PASS  -- g1_votes[overall] metric missing: blind/grades/opus/p009.json (main en-gif
+A66 KILLED    integrity: validity problems do not reach the text gates
+              48 assertion(s) failed; first: (j2) validity.json missing: every cell fails: main g3_length[overall] FAILS as metric missing  -- PASS all bounds met
+A67 KILLED    reported: decisive votes counted to the longer answer
+              1 assertion(s) failed; first: (b) clear win: decisive votes to the shorter answer: main 1.0 for every judge; aa-plain pooled 12 of 16  -- {'to_shorter': 4, 'decisive': 16, 'share': Fraction(1, 4)}
+summary verdict5-amended.py: 65 of 67 mutants killed; survivors: A04, A32
+
+=== save_grades5.py (10 mutants)
+baseline (unmutated copy): exit 0, selftest: 35 assertions, 0 failed, 1 s
+S01 KILLED    route (a): a row's prompt is not compared with the frozen prompt
+              1 assertion(s) failed; first: route (a): a row whose prompt was edited is logged as invalid and not saved  -- ['p001 sonnet: not valid, logged and not saved: packetPath W:\\AgentData\\logs\\gravitas-dsh-ab5\\.tmp-mutation\\save-grades4-selftest-e6spj
+S02 KILLED    route (a): a row's packet path is not checked
+              2 assertion(s) failed; first: route (a): a row whose packet is not blind/packets/<pid>.md is not saved
+S03 KILLED    route (b): the last valid ledger grade is used, not the first
+              4 assertion(s) failed; first: route (b): a grade file overwritten with the later grade fails the check
+S04 KILLED    route (b): --replace does not log its replace record and reason
+              4 assertion(s) failed; first: route (b): --replace REASON logs a replace record with the reason, then the new grade is in force
+S05 KILLED    route (b): invalid rows are not logged
+              2 assertion(s) failed; first: route (b): every row received is in the ledger, valid or not (6 rows so far)  -- 1
+S06 KILLED    route (b): a grade file is not compared with its ledger grade
+              1 assertion(s) failed; first: route (b): a grade file overwritten with the later grade fails the check
+S07 KILLED    route (a): a codex session's prompt is not checked
+              1 assertion(s) failed; first: --record: a codex session given an edited grader prompt is logged as invalid
+S08 KILLED    route (b): the packet's sha256 is not compared with the ledger
+              1 assertion(s) failed; first: a packet edited after grading fails the check
+S09 KILLED    route (b): a later different valid grade silently replaces the first
+              1 assertion(s) failed; first: route (b): a later different valid grade is logged and not used without --replace
+S10 KILLED    a lower-case winner is accepted
+              1 assertion(s) failed; first: malformed: winner 'a' (lower case)
+summary save_grades5.py: 10 of 10 mutants killed; survivors: none
+
+=== save_labels5.py (7 mutants)
+baseline (unmutated copy): exit 0, selftest: 11 assertions, 0 failed, 1 s
+L01 KILLED    route (c): labels written although there are problems
+              4 assertion(s) failed; first: route (c): two different labels for one id in the outputs given: a problem, nothing written
+L02 KILLED    route (c): two different labels for one id in the outputs are not flagged
+              1 assertion(s) failed; first: route (c): two different labels for one id in the outputs given: a problem, nothing written
+L03 KILLED    route (b): the last valid ledger label is used, not the first
+              1 assertion(s) failed; first: route (b): a later rerun with a different label is logged, not used; the first stays in force  -- []
+L04 KILLED    route (c): an empty batch that nothing fills is not reported
+              1 assertion(s) failed; first: route (c): an empty batch never filled: a problem, nothing written
+L05 KILLED    route (b): invalid labels are not logged
+              1 assertion(s) failed; first: route (b): the invalid label is in the ledger too, marked invalid
+L06 KILLED    a 'wrong' label without a cite is accepted
+              2 assertion(s) failed; first: route (c): a 'wrong' without a cite leaves a note unlabelled: a problem, nothing written
+L07 KILLED    a logged replace record is ignored
+              1 assertion(s) failed; first: --retire: after a replace record the next valid label is used  -- []
+summary save_labels5.py: 7 of 7 mutants killed; survivors: none
+
+=== make_pairs5.py (5 mutants)
+baseline (unmutated copy): exit 0, selftest: 8 assertions, 0 failed, 3 s
+M01 KILLED    route (d): the packaged answers' sha256 not stored
+              1 assertion(s) failed; first: route (d): every blind-map entry stores the sha256 of each packaged (stripped) answer
+M02 KILLED    route (d): answers naming an arm or the harness are not refused
+              5 assertion(s) failed; first: route (d): an answer naming the arm or harness is refused ('see W:\\AgentData\\logs')
+M03 KILLED    route (d): the leak pattern misses AgentData and r5-
+              2 assertion(s) failed; first: route (d): an answer naming the arm or harness is refused ('see W:\\AgentData\\logs')
+M04 KILLED    route (d): a final blank after its rerun still stops the build
+              1 assertion(s) failed; first: route (d): a final still blank after its rerun is packaged as the placeholder  -- empty answer: W:\AgentData\logs\gravitas-dsh-ab5\.tmp-mutation\make-pairs4-selftest-6v1ihbgq\raw\ja-c2.gv-grav-c5.r1.txt (not yet rerun; r
+M05 KILLED    a blank final that was never rerun is packaged as the placeholder
+              1 assertion(s) failed; first: a blank final not yet rerun stops the build
+summary make_pairs5.py: 5 of 5 mutants killed; survivors: none
+
+summary verdict5.py: 24 of 27 mutants killed; survivors: V09, V12, V16
+summary verdict5-amended.py: 65 of 67 mutants killed; survivors: A04, A32
+summary save_grades5.py: 10 of 10 mutants killed; survivors: none
+summary save_labels5.py: 7 of 7 mutants killed; survivors: none
+summary make_pairs5.py: 5 of 5 mutants killed; survivors: none
+original grader-prompt5.md unchanged after the run: yes
+original make_pairs5.py unchanged after the run: yes
+original save_grades5.py unchanged after the run: yes
+original save_labels5.py unchanged after the run: yes
+original verdict5-amended.py unchanged after the run: yes
+original verdict5.py unchanged after the run: yes
+finished 2026-10-26T08:27:53 (65 min)
+RESULT: every survivor explained, every baseline passes

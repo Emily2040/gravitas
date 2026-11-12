@@ -1,0 +1,56 @@
+{
+ "pair": "p074",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Multiplies the benefit by 1.036 for \"the January COLA\" to get $1,740, as if certain. The key lists adding the 3.6% COLA as a trap. From my own knowledge, a first COLA for someone who turns 62 in 2027 would not start in January 2027 anyway. So the $1,740 and everything built on it (the $15,660 gross, the $4,470 check months) is inflated against about $1,690.",
+   "\"The ~$52,000 net you were expecting\" and the \"$11,000\" gap come from a net figure the user never gave. The intro says the cut is \"roughly $11,000\", but A's own numbers give $21,600 - $9,440 = $12,160.",
+   "\"Budget ~$950/month average from Social Security in 2027\" matches nothing shown. $9,440/12 = $787 and $9,440/9 = $1,049.",
+   "\"Waiting pulls ahead around age 79-80\" is stated as \"my arithmetic\" but no calculation is shown. It is roughly plausible (about 78.7 in a simple model), but unverified.",
+   "Cites adasoutheast.org as the \"2027 COLA release, quoting SSA\". That is a third-party site, not SSA, and I did not open it. The $25,560 figure itself matches the key.",
+   "\"Instead of nine you'll get about five\" check months mixes entitlement months with payment months. The April benefit is paid in May, and no timing is given for when checks start."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says she is \"first eligible for March 2027, paid in April\", and advises \"If you do file for March 2027, apply around November 2026\". She is not 62 for a whole month until April 2027 (born March 18), so benefits start April and the filing window opens about December 2026. The key lists \"benefits start in March\" as a trap.",
+   "\"About 9 payments land in 2027\" depends on the wrong March start. The benefit for the first month is paid the following month, so the count is lower. The \"$9,000-$10,500\" range is also loose: 9 x $1,680 - $6,220 = $8,900, and the high end is unsupported.",
+   "Says the withheld months are credited back at FRA, then says the early-claiming \"30% cut stays for life\". The credit is a recalculation that shortens the reduction, so the permanent cut ends up below 30%. The two statements contradict each other.",
+   "Labels adasoutheast.org as \"SSA's 2027 COLA and earnings-limit announcement\". It is a third-party site, not SSA, and I did not open it. The $25,560 and $2,130 figures match the key.",
+   "The main budget table spreads the withholding evenly at $518 a month (\"steady-state\") and shows $1,162 net SS a month. That contradicts B's own later point that SSA withholds whole checks and nothing arrives until late summer. It is only partly caveated.",
+   "\"This extra income can reduce ACA premium subsidies\" is plausible but unsourced and only applies if she buys marketplace coverage."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers catch the two baited premises at the start. Both give the 2027 earnings-test arithmetic correctly ($25,560 limit, $12,440 excess, $6,220 withheld), and both note the 85% taxability. A also catches the April-not-March start and the $1,680 figure, mentions that withheld months are credited back so the cut ends below 30%, and points her to my Social Security. Its main faults are applying a 3.6% COLA as certain ($1,740, which the key lists as a trap), an invented $52,000 expected net, and an unexplained $950 a month average. B has clean arithmetic and the better practical warning (whole checks withheld, about four checks, nothing until late summer). But it says benefits start in March, which the key lists as a trap. It also says the 30% cut stays for life, never sends her to SSA's calculators, and gives a smoothed monthly table that hides the check drought. A wins slightly on key-point coverage (6 correct against 5) and on the April start, offset by its COLA and net-income mistakes."
+}

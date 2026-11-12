@@ -1,0 +1,24 @@
+One important correction before the draft: I wouldn’t concede the warranty point. Assuming Jiffy Lube only did oil changes, that shouldn’t void your powertrain warranty. Under the Magnuson-Moss Warranty Act, a dealer generally can’t deny a claim just because routine maintenance was done elsewhere; for an outside-service denial, it has to show that service caused the failure. An oil change doesn’t cause transmission slipping. So I’d avoid writing “my warranty is void” or “that’s on me”—it could weaken your position later.
+
+Here’s a polite version that keeps the warranty issue open while still asking for a price break:
+
+---
+
+**Subject:** 2023 CR-V — Transmission Repair and Warranty Review
+
+Dear [Service Manager],
+
+Thank you for diagnosing the transmission slip on my 2023 CR-V at 41,000 miles. I want to get the car repaired promptly, but I was surprised to hear that the powertrain warranty was declined because my oil changes were done at Jiffy Lube.
+
+My understanding is that routine maintenance at a non-dealership shop doesn’t void the Honda powertrain warranty, and that a claim can be denied based on outside service only if that service caused the failure. I can provide my maintenance receipts. Would you please reconsider the claim under the 5-year/60,000-mile powertrain warranty?
+
+If coverage still isn’t approved, please send me the denial in writing with the specific reason and warranty provision. And if this will be a self-pay repair, can you do anything on the $3,400 price—a goodwill adjustment, lower labor rate, or payment plan? I’d like to move forward once we’ve sorted out coverage and cost.
+
+Thank you,
+[Name]
+[Phone]
+[VIN]
+
+---
+
+Keep copies of your Jiffy Lube receipts. If they still refuse, ask for the denial in writing and escalate to American Honda Customer Relations—that’s often what gets these claims reviewed. General information, not legal advice: [FTC guidance](https://consumer.ftc.gov/articles/auto-warranties-and-auto-service-contracts), [15 U.S.C. § 2302(c)](https://www.law.cornell.edu/uscode/text/15/2302).

@@ -1,0 +1,49 @@
+{
+ "pair": "p019",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'2016 年起，居民身份证异地受理在全国推开': the key dates nationwide full implementation to 1 July 2017 (under 公通字〔2015〕34号), so this date is imprecise",
+   "'广州异地补领承诺 40 天内发证': the key says Guangzhou's actual time for out-of-province applicants was not verified. A cites the Liwan notice link but does not quote the figure, so it is unverifiable",
+   "Hometown route 'temporary ID within 3 days (3 日内)': no source given, and the key has no such figure. Unverifiable",
+   "Photo receipt '一般 20—30 元': a local price stated with no source. A hedges it with '一般', so this is minor",
+   "'过期作废还算一次' (an expired 12306 certificate still counts as one use): plausible but unsourced"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Paper temporary riding certificate is '免费，报身份证号即可': the key names 'paper certificate is definitely free' as a trap with no official basis",
+   "'郑州公安的办事指南写的是河南省内 15 个工作日': the key flags a '15 working days' time limit as fabricated or unverifiable. B also applies a Zhengzhou guide to a Henan hometown the user never named (the 11月中旬 arithmetic itself checks)",
+   "Mailing fee '省内 18 元、省外 20 元，证到付款': a number not in the key, with no specific source given. Unverifiable",
+   "'广州公安承诺自受理之日起 40 天内发证': the key says the Guangzhou time was not verified. B gives it in place of the 60-day legal limit",
+   "Report-loss step '本人到场、无需预约': unsourced procedural detail",
+   "Photo '约 20–40 元': a local price with no source. Minor"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers correct both premises in their first lines: the card can be replaced in Guangzhou, and the 12306 e-certificate (6 uses a month) or the station's paper certificate gets you onto the train. Both also get the 40-yuan replacement fee, the 10-yuan temporary ID with 3-month validity, and the 5-working-day wait for the hometown police to sign off. B dates nationwide implementation correctly to July 2017, where A says 2016. B never states the 60-day legal limit, gives only an unverified 40-day Guangzhou figure, and falls into two traps the key names: it calls the paper certificate definitely free, and it cites a 15-working-day limit from a Zhengzhou guide. B also adds an unsourced mailing fee. A has its own unsourced figures, the hometown temporary ID in 3 days and the 40-day Guangzhou promise, but avoids the named traps and is a little tighter, so A wins narrowly."
+}

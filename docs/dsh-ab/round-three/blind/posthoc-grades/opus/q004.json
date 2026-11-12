@@ -1,0 +1,51 @@
+{
+ "pair": "q004",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says the original 户口簿 is the most important document for replacement and the family should mail it from home. This is wrong: the Liwan notice A itself cites (I opened it) asks only for the photo receipt, and the key lists 'must have 户口本' as a trap.",
+   "Says the paper temporary boarding certificate at the station is free, twice. The key lists this as a trap because no official source says so.",
+   "'全国异地办理最长45日' is invented. It contradicts the key's 60-day legal limit.",
+   "'新证大概11月中下旬才能到' does not follow from its own 40-day promise. Forty days from Oct 23-26 runs to Dec 2-5.",
+   "'EMS省内邮费18元到付' cannot be verified. The cited Liwan notice does not mention postage.",
+   "The 微信小程序 menu path (户政预约 → 身份证业务 → 申、换、补领) cannot be verified.",
+   "'河南派出所一般现场拍照' and '新证一般也要30天上下' cannot be verified.",
+   "Calls the gmw.cn link '央视新闻'. The source attribution cannot be verified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the temporary ID can be applied for at the same time as the replacement. The key says out-of-province residents in Guangzhou can apply only after the home province issues the card (about 5 working days).",
+   "'2016年起异地受理在全国推开' is imprecise. The key gives July 1, 2017 as the start of full nationwide cross-province implementation.",
+   "The Liwan notice link has a typo ('jczgk' instead of 'jczwgk') and returns HTTP 404 (I checked). What B says the notice contains does match the real page.",
+   "The photo receipt price of '20—30元' cannot be verified. The key says the cost varies by place. The 70-80 total is correct arithmetic: 40+10+20-30.",
+   "The 广州公安 公众号 menu path and the claim that the temporary ID is collected at the same district office cannot be verified."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the two false premises, give the right 12306 details (24 hours, 6 per month) and the right fees (40 yuan replacement, 10 yuan temporary ID). Each A claim checked against the Liwan notice that A cites: A tells the user the 户口簿 is the key document and should be mailed from home. The notice does not ask for it, and the key lists this as a trap. A also says the station paper certificate is free, which is another trap. It invents a 45-day limit for applications made outside the home province and puts the 40-day promise in mid-to-late November, which is wrong arithmetic. B correctly says no 户口簿 is needed, states the 40-day promise alongside the 60-day legal limit, and keeps its hedges. Its flaws are smaller: it says the temporary ID can be applied for at the same time as the replacement, gives a slightly wrong rollout year, and has a broken link. B is also somewhat tighter."
+}

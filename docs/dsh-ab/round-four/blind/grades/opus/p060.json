@@ -1,0 +1,47 @@
+{
+ "pair": "p060",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "「戻る税金は所得税が約850円…合わせて2,500円ほど」: states an income-tax refund as fact. 106万−104万＝2万 is wiped out by any 社会保険料控除 of 2万 or more, which a 180万 part-timer almost certainly has, so the refund is likely 0. The answer never mentions checking 源泉徴収税額. The key penalizes exactly this.",
+   "「所得税自体が約1,000円」: (106万−104万)×5%＝1,000円 only holds if there is no 社会保険料控除, an assumption the answer does not state."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "「基礎控除104万円（合計所得132万円以下。令和8年分）」: wrong income condition. Per the key (No.1199), 104万 applies to 合計所得金額 up to 489万円. The result for this person (106万) is unaffected.",
+   "「e-Taxなら30分ほど」: an unverifiable time estimate.",
+   "「タクシーは緊急時のみ」: narrower than the rule, under which taxis count when public transport cannot be used (No.1122). Minor imprecision."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the 10万円 premise with the lower-of-10万-or-5% rule. Both compute 74万 → 106万 → 5万3,000 → 1万7,000円 correctly and give the 2027年1月1日から5年間 refund window. B matches the key's best answer on the real effect: little or no income-tax refund because 社会保険料控除 eliminates taxable income, with the gain mainly about 1,700円 in 住民税. A asserts an 850円 income-tax refund and a 2,500円 total without considering 社会保険料控除 or 源泉徴収税額, which the key penalizes. B has its own flaws: it attaches a wrong 132万 condition to the 104万 基礎控除 and omits that the deduction cannot be taken in 年末調整. A gives slightly richer prep tips (the ふるさと納税 note, マイナポータル). Neither mentions filing only a 住民税申告. On balance B's core conclusion is more accurate."
+}

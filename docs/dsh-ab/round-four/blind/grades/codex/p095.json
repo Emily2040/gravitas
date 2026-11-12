@@ -1,0 +1,44 @@
+{
+  "pair": "p095",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+    "correct": 6,
+    "trap": 7,
+    "honest": 7,
+    "useful": 5,
+    "concise": 7,
+    "added_claim_errors": [
+      "「付与日数は…給与明細で確認できます」: this employer's payslip contents are unverified; payslips do not necessarily show leave entitlement (general payroll knowledge)."
+    ],
+    "key_points": {
+      "1": "vague",
+      "2": "correct",
+      "3": "correct",
+      "4": "vague",
+      "5": "missing",
+      "6": "missing",
+      "7": "vague",
+      "8": "correct"
+    }
+  },
+  "B": {
+    "correct": 9,
+    "trap": 10,
+    "honest": 9,
+    "useful": 9,
+    "concise": 8,
+    "added_claim_errors": [],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "correct",
+      "4": "correct",
+      "5": "correct",
+      "6": "missing",
+      "7": "correct",
+      "8": "vague"
+    }
+  },
+  "reasons": "B immediately corrects the premise, gives the October 1 grant date, five-day entitlement and 80% attendance condition, and supplies a polite LINE message explicitly requesting paid leave. A omits the attendance condition, defers the concrete entitlement to workplace documents, and makes paid leave an optional addition to an otherwise ambiguous absence request. Both omit the employer's limited right to change the requested date; B also leaves proportional entitlement implicit and omits checking employment documents in its fallback advice."
+}

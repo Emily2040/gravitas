@@ -1,0 +1,54 @@
+{
+ "pair": "p042",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "'7~9월 석 달이면 요건을 넘게 충족': treats the count of late months as the test. The real test is a 60-day total of delayed or unpaid days, so this overstates eligibility (softened by '가능성이 꽤 높습니다' and '심사예요').",
+   "'고용24에서 수급자격 신청': imprecise. Online you only file the job-seeker registration and do the education; the eligibility claim is made in person at the local employment center.",
+   "'이직일부터 12개월 안이지만': the period runs from the day after leaving, and calling it an application window hides that benefit days are lost if you apply late.",
+   "Living-cost loan at '연 1.5%' with no date: on 2026-10-25 the temporary 1.0% rate applies (until 10.31), and the separate 1% guarantee fee is not mentioned.",
+   "'이의제기 → 심사청구 순으로': the formal remedy is a review request (심사청구), then a re-review (재심사청구). An '이의제기' step is not a defined statutory stage, so this is unverifiable as stated.",
+   "'1차로 반려될 수 있어요' if the employer reports a voluntary quit: case-dependent, needs checking (not penalized)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 6,
+  "honest": 6,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "'워크넷 구직등록 후': wrong. WorkNet has closed and been merged into 고용24.",
+   "'이미 늦게라도 받았다면 그 지연 사실 자체가 사유가 되고': overstated. Delays must add up to 60 days or more, so any delay at all does not qualify.",
+   "'자발적 퇴사로 보지 않고': mislabels the legal position. It is still a quit for one's own reasons that is excused by a just cause, not a non-voluntary separation.",
+   "'이직일 다음날부터 12개월 안에 신청해야': presented as an application deadline, which hides that benefit days are lost on a late application (about 208 days for 150 days of benefit).",
+   "'퇴사 후 14일 안에 청산하지 않으면 바로 진정할 수 있습니다': implies you must wait 14 days, but the July–September wages are already overdue and a complaint can be filed now.",
+   "Early re-employment allowance as '남은 수급기간의 절반': leaves out the conditions (at least half of the benefit days still left, and 12 months of continued employment)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "wrong",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "wrong",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise up front: wage arrears of 2 months or more within a year make a quit eligible for benefits. Both also slip into treating three late months as automatically enough, with no 60-day test. B states this more absolutely ('지연 사실 자체가 사유'), while A hedges with '가능성이 꽤 높다' and notes that it goes to review. A gives the correct benefit periods (150 days, or 180 days at 50 or older), tells the person to apply this week, and covers the wage complaint and the living-cost loan, though it gives the loan rate without a date and misses the government-paid advance (간이대지급금). B sends the person to WorkNet, which is closed, never gives the benefit periods, frames 12 months as an application deadline, and leaves out the living-cost loan. Its strengths are the 간이대지급금 detail and a check on whether the employer had insurance at all. Neither answer gives the daily amounts."
+}

@@ -1,0 +1,45 @@
+## First, the correction
+
+You almost certainly do **not** need to enroll in Part B this month, and doing so would cost you roughly **$2,400–$2,500 a year** for coverage that mostly duplicates what you already have.
+
+Your coworker is repeating a real rule — but it's the rule for people who *don't* have qualifying employer coverage. Because your employer has about 400 employees (well over the 20-employee threshold) and you're covered as an **active employee**, your group plan is the primary payer and Medicare is secondary. You can delay Part B with **no late-enrollment penalty**. ([KFF](https://www.kff.org/faqs/medicare-open-enrollment-faqs/employer-retiree-coverage/i-am-about-to-turn-65-my-spouse-is-60-and-still-working-we-are-both-covered-under-her-employers-health-plan-do-i-have-to-do-anything-with-regard-to-medicare-this-year/), [ARPI](https://arpinstitute.com/codex/irmaa/medicare-employer-coverage))
+
+When you eventually leave the job or lose that coverage, you get an **8-month Special Enrollment Period** to sign up for Parts A and B penalty-free. (Part D is 63 days.) So this month is about confirming your situation and taking the free steps — not about writing a check to Medicare.
+
+## Your to-do list for this month
+
+**1. Get written answers from HR/benefits.** Ask specifically:
+- Is my coverage based on **current employment** as an active employee (not retiree coverage or COBRA)?
+- Does the company count as having **20+ employees** for Medicare purposes? (Yes at 400 — get it confirmed.)
+- Is the group plan **primary** to Medicare for me?
+- Is the prescription drug coverage **"creditable"** — as good as Medicare Part D? Ask for the annual creditable coverage notice the plan is required to provide.
+
+**2. Decide on Part A.** If you have 40 quarters of work history, Part A is **premium-free**, and taking it now does not affect your right to delay Part B. It can pick up some hospital costs your group plan doesn't. Two exceptions:
+- **If you contribute to an HSA, do not enroll in Part A (or B).** Medicare enrollment ends HSA eligibility, and Part A can be backdated up to six months. Stop contributions first, or delay Part A.
+- **If you don't have 40 quarters**, Part A carries a premium and its own late penalty — talk to Social Security before delaying.
+
+**3. If you're already drawing Social Security, act now.** You'll be **auto-enrolled in A and B** at 65. Contact SSA (you can start three months before your birthday) to decline/delay Part B, or the premium will be deducted from your check. ([KFF](https://www.kff.org/faqs/medicare-open-enrollment-faqs/employer-retiree-coverage/i-am-about-to-turn-65-my-spouse-is-60-and-still-working-we-are-both-covered-under-her-employers-health-plan-do-i-have-to-do-anything-with-regard-to-medicare-this-year/))
+
+**4. Don't enroll in Part B, Medicare Advantage, or Part D this month.** Keep your employer plan as-is.
+
+**5. Keep the paper trail.** Save the HR confirmation, the creditable coverage notice, pay stubs, and plan documents. If there's ever a penalty dispute, this is your proof.
+
+**6. Put a calendar reminder for the 8-month SEP.** It starts the month after you leave the job or lose coverage, whichever comes first. Enroll in Part B inside it. **Don't rely on COBRA** — COBRA is not qualifying coverage and does not give you a Special Enrollment Period.
+
+## What you'd pay if you enrolled now anyway
+
+The 2026 standard Part B premium is **$202.90/month** (2025: $185.00), so about **$2,435/year** — more if your income triggers IRMAA (2026 thresholds: $109,000 single / $218,000 joint MAGI). ([Federal Register](https://www.govinfo.gov/content/pkg/FR-2025-11-19/html/2025-20251.htm)) Your employer plan would still pay first, and Part B would be secondary — covering little your plan doesn't already cover.
+
+## When you do retire or leave
+
+- Enroll in **Part B** during the 8-month SEP.
+- Enroll in **Part D or a Medicare Advantage plan** within 63 days if your drug coverage isn't creditable.
+- When you enroll in Part B, you get a **six-month Medigap open enrollment** window (in most states) to buy a supplement without medical underwriting.
+
+## The one case where enrolling now can make sense
+
+If your employer plan has large gaps — for example, no out-of-network coverage, or very high cost-sharing — and you expect significant medical costs, Part B can fill some of that. For most people with solid group coverage, it's duplicate. Also, if HR tells you the plan **requires** Medicare enrollment at 65 to stay covered, follow the plan document.
+
+---
+
+Bottom line: **your coworker's penalty warning doesn't apply to you at 400 employees.** This month, confirm the four points with HR in writing, sort out Part A (and the HSA question), decline Part B if you're auto-enrolled, and keep your employer plan. Save the Part B decision for when you actually leave. This is general information, not individualized benefits advice — confirm the details with your HR/benefits office and your local SHIP counselor or Social Security.

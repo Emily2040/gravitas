@@ -1,0 +1,49 @@
+{
+ "pair": "p094",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"실업급여가 끝난 뒤 잔여분을 받을 수 있으니 지금 미리 신청해 두세요\" (국민취업지원제도): unverified and at odds with the key, which says people who are on 구직급여 or within 6 months after it ends may be excluded from 구직촉진수당",
+   "\"임금체불확인서(회사 발급)\": the 체불 확인서 is normally issued by the labour office (노동관서), not the company; questionable",
+   "조기재취업수당 \"대기기간 후 12개월 이상 계속 고용되면 남은 수급일수의 절반\": leaves out the condition that at least half of the 소정급여일수 must remain; incomplete rather than wrong"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "missing",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 7,
+  "honest": 6,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"7~9월 석 달이면 요건을 넘습니다\": overstated; the test is a total of 60 days of delayed or unpaid wages, not the number of late months (key: '석 달이니 무조건 받는다'는 과장)",
+   "\"워크넷 구직등록 후 관할 고용센터에 수급자격을 신청\": wrong; WorkNet registration has ended and moved to 고용24",
+   "\"임금이 밀리거나 늦게 지급돼서 그만둔 경우는 '자발적 퇴사'로 보지 않고\": mischaracterised; it is still a voluntary resignation, but with a 정당한 사유 under 제58조 제2호 다목",
+   "\"퇴사 후 14일 안에 청산하지 않으면 바로 진정할 수 있습니다\": misleading; a complaint can be filed at any time, including while still employed, so there is no need to wait 14 days"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "wrong",
+   "3": "vague",
+   "4": "vague",
+   "5": "missing",
+   "6": "wrong",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start, citing 시행규칙 별표2 and saying late payment counts as 체불. A hedges properly (\"가능성이 높습니다\", 최종 판단은 고용센터). B states flatly that three months meets the requirement, which is the overstatement the key penalises. B also sends the person to WorkNet registration, a penalised error. B does cover more of the key: the 180-day eligibility rule and 간이대지급금 (up to 10 million won, correct). A urges applying this week more clearly. Neither gives the 150/180 benefit days, the 68,100/66,048 won amounts, 고용24, or 생계비 융자. A wins because it avoids both of the key's listed penalties that B commits; its one questionable added claim, about 국민취업지원제도, is less harmful."
+}

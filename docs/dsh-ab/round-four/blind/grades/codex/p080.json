@@ -1,0 +1,47 @@
+{
+  "pair": "p080",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+    "correct": 7,
+    "trap": 9,
+    "honest": 5,
+    "useful": 6,
+    "concise": 4,
+    "added_claim_errors": [
+      "「社会保険料控除：約20〜40万円」 invents a personal deduction amount not supplied by the user.",
+      "「所得税は0円」「効果があるのは住民税だけ」 are unsupported certainties; the necessary deductions and withholding amount are unknown.",
+      "「社会保険料の金額が分かれば、所得税0が確定します」 is incorrect: knowing the amount does not establish that it meets the required threshold."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "correct",
+      "4": "wrong",
+      "5": "vague",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "B": {
+    "correct": 8,
+    "trap": 9,
+    "honest": 8,
+    "useful": 7,
+    "concise": 6,
+    "added_claim_errors": [
+      "「2027年2月16日〜3月15日に確定申告」 misleadingly confines the recommended filing window; this refund claim can be filed from January 1, 2027 through December 31, 2031.",
+      "「家族の医療費も、生計を一にしていれば合算できます」 omits the condition that the claimant must have paid those expenses."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "correct",
+      "4": "vague",
+      "5": "vague",
+      "6": "vague",
+      "7": "wrong"
+    }
+  },
+  "reasons": "Both immediately correct the ¥100,000 misconception and correctly calculate ¥1,060,000 income, a ¥53,000 threshold, and a ¥17,000 deduction; the arithmetic checks out. B is better because it conditions zero income tax on at least ¥20,000 of social-insurance deductions, whereas A invents a premium range and repeatedly guarantees zero income tax. B nevertheless gives a misleading filing window, and neither explicitly directs the user to check the withholding-tax field or fully covers the preparation requirements. Both are longer than the requested brief checklist, especially A."
+}

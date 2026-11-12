@@ -1,0 +1,49 @@
+{
+ "pair": "q013",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'2%是不少地方还在用的老标准…也有地方仍按2%执行': unverifiable and against the key, which says no official standard uses 2%; the 2021 NDRC/MOJ guidance I opened (fgw.fj.gov.cn copy) does not mention 2%",
+   "Works out 8600×2%=172 and treats it as a possibly real local rate (the arithmetic is right; treating the rate as valid is the key's deduction item)",
+   "'这种情况投诉通常能推动解决': unsupported generalisation"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 8,
+  "honest": 8,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "'1058号文': the linked Fujian NDRC page (opened) shows the 2021-07-22 NDRC/MOJ guidance but no document number, so the number cannot be checked from it",
+   "'公证书副本费10元/份': unverifiable, no source",
+   "'不少公证处设每件200元左右的最低收费': the cited Zhuanglang standard (opened) has no minimum fee; plausible (Beijing has a 200 floor) but not sourced",
+   "'不需要密码': not stated in 银保监办发〔2021〕18号 (opened); it only follows from the materials list, which leaves out a password",
+   "'2%是很多地方早年的老标准': unverifiable historical claim",
+   "'有些支行会要求全体继承人到场或签字': hedge that edges toward the key's trap; the regulation does not require it"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct"
+  }
+ },
+ "reasons": "Both answers catch the false premise, cite 银保监办发〔2021〕18号 and 金规〔2024〕6号 correctly, list the four items needed for the no-notarisation withdrawal plus the bank card, say the money must come out in one go and the account be closed, and give 12378. A states the correction more firmly ('不用办', against B's '大概率不用'), says plainly that either the mother or the child can apply alone, and is noticeably shorter. However, A half-endorses the 2% fee as a rate some places still use. B rebuts the 2% better with a real tiered standard and computes the inheritance split correctly. Several of B's extra details checked out against the official texts: interest left out of the limit, funeral and survivor payments not counted toward it, and the one-time notice rule. But B is far too long, with a fee table running to 10 million yuan and a four-part notarisation list, and it only says the mother alone can apply. On the key's 'best answer' criteria A edges it."
+}

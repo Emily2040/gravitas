@@ -1,0 +1,48 @@
+{
+ "pair": "p024",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "「7年住んでいるなら残存価値はゼロ、つまり更新の必要があっても借主負担分は生じません」: the guideline sets the residual value at 1 yen, not zero, and a tenant who caused intentional or negligent damage can still be charged labour and work costs after the useful life ends. A minor overstatement."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 6,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "「サインは「内容を確認した」以上の意味を持ちません」: overclaim. Signing is assent to the contract terms; a clause that names the wallpaper specifically can be valid under the 2005 Supreme Court test.",
+   "The draft email reads 「貸主様側で負担が確定した分を除き」. The party is wrong (it should be the tenant's 借主 share), so the wording the user would send is confusing.",
+   "The link labelled 「国民生活センターの相談事例」 points to a kokusen 'hanrei' (court-case digest) path archived on WARP. I fetched it and got no content, so its label and its support for the claim are unverifiable.",
+   "The link labelled 「国交省ガイドライン関連の解説」 goes to a private explainer site (kurashitokanri.jpm.jp), not the MLIT guideline. It is offered as support for a guideline claim but is not an official source.",
+   "「少額でも相談は無料です」: consultation is free, but a 188 call carries ordinary call charges. Minor."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers decline the acceptance email at the start and give a non-acceptance reply that cites Civil Code Article 621 and the guideline's treatment of sunlight discoloration. A explains the special-clause requirement more accurately: the scope must be specifically explained and agreed. A also spells out the risk of accepting (a 20,000 yen shortfall plus a written admission of debt), and its email is a firm refusal that asks for a breakdown, the clause and the depreciation basis. A's main gaps are that it never demands the full 100,000 yen deposit back and never states the rule that a charge is limited to the damaged area (one wall face at most). B does request the deposit, but its email wording 「貸主様側で負担が確定した分を除き」 is wrong. B is also weaker overall: it overclaims that signing means nothing beyond having read the contract, cites a private site and a mislabelled archive link, and frames the email softly (「全額をお引き受けする前に」)."
+}

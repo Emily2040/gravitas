@@ -1,0 +1,57 @@
+{
+ "pair": "q005",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 3,
+  "added_claim_errors": [
+   "'公开判例返还比例大致五成到全额，多数在七成上下': unverifiable statistic with no source; the key only says partial refunds such as 80% or 60% are common",
+   "'跟平台协商通常比法院判的低一些': unverifiable generalisation",
+   "'米哈游成长关爱平台': platform name not covered by the key and not checked; unverifiable",
+   "Long detailed WeChat menu paths (消费者保护→安全保障→安全锁, '金额隐私保护 同页开启', 下载账单→'用于证明材料'): the key warns against copied menu paths; unverified and may differ by version",
+   "'微信本身没有单笔限额开关': unverifiable",
+   "'问客服把账号实名改成孩子本人，系统就按未成年人限额': unverifiable that platforms allow this",
+   "'帮孩子过一次人脸识别，返还比例直接砍': stated as certain; unverifiable",
+   "Short letter says 6480 directly breaches the 2019 per-month limit, although the account is verified as an adult; overstated argument (the limit figures themselves are right)",
+   "dehenglaw.com law-firm link: not opened, unverified (I did open the gmw.cn link, which confirms the 2024 互联网协会 draft standard with 100% and 30%-70%, and the nppa.gov.cn link, which confirms 国新出发〔2019〕34号 with 50/200 yuan)"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "The letter states '单笔多为648元档位' as fact, outside the brackets. The user never said this, so it is an invented detail in a letter meant to be sent, and it contradicts B's own advice to '只写真实发生的事'",
+   "Placeholder '【2025年X月X日】': wrong year, because the top-ups happened last month (2026)",
+   "'开启指纹或面容支付': contradicts the key, which says to turn off biometric payment; a child whose fingerprint or face is enrolled could still pay",
+   "Paraphrase of 第一百四十五条 as '未追认的无效' and '无效行为取得的财产': imprecise, because an unratified act does not take effect (效力待定 / 不发生效力) rather than being 无效",
+   "iPhone Screen Time framed as '系统层面的开关最硬' even though the money went through WeChat Pay, which the in-app-purchase switch does not block (partly hedged by '如果是从应用商店下载的游戏')",
+   "'网易家长关爱平台 jiazhang.163.com' and Tencent 成长守护 '设单次和每月消费限额': specific URL and feature detail not checked; unverifiable"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the claim that real-name verification means no refund right at the start. Both write letters that state the child is 11, give the 6480 yuan in more than ten payments, ask for a full refund while accepting a partial one, and never admit the spending was an adult's. A leaves out the key's central legal basis, the Supreme People's Court guidance (法发〔2020〕17号第9条). A also skips the WeChat Pay order complaint step and is far too long, with two letter versions, rebuttal scripts and many menu paths. B cites the SPC guidance by its full title, gives the complete escalation path (WeChat Pay complaint, 12315, 12345, lawsuit) and is tighter. B's flaws are an invented '多为648元档位' line in the letter, a wrong 2025 placeholder and advice to turn on fingerprint or face payment, which keeps the margin slight."
+}

@@ -1,0 +1,56 @@
+{
+ "pair": "q001",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 6,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says the wallet can be used to pay the mother's 居民医保 premium (400元) now, with no caveat. The key says Anhui had not opened this as of 10-20 (expected November), so this is wrong for now.",
+   "Presents 150元, 55% with 450元, and 200元起付 with 60% and 2500元 as 'Anhui 居民医保' terms. I opened the cited 广德 and 宣城 pages and the figures match, but they are Xuancheng-city rules generalised to the whole province. The only hedge is a late line saying small differences exist and to check the 参保地.",
+   "Gives a firm 'about 1320元 / 自付约1080元' figure and '8000元够7年' from one city's chronic-disease terms. The arithmetic is right ((2400-200)*0.6=1320, 8000/1080=7.4), but it rests on a single locality.",
+   "Gives a 28-day-interval, two-visit, six-month 慢特病 qualification rule and calls it Anhui's standard. The source is a Ma'anshan answer that I did not verify, and it may not hold elsewhere.",
+   "Says 慢特病 reimbursement 'ratio is the same' at 乡镇卫生院 and 县医院. Unverified, and implausible because ratios usually fall at higher-level institutions.",
+   "Says 药店买药要处方 and that 慢特病 settles only at 认定点 institutions. Unverified, stated flatly.",
+   "Says 8000元 lasts 'about 5 years' when the 缴费 is included. This holds only in the best case (1480元/yr gives about 5.4 years) and is not marked as a best case.",
+   "The transfer limits (3 per day, 2000元 each, none 22:00-06:00) are cited to a People's App article. I opened it and these three figures match; I did not check the no-fee claim. This is not an error, but the 'transfer' route differs from the key's 'establish a 共济关系 and set an 额度' model, and A never says the 额度 cannot be cashed out."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 7,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the 共济额度 can be used to pay the mother's Anhui 居民医保 premium, calls it 'policy明确允许', and says 江苏 is in the first batch. The key says Anhui had not opened this as of 10-20 (expected November), so this is wrong for now, and B is more emphatic than A.",
+   "The 铜陵 table row for 慢特病 gives '60%, 起付线约500元' under the 铜陵 heading. B then takes the 500元 from 霍山's ordinary chronic-disease rule and the 2500元 cap from 芜湖. The 铜陵 page I opened does not state the 慢特病 deductible, cap or institutions, so the 1140-1440 range blends several places and the 500 is unverified for high blood pressure.",
+   "Says the 国家医保局 clarified 'money can be shared, code cannot be shared', and quotes a source phrase about relying on local 定点机构 cooperation. I could not open the cited NHSA pages (the 2026-10-21 page failed to load), so this wording is unverified.",
+   "Says to sign a 个人承诺书, that the mother needs no phone because her code can be switched to via 'family account', and that the wallet prompts the pharmacy to 'prefer 共济额度'. None of this is in the key and I could not verify it.",
+   "Says 8000/2400 is 'about 3年3个月'. The exact figure is 3.33 years, about 3 years 4 months. Immaterial.",
+   "The 铜陵 两病 figures (50%, 200元/yr cap, 一级及以下 institutions) were verified against the cited page. This is not an error."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the premise (the real violation is using someone else's card or code), confirm that cross-province 共济 works for a Suzhou worker and an Anhui mother, compute 2400元, and say pharmacy purchases are not reimbursed. Both also fall into the same trap of saying the wallet can pay the Anhui 居民医保 premium now, and neither gives the national 医保发〔2019〕54号 floor of 50%. B labels its reimbursement figures as 铜陵 and other local examples and gives a range, which is what the key asks for. A presents one city's numbers (Xuancheng) as 'Anhui' and gives a firm 1320元 figure, and it is noticeably longer, with several unverified procedural details. A is stronger on the 2021 and 2024 policy background and on the steps for getting a 慢特病 认定, and its figures check out against the pages I opened. That is not enough to offset B's better honesty and brevity, so B wins slightly."
+}

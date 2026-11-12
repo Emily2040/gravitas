@@ -1,0 +1,52 @@
+{
+ "pair": "p093",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"申请劳动仲裁，免费，时效1年\" is oversimplified: the key says wage claims made while still employed are not subject to the one-year limit, and the year runs from the end of employment.",
+   "\"以上是按现行文件和裁审口径的分析\" refers to a court and arbitration practice it does not cite, so it cannot be checked.",
+   "Calls 2,192 yuan the \"应发下限\" flatly. The key says there is no official position and the majority view is that the minimum excludes personal contributions. The answer does flag the dispute after 14号 expired, so this is a minor overstatement."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 6,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "Says the old rule has an \"容易忽略的细节\": the base is first cut to 70% of normal pay, so a full 4 years gives 8000×70%×80% = 4480 yuan. The key puts the 83号 80% tier at 8000×80% = 6400 on the contract monthly wage. The 70% base appears in the old Shanghai rules only as a default when no contract or collective contract sets the base, so applying it to a worker with an 8,000 contract salary is wrong.",
+   "\"按旧口径补3680元\" (4480 - 800) rests on the unsupported 4480 figure.",
+   "Labels the 6400 row as \"合同/制度只约定80%、基数按8000（无70%折扣）\". That presents the plain 83号 tier figure for 4 full years as an odd contract case.",
+   "The letter to HR cites neither 劳部发〔1995〕309号第59条 nor 沪人社规〔2026〕10号第九条, and does not ask whether 800 is gross or net. 309号 appears only as a link title.",
+   "Says that if 2,192 is gross and 800 is net, \"能主张的差额会少很多\". It does not state the majority view that the minimum excludes personal contributions, so net pay should still be at least 2,192."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers reject the \"公司说了算\" premise at the start. Both give the correct 2,192 floor (2,740 × 80%) and the 1,392 shortfall, and both explain that 沪劳保发〔1995〕83号 expired on 2026-08-15 with no replacement. Answer A also gives 6,400 for a full 4 years (80%) and 5,600 for the 70% tier. Its letter cites 309号第59条 and 10号第九条, asks for the gross, deduction and net breakdown, and asks for the contract terms. It also lists the base exclusions, 12333, labour inspection and free arbitration. Its weaknesses are length and the oversimplified \"时效1年\". Answer B headlines 4,480 as the old-rule figure for a worker with 4 full years. That figure contradicts the key's 6,400 and rests on a 70% base that the old rules use only when neither contract nor collective contract sets one. B's letter is tighter but omits the legal citations and the gross-or-net question. B is also vaguer on the base and on arbitration and complaint routes, so A wins clearly."
+}

@@ -1,0 +1,48 @@
+{
+ "pair": "p067",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "「敷金から引くには修繕内容と費用の内訳を示す必要があります（民法622条の2）」: the statute does not say this. 622条の2 only lets the landlord deduct the tenant's monetary debts under the lease; it sets no itemization requirement.",
+   "「少額調停」: this is not a formal procedure name (the formal one is 民事調停). Minor and unverifiable as written."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "vague",
+   "4": "vague",
+   "5": "vague",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "「7年住んでいる時点で、壁紙の残存価値はゼロです」: the guideline sets the residual value at 1円 (≒0), not exactly zero. Minor imprecision.",
+   "「仮に借主負担が生じる理屈を立てても按分後の負担額は0円」: overstated. For intentional or negligent damage, labor and construction costs can still be charged after the useful life has passed.",
+   "Special-clause requirements given as「内容が具体的で明確なこと、借主の認識、真意に基づくこと」: this drops the guideline's 必要性・合理性 requirement. A loose paraphrase, not a direct source.",
+   "Linked mlit.go.jp/common/001238428.pdf as the guideline: I opened it. It is an MLIT PDF whose metadata reads 'ガイドライン201801契約書', but I could not confirm its body text. Unverified, not shown wrong."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers corrected the premise at the start and wrote a non-acceptance reply instead of the acceptance email the person asked for. B ties its points to sources more precisely: 民法621条, the 6-year useful life with 7 years giving 0円, and a reminder to check the actual clause wording. B's email also asks for the full 10万円 deposit back, asks for the clause that supports the charge, and names correct 少額訴訟 facts. A never cites 621条 and misattributes an itemization requirement to 622条の2. A's email only asks to settle the deposit after agreement, not for its full return. Neither answer gives the ㎡ or one-wall scope limit or the 20,000円 risk of accepting, though A does touch on 部分補修."
+}

@@ -1,0 +1,49 @@
+{
+ "pair": "p048",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 8,
+  "added_claim_errors": [
+   "App button names (更多→学习教育业务→学法减分, 在线申请, 去学习, 去考试, 开始考试, 累积记分) are stated as specific UI labels; the key supports only a generic path, so these are unverifiable. Partly hedged by 'some versions' and 'follow 12123'.",
+   "'一周内做完时间够' comes close to promising a week is enough, though it adds that review and retakes cost extra time; there is no official data on review time.",
+   "Retake rules are only 'follow the page prompt'; it never says retakes are capped at 2. This is an omission, not an error."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'建议预留5.5～7小时' and '补考一次多加约20分钟' are the answer's own estimates with no source; they are labelled as suggestions.",
+   "'每天减1分...6天完成,正好适合这周' and the one-or-two-points-a-day pacing assume a daily rhythm that no official source gives. 'If the system allows' hedges the two-a-day case, but the pacing leans toward the 'a week is enough' trap.",
+   "App labels (【网上学习考试】, 【前往学习】, 【提交学习】, 【前往考试】, 【网办进度】) are stated as specific UI names; unverifiable. The answer adds that interfaces differ by region.",
+   "The 7-day exam window, 24-hour retake window, 60 seconds per question and blacklisting for proxy study or exams are not in the key. I checked the Tongliao traffic police Q&A page the answer cites, and it supports all four, so they are not errors."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by saying the 10 points cannot all be cut and the cap is 6, which leaves 4. Both give the correct time sums (3 hours of study, about 5 hours with exams), explain that 4 points leaves only an 8-point buffer, and correct the 'never get deducted again' premise. B also puts the clear-date rule in its opening paragraph, cites articles 25 and 27, and gives the full retake rule (capped at 2). It adds the 7-day exam window, which the Tongliao page I opened confirms. It also gives the single-session figures for on-site study (1 hour for 2 points) and public-interest activity (1 hour for 1 point), though it omits the 3-session and 6-session totals, mixing, the shared 6-point cap, and that it is free. A is tighter and gives the full eligibility list (key point 6), but it omits the other study routes entirely and never gives the retake cap. B is wordier, and its 'one point a day, six days, fits this week' pacing and 5.5-7 hour estimate are unsupported. B's weaker eligibility list (it leaves out the recent-offence record) roughly offsets A's missing key point 5, so B's edge is slight."
+}

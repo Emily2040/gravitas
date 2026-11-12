@@ -1,0 +1,50 @@
+I can give you the steps, but the $48,000 won't survive them — two limits cap this well below that, and it's better to know before anything moves.
+
+**The lifetime cap is $35,000 per beneficiary.** That's across all 529 accounts for him, and it isn't indexed. So $13,000 of the $48,000 can never go through this route.
+
+**The annual cap is the IRA contribution limit — $7,500 for 2026.** He's under 50, so that's the whole allowance. The most you can move by December 31 is $7,500, not $48,000.
+
+**And there's a third gate:** he needs at least $7,500 of *earned income* in 2026 to move the full $7,500. The rollover is measured against the same annual limit as a regular Roth contribution, and that limit is capped by compensation ([26 U.S.C. §529(c)(3)(E)](https://www.law.cornell.edu/uscode/text/26/529), [§408A(c)(2)](https://www.law.cornell.edu/uscode/text/26/408A)). If he's still job-hunting, this year's number is $0, and you'd start the year he has a paycheck.
+
+The option itself has been available since 2024 and doesn't expire — what's annual is the $7,500 slice.
+
+| Rule | What it means for 2026 |
+|---|---|
+| Annual cap | $7,500 (under 50), reduced by any other IRA contribution he makes for 2026 |
+| Lifetime cap | $35,000 per beneficiary, all his 529 accounts combined |
+| 15-year rule | Met — account opened in 2004 |
+| 5-year rule | Only contributions made more than five years before the transfer, plus their earnings, are eligible (roughly pre-December 2021) |
+| Income tests | No upper-income limit, but he needs earned income at least equal to the amount rolled over |
+| Transfer method | Direct trustee-to-trustee only |
+
+## Steps for this year's $7,500
+
+1. **Confirm his 2026 earned income.** W-2 wages or net self-employment income, and it must be at least the amount you roll over. If he'll earn $7,500 or more, you have the full $7,500. If less, that's your ceiling. Check this before you commit — if he earns less than you assumed, you've created an excess contribution that has to be corrected.
+
+2. **Subtract any other 2026 IRA contributions.** The $7,500 is shared with anything he puts into an IRA for 2026, Roth or traditional. If he's already contributed $2,000, only $5,500 of rollover room remains. (401(k) contributions don't count.)
+
+3. **Get the eligible amount and the form from the 529 plan.** Ask them to confirm in writing: the account has been open at least 15 years (it has — 2004); the amount attributable to contributions made more than five years before the transfer, plus earnings on them; and their 529-to-Roth rollover form. The five-year cutoff moves with the transfer date, so it's roughly December 2021 money. For an account this old that probably isn't the binding constraint, but get their figure rather than assuming.
+
+4. **He opens a Roth IRA in his own name.** He's an adult, so he opens it — you can't open it for him. Tell the custodian it's a 529-to-Roth trustee-to-trustee rollover and confirm they'll code it as a rollover, not an ordinary contribution.
+
+5. **Submit the plan's direct rollover form.** The money must go from the 529 to the Roth custodian. It cannot be paid to you or to him personally, even for a day — a check made out to either of you is a taxable distribution, and the 60-day rollover rule does not cure it. Both of you may need to sign. Submit by the first week of December; some plans take weeks.
+
+6. **Confirm it lands by December 31, 2026.** Get written confirmation from both ends. If it settles in January, it counts against 2027's limit, not 2026's. Treat December 31 as the deadline and don't plan on using the April filing deadline.
+
+7. **Keep the paper trail.** The 529 issues Form 1099-Q; the Roth custodian issues Form 5498. Check that the 5498 reflects the rollover. No federal tax is due, and it isn't income on his return.
+
+## Before you sign anything
+
+- **Not every 529 plan offers these transfers, and not every IRA custodian accepts them.** Confirm both ends first.
+- **State tax is the wild card.** Some states haven't conformed to the federal treatment. If your state gave you a deduction for 529 contributions, it may recapture part of it or treat the rollover as a nonqualified withdrawal. Check with the plan or a tax preparer.
+- **Don't move the 529 to a different plan just to get the feature.** There's no clear IRS guidance on whether a plan-to-plan move restarts the 15-year clock, and a restart would cost you years.
+
+## The other $13,000
+
+It isn't stranded. You can leave it (there's no deadline) for graduate school or a future grandchild by changing the beneficiary; use up to $10,000 of it, lifetime, to repay his qualified student loans; or withdraw it nonqualified — contributions come back tax-free, but earnings are taxed as ordinary income plus a 10% federal penalty, and state recapture may apply too.
+
+At $7,500 a year, the $35,000 takes five years, 2026 through 2030, and rising limits could shorten that. Each year's slice requires earned income that year.
+
+The two numbers to pin down this week are his 2026 earned income and the plan's eligible-amount figure. Everything else follows from those.
+
+**Sources:** [IRS 2026 limits (IR-2025-111)](https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500), [26 U.S.C. §529](https://www.law.cornell.edu/uscode/text/26/529), [Savingforcollege.com 2026 rollover guide](https://www.savingforcollege.com/article/roll-over-529-plan-funds-to-a-roth-ira).

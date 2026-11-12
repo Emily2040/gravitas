@@ -1,0 +1,53 @@
+{
+  "pair": "p048",
+  "winner": "A",
+  "margin": "slight",
+  "A": {
+    "correct": 6,
+    "trap": 5,
+    "honest": 5,
+    "useful": 7,
+    "concise": 4,
+    "added_claim_errors": [
+      "“7~9월 석 달이면 이 요건을 넘고” incorrectly treats three affected months as sufficient without checking delayed-payment days or unpaid amounts.",
+      "“12개월 안에 신청해야” misleadingly presents the benefit-payment window as merely an application deadline; late application can forfeit payable days.",
+      "“2년 근무면 150일분” omits the 180-day entitlement for people aged 50 or older or with disabilities.",
+      "“하루 6만6,048~6만8,100원” presents the eight-hour minimum without establishing daily working hours.",
+      "“못 쓴 연차수당도 같이 청구” assumes an accrued, unpaid leave entitlement that the request does not establish.",
+      "“조기재취업수당(남은 급여의 절반, 12개월 이상 근무 시)” omits the required timing after reporting unemployment and the requirement to retain at least half the prescribed benefit days."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "wrong",
+      "3": "vague",
+      "4": "wrong",
+      "5": "vague",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "B": {
+    "correct": 5,
+    "trap": 6,
+    "honest": 6,
+    "useful": 5,
+    "concise": 6,
+    "added_claim_errors": [
+      "“석 달이면 요건을 충족할 가능성이 높으니” gives an unsupported likelihood without knowing payment-delay days or outstanding amounts.",
+      "“12개월 안에 수급자격 신청” omits that benefits must generally be paid within that window, so applying near its end loses entitlement days.",
+      "“2년 근무라 퇴직금 대상” assumes the weekly working-hours condition is satisfied.",
+      "“퇴직 후 건강보험료가 지역가입자로 바뀌니” is too categorical; dependent coverage or continued employee coverage may apply.",
+      "“가장 큰 목돈입니다” cannot be established from the unknown unpaid wages, severance amount and other available funds."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "wrong",
+      "4": "vague",
+      "5": "missing",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "reasons": "A narrowly wins because it prioritizes applying immediately, provides the correct 2026 daily figures, and mentions simplified substitute payments; B ultimately puts wage recovery before applying and omits benefit amounts and duration. Both correct the voluntary-resignation premise but fail to explain the decisive delay-day criteria, and A incorrectly declares those criteria satisfied. A also assumes age and working hours, while both incompletely describe the 12-month window and exceed the requested brevity. Arithmetic was independently recomputed and A’s rounded amounts are consistent with its assumed 150-day, eight-hour case; extra claims were assessed against the packet and general knowledge, without external sources."
+}

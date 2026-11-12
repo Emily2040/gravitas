@@ -1,0 +1,47 @@
+{
+ "pair": "p072",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "Shibuya ward 令和9年度 resident-tax page link: a source citation I could not verify from the packet",
+   "Filing is shown only as 2027年2月16日〜3月15日: it omits the 5-year refund-filing window and the early start from 1 January, so it implies a narrower window than the rules allow"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "missing"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 7,
+  "added_claim_errors": [
+   "「所得税5%で約850円…合わせて2,500円程度」: states an income-tax refund of about 850 yen as expected, but taxable income is likely 0 and a withholding tax of 0 means a 0 yen refund. The answer never mentions checking the 源泉徴収税額 field, so the total is overstated and the real gain is mostly about 1,700 yen of resident tax",
+   "「確定申告期限から5年間保存」: the retention start point is stated loosely; the key gives only '5 years' and the point was not checked",
+   "「住民税は確定申告の内容が自動的に反映される」: true only if an income-tax return is filed; it omits the resident-tax-only filing route that applies when no income-tax return is filed"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "wrong",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague"
+  }
+ },
+ "reasons": "Both answers correct the 10万円 premise at the start with the 5% rule and compute 106万円, 5万3,000円 and 1万7,000円 correctly using the 74万円 deduction. The deciding difference is the real effect. A says income tax is likely 0 given the 104万円 basic deduction and social insurance of 20,000 yen or more, and puts the gain at about 1,700 yen of resident tax, with 850 yen only as a maximum. B asserts 850 yen of income-tax refund plus 1,700 yen, \"合わせて2,500円程度\", without raising the withholding-tax check. The key's grading rules penalise exactly that. B is better on two points: it says medical deduction cannot be done in year-end adjustment, and it notes that refund filing can start in January. A omits both and shows only the 2/16〜3/15 window. A also covers the resident-tax-only filing route and gives the municipality caveat. Neither gives the 5-year refund window. Overall A is the more accurate and more honest on what filing is worth."
+}

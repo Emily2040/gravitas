@@ -1,0 +1,56 @@
+{
+ "pair": "q018",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "Says the shared quota 'can also pay her resident medical insurance contribution' with no caveat: contradicts the key, since Anhui had not opened premium payment from the shared quota as of Oct 20 (expected November). This is a listed trap.",
+   "'合肥按住院比例报销，限额可能接近2000元' and the table's upper figure of 2000 yuan: a guess, not backed by any figure given; unverifiable.",
+   "Wuhu 2026 chronic-disease outpatient (慢特病) terms of 60% reimbursement, 2500 limit and 300 deductible; Hefei 70%/360 and Tongling 50%/200 for the 'two diseases' (两病) benefit: city figures with links that I did not open; unverifiable here, but labelled as examples.",
+   "'提交后即时生效' and the Alipay mini-program channel: procedural details with no source; unverifiable.",
+   "Says only 'dual-channel' (双通道) drugs from national negotiations can be bought at pharmacies in Anhui: stated as a province-wide rule but sourced only to a Huaibei page; partly unverifiable.",
+   "Arithmetic checked: (2400-300)x60%=1260 is right; 8000/2400 is about 3.3 years, right."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 8,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "The conclusion says flatly '居民医保报 1230 元，家里实际承担 1170 元'. Earlier it is labelled as Bengbu's rules plus an assumption, but the conclusion drops that label, so it reads more certain than the evidence allows.",
+   "Table row for the 'two diseases' benefit gives 360 yuan, but no source in the answer gives 360 (the Wuhu figure cited is 350, and no Bengbu figure is given): inconsistent and unexplained.",
+   "Bengbu 慢特病 terms of 350 deductible, 60% and 2000 limit; Bengbu ordinary outpatient limit of 180; Wuhu 150/350: county and city figures with links I did not open; unverifiable here.",
+   "'如果苏州要求账户先保留 2000 元': a speculative condition with no source; unverifiable.",
+   "Specific dates: national cross-province start in Suzhou in Dec 2024 and Anhui fully open in Jan 2025. Consistent with the key's 'before March 2025' but more specific than the key; unverifiable here.",
+   "'签个人承诺书' as a step: unverifiable procedural detail.",
+   "Minor wording slip: '冒妈妈的名字' reverses who is impersonating whom.",
+   "Checked from my own knowledge: the penalties under Article 41 of the regulation (3-12 months suspension of networked settlement, fines of 2-5x) are correct. Arithmetic checked: (2400-350)x60%=1230 and 8000/1170 is about 6.8 years, both right."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the false premise at the start. Both explain family sharing, say that lending the card or code is the real violation, compute 2400 yuan, and route the mother toward chronic-disease certification. A falls into a listed trap: it says the shared quota can pay her resident premium, which Anhui has not opened yet. A also pads the answer with extra tips. B names the regulation and its penalties correctly, gives practical steps (hospital records first, the 'family account' (亲情账户) feature, asking which city she is in), and avoids the premium trap. B loses points because its conclusion states 1230 yuan too firmly and its 360 figure has no source. A has the advantage of citing the 2025 national rollout and the 2026-10-16 wallet 2.0 date, so B wins only slightly."
+}

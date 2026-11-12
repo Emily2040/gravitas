@@ -1,0 +1,49 @@
+{
+ "pair": "p006",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 5,
+  "trap": 6,
+  "honest": 5,
+  "useful": 3,
+  "concise": 8,
+  "added_claim_errors": [
+   "Claims United's credits 'usually run about a year from the original ticket date': unverifiable, and it conflicts with the key's 5-year minimum for a credit offered in lieu of a refund.",
+   "The draft asks for a credit valid 'at least 12 months', which is below the 5 years the law requires, so the answer steers the person toward a weaker outcome than they are owed.",
+   "The link labelled '14 CFR part 260' goes to a DOT press release about the final rule, not the regulation text. The label and the target do not match. I did not open the URL.",
+   "'Summary of the rule' (komonews.com): a 2024 news piece headlined 'will soon require', which does not show the rule's current status. I did not open it.",
+   "'The weather carve-out covers things like hotels and meals, not your fare': plausible and in line with the key's side-claim trap, but not sourced.",
+   "Never states the 7-business-day / 20-calendar-day refund deadlines or the 5-year credit validity, and does not tell the person outright to decline the credit."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "wrong",
+   "5": "wrong"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 6,
+  "honest": 6,
+  "useful": 3,
+  "concise": 8,
+  "added_claim_errors": [
+   "Claims United's credits 'usually run about a year from the original ticket date': unverifiable, and it conflicts with the key's 5-year minimum for a credit offered in lieu of a refund.",
+   "The draft asks for a credit valid 'at least 12 months', which is below the 5 years the law requires, so the answer steers the person toward a weaker outcome than they are owed.",
+   "'Summary of the rule' (komonews.com): a 2024 news piece headlined 'will soon require', which does not show the rule's current status. I did not open it.",
+   "'The weather carve-out covers things like hotels and meals, not your fare': plausible and in line with the key's side-claim trap, but not sourced.",
+   "Never states the 7-business-day / 20-calendar-day refund deadlines or the 5-year credit validity, and does not tell the person outright to decline the credit."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "missing",
+   "4": "wrong",
+   "5": "wrong"
+  }
+ },
+ "reasons": "The two answers are word-for-word the same except for the first link. Both open by correcting the agent's premise. Both say that a weather cancellation where the person does not take the rebooking still entitles them to a cash refund, and that accepting a credit ends that right. Both then fall short of the key in the same ways. They treat declining as 'your call' and draft the message accepting the credit, which is the deduction the key names. They ask for only 12 months and say United's credits usually last about a year, when the law requires 5 years. They give no refund deadlines (7 business days, 20 calendar days) and no refund-request message. B is slightly better because its '14 CFR part 260' link points to the regulation text on Cornell LII. A's link with the same label goes to a DOT press release, which is a small mislabel."
+}

@@ -1,0 +1,51 @@
+{
+ "pair": "p054",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'大病保险等可能另计几十元' contradicts the key: the individual's 大病/长护 premiums are deducted from the re-credited personal account funds, not paid as extra cash",
+   "Cites 《杭州市基本医疗保障办法》'第五十五条' for transfer and accumulation; the article number is unverifiable from the key",
+   "'目前仅支持线下办理，带身份证或市民卡去区医保经办机构' is a procedural claim not in the key and is unverifiable",
+   "'购房、落户等连续社保资格也会重置（补缴一般不算连续）' is beyond scope and unverifiable; housing and hukou eligibility rules are not established by the medical-insurance rules in the key",
+   "Says the rumored 清零 refers to a 连续缴费年限 that '会重新计算' and governs 当前待遇/等待期; this is speculative, since the key ties 重新计算 only to the continuous-enrollment rewards in resident 大病保险"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 8,
+  "added_claim_errors": [
+   "'一般也不能免除上面那 2 个月等待期' is stated as near-certain, but per the key whether paying the arrears removes the waiting period is unverified",
+   "'7 个月年限以后随时能缴回来' is loose wording that can read as if the arrears can be paid at any time, which conflicts with the 2026-12-31 deadline B states elsewhere; the key only allows making up any shortfall at retirement by a one-time or monthly payment"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "vague"
+  }
+ },
+ "reasons": "Both answers open by correctly rejecting the 清零 premise. Both give the 10-year local + 20-year cumulative retirement rule with the right gaps (2 and 12 years), the third-natural-month waiting period ending around January 2027, 473.67 yuan/month and about 3,316 yuan for 7 months, the 2026-12-31 deadline, and that medical costs for the paid-up months are not reimbursed. A covers more of the key: the base and rate, the specific eligibility conditions (hukou, or residence permit plus employment registration), the stated assumptions, and concrete questions to ask on 12393. B handles eligibility vaguely and leaves out the hukou assumption. A also adds more unverified or wrong details (大病 premiums charged as extra cash, article 55, offline-only handling, 购房 reset) and is longer with tables and emojis, so its lead is slight. Neither cites Social Insurance Law art. 27 or 43号, neither says 38号 applies only to resident insurance, and neither gives the retirement one-time payment figures."
+}

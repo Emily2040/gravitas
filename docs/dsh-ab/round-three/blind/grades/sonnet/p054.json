@@ -1,0 +1,53 @@
+{
+ "pair": "p054",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'2024年12月，国家医保局在苏州启动跨省共济' is loose: the NHSA page dated 2024-12-04 says cross-province mutual aid entered pilot operation in many areas including Suzhou, not that it was launched in Suzhou.",
+   "'如果苏州要求账户先保留2000元' is hedged and speculative; the NHSA 2026-10-21 page does mention local account safety baselines such as only the part above 2000 yuan, so it is plausible but not Suzhou-specific.",
+   "'两病门诊只给没达到慢特病标准的患者' was not verified in any source I opened.",
+   "The headline '居民医保报1230元' rests on Bengbu rules plus the mother getting 慢特病 认定; it is labelled as Bengbu and the answer asks which city, but it is still a fairly firm number. I checked the Guzhen and Wuhu pages: 350 deductible, 60%, 2000 limit, 180 outpatient, 360 two-disease, and Wuhu 300/150/350 all match.",
+   "Does not say the shared quota cannot be cashed out or transferred to a third person, and omits the national 医保钱包2.0 launch on 2026-10-16."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 7,
+  "honest": 7,
+  "useful": 9,
+  "concise": 5,
+  "added_claim_errors": [
+   "'她个人缴费也可以试着用医保钱包缴' conflicts with the key: the NHSA 2026-10-21 page lists regions where paying 居民医保 premiums from shared quota is live, Anhui is not among them, and other regions are expected in November. This is a baited trap, softened by 'try'.",
+   "'安徽居民医保的普通门诊和两病门诊只报一级及以下定点基层医疗机构' is stated as fact; the national rule and the key say 二级及以下, and I could not verify an Anhui-wide 一级 limit.",
+   "Per-city limits '宿州260、六安150' were not verified.",
+   "Several procedural claims were not verified: '你妈也要开医保钱包', applying through the '安徽医保' mini-program, 门慢 benefits starting the month after approval, and 两病备案 requiring a 二级以上医院 diagnosis certificate.",
+   "The table says 门慢 '约1200元/自付约1200元' while the formula below gives 1230/1170, a minor inconsistency.",
+   "The closing summary '居民医保大概能报1200元' is fairly firm and not tied to a named city, although caveats appear elsewhere. The Wuhu 2500 门慢 limit, Guzhen 350/60%/2000/360/180, 安徽 400-yuan minimum contribution and the 本省 wording of Suzhou's guide all check out."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers lead by correcting the 'only for yourself, family use is 套保' premise, separate the real violation (using your card or code under her name) from legal 共济, compute 2400 yuan correctly, and give regional reimbursement examples. A states the 2021 and 2024 policy steps, gives the correct penalties under the 条例, and verifiably labels its 1230 figure as Bengbu's rules while asking for her city. B covers more of the key: the 2.0 launch, the 不能转第三人 rule, and a two-step 两病-then-门慢 plan. However, B suggests she could try paying the Anhui 居民医保 premium from the wallet, which is not yet open there and is a baited trap. B is also longer, leaves point 1 less specific, and carries more unverified procedural detail. A's gaps (no national 2.0 date, no no-cash-out note) are smaller, so A edges ahead slightly."
+}

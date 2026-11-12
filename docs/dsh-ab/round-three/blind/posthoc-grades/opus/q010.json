@@ -1,0 +1,55 @@
+{
+ "pair": "q010",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Adds the 3.6% COLA to the $2,400 statement figure ($2,486 at 67, $1,750 at 62). COLAs reach her PIA only from her eligibility year (first one Dec 2027), and the key lists this as a trap. Correct figure is about $1,690.",
+   "'Your first check arrives in May' is misleading: about four checks (April-July benefits) are withheld, so the first payment comes around September. A never says which months are withheld.",
+   "'~$24,000 you're expecting' does not match the request: April-December at $2,400 is $21,600 (minor).",
+   "Lifetime figures ('about $63,000 by 67', '$470/month behind for life', 'break-even around 78', 'well over $50,000') are unverifiable estimates. $470 does not follow from A's own numbers: $2,486 - $1,750 = $736, or about $530 after the FRA recomputation (my own arithmetic).",
+   "The claim-at-age table ($1,990 at 64, $2,155 at 65, $3,083 at 70) carries over the COLA-inflated base (minor)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 9,
+  "honest": 6,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "'You're first eligible for March 2027, paid in April' is wrong. Born March 18, her first full month at 62 is April 2027, and the key lists this as a trap.",
+   "'If you do file for March 2027, apply around November 2026' is wrong: a March start is impossible, and for an April start the earliest application month is December 2026.",
+   "'Only about 9 payments land in 2027, roughly $9,000-$10,500' is wrong. With an April start and about four checks withheld, roughly four checks (about $6,700) are paid in calendar 2027. The range also conflicts with B's own 'first 4 checks withheld'.",
+   "The main table, titled '2027 monthly budget', shows about $1,162 of net Social Security every month. That spreads the withholding monthly, which SSA does not do, and overstates 2027 income.",
+   "'That only claws back the withholding; the 30% early-claiming cut stays for life' is wrong. The FRA recomputation removes the withheld months from the reduction, so part of the early-claiming cut is restored.",
+   "The link labelled 'SSA's 2027 COLA and earnings-limit announcement' goes to adasoutheast.org, a third-party site, not SSA. The source is mislabelled, though the $25,560 figure is right."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers correct the two false premises at the start, and both get the 2027 earnings test exactly right ($25,560 limit, $12,440 excess, $6,220 withheld). A has the right start month (April, 59 months, 70.4%), counts about four checks landing in calendar 2027 (about $7,000, close to the key's roughly $6,760), and correctly says the FRA recomputation restores part of the reduction. Its tax and FICA arithmetic also checks out. Its main fault is the COLA trap, which inflates the benefit to $1,750. B falls into the March-start trap twice, says the 30% cut stays for life after recomputation, and builds its main 2027 table on monthly fractional withholding. Its partial-year cash estimate ($9,000-$10,500) is also overstated. B's warning about the months with no check and its 85%-taxable and ACA notes help, but A is the more accurate and more usable 2027 picture. Neither points her to SSA's calculators or her my Social Security account. No web sources were opened; side claims were judged against the key and my own knowledge."
+}

@@ -1,0 +1,186 @@
+{
+ "project": "Gravitas on DeepSeek Harness (DSH) and its 1.3.0 release. Repo C:\\Users\\emily\\antigravity-skill (GitHub Emily2040/gravitas); experiment worktree W:\\Projects\\gravitas-claim-check; data W:\\AgentData\\logs\\gravitas-dsh-ab{,2,3,4}",
+ "owner_goal": "Emily's own words on disk are in memory files. I found no brief she wrote herself.\n- \"Keep DeepSeek round going until you win\" (Emily, 2026-10-22 22:2x), memory gravitas-repo.md.\n- On PR #1: \"don't merge the PR. Let me check it.\" (gravitas-repo.md, project-dsh-plugins-built.md).\n- The Gravitas DSH update must \"focus very well on the Chinese\", with more Chinese examples than any other language (feedback-chinese-first-for-dsh.md). Also \"test Japanese and Korean\", every round (same file and gravitas-repo.md).\n- On PR #1's first description: \"didn't write the PR in my voice, and you added yourself... It needs to be just me.\" (feedback-her-voice-no-attribution.md).\n- Approved 5 more rounds, one change each: \"Yes test these things and let see\". Run cap raised to 500 new runs, then report (gravitas-repo.md).\n- Her rule on results (\"never invent test results\"; examples labelled as examples) is a paraphrase in feedback-chinese-first-for-dsh.md, not a direct quote.\n- The frozen win definition is in W:\\Projects\\gravitas-claim-check\\docs\\dsh-ab\\WIN_CRITERIA.md. The agent wrote it in her voice; it is not her own text.",
+ "done_criteria": [
+  {
+   "criterion": "One DSH A/B round meets every WIN_CRITERIA item (net votes above the A/A noise floor; each grader prefers Gravitas; median length ratio <= 1.00 with at most 10% of pairs under 0.6; vague key points <= plain; wrong added claims <= plain, both relabellers with a cite; correct key points >= plain and wrong <= plain; trap<8 <= plain; hedging within 1.00x / 1.10x). It must hold overall and separately in zh, en, ja and ko, on a fresh held-out set with at least 2 (ideally 3) requests per language, keys checked against official sources",
+   "source": "W:\\Projects\\gravitas-claim-check\\docs\\dsh-ab\\WIN_CRITERIA.md (both amendments)"
+  },
+  {
+   "criterion": "If no round wins: stop and report to Emily after 3 rounds in a row with no improvement, or before passing 500 new runs counted from round four. Losses are reported as plainly as wins",
+   "source": "WIN_CRITERIA.md 'When to stop and ask'; memory gravitas-repo.md"
+  },
+  {
+   "criterion": "Each round: one change named before the runs; tuning only on a separate tuning set; verifier written and frozen by an agent that builds nothing; empty-folder self-test fails every gate as 'metric missing'; cheapest-pass red-team review before runs; run count told to Emily before the round starts",
+   "source": "WIN_CRITERIA.md; C:\\Users\\emily\\AgentRules\\QUALITY_LOOP.md sections 1, 9"
+  },
+  {
+   "criterion": "Reproducible evidence base committed: prompts, keys, sources, raw answers, blind maps, grades, relabels, verdict script; scripts run from the committed layout and reproduce the committed maps and tallies",
+   "source": "PR #2 Codex findings and fix commit 2bfaa4a; WIN_CRITERIA 'Where results go'"
+  },
+  {
+   "criterion": "Every Codex review finding on PR #1 (5) and PR #2 (7) is addressed at the release head, and each thread is answered or resolved",
+   "source": "task brief; gh api pulls/{1,2}/comments"
+  },
+  {
+   "criterion": "All checks pass on the final release head, with no SKIPs: python tests/scripts/test_*.py (including test_release run from a git checkout), scripts/readme_parity.py, scripts/release_check.py 6/6, check_skills.py --repo, the dsh Node tests",
+   "source": "task brief; memory gravitas-repo.md conventions"
+  },
+  {
+   "criterion": "Every change appears in all four languages, with Chinese written natively and given the most examples; DSH-facing material leads with Chinese",
+   "source": "memory gravitas-repo.md ('Did you update all the languages'); feedback-chinese-first-for-dsh.md"
+  },
+  {
+   "criterion": "Commits, PR bodies and replies are in Emily's first-person voice, with no AI co-author line or footer",
+   "source": "memory feedback-her-voice-no-attribution.md"
+  },
+  {
+   "criterion": "Release-ready but not merged or tagged: CHANGELOG ready to date; the v1.3.0 tag, zip and four-language notes are prepared steps only; Emily reviews and decides",
+   "source": "task brief; memory gravitas-repo.md ('After she approves: date the CHANGELOG, merge, tag v1.3.0 ...')"
+  },
+  {
+   "criterion": "A fresh github:Emily2040/gravitas#<release-branch> install boots on the current DSH (0.2.1-rc.3, released 2026-10-23) with skill, rule, tool and presets loaded, checked by the no-model probe",
+   "source": "inferred from PR #1 'What I checked' and QUALITY_LOOP.md section 10 (latest version first)"
+  }
+ ],
+ "current_state": "Branches. I checked these with git branch -vv and git ls-remote.\n- main = 59d957a (v1.2.1, released).\n- dsh-plugin = a112edd, pushed. It is PR #1 into main: 1.3.0 plugin, round-one example pages 167b821, fixes d6f2bca, 97ac1c2 and a112edd. The repo root is checked out on this branch. Untracked err.txt, out.ndjson and probe.txt predate the work.\n- dsh-side-claims = 2bfaa4a, pushed. It is PR #2 into dsh-plugin: the round-two rule item 4 \"核实或删掉\" (verify or cut), the Files-section exception for the active skill's own files, and docs/dsh-ab/round-two.\n- dsh-claim-check = 7968487, NOT pushed, worktree W:\\Projects\\gravitas-claim-check, clean. It is 5 commits on top of a112edd: a261ba5 claim check, 6004743 and 626316b WIN_CRITERIA, 5330c8f round three, 7968487 ruleFile setting plus ja/ko hedge lists. It does NOT contain PR #2: merge-base is a112edd, and neither the Files exception nor the 核实 sentence is present.\n- dsh-icon = 419fc2b and update-notice = 69ed7e6. Both NOT pushed, both on a112edd, no PR. dsh-icon replaces icon.svg with a PNG logo of \"Gravitas herself\". update-notice adds a daily update-check hook for DSH and Antigravity in all four READMEs and dist.\n- The gv-grav DSH profile links to W:\\Projects\\gravitas-claim-check (W:\\AgentData\\logs\\gravitas-dsh-ab3\\freeze-start.txt).\n\nDSH evidence. Everything below was measured from blind grades of real headless deepseek-flash runs.\n- Round 1 (PR #1, 167b821): 6 requests, 1 run a side. Gravitas 6 votes, plain 4, 2 ties. Plain caught every baited premise on its own (commit message).\n- Round 2 (PR #2, docs/dsh-ab/round-two/README.md at 2bfaa4a): 10 new requests (7 zh), 2 runs a side. Gravitas 19, plain 16, ties 5. Mean score 40.27 vs 41.17. Wrong added claims 30 vs 23. Length about 0.95. The PR body calls this \"not a win\". Every shell call failed in both arms (35/35) because of a W: ACL problem, which was fixed only for round three.\n- Round 3: verdict exists. W:\\Projects\\gravitas-claim-check\\docs\\dsh-ab\\round-three\\verdict.txt, produced by verdict.py from frozen criteria.md, code identical first to last run (freeze-start/end both a261ba5):\n  - Main set (20 pairs, 40 votes): Gravitas 26, plain 13, tie 1. Net +13 against an A/A floor of 8.\n  - Sign test p=0.053 (votes), 0.238 (pairs), 0.453 (requests). Cohen's kappa 0.68.\n  - Mean score 37.42 vs 35.35. Wrong added claims 26 vs 35. Trap<8: 5 vs 11.\n  - FAIL g5: vague key points 62 vs 55. FAIL g8: median length ratio 1.073; English alone 1.392.\n  - Result: \"VERDICT: not shown (failing: g5_key_points, g8_length)\".\n  - The set covered only zh 7 and en 3, with no ja or ko.\n  - Attribution: check on 13, check off 26, tie 1. The claim check cut right items 38% of the time and wrong items 24%, so it works as a generic revision pass, not detection. claimCheck now defaults to false.\n  - Post-hoc, not pre-registered (round-three README): the rule without the check beat plain 33 to 7. Length ratio 1.007; zh 0.90, en 1.38.\n- Round 4 (W:\\AgentData\\logs\\gravitas-dsh-ab4): prepared, not run. raw/, blind/ and tuning/ are empty or absent.\n  - 12 held-out prompts, 3 per language.\n  - Arms: gv-plain, gv-grav-base (rule only, check off) and gv-grav-c4 (base plus change 4). I diffed change 4 against the built rule: one added sentence in item 2 per language, \"first one or two sentences give the decision ... no longer than a strong plain answer\".\n  - schedule.txt has 72 runs; tuning-schedule.txt has 6.\n  - Keys and keypoints exist for zh, en and ja (9 cases). NONE exist for the 3 ko cases: ko sources exist without .check.md.\n  - verdict4.py (78.5 KB, gates per language, --selftest) was modified today at 12:21. A copy is being mutation-tested in C:\\Users\\emily\\AppData\\Local\\Temp\\v4chk.vyl6 (mutate.py and mut.py running).\n  - No freeze-start.txt for round four yet.\n\nCodex review. Measured by reading the files at each head.\n- PR #1 (5 findings, reviewed at the old pre-force-push e40e659):\n  1. read_image mapping: fixed in dsh/platform/en.rule.md at a112edd. However, the en.md table still maps view_file to `read` only.\n  2. DSH 0.2.x support window: fixed (d6f2bca; README line 84).\n  3. \"Inspectors inherit skills\": removed at a112edd.\n  4. P1 provenance: documented as a manual check on DSH at a112edd, with no adapter.\n  5. Packaged-resource reads: NOT fixed on PR #1's head. plugin/rules/AGENTS.md:47 at a112edd still says \"Never read outside the workspace ... unless the person names the path\". It is fixed only on PR #2 (2bfaa4a adds \"or the file belongs to the active skill\").\n- PR #2 (7 findings at ae38f90): I checked these at 2bfaa4a and all look fixed. make_blind reads answers/; tally reads grades/ and regression/ and refuses empty input; regression/ inputs are archived; relabelled counts 30/23; the two-of-four wording is corrected; the README and CHANGELOG no longer say no graded DSH runs; the Files exception now works as an exception.\n- All 12 threads are unresolved with no replies (GraphQL reviewThreads). Codex has not re-reviewed after the fixes.\n\nChecks. An agent claimed these; I did not re-run them (read-only).\n- PR #1 body: 11 test scripts pass, readme_parity OK, release_check 6/6, check_skills OK.\n- For 2bfaa4a: W:\\AgentData\\logs\\gravitas-dsh-ab2\\fix2-test_*.log show every script passing and release_check.log 6/6. But fix2-test_release.log says \"SKIP every case -- needs git and a git checkout\".\n- No test or release_check logs exist for dsh-claim-check 7968487, dsh-icon or update-notice.\n\nDocs.\n- At PR #1's head, README line 129 still says \"graded runs on DSH have not been done yet\" while the PR ships six graded DSH example pages. PR #2 fixes this; dsh-claim-check fixes it its own way.\n- The CHANGELOG on dsh-claim-check has no claimCheck or ruleFile entry and still says \"Graded runs on DSH have not been done.\"\n- The round-three README is English-only (7 CJK characters in 8,429).",
+ "gaps": [
+  {
+   "gap": "No DSH round has met the frozen win criteria. Round three failed on vague key points and length, and never tested ja or ko",
+   "evidence": "W:\\Projects\\gravitas-claim-check\\docs\\dsh-ab\\round-three\\verdict.txt: 'VERDICT: not shown (failing: g5_key_points, g8_length)'; 'cases: 10 (7 zh, 3 en)'",
+   "severity": "blocker",
+   "effort": "Each round: 1 headless leg of about 2-3 h for 72 runs at 3 in parallel, plus about 3-4 h of grading, relabelling and verdict",
+   "needs_emily": false
+  },
+  {
+   "gap": "Round four's held-out set is incomplete: the 3 Korean cases have no answer keys or key points, so the round cannot start",
+   "evidence": "W:\\AgentData\\logs\\gravitas-dsh-ab4\\keys and keypoints list only en/ja/zh files; sources has ko-*.md but no ko-*.check.md",
+   "severity": "blocker",
+   "effort": "About 1.5 h of Claude work (keys from Korean official sources, independent check, key points by an agent that sees no answer)",
+   "needs_emily": false
+  },
+  {
+   "gap": "Round-four verifier not yet frozen: verdict4.py is still being mutation-tested, and there is no freeze-start and no tuning runs",
+   "evidence": "verdict4.py mtime 2026-10-24 12:21; C:\\Users\\emily\\AppData\\Local\\Temp\\v4chk.vyl6\\mutate.py running; tuning_check.py reads tuning/ which does not exist; no freeze-*.txt in ab4",
+   "severity": "major",
+   "effort": "About 1 h of Claude work plus 6 tuning runs (about 15 min)",
+   "needs_emily": false
+  },
+  {
+   "gap": "Branches diverge. The round-three and round-four arms are built on dsh-plugin without PR #2's rule change or Files exception. dsh-claim-check, dsh-icon and update-notice are unpushed and have no PR. There is no single release head",
+   "evidence": "git merge-base dsh-claim-check dsh-side-claims = a112edd; 'side-claims NOT in claim-check'; git ls-remote shows only dsh-plugin and dsh-side-claims",
+   "severity": "blocker",
+   "effort": "About 2-3 h of Claude work to integrate, rebuild dist and re-run all checks",
+   "needs_emily": true
+  },
+  {
+   "gap": "PR #2's rule sentence (item 4, verify or cut) was not in the arm that did best. Round two showed more wrong added claims with it (30 vs 23), and the post-hoc best is the rule without it. Whether it ships is undecided",
+   "evidence": "docs/dsh-ab/round-two/README.md (2bfaa4a) per PR #2 body; round-three README 'the always-on rule without the check beats plain 33 to 7' (post-hoc)",
+   "severity": "major",
+   "effort": "Decision; possibly one extra A/B arm",
+   "needs_emily": true
+  },
+  {
+   "gap": "PR #1 Codex finding (packaged-resource reads) is unfixed on PR #1's own head; it is fixed only on PR #2",
+   "evidence": "a112edd plugin/rules/AGENTS.md:47 'Never read outside the workspace ... unless the person names the path.'",
+   "severity": "major",
+   "effort": "Resolved by integration, or about 0.5 h to cherry-pick into PR #1 in four languages",
+   "needs_emily": false
+  },
+  {
+   "gap": "All 12 Codex threads are unresolved and unanswered, and Codex has not re-reviewed after the fixes",
+   "evidence": "GraphQL reviewThreads: isResolved false for all; codex-review-state commit_sha e40e659 (PR #1) and ae38f90 (PR #2)",
+   "severity": "major",
+   "effort": "About 1 h (replies in Emily's voice naming the fixing commit, then '@codex review')",
+   "needs_emily": true
+  },
+  {
+   "gap": "The DSH platform note table still maps view_file to `read` only, while the rule note and the visual-critic line say read_image for images",
+   "evidence": "a112edd dsh/platform/en.md table row '| `view_file` | `read` |'",
+   "severity": "minor",
+   "effort": "0.3 h in four languages",
+   "needs_emily": false
+  },
+  {
+   "gap": "Round-three README and commit miscount the attribution result",
+   "evidence": "README and 5330c8f say 'Gravitas without it beat Gravitas with it, 25 to 13'; verdict.txt says 'attr pairs 20: gv-grav 13, gv-grav-nocheck 26, tie 1'",
+   "severity": "minor",
+   "effort": "0.2 h (README; the commit message stays unless rewritten before push)",
+   "needs_emily": false
+  },
+  {
+   "gap": "CHANGELOG and READMEs are out of date on dsh-claim-check: no claimCheck or ruleFile entry, and 'Graded runs on DSH have not been done' in Verified",
+   "evidence": "git show dsh-claim-check:CHANGELOG.md, [1.3.0] Verified",
+   "severity": "major",
+   "effort": "0.5 h in four languages",
+   "needs_emily": false
+  },
+  {
+   "gap": "Checks not proven on any candidate head. test_release skipped every case, and there are no logs for 7968487, dsh-icon or update-notice",
+   "evidence": "W:\\AgentData\\logs\\gravitas-dsh-ab2\\fix2-test_release.log 'SKIP every case -- needs git and a git checkout'",
+   "severity": "major",
+   "effort": "About 0.5 h on the integrated head",
+   "needs_emily": false
+  },
+  {
+   "gap": "The DSH evidence write-ups are English-only, which contradicts Chinese-first. The zh README links to English pages",
+   "evidence": "round-three README has 7 CJK chars in 8,429; README.zh-CN.md links docs/dsh-ab/round-three/README.md",
+   "severity": "major",
+   "effort": "About 1.5 h for native zh-CN write-ups of rounds 2-4, plus short ja/ko summaries",
+   "needs_emily": false
+  },
+  {
+   "gap": "Not tested on the current DSH: 0.2.1-rc.3 was released 2026-10-23, and every probe and run so far used rc.2",
+   "evidence": "gh api repos/deepseek-ai/deepseek-harness/releases: dsh-v0.2.1-rc.3 2026-10-23T15:26:39Z; PR #1 body 'DSH 0.2.1-rc.2'",
+   "severity": "minor",
+   "effort": "0.5 h no-model probe, done before round four is frozen so the round pins one version",
+   "needs_emily": false
+  },
+  {
+   "gap": "Still untested (PR #1 body): a real inspector run, the desktop app's Plugins page, and Linux and macOS",
+   "evidence": "PR #1 body 'What I haven't checked yet'",
+   "severity": "minor",
+   "effort": "About 1 h for inspector and desktop; Linux and macOS need a machine",
+   "needs_emily": true
+  },
+  {
+   "gap": "Whether to ship dsh-icon (character PNG) and update-notice (a daily update-check hook in DSH and Antigravity) in 1.3.0 is undecided",
+   "evidence": "git log a112edd..dsh-icon / ..update-notice; neither pushed nor in a PR",
+   "severity": "minor",
+   "effort": "Decision, then about 1 h each to rebase, test and push",
+   "needs_emily": true
+  }
+ ],
+ "running_now": "- No dsh process is running for Gravitas. Round four has made no runs (W:\\AgentData\\logs\\gravitas-dsh-ab4\\raw is empty).\n- Another session is preparing round four right now:\n  - verdict4.py was modified today at 12:21.\n  - sources\\zh-commute-injury.check.md was written today at 12:23.\n  - python mutate.py and mut.py --selftest (PIDs 11672 and 14932) are mutation-testing a copy of verdict4.py in C:\\Users\\emily\\AppData\\Local\\Temp\\v4chk.vyl6.\n  - Earlier memory names that session as local_76aa4fc0; I could not confirm it is the one running.\n- Open PRs: #1 (dsh-plugin to main, head a112edd) and #2 (dsh-side-claims to dsh-plugin, head 2bfaa4a). Both are MERGEABLE, with no CI checks and all review threads unresolved.\n- Unrelated and left alone: agy PID 37876 under supervise.py PID 30736 (Mechanical Watch leg 2), and a DSH python http.server on 8123 (PID 16680).",
+ "next_steps": [
+  "Finish the round-four held-out set. Deliver keys/ko-*.md checked against Korean official sources, sources/ko-*.check.md from an independent checker, and keypoints/ko-*.json written by an agent that saw no answer. Gate: all 12 EXPECTED_CASES have prompt, key and 4-8 key points; verdict4.py reports no 'metric missing' for inputs on an empty-grades dry check.",
+  "Probe DSH 0.2.1-rc.3 with the no-model probe on gv-plain and gv-grav. Pin the version the round will use and record it in freeze-start. Gate: skill, rule, tool and presets load (web), rule and skill load (headless), with no new activation diagnostics.",
+  "Freeze round four. The mutation test confirms every mutant is killed; verdict4.py --selftest passes, including the empty-folder all-MISS case; sha256 of verdict4.py, criteria and rules/change4 goes in freeze-start.txt; the 6 tuning runs pass tuning_check, which must still show the premise correction. Then tell Emily the run count (72 held-out + 6 tuning) before starting, as WIN_CRITERIA requires.",
+  "Run round four headless: runall.sh schedule.txt, about 2-3 h. Gate: 72 valid runs, no harness issues, freeze-end identical to freeze-start.",
+  "Grade round four blind (Opus and Sonnet, one pair per session), relabel added claims with both relabellers, then run verdict4.py. Deliver docs/dsh-ab/round-four with every result, overall and per language, and a native zh-CN summary first. Gate: verdict4.json computed; losses reported.",
+  "Decide the next round from round four's verdict, within the 500-run budget and the stop rule (3 rounds without improvement). Candidates are the remaining approved changes (1 web_search check, 2 compact rule, 3 request language, 5 facts only if verified). Stop and report to Emily when the stop rule fires or a win holds in all four languages.",
+  "Fix the small evidence errors: round-three README 25 to 26 for check-off votes, and the dsh/platform/*.md table view_file to read/read_image in four languages. Gate: the numbers match verdict.txt; the test_dsh_plugin note-parity test passes.",
+  "After Emily decides the branch plan: build one release branch with dsh-plugin, the Files exception from PR #2 (and the 核实 sentence only if she keeps it), the round-three and round-four docs and claimCheck/ruleFile from dsh-claim-check, and dsh-icon and update-notice only if approved. Rebuild dist; update CHANGELOG Added/Verified and all four READMEs (Chinese native, most examples). Gate: every tests/scripts/test_*.py passes, run inside the git checkout (no SKIP); readme_parity OK for 8; release_check 6/6; check_skills --repo OK; Node suite green.",
+  "Push the release branch and update or open the PR with a body in Emily's voice and no attribution. Reply on each of the 12 Codex threads with the fixing commit, then comment '@codex review'. Gate: Codex re-review has no unresolved findings, or each remaining one is answered with a reason.",
+  "Do a fresh install from github:Emily2040/gravitas#<release-branch> into a scratch web profile and run the no-model probe in zh-CN and en. Gate: skill, rule, gravitas_inspect and both presets present; remove cleans up. Then hand to Emily as release-ready; do not merge or tag."
+ ],
+ "risks": [
+  "Small samples. Round three's vote sign test is p=0.053 and the request level is p=0.45, with 2-3 requests per language. A per-language 'win' can be noise, and A/A floors per language rest on very few votes.",
+  "Both graders are Claude models (kappa 0.68), so their errors are correlated. WIN_CRITERIA only requires 'non-DeepSeek'.",
+  "Change 4 targets the length gate directly ('no longer than a strong plain answer'). The cheapest pass is gutting answers. The <0.6 companion and the key-point gates guard against this, but vague key points may get worse.",
+  "The gv-grav profile links to the live worktree W:\\Projects\\gravitas-claim-check. Any checkout or edit there during a round changes the arm, so freeze hashes must be checked at both ends.",
+  "DSH 0.2.1-rc.3 shipped mid-experiment. A self-update between rounds would confound comparisons with round three.",
+  "The post-hoc 33-7 result for the rule without the check is not pre-registered. Treating it as established would break her rule on honest results.",
+  "Branch divergence: merging PR #2, the claim-check branch, icon and update-notice touches dist/, the READMEs and the CHANGELOG in four languages. Conflicts and dist drift will fail release_check.",
+  "The headless account route (deepseek-account, approved only for gv-plain and gv-grav) may hit sign-in expiry or rate limits mid-round.",
+  "Two sessions may be working on round four at once: the verifier is being mutation-tested now. Edits must not overlap."
+ ],
+ "questions_for_emily": [
+  "Should 1.3.0 keep PR #2's rule sentence (verify or cut added specifics)? Round two found more wrong added claims with it, and the best arm since then ran without it.",
+  "Branch plan: one release branch folding PR #2 and the claim-check work into PR #1, or keep separate PRs (#1, #2, plus a new #3 for round three and four)?",
+  "Do you want the Gravitas character icon (dsh-icon) and the daily update-check notice (update-notice) in 1.3.0? Neither is pushed or reviewed yet.",
+  "If no round meets every criterion in all four languages before the 500-run budget or the stop rule, should 1.3.0 ship with the honest 'not a win yet' DSH write-up, or wait?",
+  "May the agent reply on and resolve the 12 Codex threads in your voice and request a Codex re-review, and push the unpushed branches (dsh-claim-check holds rounds three and four)?",
+  "Should DSH 0.2.1-rc.3 (released 23 Oct) become the pinned version for round four onward and for the release probe?"
+ ]
+}

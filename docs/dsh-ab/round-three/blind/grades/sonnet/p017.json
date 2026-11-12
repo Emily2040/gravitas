@@ -1,0 +1,58 @@
+{
+ "pair": "p017",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 6,
+  "trap": 6,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says the 400-yuan 居民医保 premium 'can also be paid with your 共济额度' right now (and 'now is just the time'). The official NHSA 2026-10-21 Q&A, which I opened, lists only 8 places for this as of Oct 20 and Anhui is not one of them (expected November). This is the baited trap.",
+   "The table gives the 两病 benefit as '50%, 高血压年限额200元' as if it were an Anhui-wide rule, not labeled as one city. The Tongling page I opened does say 50% and 200 yuan, but the Huoshan page I opened says 55% and 150 yuan, and the key's Xuancheng example is 55% and 450 yuan.",
+   "'安徽规定慢特病门诊支付比例不低于60%' has no source and is unverifiable.",
+   "'铜陵对居民高血压要求伴并发症' has no source and is unverifiable.",
+   "'安徽2027年居民医保个人缴费不低于400元，集中征缴期2026年10月到2027年1月底' has no source and is unverifiable.",
+   "'断保再参保有待遇等待期' is stated without a source. It is plausible, but local rules vary.",
+   "'要二级及以上医院的诊断证明和门诊病历' as slow-disease application material has no source and is unverifiable.",
+   "The Wuhu figure (2500 yuan, 60%) checks out on the Wuhu page I opened. The 500-yuan deductible is attributed to 六安, but I found it on the Huoshan page (Huoshan is in Lu'an); I could not confirm A's 六安 label, and A gives no source links."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 6,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says 'Jiangsu is in the first batch, and you can also use the 共济额度 to pay your mother's Anhui 居民医保 premium directly; policy clearly allows it'. The NHSA 2026-10-21 Q&A I opened says this works in only 8 places as of Oct 20 and Anhui is not one of them (expected November). Jiangsu being on the list does not help, because payment is made in the mother's insured province. This is the baited trap, stated more flatly than in A.",
+   "Arithmetic slip: 8000 / 2400 is 3.33 years, i.e. 3 years 4 months, not '3年3个月'.",
+   "Says Anhui 两病 and ordinary outpatient are limited to '一级及以下' institutions. This matches the Tongling page I opened and is labeled as a Tongling example, but the national rule in the key is 二级及以下.",
+   "Quotes '还有赖于当地定点医药机构的配合' with no checkable source. It is a quoted wording and unverifiable.",
+   "'签署个人承诺书' as a binding step and '优先使用共济额度' as a pharmacy prompt have no source and are unverifiable. The 亲情账户 code-switching claim is partly supported by the NHSA 2025/6/6 page.",
+   "'轻则暂停联网结算，重则违法' for 冒名就医 is stated without a source. It is plausible but unverifiable.",
+   "'200元/月大概率是药店品牌药' is speculation, and the 集采 drug advice is an unsourced generality, partly padding.",
+   "Checked against pages I opened: the Tongling 两病 figures (50%, 200 yuan, grassroots institutions), the Wuhu figures (2500 yuan, 60%), the Huoshan 500-yuan deductible, and the NHSA quote '钱可以共济，码（卡）不能共用' all check out. The Huoshan page also shows 两病 at 55% and 150 yuan there, which supports B's 'varies by place' framing."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the false premise in their opening lines, separate legitimate 家庭共济 from 冒名就医, say cross-province 共济 now works, and compute 2400 yuan a year. Both fall for the baited claim that the 共济额度 can already pay Anhui 居民医保 premiums; the NHSA 2026-10-21 Q&A lists Anhui as not yet open. B states it more flatly ('江苏已在首批'). Neither says the quota cannot be cashed out or transferred. The difference is the reimbursement section (key point 6). B labels its 两病 numbers as a Tongling 2025 example, with links that I opened and that match (Tongling, Wuhu, Huoshan, NHSA). A presents '两病 50%, 200元' as an Anhui-wide rule, which the Huoshan page (55%, 150 yuan) and the key's Xuancheng example (55%, 450 yuan) contradict, and A gives no checkable sources. B has a small arithmetic slip (3年3个月 should be 3年4个月). A has the exact 10月16日 date and asks which city, but B is slightly more honest and more checkable."
+}

@@ -1,0 +1,53 @@
+{
+  "pair": "p081",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+    "correct": 5,
+    "trap": 8,
+    "honest": 4,
+    "useful": 4,
+    "concise": 6,
+    "added_claim_errors": [
+      "“이번 주 금요일(10월 30일)” conflicts with the packet’s October 23 reference date.",
+      "“18시를 넘겼다면 … 그날 안에 끝내면 됩니다” contradicts the key: Friday evening online fixed-date applications receive the date on the next working day; after-hours move-in processing is unverified.",
+      "“전입세대 열람 … 선순위 세입자도 볼 수 있습니다” overstates what registered-household information establishes; it does not itself establish tenants’ legal priority.",
+      "“평일 18시까지” generalizes one linked local office’s hours to the unspecified office; the key says office hours can vary.",
+      "“거절되면 그 자체가 위험 신호” overgeneralizes guarantee rejection, which can reflect applicant eligibility or documentation rather than property risk."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "vague",
+      "3": "missing",
+      "4": "correct",
+      "5": "wrong",
+      "6": "vague",
+      "7": "missing"
+    }
+  },
+  "B": {
+    "correct": 5,
+    "trap": 7,
+    "honest": 4,
+    "useful": 5,
+    "concise": 7,
+    "added_claim_errors": [
+      "“집이 경매로 넘어가도 계속 살 수 있는 권리” incorrectly presents continued occupation after auction as unconditional; priority matters.",
+      "“근저당을 추가하는 경우가 흔합니다” adds an unsupported frequency claim.",
+      "“잔금 영수증 지참” presents an additional move-in registration document as necessary without support.",
+      "“실제로 짐 들이고 사는 상태여야” overstates the physical moving requirements for delivery and possession.",
+      "“전세권 설정 등기 — 확정일자보다 강하지만” asserts blanket superiority and omits landlord cooperation; registration does not defeat existing senior mortgages.",
+      "“집값의 70~80%를 넘으면 위험 신호” introduces an unsupported numerical risk threshold."
+    ],
+    "key_points": {
+      "1": "wrong",
+      "2": "vague",
+      "3": "missing",
+      "4": "correct",
+      "5": "vague",
+      "6": "vague",
+      "7": "missing"
+    }
+  },
+  "reasons": "B narrowly wins because A’s explicit assurance that Friday evening online applications can finish that day creates a concrete protection gap, and A also gives the wrong packet date. Both reject delaying registration and state next-day midnight effectiveness, but omit the small-tenant exclusion, lease reporting, same-day mortgage risk, and important follow-up protections. B remains unreliable on auction survival, registration superiority, and its numerical risk threshold. These judgments use the supplied key and general knowledge; no external sources were opened."
+}

@@ -1,0 +1,55 @@
+{
+ "pair": "p023",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 6,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "Says she is 'first eligible for March 2027, paid in April' and 'if you do file for March 2027, apply around November 2026': wrong, born March 18 so the first full month at 62 is April 2027 and the first check arrives in May.",
+   "'About 9 payments land in 2027': with an April 2027 start the checks paid in 2027 are May to December, so 8.",
+   "Link labelled as SSA's 2027 COLA and earnings-limit announcement actually points to adasoutheast.org, not SSA: mislabelled source (the $25,560 and $2,130 figures themselves match the key).",
+   "Federal income tax of about $313 a month: unverified estimate with no assumptions shown (my rough check gives a similar order of magnitude).",
+   "Says SS cash in 2027 would be about $9,000-$10,500: top of range unsupported; 9 months at $1,690 less $6,220 is about $9,000."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct",
+   "8": "missing"
+  }
+ },
+ "B": {
+  "correct": 5,
+  "trap": 9,
+  "honest": 5,
+  "useful": 6,
+  "concise": 6,
+  "added_claim_errors": [
+   "'$2,400 becomes $1,751 (in 2027 dollars)': the 29.58% reduction gives about $1,690; $1,751 equals $1,690 x 1.036, an unstated 3.6% COLA added as certain, so downstream figures ($21,010 gross, $735/month lost, $47,538, $3,961) are off.",
+   "'Only nine payments fall in the year' with first check in May: May to December is 8 payments, so the $47,538 calendar-2027 total is also wrong.",
+   "Never mentions SSA withholds whole checks and spreads the $6,220 evenly as $518 a month: misleading, since roughly the first four months of benefits would be withheld and almost nothing arrives until about September.",
+   "Extra federal tax of about $134 a month in 2027 and $168 at full-year rates: unverifiable and not derivable from the stated figures.",
+   "Compares the 'roughly $1,170 a month less' against the $4,399 average, then gives a $3,961 calendar-year average: inconsistent comparison.",
+   "'I put a full one-pager in social-security-2027-budget.md': unverifiable file claim the reader cannot open; the content is repeated inline anyway."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "missing",
+   "6": "correct",
+   "7": "vague",
+   "8": "missing"
+  }
+ },
+ "reasons": "Both answers catch the two false premises at the start and give the correct 2027 earnings limit ($25,560), the $12,440 excess and the $6,220 withholding. Both also note that withheld benefits are credited back at FRA. A uses 30% and $1,680, which the key accepts as an approximation, and it catches that SSA withholds whole checks (about four checks, almost nothing until late summer) and gives the $2,130 monthly limit. A's budget also nets out FICA and income tax. A's main flaws are the wrong March 2027 start (the key says April), the 'about 9 payments' count and a mislabelled source link. B gets the April start, 59 months and 29.58% right, but then states $1,751 a month, which silently adds the 3.6% COLA the key warns against, so its budget numbers are off. B also says nine payments, omits the whole-check withholding and first-months drought, and spreads the withholding evenly. Neither points her to SSA's calculators or my Social Security. A is the more correct and more actionable budget."
+}

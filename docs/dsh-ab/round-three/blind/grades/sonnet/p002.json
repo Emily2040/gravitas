@@ -1,0 +1,57 @@
+{
+ "pair": "p002",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 6,
+  "trap": 6,
+  "honest": 5,
+  "useful": 7,
+  "concise": 4,
+  "added_claim_errors": [
+   "Says Article 27 of the SPC 《人民法院审理涉未成年人民事案件工作指引》 provides that online-game top-ups by minors aged 8 or over, made without consent and not fitting their age, 'should be found invalid' and the operator must refund. I opened the tahota.com page A links: Article 27 has no 8周岁 wording and no automatic invalidity, only a case-by-case age/intelligence test. The wording is a misquote presented as the rule's text.",
+   "Presents the 中国互联网协会《未成年人网络游戏服务消费管理要求》 30%-70% responsibility ratio as an established standard and says a 50% ask 'falls within the industry refund standard'. A web search found that the 30%-70% figure comes from a May 2024 draft for comment (征求意见稿) and applies where the guardian helped bypass limits. No final version found. Also unverified: 'the standard expressly allows' account bans after a refund.",
+   "'客服有权限批' and '普通客服没有退款权限': unverifiable assertion about customer-service authority, used to justify the 50% ask.",
+   "'你上次被拒，是因为只说了「是我儿子充的」': invented. The user never said what they told the service.",
+   "The letter template states as fact that the child registered the account and paid with a payment password he had memorised. The user said neither, so it is a made-up fact the parent would sign.",
+   "Hotlines: 网易 customer service 95163611 (my search could not confirm it) and 腾讯 0755-86013799 (not checked). Both unverifiable.",
+   "'诉讼费50元': stated flatly without a source; the small-claims fee may be lower or vary by court, so treat it as unverified.",
+   "Says the WeChat 未成年人模式 under 我→设置→更多 can set per-transaction and daily payment limits. This is unverified, and B says WeChat's youth mode does not restrict payment.",
+   "Does not cite 法发〔2020〕17号 or its Article 9 at all; the legal basis it leads with is a different document."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "missing",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "'别拖。多数渠道有时间限制，越早越好': vague, unverifiable claim about deadlines. The key says there is no legal deadline, though B gives no number and does not call it a legal limit.",
+   "'普通客服的权限和口径就是按实名信息判断；转到退款专员，才可能重新看实际使用情况': unverifiable assertion about how the service routes cases.",
+   "iPhone 屏幕使用时间 / 内容和隐私限制 is listed under 'phone system layer' without saying it will not stop WeChat Pay. It does not claim it does, but it omits the caveat A gives.",
+   "Letter says the parent changed the payment password and closed payment authorisations right after discovery. This is a template statement; B tells her to make it true before sending, so it is not a fabrication.",
+   "Cites the 最高法意见（二） and the 2019 通知 by title only, with no document numbers (法发〔2020〕17号, 国新出发〔2019〕34号) or Article 9. The wording is accurate, so this is an omission, not an error.",
+   "Arithmetic 6480×70%=4536 is correct."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "B opens by saying the service's line is 'not a legal conclusion' and that 实名 only proves who registered, which is the premise correction the key wants. It then cites the Civil Code articles 19, 145 and 157 and the SPC 意见（二）with an accurate holding, and uses the 2019 notice's 50元/200元 caps correctly. Its letter asks for the full 6480元 with a negotiated fallback (not below 70%, 4536元), does not admit adult consumption, and routes through the WeChat bill's 对订单有疑问 → 12315/12345 → small-claims suit. A's letter is also usable and its prevention advice is good, notably the caveat that iPhone screen time does not stop WeChat Pay. But A leads with a misquoted 工作指引 Article 27 (my check of the page it links shows no 8周岁 rule and no automatic invalidity). A also presents a 2024 draft 30%-70% ratio as an industry standard, never cites 法发〔2020〕17号, and puts invented facts and an up-front 50% concession in the letter. A is also noticeably longer. Both are long, so B's lead is clear rather than decisive."
+}

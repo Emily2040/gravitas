@@ -1,0 +1,53 @@
+{
+  "pair": "p083",
+  "winner": "B",
+  "margin": "slight",
+  "A": {
+    "correct": 6,
+    "trap": 9,
+    "honest": 6,
+    "useful": 6,
+    "concise": 7,
+    "added_claim_errors": [
+      "“기한은 10월 4일”: states an exact deadline despite unresolved retirement-date and holiday calculations.",
+      "“1,020만~1,030만 원”: misleadingly narrow estimate; omits the ordinary-wage floor that could raise payment to about 12.02 million won.",
+      "“회사가 퇴직연금(IRP)에 가입한 경우”: conflates company retirement-pension arrangements with the worker’s IRP and obscures IRP requirements for ordinary severance payments.",
+      "“3년 이하 징역 또는 3천만 원 이하 벌금…제44조”: outdated penalty and provision; the key specifies Article 43 and five years or 50 million won.",
+      "“고용노동부(1350)…에 진정을”: blurs the distinction between telephone consultation and filing a complaint."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "missing",
+      "5": "vague",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "B": {
+    "correct": 7,
+    "trap": 9,
+    "honest": 6,
+    "useful": 7,
+    "concise": 6,
+    "added_claim_errors": [
+      "“14일째는 10월 4일” and “10월 5일부터…지연이자”: present unresolved deadline and interest-start dates as certain.",
+      "“1,020만~1,045만 원”: misleadingly narrow estimate; omits the ordinary-wage floor that could raise payment to about 12.02 million won.",
+      "“법을 착각했을 가능성이 커요”: unsupported speculation about the employer’s explanation.",
+      "“기다리기만 하면…묵시적으로 합의했다”: introduces an unverified legal risk from merely waiting.",
+      "“10월 30일 이후 노동청에 진정”: supplies an unsupported waiting date when a complaint is already available.",
+      "“지급기일 연장에 합의한 사실이 없다는”: the ready-to-send message asserts a fact the request does not establish."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "missing",
+      "5": "vague",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "reasons": "Both promptly reject the employer’s premise, and their recomputed arithmetic supports reasonable approximate average-wage estimates. Both miss the important ordinary-wage floor and overstate the exact deadline. B narrowly wins through its correct current penalty, explicit IRP guidance, and clearer payment request, although its invented waiting date and assumed absence of an extension agreement weaken its usefulness. Assessment used only the packet and independent arithmetic; no external verification was performed."
+}

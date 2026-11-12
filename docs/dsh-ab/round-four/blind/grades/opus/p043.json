@@ -1,0 +1,50 @@
+{
+ "pair": "p043",
+ "winner": "B",
+ "margin": "clear",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"퇴직금 미지급은 3년 이하 징역 또는 3천만 원 이하 벌금 (퇴직급여법 제44조)\": outdated. From 2026.9.18 it is 제43조, 5년/5천만 원 (minor, per the key)",
+   "\"2026년 10월 현재 시행 중인 법을 기준으로 정리했습니다\": says current law was checked, but the penalty it gives is the old one",
+   "\"퇴직소득세가 원천징수되어 실수령액은 조금 줄어듭니다\": when the money goes to an IRP (which A itself says is the default), no tax is withheld at payment (소득세법 제146조②)",
+   "HR message states \"세전 약 1,020만 원\": this contradicts A's own 1,024만~1,202만 calculation and understates the claim at the bottom edge",
+   "\"고용노동부 실무는 통상임금을 적용하는 쪽입니다\": no source is given for MOEL practice, so this is unverifiable"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "\"미지급 시 3년 이하 징역 또는 3천만 원 이하 벌금\": outdated. From 2026.9.18 it is 5년/5천만 원 under 제43조 (minor, per the key)",
+   "\"10월 4일이 법정 기한\" is stated as definite, but the exact deadline depends on how the retirement date and holidays are counted (10/3~10/6). The date falls in that range, so this is minor",
+   "\"고용노동부(1350)나 관할 지청에 ... 진정을 넣을 수\": 1350 is a counseling line, not a place to file a petition. Minor imprecision"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the company's claim at the start: the deadline is 14 days, and an extension needs both a special reason and the worker's agreement. Both also give the two figures, 1,024만 on average wage and 1,202만 on the ordinary-wage floor, with correct arithmetic. B's HR message is the more complete one. It names the 10/4 deadline, asks for a breakdown and a reply by a set date, and covers how to hand over the IRP account. A's message leaves out the IRP and quotes a low 1,020만, which contradicts A's own analysis and weakens the claim. A also wrongly says retirement tax is withheld even though it treats IRP transfer as the default, and claims to use current law while citing the old 제44조 3년/3천만 penalty. B repeats the outdated penalty too, but it is tighter overall and easier to act on."
+}

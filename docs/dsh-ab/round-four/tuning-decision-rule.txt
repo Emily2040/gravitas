@@ -1,0 +1,11 @@
+Written 2026-10-25 20:22, after the 6 tuning runs started and before any of them finished.
+
+Tuning decides only whether change 4 goes into the held-out runs as frozen. It decides nothing about the verdict.
+Change 4 stays exactly as frozen (fef5baa, freeze-start d99f9fd0...) unless one of these holds:
+  1. A tuning run is still invalid after its one rerun (validity4.py --tuning).
+  2. The median ratio of c4's answer length to round three's plain answer for the same request (r1, tuning_check.py)
+     is above 1.00 or below 0.70.
+  3. A c4 answer leaves out the correction of its request's baited premise, judged against round three's key.
+If one holds, I write down which and why, change the sentence once, commit, move freeze-start aside to
+freeze-start.superseded-1.txt, record a new freeze, rerun the 6 tuning runs, and only then start the held-out runs.
+If none holds, the held-out runs start with the frozen files.

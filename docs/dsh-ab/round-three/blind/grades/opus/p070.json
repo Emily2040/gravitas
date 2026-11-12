@@ -1,0 +1,53 @@
+{
+ "pair": "p070",
+ "winner": "A",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 5,
+  "added_claim_errors": [
+   "States flatly that 共济资金 can pay the mother's 居民医保 individual premium. The key says Anhui had not opened this as of Oct 20 (expected November), so this is one of the key's listed traps.",
+   "'合肥按住院比例报销，限额可能接近2000元': speculative and unsourced, yet it sets the top of the 1200-2000 range for 慢特病.",
+   "'提交后即时生效' and '也可走支付宝小程序': procedural claims with no source; unverifiable.",
+   "Hefei 70%/360元 and Tongling 50%/200元 两病 figures, and Wuhu 60%/2500元 limit with 起付300: linked to local pages but not covered by the key; unverifiable here (they are labeled as city examples, which is acceptable)."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "vague",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 6,
+  "trap": 8,
+  "honest": 7,
+  "useful": 8,
+  "concise": 4,
+  "added_claim_errors": [
+   "Says Anhui 普通门诊/两病 pay out only at '一级及以下定点基层医疗机构'. The key gives the national rule as 二级及以下, so this is unverifiable and likely too narrow.",
+   "The headline 门慢 estimate uses '起付350元、报60%' with no city named. It conflicts with the Wuhu 起付300 that B itself cites, so the number is unattributed.",
+   "Internal inconsistency: the table gives 普通门诊 150-220元, but the worked calculation uses a 180元 limit, not 220.",
+   "'两病 各地50%-60%': unverifiable, and contradicted by Hefei's 70% (per A's cited source).",
+   "'安徽个人缴费不低于400元' for the 2027 year: unverifiable.",
+   "'通过后次月起报60%' and '下月起在县域内基层医疗机构买药': timing claims generalized across Anhui; unverifiable.",
+   "Closes with '居民医保大概能报1200元' as a near-hard number, which the key marks down as too certain."
+  ],
+  "key_points": {
+   "1": "vague",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers correct the premise at the start, explain cross-province 共济 through 医保钱包, and compute 2400元 correctly. A cites the actual policy chain (国办发2021-14, 2024-38 extending to near relatives, 医保发2025-35, the national 2.0 launch on 2026-10-16). It also frames reimbursement as a 0-2000 range with city-labeled examples, which is close to what the key asks for. However, A asserts that the 共济 quota can already pay Anhui premiums, which is a listed trap. B handles key points 3 and 4 better: it lists reselling drugs as a violation, says the quota cannot go to a third party, and hedges the premium point with '试着'. But B gives no policy documents, uses an unattributed 起付350 to reach a headline '大概能报1200元', narrows the eligible facilities to 一级及以下, and is longer, with a small internal inconsistency. On balance A edges ahead."
+}

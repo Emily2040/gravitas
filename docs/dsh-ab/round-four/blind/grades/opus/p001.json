@@ -1,0 +1,51 @@
+{
+ "pair": "p001",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 7,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "\"3년 이하 징역 또는 3천만 원 이하 벌금(같은 법 제44조 제1호)\" is the old rule. From 2026-09-18 the penalty is 5 years or 50M won under Art. 43 (minor, per key).",
+   "\"연 20%의 지연이자(같은 법 제17조 제3항 ...)\": the 퇴직급여법 Art. 17(3) citation looks misattributed. Delay interest on severance rests on 근로기준법 제37조 and 시행령 제17조, which A also cites. Judged from my own knowledge; the law.go.kr fetch returned no article text.",
+   "\"3개월 총일수 약 89~92일\" and \"≈ 1,155일\": the 6/21-9/20 window is 92 days and service is about 1,158 days. The 89-day figure pushes the top of the average-wage range to 1,060만 (minor imprecision).",
+   "The HR message quotes \"세전 약 1,040만 원 안팎\" although A's own ordinary-wage floor gives about 1,200만, so the message understates the claim."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "vague",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 7,
+  "trap": 10,
+  "honest": 7,
+  "useful": 8,
+  "concise": 7,
+  "added_claim_errors": [
+   "\"퇴직소득세·지방소득세 약 20만~25만 원\" is wrong. At 4 years of service it comes to about 9.4만-14.1만 including local tax (I recomputed it), and nothing is withheld when the money goes to an IRP, which B itself says is the default.",
+   "\"같은 법 제17조에 따라 연 20%의 지연이자\" misattributes the basis. Delay interest on severance comes from 근로기준법 제37조 and 시행령 제17조; 퇴직급여법 제17조 deals with DB pension benefits. Judged from my own knowledge.",
+   "\"형사처벌(3년 이하 징역 또는 3천만 원 이하 벌금)\" is outdated. It has been 5 years or 50M won since 2026-09-18 (minor, per key).",
+   "\"고용노동부와 법제처도 퇴직금 산정에 이 조항이 적용된다고 해석합니다\" gives no document number. The 법제처 part matches the key (법제처-26-0209); the MOEL part is unverifiable.",
+   "The HR message says the amount \"세전 약 1,200만 원으로 산정됩니다\" as if settled, though it depends on what the 330만 is made of, as B admits in its own body text."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "vague",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers open by correcting the company: the deadline is 14 days, and extending it needs a mutual agreement. Both give the ordinary-wage floor of about 1,200만. B's calculation is cleaner: it uses 92 days and gets about 1,023만 to 1,200만. It also names a concrete deadline (10/4) that falls inside the key's window, and notes that even the company's own one-month line has passed. Its HR message clearly says the deadline has passed and asks for a date and a breakdown. A's average-wage range rests on a loose 89-92 days and centres on 1,040만. Its recommended message understates the amount, and it invites the company to propose a later date and 협의, which the key warns against. A does include IRP and the 노동포털 route. B loses ground for a wrong tax estimate (20만-25만) and for leaving IRP out of the message. On balance, B's sharper calculation and firmer message edge out A."
+}

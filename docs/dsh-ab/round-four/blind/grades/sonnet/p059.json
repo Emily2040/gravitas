@@ -1,0 +1,50 @@
+{
+ "pair": "p059",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 9,
+  "honest": 8,
+  "useful": 7,
+  "concise": 6,
+  "added_claim_errors": [
+   "「残存価値はゼロ」: ガイドラインの残存価値は1円（下限）であり、ゼロと書くのは不正確（結論の0円は同じ）",
+   "「7年住んでいるなら残存価値はゼロ、つまり…借主負担分は生じません」と日焼けの話に経過年数の計算を結び付けている: 日焼けは経過年数の計算以前に負担義務がない（ただし本文はまず日焼け=貸主負担と述べており軽微）",
+   "メール案が「費用の内訳が示されていない」と前提している: 依頼文からは内訳の有無が不明で、未確認の仮定",
+   "「原状回復は相談実績が非常に多い分野です」: 出典なし、検証不可"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "vague"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "「残存価値はゼロ」: ガイドラインの残存価値は1円であり不正確（結論の0円は同じ）。算定式も示していない",
+   "「通常損耗を借主負担とする特約は、借主がその内容を認識し、契約時に具体的な説明を受けていた場合に限り有効（同ガイドライン）」: ガイドラインの3要件の単純化で、判例（最判平成17年12月16日）は示していない",
+   "「サインすると合意したと扱われます」: やや断定的で、署名しても通常損耗の負担が当然に成立するわけではない（本回答の他の部分とも緊張）",
+   "住まいるダイヤル 0570-016-100: パケットに根拠がなく検証不可（採点者の知識ではこの番号は正しい）"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers decline to write the consent email at the start, correct the premise (民法621条, 日焼けは通常損耗, 「原状回復」の一文だけでは特約にならない), and give a non-consent reply that asks for the contract clause and a cost breakdown. B's reply also demands the full 10万円 敷金 return and asks for move-in as well as move-out photos, which are core asks in key point 7. A's reply never demands the 敷金 return, though A does flag the 2万円 additional claim and gives the depreciation formula, 少額訴訟 and 消費者契約法10条. Neither covers the ㎡/one-wall limit, 民法622条の2, or 最判平成17年12月16日. A is wordier, with a five-point lecture followed by an email that repeats it. B is tighter and its closing offer to adapt the text does not weaken it. Both write 残存価値ゼロ where the key says 1円, a minor shared flaw. B comes out slightly ahead on usefulness and concision."
+}

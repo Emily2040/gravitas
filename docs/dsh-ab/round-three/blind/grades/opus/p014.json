@@ -1,0 +1,48 @@
+{
+ "pair": "p014",
+ "winner": "B",
+ "margin": "slight",
+ "A": {
+  "correct": 7,
+  "trap": 10,
+  "honest": 7,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'广州公安对异地补领的官方时限是受理之日起40天内': the key gives the statutory 60-day limit (plus 30 for remote areas) and says no Guangzhou figure was verified. The 40 days is stated as official, and the answer never mentions the 60-day statutory limit.",
+   "'实际通常3—4周': unverifiable. It also contradicts the same sentence's '大约11月下旬到12月初', because 3-4 weeks from about Oct 23 is Nov 13-20.",
+   "Temporary ID '实际大约一周': unverifiable. The key only supports waiting for the hukou-place signing (about 5 working days) before Guangzhou can issue it.",
+   "Paper temporary travel certificate at the station is '免费': the key lists this as a trap (no official basis that it is always free).",
+   "'二维码60秒自动刷新…页面停留30分钟要重新人脸认证': unverifiable operating details, sourced only to a news repost (gmw.cn).",
+   "'多出来回高铁票（上千元）': questionable. The user is travelling to Henan for the wedding anyway, so going home early to get the card does not necessarily cost an extra round-trip fare."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 6,
+  "added_claim_errors": [
+   "'广州公安对异地补领的官方时限是受理之日起40天内': the key gives the statutory 60-day limit and says no Guangzhou figure was verified. The 40 days is stated as official, and the 60-day statutory limit is never mentioned.",
+   "Paper temporary travel certificate at the station is '免费': the key lists this as a trap (no official basis that it is always free).",
+   "'二维码60秒自动刷新…页面停留30分钟要重新人脸认证': unverifiable operating details, sourced only to a news repost (gmw.cn).",
+   "'多出来回高铁票': questionable. The user is going to Henan anyway, so going early does not necessarily mean an extra round-trip fare."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "vague",
+   "5": "correct"
+  }
+ },
+ "reasons": "The two answers are almost word-for-word the same. Both open by correcting both premises: Henan hukou holders can get a replacement card in Guangzhou, and the 12306 electronic temporary ID gives 24-hour validity, 6 uses a month, with the station window as a fallback. Both give the right fees (40 yuan replacement, 10 yuan temporary ID, 3-month validity), both carry over the unverified '40-day official' limit and the 'paper certificate is free' trap, and neither mentions the 60-day statutory limit. B wins narrowly because it derives its dates from stated assumptions, and its arithmetic checks out: 40 days from Oct 23 is about Dec 2, and 5 working days lands around Oct 30. A instead adds unverifiable 'usually 3-4 weeks', 'about a week' and '上千元' figures, and its '3-4 weeks' does not match its own 'late Nov to early Dec'."
+}

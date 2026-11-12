@@ -1,0 +1,7 @@
+# Round four, candidate: current best plus change 4 (lead with the decision and stop).
+- id: dsh-gravitas
+  config:
+    language: ja
+    alwaysOnRule: true
+    claimCheck: false
+    ruleFile: W:/AgentData/logs/gravitas-dsh-ab4/rules/change4/ja.md

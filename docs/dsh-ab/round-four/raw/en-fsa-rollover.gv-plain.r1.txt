@@ -1,0 +1,34 @@
+**Important correction: a health FSA is not an HSA.** HSA balances are yours indefinitely and roll over without a cap. A health FSA is generally “use it or lose it.” Your employer may offer either:
+
+- a **carryover** of unused funds—federally capped at **$680 for 2026** ($660 for 2025), though your plan can allow less; or
+- a **grace period** of up to 2½ months after the plan year ends—generally through **March 15** for a calendar-year plan.
+
+A plan can offer one or the other, but not both. So your $1,900 does **not** automatically roll over intact. If your plan has the standard carryover, roughly **$1,220 is at risk** unless you incur eligible expenses by December 31. The federal limits are in [IRS Rev. Proc. 2025-32](https://www.irs.gov/pub/irs-drop/rp-25-32.pdf), with a helpful comparison [here](https://www.proskauer.com/blog/irs-releases-annual-increases-to-health-fsa-and-transportation-fringe-benefit-limits-for-2026).
+
+## Quick plan
+
+1. **This week: get your plan’s rules in writing.** Check your benefits portal or SPD, or call the FSA administrator. Confirm:
+   - Is there a carryover? How much?
+   - Is there a grace period instead? What is the exact end date?
+   - When must expenses be **incurred**, and when must claims be **submitted**?
+   - Does the plan reimburse dental, orthodontia, and vision expenses? Any preauthorization rules?
+
+2. **Calculate your “use it or lose it” gap.**  
+   `$1,900 − carryover amount = amount you need to spend by Dec. 31`  
+   If the carryover is $680, that gap is **$1,220**. If there is no carryover and no grace period, the whole **$1,900** is at risk.
+
+3. **By December 31: incur eligible expenses you would pay for anyway.** Prioritize:
+   - **Dental:** exams, cleanings, X-rays, fillings, crowns, root canals, extractions, dentures, orthodontia.
+   - **Vision:** eye exams, glasses, contacts, contact solution, LASIK.
+   - **Medical:** copays, deductibles, prescriptions, eligible OTC medicines, menstrual products, first aid, hearing aids.
+   - Ask providers whether you can move appointments into November or December.
+
+4. **Handle the March dental work carefully.**  
+   - If the plan has a **carryover**, only the carried-over amount—not the full $1,900—can be used in March.
+   - If the plan has a **grace period**, March treatment may qualify only if it is incurred by the grace-period deadline, often March 15.
+   - If the plan has **neither**, move the dental work into December or accept that the excess will be forfeited.
+   - **Do not prepay for March dental services in December and claim them now.** FSA reimbursement is generally for services already incurred, not future treatment.
+
+5. **Submit claims and keep receipts.** Use your FSA debit card only for eligible expenses. If you pay out of pocket, submit claims before the plan’s run-out deadline—even if the expense was incurred in December.
+
+**Bottom line:** Find out whether you have a carryover or grace period first. With a standard $680 carryover, plan to spend about **$1,220 before December 31** and let the rest cover March dental. Without either feature, you need to use the full **$1,900** by December 31 or lose it.

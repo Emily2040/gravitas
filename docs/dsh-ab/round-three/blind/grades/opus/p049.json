@@ -1,0 +1,46 @@
+{
+ "pair": "p049",
+ "winner": "A",
+ "margin": "clear",
+ "A": {
+  "correct": 9,
+  "trap": 10,
+  "honest": 8,
+  "useful": 9,
+  "concise": 7,
+  "added_claim_errors": [
+   "'这周做满6分，时间上够' / '可以每天做一轮': suggests the week is enough and skips the approval wait. There is no official figure for review time, and A's steps never mention waiting for approval."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "correct",
+   "7": "correct"
+  }
+ },
+ "B": {
+  "correct": 8,
+  "trap": 10,
+  "honest": 8,
+  "useful": 8,
+  "concise": 6,
+  "added_claim_errors": [
+   "'北京等地还会列入黑名单，3个记分周期禁入' for proxy studying: no source given for a Beijing blacklist. The three-cycle bar in Art. 26 is a national rule that covers 买分卖分 and similar penalties, not a local blacklist.",
+   "'分2–3天做更从容（每天2轮）': assumes approval comes back fast, but there is no official figure for review time.",
+   "'如果找不到入口，说明当地或你的驾驶证状态暂不支持': overconfident. A missing entry can also come from the app version or the province's layout."
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "correct",
+   "3": "correct",
+   "4": "correct",
+   "5": "missing",
+   "6": "vague",
+   "7": "correct"
+  }
+ },
+ "reasons": "Both answers start by catching the false premise: at most 6 points can come off, which leaves 4, and the remaining margin is risky. Both get the online-study numbers right (30 minutes over 3 days, 20 questions, 18 correct, 2 retakes), the clearing rule, and the 7/30-day full-score study. I checked the fine amounts, the 7/30 days and the 9/12-point lists against the 163号令 text on gov.cn, and both answers hold up. A also covers on-site study and public-welfare activities, says all methods share the 6-point cap, and gives the full eligibility list, including the three-cycle 酒驾/逃逸/买分卖分 bar. B leaves out the other methods entirely and drops that bar. B's 12123 steps are a little more complete (face recognition, waiting for approval), but it adds an unsourced Beijing blacklist claim and repeats its time calculation, so A wins clearly."
+}

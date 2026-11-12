@@ -1,0 +1,48 @@
+{
+ "pair": "p095",
+ "winner": "B",
+ "margin": "decisive",
+ "A": {
+  "correct": 6,
+  "trap": 6,
+  "honest": 8,
+  "useful": 5,
+  "concise": 8,
+  "added_claim_errors": [
+   "「付与日数は就業規則か給与明細で確認できます」: 給与明細に付与日数が載るかは職場次第で、根拠のない言い切り。実際の日数（5日）は示していない",
+   "「来月の休みは有給で取れる可能性が高いです」: 10月1日付与と5日という具体値を示さず、不必要にぼかしている（誤りではないが弱い）"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "vague",
+   "4": "missing",
+   "5": "missing",
+   "6": "missing",
+   "7": "vague",
+   "8": "correct"
+  }
+ },
+ "B": {
+  "correct": 9,
+  "trap": 9,
+  "honest": 8,
+  "useful": 9,
+  "concise": 8,
+  "added_claim_errors": [
+   "「有給を取ったことを理由に不利益に扱うことも、法律で禁じられています」: 根拠は附則第136条で、この条自体に罰則はなく、「しないようにしなければならない」という配慮的な規定。「禁じられている」はやや強め（軽微）",
+   "「来月の行事は付与後の日付なので」: 今日の日付が10月以降という前提を条件なしに置いている（実施日では正しいが、依頼文には日付がない）"
+  ],
+  "key_points": {
+   "1": "correct",
+   "2": "vague",
+   "3": "correct",
+   "4": "correct",
+   "5": "correct",
+   "6": "missing",
+   "7": "correct",
+   "8": "correct"
+  }
+ },
+ "reasons": "Both answers correct the manager's premise at the start, but B gives the facts the key wants. It states that 5 days are granted on October 1 for 3 days a week and the 80% attendance condition, and it says the next month's event falls after the grant date, so the leave is usable. A never gives the number of days or the 80% condition, and hedges with 「可能性が高い」. A's main LINE draft only asks for time off and says 「ご検討いただけますと幸いです」. That is close to the absence-style, approval-seeking message the key penalises. 有給 appears only as an optional sentence to add. B's draft explicitly asks to take 年次有給休暇 on a given date, in a polite and non-confrontational tone. B also correctly says no detailed reason is needed, and it offers a non-有給 variant with a note that absence means unpaid. Neither covers the employer's right to change the leave date (時季変更権). B's 不利益取扱い remark is slightly overstated. Overall B is clearly more accurate and more usable."
+}

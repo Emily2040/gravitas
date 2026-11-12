@@ -1,0 +1,50 @@
+{
+  "pair": "p059",
+  "winner": "B",
+  "margin": "clear",
+  "A": {
+    "correct": 6,
+    "trap": 9,
+    "honest": 5,
+    "useful": 6,
+    "concise": 3,
+    "added_claim_errors": [
+      "「7年住んでいるなら残存価値はゼロ」: the guideline retains a residual value of 1 yen; the displayed formula also needs a lower bound.",
+      "「更新の必要があっても借主負担分は生じません」: depreciation does not eliminate every possible charge for tenant-caused damage, including potential labor costs.",
+      "「民法621条ただし書きにより」: the ordinary-wear exclusion is in the main provision's parenthetical text, not its proviso.",
+      "「ガイドライン上も」: the source attribution supplies no checkable link or document number.",
+      "「賃貸の原状回復は相談実績が非常に多い分野」: this additional empirical claim is unsupported by the packet or a cited source."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "correct",
+      "4": "wrong",
+      "5": "missing",
+      "6": "vague",
+      "7": "vague"
+    }
+  },
+  "B": {
+    "correct": 7,
+    "trap": 10,
+    "honest": 6,
+    "useful": 8,
+    "concise": 6,
+    "added_claim_errors": [
+      "「7年住んだ物件では残存価値はゼロ」: the guideline retains a residual value of 1 yen, rather than literal zero.",
+      "「12万円の全額負担は根拠がなく」: too categorical before examining the complete contract and any specific special clause.",
+      "「国交省の…ガイドラインでも」 and 「同ガイドライン」: these source attributions supply no checkable link or document number."
+    ],
+    "key_points": {
+      "1": "correct",
+      "2": "correct",
+      "3": "vague",
+      "4": "wrong",
+      "5": "missing",
+      "6": "vague",
+      "7": "correct"
+    }
+  },
+  "reasons": "B wins because its more focused refusal email explicitly requests the full 100,000-yen deposit back and move-in records; A omits that refund demand and adds substantial repetition and escalation advice. Both catch the mistaken premise, but both incorrectly state literal zero residual value and omit the repair-area limit; A further overstates depreciation as eliminating tenant liability. A correctly calculates the potential additional charge as 120,000 − 100,000 = 20,000 yen, whereas B omits it, and B's special-clause explanation leaves informed agreement and validity conditions insufficiently developed. No external sources were opened; B's added housing-consultation telephone number is consistent with my existing knowledge."
+}
