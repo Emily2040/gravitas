@@ -8,6 +8,11 @@
 *.tsv   text eol=lf
 *.yml   text eol=lf
 *.svg   text eol=lf
+# No extension, so no rule above covers them: a clone with core.autocrlf=true gave them CRLF,
+# and release_check.py then reported them as changed.
+.gitattributes  text eol=lf
+.gitignore      text eol=lf
+LICENSE         text eol=lf
 # The installers: cmd needs CRLF, and bash on macOS and Linux needs LF (*.sh is above).
 *.cmd      text eol=crlf
 *.command  text eol=lf

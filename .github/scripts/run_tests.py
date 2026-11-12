@@ -28,11 +28,12 @@ import sys
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Skips the operating system decides. Each entry is (where it is allowed, text the SKIP line holds).
-# "not-windows" means Linux and macOS. Nothing is allowed on Windows: the Windows runner has Git
-# Bash, PowerShell, Python and Node, so every case can run there.
+# "not-windows" means Linux and macOS.
 ALLOWED = [
     ("not-windows", "Windows only"),  # the .cmd installer and its PowerShell hook edit
-    ("not-windows", "only the .cmd clears the Windows mark"),  # the download mark exists on Windows alone
+    # The download mark exists on Windows alone, and there only the .cmd clears it, so the
+    # .command and .sh cases skip it under Git Bash. Seen in the first Windows run, 2026-11-12.
+    ("windows", "only the .cmd clears the Windows mark"),
 ]
 
 
@@ -134,6 +135,12 @@ def self_test():
          judge_scripts([("t.py", 0, "SKIP hook  -- Windows only\n" + ok)], "darwin"), False),
         ("a Windows-only skip fails on Windows",
          judge_scripts([("t.py", 0, "SKIP hook  -- Windows only\n" + ok)], "win32"), True),
+        ("the download-mark skip passes on Windows",
+         judge_scripts([("t.py", 0, "SKIP sh: files unzipped with the download mark  -- only the .cmd clears "
+                                    "the Windows mark; on a Mac or Linux the ZIP carries none\n" + ok)], "win32"), False),
+        ("the download-mark skip fails on Linux, where it never prints",
+         judge_scripts([("t.py", 0, "SKIP sh: files unzipped with the download mark  -- only the .cmd clears "
+                                    "the Windows mark; on a Mac or Linux the ZIP carries none\n" + ok)], "linux"), True),
         ("no Node tests in the tree passes", judge_node(False, False, 0, ""), False),
         ("Node tests without node fails", judge_node(True, False, 0, ""), True),
         ("a Node run with no counts fails", judge_node(True, True, 0, ""), True),
