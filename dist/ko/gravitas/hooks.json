@@ -1,0 +1,11 @@
+{
+  "gravitas-update-check": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File hooks/update-check.ps1 || sh hooks/update-check.sh",
+        "timeout": 10
+      }
+    ]
+  }
+}

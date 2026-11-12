@@ -132,6 +132,19 @@ These are examples of requests, not test records. I checked the DSH version by s
 
 <a id="part-1"></a>
 
+### Updates
+
+Once a day Gravitas asks GitHub whether a newer release is out: one request to `api.github.com` that sends nothing about you. When there is one, the agent says so once, at the end of its first reply in a conversation, with the step to update. Neither Antigravity nor DSH has an update button for plugins from outside its own store, so the update itself is one step you take:
+
+- **Antigravity:** download `Gravitas.zip` from the [latest release](https://github.com/Emily2040/gravitas/releases/latest), unzip it and double-click the installer again. It replaces the old version.
+- **DSH:** on the desktop app's **Plugins** page, remove Gravitas and add `github:Emily2040/gravitas#v<version>`. From a terminal:
+
+```bash
+dsh plugin --profile web add github:Emily2040/gravitas#v<version>
+```
+
+To turn the check off: in Antigravity, create an empty file named `update-check-off` in `.gemini/gravitas` in your home folder, or set `GRAVITAS_UPDATE_CHECK=off`. In DSH, add `updateCheck: false` to the `dsh-gravitas` config above.
+
 ## Real examples
 
 These come from the test runs. Two Gemini models compared each pair of answers without knowing which one used Gravitas, and checked both against an answer key written beforehand. I picked requests where both graders clearly preferred Gravitas's answer, read both answers in full, and kept only the ones where plain Antigravity (Antigravity without Gravitas) missed something you can see for yourself. The last one is a request where Gravitas did worse.

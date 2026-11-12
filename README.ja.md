@@ -137,6 +137,19 @@ DSH 版は、Windows 11 で DSH 0.2.1-rc.2 を起動し、スキル一覧・シ�
 <a id="part-1"></a>
 <a id="real-examples"></a>
 
+### 更新
+
+Gravitas は 1 日に 1 回まで、新しいリリースが出ていないかを GitHub に問い合わせます。`api.github.com` へのリクエストを 1 回送るだけで、あなたについての情報は何も送りません。新しい版があれば、エージェントが会話の最初の返答の最後に一度だけ知らせ、更新の方法を示します。Antigravity にも DSH にも、自分のストア以外のプラグインを更新するボタンはないので、更新そのものはあなたが一手で行います。
+
+- **Antigravity**：[最新のリリース](https://github.com/Emily2040/gravitas/releases/latest)から `Gravitas.zip` をダウンロードして展開し、インストーラーをもう一度ダブルクリックします。古い版と置き換わります。
+- **DSH**：デスクトップアプリの **Plugins** ページで Gravitas を削除し、`github:Emily2040/gravitas#v<バージョン>` を追加します。ターミナルからなら次のとおりです。
+
+```bash
+dsh plugin --profile web add github:Emily2040/gravitas#v<version>
+```
+
+確認をやめるには、Antigravity ではホームフォルダーの `.gemini/gravitas` に `update-check-off` という空のファイルを作るか、環境変数 `GRAVITAS_UPDATE_CHECK=off` を設定します。DSH では、上の `dsh-gravitas` の設定に `updateCheck: false` を加えます。
+
 ## 実際の例
 
 ここに載せているのは、テストで実際に出た答えです。同じモデルに同じ日本語の依頼を渡し、Gravitas を入れていない Antigravity（以下「素の Antigravity」）の答えと、Gravitas を入れた答えを比べました。採点したのは Gemini 3.1 Pro と Gemini 3.8 Flash の2つのモデルで、どちらが Gravitas の答えかを知らされないまま、あらかじめ書いておいた模範解答と照らし合わせています。

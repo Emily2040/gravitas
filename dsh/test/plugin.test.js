@@ -91,12 +91,15 @@ test('language: config wins, then the system locale, then English', () => {
   assert.throws(() => plugin.resolveLanguage('zh'), /language must be/)
   assert.throws(() => plugin.readConfig({ langauge: 'ja' }), /unknown config key/)
   assert.throws(() => plugin.readConfig({ alwaysOnRule: 'yes' }), /true or false/)
+  assert.throws(() => plugin.readConfig({ updateCheck: 'no' }), /updateCheck must be true or false/)
+  assert.equal(plugin.readConfig({}).updateCheck, true)
+  assert.equal(plugin.readConfig({ updateCheck: false }).updateCheck, false)
 })
 
 for (const lang of plugin.LANGUAGES) {
   test(`${lang}: skill, rule and platform note load and fit`, async () => {
     const { ctx, sections, provider } = fakeCtx()
-    await plugin.apply(ctx, { language: lang, alwaysOnRule: true })
+    await plugin.apply(ctx, { language: lang, alwaysOnRule: true, updateCheck: false })
     const list = await provider().list()
     assert.deepEqual(list.map((c) => c.name), ['gravitas'])
     assert.equal(list[0].rank, BUNDLED_SKILL_RANK)
@@ -121,7 +124,7 @@ for (const lang of plugin.LANGUAGES) {
 
 test('rule can be turned off', async () => {
   const { ctx, sections } = fakeCtx()
-  await plugin.apply(ctx, { language: 'en', alwaysOnRule: false })
+  await plugin.apply(ctx, { language: 'en', alwaysOnRule: false, updateCheck: false })
   assert.equal(sections.length, 0)
 })
 
