@@ -38,7 +38,7 @@ test('manifest: a DSH bundle with no dependencies, versioned with the plugin', (
   assert.ok(pkg.keywords.includes('dsh-plugin'))
   const pluginJson = JSON.parse(readFileSync(path.join(REPO, 'plugin', 'plugin.json'), 'utf8'))
   assert.equal(pkg.version, pluginJson.version, 'package.json and plugin/plugin.json carry the same version')
-  for (const f of ['dsh/index.js', 'dsh/lib/', 'dsh/platform/', 'dsh/locale/*.json', 'dsh/icon.svg', 'dsh/cordis.patch.yml', 'dist/', 'LICENSE']) {
+  for (const f of ['dsh/index.js', 'dsh/lib/', 'dsh/platform/', 'dsh/locale/*.json', 'dsh/icon.png', 'dsh/cordis.patch.yml', 'dist/', 'LICENSE']) {
     assert.ok(pkg.files.includes(f), `files lists ${f}`)
   }
 })
@@ -142,8 +142,10 @@ test('locales and icon are present for the Plugins page', () => {
     const meta = JSON.parse(readFileSync(path.join(REPO, 'dsh', 'locale', `${l}.json`), 'utf8')).meta
     assert.ok(meta.title && meta.description.length > 20, l)
   }
-  const icon = readFileSync(path.join(REPO, 'dsh', 'icon.svg'), 'utf8')
-  assert.ok(icon.startsWith('<svg') && statSync(path.join(REPO, 'dsh', 'icon.svg')).size < 256 * 1024)
+  // DSH shows SVG, PNG, JPEG or WebP icons up to 256 KiB and keeps its default artwork for anything else.
+  const icon = readFileSync(path.join(REPO, 'dsh', 'icon.png'))
+  assert.ok(icon.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a])), 'icon is a PNG')
+  assert.ok(icon.length > 1024 && icon.length < 256 * 1024, `icon is ${icon.length} bytes`)
 })
 
 test('the skill frontmatter in every language parses with its nested metadata', () => {
