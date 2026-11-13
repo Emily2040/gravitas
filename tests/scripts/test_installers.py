@@ -43,6 +43,7 @@ import subprocess
 import sys
 import tempfile
 import threading
+import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
@@ -788,6 +789,8 @@ def behaviour(lab, kind):
          code == 0 and same and os.path.isfile(script) and "could not be removed for you" in out, out[-500:])
 
     failures(lab, kind)
+    if kind != "cmd":
+        ordered_runs(lab, kind)
 
 
 def failures(lab, kind):
@@ -911,6 +914,143 @@ def failures(lab, kind):
             bad.append("trial %d: exits %r, stray %r" % (trial, codes, stray[:3]))
     case("%s two runs at the same moment leave one whole plugin, never one inside another, and no "
          "temporary folder" % p, not bad, brief(bad, 3))
+
+
+# Sourced by bash before the installer through BASH_ENV: every mv the installer calls stops before
+# and after the real mv until the test lets it go, so the test chooses the order of two runs' steps.
+# A function is found before anything on PATH, and the installers themselves are not changed.
+BARRIERS = r'''
+mv() {
+  local f="$GV_DIR/$GV_ID" n rc
+  n=$(( $(cat "$f.n" 2>/dev/null || echo 0) + 1 ))
+  echo "$n" > "$f.n"
+  : > "$f.before.$n"
+  until [ -e "$f.before.$n.go" ] || [ -e "$GV_DIR/free" ]; do sleep 0.01; done
+  command mv "$@"
+  rc=$?
+  : > "$f.after.$n"
+  until [ -e "$f.after.$n.go" ] || [ -e "$GV_DIR/free" ]; do sleep 0.01; done
+  return $rc
+}
+'''
+
+
+class Stuck(Exception):
+    pass
+
+
+class Ordered:
+    """Two runs of one installer over one install, A and B, each held at every mv it makes.
+
+    "A.before.2" is run A about to make its second mv; "A.after.2" is that mv done, with A not yet
+    told. reach() waits for a run to get there and go() lets it on."""
+
+    def __init__(self, lab, kind):
+        self.lab, self.kind = lab, kind
+        lab.n += 1
+        self.dir = os.path.join(lab.root, "barriers %d" % lab.n)
+        os.makedirs(self.dir)
+        self.env_file = os.path.join(self.dir, "barriers.sh")
+        with open(self.env_file, "w", newline="\n") as fh:
+            fh.write(BARRIERS)
+        self.home = lab.home()
+        lab.run(kind, self.home, "1")
+        self.procs, self.outs, self.threads, self.steps = {}, {}, {}, []
+
+    def start(self, who, answer):
+        line, env = self.lab.command(self.kind, self.home)
+        # Forward slashes, which Git Bash reads as well: bash expands BASH_ENV, and a backslash could be taken away.
+        env.update(BASH_ENV=self.env_file.replace("\\", "/"), GV_DIR=self.dir.replace("\\", "/"), GV_ID=who)
+        pr = subprocess.Popen(line, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                              env=env)
+
+        def drain():
+            self.outs[who] = pr.communicate((answer + "\n").encode())[0].decode("utf-8", "replace").replace(
+                "\r\n", "\n")
+        self.procs[who] = pr
+        self.threads[who] = threading.Thread(target=drain)
+        self.threads[who].start()
+
+    def reach(self, *names, **kw):
+        """Waits for the first of the barriers named, or for "exit A", run A having ended. Returns it."""
+        end = time.time() + kw.get("timeout", 60)
+        while time.time() < end:
+            for name in names:
+                if (self.procs[name[5:]].poll() is not None if name.startswith("exit ")
+                        else os.path.exists(os.path.join(self.dir, name))):
+                    self.steps.append(name)
+                    return name
+            time.sleep(0.005)
+        raise Stuck("never reached %s, after %s" % (" or ".join(names), ", ".join(self.steps) or "nothing"))
+
+    def go(self, *names):
+        for name in names:
+            open(os.path.join(self.dir, name + ".go"), "w").close()
+
+    def finish(self):
+        """Lets both runs go on freely to their end. Returns their exit codes and output."""
+        open(os.path.join(self.dir, "free"), "w").close()
+        for who, t in self.threads.items():
+            t.join(60)
+            if t.is_alive():
+                self.procs[who].kill()
+                t.join()
+        return ({w: pr.returncode for w, pr in self.procs.items()},
+                {w: self.outs.get(w, "") for w in self.procs})
+
+
+def ordered_runs(lab, kind):
+    """Two runs over one install, in two chosen orders. The case in failures() starts two runs at the
+    same moment and takes the order it gets; these two choose it, so they give the same result every
+    time. In both, run A moves the old plugin away and run B, starting then, finds none to move.
+
+    Order 1: A places its copy and checks it. Then B's mv, finding a plugin there, puts B's copy
+    inside it. Order 2: A places its copy, and B's copy lands inside it before A has checked. In
+    both, A's copy is the plugin, so A has installed and B has not. A installs English and B Chinese,
+    so the plugin that is left shows whose copy it is."""
+    p = "%s:" % kind
+    for order, name in ((1, "A checks its copy before B's lands inside it"),
+                        (2, "B's copy lands inside A's before A checks")):
+        o = Ordered(lab, kind)
+        try:
+            o.start("A", "1")
+            o.reach("A.before.1")
+            o.go("A.before.1", "A.after.1")     # A moves the old plugin into its backup folder
+            o.reach("A.before.2")               # A is about to place its copy
+            o.start("B", "2")
+            o.reach("B.before.1")               # B found no plugin to move, and is about to place its copy
+            o.go("A.before.2")
+            o.reach("A.after.2")                # A's copy is the plugin now
+            if order == 1:
+                o.go("A.after.2")
+                o.reach("exit A")
+                o.go("B.before.1")
+                o.reach("B.after.1")
+            else:
+                o.go("B.before.1")
+                o.reach("B.after.1")            # B's copy is inside A's
+                o.go("A.after.2")
+                o.reach("A.before.3", "exit A")  # A has checked: it ends, or goes to move what it found
+                o.go("B.after.1")
+                o.reach("B.before.2", "exit B")  # B has checked too
+            stuck = ""
+        except Stuck as e:
+            stuck = str(e)
+        codes, outs = o.finish()
+        found = backups(o.home)
+        diff = differences(plugin(lab.ref["en"]), plugin(o.home))
+        stray = [k for k in tree(o.home) if "gravitas-new" in k or ".gravitas-test" in k]
+        case("%s two runs in a chosen order, %s: A exits 0 and says it installed, B exits 1 and says it did "
+             "not, the plugin left is A's English and not B's Chinese, whole and with nothing inside it, and "
+             "the old plugin is in A's backup" % (p, name),
+             not stuck and codes == {"A": 0, "B": 1} and INSTALLED["en"] in outs["A"]
+             and "could not be put back" not in outs["A"] and INSTALLED["zh-CN"] not in outs["B"]
+             and "Gravitas 没能放进下面这个文件夹" in outs["B"] and not diff and not stray
+             and len(found) == 1 and os.listdir(found[0]) == ["gravitas"] and shows(outs["A"], found[0], kind),
+             stuck or "exits %r; %s; stray %r; backups %r; A: %s | B: %s"
+             % (codes, brief(diff, 3) or "plugin is A's", stray[:3], [sorted(os.listdir(f)) for f in found],
+                " / ".join(outs["A"].strip().splitlines()[-6:])[-420:],
+                " / ".join(outs["B"].strip().splitlines()[-4:])[-300:]))
 
 
 def without_powershell(lab):
