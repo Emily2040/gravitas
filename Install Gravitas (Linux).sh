@@ -507,7 +507,9 @@ fi
 # Step 1: copy into the backup folder and check the copy there.
 say ""
 make_backup || fail "$M_ERRBACKUP" "      $BACKUPS" "$M_OWNER"
-NEW="$BACKUP/gravitas-new"
+# The copy carries the name of this run's backup folder, which no other run has, so that step 3
+# can tell this run's copy from another run's.
+NEW="$BACKUP/gravitas-new-${BACKUP##*/}"
 say "$M_COPYING"
 if ! cp -R "$SRC" "$NEW" 2>/dev/null; then
   tidy
@@ -544,14 +546,17 @@ if there "$OLDSKILL"; then
 fi
 
 # Step 3: a rename on the same disk. If another run put a plugin here meanwhile, mv either fails,
-# leaving this copy where it was, or puts it inside the other as gravitas-new. Both are caught, and
-# what was moved is put back.
+# leaving this copy where it was, or puts it inside the other under this copy's own name. Both are
+# caught, and what was moved is put back. A copy inside the plugin under any other name is another
+# run's: then this run's copy is the plugin, this run has installed, and the other run takes its
+# own copy back.
 if there "$DEST" || ! mv "$NEW" "$DEST" 2>/dev/null; then
   rollback
   fail "$M_ERRPLACE" "      $PLUGINS" "$M_OWNER"
 fi
-if there "$DEST/gravitas-new" || there "$NEW"; then
-  there "$NEW" || mv "$DEST/gravitas-new" "$NEW" 2>/dev/null
+INSIDE="$DEST/${NEW##*/}"
+if there "$INSIDE" || there "$NEW"; then
+  there "$NEW" || mv "$INSIDE" "$NEW" 2>/dev/null
   rollback
   fail "$M_ERRPLACE" "      $PLUGINS" "$M_OWNER"
 fi

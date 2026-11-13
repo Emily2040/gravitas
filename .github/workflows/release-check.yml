@@ -1,0 +1,58 @@
+# On a version tag: check the commit is ready to release, build Gravitas.zip from it and keep the
+# ZIP with its SHA-256 as a file of this run. It publishes nothing and has read access only.
+# Attaching the ZIP to the release and writing the notes stay by hand.
+#
+# Versions checked on 2026-11-12 (GitHub API):
+#   actions/checkout         v7.0.1  3d3c42e5aac5ba805825da76410c181273ba90b1
+#   actions/setup-python     v7.1.0  6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+#   actions/upload-artifact  v7.0.2  cf430e030ddbb5b0abf93d22962f4752f3646cd9
+name: release check
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release-check:
+    name: Check the commit and build Gravitas.zip
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
+        with:
+          python-version: '3.15'
+
+      - name: The tag names the version in plugin/plugin.json
+        if: github.ref_type == 'tag'
+        shell: bash
+        run: |
+          version=$(python -c "import json; print(json.load(open('plugin/plugin.json'))['version'])")
+          if [ "$GITHUB_REF_NAME" != "v$version" ]; then
+            echo "The tag is $GITHUB_REF_NAME and plugin/plugin.json says $version."
+            exit 1
+          fi
+
+      - name: release_check.py
+        run: python scripts/release_check.py
+
+      - name: Build Gravitas.zip and its SHA-256
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/release"
+          python scripts/build_release_zip.py "$RUNNER_TEMP/release/Gravitas.zip"
+          cd "$RUNNER_TEMP/release"
+          sha256sum Gravitas.zip | tee Gravitas.zip.sha256
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9  # v7.0.2
+        with:
+          name: Gravitas-${{ github.ref_type == 'tag' && github.ref_name || github.sha }}
+          path: ${{ runner.temp }}/release/
+          if-no-files-found: error

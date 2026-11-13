@@ -1,0 +1,82 @@
+# Runs every test script, the Node suite and the three validators on Windows, macOS and Linux.
+# It calls no model and uses no secret, so it cannot spend a DeepSeek or Gemini budget.
+#
+# Versions checked on 2026-11-12 (GitHub API and the runner-images README):
+#   actions/checkout      v7.0.1  3d3c42e5aac5ba805825da76410c181273ba90b1
+#   actions/setup-python  v7.1.0  6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+#   actions/setup-node    v7.1.0  949feb2413d6458794dcd2491c4babbbce0c15c1
+#   runner images         windows-2025, macos-26 (arm64), ubuntu-24.04
+#   Python                3.15 on all three; 3.8 is the oldest the README promises
+#   Node                  24 (LTS); 22.19.0 is the oldest package.json allows
+# Actions are pinned by commit, so a moved tag cannot change what runs here.
+name: tests
+
+on:
+  push:
+    branches: [main, dsh-plugin]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Windows Server 2025
+            os: windows-2025
+            python: '3.15'
+            node: '24'
+          - name: macOS 26, arm64
+            os: macos-26
+            python: '3.15'
+            node: '24'
+          - name: Ubuntu 24.04
+            os: ubuntu-24.04
+            python: '3.15'
+            node: '24'
+          - name: Ubuntu 24.04, oldest Python and Node
+            os: ubuntu-24.04
+            python: '3.8'
+            node: '22.19.0'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0  # v7.1.0
+        with:
+          python-version: ${{ matrix.python }}
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
+        with:
+          node-version: ${{ matrix.node }}
+          package-manager-cache: false
+
+      - name: The runner's own rules hold
+        run: python .github/scripts/run_tests.py --self-test
+
+      - name: Test scripts and the Node suite
+        run: python .github/scripts/run_tests.py
+
+      - name: check_skills.py --repo
+        if: ${{ !cancelled() }}
+        run: python plugin/skills/gravitas/scripts/check_skills.py --repo
+
+      - name: readme_parity.py
+        if: ${{ !cancelled() }}
+        run: python scripts/readme_parity.py
+
+      - name: release_check.py
+        if: ${{ !cancelled() }}
+        run: python scripts/release_check.py

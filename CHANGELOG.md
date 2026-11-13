@@ -15,6 +15,9 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) an
 - The skill's `compatibility` line names DeepSeek Harness, in all four languages.
 - `scripts/release_check.py` treats `dsh/` and `package.json` as shipped.
 
+### Fixed
+- `Install Gravitas (Mac).command` and `Install Gravitas (Linux).sh`: when two runs placed their copies in the same instant, both could stop and say nothing was changed while one new copy was installed. Every run named its copy `gravitas-new`, so a run that found the other's copy inside its own plugin took it for its own. A run's copy now carries the name of its backup folder, and a run looks only for that name. `tests/scripts/test_installers.py` holds each `mv` of two runs at a barrier and checks both orders. `Install Gravitas (Windows).cmd` makes the same check on the same name and is not changed.
+
 ### Verified
 - On Windows 11 with DSH 0.2.1-rc.2: the plugin installed into the `web` profile with `dsh plugin add`, and a boot of that profile with a probe plugin read back the skill catalog (the `gravitas` skill with its note), the assembled system prompt (the rule at order 10100, in English and in Chinese), the tool list (`gravitas_inspect` with both presets in its `agent_preset` choices) and the preset roster (both presets, no activation diagnostics). `dsh plugin remove` uninstalled it and removed it from the profile's bundles. Graded runs on DSH have not been done.
 
